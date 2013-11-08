@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              style="@style/Layout.Full">
+    <FrameLayout android:id="@+id/pushmessagegroupsettinglistitem_rltItemBox"
+            style="@style/Layout.Wrap"
+            android:layout_marginTop="5sp"
+            android:layout_marginBottom="5sp"
+            android:background="@drawable/listitembox">
+        <TextView android:id="@+id/pushmessagegroupsettinglistitem_lblGroupName"
+                  style="@style/Layout.Wrap.Complete"
+                  android:layout_gravity="left|center_vertical"
+                  android:layout_marginLeft="10dp"/>
+        <CheckBox android:id="@+id/pushmessagegroupsettinglistitem_chkGroupSubscribed"
+                  style="@style/Layout.Wrap.Complete"
+                  android:layout_gravity="right|center_vertical"
+                  android:layout_marginLeft="15dp"/>
+    </FrameLayout>
+</LinearLayout>

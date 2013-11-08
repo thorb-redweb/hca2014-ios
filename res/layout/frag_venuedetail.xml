@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/venueDetail_scrMainView"
+            style="@style/Layout.Full"
+            android:layout_below="@+id/navbar"
+            android:layout_above="@+id/tabbar">
+    <LinearLayout
+            style="@style/Layout.Full"
+            android:padding="5sp">
+
+        <TextView android:id="@+id/venueDetail_lblTitle"
+                  style="@style/Layout.Wrap.Complete"/>
+
+        <ImageView android:id="@+id/venueDetail_imgPicture"
+                   style="@style/Image.Full"
+                   android:layout_marginTop="7sp"
+                   android:layout_marginBottom="7sp"
+                   android:adjustViewBounds="true"/>
+
+        <!-- Adress -->
+        <LinearLayout
+                style="@style/Layout.Wrap"
+                android:orientation="horizontal">
+            <LinearLayout
+                    style="@style/Layout.Wrap"
+                    android:layout_width="0dp"
+                    android:layout_weight=".4">
+                <TextView android:id="@+id/venueDetail_lblAddressLabel"
+                          style="@style/Layout.Wrap.Complete"/>
+            </LinearLayout>
+            <LinearLayout
+                    style="@style/Layout.Wrap"
+                    android:layout_width="0dp"
+                    android:layout_weight=".6">
+                <TextView android:id="@+id/venueDetail_lblAddressValue"
+                          style="@style/Layout.Wrap.Complete"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!--Map Button-->
+        <RelativeLayout android:id="@+id/venueDetail_rltMapButton"
+                        style="@style/Layout.Wrap"
+                        android:layout_marginTop="7sp"
+                        android:padding="7sp"
+                        android:background="#E5007D">
+            <TextView android:id="@+id/venueDetail_lblButtonMap"
+                      style="@style/Layout.Wrap.Complete"
+                      android:layout_centerVertical="true"/>
+            <ImageView android:id="@+id/venueDetail_imgButtonMap"
+                       style="@style/Image.Wrap"
+                       android:layout_alignParentRight="true"/>
+        </RelativeLayout>
+
+        <WebView android:id="@+id/venueDetail_webBody"
+                 style="@style/Layout.Full"
+                 android:padding="7sp"/>
+        <TextView android:id="@+id/venueDetail_lblBody"
+                  style="@style/Layout.Full"
+                  android:padding="7sp"/>
+    </LinearLayout>
+</ScrollView>

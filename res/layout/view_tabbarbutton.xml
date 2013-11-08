@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/tabbarButton_lnrView"
+              style="@style/Layout.Full"
+              android:gravity="center_horizontal|bottom">
+    <ImageView   android:id="@+id/tabbarButtonImage"
+                 style="@style/Layout.Wrap.Complete"/>
+    <TextView android:id="@+id/tabbarButtonText"
+              style="@style/Layout.Wrap.Complete"
+              android:padding="5sp"/>
+</LinearLayout>

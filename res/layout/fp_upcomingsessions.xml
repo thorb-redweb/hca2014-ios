@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/upcomingsessions_box"
+              style="@style/Layout.Full"
+              android:paddingTop="2dp"
+              android:paddingBottom="5dp"
+              android:paddingRight="20dp"
+              android:paddingLeft="20dp">
+    <RelativeLayout style="@style/Layout.Wrap"
+                    android:layout_width="wrap_content"
+                    android:layout_marginBottom="10dp">
+        <TextView android:id="@+id/upcomingsessions_lblTitle"
+                  style="@style/Layout.Wrap"
+                  android:layout_marginTop="10dp"/>
+        <LinearLayout android:id="@+id/upcomingsessions_lnrTxtTitle"
+                      style="@style/Layout.Wrap"
+                      android:layout_alignBottom="@id/upcomingsessions_lblTitle"
+                      android:layout_height="2dp"/>
+    </RelativeLayout>
+    <ListView android:id="@+id/upcomingsessions_lstArrangements"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:dividerHeight="1dp"/>
+</LinearLayout>

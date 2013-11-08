@@ -1,0 +1,11 @@
+<network>
+	<datafolder>
+		<path>http://nhat.intern.redweb.dk/appdata/</path>
+	</datafolder>
+	<joomla>
+		<path>http://nhat.intern.redweb.dk/</path>
+	</joomla>
+    <project>
+        <id>572776546205</id>
+    </project>
+</network>

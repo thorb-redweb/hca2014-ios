@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/pushmessagegroupsettings_lnrMainView"
+              android:orientation="vertical"
+              style="@style/Layout.Full">
+    <TextView android:id="@+id/pushmessagegroupsettings_lblTitle"
+            style="@style/Layout.Wrap"
+            android:layout_margin="5dp"/>
+    <FrameLayout android:id="@+id/pushmessagegroupsettings_pmglistlayout"
+                 style="@style/Layout.Full">
+        <ListView android:id="@+id/pushmessagegroupsettings_lstpmgs"
+                  style="@style/Layout.Full"
+                  android:layout_margin="10sp"
+                  android:paddingRight="5sp"/>
+    </FrameLayout>
+    <LinearLayout android:id="@+id/pushmessagegroupsettings_lnrEmptyList"
+                  android:visibility="gone"
+                  style="@style/Layout.Full"
+                  android:gravity="center">
+        <TextView android:id="@+id/pushmessagegroupsettings_lblEmptyList"
+                  style="@style/Layout.Wrap.Complete"/>
+    </LinearLayout>
+</LinearLayout>

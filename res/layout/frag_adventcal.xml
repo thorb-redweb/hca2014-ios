@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <LinearLayout android:id="@+id/adventcal_lnrMainView"
+                style="@style/Layout.Full">
+        <!--Button Row 1-->
+        <LinearLayout
+                style="@style/Layout.Wrap"
+                android:orientation="horizontal"
+                android:layout_height="0dp"
+                android:layout_weight=".5"
+                android:baselineAligned="false">
+            <ImageView android:id="@+id/adventcal_imgButton1"
+                    style="@style/Image.Full"
+                    android:layout_width="0dp"
+                    android:layout_weight=".5"
+                    android:padding="5dp"
+                    android:gravity="center"
+                    android:visibility="invisible"/>
+            <ImageView android:id="@+id/adventcal_imgButton2"
+                       style="@style/Image.Full"
+                       android:layout_width="0dp"
+                       android:layout_weight=".5"
+                       android:padding="5dp"
+                       android:gravity="center"
+                       android:visibility="invisible"/>
+            <ImageView android:id="@+id/adventcal_imgButton3"
+                       style="@style/Image.Full"
+                       android:layout_width="0dp"
+                       android:layout_weight=".5"
+                       android:padding="5dp"
+                       android:gravity="center"
+                       android:visibility="invisible"/>
+            <ImageView android:id="@+id/adventcal_imgButton4"
+                       style="@style/Image.Full"
+                       android:layout_width="0dp"
+                       android:layout_weight=".5"
+                       android:padding="5dp"
+                       android:gravity="center"
+                       android:visibility="invisible"/>
+        </LinearLayout>
+        <!--Button Row 2-->
+        <LinearLayout
+                style="@style/Layout.Wrap"
+                android:orientation="horizontal"
+                android:layout_height="0dp"
+                android:layout_weight=".5"
+                android:baselineAligned="false">
+            <ImageView android:id="@+id/adventcal_imgButton5"
+                       style="@style/Image.Full"
+                       android:layout_width="0dp"
+                       android:layout_weight=".5"
+                       android:padding="5dp"
+                       android:gravity="center"
+                       android:visibility="invisible"/>
+            <ImageView android:id="@+id/adventcal_imgButton6"
+                       style="@style/Image.Full"
+                       android:layout_width="0dp"
+                       android:layout_weight=".5"
+                       android:padding="5dp"
+                       android:gravity="center"
+                       android:visibility="invisible"/>
+            <ImageView android:id="@+id/adventcal_imgButton7"
+                       style="@style/Image.Full"
+                       android:layout_width="0dp"
+                       android:layout_weight=".5"
+                       android:padding="5dp"
+                       android:gravity="center"
+                       android:visibility="invisible"/>
+            <ImageView android:id="@+id/adventcal_imgButton8"
+                       style="@style/Image.Full"
+                       android:layout_width="0dp"
+                       android:layout_weight=".5"
+                       android:padding="5dp"
+                       android:gravity="center"
+                       android:visibility="invisible"/>
+        </LinearLayout>
+        <!--Button Row 3-->
+        <LinearLayout
+                style="@style/Layout.Wrap"
+                android:orientation="horizontal"
+                android:layout_height="0dp"
+                android:layout_weight=".5"
+                android:baselineAligned="false">
+            <ImageView android:id="@+id/adventcal_imgButton9"
+                       style="@style/Image.Full"
+                       android:layout_width="0dp"
+                       android:layout_weight=".5"
+                       android:padding="5dp"
+                       android:gravity="center"
+                       android:visibility="invisible"/>
+            <ImageView android:id="@+id/adventcal_imgButton10"
+                       style="@style/Image.Full"
+                       android:layout_width="0dp"
+                       android:layout_weight=".5"
+                       android:padding="5dp"
+                       android:gravity="center"
+                       android:visibility="invisible"/>
+            <ImageView android:id="@+id/adventcal_imgButton11"
+                       style="@style/Image.Full"
+                       android:layout_width="0dp"
+                       android:layout_weight=".5"
+                       android:padding="5dp"
+                       android:gravity="center"
+                       android:visibility="invisible"/>
+            <ImageView android:id="@+id/adventcal_imgButton12"
+                       style="@style/Image.Full"
+                       android:layout_width="0dp"
+                       android:layout_weight=".5"
+                       android:padding="5dp"
+                       android:gravity="center"
+                       android:visibility="invisible"/>
+        </LinearLayout>
+        <!--Button Row 4-->
+        <LinearLayout
+                style="@style/Layout.Wrap"
+                android:orientation="horizontal"
+                android:layout_height="0dp"
+                android:layout_weight=".5"
+                android:baselineAligned="false">
+            <ImageView android:id="@+id/adventcal_imgButton13"
+                       style="@style/Image.Full"
+                       android:layout_width="0dp"
+                       android:layout_weight=".5"
+                       android:padding="5dp"
+                       android:gravity="center"
+                       android:visibility="invisible"/>
+            <ImageView android:id="@+id/adventcal_imgButton14"
+                       style="@style/Image.Full"
+                       android:layout_width="0dp"
+                       android:layout_weight=".5"
+                       android:padding="5dp"
+                       android:gravity="center"
+                       android:visibility="invisible"/>
+            <ImageView android:id="@+id/adventcal_imgButton15"
+                       style="@style/Image.Full"
+                       android:layout_width="0dp"
+                       android:layout_weight=".5"
+                       android:padding="5dp"
+                       android:gravity="center"
+                       android:visibility="invisible"/>
+            <ImageView android:id="@+id/adventcal_imgButton16"
+                       style="@style/Image.Full"
+                       android:layout_width="0dp"
+                       android:layout_weight=".5"
+                       android:padding="5dp"
+                       android:gravity="center"
+                       android:visibility="invisible"/>
+        </LinearLayout>
+        <!--Button Row 5-->
+        <LinearLayout
+                style="@style/Layout.Wrap"
+                android:orientation="horizontal"
+                android:layout_height="0dp"
+                android:layout_weight=".5"
+                android:baselineAligned="false">
+            <ImageView android:id="@+id/adventcal_imgButton17"
+                       style="@style/Image.Full"
+                       android:layout_width="0dp"
+                       android:layout_weight=".5"
+                       android:padding="5dp"
+                       android:gravity="center"
+                       android:visibility="invisible"/>
+            <ImageView android:id="@+id/adventcal_imgButton18"
+                       style="@style/Image.Full"
+                       android:layout_width="0dp"
+                       android:layout_weight=".5"
+                       android:padding="5dp"
+                       android:gravity="center"
+                       android:visibility="invisible"/>
+            <ImageView android:id="@+id/adventcal_imgButton19"
+                       style="@style/Image.Full"
+                       android:layout_width="0dp"
+                       android:layout_weight=".5"
+                       android:padding="5dp"
+                       android:gravity="center"
+                       android:visibility="invisible"/>
+            <ImageView android:id="@+id/adventcal_imgButton20"
+                       style="@style/Image.Full"
+                       android:layout_width="0dp"
+                       android:layout_weight=".5"
+                       android:padding="5dp"
+                       android:gravity="center"
+                       android:visibility="invisible"/>
+        </LinearLayout>
+        <!--Button Row 6-->
+        <LinearLayout
+                style="@style/Layout.Wrap"
+                android:orientation="horizontal"
+                android:layout_height="0dp"
+                android:layout_weight=".5"
+                android:baselineAligned="false">
+            <ImageView android:id="@+id/adventcal_imgButton21"
+                       style="@style/Image.Full"
+                       android:layout_width="0dp"
+                       android:layout_weight=".5"
+                       android:padding="5dp"
+                       android:gravity="center"
+                       android:visibility="invisible"/>
+            <ImageView android:id="@+id/adventcal_imgButton22"
+                       style="@style/Image.Full"
+                       android:layout_width="0dp"
+                       android:layout_weight=".5"
+                       android:padding="5dp"
+                       android:gravity="center"
+                       android:visibility="invisible"/>
+            <ImageView android:id="@+id/adventcal_imgButton23"
+                       style="@style/Image.Full"
+                       android:layout_width="0dp"
+                       android:layout_weight=".5"
+                       android:padding="5dp"
+                       android:gravity="center"
+                       android:visibility="invisible"/>
+            <ImageView android:id="@+id/adventcal_imgButton24"
+                       style="@style/Image.Full"
+                       android:layout_width="0dp"
+                       android:layout_weight=".5"
+                       android:padding="5dp"
+                       android:gravity="center"
+                       android:visibility="invisible"/>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

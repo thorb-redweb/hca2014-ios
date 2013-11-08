@@ -1,0 +1,42 @@
+<text>
+    <navigationbar>
+        <homebutton>Hjem</homebutton>
+        <backbutton>Op</backbutton>
+    </navigationbar>
+
+    <Forside>
+        <button3>Gavekalender</button3>
+        <button7>Nyheder</button7>
+    </Forside>
+
+    <NextSessions>
+        <title>Næste Begivenheder</title>
+    </NextSessions>
+
+    <NewsTicker>
+        <title>Seneste Nyheder</title>
+    </NewsTicker>
+
+    <Begivenhed>
+        <date>Dato</date>
+        <place>Sted</place>
+        <time>Tidspunkt</time>
+        <mapbutton>Find vej på kort</mapbutton>
+    </Begivenhed>
+
+    <PMInitializer>
+        <pagedescription>For at modtage efterskolens nyheder skal du tilmelde dig med dit rigtige navn.</pagedescription>
+        <namelabel>Fulde navn</namelabel>
+        <submitbutton>Fortsæt</submitbutton>
+        <backbutton>Tilbage</backbutton>
+    </PMInitializer>
+
+    <Venues>
+        <address>Adresse</address>
+        <mapbutton>Find til Redweb</mapbutton>
+    </Venues>
+
+    <VenueMap>
+        <backbutton>Læs mere om redWeb</backbutton>
+    </VenueMap>
+</text>

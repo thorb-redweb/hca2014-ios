@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+    <dk.redweb.EfterSkole_App.Views.NavBarBox android:id="@+id/navbar"
+                                            style="@style/Layout.Wrap"
+                                            android:layout_alignParentTop="true"/>
+
+    <LinearLayout android:id="@+id/buttongallery_lnrBackground"
+            style="@style/Layout.Full"
+            android:layout_below="@+id/navbar"
+            android:layout_above="@+id/tabbar"
+            android:baselineAligned="false">
+        <!--Button Row 1-->
+        <LinearLayout
+                style="@style/Layout.Wrap"
+                android:orientation="horizontal"
+                android:layout_height="0dp"
+                android:layout_weight=".5"
+                android:baselineAligned="false">
+            <LinearLayout
+                style="@style/Layout.Full"
+                android:layout_width="0dp"
+                android:layout_weight=".5"
+                android:gravity="center">
+                <dk.redweb.EfterSkole_App.Views.FlexibleButton
+                        android:id="@+id/buttongallery_btn1"
+                        style="@style/Layout.Full"
+                        android:layout_margin="20dp"
+                        android:visibility="gone"/>
+            </LinearLayout>
+            <LinearLayout
+                    style="@style/Layout.Full"
+                    android:layout_width="0dp"
+                    android:layout_weight=".5"
+                    android:gravity="center">
+                <dk.redweb.EfterSkole_App.Views.FlexibleButton
+                        android:id="@+id/buttongallery_btn2"
+                        style="@style/Layout.Full"
+                        android:layout_margin="20dp"
+                        android:visibility="gone"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!--Button Row 2-->
+        <LinearLayout
+                style="@style/Layout.Wrap"
+                android:orientation="horizontal"
+                android:layout_height="0dp"
+                android:layout_weight=".5"
+                android:baselineAligned="false">
+            <LinearLayout
+                    style="@style/Layout.Full"
+                    android:layout_width="0dp"
+                    android:layout_weight=".5"
+                    android:gravity="center">
+                <dk.redweb.EfterSkole_App.Views.FlexibleButton
+                        android:id="@+id/buttongallery_btn3"
+                        style="@style/Layout.Full"
+                        android:layout_margin="20dp"
+                        android:visibility="gone"/>
+            </LinearLayout>
+            <LinearLayout
+                    style="@style/Layout.Full"
+                    android:layout_width="0dp"
+                    android:layout_weight=".5"
+                    android:gravity="center">
+                <dk.redweb.EfterSkole_App.Views.FlexibleButton
+                        android:id="@+id/buttongallery_btn4"
+                        style="@style/Layout.Full"
+                        android:layout_margin="20dp"
+                        android:visibility="gone"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!--Button Row 3-->
+        <LinearLayout
+                style="@style/Layout.Wrap"
+                android:orientation="horizontal"
+                android:layout_height="0dp"
+                android:layout_weight=".5"
+                android:baselineAligned="false">
+            <LinearLayout
+                    style="@style/Layout.Full"
+                    android:layout_width="0dp"
+                    android:layout_weight=".5"
+                    android:gravity="center">
+                <dk.redweb.EfterSkole_App.Views.FlexibleButton
+                        android:id="@+id/buttongallery_btn5"
+                        style="@style/Layout.Full"
+                        android:layout_margin="20dp"
+                        android:visibility="gone"/>
+            </LinearLayout>
+            <LinearLayout
+                    style="@style/Layout.Full"
+                    android:layout_width="0dp"
+                    android:layout_weight=".5"
+                    android:gravity="center">
+                <dk.redweb.EfterSkole_App.Views.FlexibleButton
+                        android:id="@+id/buttongallery_btn6"
+                        style="@style/Layout.Full"
+                        android:layout_margin="20dp"
+                        android:visibility="gone"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!--Button Row 4-->
+        <LinearLayout
+                style="@style/Layout.Wrap"
+                android:orientation="horizontal"
+                android:layout_height="0dp"
+                android:layout_weight=".5"
+                android:baselineAligned="false">
+            <LinearLayout
+                    style="@style/Layout.Full"
+                    android:layout_width="0dp"
+                    android:layout_weight=".5"
+                    android:gravity="center">
+                <dk.redweb.EfterSkole_App.Views.FlexibleButton
+                        android:id="@+id/buttongallery_btn7"
+                        style="@style/Layout.Full"
+                        android:layout_margin="20dp"
+                        android:visibility="gone"/>
+            </LinearLayout>
+            <LinearLayout
+                    style="@style/Layout.Full"
+                    android:layout_width="0dp"
+                    android:layout_weight=".5"
+                    android:gravity="center">
+                <dk.redweb.EfterSkole_App.Views.FlexibleButton
+                        android:id="@+id/buttongallery_btn8"
+                        style="@style/Layout.Full"
+                        android:layout_margin="20dp"
+                        android:visibility="gone"/>
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <dk.redweb.EfterSkole_App.Views.TabbarBox android:id="@+id/tabbar"
+                                            style="@style/Layout.Wrap"
+                                            android:layout_alignParentBottom="true"/>
+</RelativeLayout>

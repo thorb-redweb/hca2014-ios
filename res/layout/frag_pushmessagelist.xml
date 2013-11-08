@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/pushmessagelist_rltMainView"
+                style="@style/Layout.Full">
+
+    <FrameLayout android:id="@+id/pushmessagelist_frmList"
+                 style="@style/Layout.Full"
+                 android:background="@android:color/white">
+        <ListView android:id="@+id/pushmessagelist_lstPushMessages"
+                  style="@style/Layout.Full"
+                  android:paddingLeft="10sp"
+                  android:paddingRight="15sp"/>
+    </FrameLayout>
+    <LinearLayout android:id="@+id/pushmessagelist_lnrEmptyList"
+                  android:visibility="gone"
+                  style="@style/Layout.Full"
+                  android:gravity="center">
+        <TextView android:id="@+id/pushmessagelist_lblEmptyList"
+                  style="@style/Layout.Wrap.Complete"/>
+    </LinearLayout>
+</RelativeLayout>

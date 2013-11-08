@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                  style="@style/Layout.Wrap"
+                  android:orientation="vertical"
+                  android:background="@drawable/listitembox"
+                  android:layout_marginTop="5sp"
+                  android:layout_marginBottom="5sp">
+    <TextView android:id="@+id/dailysessionlistitem_lblTimeAndPlace"
+              style="@style/Layout.Wrap.Complete"
+              android:lineSpacingMultiplier=".95"/>
+    <TextView android:id="@+id/dailysessionlistitem_lblEvent"
+              style="@style/Layout.Wrap.Complete"
+              android:lineSpacingMultiplier=".95"/>
+</LinearLayout>

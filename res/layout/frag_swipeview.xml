@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/swipeview_rltMainView"
+                style="@style/Layout.Full">
+    <android.support.v4.view.ViewPager
+            android:id="@+id/swipeview_vpViewPager"
+            style="@style/Layout.Full"
+            android:layout_alignParentTop="true"
+            android:layout_above="@+id/swipeview_lnrTitlePageIndicatorBox"/>
+    <LinearLayout android:id="@+id/swipeview_lnrTitlePageIndicatorBox"
+                  style="@style/Layout.Wrap"
+                  android:layout_alignParentBottom="true">
+        <com.viewpagerindicator.LinePageIndicator
+                android:id="@+id/swipeview_tpiTitlePageIndicator"
+                style="@style/Layout.Wrap"
+                android:layout_height="15dp"/>
+    </LinearLayout>
+</RelativeLayout>

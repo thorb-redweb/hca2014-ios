@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              style="@style/Layout.Full">
+
+   <FrameLayout android:id="@+id/imageArticleList_sessionlistlayout"
+                 style="@style/Layout.Full"
+                 android:background="@android:color/white">
+        <ListView android:id="@+id/imageArticleList_lstArticles"
+              style="@style/Layout.Full"
+              android:paddingLeft="10sp"
+              android:paddingRight="15sp"/>
+    </FrameLayout>
+    <LinearLayout android:id="@+id/imageArticleList_lnrEmptyList"
+                  android:visibility="gone"
+                  style="@style/Layout.Full"
+                  android:gravity="center">
+        <TextView android:id="@+id/imageArticleList_lblEmptyList"
+                style="@style/Layout.Wrap.Complete"/>
+    </LinearLayout>
+</RelativeLayout>

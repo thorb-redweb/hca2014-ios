@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <dk.redweb.EfterSkole_App.Views.NavBarBox android:id="@+id/navbar"
+                                            style="@style/Layout.Wrap"
+                                            android:layout_alignParentTop="true"/>
+
+    <ScrollView android:id="@+id/sessionDetail_scrMainView"
+            style="@style/Layout.Full"
+            android:layout_below="@+id/navbar"
+            android:layout_above="@+id/tabbar">
+        <LinearLayout
+                style="@style/Layout.Full"
+                android:padding="5sp">
+
+            <TextView android:id="@+id/sessionDetail_lblTitle"
+                      style="@style/Layout.Wrap.Complete"/>
+
+            <ImageView android:id="@+id/sessionDetail_imgPicture"
+                       style="@style/Image.Full"
+                       android:layout_marginTop="7sp"
+                       android:layout_marginBottom="7sp"
+                       android:adjustViewBounds="true"
+                       android:src="@drawable/default_icon"/>
+
+            <!-- Date -->
+            <LinearLayout
+                    style="@style/Layout.Wrap"
+                    android:orientation="horizontal">
+                <LinearLayout
+                        style="@style/Layout.Wrap"
+                        android:layout_width="0dp"
+                        android:layout_weight=".4">
+                    <TextView android:id="@+id/sessionDetail_lblDateLabel"
+                            style="@style/Layout.Wrap.Complete"/>
+                </LinearLayout>
+                <LinearLayout
+                        style="@style/Layout.Wrap"
+                        android:layout_width="0dp"
+                        android:layout_weight=".6">
+                    <TextView android:id="@+id/sessionDetail_lblDateValue"
+                              style="@style/Layout.Wrap.Complete"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Place -->
+            <LinearLayout
+                    style="@style/Layout.Wrap"
+                    android:orientation="horizontal">
+                <LinearLayout
+                        style="@style/Layout.Wrap"
+                        android:layout_width="0dp"
+                        android:layout_weight=".4">
+                    <TextView android:id="@+id/sessionDetail_lblVenueLabel"
+                            style="@style/Layout.Wrap.Complete"/>
+                </LinearLayout>
+                <LinearLayout
+                        style="@style/Layout.Wrap"
+                        android:layout_width="0dp"
+                        android:layout_weight=".6">
+                    <TextView android:id="@+id/sessionDetail_lblVenueValue"
+                              style="@style/Layout.Wrap.Complete"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Time -->
+            <LinearLayout
+                    style="@style/Layout.Wrap"
+                    android:orientation="horizontal">
+                <LinearLayout
+                        style="@style/Layout.Wrap"
+                        android:layout_width="0dp"
+                        android:layout_weight=".4">
+                    <TextView android:id="@+id/sessionDetail_lblTimeLabel"
+                            style="@style/Layout.Wrap.Complete"/>
+                </LinearLayout>
+                <LinearLayout
+                        style="@style/Layout.Wrap"
+                        android:layout_width="0dp"
+                        android:layout_weight=".6">
+                    <TextView android:id="@+id/sessionDetail_lblTimeValue"
+                              style="@style/Layout.Wrap.Complete"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!--Map Button-->
+            <RelativeLayout android:id="@+id/sessionDetail_rltMapButton"
+                            style="@style/Layout.Wrap"
+                            android:layout_marginTop="7sp"
+                            android:padding="7sp"
+                            android:background="#E5007D">
+                <TextView android:id="@+id/sessionDetail_lblButtonMap"
+                        style="@style/Layout.Wrap.Complete"
+                        android:layout_centerVertical="true"/>
+                <ImageView android:id="@+id/sessionDetail_imgButtonMap"
+                        style="@style/Image.Wrap"
+                        android:layout_alignParentRight="true"/>
+            </RelativeLayout>
+
+            <!--Ticket Button-->
+            <RelativeLayout android:id="@+id/sessionDetail_rltTicketButton"
+                            style="@style/Layout.Wrap"
+                            android:layout_marginTop="7sp"
+                            android:padding="7sp"
+                            android:background="#E5007D">
+                <TextView
+                        style="@style/Layout.Wrap.Complete"
+                        android:layout_centerVertical="true"/>
+                <ImageView
+                        style="@style/Image.Wrap"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/icon_about_bottombar"/>
+            </RelativeLayout>
+
+            <WebView android:id="@+id/sessionDetail_webBody"
+                      style="@style/Layout.Full"
+                      android:padding="7sp"/>
+            <TextView android:id="@+id/sessionDetail_lblBody"
+                      style="@style/Layout.Full"
+                      android:padding="7sp"/>
+        </LinearLayout>
+    </ScrollView>
+
+
+    <dk.redweb.EfterSkole_App.Views.TabbarBox android:id="@+id/tabbar"
+            style="@style/Layout.Wrap"
+            android:layout_alignParentBottom="true"/>
+</RelativeLayout>

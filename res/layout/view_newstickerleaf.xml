@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+               style="@style/Layout.Full">
+    <TextView android:id="@+id/newstickerleaf_lblTitle"
+              style="@style/Layout.Wrap.Complete"/>
+    <LinearLayout
+            style="@style/Layout.Full"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal">
+        <RelativeLayout
+                style="@style/Layout.Full"
+                android:layout_weight=".7"
+                android:gravity="center"
+                android:layout_margin="10dp">
+            <ImageView android:id="@+id/newstickerleaf_img"
+                       style="@style/Image.Wrap"
+                       android:layout_centerHorizontal="true"/>
+        </RelativeLayout>
+        <RelativeLayout
+                style="@style/Layout.Full"
+                android:layout_weight=".3"
+                android:gravity="center">
+            <TextView android:id="@+id/newstickerleaf_lblBody"
+                      style="@style/Layout.Wrap.Complete"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>
