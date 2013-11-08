@@ -24,6 +24,8 @@ public class SwipeViewAdapter extends FragmentPagerAdapter {
         _xml = xml;
     }
 
+    //Change some stuff
+
     @Override
     public Fragment getItem(int i) {
         XmlNode nextPage = null;
