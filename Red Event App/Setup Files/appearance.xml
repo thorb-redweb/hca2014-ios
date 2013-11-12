@@ -1,0 +1,65 @@
+<appearance>
+    <default>
+        <barcolor>#02a5e5</barcolor>
+        <bartextcolor>#FFFFFF</bartextcolor>
+        <backcolor>#151839</backcolor>
+        <backtextcolor>#FFFFFF</backtextcolor>
+        <backtextshadowcolor>#FFFFFF</backtextshadowcolor>
+        <altcolor>#02a5e5</altcolor>
+        <alttextcolor>#FFFFFF</alttextcolor>
+        <textsize>18.0</textsize>
+        <textstyle>normal</textstyle>
+        <titlesize>24.0</titlesize>
+        <titlestyle>bold</titlestyle>
+        <titleshadowoffset>2.0,2.0</titleshadowoffset>
+        <titleshadowradius>2.0</titleshadowradius>
+        <itemtitlesize>18.0</itemtitlesize>
+        <itemtitlestyle>bold</itemtitlestyle>
+    </default>
+	
+    <navigationbar>
+        <visible>NO</visible>
+    </navigationbar>
+	
+    <tabbar>
+        <visible>NO</visible>
+    </tabbar>
+	
+    <SwipeView>
+        <backgroundimage>julebaggrund.jpg</backgroundimage>
+        <selectedpagecolor>#b4282e</selectedpagecolor>
+        <unselectedpagecolor>#FFFFFF</unselectedpagecolor>
+    </SwipeView>
+	
+    <JuleKalender>
+        <backgroundcolor>#00000000</backgroundcolor>
+    </JuleKalender>
+	
+    <Laage>
+        <backgroundimage>julebaggrund.jpg</backgroundimage>
+        <titlecolor>#b4282e</titlecolor>
+        <titlesize>36.0</titlesize>
+        <textbackgroundcolor>#FFFFFF</textbackgroundcolor>
+        <textcolor>#000000</textcolor>
+        <backbuttonimage>btnseeyou.png</backbuttonimage>
+    </Laage>
+	
+    <Nyheder>
+		<backgroundcolor>#66151839</backgroundcolor>
+        <cellbackgroundcolor>#66151839</cellbackgroundcolor>
+    </Nyheder>
+	
+    <Nyhedsside>
+        <titlecolor>#b4282e</titlecolor>
+        <backbuttonimage>btnclose.png</backbuttonimage>
+    </Nyhedsside>
+	
+    <RedWeb>
+        <backgroundcolor>#66151839</backgroundcolor>
+        <titlecolor>#b4282e</titlecolor>
+    </RedWeb>
+	
+    <RedWebMap>
+        <backbuttonimage>btnclose.png</backbuttonimage>
+    </RedWebMap>
+</appearance>

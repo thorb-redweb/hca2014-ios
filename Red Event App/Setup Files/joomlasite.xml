@@ -1,0 +1,8 @@
+<network>
+	<datafolder>
+		<path>http://jul.redweb.dk/appdata/</path>
+	</datafolder>
+	<joomla>
+		<path>http://jul.redweb.dk/</path>
+	</joomla>
+</network>

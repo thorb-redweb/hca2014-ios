@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="CIDR_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$USER_HOME$/Documents/Banegården.gpx">
+      <sourceFolder url="file://$USER_HOME$/Documents/Banegården.gpx" isTestSource="false" />
+    </content>
+    <content url="file://$USER_HOME$/Documents/Brandts.gpx">
+      <sourceFolder url="file://$USER_HOME$/Documents/Brandts.gpx" isTestSource="false" />
+    </content>
+    <content url="file://$USER_HOME$/Documents/Kongens Have.gpx">
+      <sourceFolder url="file://$USER_HOME$/Documents/Kongens Have.gpx" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$" />
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>
+
