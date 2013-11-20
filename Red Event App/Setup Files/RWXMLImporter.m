@@ -31,7 +31,7 @@
             continue;
         }
 
-        [nodeArray addObject:[[RWNode alloc] initWithName:element.name value:[self convertElementToRWNode:element]]];
+        [nodeArray addObject:[[RWXmlNode alloc] initWithName:element.name value:[self convertElementToRWNode:element]]];
     }
     return nodeArray;
 }
@@ -48,17 +48,17 @@
         }
 
         if (child.childCount == 1 && grandchild.childCount == 0) {
-            [nodeArray addObject:[[RWNode alloc] initWithName:child.name value:grandchild.stringValue]];
+            [nodeArray addObject:[[RWXmlNode alloc] initWithName:child.name value:grandchild.stringValue]];
         }
         else if (child.childCount > 1) {
-            [nodeArray addObject:[[RWNode alloc] initWithName:child.name value:[self convertElementToRWNode:child]]];
+            [nodeArray addObject:[[RWXmlNode alloc] initWithName:child.name value:[self convertElementToRWNode:child]]];
         }
     }
     return nodeArray;
 }
 
 
-- (RWNode *)getResultNodeFromResource:(NSString *)resourceName identifier:(NSString *)nodesForXPath {
+- (RWXmlNode *)getResultNodeFromResource:(NSString *)resourceName identifier:(NSString *)nodesForXPath {
     NSArray *result = [self getResultNodesFromResource:resourceName identifier:nodesForXPath];
 
     return result[0];

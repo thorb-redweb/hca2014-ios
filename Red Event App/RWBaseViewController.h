@@ -38,16 +38,16 @@
     RWXMLStore *_xml;
 
 @protected
-    RWNode *_page;
+    RWXmlNode *_page;
 @protected
     NSString *_name;
 @protected
     NSString *_childname;
 
 @protected
-    RWNode *_localLook;
+    RWXmlNode *_localLook;
 @protected
-    RWNode *_globalLook;
+    RWXmlNode *_globalLook;
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil name:(NSString *)name;

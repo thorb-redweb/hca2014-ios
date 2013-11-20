@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
-@class RWNode;
+@class RWXmlNode;
 @class RWMainViewController;
 
 @interface RWNavigationController : NSObject
 
 - (void)connectToMainView:(RWMainViewController *)mainViewcontroller;
 
-- (void)pushViewFromTab:(RWNode *)tabPage;
+- (void)pushViewFromTab:(RWXmlNode *)tabPage;
 
 - (void)pushViewWithParameters:(NSDictionary *)parameters;
 

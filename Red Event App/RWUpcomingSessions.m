@@ -31,7 +31,7 @@
 	NSString *_name;
 }
 
-- (id)initWithFrame:(CGRect)frame subviewElement:(RWNode *)page
+- (id)initWithFrame:(CGRect)frame subviewElement:(RWXmlNode *)page
 {
     self = [super initWithNibName:@"RWUpcomingSessions" bundle:nil];
     if (self) {
@@ -66,8 +66,8 @@
 }
 
 -(void)setAppearance{
-	RWNode *localLook = [_xml getAppearanceForPage:_name];
-	RWNode *globalLook = [_xml getAppearanceForPage:[RWLOOK DEFAULT]];
+	RWXmlNode *localLook = [_xml getAppearanceForPage:_name];
+	RWXmlNode *globalLook = [_xml getAppearanceForPage:[RWLOOK DEFAULT]];
 	RWAppearanceHelper *helper = [[RWAppearanceHelper alloc] initWithLocalLook:localLook globalLook:globalLook];
 	
 	[helper setBackgroundColor:self.view localName:[RWLOOK UPCOMINGSESSIONS_BACKGROUNDCOLOR] globalName:[RWLOOK DEFAULT_BACKCOLOR]];

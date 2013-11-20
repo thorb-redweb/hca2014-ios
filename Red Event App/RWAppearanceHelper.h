@@ -8,11 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
-@class RWNode;
+@class RWXmlNode;
 
 
 @interface RWAppearanceHelper : NSObject
-- (id)initWithLocalLook:(RWNode *)localLook globalLook:(RWNode *)globalLook;
+- (id)initWithLocalLook:(RWXmlNode *)localLook globalLook:(RWXmlNode *)globalLook;
 
 - (void)setBackgroundColor:(UIView *)view localName:(NSString *)localname globalName:(NSString *)globalname;
 

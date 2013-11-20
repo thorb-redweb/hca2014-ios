@@ -23,10 +23,10 @@
 @implementation RWMainViewController{
 	RWXMLStore *_xml;
 	
-	RWNode *_childPage;
+	RWXmlNode *_childPage;
 }
 
--(id)initWithStartPage:(RWNode *)startPage
+-(id)initWithStartPage:(RWXmlNode *)startPage
 {
     self = [super initWithNibName:@"RWMainViewController" bundle:nil];
     if (self) {
@@ -52,15 +52,15 @@
 }
 
 - (void)setBarVisibility{
-	RWNode *appearance = _xml.appearance;
+	RWXmlNode *appearance = _xml.appearance;
 	if ([appearance hasChild:[RWLOOK TABBAR]]) {
-		RWNode *tabbarNode = [appearance getChildFromNode:[RWLOOK TABBAR]];
+		RWXmlNode *tabbarNode = [appearance getChildFromNode:[RWLOOK TABBAR]];
 		if ([tabbarNode hasChild:[RWLOOK TABBAR_VISIBLE]] && ![tabbarNode getBoolFromNode:[RWLOOK TABBAR_VISIBLE]]) {
 			[_tabbar RWsetHeightAsConstraint:0.0];
 		}
 	}
 	if ([appearance hasChild:[RWLOOK NAVIGATIONBAR]]) {
-		RWNode *navbarNode = [appearance getChildFromNode:[RWLOOK NAVIGATIONBAR]];
+		RWXmlNode *navbarNode = [appearance getChildFromNode:[RWLOOK NAVIGATIONBAR]];
 		if ([navbarNode hasChild:[RWLOOK NAVBAR_VISIBLE]] && ![navbarNode getBoolFromNode:[RWLOOK NAVBAR_VISIBLE]]) {
 			[_navbar RWsetHeightAsConstraint:0.0];
 		}
@@ -73,6 +73,7 @@
 	
 	if([_xml.pages hasChild:@"global"] && [[_xml.pages getChildFromNode:@"global"] hasChild:@"toplogo"]){
 		NSString *toplogoimagename = [[_xml.pages getChildFromNode:@"global"] getStringFromNode:@"toplogo"];
+		[_logobar RWsetHeightAsConstraint:50.0];
 		[helper setLogo:_logobar imagename:toplogoimagename];
 	} else {
 		[_logobar RWsetHeightAsConstraint:0.0];
@@ -80,7 +81,7 @@
 }
 
 - (void)tabBar:(RWTabBar *)tabBar didSelectItem:(UITabBarItem *)item {
-	RWNode *tabPage = tabBar.tabpages[item.tag];
+	RWXmlNode *tabPage = tabBar.tabpages[item.tag];
     RWAppDelegate *app = [[UIApplication sharedApplication] delegate];
     [app.navController pushViewFromTab:tabPage];
 }

@@ -18,6 +18,6 @@
 
 @property (weak, nonatomic) UIViewController *childView;
 
--(id)initWithStartPage:(RWNode *)startPage;
+-(id)initWithStartPage:(RWXmlNode *)startPage;
 
 @end

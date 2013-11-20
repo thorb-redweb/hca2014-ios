@@ -14,7 +14,7 @@
 #import "RWArticleDetailViewController.h"
 
 #import "RWPAGE.h"
-#import "RWNode.h"
+#import "RWXmlNode.h"
 #import "RWDbArticles.h"
 #import "RWAppDelegate.h"
 #import "RWTEXT.h"
@@ -33,7 +33,7 @@
     RWXMLStore *_xml;
 
 	NSString *_name;
-    RWNode *_page;
+    RWXmlNode *_page;
 
     NSMutableArray *_itemViewControllers;
 	NSUInteger currentIndex;
@@ -41,7 +41,7 @@
 	NSArray *_datasource;
 }
 
-- (id)initWithPage:(RWNode *)componentpage
+- (id)initWithPage:(RWXmlNode *)componentpage
 {
     self = [super initWithNibName:@"RWNewsTickerView2" bundle:nil];
     if (self) {
@@ -104,7 +104,7 @@
 	NSString *childname = [_page getStringFromNode:[RWPAGE CHILD]];
 	RWNewstickerItem *item = _itemViewControllers[currentIndex];
 	
-	RWNode *childPage = [_xml getPage:childname];
+	RWXmlNode *childPage = [_xml getPage:childname];
 	NSMutableDictionary *childDictionary = [[NSMutableDictionary alloc]initWithDictionary:[childPage getDictionaryFromNode]];
 	[childDictionary setObject:item.model.articleid forKey:[RWPAGE ARTICLEID]];
 }
@@ -125,8 +125,8 @@
 }
 
 -(void)setAppearance{
-	RWNode *globalLook = [_xml getAppearanceForPage:[RWLOOK DEFAULT]];
-	RWNode *localLook = [_xml getAppearanceForPage:_name];
+	RWXmlNode *globalLook = [_xml getAppearanceForPage:[RWLOOK DEFAULT]];
+	RWXmlNode *localLook = [_xml getAppearanceForPage:_name];
 	RWAppearanceHelper *helper = [[RWAppearanceHelper alloc] initWithLocalLook:localLook globalLook:globalLook];
 	
 	[helper setBackgroundColor:[self view] localName:[RWLOOK NEWSTICKER_BACKGROUNDCOLOR] globalName:[RWLOOK DEFAULT_BACKCOLOR]];

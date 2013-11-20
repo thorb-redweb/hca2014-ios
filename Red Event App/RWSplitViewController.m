@@ -38,8 +38,8 @@
 }
 
 - (void)setupSubview {
-    RWNode *topElement = [_page getChildFromNode:[RWPAGE TOP]];
-    RWNode *bottomElement = [_page getChildFromNode:[RWPAGE BOTTOM]];
+    RWXmlNode *topElement = [_page getChildFromNode:[RWPAGE TOP]];
+    RWXmlNode *bottomElement = [_page getChildFromNode:[RWPAGE BOTTOM]];
 
     topView = [self getSubviewWithPage:topElement];
 	[self addChildViewController:topView];
@@ -60,7 +60,7 @@
     [self.view RWpinChildToSides:bottomView.view];
 }
 
-- (UIViewController *)getSubviewWithPage:(RWNode *)elementPage {
+- (UIViewController *)getSubviewWithPage:(RWXmlNode *)elementPage {
     NSString *type = [elementPage getStringFromNode:[RWPAGE COMPONENTTYPE]];
     if ([type isEqual:[RWTYPE UPCOMINGSESSIONS]]) {
 		CGRect tableFrame = CGRectMake(0, 25, 320, 150);

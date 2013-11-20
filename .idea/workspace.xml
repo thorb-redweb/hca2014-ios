@@ -2,155 +2,102 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3b12e239-311e-4611-93d9-549bde44ed4e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/barbackground.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/navbarbackground.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Red Event App/RWNewsTickerView2.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Red Event App/RWNewsTickerView2.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Red Event App/RWNewsTickerView2.xib" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Red Event App/Setup Files/text.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Red Event App/RWSingleViewController.h" afterPath="$PROJECT_DIR$/Red Event App/RWStaticArticleController.h" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Red Event App/RWSingleViewController.m" afterPath="$PROJECT_DIR$/Red Event App/RWStaticArticleController.m" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Red Event App/RWSingleViewController.xib" afterPath="$PROJECT_DIR$/Red Event App/RWStaticArticleController.xib" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Red Event App/RWTableNavigatorCell.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Red Event App/RWTableNavigatorCell.m" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Red Event App/RWTableNavigatorCell.xib" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Red Event App/RWTableNavigatorViewController.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Red Event App/RWTableNavigatorViewController.m" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Red Event App/RWTableNavigatorViewController.xib" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Red Event App/RWNode.h" afterPath="$PROJECT_DIR$/Red Event App/RWXmlNode.h" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Red Event App/RWNode.m" afterPath="$PROJECT_DIR$/Red Event App/RWXmlNode.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red App.xcodeproj/project.xcworkspace/xcuserdata/redwebpraktik.xcuserdatad/UserInterfaceState.xcuserstate" afterPath="$PROJECT_DIR$/Red App.xcodeproj/project.xcworkspace/xcuserdata/redwebpraktik.xcuserdatad/UserInterfaceState.xcuserstate" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.name" afterPath="$PROJECT_DIR$/.idea/.name" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/RWAdventCalViewController.m" afterPath="$PROJECT_DIR$/Red Event App/RWAdventCalViewController.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/RWAdventWindowViewController.m" afterPath="$PROJECT_DIR$/Red Event App/RWAdventWindowViewController.m" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/RWAppDelegate.m" afterPath="$PROJECT_DIR$/Red Event App/RWAppDelegate.m" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/RWAppearanceHelper.h" afterPath="$PROJECT_DIR$/Red Event App/RWAppearanceHelper.h" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/RWAppearanceHelper.m" afterPath="$PROJECT_DIR$/Red Event App/RWAppearanceHelper.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/RWArticleDetailViewController.h" afterPath="$PROJECT_DIR$/Red Event App/RWArticleDetailViewController.h" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/RWArticleDetailViewController.m" afterPath="$PROJECT_DIR$/Red Event App/RWArticleDetailViewController.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/RWArticleDetailViewController.xib" afterPath="$PROJECT_DIR$/Red Event App/RWArticleDetailViewController.xib" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/RWArticleListViewController.m" afterPath="$PROJECT_DIR$/Red Event App/RWArticleListViewController.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/RWArticleVM.h" afterPath="$PROJECT_DIR$/Red Event App/RWArticleVM.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/RWArticleVM.m" afterPath="$PROJECT_DIR$/Red Event App/RWArticleVM.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/RWArticleListViewController.h" afterPath="$PROJECT_DIR$/Red Event App/RWArticleListViewController.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/RWBaseMapView.xib" afterPath="$PROJECT_DIR$/Red Event App/RWBaseMapView.xib" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/RWBaseMapViewController.h" afterPath="$PROJECT_DIR$/Red Event App/RWBaseMapViewController.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/RWBaseMapViewController.m" afterPath="$PROJECT_DIR$/Red Event App/RWBaseMapViewController.m" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/RWBaseViewController.h" afterPath="$PROJECT_DIR$/Red Event App/RWBaseViewController.h" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/RWBaseViewController.m" afterPath="$PROJECT_DIR$/Red Event App/RWBaseViewController.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/RWDailySessionListViewController.h" afterPath="$PROJECT_DIR$/Red Event App/RWDailySessionListViewController.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/RWButtonGalleryViewController.m" afterPath="$PROJECT_DIR$/Red Event App/RWButtonGalleryViewController.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/RWButtonGalleryViewController.xib" afterPath="$PROJECT_DIR$/Red Event App/RWButtonGalleryViewController.xib" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/RWDailySessionListViewController.m" afterPath="$PROJECT_DIR$/Red Event App/RWDailySessionListViewController.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/RWDailySessionListViewController.xib" afterPath="$PROJECT_DIR$/Red Event App/RWDailySessionListViewController.xib" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/RWFrontPageViewController.xib" afterPath="$PROJECT_DIR$/Red Event App/RWFrontPageViewController.xib" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/RWDbArticles.m" afterPath="$PROJECT_DIR$/Red Event App/RWDbArticles.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/RWDbHelper.h" afterPath="$PROJECT_DIR$/Red Event App/RWDbHelper.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/RWDbHelper.m" afterPath="$PROJECT_DIR$/Red Event App/RWDbHelper.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/RWHandler_DumpDatabase.m" afterPath="$PROJECT_DIR$/Red Event App/RWHandler_DumpDatabase.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/RWHandler_UpdateDatabase.m" afterPath="$PROJECT_DIR$/Red Event App/RWHandler_UpdateDatabase.m" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/RWImageArticleListViewController.m" afterPath="$PROJECT_DIR$/Red Event App/RWImageArticleListViewController.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/RWInfoWindow.h" afterPath="$PROJECT_DIR$/Red Event App/RWInfoWindow.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/RWInfoWindow.xib" afterPath="$PROJECT_DIR$/Red Event App/RWInfoWindow.xib" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/RWJSONArticle.h" afterPath="$PROJECT_DIR$/Red Event App/RWJSONArticle.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/RWJSONArticle.m" afterPath="$PROJECT_DIR$/Red Event App/RWJSONArticle.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/RWJSONEvent.h" afterPath="$PROJECT_DIR$/Red Event App/RWJSONEvent.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/RWJSONEvent.m" afterPath="$PROJECT_DIR$/Red Event App/RWJSONEvent.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/RWJSONPushMessage.h" afterPath="$PROJECT_DIR$/Red Event App/RWJSONPushMessage.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/RWJSONPushMessage.m" afterPath="$PROJECT_DIR$/Red Event App/RWJSONPushMessage.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/RWJSONPushMessageGroup.h" afterPath="$PROJECT_DIR$/Red Event App/RWJSONPushMessageGroup.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/RWJSONPushMessageGroup.m" afterPath="$PROJECT_DIR$/Red Event App/RWJSONPushMessageGroup.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/RWJSONSchemas.h" afterPath="$PROJECT_DIR$/Red Event App/RWJSONSchemas.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/RWJSONSchemas.m" afterPath="$PROJECT_DIR$/Red Event App/RWJSONSchemas.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/RWJSONSession.h" afterPath="$PROJECT_DIR$/Red Event App/RWJSONSession.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/RWJSONSession.m" afterPath="$PROJECT_DIR$/Red Event App/RWJSONSession.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/RWJSONVenue.h" afterPath="$PROJECT_DIR$/Red Event App/RWJSONVenue.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/RWJSONVenue.m" afterPath="$PROJECT_DIR$/Red Event App/RWJSONVenue.m" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/RWLOOK.h" afterPath="$PROJECT_DIR$/Red Event App/RWLOOK.h" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/RWLOOK.m" afterPath="$PROJECT_DIR$/Red Event App/RWLOOK.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/RWMainViewController.h" afterPath="$PROJECT_DIR$/Red Event App/RWMainViewController.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/RWMainViewController.m" afterPath="$PROJECT_DIR$/Red Event App/RWMainViewController.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/RWMainViewController.xib" afterPath="$PROJECT_DIR$/Red Event App/RWMainViewController.xib" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/RWNavigationController.h" afterPath="$PROJECT_DIR$/Red Event App/RWNavigationController.h" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/RWNavigationController.m" afterPath="$PROJECT_DIR$/Red Event App/RWNavigationController.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/RWNewsTickerView2.h" afterPath="$PROJECT_DIR$/Red Event App/RWNewsTickerView2.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/RWNewsTickerView2.m" afterPath="$PROJECT_DIR$/Red Event App/RWNewsTickerView2.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/RWNewstickerItem.h" afterPath="$PROJECT_DIR$/Red Event App/RWNewstickerItem.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/RWNewstickerItem.m" afterPath="$PROJECT_DIR$/Red Event App/RWNewstickerItem.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/RWNewstickerView.h" afterPath="$PROJECT_DIR$/Red Event App/RWNewstickerView.h" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/RWNewstickerView.m" afterPath="$PROJECT_DIR$/Red Event App/RWNewstickerView.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/RWNode.h" afterPath="$PROJECT_DIR$/Red Event App/RWNode.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/RWNode.m" afterPath="$PROJECT_DIR$/Red Event App/RWNode.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/RWOverviewMapViewController.m" afterPath="$PROJECT_DIR$/Red Event App/RWOverviewMapViewController.m" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/RWPAGE.h" afterPath="$PROJECT_DIR$/Red Event App/RWPAGE.h" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/RWPAGE.m" afterPath="$PROJECT_DIR$/Red Event App/RWPAGE.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/RWSessionDetailViewController.h" afterPath="$PROJECT_DIR$/Red Event App/RWSessionDetailViewController.h" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/RWSessionDetailViewController.m" afterPath="$PROJECT_DIR$/Red Event App/RWSessionDetailViewController.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/RWSessionDetailViewController.xib" afterPath="$PROJECT_DIR$/Red Event App/RWSessionDetailViewController.xib" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/RWSessionListViewController.xib" afterPath="$PROJECT_DIR$/Red Event App/RWSessionListViewController.xib" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/RWSplitViewController.m" afterPath="$PROJECT_DIR$/Red Event App/RWSplitViewController.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/RWStaticArticleController.m" afterPath="$PROJECT_DIR$/Red Event App/RWStaticArticleController.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/RWStaticArticleController.xib" afterPath="$PROJECT_DIR$/Red Event App/RWStaticArticleController.xib" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/RWSwipeViewController.h" afterPath="$PROJECT_DIR$/Red Event App/RWSwipeViewController.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/RWSwipeViewController.m" afterPath="$PROJECT_DIR$/Red Event App/RWSwipeViewController.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/RWTEXT.h" afterPath="$PROJECT_DIR$/Red Event App/RWTEXT.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/RWTEXT.m" afterPath="$PROJECT_DIR$/Red Event App/RWTEXT.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/RWTYPE.h" afterPath="$PROJECT_DIR$/Red Event App/RWTYPE.h" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/RWTYPE.m" afterPath="$PROJECT_DIR$/Red Event App/RWTYPE.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/RWTabBar.m" afterPath="$PROJECT_DIR$/Red Event App/RWTabBar.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/RWTextHelper.m" afterPath="$PROJECT_DIR$/Red Event App/RWTextHelper.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/RWUpcomingSessions.h" afterPath="$PROJECT_DIR$/Red Event App/RWUpcomingSessions.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/RWUpcomingSessions.m" afterPath="$PROJECT_DIR$/Red Event App/RWUpcomingSessions.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/RWUpcomingSessionsDelegate.h" afterPath="$PROJECT_DIR$/Red Event App/RWUpcomingSessionsDelegate.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/RWUpcomingSessionsDelegate.m" afterPath="$PROJECT_DIR$/Red Event App/RWUpcomingSessionsDelegate.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/RWUpcomingSessionsTable.h" afterPath="$PROJECT_DIR$/Red Event App/RWUpcomingSessionsTable.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/RWUpcomingSessionsTable.m" afterPath="$PROJECT_DIR$/Red Event App/RWUpcomingSessionsTable.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/RWVenueDetailViewController.m" afterPath="$PROJECT_DIR$/Red Event App/RWVenueDetailViewController.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/RWVenuePickerViewController.h" afterPath="$PROJECT_DIR$/Red Event App/RWVenuePickerViewController.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/RWVenuePickerViewController.m" afterPath="$PROJECT_DIR$/Red Event App/RWVenuePickerViewController.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/Setup Files/RWXMLImporter.h" afterPath="$PROJECT_DIR$/Red Event App/Setup Files/RWXMLImporter.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/Setup Files/RWXMLImporter.m" afterPath="$PROJECT_DIR$/Red Event App/Setup Files/RWXMLImporter.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/Setup Files/RWXMLStore.h" afterPath="$PROJECT_DIR$/Red Event App/Setup Files/RWXMLStore.h" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/Setup Files/RWXMLStore.m" afterPath="$PROJECT_DIR$/Red Event App/Setup Files/RWXMLStore.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/Setup Files/appearance.xml" afterPath="$PROJECT_DIR$/Red Event App/Setup Files/appearance.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/Setup Files/joomlasite.xml" afterPath="$PROJECT_DIR$/Red Event App/Setup Files/joomlasite.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red App.xcodeproj/xcuserdata/redwebpraktik.xcuserdatad/xcschemes/Red Event App.xcscheme" afterPath="$PROJECT_DIR$/Red App.xcodeproj/xcuserdata/redwebpraktik.xcuserdatad/xcschemes/Red Event App.xcscheme" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/Setup Files/pages.xml" afterPath="$PROJECT_DIR$/Red Event App/Setup Files/pages.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App.xcodeproj/project.pbxproj" afterPath="$PROJECT_DIR$/Red Event App.xcodeproj/project.pbxproj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red App.xcodeproj/project.pbxproj" afterPath="$PROJECT_DIR$/Red App.xcodeproj/project.pbxproj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/xcode.xml" afterPath="$PROJECT_DIR$/.idea/xcode.xml" />
     </list>
     <ignored path="Red Event App.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="3b12e239-311e-4611-93d9-549bde44ed4e" time="1380546822409" ignored="false" />
-    <file path="/RWDbInterface.h" changelist="3b12e239-311e-4611-93d9-549bde44ed4e" time="1380278774191" ignored="false" />
-    <file path="/RWDbInterface.m" changelist="3b12e239-311e-4611-93d9-549bde44ed4e" time="1380279737972" ignored="false" />
-    <file path="/RWDbArticles.m" changelist="3b12e239-311e-4611-93d9-549bde44ed4e" time="1380290803457" ignored="false" />
-    <file path="/RWDbSessions.h" changelist="3b12e239-311e-4611-93d9-549bde44ed4e" time="1380279857063" ignored="false" />
-    <file path="/RWDbEvents.h" changelist="3b12e239-311e-4611-93d9-549bde44ed4e" time="1380285588694" ignored="false" />
-    <file path="/RWDbSchemas.h" changelist="3b12e239-311e-4611-93d9-549bde44ed4e" time="1380280017851" ignored="false" />
-    <file path="/RWDbSchemas.m" changelist="3b12e239-311e-4611-93d9-549bde44ed4e" time="1380281299773" ignored="false" />
-    <file path="/RWDbEvents.m" changelist="3b12e239-311e-4611-93d9-549bde44ed4e" time="1380290827385" ignored="false" />
-    <file path="/RWDbHelper.m" changelist="3b12e239-311e-4611-93d9-549bde44ed4e" time="1380283807957" ignored="false" />
-    <file path="/RWDbSessions.m" changelist="3b12e239-311e-4611-93d9-549bde44ed4e" time="1380290795425" ignored="false" />
-    <file path="/RWDbVenues.h" changelist="3b12e239-311e-4611-93d9-549bde44ed4e" time="1380283641252" ignored="false" />
-    <file path="/RWDbVenues.m" changelist="3b12e239-311e-4611-93d9-549bde44ed4e" time="1380290841638" ignored="false" />
-    <file path="/RWSingleViewController.m" changelist="3b12e239-311e-4611-93d9-549bde44ed4e" time="1380284269830" ignored="false" />
-    <file path="/RWArticleListViewController.m" changelist="3b12e239-311e-4611-93d9-549bde44ed4e" time="1380284328161" ignored="false" />
-    <file path="/RWBaseViewController.h" changelist="3b12e239-311e-4611-93d9-549bde44ed4e" time="1380702982107" ignored="false" />
-    <file path="/RWNextThreeNewsView.m" changelist="3b12e239-311e-4611-93d9-549bde44ed4e" time="1380544143211" ignored="false" />
-    <file path="/RWImageArticleListViewController.m" changelist="3b12e239-311e-4611-93d9-549bde44ed4e" time="1380702957278" ignored="false" />
-    <file path="/RWArticleDetailViewController.m" changelist="3b12e239-311e-4611-93d9-549bde44ed4e" time="1380703876642" ignored="false" />
-    <file path="/RWSessionListViewController.m" changelist="3b12e239-311e-4611-93d9-549bde44ed4e" time="1380284663052" ignored="false" />
-    <file path="/RWSessionDetailViewController.m" changelist="3b12e239-311e-4611-93d9-549bde44ed4e" time="1380628252437" ignored="false" />
-    <file path="/RWSplashViewController.m" changelist="3b12e239-311e-4611-93d9-549bde44ed4e" time="1380284714076" ignored="false" />
-    <file path="/RWSessionMapViewController.m" changelist="3b12e239-311e-4611-93d9-549bde44ed4e" time="1380284730727" ignored="false" />
-    <file path="/RWOverviewMapViewController.m" changelist="3b12e239-311e-4611-93d9-549bde44ed4e" time="1380284820239" ignored="false" />
-    <file path="/RWDbArticles.h" changelist="3b12e239-311e-4611-93d9-549bde44ed4e" time="1380284925462" ignored="false" />
-    <file path="/RWDbCommon.h" changelist="3b12e239-311e-4611-93d9-549bde44ed4e" time="1380284936138" ignored="false" />
-    <file path="/RWDailySessionListViewController.m" changelist="3b12e239-311e-4611-93d9-549bde44ed4e" time="1380884075710" ignored="false" />
-    <file path="/RWNextThreeSessionDelegate.m" changelist="3b12e239-311e-4611-93d9-549bde44ed4e" time="1380285067869" ignored="false" />
-    <file path="/RWVenuePickerViewController.m" changelist="3b12e239-311e-4611-93d9-549bde44ed4e" time="1380620999937" ignored="false" />
-    <file path="/RWNextThreeNewsViewController.m" changelist="3b12e239-311e-4611-93d9-549bde44ed4e" time="1380285121393" ignored="false" />
-    <file path="/RWHandler_UpdateDatabase.m" changelist="3b12e239-311e-4611-93d9-549bde44ed4e" time="1380286065812" ignored="false" />
-    <file path="/RWHandler_DumpDatabase.m" changelist="3b12e239-311e-4611-93d9-549bde44ed4e" time="1380286003223" ignored="false" />
-    <file path="/RWTabBar.h" changelist="3b12e239-311e-4611-93d9-549bde44ed4e" time="1380291135328" ignored="false" />
-    <file path="/RWTabBar.m" changelist="3b12e239-311e-4611-93d9-549bde44ed4e" time="1380527275019" ignored="false" />
-    <file path="/RWBaseViewController.m" changelist="3b12e239-311e-4611-93d9-549bde44ed4e" time="1380883338201" ignored="false" />
-    <file path="/RWNavigationController.m" changelist="3b12e239-311e-4611-93d9-549bde44ed4e" time="1380883556142" ignored="false" />
-    <file path="/RWTYPE.m" changelist="3b12e239-311e-4611-93d9-549bde44ed4e" time="1380292216116" ignored="false" />
-    <file path="/RWPAGE.m" changelist="3b12e239-311e-4611-93d9-549bde44ed4e" time="1380876067527" ignored="false" />
-    <file path="/RWPAGE.h" changelist="3b12e239-311e-4611-93d9-549bde44ed4e" time="1380292504704" ignored="false" />
-    <file path="/RWFrontPageViewController.m" changelist="3b12e239-311e-4611-93d9-549bde44ed4e" time="1380293391761" ignored="false" />
-    <file path="/RWXMLStore.m" changelist="3b12e239-311e-4611-93d9-549bde44ed4e" time="1380876457632" ignored="false" />
-    <file path="/RWAppDelegate.m" changelist="3b12e239-311e-4611-93d9-549bde44ed4e" time="1380883484851" ignored="false" />
-    <file path="/RWLOOK.h" changelist="3b12e239-311e-4611-93d9-549bde44ed4e" time="1380701205077" ignored="false" />
-    <file path="/RWLOOK.m" changelist="3b12e239-311e-4611-93d9-549bde44ed4e" time="1380701138521" ignored="false" />
-    <file path="/appearance.xml" changelist="3b12e239-311e-4611-93d9-549bde44ed4e" time="1380877199524" ignored="false" />
-    <file path="/RWAppearanceHelper.m" changelist="3b12e239-311e-4611-93d9-549bde44ed4e" time="1380625984196" ignored="false" />
-    <file path="/RWAppearanceHelper.h" changelist="3b12e239-311e-4611-93d9-549bde44ed4e" time="1380546643316" ignored="false" />
-    <file path="/RWNextThreeNewsItem.m" changelist="3b12e239-311e-4611-93d9-549bde44ed4e" time="1380549268778" ignored="false" />
-    <file path="/RWNextThreeNewsItem.h" changelist="3b12e239-311e-4611-93d9-549bde44ed4e" time="1380544330443" ignored="false" />
-    <file path="/RWNextThreeNewsView.h" changelist="3b12e239-311e-4611-93d9-549bde44ed4e" time="1380544367962" ignored="false" />
-    <file path="$PROJECT_DIR$/Red Event App/GoogleMaps-iOS-1.4.2/GoogleMapsSDKDemos/GoogleMaps.framework/Headers/GMSReverseGeocodeOutput.h" changelist="3b12e239-311e-4611-93d9-549bde44ed4e" time="1380546769697" ignored="false" />
-    <file path="$PROJECT_DIR$/Red Event App/GoogleMaps-iOS-1.4.2/GoogleMapsSDKDemos/GoogleMaps.framework/Headers/GMSPanoramaView.h" changelist="3b12e239-311e-4611-93d9-549bde44ed4e" time="1380546769698" ignored="false" />
-    <file path="$PROJECT_DIR$/Red Event App/GoogleMaps-iOS-1.4.2/GoogleMapsSDKDemos/GoogleMaps.framework/Versions/A/Headers/GMSOverlay.h" changelist="3b12e239-311e-4611-93d9-549bde44ed4e" time="1380546769714" ignored="false" />
-    <file path="$PROJECT_DIR$/Red Event App/GoogleMaps-iOS-1.4.2/GoogleMapsSDKDemos/GoogleMaps.framework/Versions/A/Headers/GMSProjection.h" changelist="3b12e239-311e-4611-93d9-549bde44ed4e" time="1380546769716" ignored="false" />
-    <file path="$PROJECT_DIR$/Red Event App/GoogleMaps-iOS-1.4.2/GoogleMapsSDKDemos/GoogleMaps.framework/Versions/A/Headers/GMSGeocoder.h" changelist="3b12e239-311e-4611-93d9-549bde44ed4e" time="1380546769724" ignored="false" />
-    <file path="$PROJECT_DIR$/Red Event App/GoogleMaps-iOS-1.4.2/GoogleMaps.framework/Versions/Current/Resources/GoogleMaps.bundle/GMSCacheStorage.momd/VersionInfo.plist" changelist="3b12e239-311e-4611-93d9-549bde44ed4e" time="1380546769726" ignored="false" />
-    <file path="$PROJECT_DIR$/Red Event App/GoogleMaps-iOS-1.4.2/GoogleMapsSDKDemos/GoogleMaps.framework/Versions/A/Headers/GMSOrientation.h" changelist="3b12e239-311e-4611-93d9-549bde44ed4e" time="1380546769726" ignored="false" />
-    <file path="$PROJECT_DIR$/Red Event App/GoogleMaps-iOS-1.4.2/GoogleMapsSDKDemos/GoogleMaps.framework/Versions/Current/Headers/GMSMapView.h" changelist="3b12e239-311e-4611-93d9-549bde44ed4e" time="1380546769748" ignored="false" />
-    <file path="/fragment.m" changelist="3b12e239-311e-4611-93d9-549bde44ed4e" time="1380900128991" ignored="false" />
-    <file path="/RWNewstickerItem.h" changelist="3b12e239-311e-4611-93d9-549bde44ed4e" time="1380548126416" ignored="false" />
-    <file path="/RWNewstickerView.m" changelist="3b12e239-311e-4611-93d9-549bde44ed4e" time="1380548170362" ignored="false" />
-    <file path="/RWNewstickerItem.m" changelist="3b12e239-311e-4611-93d9-549bde44ed4e" time="1380548533775" ignored="false" />
-    <file path="/RWFullSessionCell.m" changelist="3b12e239-311e-4611-93d9-549bde44ed4e" time="1380614668723" ignored="false" />
-    <file path="/RWFullSessionCell.h" changelist="3b12e239-311e-4611-93d9-549bde44ed4e" time="1380614789121" ignored="false" />
-    <file path="/RWUpcomingSessionsDelegate.m" changelist="3b12e239-311e-4611-93d9-549bde44ed4e" time="1380616750075" ignored="false" />
-    <file path="/RWVenuePickerViewController.h" changelist="3b12e239-311e-4611-93d9-549bde44ed4e" time="1380620124391" ignored="false" />
-    <file path="/RWNode.m" changelist="3b12e239-311e-4611-93d9-549bde44ed4e" time="1380627951945" ignored="false" />
-    <file path="/RWNode.h" changelist="3b12e239-311e-4611-93d9-549bde44ed4e" time="1380627942706" ignored="false" />
-    <file path="/RWStaticArticleController.m" changelist="3b12e239-311e-4611-93d9-549bde44ed4e" time="1380701545739" ignored="false" />
-    <file path="/RWArticleDetailViewController.h" changelist="3b12e239-311e-4611-93d9-549bde44ed4e" time="1380703398228" ignored="false" />
-    <file path="/RWArticleVM.m" changelist="3b12e239-311e-4611-93d9-549bde44ed4e" time="1380703616829" ignored="false" />
-    <file path="$PROJECT_DIR$/../SplitViewTest/SplitViewTest/MasterViewController.m" changelist="3b12e239-311e-4611-93d9-549bde44ed4e" time="1380899721936" ignored="false" />
-    <file path="/MasterViewController.m" changelist="3b12e239-311e-4611-93d9-549bde44ed4e" time="1380897151613" ignored="false" />
-    <file path="$PROJECT_DIR$/../SplitViewTest/SplitViewTest/RWAppDelegate.m" changelist="3b12e239-311e-4611-93d9-549bde44ed4e" time="1380888654524" ignored="false" />
-    <file path="$PROJECT_DIR$/../SplitViewTest/SplitViewTest/DetailViewController.xib" changelist="3b12e239-311e-4611-93d9-549bde44ed4e" time="1380888654524" ignored="false" />
-    <file path="$PROJECT_DIR$/../SplitViewTest/SplitViewTest/DetailViewController.h" changelist="3b12e239-311e-4611-93d9-549bde44ed4e" time="1380888654524" ignored="false" />
-    <file path="$PROJECT_DIR$/../SplitViewTest/SplitViewTest/MasterViewController.xib" changelist="3b12e239-311e-4611-93d9-549bde44ed4e" time="1380893077382" ignored="false" />
-    <file path="$PROJECT_DIR$/../SplitViewTest/SplitViewTest/MasterViewController.h" changelist="3b12e239-311e-4611-93d9-549bde44ed4e" time="1380889194786" ignored="false" />
-    <file path="$PROJECT_DIR$/../SplitViewTest/SplitViewTest/Detail2ViewController.h" changelist="3b12e239-311e-4611-93d9-549bde44ed4e" time="1380894082592" ignored="false" />
-    <file path="$PROJECT_DIR$/../SplitViewTest/SplitViewTest/Detail2ViewController.m" changelist="3b12e239-311e-4611-93d9-549bde44ed4e" time="1380899980960" ignored="false" />
-    <file path="/Detail2ViewController.m" changelist="3b12e239-311e-4611-93d9-549bde44ed4e" time="1380894266478" ignored="false" />
-    <file path="$PROJECT_DIR$/../SplitViewTest/SplitViewTest/ContentViewController.h" changelist="3b12e239-311e-4611-93d9-549bde44ed4e" time="1380899721936" ignored="false" />
-    <file path="/ContentViewController.h" changelist="3b12e239-311e-4611-93d9-549bde44ed4e" time="1380896729554" ignored="false" />
-    <file path="$PROJECT_DIR$/../SplitViewTest/SplitViewTest/ContentViewController.xib" changelist="3b12e239-311e-4611-93d9-549bde44ed4e" time="1380899721936" ignored="false" />
-    <file path="$PROJECT_DIR$/../SplitViewTest/SplitViewTest/Detail2ViewController.xib" changelist="3b12e239-311e-4611-93d9-549bde44ed4e" time="1380893477367" ignored="false" />
-    <file path="$PROJECT_DIR$/../SplitViewTest/SplitViewTest/SmoothPageViewController/RWSmoothPageViewController.m" changelist="3b12e239-311e-4611-93d9-549bde44ed4e" time="1380895427492" ignored="false" />
-    <file path="$PROJECT_DIR$/../SplitViewTest/SplitViewTest/SmoothPageViewController/RWSmoothPageViewController.h" changelist="3b12e239-311e-4611-93d9-549bde44ed4e" time="1380895469021" ignored="false" />
-    <file path="/RWSmoothPageViewController.h" changelist="3b12e239-311e-4611-93d9-549bde44ed4e" time="1380895469021" ignored="false" />
-    <file path="/RWSmoothPageViewController.m" changelist="3b12e239-311e-4611-93d9-549bde44ed4e" time="1380897277632" ignored="false" />
-    <file path="$PROJECT_DIR$/../SplitViewTest/SplitViewTest/SmoothPageViewController/RWPageViewController.h" changelist="3b12e239-311e-4611-93d9-549bde44ed4e" time="1380896428453" ignored="false" />
-    <file path="$PROJECT_DIR$/../SplitViewTest/SplitViewTest/SmoothPageViewController/RWPageViewController.m" changelist="3b12e239-311e-4611-93d9-549bde44ed4e" time="1380895451661" ignored="false" />
-    <file path="$PROJECT_DIR$/../SplitViewTest/SplitViewTest/SmoothPageViewController/RWPageViewHandler.m" changelist="3b12e239-311e-4611-93d9-549bde44ed4e" time="1380899721936" ignored="false" />
-    <file path="$PROJECT_DIR$/../SplitViewTest/SplitViewTest/SmoothPageViewController/RWPageViewHandler.h" changelist="3b12e239-311e-4611-93d9-549bde44ed4e" time="1380898660791" ignored="false" />
-    <file path="/RWPageViewController.h" changelist="3b12e239-311e-4611-93d9-549bde44ed4e" time="1380895827007" ignored="false" />
-    <file path="/RWPageViewHandler.m" changelist="3b12e239-311e-4611-93d9-549bde44ed4e" time="1380896271565" ignored="false" />
-    <file path="$PROJECT_DIR$/../SplitViewTest/SplitViewTest/RWDetail3ViewController.m" changelist="3b12e239-311e-4611-93d9-549bde44ed4e" time="1380898669277" ignored="false" />
-    <file path="/RWDetail3ViewController.m" changelist="3b12e239-311e-4611-93d9-549bde44ed4e" time="1380896819211" ignored="false" />
-    <file path="$PROJECT_DIR$/../SplitViewTest/SplitViewTest/ContentViewController.m" changelist="3b12e239-311e-4611-93d9-549bde44ed4e" time="1380899721936" ignored="false" />
-    <file path="/ContentViewController.m" changelist="3b12e239-311e-4611-93d9-549bde44ed4e" time="1380897080740" ignored="false" />
-    <file path="/RWPageViewHandler.h" changelist="3b12e239-311e-4611-93d9-549bde44ed4e" time="1380896868225" ignored="false" />
-    <file path="$PROJECT_DIR$/../SplitViewTest/SplitViewTest/RWDetail3ViewController.xib" changelist="3b12e239-311e-4611-93d9-549bde44ed4e" time="1380897393182" ignored="false" />
-    <file path="/RWNewsTickerView2.h" changelist="3b12e239-311e-4611-93d9-549bde44ed4e" time="1380900184340" ignored="false" />
-    <file path="/RWNewsTickerView2.m" changelist="3b12e239-311e-4611-93d9-549bde44ed4e" time="1380900576214" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -164,84 +111,81 @@
   <component name="DaemonCodeAnalyzer">
     <disable_hints />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="iphoneos_IPHONE_7725f4e43b4693e88fd4d12e0c38848526eac662" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="iphoneos_7725f4e43b4693e88fd4d12e0c38848526eac662" />
   <component name="FavoritesManager">
     <favorites_list name="Red Event App" />
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="RWNewsTickerView2.m" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Red Event App/RWNewsTickerView2.m">
+      <file leaf-file-name="RWTableNavigatorViewController.h" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Red Event App/RWTableNavigatorViewController.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="50" column="27" selection-start="1077" selection-end="1077" vertical-scroll-proportion="0.33628318">
+            <state line="16" column="35" selection-start="399" selection-end="399" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="375">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RWArticleListViewController.h" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Red Event App/RWArticleListViewController.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="13" column="120" selection-start="322" selection-end="442" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="315">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RWPAGE.h" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Red Event App/RWPAGE.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="50" column="23" selection-start="1068" selection-end="1068" vertical-scroll-proportion="0.0" vertical-offset="407" max-vertical-offset="1065">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RWPAGE.m" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Red Event App/RWPAGE.m">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="48" column="0" selection-start="1604" selection-end="1761" vertical-scroll-proportion="0.0" vertical-offset="360" max-vertical-offset="1080">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RWAppearanceHelper.m" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Red Event App/RWAppearanceHelper.m">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="126" column="28" selection-start="6075" selection-end="6147" vertical-scroll-proportion="0.0" vertical-offset="1067" max-vertical-offset="3075">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RWAppearanceHelper.h" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Red Event App/RWAppearanceHelper.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1035">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pages.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Red Event App/Setup Files/pages.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="93" column="8" selection-start="2462" selection-end="2462" vertical-scroll-proportion="0.0" vertical-offset="544" max-vertical-offset="1485">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RWTableNavigatorViewController.m" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Red Event App/RWTableNavigatorViewController.m">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="43" column="81" selection-start="1234" selection-end="1234" vertical-scroll-proportion="0.55732125" vertical-offset="154" max-vertical-offset="1770">
               <folding>
-                <element signature="e#147#176#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RWNewsTickerView2.h" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Red Event App/RWNewsTickerView2.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="0" selection-start="221" selection-end="221" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RWNewstickerView.m" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Red Event App/RWNewstickerView.m">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="82" column="5" selection-start="2113" selection-end="2713" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RWFrontPageViewController.m" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Red Event App/RWFrontPageViewController.m">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="72" column="26" selection-start="2178" selection-end="2178" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RWLOOK.m" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Red Event App/RWLOOK.m">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="100" column="81" selection-start="5295" selection-end="5295" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RWDailySessionListViewController.m" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Red Event App/RWDailySessionListViewController.m">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="74" column="89" selection-start="2768" selection-end="2768" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RWNavigationController.m" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Red Event App/RWNavigationController.m">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="63" column="93" selection-start="2413" selection-end="2413" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RWAppDelegate.m" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Red Event App/RWAppDelegate.m">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="154" column="0" selection-start="7117" selection-end="7117" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#142#169#0" expanded="true" />
-                <element signature="e#403#460#0" expanded="true" />
+                <element signature="e#155#198#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -265,29 +209,29 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/Red Event App/RWArticleDetailViewController.h" />
-        <option value="$PROJECT_DIR$/Red Event App/RWArticleVM.m" />
-        <option value="$PROJECT_DIR$/Red Event App/RWArticleDetailViewController.m" />
+        <option value="$PROJECT_DIR$/Red Event App/RWHandler_DumpDatabase.m" />
+        <option value="$PROJECT_DIR$/Red Event App/RWHandler_UpdateDatabase.m" />
+        <option value="$PROJECT_DIR$/Red Event App/RWArticleListViewController.h" />
+        <option value="$PROJECT_DIR$/Red Event App/RWTableNavigator.h" />
+        <option value="$PROJECT_DIR$/Red Event App/RWTableNavigator.m" />
+        <option value="$PROJECT_DIR$/Red Event App/RWTableNavigatorCell.h" />
+        <option value="$PROJECT_DIR$/Red Event App/RWTableNavigatorViewController.h" />
+        <option value="$PROJECT_DIR$/Red Event App/RWTableNavigatorCell.m" />
         <option value="$PROJECT_DIR$/Red Event App/RWPAGE.m" />
-        <option value="$PROJECT_DIR$/Red Event App/Setup Files/RWXMLStore.m" />
-        <option value="$PROJECT_DIR$/Red Event App/Setup Files/appearance.xml" />
+        <option value="$PROJECT_DIR$/Red Event App/RWPAGE.h" />
+        <option value="$PROJECT_DIR$/Red Event App/RWXmlNode.m" />
         <option value="$PROJECT_DIR$/Red Event App/RWAppearanceHelper.m" />
-        <option value="$PROJECT_DIR$/Red Event App/RWAppearanceHelper.h" />
-        <option value="$PROJECT_DIR$/Red Event App/RWBaseViewController.m" />
-        <option value="$PROJECT_DIR$/Red Event App/RWAppDelegate.m" />
-        <option value="$PROJECT_DIR$/Red Event App/RWNavigationController.m" />
-        <option value="$PROJECT_DIR$/Red Event App/RWDailySessionListViewController.m" />
+        <option value="$PROJECT_DIR$/Red Event App/Setup Files/pages.xml" />
         <option value="$PROJECT_DIR$/Red Event App/RWLOOK.m" />
         <option value="$PROJECT_DIR$/Red Event App/RWLOOK.h" />
-        <option value="$PROJECT_DIR$/Red Event App/RWNewsTickerView2.h" />
-        <option value="$PROJECT_DIR$/Red Event App/RWNewsTickerView2.m" />
+        <option value="$PROJECT_DIR$/Red Event App/RWTableNavigatorViewController.m" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="y" value="22" />
     <option name="width" value="1920" />
-    <option name="height" value="975" />
+    <option name="height" value="978" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -331,7 +275,7 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="DirectoryView.Xcode" />
+      <pane id="Cidr.FilesView" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -340,7 +284,7 @@
               <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Red Event App" />
+              <option name="myItemId" value="Red App" />
               <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -350,11 +294,11 @@
               <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Red Event App" />
+              <option name="myItemId" value="Red App" />
               <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Red Event App" />
+              <option name="myItemId" value="Red App" />
               <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -364,11 +308,11 @@
               <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Red Event App" />
+              <option name="myItemId" value="Red App" />
               <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Red Event App" />
+              <option name="myItemId" value="Red App" />
               <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -382,11 +326,11 @@
               <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Red Event App" />
+              <option name="myItemId" value="Red App" />
               <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Red Event App" />
+              <option name="myItemId" value="Red App" />
               <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -394,7 +338,11 @@
               <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Frontpage Containers" />
+              <option name="myItemId" value="Navigation" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TableNavigator" />
               <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -404,11 +352,11 @@
               <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Red Event App" />
+              <option name="myItemId" value="Red App" />
               <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Red Event App" />
+              <option name="myItemId" value="Red App" />
               <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -416,11 +364,7 @@
               <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Frontpage Containers" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Newsticker" />
+              <option name="myItemId" value="Navigation" />
               <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -430,33 +374,113 @@
               <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Red Event App" />
+              <option name="myItemId" value="Red App" />
               <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Products" />
+              <option name="myItemId" value="Red App" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ViewControllers" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Article" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Red App" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Red App" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ViewControllers" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Article" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ArticleList" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Red App" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Red App" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Static Names" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Red App" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Red App" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Modding" />
               <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="DirectoryView.Xcode" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="options.lastSelected" value="Errors" />
     <property name="recentsLimit" value="5" />
+    <property name="options.lastSelected" value="Errors" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Documents/ABSI/KlubNordJyske Resizing" />
     <property name="FullScreen" value="false" />
-    <property name="OBJC.PRESERVED_TARGET_SELECTION" value="Red Event App" />
-    <property name="options.searchVisible" value="true" />
+    <property name="OBJC.PRESERVED_TARGET_SELECTION" value="Red App" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RunManager" selected="Application.Red Event App">
     <configuration default="true" type="AppleRunConfiguration" factoryName="Application" PROJECT_NAME="Red Event App" TARGET_NAME="Red Event App" CONFIG_NAME="Debug" PASS_PARENT_ENVS="FALSE" RUN_TARGET_PROJECT_NAME="Red Event App" RUN_TARGET_NAME="Red Event App" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
       <envs />
       <method />
     </configuration>
-    <configuration default="false" name="Red Event App" type="AppleRunConfiguration" factoryName="Application" SCHEME_NAME="Red Event App" PROJECT_NAME="Red Event App" TARGET_NAME="Red Event App" CONFIG_NAME="Debug" WORKING_DIR="" PASS_PARENT_ENVS="FALSE" RUN_TARGET_PROJECT_NAME="Red Event App" RUN_TARGET_NAME="Red Event App" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
+    <configuration default="true" type="OCUnitRunConfiguration" factoryName="XCTest/Kiwi" PROJECT_NAME="Red App" TARGET_NAME="Red AppTests" CONFIG_NAME="Debug" PASS_PARENT_ENVS="FALSE" TEST_MODE="SUITE_TEST">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="OCGoogleTestRunConfigurationType" factoryName="Google Test" PROJECT_NAME="Red App" TARGET_NAME="Red App" CONFIG_NAME="Debug" PASS_PARENT_ENVS="FALSE" TEST_MODE="SUITE_TEST">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="Red Event App" type="AppleRunConfiguration" factoryName="Application" SCHEME_NAME="Red Event App" PROJECT_NAME="Red App" TARGET_NAME="Red App" CONFIG_NAME="Debug" WORKING_DIR="" PASS_PARENT_ENVS="FALSE" RUN_TARGET_PROJECT_NAME="Red App" RUN_TARGET_NAME="Red App" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
       <envs />
       <RunnerSettings RunnerId="AppRunner" />
       <ConfigurationWrapper RunnerId="AppRunner" />
@@ -493,15 +517,14 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1920" height="975" extended-state="6" />
-    <editor active="false" />
+    <frame x="0" y="22" width="1920" height="978" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32690126" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32990867" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32876712" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3278328" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17870322" sideWeight="0.67309874" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17864583" sideWeight="0.67216724" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -510,6 +533,7 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32690126" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -519,58 +543,9 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="true" />
-    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="true" />
-    <option name="CHECK_NEW_TODO" value="true" />
     <option name="myTodoPanelSettings">
-      <value>
-        <are-packages-shown value="false" />
-        <are-modules-shown value="false" />
-        <flatten-packages value="false" />
-        <is-autoscroll-to-source value="false" />
-      </value>
+      <TodoPanelSettings />
     </option>
-    <option name="PERFORM_UPDATE_IN_BACKGROUND" value="true" />
-    <option name="PERFORM_COMMIT_IN_BACKGROUND" value="true" />
-    <option name="PERFORM_EDIT_IN_BACKGROUND" value="true" />
-    <option name="PERFORM_CHECKOUT_IN_BACKGROUND" value="true" />
-    <option name="PERFORM_ADD_REMOVE_IN_BACKGROUND" value="true" />
-    <option name="PERFORM_ROLLBACK_IN_BACKGROUND" value="false" />
-    <option name="CHECK_LOCALLY_CHANGED_CONFLICTS_IN_BACKGROUND" value="false" />
-    <option name="CHANGED_ON_SERVER_INTERVAL" value="60" />
-    <option name="SHOW_ONLY_CHANGED_IN_SELECTION_DIFF" value="true" />
-    <option name="CHECK_COMMIT_MESSAGE_SPELLING" value="true" />
-    <option name="DEFAULT_PATCH_EXTENSION" value="patch" />
-    <option name="SHORT_DIFF_HORIZONTALLY" value="true" />
-    <option name="SHORT_DIFF_EXTRA_LINES" value="2" />
-    <option name="SOFT_WRAPS_IN_SHORT_DIFF" value="true" />
-    <option name="INCLUDE_TEXT_INTO_PATCH" value="false" />
-    <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
-    <option name="SHOW_FILE_HISTORY_DETAILS" value="true" />
-    <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
-    <option name="SHOW_DIRTY_RECURSIVELY" value="false" />
-    <option name="LIMIT_HISTORY" value="true" />
-    <option name="MAXIMUM_HISTORY_ROWS" value="1000" />
-    <option name="UPDATE_FILTER_SCOPE_NAME" />
-    <option name="USE_COMMIT_MESSAGE_MARGIN" value="false" />
-    <option name="COMMIT_MESSAGE_MARGIN_SIZE" value="72" />
-    <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
-    <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" />
-    <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
-    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
-    <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
-    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="false" />
-    <option name="REFORMAT_BEFORE_FILE_COMMIT" value="false" />
-    <option name="FILE_HISTORY_DIALOG_COMMENTS_SPLITTER_PROPORTION" value="0.8" />
-    <option name="FILE_HISTORY_DIALOG_SPLITTER_PROPORTION" value="0.5" />
-    <option name="ACTIVE_VCS_NAME" />
-    <option name="UPDATE_GROUP_BY_PACKAGES" value="false" />
-    <option name="UPDATE_GROUP_BY_CHANGELIST" value="false" />
-    <option name="UPDATE_FILTER_BY_SCOPE" value="false" />
-    <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
-    <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -578,124 +553,116 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Red Event App/RWSwipeViewController.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="84" column="1" selection-start="437" selection-end="3231" vertical-scroll-proportion="0.0" vertical-offset="574" max-vertical-offset="2190">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Red Event App/RWArticleListViewController.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="81" column="1" selection-start="465" selection-end="2557" vertical-scroll-proportion="0.0" vertical-offset="589" max-vertical-offset="1530">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Red Event App/RWArticleListCell.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="11" selection-start="214" selection-end="587" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="495">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Red Event App/RWTableNavigatorCell.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="53" selection-start="337" selection-end="337" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="345">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Red Event App/RWTableNavigatorCell.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="1" selection-start="632" selection-end="632" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="555">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Red Event App/RWPAGE.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="15" selection-start="247" selection-end="247" vertical-scroll-proportion="0.0">
+        <state line="48" column="0" selection-start="1604" selection-end="1761" vertical-scroll-proportion="0.0" vertical-offset="360" max-vertical-offset="1080">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Red Event App/Setup Files/RWXMLStore.m">
+    <entry file="file://$PROJECT_DIR$/Red Event App/RWPAGE.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="82" selection-start="1238" selection-end="1238" vertical-scroll-proportion="0.0">
-          <folding>
-            <marker date="1380876472000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1380876472000" expanded="true" signature="-1:-1" placeholder="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Red Event App/Setup Files/RWXMLStore.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="50" column="23" selection-start="1068" selection-end="1068" vertical-scroll-proportion="0.0" vertical-offset="407" max-vertical-offset="1065">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Red Event App/RWAppearanceHelper.h">
+    <entry file="file://$PROJECT_DIR$/Red Event App/RWXmlNode.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="56" column="111" selection-start="3175" selection-end="3175" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Red Event App/RWBaseViewController.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="0" selection-start="1084" selection-end="1084" vertical-scroll-proportion="0.0">
+        <state line="24" column="24" selection-start="443" selection-end="443" vertical-scroll-proportion="0.22020431" vertical-offset="151" max-vertical-offset="2550">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Red Event App/RWAppearanceHelper.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="141" column="21" selection-start="6879" selection-end="6879" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#174#204#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Red Event App/RWAppDelegate.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="154" column="0" selection-start="7117" selection-end="7117" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#142#169#0" expanded="true" />
-            <element signature="e#403#460#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Red Event App/RWNavigationController.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="63" column="93" selection-start="2413" selection-end="2413" vertical-scroll-proportion="0.0">
+        <state line="126" column="28" selection-start="6075" selection-end="6147" vertical-scroll-proportion="0.0" vertical-offset="1067" max-vertical-offset="3075">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Red Event App/RWDailySessionListViewController.m">
+    <entry file="file://$PROJECT_DIR$/Red Event App/Setup Files/pages.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="74" column="89" selection-start="2768" selection-end="2768" vertical-scroll-proportion="0.0">
+        <state line="93" column="8" selection-start="2462" selection-end="2462" vertical-scroll-proportion="0.0" vertical-offset="544" max-vertical-offset="1485">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Red Event App/RWLOOK.m">
+    <entry file="file://$PROJECT_DIR$/Red Event App/RWArticleListViewController.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="100" column="81" selection-start="5295" selection-end="5295" vertical-scroll-proportion="0.0">
+        <state line="13" column="120" selection-start="322" selection-end="442" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="315">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Red Event App/RWTableNavigatorViewController.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="35" selection-start="399" selection-end="399" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="375">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Red Event App/RWLOOK.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="100" column="50" selection-start="3251" selection-end="3251" vertical-scroll-proportion="0.0">
+        <state line="37" column="23" selection-start="897" selection-end="897" vertical-scroll-proportion="0.5278093" vertical-offset="90" max-vertical-offset="4770">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Red Event App/Setup Files/appearance.xml">
+    <entry file="file://$PROJECT_DIR$/Red Event App/RWLOOK.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="80" column="16" selection-start="3137" selection-end="3137" vertical-scroll-proportion="0.0">
+        <state line="38" column="19" selection-start="1445" selection-end="1445" vertical-scroll-proportion="0.476731" vertical-offset="150" max-vertical-offset="4770">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Red Event App/RWFrontPageViewController.m">
+    <entry file="file://$PROJECT_DIR$/Red Event App/RWAppearanceHelper.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="72" column="26" selection-start="2178" selection-end="2178" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1035">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Red Event App/RWNewsTickerView2.h">
+    <entry file="file://$PROJECT_DIR$/Red Event App/RWTableNavigatorViewController.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="0" selection-start="221" selection-end="221" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Red Event App/RWNewstickerView.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="82" column="5" selection-start="2113" selection-end="2713" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Red Event App/RWNewsTickerView2.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="27" selection-start="1077" selection-end="1077" vertical-scroll-proportion="0.33628318">
+        <state line="43" column="81" selection-start="1234" selection-end="1234" vertical-scroll-proportion="0.55732125" vertical-offset="154" max-vertical-offset="1770">
           <folding>
-            <element signature="e#147#176#0" expanded="true" />
+            <element signature="e#155#198#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -46,7 +46,7 @@
 	_datasource = [[NSMutableArray alloc] init];
 	
 	for (NSString *leafname in leafNames) {
-		RWNode *leafpage = [_xml getPage:leafname];
+		RWXmlNode *leafpage = [_xml getPage:leafname];
 		UIViewController *viewController = [RWNavigationController getViewControllerFromDictionary:[leafpage getDictionaryFromNode]];
 		[_datasource addObject:viewController];
 	}

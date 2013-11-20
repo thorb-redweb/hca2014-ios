@@ -16,7 +16,7 @@
 #import "RWSessionVM.h"
 #import "RWDbSessions.h"
 #import "RWXMLStore.h"
-#import "RWNode.h"
+#import "RWXmlNode.h"
 #import "RWAppearanceHelper.h"
 #import "RWLOOK.h"
 #import "RWPAGE.h"
@@ -33,7 +33,7 @@
     NSString *_childname;
 }
 
-- (id)initWithPage:(RWNode *)page {
+- (id)initWithPage:(RWXmlNode *)page {
     self = [super init];
 
     if (self) {
@@ -75,8 +75,8 @@
 }
 
 -(void)setCellAppearance:(RWUpcomingSessionsListItem *)cell{
-	RWNode *localLook = [_xml getAppearanceForPage:_name];
-	RWNode *globalLook = [_xml getAppearanceForPage:[RWLOOK DEFAULT]];
+	RWXmlNode *localLook = [_xml getAppearanceForPage:_name];
+	RWXmlNode *globalLook = [_xml getAppearanceForPage:[RWLOOK DEFAULT]];
 	RWAppearanceHelper *helper = [[RWAppearanceHelper alloc] initWithLocalLook:localLook globalLook:globalLook];
 	
 	[helper setBackgroundColor:cell localName:[RWLOOK UPCOMINGSESSIONS_BACKGROUNDCOLOR] globalName:[RWLOOK DEFAULT_BACKCOLOR]];

@@ -6,23 +6,42 @@
 //  Copyright (c) 2013 redWEB. All rights reserved.
 //
 
+#import "SDWebImage/UIImageView+WebCache.h"
+#import "UIColor+RWColor.h"
+
 #import "RWTableNavigatorViewController.h"
+#import "RWTableNavigatorCell.h"
+#import "UIImageView+WebCache.h"
 
 @implementation RWTableNavigatorViewController {
-    NSMutableArray *dataSource;
+    NSArray *dataSource;
 }
 
 
 - (id)initWithName:(NSString *)name{
-    self = [super initWithNibName:@"RWTableNavigator" bundle:nil name:name];
+    self = [super initWithNibName:@"RWTableNavigatorViewController" bundle:nil name:name];
     if (self) {
-        [self.view setTranslatesAutoresizingMaskIntoConstraints:NO];
+
     }
     return self;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    if(![_xml swipeViewHasPage:_page]){
+		[self.view setTranslatesAutoresizingMaskIntoConstraints:NO];
+	}
+
+    dataSource = [_page getAllChildNodesWithName:[RWPAGE ENTRY]];
+	
+    [self setAppearance];
+}
+
+- (void)setAppearance{
+    RWAppearanceHelper *helper = [[RWAppearanceHelper alloc] initWithLocalLook:_localLook globalLook:_globalLook];
+	
+    [helper setBackgroundTileImageOrColor:self.view localImageName:[RWLOOK BACKBUTTONBACKGROUNDIMAGE] localColorName:[RWLOOK BACKGROUNDCOLOR] globalName:[RWLOOK DEFAULT_BACKCOLOR]];
+	[_tableView setBackgroundColor:[UIColor colorWithHexString:@"00000000"]];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -33,7 +52,9 @@
 #pragma mark - Table view selection
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-
+    RWXmlNode *entry = [dataSource objectAtIndex:indexPath.row];
+    RWXmlNode *nextPage = [_xml getPage:[entry getStringFromNode:[RWPAGE NAME]]];
+    [_app.navController pushViewWithParameters:[nextPage getDictionaryFromNode]];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -47,20 +68,45 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *CellIdentifier = @"RWSimpleContentCell";
-    RWArticleListCell *cell = (RWArticleListCell *) [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    static NSString *CellIdentifier = @"RWTableNavigatorCell";
+    RWTableNavigatorCell *cell = (RWTableNavigatorCell *) [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
 
     if (cell == nil) {
-        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"RWSimpleContentCell" owner:self options:nil];
+        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"RWTableNavigatorCell" owner:self options:nil];
         cell = [nib objectAtIndex:0];
+		[self setCellAppearance:cell];
     }
 
-    RWArticleVM *viewmodel = [dataSource objectAtIndex:indexPath.row];
-    cell.lblTitle.text = viewmodel.title;
-    cell.lblIntro.text = [viewmodel.introtext stringByStrippingHTML];
-    [cell.lblTitle sizeToFit];
-    cell.lblIntro.frame = [self calculateIntroTextFrameFromCell:cell];
+    RWXmlNode *entry = [dataSource objectAtIndex:indexPath.row];
+    cell.lblTitle.text = [entry getStringFromNode:[RWPAGE NAME]];
+
+    if([entry hasChild:[RWPAGE FRONTICON]]){
+        cell.imgFrontIcon.image = [UIImage imageNamed:[entry getStringFromNode:[RWPAGE FRONTICON]]];
+    }
+    else{
+        cell.imgFrontIcon.hidden = true;
+    }
+
+    if([entry hasChild:[RWPAGE BACKICON]]){
+        cell.imgBackIcon.image = [UIImage imageNamed:[entry getStringFromNode:[RWPAGE BACKICON]]];;
+    }
+    else{
+        cell.imgBackIcon.hidden = true;
+    }
 
     return cell;
 }
+
+- (void)setCellAppearance:(RWTableNavigatorCell *)cell{
+    RWAppearanceHelper *helper = [[RWAppearanceHelper alloc] initWithLocalLook:_localLook globalLook:_globalLook];
+	
+    [helper setBackgroundColor:cell localName:[RWLOOK BACKGROUNDCOLOR] globalName:[RWLOOK INVISIBLE]];
+	
+    [helper setLabelColor:cell.lblTitle localName:[RWLOOK TEXTCOLOR] globalName:[RWLOOK DEFAULT_BACKTEXTCOLOR]];
+    [helper setLabelFont:cell.lblTitle localSizeName:[RWLOOK TEXTSIZE] globalSizeName:[RWLOOK DEFAULT_ITEMTITLESIZE]
+          localStyleName:[RWLOOK TEXTSTYLE] globalStyleName:[RWLOOK DEFAULT_ITEMTITLESTYLE]];
+    [helper setLabelShadowColor:cell.lblTitle localName:[RWLOOK TEXTSHADOWCOLOR] globalName:[RWLOOK DEFAULT_BACKTEXTSHADOWCOLOR]];
+    [helper setLabelShadowOffset:cell.lblTitle localName:[RWLOOK TEXTSHADOWOFFSET] globalName:[RWLOOK DEFAULT_ITEMTITLESHADOWOFFSET]];
+}
+
 @end

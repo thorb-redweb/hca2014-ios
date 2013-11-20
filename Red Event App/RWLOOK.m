@@ -32,6 +32,11 @@
 + (NSString *)BACKBUTTONTEXTSTYLE {return @"backbuttontextstyle";}
 + (NSString *)BACKGROUNDCOLOR {return @"backgroundcolor";}
 + (NSString *)BACKGROUNDIMAGE {return @"backgroundimage";}
++ (NSString *)TEXTCOLOR {return @"textcolor";}
++ (NSString *)TEXTSHADOWCOLOR {return @"textshadowcolor";}
++ (NSString *)TEXTSHADOWOFFSET {return @"textshadowoffset";}
++ (NSString *)TEXTSIZE {return @"textsize";}
++ (NSString *)TEXTSTYLE {return @"textstyle";}
 
 //Default
 + (NSString *)DEFAULT {return @"default";}

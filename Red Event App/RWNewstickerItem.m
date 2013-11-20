@@ -21,10 +21,10 @@
 	RWAppDelegate *_app;
     RWXMLStore *_xml;
 
-    RWNode *_page;
+    RWXmlNode *_page;
 }
 
-- (id)initWithModel:(RWArticleVM *)model page:(RWNode *)page{
+- (id)initWithModel:(RWArticleVM *)model page:(RWXmlNode *)page{
     if ([self initWithNibName:@"RWNewstickerItem" bundle:nil]) {
         [self.view setTranslatesAutoresizingMaskIntoConstraints:NO];
         _model = model;
@@ -102,8 +102,8 @@
 
 - (void)setAppearance {
 
-    RWNode *globalLook = [_xml.appearance getChildFromNode:[RWLOOK DEFAULT]];
-    RWNode *localLook = [_xml.appearance getChildFromNode:[_page getStringFromNode:[RWPAGE NAME]]];
+    RWXmlNode *globalLook = [_xml.appearance getChildFromNode:[RWLOOK DEFAULT]];
+    RWXmlNode *localLook = [_xml.appearance getChildFromNode:[_page getStringFromNode:[RWPAGE NAME]]];
 
     RWAppearanceHelper *helper = [[RWAppearanceHelper alloc] initWithLocalLook:localLook globalLook:globalLook];
 

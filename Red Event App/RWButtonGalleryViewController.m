@@ -7,7 +7,7 @@
 //
 
 #import "RWButtonGalleryViewController.h"
-#import "RWNode.h"
+#import "RWXmlNode.h"
 
 #import "RWPAGE.h"
 
@@ -263,7 +263,7 @@
 
 -(void)goToNextPage:(NSString *)button{
 	if ([_page hasChild:button]) {
-		RWNode *nextPage = [_xml getPage:[_page getStringFromNode:button]];
+		RWXmlNode *nextPage = [_xml getPage:[_page getStringFromNode:button]];
 		[_app.navController pushViewWithParameters:[nextPage getDictionaryFromNode]];
 	}
 }

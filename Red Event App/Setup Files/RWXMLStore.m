@@ -27,7 +27,7 @@
         _pages = [_importer getResultNodeFromResource:[RWPAGE PAGESFILENAME] identifier:@"//pages"];
 		_text = [_importer getResultNodeFromResource:[RWTEXT TEXTFILENAME] identifier:@"//text"];
 
-        RWNode *node = [_importer getResultNodeFromResource:@"joomlasite.xml" identifier:@"//network"];
+        RWXmlNode *node = [_importer getResultNodeFromResource:@"joomlasite.xml" identifier:@"//network"];
         _dataFilesFolderPath = [[node getChildFromNode:@"datafolder"] getStringFromNode:@"path"];
         _imagesRootPath = [[node getChildFromNode:@"joomla"] getStringFromNode:@"path"];
     }
@@ -35,13 +35,13 @@
     return self;
 }
 
-- (RWNode *)getPage:(NSString *)name {
-    for (RWNode *page in _pages.children) {
+- (RWXmlNode *)getPage:(NSString *)name {
+    for (RWXmlNode *page in _pages.children) {
         if ([page hasChild:[RWPAGE NAME]] && [[page getStringFromNode:[RWPAGE NAME]] isEqual:name]) {
             return page;
         }
     }
-	for (RWNode *page in _pages.children) {
+	for (RWXmlNode *page in _pages.children) {
         if ([page hasChild:[RWPAGE TYPE]] && [[page getStringFromNode:[RWPAGE TYPE]] isEqual:name]) {
             return page;
         }
@@ -50,8 +50,8 @@
     return NULL;
 }
 
-- (RWNode *)getFrontPage{
-	for (RWNode *page in _pages.children) {
+- (RWXmlNode *)getFrontPage{
+	for (RWXmlNode *page in _pages.children) {
         if ([page hasChild:[RWPAGE FRONTPAGE]] && [page getBoolFromNode:[RWPAGE FRONTPAGE]]) {
             return page;
         }
@@ -67,13 +67,13 @@
 	return false;
 }
 
-- (BOOL)swipeViewHasPage:(RWNode *)page{
+- (BOOL)swipeViewHasPage:(RWXmlNode *)page{
 	if ([page hasChild:[RWPAGE PARENT]] && [self nameBelongsToSwipeView:[page getStringFromNode:[RWPAGE PARENT]]]) {
 		return true;
 	}
-//	for (RWNode *possibleSwipeView in _pages.children) {
+//	for (RWXmlNode *possibleSwipeView in _pages.children) {
 //        if ([possibleSwipeView hasChild:[RWPAGE TYPE]] && [[possibleSwipeView getStringFromNode:[RWPAGE TYPE]] isEqual:[RWTYPE SWIPEVIEW]]) {
-//			RWNode *swipeView = possibleSwipeView;
+//			RWXmlNode *swipeView = possibleSwipeView;
 //			NSArray *sections = [swipeView getAllChildValuesWithName:[RWPAGE SECTION]];
 //			for(NSString *name in sections){
 //				if ([name isEqual:[page getStringFromNode:[RWPAGE NAME]]]) {
@@ -85,12 +85,12 @@
 	return false;
 }
 
-- (RWNode *)getAppearanceForPage:(NSString *)name{
+- (RWXmlNode *)getAppearanceForPage:(NSString *)name{
 	return [_appearance getChildFromNode:name];
 }
 
-- (RWNode *)getTextForPage:(NSString *)name{
-	for(RWNode *node in _text.children){
+- (RWXmlNode *)getTextForPage:(NSString *)name{
+	for(RWXmlNode *node in _text.children){
 		if ([node.name isEqualToString:name]) {
 			return node;
 		}

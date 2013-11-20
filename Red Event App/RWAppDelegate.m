@@ -68,8 +68,8 @@
 }
 
 - (void)setNavigationBarAppearance {
-    RWNode *globalLook = [_xml.appearance getChildFromNode:[RWLOOK DEFAULT]];
-    RWNode *localLook = [_xml.appearance getChildFromNode:[RWLOOK NAVIGATIONBAR]];
+    RWXmlNode *globalLook = [_xml.appearance getChildFromNode:[RWLOOK DEFAULT]];
+    RWXmlNode *localLook = [_xml.appearance getChildFromNode:[RWLOOK NAVIGATIONBAR]];
     RWAppearanceHelper *helper = [[RWAppearanceHelper alloc] initWithLocalLook:localLook globalLook:globalLook];
 
     if ([localLook hasChild:[RWLOOK NAVBAR_BACKGROUNDIMAGE]]) {
@@ -116,8 +116,8 @@
 
 - (void)setTabBarAppearance {
 
-    RWNode *globalLook = [_xml.appearance getChildFromNode:[RWLOOK DEFAULT]];
-    RWNode *localLook = [_xml.appearance getChildFromNode:[RWLOOK TABBAR]];
+    RWXmlNode *globalLook = [_xml.appearance getChildFromNode:[RWLOOK DEFAULT]];
+    RWXmlNode *localLook = [_xml.appearance getChildFromNode:[RWLOOK TABBAR]];
 
     RWAppearanceHelper *helper = [[RWAppearanceHelper alloc] initWithLocalLook:localLook globalLook:globalLook];
 

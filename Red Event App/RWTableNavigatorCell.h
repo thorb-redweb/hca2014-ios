@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface RWTableNavigatorCell : UIViewController
+@interface RWTableNavigatorCell : UITableViewCell
+
+@property(nonatomic, weak) IBOutlet UIImageView *imgFrontIcon;
+@property(nonatomic, weak) IBOutlet UILabel *lblTitle;
+@property(nonatomic, weak) IBOutlet UIImageView *imgBackIcon;
 
 @end

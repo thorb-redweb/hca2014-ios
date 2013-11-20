@@ -9,11 +9,11 @@
 #import "RWTextHelper.h"
 
 #import "RWXMLStore.h"
-#import "RWNode.h"
+#import "RWXmlNode.h"
 
 
 @implementation RWTextHelper{
-	RWNode *textStore;
+	RWXmlNode *textStore;
 }
 
 -(id)initWithPageName:(NSString *)pagename xmlStore:(RWXMLStore *)xmlStore{

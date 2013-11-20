@@ -74,7 +74,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     RWArticleVM *model = dataSource[indexPath.row];
 	
-	RWNode *childPage = [_xml getPage:_childname];
+	RWXmlNode *childPage = [_xml getPage:_childname];
 	NSMutableDictionary *childDictionary = [[NSMutableDictionary alloc]initWithDictionary:[childPage getDictionaryFromNode]];
 	[childDictionary setObject:model.articleid forKey:[RWPAGE ARTICLEID]];
 

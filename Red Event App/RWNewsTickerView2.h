@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-#import "RWNode.h"
+#import "RWXmlNode.h"
 
 @interface RWNewsTickerView2 : UIViewController <UIPageViewControllerDataSource, UIPageViewControllerDelegate, UIGestureRecognizerDelegate>
 
@@ -16,6 +16,6 @@
 
 @property (strong, nonatomic) UIPageViewController *pageViewController;
 
-- (id)initWithPage:(RWNode *)componentpage;
+- (id)initWithPage:(RWXmlNode *)componentpage;
 
 @end

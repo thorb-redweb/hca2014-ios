@@ -18,12 +18,12 @@
     RWAppDelegate *app = [[UIApplication sharedApplication] delegate];
 
     _xml = app.xml;
-    RWNode *pages = _xml.pages;
+    RWXmlNode *pages = _xml.pages;
 
     _tabpages = [[NSMutableArray alloc] init];
     NSMutableArray *items = [[NSMutableArray alloc] init];
     int i = 0;
-    for (RWNode *page in pages.children) {
+    for (RWXmlNode *page in pages.children) {
 		NSString *tabname = @"";
 		if([page hasChild:[RWPAGE TABNAME]]){
 			tabname = [page getStringFromNode:[RWPAGE TABNAME]];

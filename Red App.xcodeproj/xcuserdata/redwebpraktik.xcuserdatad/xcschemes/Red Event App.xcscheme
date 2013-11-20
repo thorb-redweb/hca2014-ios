@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "36AB7BCE17BB7D0E00316921"
-               BuildableName = "Jule App.app"
+               BuildableName = "Red App.app"
                BlueprintName = "Red App"
                ReferencedContainer = "container:Red App.xcodeproj">
             </BuildableReference>
@@ -33,7 +33,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "36AB7BF317BB7D0E00316921"
-               BuildableName = "Jule AppTests.octest"
+               BuildableName = "Red AppTests.octest"
                BlueprintName = "Red AppTests"
                ReferencedContainer = "container:Red App.xcodeproj">
             </BuildableReference>
@@ -43,7 +43,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "36AB7BCE17BB7D0E00316921"
-            BuildableName = "Jule App.app"
+            BuildableName = "Red App.app"
             BlueprintName = "Red App"
             ReferencedContainer = "container:Red App.xcodeproj">
          </BuildableReference>
@@ -62,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "36AB7BCE17BB7D0E00316921"
-            BuildableName = "Jule App.app"
+            BuildableName = "Red App.app"
             BlueprintName = "Red App"
             ReferencedContainer = "container:Red App.xcodeproj">
          </BuildableReference>
@@ -80,7 +80,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "36AB7BCE17BB7D0E00316921"
-            BuildableName = "Jule App.app"
+            BuildableName = "Red App.app"
             BlueprintName = "Red App"
             ReferencedContainer = "container:Red App.xcodeproj">
          </BuildableReference>

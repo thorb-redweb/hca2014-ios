@@ -26,10 +26,10 @@
     NSArray *dataSource;
 
     RWDailySessionListViewController *_controller;
-    RWNode *_page;
+    RWXmlNode *_page;
 }
 
-- (id)initWithController:(RWDailySessionListViewController *)controller page:(RWNode *)page{
+- (id)initWithController:(RWDailySessionListViewController *)controller page:(RWXmlNode *)page{
     self = [super initWithStyle:UITableViewStylePlain];
     if (self) {
         _app = [[UIApplication sharedApplication] delegate];
@@ -51,8 +51,8 @@
 }
 
 - (void)setAppearance{
-    RWNode *localLook = [_xml.appearance getChildFromNode:[_page getStringFromNode:[RWPAGE NAME]]];
-    RWNode *globalLook = [_xml.appearance getChildFromNode:[RWLOOK DEFAULT]];
+    RWXmlNode *localLook = [_xml.appearance getChildFromNode:[_page getStringFromNode:[RWPAGE NAME]]];
+    RWXmlNode *globalLook = [_xml.appearance getChildFromNode:[RWLOOK DEFAULT]];
     RWAppearanceHelper *helper = [[RWAppearanceHelper alloc] initWithLocalLook:localLook globalLook:globalLook];
 
     [helper setBackgroundColor:[self tableView] localName:[RWLOOK DAILYSESSIONLIST_BACKGROUNDCOLOR] globalName:[RWLOOK DEFAULT_BACKCOLOR]];
@@ -85,8 +85,8 @@
 }
 
 - (void)setAppearance:(UITableViewCell *)cell{
-    RWNode *localLook = [_xml.appearance getChildFromNode:[_page getStringFromNode:[RWPAGE NAME]]];
-    RWNode *globalLook = [_xml.appearance getChildFromNode:[RWLOOK DEFAULT]];
+    RWXmlNode *localLook = [_xml.appearance getChildFromNode:[_page getStringFromNode:[RWPAGE NAME]]];
+    RWXmlNode *globalLook = [_xml.appearance getChildFromNode:[RWLOOK DEFAULT]];
     RWAppearanceHelper *helper = [[RWAppearanceHelper alloc] initWithLocalLook:localLook globalLook:globalLook];
 
     [helper setBackgroundColor:cell localName:[RWLOOK DAILYSESSIONLIST_BACKGROUNDCOLOR] globalName:[RWLOOK DEFAULT_BACKCOLOR]];

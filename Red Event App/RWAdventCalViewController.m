@@ -80,7 +80,7 @@
 	NSDate *today = [[NSDate alloc] init];
 	
 	if ([openDate compare: today] == NSOrderedAscending) {
-		RWNode *childPage = [_xml getPage:_childname];
+		RWXmlNode *childPage = [_xml getPage:_childname];
         NSMutableDictionary *childDictionary = [[NSMutableDictionary alloc] initWithDictionary:[childPage getDictionaryFromNode]];
 		[childDictionary setObject:chosenArticle.articleid forKey:[RWPAGE ARTICLEID]];
 		[_app.navController pushViewWithParameters:childDictionary];

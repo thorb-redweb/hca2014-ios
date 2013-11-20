@@ -107,7 +107,7 @@
 }
 
 - (IBAction)btnMapPressed:(id)sender{
-	RWNode *childPage = [_xml getPage:_childname];
+	RWXmlNode *childPage = [_xml getPage:_childname];
  	NSMutableDictionary *childDictionary = [NSMutableDictionary dictionaryWithDictionary:[childPage getDictionaryFromNode]];
 	[childDictionary setValue:[NSNumber numberWithInt:_venue.venueid] forKey:[RWPAGE VENUEID]];
 	[_app.navController pushViewWithParameters:childDictionary];
