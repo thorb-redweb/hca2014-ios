@@ -34,25 +34,25 @@
 + (NSString *)BACKGROUNDIMAGE {return @"backgroundimage";}
 
 //Default
-+ (NSString *)GLOBAL {return @"default";}
-+ (NSString *)GLOBAL_ALTCOLOR {return @"altcolor";}
-+ (NSString *)GLOBAL_ALTTEXTCOLOR {return @"alttextcolor";}
-+ (NSString *)GLOBAL_ALTTEXTSHADOWCOLOR {return @"alttextshadowcolor";}
-+ (NSString *)GLOBAL_BACKCOLOR {return @"backcolor";}
-+ (NSString *)GLOBAL_BACKTEXTCOLOR {return @"backtextcolor";}
-+ (NSString *)GLOBAL_BACKTEXTSHADOWCOLOR {return @"backtextshadowcolor";}
-+ (NSString *)GLOBAL_BARCOLOR {return @"barcolor";}
-+ (NSString *)GLOBAL_BARTEXTCOLOR {return @"bartextcolor";}
-+ (NSString *)GLOBAL_BARTEXTSHADOWCOLOR {return @"bartextshadowcolor";}
-+ (NSString *)GLOBAL_ITEMTITLESHADOWOFFSET {return @"itemtitleshadowoffset";}
-+ (NSString *)GLOBAL_ITEMTITLESIZE {return @"itemtitlesize";}
-+ (NSString *)GLOBAL_ITEMTITLESTYLE {return @"itemtitlestyle";}
-+ (NSString *)GLOBAL_TEXTSHADOWOFFSET {return @"textshadowoffset";}
-+ (NSString *)GLOBAL_TEXTSIZE {return @"textsize";}
-+ (NSString *)GLOBAL_TEXTSTYLE {return @"textstyle";}
-+ (NSString *)GLOBAL_TITLESHADOWOFFSET {return @"titleshadowoffset";}
-+ (NSString *)GLOBAL_TITLESIZE {return @"titlesize";}
-+ (NSString *)GLOBAL_TITLESTYLE {return @"titlestyle";}
++ (NSString *)DEFAULT {return @"default";}
++ (NSString *)DEFAULT_ALTCOLOR {return @"altcolor";}
++ (NSString *)DEFAULT_ALTTEXTCOLOR {return @"alttextcolor";}
++ (NSString *)DEFAULT_ALTTEXTSHADOWCOLOR {return @"alttextshadowcolor";}
++ (NSString *)DEFAULT_BACKCOLOR {return @"backcolor";}
++ (NSString *)DEFAULT_BACKTEXTCOLOR {return @"backtextcolor";}
++ (NSString *)DEFAULT_BACKTEXTSHADOWCOLOR {return @"backtextshadowcolor";}
++ (NSString *)DEFAULT_BARCOLOR {return @"barcolor";}
++ (NSString *)DEFAULT_BARTEXTCOLOR {return @"bartextcolor";}
++ (NSString *)DEFAULT_BARTEXTSHADOWCOLOR {return @"bartextshadowcolor";}
++ (NSString *)DEFAULT_ITEMTITLESHADOWOFFSET {return @"itemtitleshadowoffset";}
++ (NSString *)DEFAULT_ITEMTITLESIZE {return @"itemtitlesize";}
++ (NSString *)DEFAULT_ITEMTITLESTYLE {return @"itemtitlestyle";}
++ (NSString *)DEFAULT_TEXTSHADOWOFFSET {return @"textshadowoffset";}
++ (NSString *)DEFAULT_TEXTSIZE {return @"textsize";}
++ (NSString *)DEFAULT_TEXTSTYLE {return @"textstyle";}
++ (NSString *)DEFAULT_TITLESHADOWOFFSET {return @"titleshadowoffset";}
++ (NSString *)DEFAULT_TITLESIZE {return @"titlesize";}
++ (NSString *)DEFAULT_TITLESTYLE {return @"titlestyle";}
 
 //Navigationbar
 + (NSString *)NAVIGATIONBAR {return @"navigationbar";}
@@ -139,7 +139,7 @@
 + (NSString *)ARTICLEDETAIL_BACKBUTTONBACKGROUNDIMAGE {return @"backbuttonimage";}
 + (NSString *)ARTICLEDETAIL_BACKBUTTONICON {return @"backbuttonicon";}
 + (NSString *)ARTICLEDETAIL_BACKBUTTONTEXTCOLOR {return @"backbuttontextcolor";}
-+ (NSString *)ARTICLEDETAIL_BACKBUTTONTEXTSHADOWCOLOR {return @"backbuttontextshadowoffset";}
++ (NSString *)ARTICLEDETAIL_BACKBUTTONTEXTSHADOWCOLOR {return @"backbuttontextshadowcolor";}
 + (NSString *)ARTICLEDETAIL_BACKBUTTONTEXTSHADOWOFFSET {return @"backbuttontextshadowoffset";}
 + (NSString *)ARTICLEDETAIL_BACKBUTTONTEXTSIZE {return @"backbuttontextsize";}
 + (NSString *)ARTICLEDETAIL_BACKBUTTONTEXTSTYLE {return @"backbuttontextstyle";}
@@ -154,6 +154,32 @@
 + (NSString *)ARTICLEDETAIL_TITLESHADOWOFFSET {return @"titleshadowoffset";}
 + (NSString *)ARTICLEDETAIL_TITLESIZE {return @"titlesize";}
 + (NSString *)ARTICLEDETAIL_TITLESTYLE {return @"titlestyle";}
+
+//ButtonGallery
++ (NSString *)BUTTONGALLERY_BUTTONBACKGROUNDCOLOR{return @"buttonbackgroundcolor";}
++ (NSString *)BUTTONGALLERY_BUTTONBACKGROUNDIMAGE{return @"buttonbackgroundimage";}
++ (NSString *)BUTTONGALLERY_BUTTONICON{return @"buttonicon";}
++ (NSString *)BUTTONGALLERY_BUTTONTEXTCOLOR{return @"buttontextcolor";}
++ (NSString *)BUTTONGALLERY_BUTTONTEXTSHADOWCOLOR{return @"buttontextshadowcolor";}
++ (NSString *)BUTTONGALLERY_BUTTONTEXTSHADOWOFFSET{return @"buttontextshadowoffset";}
++ (NSString *)BUTTONGALLERY_BUTTONTEXTSIZE{return @"buttontextsize";}
++ (NSString *)BUTTONGALLERY_BUTTONTEXTSTYLE{return @"buttontextstyle";}
++ (NSString *)BUTTONGALLERY_BUTTON1BACKGROUNDIMAGE{return @"button1image";}
++ (NSString *)BUTTONGALLERY_BUTTON1ICON{return @"button1icon";}
++ (NSString *)BUTTONGALLERY_BUTTON2BACKGROUNDIMAGE{return @"button2image";}
++ (NSString *)BUTTONGALLERY_BUTTON2ICON{return @"button2icon";}
++ (NSString *)BUTTONGALLERY_BUTTON3BACKGROUNDIMAGE{return @"button3image";}
++ (NSString *)BUTTONGALLERY_BUTTON3ICON{return @"button3icon";}
++ (NSString *)BUTTONGALLERY_BUTTON4BACKGROUNDIMAGE{return @"button4image";}
++ (NSString *)BUTTONGALLERY_BUTTON4ICON{return @"button4icon";}
++ (NSString *)BUTTONGALLERY_BUTTON5BACKGROUNDIMAGE{return @"button5image";}
++ (NSString *)BUTTONGALLERY_BUTTON5ICON{return @"button5icon";}
++ (NSString *)BUTTONGALLERY_BUTTON6BACKGROUNDIMAGE{return @"button6image";}
++ (NSString *)BUTTONGALLERY_BUTTON6ICON{return @"button6icon";}
++ (NSString *)BUTTONGALLERY_BUTTON7BACKGROUNDIMAGE{return @"button7image";}
++ (NSString *)BUTTONGALLERY_BUTTON7ICON{return @"button7icon";}
++ (NSString *)BUTTONGALLERY_BUTTON8BACKGROUNDIMAGE{return @"button8image";}
++ (NSString *)BUTTONGALLERY_BUTTON8ICON{return @"button8icon";}
 
 //DailySessionList
 + (NSString *)DAILYSESSIONLIST_BACKGROUNDCOLOR {return @"backgroundcolor";}
@@ -207,6 +233,7 @@
 //SessionDetail
 + (NSString *)SESSIONDETAIL_BACKGROUNDCOLOR {return @"backgroundcolor";}
 + (NSString *)SESSIONDETAIL_BUTTONCOLOR {return @"buttoncolor";}
++ (NSString *)SESSIONDETAIL_BUTTONICON {return @"buttonicon";}
 + (NSString *)SESSIONDETAIL_BUTTONTEXTCOLOR {return @"buttontextcolor";}
 + (NSString *)SESSIONDETAIL_BUTTONTEXTSHADOWCOLOR {return @"buttontextshadowcolor";}
 + (NSString *)SESSIONDETAIL_BUTTONTEXTSHADOWOFFSET {return @"buttontextshadowoffset";}
@@ -217,7 +244,6 @@
 + (NSString *)SESSIONDETAIL_LABELSHADOWOFFSET {return @"labelshadowoffset";}
 + (NSString *)SESSIONDETAIL_LABELSIZE {return @"labelsize";}
 + (NSString *)SESSIONDETAIL_LABELSTYLE {return @"labelstyle";}
-+ (NSString *)SESSIONDETAIL_MAPBUTTONIMAGE {return @"mapbuttonimage";}
 + (NSString *)SESSIONDETAIL_TEXTCOLOR {return @"textcolor";}
 + (NSString *)SESSIONDETAIL_TEXTSHADOWCOLOR {return @"textshadowcolor";}
 + (NSString *)SESSIONDETAIL_TEXTSHADOWOFFSET {return @"textshadowoffset";}
@@ -254,7 +280,9 @@
 
 //VenueDetail
 + (NSString *)VENUEDETAIL_BACKGROUNDCOLOR {return @"backgroundcolor";}
++ (NSString *)VENUEDETAIL_BACKGROUNDIMAGE {return @"backgroundimage";}
 + (NSString *)VENUEDETAIL_BUTTONCOLOR {return @"buttoncolor";}
++ (NSString *)VENUEDETAIL_BUTTONICON {return @"buttonicon";}
 + (NSString *)VENUEDETAIL_BUTTONTEXTCOLOR {return @"buttontextcolor";}
 + (NSString *)VENUEDETAIL_BUTTONTEXTSHADOWCOLOR {return @"buttontextshadowcolor";}
 + (NSString *)VENUEDETAIL_BUTTONTEXTSHADOWOFFSET {return @"buttontextshadowoffset";}
@@ -265,7 +293,6 @@
 + (NSString *)VENUEDETAIL_LABELSHADOWOFFSET {return @"labelshadowoffset";}
 + (NSString *)VENUEDETAIL_LABELSIZE {return @"labelsize";}
 + (NSString *)VENUEDETAIL_LABELSTYLE {return @"labelstyle";}
-+ (NSString *)VENUEDETAIL_MAPBUTTONIMAGE {return @"mapbuttonimage";}
 + (NSString *)VENUEDETAIL_TEXTCOLOR {return @"textcolor";}
 + (NSString *)VENUEDETAIL_TEXTSHADOWCOLOR {return @"textshadowcolor";}
 + (NSString *)VENUEDETAIL_TEXTSHADOWOFFSET {return @"textshadowoffset";}

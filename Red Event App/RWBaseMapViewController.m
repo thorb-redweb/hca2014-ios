@@ -38,6 +38,7 @@
 	[self setText];
 	
     [_mapView addObserver:self forKeyPath:@"myLocation" options:NSKeyValueObservingOptionNew context:nil];
+	_mapView.delegate = self;
 	
 	
 	if(![_page hasChild:[RWPAGE RETURNBUTTON]] ||
@@ -49,14 +50,14 @@
 - (void)setAppearance{
 	RWAppearanceHelper *helper = [[RWAppearanceHelper alloc] initWithLocalLook:_localLook globalLook:_globalLook];
 	
-	[helper setBackgroundTileImageOrColor:self.view localImageName:[RWLOOK MAPVIEW_BACKGROUNDIMAGE] localColorName:[RWLOOK MAPVIEW_BACKGROUNDCOLOR] globalName:[RWLOOK GLOBAL_BACKCOLOR]];
+	[helper setBackgroundTileImageOrColor:self.view localImageName:[RWLOOK MAPVIEW_BACKGROUNDIMAGE] localColorName:[RWLOOK MAPVIEW_BACKGROUNDCOLOR] globalName:[RWLOOK DEFAULT_BACKCOLOR]];
 	
-	[helper setButtonBackgroundImageOrColor:_btnBack localImageName:[RWLOOK MAPVIEW_BACKBUTTONBACKGROUNDIMAGE] localColorName:[RWLOOK MAPVIEW_BACKBUTTONBACKGROUNDCOLOR] globalColorName:[RWLOOK GLOBAL_ALTCOLOR] forState:UIControlStateNormal];
+	[helper setButtonBackgroundImageOrColor:_btnBack localImageName:[RWLOOK MAPVIEW_BACKBUTTONBACKGROUNDIMAGE] localColorName:[RWLOOK MAPVIEW_BACKBUTTONBACKGROUNDCOLOR] globalColorName:[RWLOOK DEFAULT_ALTCOLOR] forState:UIControlStateNormal];
 	[helper setButtonImageFromLocalSource:_btnBack localName:[RWLOOK MAPVIEW_BACKBUTTONICON] forState:UIControlStateNormal];
-	[helper setButtonTitleColor:_btnBack forState:UIControlStateNormal localName:[RWLOOK MAPVIEW_BACKBUTTONTEXTCOLOR] globalName:[RWLOOK GLOBAL_ALTTEXTCOLOR]];
-	[helper setButtonTitleFont:_btnBack forState:UIControlStateNormal localSizeName:[RWLOOK MAPVIEW_BACKBUTTONTEXTSIZE] globalSizeName:[RWLOOK GLOBAL_ITEMTITLESIZE] localStyleName:[RWLOOK MAPVIEW_BACKBUTTONTEXTSTYLE] globalStyleName:[RWLOOK GLOBAL_ITEMTITLESTYLE]];
-	[helper setButtonTitleShadowColor:_btnBack forState:UIControlStateNormal localName:[RWLOOK MAPVIEW_BACKBUTTONTEXTSHADOWCOLOR] globalName:[RWLOOK GLOBAL_ALTTEXTSHADOWCOLOR]];
-	[helper setButtonTitleShadowOffset:_btnBack forState:UIControlStateNormal localName:[RWLOOK MAPVIEW_BACKBUTTONTEXTSHADOWOFFSET] globalName:[RWLOOK GLOBAL_ITEMTITLESHADOWOFFSET]];
+	[helper setButtonTitleColor:_btnBack forState:UIControlStateNormal localName:[RWLOOK MAPVIEW_BACKBUTTONTEXTCOLOR] globalName:[RWLOOK DEFAULT_ALTTEXTCOLOR]];
+	[helper setButtonTitleFont:_btnBack forState:UIControlStateNormal localSizeName:[RWLOOK MAPVIEW_BACKBUTTONTEXTSIZE] globalSizeName:[RWLOOK DEFAULT_ITEMTITLESIZE] localStyleName:[RWLOOK MAPVIEW_BACKBUTTONTEXTSTYLE] globalStyleName:[RWLOOK DEFAULT_ITEMTITLESTYLE]];
+	[helper setButtonTitleShadowColor:_btnBack forState:UIControlStateNormal localName:[RWLOOK MAPVIEW_BACKBUTTONTEXTSHADOWCOLOR] globalName:[RWLOOK DEFAULT_ALTTEXTSHADOWCOLOR]];
+	[helper setButtonTitleShadowOffset:_btnBack forState:UIControlStateNormal localName:[RWLOOK MAPVIEW_BACKBUTTONTEXTSHADOWOFFSET] globalName:[RWLOOK DEFAULT_ITEMTITLESHADOWOFFSET]];
 }
 
 - (void)setText{
@@ -97,6 +98,13 @@
             firstLoadOfMyLocation = NO;
         }
     }
+}
+
+- (UIView *)mapView:(GMSMapView *)mapView markerInfoWindow:(GMSMarker *)marker{
+	RWInfoWindow *view = [[[NSBundle mainBundle] loadNibNamed:@"RWInfoWindow" owner:self options:nil] objectAtIndex:0];
+	view.lblTitle.text = marker.title;
+	view.lblBody.text = @"Working";
+	return view;
 }
 
 - (void)didReceiveMemoryWarning

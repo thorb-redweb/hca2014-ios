@@ -80,50 +80,50 @@
 - (void)setAppearance{
     RWAppearanceHelper *helper = [[RWAppearanceHelper alloc] initWithLocalLook:_localLook globalLook:_globalLook];
 
-    [helper setBackgroundColor:self.view localName:[RWLOOK SESSIONDETAIL_BACKGROUNDCOLOR] globalName:[RWLOOK GLOBAL_BACKCOLOR]];
+    [helper setBackgroundColor:self.view localName:[RWLOOK SESSIONDETAIL_BACKGROUNDCOLOR] globalName:[RWLOOK DEFAULT_BACKCOLOR]];
 	
-    [helper setLabelColor:_lblTitle localName:[RWLOOK SESSIONDETAIL_TITLECOLOR] globalName:[RWLOOK GLOBAL_BACKTEXTCOLOR]];
-    [helper setLabelFont:_lblTitle localSizeName:[RWLOOK SESSIONDETAIL_TITLESIZE] globalSizeName:[RWLOOK GLOBAL_TITLESIZE]
-          localStyleName:[RWLOOK SESSIONDETAIL_TITLESTYLE] globalStyleName:[RWLOOK GLOBAL_TITLESTYLE]];
-	[helper setLabelShadowColor:_lblTitle localName:[RWLOOK SESSIONDETAIL_TITLESHADOWCOLOR] globalName:[RWLOOK GLOBAL_BACKTEXTSHADOWCOLOR]];
-    [helper setLabelShadowOffset:_lblTitle localName:[RWLOOK SESSIONDETAIL_TITLESHADOWOFFSET] globalName:[RWLOOK GLOBAL_TITLESHADOWOFFSET]];
+    [helper setLabelColor:_lblTitle localName:[RWLOOK SESSIONDETAIL_TITLECOLOR] globalName:[RWLOOK DEFAULT_BACKTEXTCOLOR]];
+    [helper setLabelFont:_lblTitle localSizeName:[RWLOOK SESSIONDETAIL_TITLESIZE] globalSizeName:[RWLOOK DEFAULT_TITLESIZE]
+          localStyleName:[RWLOOK SESSIONDETAIL_TITLESTYLE] globalStyleName:[RWLOOK DEFAULT_TITLESTYLE]];
+	[helper setLabelShadowColor:_lblTitle localName:[RWLOOK SESSIONDETAIL_TITLESHADOWCOLOR] globalName:[RWLOOK DEFAULT_BACKTEXTSHADOWCOLOR]];
+    [helper setLabelShadowOffset:_lblTitle localName:[RWLOOK SESSIONDETAIL_TITLESHADOWOFFSET] globalName:[RWLOOK DEFAULT_TITLESHADOWOFFSET]];
 
     NSArray *labels = [[NSArray alloc] initWithObjects:_lblDate,_lblPlace,_lblTime, nil];
-    [helper setLabelColors:labels localName:[RWLOOK SESSIONDETAIL_LABELCOLOR] globalName:[RWLOOK GLOBAL_BACKTEXTCOLOR]];
-    [helper setLabelFonts:labels localSizeName:[RWLOOK SESSIONDETAIL_LABELSIZE] globalSizeName:[RWLOOK GLOBAL_ITEMTITLESIZE]
-           localStyleName:[RWLOOK SESSIONDETAIL_LABELSTYLE] globalStyleName:[RWLOOK GLOBAL_ITEMTITLESTYLE]];
-    [helper setLabelShadowColors:labels localName:[RWLOOK SESSIONDETAIL_LABELSHADOWCOLOR] globalName:[RWLOOK GLOBAL_BACKTEXTSHADOWCOLOR]];
-    [helper setLabelShadowOffsets:labels localName:[RWLOOK SESSIONDETAIL_LABELSHADOWOFFSET] globalName:[RWLOOK GLOBAL_ITEMTITLESHADOWOFFSET]];
+    [helper setLabelColors:labels localName:[RWLOOK SESSIONDETAIL_LABELCOLOR] globalName:[RWLOOK DEFAULT_BACKTEXTCOLOR]];
+    [helper setLabelFonts:labels localSizeName:[RWLOOK SESSIONDETAIL_LABELSIZE] globalSizeName:[RWLOOK DEFAULT_ITEMTITLESIZE]
+           localStyleName:[RWLOOK SESSIONDETAIL_LABELSTYLE] globalStyleName:[RWLOOK DEFAULT_ITEMTITLESTYLE]];
+    [helper setLabelShadowColors:labels localName:[RWLOOK SESSIONDETAIL_LABELSHADOWCOLOR] globalName:[RWLOOK DEFAULT_BACKTEXTSHADOWCOLOR]];
+    [helper setLabelShadowOffsets:labels localName:[RWLOOK SESSIONDETAIL_LABELSHADOWOFFSET] globalName:[RWLOOK DEFAULT_ITEMTITLESHADOWOFFSET]];
 
     NSArray *texts = [[NSArray alloc] initWithObjects:_lblDateText,_lblPlaceText,_lblTimeText, nil];
-    [helper setLabelColors:texts localName:[RWLOOK SESSIONDETAIL_TEXTCOLOR] globalName:[RWLOOK GLOBAL_BACKTEXTCOLOR]];
-    [helper setLabelFonts:texts localSizeName:[RWLOOK SESSIONDETAIL_TEXTSIZE] globalSizeName:[RWLOOK GLOBAL_TEXTSIZE]
-           localStyleName:[RWLOOK SESSIONDETAIL_TEXTSTYLE] globalStyleName:[RWLOOK GLOBAL_TEXTSTYLE]];
-    [helper setLabelShadowColors:texts localName:[RWLOOK SESSIONDETAIL_TEXTSHADOWCOLOR] globalName:[RWLOOK GLOBAL_BACKTEXTSHADOWCOLOR]];
-    [helper setLabelShadowOffsets:texts localName:[RWLOOK SESSIONDETAIL_TEXTSHADOWOFFSET] globalName:[RWLOOK GLOBAL_TEXTSHADOWOFFSET]];
+    [helper setLabelColors:texts localName:[RWLOOK SESSIONDETAIL_TEXTCOLOR] globalName:[RWLOOK DEFAULT_BACKTEXTCOLOR]];
+    [helper setLabelFonts:texts localSizeName:[RWLOOK SESSIONDETAIL_TEXTSIZE] globalSizeName:[RWLOOK DEFAULT_TEXTSIZE]
+           localStyleName:[RWLOOK SESSIONDETAIL_TEXTSTYLE] globalStyleName:[RWLOOK DEFAULT_TEXTSTYLE]];
+    [helper setLabelShadowColors:texts localName:[RWLOOK SESSIONDETAIL_TEXTSHADOWCOLOR] globalName:[RWLOOK DEFAULT_BACKTEXTSHADOWCOLOR]];
+    [helper setLabelShadowOffsets:texts localName:[RWLOOK SESSIONDETAIL_TEXTSHADOWOFFSET] globalName:[RWLOOK DEFAULT_TEXTSHADOWOFFSET]];
 
-    [helper setBackgroundColor:_btnMap localName:[RWLOOK SESSIONDETAIL_BACKGROUNDCOLOR] globalName:[RWLOOK GLOBAL_ALTCOLOR]];
+    [helper setBackgroundColor:_btnMap localName:[RWLOOK SESSIONDETAIL_BACKGROUNDCOLOR] globalName:[RWLOOK DEFAULT_ALTCOLOR]];
 
-    [helper setButtonTitleColor:_btnMap forState:UIControlStateNormal localName:[RWLOOK SESSIONDETAIL_BUTTONTEXTCOLOR] globalName:[RWLOOK GLOBAL_ALTTEXTCOLOR]];
-    [helper setButtonTitleFont:_btnMap forState:UIControlStateNormal localSizeName:[RWLOOK SESSIONDETAIL_BUTTONTEXTSIZE] globalSizeName:[RWLOOK GLOBAL_TEXTSIZE]
-                localStyleName:[RWLOOK SESSIONDETAIL_BUTTONTEXTSTYLE] globalStyleName:[RWLOOK GLOBAL_TEXTSTYLE]];
-    [helper setButtonTitleShadowColor:_btnMap forState:UIControlStateNormal localName:[RWLOOK SESSIONDETAIL_BUTTONTEXTSHADOWCOLOR] globalName:[RWLOOK GLOBAL_ALTTEXTSHADOWCOLOR]];
-    [helper setButtonTitleShadowOffset:_btnMap forState:UIControlStateNormal localName:[RWLOOK SESSIONDETAIL_BUTTONTEXTSHADOWOFFSET] globalName:[RWLOOK GLOBAL_TEXTSHADOWOFFSET]];
+    [helper setButtonTitleColor:_btnMap forState:UIControlStateNormal localName:[RWLOOK SESSIONDETAIL_BUTTONTEXTCOLOR] globalName:[RWLOOK DEFAULT_ALTTEXTCOLOR]];
+    [helper setButtonTitleFont:_btnMap forState:UIControlStateNormal localSizeName:[RWLOOK SESSIONDETAIL_BUTTONTEXTSIZE] globalSizeName:[RWLOOK DEFAULT_TEXTSIZE]
+                localStyleName:[RWLOOK SESSIONDETAIL_BUTTONTEXTSTYLE] globalStyleName:[RWLOOK DEFAULT_TEXTSTYLE]];
+    [helper setButtonTitleShadowColor:_btnMap forState:UIControlStateNormal localName:[RWLOOK SESSIONDETAIL_BUTTONTEXTSHADOWCOLOR] globalName:[RWLOOK DEFAULT_ALTTEXTSHADOWCOLOR]];
+    [helper setButtonTitleShadowOffset:_btnMap forState:UIControlStateNormal localName:[RWLOOK SESSIONDETAIL_BUTTONTEXTSHADOWOFFSET] globalName:[RWLOOK DEFAULT_TEXTSHADOWOFFSET]];
 
-    [helper setButtonImageFromLocalSource:_btnMap localName:[RWLOOK SESSIONDETAIL_MAPBUTTONIMAGE] forState:UIControlStateNormal];
+    [helper setButtonImageFromLocalSource:_btnMap localName:[RWLOOK SESSIONDETAIL_BUTTONICON] forState:UIControlStateNormal];
 
-    [helper setLabelColor:_lblBody localName:[RWLOOK SESSIONDETAIL_TEXTCOLOR] globalName:[RWLOOK GLOBAL_BACKTEXTCOLOR]];
-    [helper setLabelFont:_lblBody localSizeName:[RWLOOK SESSIONDETAIL_TEXTSIZE] globalSizeName:[RWLOOK GLOBAL_TEXTSIZE]
-           localStyleName:[RWLOOK SESSIONDETAIL_TEXTSTYLE] globalStyleName:[RWLOOK GLOBAL_TEXTSTYLE]];
-    [helper setLabelShadowColor:_lblBody localName:[RWLOOK SESSIONDETAIL_TEXTSHADOWCOLOR] globalName:[RWLOOK GLOBAL_BACKTEXTSHADOWCOLOR]];
-    [helper setLabelShadowOffset:_lblBody localName:[RWLOOK SESSIONDETAIL_TEXTSHADOWOFFSET] globalName:[RWLOOK GLOBAL_TEXTSHADOWOFFSET]];
+    [helper setLabelColor:_lblBody localName:[RWLOOK SESSIONDETAIL_TEXTCOLOR] globalName:[RWLOOK DEFAULT_BACKTEXTCOLOR]];
+    [helper setLabelFont:_lblBody localSizeName:[RWLOOK SESSIONDETAIL_TEXTSIZE] globalSizeName:[RWLOOK DEFAULT_TEXTSIZE]
+           localStyleName:[RWLOOK SESSIONDETAIL_TEXTSTYLE] globalStyleName:[RWLOOK DEFAULT_TEXTSTYLE]];
+    [helper setLabelShadowColor:_lblBody localName:[RWLOOK SESSIONDETAIL_TEXTSHADOWCOLOR] globalName:[RWLOOK DEFAULT_BACKTEXTSHADOWCOLOR]];
+    [helper setLabelShadowOffset:_lblBody localName:[RWLOOK SESSIONDETAIL_TEXTSHADOWOFFSET] globalName:[RWLOOK DEFAULT_TEXTSHADOWOFFSET]];
 	
-	[helper setButtonBackgroundImageOrColor:_btnBack localImageName:[RWLOOK BACKBUTTONBACKGROUNDIMAGE] localColorName:[RWLOOK BACKBUTTONBACKGROUNDCOLOR] globalColorName:[RWLOOK GLOBAL_ALTCOLOR] forState:UIControlStateNormal];
+	[helper setButtonBackgroundImageOrColor:_btnBack localImageName:[RWLOOK BACKBUTTONBACKGROUNDIMAGE] localColorName:[RWLOOK BACKBUTTONBACKGROUNDCOLOR] globalColorName:[RWLOOK DEFAULT_ALTCOLOR] forState:UIControlStateNormal];
 	[helper setButtonImageFromLocalSource:_btnBack localName:[RWLOOK BACKBUTTONICON] forState:UIControlStateNormal];
-	[helper setButtonTitleColor:_btnBack forState:UIControlStateNormal localName:[RWLOOK BACKBUTTONTEXTCOLOR] globalName:[RWLOOK GLOBAL_ALTTEXTCOLOR]];
-	[helper setButtonTitleFont:_btnBack forState:UIControlStateNormal localSizeName:[RWLOOK BACKBUTTONTEXTSIZE] globalSizeName:[RWLOOK GLOBAL_ITEMTITLESIZE] localStyleName:[RWLOOK BACKBUTTONTEXTSTYLE] globalStyleName:[RWLOOK GLOBAL_ITEMTITLESTYLE]];
-	[helper setButtonTitleShadowColor:_btnBack forState:UIControlStateNormal localName:[RWLOOK BACKBUTTONTEXTSHADOWCOLOR] globalName:[RWLOOK GLOBAL_ALTTEXTSHADOWCOLOR]];
-	[helper setButtonTitleShadowOffset:_btnBack forState:UIControlStateNormal localName:[RWLOOK BACKBUTTONTEXTSHADOWOFFSET] globalName:[RWLOOK GLOBAL_ITEMTITLESHADOWOFFSET]];
+	[helper setButtonTitleColor:_btnBack forState:UIControlStateNormal localName:[RWLOOK BACKBUTTONTEXTCOLOR] globalName:[RWLOOK DEFAULT_ALTTEXTCOLOR]];
+	[helper setButtonTitleFont:_btnBack forState:UIControlStateNormal localSizeName:[RWLOOK BACKBUTTONTEXTSIZE] globalSizeName:[RWLOOK DEFAULT_ITEMTITLESIZE] localStyleName:[RWLOOK BACKBUTTONTEXTSTYLE] globalStyleName:[RWLOOK DEFAULT_ITEMTITLESTYLE]];
+	[helper setButtonTitleShadowColor:_btnBack forState:UIControlStateNormal localName:[RWLOOK BACKBUTTONTEXTSHADOWCOLOR] globalName:[RWLOOK DEFAULT_ALTTEXTSHADOWCOLOR]];
+	[helper setButtonTitleShadowOffset:_btnBack forState:UIControlStateNormal localName:[RWLOOK BACKBUTTONTEXTSHADOWOFFSET] globalName:[RWLOOK DEFAULT_ITEMTITLESHADOWOFFSET]];
 }
 
 - (void)setText{

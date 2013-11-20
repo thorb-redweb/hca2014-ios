@@ -67,16 +67,16 @@
 
 -(void)setAppearance{
 	RWNode *localLook = [_xml getAppearanceForPage:_name];
-	RWNode *globalLook = [_xml getAppearanceForPage:[RWLOOK GLOBAL]];
+	RWNode *globalLook = [_xml getAppearanceForPage:[RWLOOK DEFAULT]];
 	RWAppearanceHelper *helper = [[RWAppearanceHelper alloc] initWithLocalLook:localLook globalLook:globalLook];
 	
-	[helper setBackgroundColor:self.view localName:[RWLOOK UPCOMINGSESSIONS_BACKGROUNDCOLOR] globalName:[RWLOOK GLOBAL_BACKCOLOR]];
-	[helper setBackgroundColor:_tableView localName:[RWLOOK UPCOMINGSESSIONS_BACKGROUNDCOLOR] globalName:[RWLOOK GLOBAL_BACKCOLOR]];
+	[helper setBackgroundColor:self.view localName:[RWLOOK UPCOMINGSESSIONS_BACKGROUNDCOLOR] globalName:[RWLOOK DEFAULT_BACKCOLOR]];
+	[helper setBackgroundColor:_tableView localName:[RWLOOK UPCOMINGSESSIONS_BACKGROUNDCOLOR] globalName:[RWLOOK DEFAULT_BACKCOLOR]];
 	
-	[helper setLabelColor:_lblTitle localName:[RWLOOK UPCOMINGSESSIONS_TITLECOLOR] globalName:[RWLOOK GLOBAL_BACKTEXTCOLOR]];
-	[helper setLabelFont:_lblTitle localSizeName:[RWLOOK UPCOMINGSESSIONS_TITLESIZE] globalSizeName:[RWLOOK GLOBAL_TITLESIZE] localStyleName:[RWLOOK UPCOMINGSESSIONS_TITLESTYLE] globalStyleName:[RWLOOK GLOBAL_TITLESTYLE]];
-	[helper setLabelShadowColor:_lblTitle localName:[RWLOOK UPCOMINGSESSIONS_TITLESHADOWCOLOR] globalName:[RWLOOK GLOBAL_BACKTEXTSHADOWCOLOR]];
-	[helper setLabelShadowOffset:_lblTitle localName:[RWLOOK UPCOMINGSESSIONS_TITLESHADOWOFFSET] globalName:[RWLOOK GLOBAL_TITLESHADOWOFFSET]];
+	[helper setLabelColor:_lblTitle localName:[RWLOOK UPCOMINGSESSIONS_TITLECOLOR] globalName:[RWLOOK DEFAULT_BACKTEXTCOLOR]];
+	[helper setLabelFont:_lblTitle localSizeName:[RWLOOK UPCOMINGSESSIONS_TITLESIZE] globalSizeName:[RWLOOK DEFAULT_TITLESIZE] localStyleName:[RWLOOK UPCOMINGSESSIONS_TITLESTYLE] globalStyleName:[RWLOOK DEFAULT_TITLESTYLE]];
+	[helper setLabelShadowColor:_lblTitle localName:[RWLOOK UPCOMINGSESSIONS_TITLESHADOWCOLOR] globalName:[RWLOOK DEFAULT_BACKTEXTSHADOWCOLOR]];
+	[helper setLabelShadowOffset:_lblTitle localName:[RWLOOK UPCOMINGSESSIONS_TITLESHADOWOFFSET] globalName:[RWLOOK DEFAULT_TITLESHADOWOFFSET]];
 }
 
 -(void)setText{

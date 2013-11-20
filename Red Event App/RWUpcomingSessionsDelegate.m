@@ -76,17 +76,17 @@
 
 -(void)setCellAppearance:(RWUpcomingSessionsListItem *)cell{
 	RWNode *localLook = [_xml getAppearanceForPage:_name];
-	RWNode *globalLook = [_xml getAppearanceForPage:[RWLOOK GLOBAL]];
+	RWNode *globalLook = [_xml getAppearanceForPage:[RWLOOK DEFAULT]];
 	RWAppearanceHelper *helper = [[RWAppearanceHelper alloc] initWithLocalLook:localLook globalLook:globalLook];
 	
-	[helper setBackgroundColor:cell localName:[RWLOOK UPCOMINGSESSIONS_BACKGROUNDCOLOR] globalName:[RWLOOK GLOBAL_BACKCOLOR]];
+	[helper setBackgroundColor:cell localName:[RWLOOK UPCOMINGSESSIONS_BACKGROUNDCOLOR] globalName:[RWLOOK DEFAULT_BACKCOLOR]];
 	
 	NSArray *labelArray = [NSArray arrayWithObjects:cell.lblDateTime, cell.lblEventAndPlace, nil];
 	
-	[helper setLabelColors:labelArray localName:[RWLOOK UPCOMINGSESSIONS_TEXTCOLOR] globalName:[RWLOOK GLOBAL_BACKTEXTCOLOR]];
-	[helper setLabelFonts:labelArray localSizeName:[RWLOOK UPCOMINGSESSIONS_TEXTSIZE] globalSizeName:[RWLOOK GLOBAL_TEXTSIZE] localStyleName:[RWLOOK UPCOMINGSESSIONS_TEXTSTYLE] globalStyleName:[RWLOOK GLOBAL_TEXTSTYLE]];
-	[helper setLabelShadowColors:labelArray localName:[RWLOOK UPCOMINGSESSIONS_TEXTSHADOWCOLOR] globalName:[RWLOOK GLOBAL_BACKTEXTSHADOWCOLOR]];
-	[helper setLabelShadowOffsets:labelArray localName:[RWLOOK UPCOMINGSESSIONS_TEXTSHADOWOFFSET] globalName:[RWLOOK GLOBAL_TEXTSHADOWOFFSET]];
+	[helper setLabelColors:labelArray localName:[RWLOOK UPCOMINGSESSIONS_TEXTCOLOR] globalName:[RWLOOK DEFAULT_BACKTEXTCOLOR]];
+	[helper setLabelFonts:labelArray localSizeName:[RWLOOK UPCOMINGSESSIONS_TEXTSIZE] globalSizeName:[RWLOOK DEFAULT_TEXTSIZE] localStyleName:[RWLOOK UPCOMINGSESSIONS_TEXTSTYLE] globalStyleName:[RWLOOK DEFAULT_TEXTSTYLE]];
+	[helper setLabelShadowColors:labelArray localName:[RWLOOK UPCOMINGSESSIONS_TEXTSHADOWCOLOR] globalName:[RWLOOK DEFAULT_BACKTEXTSHADOWCOLOR]];
+	[helper setLabelShadowOffsets:labelArray localName:[RWLOOK UPCOMINGSESSIONS_TEXTSHADOWOFFSET] globalName:[RWLOOK DEFAULT_TEXTSHADOWOFFSET]];
 }
 
 #pragma mark - Table view delegate

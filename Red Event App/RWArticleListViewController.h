@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "RWBaseViewController.h"
 
-@interface RWArticleListViewController : RWBaseViewController <UITabBarDelegate, UITableViewDelegate, UITableViewDataSource>
+@interface RWArticleListViewController : RWBaseViewController <UITableViewDelegate, UITableViewDataSource>
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil name:(NSString *)name catid:(int)catid;
 

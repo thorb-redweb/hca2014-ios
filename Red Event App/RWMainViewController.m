@@ -69,7 +69,7 @@
 }
 
 - (void)setAppearance{
-	RWAppearanceHelper *helper = [[RWAppearanceHelper alloc] initWithLocalLook:nil globalLook:[_xml getAppearanceForPage:[RWLOOK GLOBAL]]];
+	RWAppearanceHelper *helper = [[RWAppearanceHelper alloc] initWithLocalLook:nil globalLook:[_xml getAppearanceForPage:[RWLOOK DEFAULT]]];
 	
 	if([_xml.pages hasChild:@"global"] && [[_xml.pages getChildFromNode:@"global"] hasChild:@"toplogo"]){
 		NSString *toplogoimagename = [[_xml.pages getChildFromNode:@"global"] getStringFromNode:@"toplogo"];
@@ -77,23 +77,6 @@
 	} else {
 		[_logobar RWsetHeightAsConstraint:0.0];
 	}
-}
-
-- (void)replaceMainViewWith:(UIViewController *)newViewController{
-	
-	[_childView.view removeFromSuperview];
-	[self addMainView:newViewController];
-}
-
-- (void)addMainView:(UIViewController *)newViewController{
-	_childView = newViewController;
-	
-	[_mainView addSubview:_childView.view];
-	[self addChildViewController:_childView];
-	
-	[_mainView RWpinChildToTop:_childView.view];
-	[_mainView RWpinChildToSides:_childView.view];
-	[_mainView RWpinChildToBottom:_childView.view];
 }
 
 - (void)tabBar:(RWTabBar *)tabBar didSelectItem:(UITabBarItem *)item {

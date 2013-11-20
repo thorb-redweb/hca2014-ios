@@ -8,4 +8,19 @@
 
 
 @interface RWJSONEvent : NSObject
+- (NSString *)EVENT_ID;
+
+- (NSString *)TITLE;
+
+- (NSString *)SUMMARY;
+
+- (NSString *)DETAILS;
+
+- (NSString *)SUBMISSION;
+
+- (NSString *)IMAGEPATH;
+
+- (NSString *)ITEMTYPE;
+
+- (NSString *)ACTIONTYPE;
 @end

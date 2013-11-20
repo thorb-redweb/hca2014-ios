@@ -1,5 +1,5 @@
 //
-//  RWNode.h
+//  RWXmlNode.h
 //  Red Event App
 //
 //  Created by redWEB Praktik on 8/21/13.
@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface RWNode : NSObject
+@interface RWXmlNode : NSObject
 
 @property(strong, nonatomic) NSString *name;
 @property(strong, nonatomic) id value;
@@ -33,7 +33,7 @@
 
 - (NSArray *)getAllChildValuesWithName:(NSString *)name;
 
-- (RWNode *)getChildFromNode:(NSString *)name;
+- (RWXmlNode *)getChildFromNode:(NSString *)name;
 
 - (NSArray *)getAllChildNodesWithName:(NSString *)name;
 
@@ -43,6 +43,6 @@
 
 - (NSArray *)children;
 
-- (RWNode *)objectAtIndexedSubscript:(NSUInteger)idx;
+- (RWXmlNode *)objectAtIndexedSubscript:(NSUInteger)idx;
 
 @end

@@ -125,16 +125,16 @@
 }
 
 -(void)setAppearance{
-	RWNode *globalLook = [_xml getAppearanceForPage:[RWLOOK GLOBAL]];
+	RWNode *globalLook = [_xml getAppearanceForPage:[RWLOOK DEFAULT]];
 	RWNode *localLook = [_xml getAppearanceForPage:_name];
 	RWAppearanceHelper *helper = [[RWAppearanceHelper alloc] initWithLocalLook:localLook globalLook:globalLook];
 	
-	[helper setBackgroundColor:[self view] localName:[RWLOOK NEWSTICKER_BACKGROUNDCOLOR] globalName:[RWLOOK GLOBAL_BACKCOLOR]];
+	[helper setBackgroundColor:[self view] localName:[RWLOOK NEWSTICKER_BACKGROUNDCOLOR] globalName:[RWLOOK DEFAULT_BACKCOLOR]];
 	
-	[helper setLabelColor:_lblTitle localName:[RWLOOK NEWSTICKER_TITLECOLOR] globalName:[RWLOOK GLOBAL_BACKTEXTCOLOR]];
-	[helper setLabelFont:_lblTitle localSizeName:[RWLOOK NEWSTICKER_TITLESIZE] globalSizeName:[RWLOOK GLOBAL_TITLESIZE] localStyleName:[RWLOOK NEWSTICKER_TITLESTYLE] globalStyleName:[RWLOOK GLOBAL_TITLESTYLE]];
-	[helper setLabelShadowColor:_lblTitle localName:[RWLOOK NEWSTICKER_TITLESHADOWCOLOR] globalName:[RWLOOK GLOBAL_BACKTEXTSHADOWCOLOR]];
-	[helper setLabelShadowOffset:_lblTitle localName:[RWLOOK NEWSTICKER_TITLESHADOWOFFSET] globalName:[RWLOOK GLOBAL_TITLESHADOWOFFSET]];
+	[helper setLabelColor:_lblTitle localName:[RWLOOK NEWSTICKER_TITLECOLOR] globalName:[RWLOOK DEFAULT_BACKTEXTCOLOR]];
+	[helper setLabelFont:_lblTitle localSizeName:[RWLOOK NEWSTICKER_TITLESIZE] globalSizeName:[RWLOOK DEFAULT_TITLESIZE] localStyleName:[RWLOOK NEWSTICKER_TITLESTYLE] globalStyleName:[RWLOOK DEFAULT_TITLESTYLE]];
+	[helper setLabelShadowColor:_lblTitle localName:[RWLOOK NEWSTICKER_TITLESHADOWCOLOR] globalName:[RWLOOK DEFAULT_BACKTEXTSHADOWCOLOR]];
+	[helper setLabelShadowOffset:_lblTitle localName:[RWLOOK NEWSTICKER_TITLESHADOWOFFSET] globalName:[RWLOOK DEFAULT_TITLESHADOWOFFSET]];
 }
 
 -(void)setText{

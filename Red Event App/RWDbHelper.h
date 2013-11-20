@@ -8,8 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
+@class RWJSONSchemas;
+
 
 @interface RWDbHelper : NSObject
+
 - (id)initWithManagedObjectContext:(NSManagedObjectContext *)context;
 
 - (NSMutableArray *)getFromDatabase:(NSString *)itemType predicate:(NSPredicate *)predicate;

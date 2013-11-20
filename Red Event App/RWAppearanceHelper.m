@@ -50,9 +50,12 @@
 	}
 }
 
-- (void)setButtonBackgroundImageFromLocalSource:(UIButton *)button localName:(NSString *)localname forState:(UIControlState)state{
-    if ([_localLook hasChild:localname])
+- (BOOL)setButtonBackgroundImageFromLocalSource:(UIButton *)button localName:(NSString *)localname forState:(UIControlState)state{
+    if ([_localLook hasChild:localname]){
         [button setBackgroundImage:[self getImageFromLocalSourceWithLocalName:localname] forState:state];
+		return true;
+	}
+	return false;
 }
 
 - (void)setButtonImageFromLocalSource:(UIButton *)button localName:(NSString *)localname forState:(UIControlState)state{

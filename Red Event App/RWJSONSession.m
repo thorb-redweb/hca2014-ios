@@ -10,4 +10,15 @@
 @implementation RWJSONSession {
 
 }
+-(NSString *)SESSION_ID{return @"sessionid";}
+-(NSString *)EVENT_ID{return @"eventid";}
+-(NSString *)VENUE_ID{return @"venueid";}
+-(NSString *)TITLE{return @"title";}
+-(NSString *)DETAILS{return @"details";}
+-(NSString *)STARTDATE{return @"startdate";}
+-(NSString *)ENDDATE{return @"enddate";}
+-(NSString *)STARTTIME{return @"starttime";}
+-(NSString *)ENDTIME{return @"endtime";}
+-(NSString *)ITEMTYPE{return @"itemtype";}
+-(NSString *)ACTIONTYPE{return @"actiontype";}
 @end

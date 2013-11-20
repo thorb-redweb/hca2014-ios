@@ -34,7 +34,7 @@
         if([_xml.appearance hasChild:_name])  {
             _localLook = [_xml.appearance getChildFromNode:_name];
         }
-        _globalLook = [_xml.appearance getChildFromNode:[RWLOOK GLOBAL]];
+        _globalLook = [_xml.appearance getChildFromNode:[RWLOOK DEFAULT]];
 		
     }
     return self;
@@ -61,12 +61,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-}
-
-- (void)tabBar:(RWTabBar *)tabBar didSelectItem:(UITabBarItem *)item {
-    RWNode *tabPage = tabBar.tabpages[item.tag];
-    RWAppDelegate *app = [[UIApplication sharedApplication] delegate];
-    [app.navController pushViewFromTab:tabPage];
 }
 
 - (NSString *)getName{

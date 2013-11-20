@@ -10,4 +10,13 @@
 @implementation RWJSONEvent {
 
 }
+
+-(NSString *)EVENT_ID{return @"eventid";}
+-(NSString *)TITLE{return @"title";}
+-(NSString *)SUMMARY{return @"summary";}
+-(NSString *)DETAILS{return @"details";}
+-(NSString *)SUBMISSION{return @"submission";}
+-(NSString *)IMAGEPATH{return @"imagepath";}
+-(NSString *)ITEMTYPE{return @"itemtype";}
+-(NSString *)ACTIONTYPE{return @"actiontype";}
 @end

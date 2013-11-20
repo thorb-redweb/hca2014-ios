@@ -10,4 +10,9 @@
 @implementation RWJSONPushMessageGroup {
 
 }
+
+-(NSString *)GROUP_ID{return @"groupid";}
+-(NSString *)NAME{return @"name";}
+-(NSString *)ITEMTYPE{return @"itemtype";}
+-(NSString *)ACTIONTYPE{return @"actiontype";}
 @end

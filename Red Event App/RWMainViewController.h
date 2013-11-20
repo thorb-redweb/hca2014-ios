@@ -20,6 +20,4 @@
 
 -(id)initWithStartPage:(RWNode *)startPage;
 
-- (void)replaceMainViewWith:(UIViewController *)newViewController;
-
 @end

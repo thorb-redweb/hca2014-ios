@@ -12,10 +12,12 @@
 #import "RWDbHelper.h"
 #import "RWDbSchemas.h"
 #import "RWXMLStore.h"
+#import "RWJSONSchemas.h"
 
 @implementation RWDbArticles {
     RWDbHelper *_dbHelper;
 	RWXMLStore *_xml;
+    RWJSONSchemas *_json;
 }
 - (id)initWithHelper:(RWDbHelper *)helper xml:(RWXMLStore *)xml {
     if (self = [super init]) {

@@ -8,4 +8,23 @@
 
 
 @interface RWJSONVenue : NSObject
+- (NSString *)VENUE_ID;
+
+- (NSString *)TITLE;
+
+- (NSString *)DESCRIPTION;
+
+- (NSString *)STREET;
+
+- (NSString *)CITY;
+
+- (NSString *)LATITUDE;
+
+- (NSString *)LONGITUDE;
+
+- (NSString *)IMAGEPATH;
+
+- (NSString *)ITEMTYPE;
+
+- (NSString *)ACTIONTYPE;
 @end

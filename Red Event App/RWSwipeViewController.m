@@ -72,7 +72,7 @@
 -(void)setAppearance{
 	RWAppearanceHelper *helper = [[RWAppearanceHelper alloc] initWithLocalLook:_localLook globalLook:_globalLook];
 	
-	[helper setBackgroundTileImageOrColor:_pageViewController.view localImageName:[RWLOOK SWIPEVIEW_BACKGROUNDIMAGE] localColorName:[RWLOOK SWIPEVIEW_BACKGROUNDCOLOR] globalName:[RWLOOK GLOBAL_BACKCOLOR]];
+	[helper setBackgroundTileImageOrColor:_pageViewController.view localImageName:[RWLOOK SWIPEVIEW_BACKGROUNDIMAGE] localColorName:[RWLOOK SWIPEVIEW_BACKGROUNDCOLOR] globalName:[RWLOOK DEFAULT_BACKCOLOR]];
 	
 	UIPageControl *pageControl = [UIPageControl appearance];
 	if ([_localLook hasChild:[RWLOOK SWIPEVIEW_SELECTEDPAGECOLOR]]) {

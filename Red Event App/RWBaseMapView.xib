@@ -8,7 +8,7 @@
             <connections>
                 <outlet property="btnBack" destination="a2R-XQ-ofd" id="3aB-eJ-iW3"/>
                 <outlet property="mainView" destination="uaT-wm-Lg2" id="rVG-OC-420"/>
-                <outlet property="mapView" destination="JT1-KN-tSD" id="4pY-uu-g2F"/>
+                <outlet property="mapView" destination="JT1-KN-tSD" id="qeM-sg-XXb"/>
                 <outlet property="view" destination="uaT-wm-Lg2" id="lqY-rR-gx8"/>
             </connections>
         </placeholder>
