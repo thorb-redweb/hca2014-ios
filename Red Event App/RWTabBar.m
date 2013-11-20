@@ -24,9 +24,18 @@
     NSMutableArray *items = [[NSMutableArray alloc] init];
     int i = 0;
     for (RWNode *page in pages.children) {
-
-        if ([page hasChild:[RWPAGE TABNAME]]) { //If page has a tabname, a tab with the page should be added to the tabbar
-            UITabBarItem *btnPage = [[UITabBarItem alloc] initWithTitle:[page getStringFromNode:[RWPAGE TABNAME]] image:[UIImage imageNamed:[page getStringFromNode:[RWPAGE TABIMAGE]]] tag:i];
+		NSString *tabname = @"";
+		if([page hasChild:[RWPAGE TABNAME]]){
+			tabname = [page getStringFromNode:[RWPAGE TABNAME]];
+		}
+		UIImage *tabimage = nil;
+		if ([page hasChild:[RWPAGE TABIMAGE]]) {
+			tabimage = [UIImage imageNamed:[page getStringFromNode:[RWPAGE TABIMAGE]]];
+		}
+		
+		
+        if (!([tabname isEqual:@""]) || tabimage != nil) {
+            UITabBarItem *btnPage = [[UITabBarItem alloc] initWithTitle:tabname image:tabimage tag:i];
             [_tabpages addObject:page];
             [items addObject:btnPage];
             i++;

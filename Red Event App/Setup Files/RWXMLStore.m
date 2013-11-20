@@ -11,6 +11,7 @@
 #import "RWLOOK.h"
 #import "RWPAGE.h"
 #import "RWTEXT.h"
+#import "RWTYPE.h"
 
 @implementation RWXMLStore {
     RWXMLImporter *_importer;
@@ -57,6 +58,31 @@
     }
     [NSException raise:@"Missing Frontpage" format:@"No page tagged as frontpage found"];
     return NULL;
+}
+
+- (BOOL)nameBelongsToSwipeView:(NSString *)name{
+	if ([[[self getPage:name] getStringFromNode:[RWPAGE TYPE]] isEqual:[RWTYPE SWIPEVIEW]]) {
+		return true;
+	}
+	return false;
+}
+
+- (BOOL)swipeViewHasPage:(RWNode *)page{
+	if ([page hasChild:[RWPAGE PARENT]] && [self nameBelongsToSwipeView:[page getStringFromNode:[RWPAGE PARENT]]]) {
+		return true;
+	}
+//	for (RWNode *possibleSwipeView in _pages.children) {
+//        if ([possibleSwipeView hasChild:[RWPAGE TYPE]] && [[possibleSwipeView getStringFromNode:[RWPAGE TYPE]] isEqual:[RWTYPE SWIPEVIEW]]) {
+//			RWNode *swipeView = possibleSwipeView;
+//			NSArray *sections = [swipeView getAllChildValuesWithName:[RWPAGE SECTION]];
+//			for(NSString *name in sections){
+//				if ([name isEqual:[page getStringFromNode:[RWPAGE NAME]]]) {
+//					return true;
+//				}
+//			}
+//        }
+//    }
+	return false;
 }
 
 - (RWNode *)getAppearanceForPage:(NSString *)name{

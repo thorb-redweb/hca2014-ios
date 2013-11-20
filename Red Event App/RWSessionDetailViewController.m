@@ -9,6 +9,7 @@
 #import "NSString+RWString.h"
 #import "SDWebImage/UIImageView+WebCache.h"
 #import "UIScrollView+RWScrollView.h"
+#import "UIView+RWViewLayout.h"
 #import "UIWebView+RWWebView.h"
 
 #import "RWSessionDetailViewController.h"
@@ -34,13 +35,13 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil name:name];
     if (self) {
         _sessionid = sessionid;
-        _scrollView.translatesAutoresizingMaskIntoConstraints = NO;
     }
     return self;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+	[self.view setTranslatesAutoresizingMaskIntoConstraints:NO];
 
 	[self setAppearance];
 	[self setText];
@@ -61,7 +62,6 @@
         _lblBody.text = _model.details;
     }
 
-
     if ([_model.imagePath length] != 0) {
         if (_model.image != NULL) {
             _imgView.image = _model.image;
@@ -70,6 +70,11 @@
 			[_imgView setImageWithURL:_model.imageUrl placeholderImage:[UIImage imageNamed:@"default_icon.jpg"]];
         }
     }
+	
+	if(![_page hasChild:[RWPAGE RETURNBUTTON]] ||
+	   ([_page hasChild:[RWPAGE RETURNBUTTON]] && ![_page getBoolFromNode:[RWPAGE RETURNBUTTON]])){
+		[_btnBack RWsetHeightAsConstraint:0.0];
+	}
 }
 
 - (void)setAppearance{
@@ -112,6 +117,13 @@
            localStyleName:[RWLOOK SESSIONDETAIL_TEXTSTYLE] globalStyleName:[RWLOOK GLOBAL_TEXTSTYLE]];
     [helper setLabelShadowColor:_lblBody localName:[RWLOOK SESSIONDETAIL_TEXTSHADOWCOLOR] globalName:[RWLOOK GLOBAL_BACKTEXTSHADOWCOLOR]];
     [helper setLabelShadowOffset:_lblBody localName:[RWLOOK SESSIONDETAIL_TEXTSHADOWOFFSET] globalName:[RWLOOK GLOBAL_TEXTSHADOWOFFSET]];
+	
+	[helper setButtonBackgroundImageOrColor:_btnBack localImageName:[RWLOOK BACKBUTTONBACKGROUNDIMAGE] localColorName:[RWLOOK BACKBUTTONBACKGROUNDCOLOR] globalColorName:[RWLOOK GLOBAL_ALTCOLOR] forState:UIControlStateNormal];
+	[helper setButtonImageFromLocalSource:_btnBack localName:[RWLOOK BACKBUTTONICON] forState:UIControlStateNormal];
+	[helper setButtonTitleColor:_btnBack forState:UIControlStateNormal localName:[RWLOOK BACKBUTTONTEXTCOLOR] globalName:[RWLOOK GLOBAL_ALTTEXTCOLOR]];
+	[helper setButtonTitleFont:_btnBack forState:UIControlStateNormal localSizeName:[RWLOOK BACKBUTTONTEXTSIZE] globalSizeName:[RWLOOK GLOBAL_ITEMTITLESIZE] localStyleName:[RWLOOK BACKBUTTONTEXTSTYLE] globalStyleName:[RWLOOK GLOBAL_ITEMTITLESTYLE]];
+	[helper setButtonTitleShadowColor:_btnBack forState:UIControlStateNormal localName:[RWLOOK BACKBUTTONTEXTSHADOWCOLOR] globalName:[RWLOOK GLOBAL_ALTTEXTSHADOWCOLOR]];
+	[helper setButtonTitleShadowOffset:_btnBack forState:UIControlStateNormal localName:[RWLOOK BACKBUTTONTEXTSHADOWOFFSET] globalName:[RWLOOK GLOBAL_ITEMTITLESHADOWOFFSET]];
 }
 
 - (void)setText{
@@ -121,6 +133,11 @@
 	[helper setText:_lblPlace textName:[RWTEXT SESSIONDETAIL_PLACE] defaultText:[RWDEFAULTTEXT SESSIONDETAIL_PLACE]];
 	[helper setText:_lblTime textName:[RWTEXT SESSIONDETAIL_TIME] defaultText:[RWDEFAULTTEXT SESSIONDETAIL_TIME]];
 	[helper setButtonText:_btnMap textName:[RWTEXT SESSIONDETAIL_MAPBUTTON] defaultText:[RWDEFAULTTEXT SESSIONDETAIL_MAPBUTTON]];
+	
+	BOOL backButtonHasBackgroundImage = [_xml.appearance hasChild:_name] && [[_xml getAppearanceForPage:_name] hasChild:[RWLOOK MAPVIEW_BACKBUTTONBACKGROUNDIMAGE]];
+	if(!backButtonHasBackgroundImage){
+		[helper setButtonText:_btnBack textName:[RWTEXT MAPVIEW_BACKBUTTON] defaultText:[RWDEFAULTTEXT MAPVIEW_BACKBUTTON]];
+	}
 }
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView {
@@ -141,6 +158,10 @@
     [sessionmapVariables setObject:_model.sessionid forKey:[RWPAGE SESSIONID]];
 
     [app.navController pushViewWithParameters:sessionmapVariables];
+}
+
+-(IBAction)btnBackClicked{
+	[_app.navController popViewController];
 }
 
 - (void)didReceiveMemoryWarning {

@@ -39,7 +39,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-//	[self.view setTranslatesAutoresizingMaskIntoConstraints:NO];
+	//TODO: Hacks!!!! Tableview doesn't call numberOfRowsInSection if TranslatesAutoresizingMaskIntoConstraints is set to NO, and the page is in a swipeview. The below if construct "solves" that problem.
+	if(![_xml swipeViewHasPage:_page]){
+		[self.view setTranslatesAutoresizingMaskIntoConstraints:NO];
+	}
+
 
     dataSource = [_db.Articles getVMListFromCatId:_catid];
 
@@ -52,6 +56,13 @@
     [helper setBackgroundColor:self.view localName:[RWLOOK IMAGEARTICLELIST_BACKGROUNDCOLOR] globalName:[RWLOOK GLOBAL_BACKCOLOR]];
 	[_tableView setBackgroundColor:[UIColor colorWithHexString:@"00000000"]];
 }
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+	
+    [_tableView reloadData];
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -76,11 +87,6 @@
 
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    // Return the number of sections.
-    return 1;
-}
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
     return dataSource.count;
@@ -94,6 +100,7 @@
         NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"RWImageArticleListCell" owner:self options:nil];
         cell = [nib objectAtIndex:0];
 		[self setCellAppearance:cell];
+		[cell.vwContentView addConstraint:[NSLayoutConstraint constraintWithItem:cell.imgThumb attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:cell.imgThumb attribute:NSLayoutAttributeHeight multiplier:1.0 constant:0.0]];
     }
 
 
@@ -101,17 +108,8 @@
     cell.lblTitle.text = viewmodel.title;
     cell.lblIntro.text = [viewmodel.introtext stringByStrippingHTML];
 
-    [cell.lblTitle sizeToFit];
-    cell.lblIntro.frame = [self calculateIntroTextFrameFromCell:cell];
-
     cell.imgThumb.image = [UIImage imageNamed:@"defaultIcon.jpeg"];
-    if (viewmodel.introImagePath && ![viewmodel.introImagePath isEqual:@""]) {
-        cell.model = viewmodel;
-        [cell.imgThumb setImageWithURL:viewmodel.introImageUrl placeholderImage:[UIImage imageNamed:@"default_icon.jpg"]];
-    }
-    else if (![viewmodel.introImagePath isEqual:@""]) {
-        cell.imgThumb.image = viewmodel.image;
-    }
+    [cell.imgThumb setImageWithURL:viewmodel.introImageUrl placeholderImage:[UIImage imageNamed:@"default_icon.jpg"]];
 
     return cell;
 }
@@ -133,25 +131,5 @@
     [helper setLabelShadowColor:cell.lblIntro localName:[RWLOOK IMAGEARTICLELIST_TEXTSHADOWCOLOR] globalName:[RWLOOK GLOBAL_BACKTEXTSHADOWCOLOR]];
     [helper setLabelShadowOffset:cell.lblIntro localName:[RWLOOK IMAGEARTICLELIST_TEXTSHADOWOFFSET] globalName:[RWLOOK GLOBAL_TEXTSHADOWOFFSET]];
 }
-
-- (CGRect)calculateIntroTextFrameFromCell:(RWImageArticleListCell *)cell {
-
-    CGRect cellFrame = cell.frame;
-    CGRect titleFrame = cell.lblTitle.frame;
-
-    CGRect originalIntroFrame = cell.lblIntro.frame;
-    CGSize fittedIntroSize = [cell.lblIntro sizeThatFits:originalIntroFrame.size];
-
-    int newYBound = titleFrame.size.height + 2;
-    int newHeight = cellFrame.size.height - newYBound - 2;
-
-    if (fittedIntroSize.height < newHeight) {
-        newHeight = fittedIntroSize.height;
-    }
-
-    CGRect newIntroFrame = CGRectMake(originalIntroFrame.origin.x, newYBound, originalIntroFrame.size.width, newHeight);
-    return newIntroFrame;
-}
-
 
 @end

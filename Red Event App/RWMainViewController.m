@@ -30,8 +30,6 @@
 {
     self = [super initWithNibName:@"RWMainViewController" bundle:nil];
     if (self) {
-//        [self.view setTranslatesAutoresizingMaskIntoConstraints:NO];
-		
 		_childPage = startPage;
     }
     return self;
@@ -47,11 +45,7 @@
 	
 	[app.navController connectToMainView:self];
 
-	[app.navController pushViewWithParameters:[_childPage getDictionaryFromNode]];
-	
-//	UIViewController *startView = [RWNavigationController getViewControllerFromDictionary:[_childPage getDictionaryFromNode]];
-//	[self addMainView:startView];
-	
+	[app.navController pushViewWithParameters:[_childPage getDictionaryFromNode]];	
 	
 	[self setBarVisibility];
 	[self setAppearance];
@@ -100,6 +94,12 @@
 	[_mainView RWpinChildToTop:_childView.view];
 	[_mainView RWpinChildToSides:_childView.view];
 	[_mainView RWpinChildToBottom:_childView.view];
+}
+
+- (void)tabBar:(RWTabBar *)tabBar didSelectItem:(UITabBarItem *)item {
+	RWNode *tabPage = tabBar.tabpages[item.tag];
+    RWAppDelegate *app = [[UIApplication sharedApplication] delegate];
+    [app.navController pushViewFromTab:tabPage];
 }
 
 - (void)didReceiveMemoryWarning

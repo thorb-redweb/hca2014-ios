@@ -54,28 +54,17 @@
 }
 
 - (void)pushViewWithParameters:(NSDictionary *)parameters {
-	UIViewController *newViewController = [RWNavigationController getViewControllerFromDictionary:parameters];
-	[self pushViewController:newViewController];
-//
-//
-//	UIViewController *currentViewController = viewControllers.lastObject;
-//	
-//	[viewControllers addObject:newViewController];
-//	
-//	[UIView transitionWithView:_mainView duration:0.5
-//					   options:UIViewAnimationOptionTransitionFlipFromRight
-//					animations:^ {
-//						[_mainView addSubview:newViewController.view];
-//						[_mainView RWpinChildToTop:newViewController.view];
-//						[_mainView RWpinChildToSides:newViewController.view];
-//						[_mainView RWpinChildToBottom:newViewController.view];
-//					}
-//					completion:nil];
-//	
-//	[_mainViewController addChildViewController:newViewController];
-//
-//	[currentViewController.view removeFromSuperview];
-//	[currentViewController removeFromParentViewController];
+	RWAppDelegate *app = [[UIApplication sharedApplication] delegate];
+	BOOL pageBelongsToSwipeView = [parameters objectForKey:[RWPAGE PARENT]] != nil && [app.xml nameBelongsToSwipeView:[parameters objectForKey:[RWPAGE PARENT]]];
+	if (!pageBelongsToSwipeView){
+		UIViewController *newViewController = [RWNavigationController getViewControllerFromDictionary:parameters];
+		[self pushViewController:newViewController];
+	}
+	else {
+		RWNode *swipeView = [app.xml getPage:[parameters objectForKey:[RWPAGE PARENT]]];
+		UIViewController *swipeViewController = [RWNavigationController getViewControllerFromDictionary:[swipeView getDictionaryFromNode]];
+		[self pushViewController:swipeViewController];
+	}
 }
 
 - (void)pushViewController:(UIViewController *)newViewController {
@@ -151,7 +140,7 @@
         return [[RWImageArticleListViewController alloc] initWithNibName:@"RWImageArticleListViewController" bundle:nil name:name catid:catid];
     }
     else if ([viewControllerType isEqual:[RWTYPE OVERVIEWMAP]]) {
-        return [[RWOverviewMapViewController alloc] initWithNibName:@"RWOverviewMapViewController" bundle:nil name:name];
+        return [[RWOverviewMapViewController alloc] initWithName:name];
     }
     else if ([viewControllerType isEqual:[RWTYPE SESSIONDETAIL]]) {
         int sessionid = [parameters[[RWPAGE SESSIONID]] intValue];
@@ -159,7 +148,7 @@
     }
     else if ([viewControllerType isEqual:[RWTYPE SESSIONMAP]]) {
         int sessionid = [parameters[[RWPAGE SESSIONID]] intValue];
-        return [[RWSessionMapViewController alloc] initWithNibName:@"RWSessionMapViewController" bundle:nil sessionid:sessionid name:name];
+        return [[RWSessionMapViewController alloc] initWithName:name sessionid:sessionid];
     }
     else if ([viewControllerType isEqual:[RWTYPE SPLITVIEW]]) {
         return [[RWSplitViewController alloc] initWithName:name];

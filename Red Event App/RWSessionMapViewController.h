@@ -8,13 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import <GoogleMaps/GoogleMaps.h>
-#import "RWBaseViewController.h"
+#import "RWBaseMapViewController.h"
 
-@interface RWSessionMapViewController : RWBaseViewController <UITabBarDelegate>
+@interface RWSessionMapViewController : RWBaseMapViewController
 
-@property(weak, nonatomic) IBOutlet UIView *mapViewOnScreen;
-@property(weak, nonatomic) IBOutlet GMSMapView *mapView;
-
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil sessionid:(int)sessionid name:(NSString *)name;
+- (id)initWithName:(NSString *)name sessionid:(int)sessionid;
 
 @end

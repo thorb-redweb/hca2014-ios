@@ -22,7 +22,12 @@
     </navigationbar>
 	
     <tabbar>
-        <visible>NO</visible>
+        <backgroundimage>barbackground.png</backgroundimage>
+        <textcolor>#000000</textcolor>
+        <textsize>12.0</textsize>
+        <textstyle>italic</textstyle>
+        <textshadowcolor>#FFFFFF</textshadowcolor>
+        <textshadowoffset>1.0,1.0</textshadowoffset>
     </tabbar>
 	
     <SwipeView>
@@ -53,6 +58,11 @@
         <titlecolor>#b4282e</titlecolor>
         <backbuttonimage>btnclose.png</backbuttonimage>
     </Nyhedsside>
+	
+    <Program>
+        <leftarrow>arrow_left.png</leftarrow>
+        <rightarrow>arrow_right.png</rightarrow>
+    </Program>
 	
     <RedWeb>
         <backgroundcolor>#66151839</backgroundcolor>

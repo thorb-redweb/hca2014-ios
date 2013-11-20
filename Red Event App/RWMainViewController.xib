@@ -42,6 +42,9 @@
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <items/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="Dsl-Bk-cEk"/>
+                    </connections>
                 </tabBar>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>

@@ -27,7 +27,7 @@
 #import "RWTEXT.h"
 #import "RWTYPE.h"
 
-@interface RWBaseViewController : UIViewController <UITabBarDelegate> {
+@interface RWBaseViewController : UIViewController {
 @protected
     RWAppDelegate *_app;
 @protected

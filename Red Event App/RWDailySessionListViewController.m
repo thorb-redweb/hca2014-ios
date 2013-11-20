@@ -40,14 +40,18 @@
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil name:(NSString *)name {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil name:name];
     if (self) {
-        [_btnNext sizeToFit];
-        [_btnPrevious sizeToFit];
+		
     }
     return self;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+	//TODO: Hacks!!!! Tableview doesn't call numberOfRowsInSection if TranslatesAutoresizingMaskIntoConstraints is set to NO, and the page is in a swipeview. The below if construct "solves" that problem.
+	if(![_xml swipeViewHasPage:_page]){
+		[self.view setTranslatesAutoresizingMaskIntoConstraints:NO];
+	}
+	
 
     _listDate = [_db.Sessions getStartDateTimeWithSessionByDateTime:[NSDate date] venueid:[self filterVenueId]];
 	
@@ -198,8 +202,8 @@
     if (cell == nil) {
         NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"RWDailySessionListItem" owner:self options:nil];
         cell = [nib objectAtIndex:0];
+		[self setCellAppearance:cell];
     }
-    [self setCellAppearance:cell];
 
     RWSessionVM *viewmodel = [dataSource objectAtIndex:indexPath.row];
     cell.lblTimeAndPlace.text = [NSString stringWithFormat:@"%@-%@ - %@", viewmodel.startTime, viewmodel.endTime, viewmodel.venue];

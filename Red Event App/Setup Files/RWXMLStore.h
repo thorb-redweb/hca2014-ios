@@ -20,6 +20,8 @@
 
 - (RWNode *)getPage:(NSString *)name;
 - (RWNode *)getFrontPage;
+- (BOOL)nameBelongsToSwipeView:(NSString *)name;
+- (BOOL)swipeViewHasPage:(RWNode *)page;
 - (RWNode *)getAppearanceForPage:(NSString *)name;
 - (RWNode *)getTextForPage:(NSString *)name;
 

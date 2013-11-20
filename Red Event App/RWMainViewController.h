@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "RWBaseViewController.h"
 
-@interface RWMainViewController : UIViewController;
+@interface RWMainViewController : UIViewController <UITabBarDelegate>;
 
 @property (weak, nonatomic) IBOutlet UINavigationBar *navbar;
 @property (weak, nonatomic) IBOutlet UIImageView *logobar;

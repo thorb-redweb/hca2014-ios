@@ -10,7 +10,7 @@
 #import "RWBaseViewController.h"
 #import "RWHandler_GetImage.h"
 
-@interface RWImageArticleListViewController : RWBaseViewController <UITabBarDelegate, UITableViewDataSource>
+@interface RWImageArticleListViewController : RWBaseViewController <UITableViewDelegate, UITableViewDataSource>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 

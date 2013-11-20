@@ -22,6 +22,18 @@
 + (NSString *)TYPEFACE_NORMAL {return @"normal";}
 
 //Global
++ (NSString *)BACKBUTTONBACKGROUNDCOLOR {return @"backbuttoncolor";}
++ (NSString *)BACKBUTTONBACKGROUNDIMAGE {return @"backbuttonimage";}
++ (NSString *)BACKBUTTONICON {return @"backbuttonicon";}
++ (NSString *)BACKBUTTONTEXTCOLOR {return @"backbuttontextcolor";}
++ (NSString *)BACKBUTTONTEXTSHADOWCOLOR {return @"backbuttontextshadowcolor";}
++ (NSString *)BACKBUTTONTEXTSHADOWOFFSET {return @"backbuttontextshadowoffset";}
++ (NSString *)BACKBUTTONTEXTSIZE {return @"backbuttontextsize";}
++ (NSString *)BACKBUTTONTEXTSTYLE {return @"backbuttontextstyle";}
++ (NSString *)BACKGROUNDCOLOR {return @"backgroundcolor";}
++ (NSString *)BACKGROUNDIMAGE {return @"backgroundimage";}
+
+//Default
 + (NSString *)GLOBAL {return @"default";}
 + (NSString *)GLOBAL_ALTCOLOR {return @"altcolor";}
 + (NSString *)GLOBAL_ALTTEXTCOLOR {return @"alttextcolor";}

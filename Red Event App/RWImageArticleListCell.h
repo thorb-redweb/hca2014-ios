@@ -15,7 +15,6 @@
 @property(nonatomic, weak) IBOutlet UILabel *lblTitle;
 @property(nonatomic, weak) IBOutlet UILabel *lblIntro;
 @property(nonatomic, weak) IBOutlet UIImageView *imgThumb;
-
-@property(strong, nonatomic) RWArticleVM *model;
+@property(nonatomic, weak) IBOutlet UIView *vwContentView;
 
 @end
