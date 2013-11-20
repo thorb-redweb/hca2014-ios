@@ -18,6 +18,15 @@
 
 +(NSString *)ARTICLEDETAIL_BACKBUTTON {return @"backbutton";}
 
++(NSString *)BUTTONGALLERY_BUTTON1 {return @"button1";}
++(NSString *)BUTTONGALLERY_BUTTON2 {return @"button2";}
++(NSString *)BUTTONGALLERY_BUTTON3 {return @"button3";}
++(NSString *)BUTTONGALLERY_BUTTON4 {return @"button4";}
++(NSString *)BUTTONGALLERY_BUTTON5 {return @"button5";}
++(NSString *)BUTTONGALLERY_BUTTON6 {return @"button6";}
++(NSString *)BUTTONGALLERY_BUTTON7 {return @"button7";}
++(NSString *)BUTTONGALLERY_BUTTON8 {return @"button8";}
+
 +(NSString *)DAILYSESSIONLIST_EMPTYLIST {return @"emptylist";}
 +(NSString *)DAILYSESSIONLIST_FILTERDATE {return @"filterdate";}
 

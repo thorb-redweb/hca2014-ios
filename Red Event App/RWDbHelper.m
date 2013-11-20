@@ -7,6 +7,7 @@
 
 
 #import "RWDbHelper.h"
+#import "RWJSONSchemas.h"
 
 
 @implementation RWDbHelper {
@@ -71,7 +72,7 @@
     NSMutableArray *fetchResults = [[_managedObjectContext executeFetchRequest:request error:&fetchError] mutableCopy];
     if (fetchError != nil) {
         NSLog(@"did fail with error");
-        NSLog(@"Fetch failed in RWDbInterface:getContentFromDatabase: %@", fetchError.description);
+        NSLog(@"Fetch failed in RWDbHelper:getContentFromDatabase: %@", fetchError.description);
     }
 
     return fetchResults;

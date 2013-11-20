@@ -8,12 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-#import "RWNode.h"
+#import "RWXmlNode.h"
 #import "RWLOOK.h"
 #import "RWPAGE.h"
 
 @interface RWNewstickerView : UIScrollView <UIGestureRecognizerDelegate>
 
-- (id)initWithFrame:(CGRect)frame subviewElement:(RWNode *)page;
+- (id)initWithFrame:(CGRect)frame subviewElement:(RWXmlNode *)page;
 
 @end

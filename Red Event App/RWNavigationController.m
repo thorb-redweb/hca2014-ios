@@ -26,6 +26,7 @@
 #import "RWStaticArticleController.h"
 #import "RWSplitViewController.h"
 #import "RWSwipeViewController.h"
+#import "RWTableNavigatorViewController.h"
 #import "RWVenueDetailViewController.h"
 #import "RWVenueMapViewController.h"
 
@@ -47,7 +48,7 @@
 	_navbar = mainViewcontroller.navbar;
 }
 
-- (void)pushViewFromTab:(RWNode *)tabPage {
+- (void)pushViewFromTab:(RWXmlNode *)tabPage {
     NSDictionary *parameters = [tabPage getDictionaryFromNode];
 
     [self pushViewWithParameters:parameters];
@@ -61,7 +62,7 @@
 		[self pushViewController:newViewController];
 	}
 	else {
-		RWNode *swipeView = [app.xml getPage:[parameters objectForKey:[RWPAGE PARENT]]];
+		RWXmlNode *swipeView = [app.xml getPage:[parameters objectForKey:[RWPAGE PARENT]]];
 		UIViewController *swipeViewController = [RWNavigationController getViewControllerFromDictionary:[swipeView getDictionaryFromNode]];
 		[self pushViewController:swipeViewController];
 	}
@@ -160,6 +161,10 @@
     }
     else if ([viewControllerType isEqual:[RWTYPE SWIPEVIEW]]) {
         return [[RWSwipeViewController alloc] initWithName:name];
+		
+    }
+    else if ([viewControllerType isEqual:[RWTYPE TABLENAVIGATOR]]) {
+        return [[RWTableNavigatorViewController alloc] initWithName:name];
 		
     }
     else if ([viewControllerType isEqual:[RWTYPE VENUEDETAIL]]) {

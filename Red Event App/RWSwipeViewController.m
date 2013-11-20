@@ -46,7 +46,7 @@
 	_datasource = [[NSMutableArray alloc] init];
 	
 	for (NSString *leafname in leafNames) {
-		RWNode *leafpage = [_xml getPage:leafname];
+		RWXmlNode *leafpage = [_xml getPage:leafname];
 		UIViewController *viewController = [RWNavigationController getViewControllerFromDictionary:[leafpage getDictionaryFromNode]];
 		[_datasource addObject:viewController];
 	}
@@ -72,7 +72,7 @@
 -(void)setAppearance{
 	RWAppearanceHelper *helper = [[RWAppearanceHelper alloc] initWithLocalLook:_localLook globalLook:_globalLook];
 	
-	[helper setBackgroundTileImageOrColor:_pageViewController.view localImageName:[RWLOOK SWIPEVIEW_BACKGROUNDIMAGE] localColorName:[RWLOOK SWIPEVIEW_BACKGROUNDCOLOR] globalName:[RWLOOK GLOBAL_BACKCOLOR]];
+	[helper setBackgroundTileImageOrColor:_pageViewController.view localImageName:[RWLOOK SWIPEVIEW_BACKGROUNDIMAGE] localColorName:[RWLOOK SWIPEVIEW_BACKGROUNDCOLOR] globalName:[RWLOOK DEFAULT_BACKCOLOR]];
 	
 	UIPageControl *pageControl = [UIPageControl appearance];
 	if ([_localLook hasChild:[RWLOOK SWIPEVIEW_SELECTEDPAGECOLOR]]) {

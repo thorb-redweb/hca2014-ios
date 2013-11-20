@@ -11,6 +11,6 @@
 
 @interface RWVenuePickerViewController : UITableViewController
 
-- (id)initWithController:(RWDailySessionListViewController *)controller page:(RWNode *)page;
+- (id)initWithController:(RWDailySessionListViewController *)controller page:(RWXmlNode *)page;
 
 @end

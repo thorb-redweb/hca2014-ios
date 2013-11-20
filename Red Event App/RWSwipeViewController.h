@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "RWBaseViewController.h"
-@class RWNode;
+@class RWXmlNode;
 
 @interface RWSwipeViewController : RWBaseViewController <UIPageViewControllerDataSource, UIPageViewControllerDelegate, UIGestureRecognizerDelegate>
 

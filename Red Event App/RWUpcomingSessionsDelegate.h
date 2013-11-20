@@ -8,10 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
-@class RWNode;
+@class RWXmlNode;
 
 @interface RWUpcomingSessionsDelegate : NSObject <UITableViewDelegate, UITableViewDataSource>
 
-- (id)initWithPage:(RWNode *)page;
+- (id)initWithPage:(RWXmlNode *)page;
 
 @end

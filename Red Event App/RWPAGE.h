@@ -46,6 +46,11 @@
 + (NSString *)BUTTON7CHILD;
 + (NSString *)BUTTON8CHILD;
 
+//TableNavigator Specific
++ (NSString *)ENTRY;
++ (NSString *)BACKICON;
++ (NSString *)FRONTICON;
+
 //Map Activity Specific
 + (NSString *)LATITUDE;
 + (NSString *)LONGITUDE;

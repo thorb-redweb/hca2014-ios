@@ -10,4 +10,7 @@
 
 @interface RWInfoWindow : UIView
 
+@property (weak, nonatomic) IBOutlet UILabel *lblTitle;
+@property (weak, nonatomic) IBOutlet UILabel *lblBody;
+
 @end

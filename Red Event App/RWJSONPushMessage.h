@@ -8,4 +8,19 @@
 
 
 @interface RWJSONPushMessage : NSObject
+- (NSString *)PUSHMESSAGE_ID;
+
+- (NSString *)GROUP_ID;
+
+- (NSString *)INTRO;
+
+- (NSString *)MESSAGE;
+
+- (NSString *)AUTHOR;
+
+- (NSString *)SENDDATE;
+
+- (NSString *)ITEMTYPE;
+
+- (NSString *)ACTIONTYPE;
 @end

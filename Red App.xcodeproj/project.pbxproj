@@ -16,14 +16,22 @@
 		26E7347869677503A25B7CE1 /* RWDailySessionListItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26E73BC4F5B5D8AFA136F02F /* RWDailySessionListItem.xib */; };
 		26E73521D46382491892E340 /* RWSessionListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E73C5504E965F3193C7E63 /* RWSessionListViewController.m */; };
 		26E7354C3D33E5BBE387B0B9 /* RWDbSchemas.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E73CFDDE0756A9A7C15C9C /* RWDbSchemas.m */; };
+		26E7358C57205B061BD03C68 /* RWTableNavigatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E73442CF2B28F56D529977 /* RWTableNavigatorViewController.m */; };
 		26E7359A6F05B94B31DE494D /* RWStaticArticleController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E73E70DD991266C77557B1 /* RWStaticArticleController.m */; };
+		26E735A82D981AAD64548A18 /* RWJSONPushMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E739D9DE81119FD2BA5E40 /* RWJSONPushMessage.m */; };
+		26E735A83CD4B9562C4CF691 /* RWJSONSchemas.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E73D223730A010838C2BB3 /* RWJSONSchemas.m */; };
+		26E73647E0BFE16C681E964C /* RWJSONPushMessageGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E738167753BDADDE171C6E /* RWJSONPushMessageGroup.m */; };
 		26E7372845AA4EBB83B70E49 /* RWStaticArticleController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26E73C88447F46EA13786763 /* RWStaticArticleController.xib */; };
+		26E737869BA3CD47EB4DF1C7 /* RWJSONSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E737DF6BBC2C84BC534A58 /* RWJSONSession.m */; };
+		26E7396EA34EF7D743E27B19 /* RWJSONArticle.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E739089CFBA6F0EC72E9DB /* RWJSONArticle.m */; };
 		26E739E27A8B0F6A3CC059DA /* RWVenuePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E735AB461FFEBD7FDBE2A3 /* RWVenuePickerViewController.m */; };
 		26E73A16AE0BED83CB4BF2F2 /* RWDailySessionListItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E734F685B738DB294D1C5B /* RWDailySessionListItem.m */; };
+		26E73AD842954C5E9551E3AD /* RWJSONEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E73CC5E6EF246B14E5BABA /* RWJSONEvent.m */; };
 		26E73B64E8DE4729BD70A1E1 /* RWDbHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E736F8BC3400ED70DC3994 /* RWDbHelper.m */; };
 		26E73BAC5180C9A138C7C0FD /* RWSessionDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26E73ED8D5A9F454A92CA2AF /* RWSessionDetailViewController.xib */; };
 		26E73BB4C214260E2B123AA8 /* RWDbEvents.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E7357085BD0C589D8EBCB6 /* RWDbEvents.m */; };
 		26E73C4C64337676E427F193 /* navbarbackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 26E734B2FEEE40899984016B /* navbarbackground.png */; };
+		26E73C9AA3817CDE9AB356C0 /* RWJSONVenue.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E73007C7F063443A1D88DA /* RWJSONVenue.m */; };
 		26E73D9C36DBC520345EA4F2 /* RWVenuePickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26E73618D6B0CD9138BEEF16 /* RWVenuePickerViewController.xib */; };
 		26E73DBA4ADBF998256D88EF /* RWDailySessionListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E7311AA69FB2E51D64BF69 /* RWDailySessionListViewController.m */; };
 		26E73F1A5EA4CC6DE8A17E06 /* RWDbSessions.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E736D3806D4E23C6F45A93 /* RWDbSessions.m */; };
@@ -59,6 +67,13 @@
 		361EA88B180C0C3700441271 /* julebaggrund.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 361EA88A180C0C3700441271 /* julebaggrund.jpg */; };
 		361EA891180C0DE700441271 /* RWVenueDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 361EA88F180C0DE700441271 /* RWVenueDetailViewController.m */; };
 		361EA892180C0DE700441271 /* RWVenueDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 361EA890180C0DE700441271 /* RWVenueDetailViewController.xib */; };
+		36214F5B1834CAD0001B0B63 /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 36214F5A1834CAD0001B0B63 /* GoogleMaps.bundle */; };
+		36214F5D1834CAD7001B0B63 /* GoogleMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36214F5C1834CAD7001B0B63 /* GoogleMaps.framework */; };
+		36214F6218351A46001B0B63 /* RWInfoWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36214F6118351A46001B0B63 /* RWInfoWindow.xib */; };
+		36214F6518351BF1001B0B63 /* RWInfoWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 36214F6418351BF1001B0B63 /* RWInfoWindow.m */; };
+		36214F67183CBB98001B0B63 /* RWTableNavigatorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36214F66183CBB98001B0B63 /* RWTableNavigatorViewController.xib */; };
+		36214F6B183CBC34001B0B63 /* RWTableNavigatorCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 36214F69183CBC34001B0B63 /* RWTableNavigatorCell.m */; };
+		36214F6C183CBC34001B0B63 /* RWTableNavigatorCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36214F6A183CBC34001B0B63 /* RWTableNavigatorCell.xib */; };
 		36354B02181E6C520046066E /* RWSwipeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36354B00181E6C520046066E /* RWSwipeViewController.m */; };
 		36354B03181E6C520046066E /* RWSwipeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36354B01181E6C520046066E /* RWSwipeViewController.xib */; };
 		36354BB2181FC3400046066E /* RWAdventCalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36354BB0181FC3400046066E /* RWAdventCalViewController.m */; };
@@ -92,7 +107,6 @@
 		3645BF6517CC93B300047159 /* Session.m in Sources */ = {isa = PBXBuildFile; fileRef = 3645BF6417CC93B300047159 /* Session.m */; };
 		3645BF7017CCB58D00047159 /* RWHandler_DumpDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 3645BF6F17CCB58D00047159 /* RWHandler_DumpDatabase.m */; };
 		3645BF7417CDECC000047159 /* RWOverviewMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3645BF7217CDECC000047159 /* RWOverviewMapViewController.m */; };
-		3645BF7517CDECC000047159 /* RWOverviewMapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3645BF7317CDECC000047159 /* RWOverviewMapViewController.xib */; };
 		3645BF7817CDF07700047159 /* RWVenueVM.m in Sources */ = {isa = PBXBuildFile; fileRef = 3645BF7717CDF07600047159 /* RWVenueVM.m */; };
 		3645BF8117CE320500047159 /* Banegården.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 3645BF7E17CE320100047159 /* Banegården.gpx */; };
 		3645BF8217CE320500047159 /* Brandts.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 3645BF7F17CE320200047159 /* Brandts.gpx */; };
@@ -126,9 +140,7 @@
 		368DF1C917E1C71600D1F304 /* UIWebView+RWWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 368DF1C817E1C71600D1F304 /* UIWebView+RWWebView.m */; };
 		368DF1D017E1C9BC00D1F304 /* UIView+RWViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 368DF1CF17E1C9BC00D1F304 /* UIView+RWViewLayout.m */; };
 		3695C47817C4B798004DFA40 /* RWXMLImporter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3695C47717C4B798004DFA40 /* RWXMLImporter.m */; };
-		3695C47D17C4CEA5004DFA40 /* RWNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 3695C47C17C4CEA5004DFA40 /* RWNode.m */; };
-		36998D53180C2B4A0013AE2C /* GoogleMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36998D52180C2B4A0013AE2C /* GoogleMaps.framework */; };
-		36998D55180C2B5F0013AE2C /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 36998D54180C2B5F0013AE2C /* GoogleMaps.bundle */; };
+		3695C47D17C4CEA5004DFA40 /* RWXmlNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 3695C47C17C4CEA5004DFA40 /* RWXmlNode.m */; };
 		36A727AA17C794E400374063 /* navbar.png in Resources */ = {isa = PBXBuildFile; fileRef = 36A727A917C794E400374063 /* navbar.png */; };
 		36A727AC17C7992100374063 /* appearance.xml in Resources */ = {isa = PBXBuildFile; fileRef = 36A727AB17C7992100374063 /* appearance.xml */; };
 		36A727AF17C799A500374063 /* UIColor+RWColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 36A727AE17C799A500374063 /* UIColor+RWColor.m */; };
@@ -146,7 +158,6 @@
 		36A7288F17CB46EC00374063 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36A7288E17CB46EB00374063 /* QuartzCore.framework */; };
 		36A7289117CB46F600374063 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36A7289017CB46F500374063 /* SystemConfiguration.framework */; };
 		36A7289617CB48C200374063 /* RWSessionMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36A7289417CB48C200374063 /* RWSessionMapViewController.m */; };
-		36A7289717CB48C200374063 /* RWSessionMapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36A7289517CB48C200374063 /* RWSessionMapViewController.xib */; };
 		36A7289F17CB695800374063 /* icon_youarehere.png in Resources */ = {isa = PBXBuildFile; fileRef = 36A7289E17CB695800374063 /* icon_youarehere.png */; };
 		36A728A117CB6D0000374063 /* Track.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 36A728A017CB6D0000374063 /* Track.gpx */; };
 		36A728AC17CB8D6F00374063 /* RWSplashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36A728AA17CB8D6300374063 /* RWSplashViewController.m */; };
@@ -223,14 +234,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		26E73007C7F063443A1D88DA /* RWJSONVenue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWJSONVenue.m; sourceTree = "<group>"; };
 		26E73021144A9AAAAEDA24F0 /* RWSessionListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWSessionListViewController.h; sourceTree = "<group>"; };
 		26E73054B0C3BF3B2F4E5504 /* RWSessionDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWSessionDetailViewController.m; sourceTree = "<group>"; };
 		26E730A6419743C77DE8F010 /* RWDbSessions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWDbSessions.h; sourceTree = "<group>"; };
 		26E7311AA69FB2E51D64BF69 /* RWDailySessionListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWDailySessionListViewController.m; sourceTree = "<group>"; };
 		26E731EB6CC9B707B70C7079 /* RWDbVenues.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWDbVenues.m; sourceTree = "<group>"; };
+		26E732597E95C791AB5F327A /* RWJSONVenue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWJSONVenue.h; sourceTree = "<group>"; };
 		26E7331897DCA8E9DE078CC5 /* RWVenuePickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWVenuePickerViewController.h; sourceTree = "<group>"; };
 		26E7334659BD88F6FCBDA9B2 /* RWDbEvents.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWDbEvents.h; sourceTree = "<group>"; };
+		26E733A86AB79C4744EBB3F2 /* RWJSONPushMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWJSONPushMessage.h; sourceTree = "<group>"; };
+		26E73442CF2B28F56D529977 /* RWTableNavigatorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWTableNavigatorViewController.m; sourceTree = "<group>"; };
 		26E734490EC2460280324CE1 /* RWStaticArticleController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWStaticArticleController.h; sourceTree = "<group>"; };
+		26E7346B6D529D9F76284790 /* RWJSONSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWJSONSession.h; sourceTree = "<group>"; };
 		26E7347CEB33D30567713480 /* RWDailySessionListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWDailySessionListViewController.h; sourceTree = "<group>"; };
 		26E734B2FEEE40899984016B /* navbarbackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = navbarbackground.png; sourceTree = "<group>"; };
 		26E734F685B738DB294D1C5B /* RWDailySessionListItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWDailySessionListItem.m; sourceTree = "<group>"; };
@@ -240,16 +256,27 @@
 		26E736D3806D4E23C6F45A93 /* RWDbSessions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWDbSessions.m; sourceTree = "<group>"; };
 		26E736F8BC3400ED70DC3994 /* RWDbHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWDbHelper.m; sourceTree = "<group>"; };
 		26E73772C4506CEEF7731857 /* RWDbHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWDbHelper.h; sourceTree = "<group>"; };
+		26E73797C3B7ED1026376F9B /* RWJSONSchemas.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWJSONSchemas.h; sourceTree = "<group>"; };
+		26E737DF6BBC2C84BC534A58 /* RWJSONSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWJSONSession.m; sourceTree = "<group>"; };
+		26E738167753BDADDE171C6E /* RWJSONPushMessageGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWJSONPushMessageGroup.m; sourceTree = "<group>"; };
 		26E7384515AAA226C33B8A6B /* barbackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = barbackground.png; sourceTree = "<group>"; };
+		26E739089CFBA6F0EC72E9DB /* RWJSONArticle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWJSONArticle.m; sourceTree = "<group>"; };
 		26E7394501587D1CC7391103 /* RWDailySessionListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RWDailySessionListViewController.xib; sourceTree = "<group>"; };
+		26E7399E33317ED9154F45D7 /* RWJSONArticle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWJSONArticle.h; sourceTree = "<group>"; };
+		26E739D9DE81119FD2BA5E40 /* RWJSONPushMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWJSONPushMessage.m; sourceTree = "<group>"; };
+		26E739F46AB88CD8DCA12408 /* RWJSONPushMessageGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWJSONPushMessageGroup.h; sourceTree = "<group>"; };
+		26E73B05E15C0E62CFA02A71 /* RWTableNavigatorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWTableNavigatorViewController.h; sourceTree = "<group>"; };
 		26E73B071232B6F1DE91DD9C /* RWAppearanceHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWAppearanceHelper.h; sourceTree = "<group>"; };
 		26E73BC4F5B5D8AFA136F02F /* RWDailySessionListItem.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RWDailySessionListItem.xib; sourceTree = "<group>"; };
 		26E73BC640BC920810ED80D4 /* RWDbSchemas.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWDbSchemas.h; sourceTree = "<group>"; };
 		26E73C368D96F9F2512E027C /* RWDbVenues.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWDbVenues.h; sourceTree = "<group>"; };
 		26E73C5504E965F3193C7E63 /* RWSessionListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWSessionListViewController.m; sourceTree = "<group>"; };
 		26E73C88447F46EA13786763 /* RWStaticArticleController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RWStaticArticleController.xib; sourceTree = "<group>"; };
+		26E73CC5E6EF246B14E5BABA /* RWJSONEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWJSONEvent.m; sourceTree = "<group>"; };
 		26E73CDD18BE023E7C3F1834 /* RWDailySessionListItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWDailySessionListItem.h; sourceTree = "<group>"; };
 		26E73CFDDE0756A9A7C15C9C /* RWDbSchemas.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWDbSchemas.m; sourceTree = "<group>"; };
+		26E73D223730A010838C2BB3 /* RWJSONSchemas.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWJSONSchemas.m; sourceTree = "<group>"; };
+		26E73DA790C8AEAC8D1CD1EB /* RWJSONEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWJSONEvent.h; sourceTree = "<group>"; };
 		26E73E70DD991266C77557B1 /* RWStaticArticleController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWStaticArticleController.m; sourceTree = "<group>"; };
 		26E73E844A940B8F8FB0E9E3 /* RWAppearanceHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWAppearanceHelper.m; sourceTree = "<group>"; };
 		26E73EB7E72C4EF159A09632 /* RWSessionDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWSessionDetailViewController.h; sourceTree = "<group>"; };
@@ -316,6 +343,15 @@
 		361EA88E180C0DE700441271 /* RWVenueDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWVenueDetailViewController.h; sourceTree = "<group>"; };
 		361EA88F180C0DE700441271 /* RWVenueDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWVenueDetailViewController.m; sourceTree = "<group>"; };
 		361EA890180C0DE700441271 /* RWVenueDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RWVenueDetailViewController.xib; sourceTree = "<group>"; };
+		36214F5A1834CAD0001B0B63 /* GoogleMaps.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = GoogleMaps.bundle; sourceTree = "<group>"; };
+		36214F5C1834CAD7001B0B63 /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMaps.framework; sourceTree = "<group>"; };
+		36214F6118351A46001B0B63 /* RWInfoWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RWInfoWindow.xib; sourceTree = "<group>"; };
+		36214F6318351BF1001B0B63 /* RWInfoWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWInfoWindow.h; sourceTree = "<group>"; };
+		36214F6418351BF1001B0B63 /* RWInfoWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWInfoWindow.m; sourceTree = "<group>"; };
+		36214F66183CBB98001B0B63 /* RWTableNavigatorViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RWTableNavigatorViewController.xib; sourceTree = "<group>"; };
+		36214F68183CBC34001B0B63 /* RWTableNavigatorCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWTableNavigatorCell.h; sourceTree = "<group>"; };
+		36214F69183CBC34001B0B63 /* RWTableNavigatorCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWTableNavigatorCell.m; sourceTree = "<group>"; };
+		36214F6A183CBC34001B0B63 /* RWTableNavigatorCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RWTableNavigatorCell.xib; sourceTree = "<group>"; };
 		36354AFF181E6C520046066E /* RWSwipeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWSwipeViewController.h; sourceTree = "<group>"; };
 		36354B00181E6C520046066E /* RWSwipeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWSwipeViewController.m; sourceTree = "<group>"; };
 		36354B01181E6C520046066E /* RWSwipeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RWSwipeViewController.xib; sourceTree = "<group>"; };
@@ -355,7 +391,6 @@
 		3645BF6F17CCB58D00047159 /* RWHandler_DumpDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWHandler_DumpDatabase.m; sourceTree = "<group>"; };
 		3645BF7117CDECC000047159 /* RWOverviewMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWOverviewMapViewController.h; sourceTree = "<group>"; };
 		3645BF7217CDECC000047159 /* RWOverviewMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWOverviewMapViewController.m; sourceTree = "<group>"; };
-		3645BF7317CDECC000047159 /* RWOverviewMapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RWOverviewMapViewController.xib; sourceTree = "<group>"; };
 		3645BF7617CDF07600047159 /* RWVenueVM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWVenueVM.h; sourceTree = "<group>"; };
 		3645BF7717CDF07600047159 /* RWVenueVM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWVenueVM.m; sourceTree = "<group>"; };
 		3645BF7E17CE320100047159 /* Banegården.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = "Banegården.gpx"; path = "../../Documents/Banegården.gpx"; sourceTree = "<group>"; };
@@ -409,10 +444,8 @@
 		368DF1CF17E1C9BC00D1F304 /* UIView+RWViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+RWViewLayout.m"; sourceTree = "<group>"; };
 		3695C47617C4B798004DFA40 /* RWXMLImporter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RWXMLImporter.h; path = "Setup Files/RWXMLImporter.h"; sourceTree = "<group>"; };
 		3695C47717C4B798004DFA40 /* RWXMLImporter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RWXMLImporter.m; path = "Setup Files/RWXMLImporter.m"; sourceTree = "<group>"; };
-		3695C47B17C4CEA5004DFA40 /* RWNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWNode.h; sourceTree = "<group>"; };
-		3695C47C17C4CEA5004DFA40 /* RWNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWNode.m; sourceTree = "<group>"; };
-		36998D52180C2B4A0013AE2C /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMaps.framework; sourceTree = "<group>"; };
-		36998D54180C2B5F0013AE2C /* GoogleMaps.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = GoogleMaps.bundle; sourceTree = "<group>"; };
+		3695C47B17C4CEA5004DFA40 /* RWXmlNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWXmlNode.h; sourceTree = "<group>"; };
+		3695C47C17C4CEA5004DFA40 /* RWXmlNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWXmlNode.m; sourceTree = "<group>"; };
 		36A727A917C794E400374063 /* navbar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = navbar.png; path = "Red Event App/Resources/navbar.png"; sourceTree = "<group>"; };
 		36A727AB17C7992100374063 /* appearance.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = appearance.xml; sourceTree = "<group>"; };
 		36A727AD17C799A500374063 /* UIColor+RWColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+RWColor.h"; sourceTree = "<group>"; };
@@ -432,7 +465,6 @@
 		36A7289017CB46F500374063 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		36A7289317CB48C200374063 /* RWSessionMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWSessionMapViewController.h; sourceTree = "<group>"; };
 		36A7289417CB48C200374063 /* RWSessionMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWSessionMapViewController.m; sourceTree = "<group>"; };
-		36A7289517CB48C200374063 /* RWSessionMapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RWSessionMapViewController.xib; sourceTree = "<group>"; };
 		36A7289E17CB695800374063 /* icon_youarehere.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_youarehere.png; path = "Red Event App/Resources/icon_youarehere.png"; sourceTree = "<group>"; };
 		36A728A017CB6D0000374063 /* Track.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Track.gpx; sourceTree = "<group>"; };
 		36A728A917CB8D6200374063 /* RWSplashViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWSplashViewController.h; sourceTree = "<group>"; };
@@ -553,7 +585,7 @@
 				36AB7BD317BB7D0E00316921 /* UIKit.framework in Frameworks */,
 				36AB7BD517BB7D0E00316921 /* Foundation.framework in Frameworks */,
 				36AB7BD717BB7D0E00316921 /* CoreGraphics.framework in Frameworks */,
-				36998D53180C2B4A0013AE2C /* GoogleMaps.framework in Frameworks */,
+				36214F5D1834CAD7001B0B63 /* GoogleMaps.framework in Frameworks */,
 				36AB7BD917BB7D0E00316921 /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -572,6 +604,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		26E73496DF651A53BC2E4011 /* TableNavigator */ = {
+			isa = PBXGroup;
+			children = (
+				26E73B05E15C0E62CFA02A71 /* RWTableNavigatorViewController.h */,
+				26E73442CF2B28F56D529977 /* RWTableNavigatorViewController.m */,
+				36214F66183CBB98001B0B63 /* RWTableNavigatorViewController.xib */,
+				36214F68183CBC34001B0B63 /* RWTableNavigatorCell.h */,
+				36214F69183CBC34001B0B63 /* RWTableNavigatorCell.m */,
+				36214F6A183CBC34001B0B63 /* RWTableNavigatorCell.xib */,
+			);
+			name = TableNavigator;
+			sourceTree = "<group>";
+		};
 		26E736D2619136181E628CDC /* SessionList */ = {
 			isa = PBXGroup;
 			children = (
@@ -610,10 +655,31 @@
 				26E7311AA69FB2E51D64BF69 /* RWDailySessionListViewController.m */,
 				26E7394501587D1CC7391103 /* RWDailySessionListViewController.xib */,
 				26E73CDD18BE023E7C3F1834 /* RWDailySessionListItem.h */,
-				26E73BC4F5B5D8AFA136F02F /* RWDailySessionListItem.xib */,
 				26E734F685B738DB294D1C5B /* RWDailySessionListItem.m */,
+				26E73BC4F5B5D8AFA136F02F /* RWDailySessionListItem.xib */,
 			);
 			name = DailySessionList;
+			sourceTree = "<group>";
+		};
+		26E73F717BC981706D8545D0 /* JSONSchemas */ = {
+			isa = PBXGroup;
+			children = (
+				26E739089CFBA6F0EC72E9DB /* RWJSONArticle.m */,
+				26E7399E33317ED9154F45D7 /* RWJSONArticle.h */,
+				26E73CC5E6EF246B14E5BABA /* RWJSONEvent.m */,
+				26E73DA790C8AEAC8D1CD1EB /* RWJSONEvent.h */,
+				26E739D9DE81119FD2BA5E40 /* RWJSONPushMessage.m */,
+				26E733A86AB79C4744EBB3F2 /* RWJSONPushMessage.h */,
+				26E738167753BDADDE171C6E /* RWJSONPushMessageGroup.m */,
+				26E739F46AB88CD8DCA12408 /* RWJSONPushMessageGroup.h */,
+				26E737DF6BBC2C84BC534A58 /* RWJSONSession.m */,
+				26E7346B6D529D9F76284790 /* RWJSONSession.h */,
+				26E73007C7F063443A1D88DA /* RWJSONVenue.m */,
+				26E732597E95C791AB5F327A /* RWJSONVenue.h */,
+				26E73D223730A010838C2BB3 /* RWJSONSchemas.m */,
+				26E73797C3B7ED1026376F9B /* RWJSONSchemas.h */,
+			);
+			name = JSONSchemas;
 			sourceTree = "<group>";
 		};
 		26E73FA622626B7FDFEE3AE1 /* SubViews */ = {
@@ -754,6 +820,7 @@
 				361EA884180BD5DF00441271 /* ButtonGallery */,
 				361EA883180BD5D400441271 /* Splitview */,
 				36354AFE181E6C1E0046066E /* SwipeView */,
+				26E73496DF651A53BC2E4011 /* TableNavigator */,
 			);
 			name = Navigation;
 			sourceTree = "<group>";
@@ -794,6 +861,33 @@
 				361EA890180C0DE700441271 /* RWVenueDetailViewController.xib */,
 			);
 			name = VenueDetail;
+			sourceTree = "<group>";
+		};
+		36214F5E18351967001B0B63 /* SessionMap */ = {
+			isa = PBXGroup;
+			children = (
+				36A7289317CB48C200374063 /* RWSessionMapViewController.h */,
+				36A7289417CB48C200374063 /* RWSessionMapViewController.m */,
+			);
+			name = SessionMap;
+			sourceTree = "<group>";
+		};
+		36214F5F18351972001B0B63 /* OverviewMap */ = {
+			isa = PBXGroup;
+			children = (
+				3645BF7117CDECC000047159 /* RWOverviewMapViewController.h */,
+				3645BF7217CDECC000047159 /* RWOverviewMapViewController.m */,
+			);
+			name = OverviewMap;
+			sourceTree = "<group>";
+		};
+		36214F601835197C001B0B63 /* VenueMap */ = {
+			isa = PBXGroup;
+			children = (
+				3683F221182BB5F000C22E46 /* RWVenueMapViewController.h */,
+				3683F222182BB5F000C22E46 /* RWVenueMapViewController.m */,
+			);
+			name = VenueMap;
 			sourceTree = "<group>";
 		};
 		36354AFE181E6C1E0046066E /* SwipeView */ = {
@@ -866,8 +960,8 @@
 			children = (
 				3695C47617C4B798004DFA40 /* RWXMLImporter.h */,
 				3695C47717C4B798004DFA40 /* RWXMLImporter.m */,
-				3695C47B17C4CEA5004DFA40 /* RWNode.h */,
-				3695C47C17C4CEA5004DFA40 /* RWNode.m */,
+				3695C47B17C4CEA5004DFA40 /* RWXmlNode.h */,
+				3695C47C17C4CEA5004DFA40 /* RWXmlNode.m */,
 				36AB7CA717C2052100316921 /* RWXMLStore.h */,
 				36AB7CA817C2052100316921 /* RWXMLStore.m */,
 			);
@@ -877,17 +971,15 @@
 		36A7289217CB47F800374063 /* Map */ = {
 			isa = PBXGroup;
 			children = (
-				36A7289317CB48C200374063 /* RWSessionMapViewController.h */,
-				36A7289417CB48C200374063 /* RWSessionMapViewController.m */,
-				36A7289517CB48C200374063 /* RWSessionMapViewController.xib */,
-				3645BF7117CDECC000047159 /* RWOverviewMapViewController.h */,
-				3645BF7217CDECC000047159 /* RWOverviewMapViewController.m */,
-				3645BF7317CDECC000047159 /* RWOverviewMapViewController.xib */,
-				3683F221182BB5F000C22E46 /* RWVenueMapViewController.h */,
-				3683F222182BB5F000C22E46 /* RWVenueMapViewController.m */,
+				36214F5F18351972001B0B63 /* OverviewMap */,
+				36214F5E18351967001B0B63 /* SessionMap */,
+				36214F601835197C001B0B63 /* VenueMap */,
 				3683F228182BB6AC00C22E46 /* RWBaseMapViewController.h */,
 				3683F229182BB6AC00C22E46 /* RWBaseMapViewController.m */,
 				3683F226182BB64D00C22E46 /* RWBaseMapView.xib */,
+				36214F6318351BF1001B0B63 /* RWInfoWindow.h */,
+				36214F6418351BF1001B0B63 /* RWInfoWindow.m */,
+				36214F6118351A46001B0B63 /* RWInfoWindow.xib */,
 			);
 			name = Map;
 			sourceTree = "<group>";
@@ -954,9 +1046,9 @@
 		36AB7BD117BB7D0E00316921 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				36214F5C1834CAD7001B0B63 /* GoogleMaps.framework */,
+				36214F5A1834CAD0001B0B63 /* GoogleMaps.bundle */,
 				3683F20F182A445A00C22E46 /* SparkInspector.framework */,
-				36998D54180C2B5F0013AE2C /* GoogleMaps.bundle */,
-				36998D52180C2B4A0013AE2C /* GoogleMaps.framework */,
 				36AB7BD217BB7D0E00316921 /* UIKit.framework */,
 				36AB7BD417BB7D0E00316921 /* Foundation.framework */,
 				36AB7BD617BB7D0E00316921 /* CoreGraphics.framework */,
@@ -1153,6 +1245,7 @@
 			isa = PBXGroup;
 			children = (
 				3604166017F5973E00B9A391 /* DBClasses */,
+				26E73F717BC981706D8545D0 /* JSONSchemas */,
 				36AB7C4A17BE0C8C00316921 /* RWDbInterface.h */,
 				36AB7C4B17BE0C8C00316921 /* RWDbInterface.m */,
 				3645BF6E17CCB58D00047159 /* RWHandler_DumpDatabase.h */,
@@ -1334,6 +1427,7 @@
 				36354BDD181FC8410046066E /* xmas16.jpg in Resources */,
 				36354BE4181FC8410046066E /* xmas23.jpg in Resources */,
 				36AB7BE717BB7D0E00316921 /* Default.png in Resources */,
+				36214F67183CBB98001B0B63 /* RWTableNavigatorViewController.xib in Resources */,
 				36354BE5181FC8410046066E /* xmas24.jpg in Resources */,
 				36AB7BE917BB7D0E00316921 /* Default@2x.png in Resources */,
 				36AB7BEB17BB7D0E00316921 /* Default-568h@2x.png in Resources */,
@@ -1360,6 +1454,7 @@
 				36354BD1181FC8410046066E /* xmas4.jpg in Resources */,
 				36AB7CC017C3609500316921 /* joomlasite.xml in Resources */,
 				36354BD6181FC8410046066E /* xmas9.jpg in Resources */,
+				36214F6218351A46001B0B63 /* RWInfoWindow.xib in Resources */,
 				36A79EE317C4F15D00AB211B /* RWArticleDetailViewController.xib in Resources */,
 				36354BDF181FC8410046066E /* xmas18.jpg in Resources */,
 				367628F8180408EB002ED534 /* RWUpcomingSessions.xib in Resources */,
@@ -1375,20 +1470,19 @@
 				36A7287517C7A8DC00374063 /* navbar_backbutton.png in Resources */,
 				361EA88B180C0C3700441271 /* julebaggrund.jpg in Resources */,
 				3683F227182BB64D00C22E46 /* RWBaseMapView.xib in Resources */,
-				36998D55180C2B5F0013AE2C /* GoogleMaps.bundle in Resources */,
+				36214F5B1834CAD0001B0B63 /* GoogleMaps.bundle in Resources */,
 				36A7287717CB37B300374063 /* tabbar.png in Resources */,
-				36A7289717CB48C200374063 /* RWSessionMapViewController.xib in Resources */,
 				3604166D17FAB4DB00B9A391 /* arrow_right.png in Resources */,
 				36A7289F17CB695800374063 /* icon_youarehere.png in Resources */,
 				36354BDE181FC8410046066E /* xmas17.jpg in Resources */,
 				367628F318040475002ED534 /* text.xml in Resources */,
 				36A728A117CB6D0000374063 /* Track.gpx in Resources */,
 				36A728AD17CB8D6F00374063 /* RWSplashViewController.xib in Resources */,
+				36214F6C183CBC34001B0B63 /* RWTableNavigatorCell.xib in Resources */,
 				36354BD5181FC8410046066E /* xmas8.jpg in Resources */,
 				367628FD18043896002ED534 /* RWUpcomingSessionsListItem.xib in Resources */,
 				36354BDC181FC8410046066E /* xmas15.jpg in Resources */,
 				36354B03181E6C520046066E /* RWSwipeViewController.xib in Resources */,
-				3645BF7517CDECC000047159 /* RWOverviewMapViewController.xib in Resources */,
 				3645BF8117CE320500047159 /* Banegården.gpx in Resources */,
 				36354BE2181FC8410046066E /* xmas21.jpg in Resources */,
 				3683F1A0181FEEF900C22E46 /* btnclose.png in Resources */,
@@ -1453,6 +1547,7 @@
 				36AB7C2817BCDCF200316921 /* RWArticleListCell.m in Sources */,
 				36AB7C2F17BCF14D00316921 /* RWArticleVM.m in Sources */,
 				36AB7C3717BD047700316921 /* RWSplitViewController.m in Sources */,
+				36214F6518351BF1001B0B63 /* RWInfoWindow.m in Sources */,
 				3604A6C717E32AF100822B9B /* RWNewstickerView.m in Sources */,
 				36AB7C4217BD137400316921 /* RWServer.m in Sources */,
 				36AB7C4517BD140100316921 /* RWHandler_DumpServer.m in Sources */,
@@ -1498,11 +1593,12 @@
 				3695C47817C4B798004DFA40 /* RWXMLImporter.m in Sources */,
 				3683F1A7181FF54300C22E46 /* RWAdventWindowViewController.m in Sources */,
 				367628EB1803F812002ED534 /* RWTEXT.m in Sources */,
-				3695C47D17C4CEA5004DFA40 /* RWNode.m in Sources */,
+				3695C47D17C4CEA5004DFA40 /* RWXmlNode.m in Sources */,
 				36A79EE217C4F15D00AB211B /* RWArticleDetailViewController.m in Sources */,
 				36A79EEC17C5F85900AB211B /* Venue.m in Sources */,
 				367628F7180408EB002ED534 /* RWUpcomingSessions.m in Sources */,
 				3604166317F5978100B9A391 /* RWDbArticles.m in Sources */,
+				36214F6B183CBC34001B0B63 /* RWTableNavigatorCell.m in Sources */,
 				361EA87F1806B0EC00441271 /* UIImage+MultiFormat.m in Sources */,
 				36A79EF217C6078600AB211B /* NSString+RWString.m in Sources */,
 				3604165917F5792D00B9A391 /* RWLOOK.m in Sources */,
@@ -1545,6 +1641,14 @@
 				367628F11803FB91002ED534 /* RWTextHelper.m in Sources */,
 				26E73A16AE0BED83CB4BF2F2 /* RWDailySessionListItem.m in Sources */,
 				26E7359A6F05B94B31DE494D /* RWStaticArticleController.m in Sources */,
+				26E7396EA34EF7D743E27B19 /* RWJSONArticle.m in Sources */,
+				26E73AD842954C5E9551E3AD /* RWJSONEvent.m in Sources */,
+				26E735A82D981AAD64548A18 /* RWJSONPushMessage.m in Sources */,
+				26E73647E0BFE16C681E964C /* RWJSONPushMessageGroup.m in Sources */,
+				26E737869BA3CD47EB4DF1C7 /* RWJSONSession.m in Sources */,
+				26E73C9AA3817CDE9AB356C0 /* RWJSONVenue.m in Sources */,
+				26E735A83CD4B9562C4CF691 /* RWJSONSchemas.m in Sources */,
+				26E7358C57205B061BD03C68 /* RWTableNavigatorViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1652,9 +1756,10 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"\\\\\\\"$(SRCROOT)/Red\\\\\\ Event\\\\\\ App/GoogleMaps-iOS-1.4.2\\\\\\\"",
+					"\\\\\\\\\\\\\\\"$(SRCROOT)/Red\\\\\\\\\\\\\\ Event\\\\\\\\\\\\\\ App/GoogleMaps-iOS-1.4.2\\\\\\\\\\\\\\\"",
 					"/Users/redwebpraktik/IphoneProjects/Red\\ Event\\ App",
 					"/Users/redwebpraktik/IphoneProjects/Jule\\ App\\ 2",
+					"/Users/redwebpraktik/IphoneProjects/Red\\ App",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Red Event App/Red App-Prefix.pch";
@@ -1682,9 +1787,10 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"\\\\\\\"$(SRCROOT)/Red\\\\\\ Event\\\\\\ App/GoogleMaps-iOS-1.4.2\\\\\\\"",
+					"\\\\\\\\\\\\\\\"$(SRCROOT)/Red\\\\\\\\\\\\\\ Event\\\\\\\\\\\\\\ App/GoogleMaps-iOS-1.4.2\\\\\\\\\\\\\\\"",
 					"/Users/redwebpraktik/IphoneProjects/Red\\ Event\\ App",
 					"/Users/redwebpraktik/IphoneProjects/Jule\\ App\\ 2",
+					"/Users/redwebpraktik/IphoneProjects/Red\\ App",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Red Event App/Red App-Prefix.pch";

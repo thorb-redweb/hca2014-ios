@@ -8,12 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@class RWNode;
+@class RWXmlNode;
 
 @interface RWUpcomingSessions : UIViewController
 
 @property (weak, nonatomic) IBOutlet UILabel *lblTitle;
 
-- (id)initWithFrame:(CGRect)frame subviewElement:(RWNode *)page;
+- (id)initWithFrame:(CGRect)frame subviewElement:(RWXmlNode *)page;
 
 @end

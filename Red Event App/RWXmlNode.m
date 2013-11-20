@@ -1,15 +1,15 @@
 //
-//  RWNode.m
+//  RWXmlNode.m
 //  Red Event App
 //
 //  Created by redWEB Praktik on 8/21/13.
 //  Copyright (c) 2013 redWEB. All rights reserved.
 //
 
-#import "RWNode.h"
+#import "RWXmlNode.h"
 #import "RWPAGE.h"
 
-@implementation RWNode {
+@implementation RWXmlNode {
     int iteratorIndex;
 }
 
@@ -22,7 +22,7 @@
 }
 
 - (NSString *)description {
-    NSString *class = @"RWNode";
+    NSString *class = @"RWXmlNode";
     NSString *value;
     if ([_value class] == [NSArray class]) {
         NSArray *array = _value;
@@ -46,7 +46,7 @@
 }
 
 - (NSString *)getStringFromNode:(NSString *)name {
-    for (RWNode *child in self.value) {
+    for (RWXmlNode *child in self.value) {
         if ([child.name isEqual:name]) {
             return child.value;
         }
@@ -87,17 +87,17 @@
 - (NSArray *)getAllChildValuesWithName:(NSString *)name{
 	NSMutableArray *nodeArray = [[NSMutableArray alloc]init];
 	for (int i = 0; i < self.childCount; i++) {
-        RWNode *child = self.value[i];
+        RWXmlNode *child = self.value[i];
         if ([child.name isEqual:name])
             [nodeArray addObject:child.value];
     }
 	return nodeArray;
 }
 
-- (RWNode *)getChildFromNode:(NSString *)name {
+- (RWXmlNode *)getChildFromNode:(NSString *)name {
 
     for (int i = 0; i < self.childCount; i++) {
-        RWNode *child = self.value[i];
+        RWXmlNode *child = self.value[i];
         if ([child.name isEqual:name])
             return child;
     }
@@ -111,7 +111,7 @@
 - (NSArray *)getAllChildNodesWithName:(NSString *)name{
 	NSMutableArray *nodeArray = [[NSMutableArray alloc]init];
 	for (int i = 0; i < self.childCount; i++) {
-        RWNode *child = self.value[i];
+        RWXmlNode *child = self.value[i];
         if ([child.name isEqual:name])
             [nodeArray addObject:child];
     }
@@ -122,11 +122,11 @@
     return [self getDictionaryFromChildNode:self];
 }
 
-- (NSDictionary *)getDictionaryFromChildNode:(RWNode *)node {
+- (NSDictionary *)getDictionaryFromChildNode:(RWXmlNode *)node {
 
     NSMutableDictionary *dictionary = [[NSMutableDictionary alloc] init];
 
-    for (RWNode *child in node.value) {
+    for (RWXmlNode *child in node.value) {
         if ([child.value isKindOfClass:[NSArray class]]) {
             NSDictionary *childDictionary = [self getDictionaryFromChildNode:child];
             [dictionary setObject:childDictionary forKey:child.name];
@@ -144,7 +144,7 @@
         return false;
     }
     for (int i = 0; i < self.childCount; i++) {
-        RWNode *child = self[i];
+        RWXmlNode *child = self[i];
         if ([child.name isEqual:childname])
             return true;
     }
@@ -159,7 +159,7 @@
     return valueArray;
 }
 
-- (RWNode *)objectAtIndexedSubscript:(NSUInteger)idx {
+- (RWXmlNode *)objectAtIndexedSubscript:(NSUInteger)idx {
     return [self children][idx];
 }
 @end

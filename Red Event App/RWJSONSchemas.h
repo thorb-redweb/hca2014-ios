@@ -5,7 +5,18 @@
 
 
 #import <Foundation/Foundation.h>
-
+@class RWJSONArticle;
+@class RWJSONEvent;
+@class RWJSONPushMessage;
+@class RWJSONPushMessageGroup;
+@class RWJSONSession;
+@class  RWJSONVenue;
 
 @interface RWJSONSchemas : NSObject
+-(RWJSONArticle *)Art;
+-(RWJSONEvent *)Event;
+-(RWJSONPushMessage *)Push;
+-(RWJSONPushMessageGroup *)PushGroup;
+-(RWJSONSession *)Ses;
+-(RWJSONVenue *)Venue;
 @end

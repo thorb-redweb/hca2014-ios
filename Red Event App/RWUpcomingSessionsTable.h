@@ -9,12 +9,12 @@
 #import <UIKit/UIKit.h>
 #import "RWUpcomingSessionsDelegate.h"
 
-#import "RWNode.h"
+#import "RWXmlNode.h"
 #import "RWLOOK.h"
 #import "RWPAGE.h"
 
 @interface RWUpcomingSessionsTable : UITableView
 
-- (id)initWithFrame:(CGRect)frame subviewElement:(RWNode *)page;
+- (id)initWithFrame:(CGRect)frame subviewElement:(RWXmlNode *)page;
 
 @end

@@ -8,11 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
-@class RWNode;
+@class RWXmlNode;
 
 
 @interface RWAppearanceHelper : NSObject
-- (id)initWithLocalLook:(RWNode *)localLook globalLook:(RWNode *)globalLook;
+- (id)initWithLocalLook:(RWXmlNode *)localLook globalLook:(RWXmlNode *)globalLook;
 
 - (void)setBackgroundColor:(UIView *)view localName:(NSString *)localname globalName:(NSString *)globalname;
 
@@ -20,7 +20,7 @@
 
 - (void)setButtonBackgroundImageOrColor:(UIButton *)button localImageName:(NSString *)localImageName localColorName:(NSString *)localColorName globalColorName:(NSString *)globalColorName forState:(UIControlState)state;
 
-- (void)setButtonBackgroundImageFromLocalSource:(UIButton *)button localName:(NSString *)localname forState:(UIControlState)state;
+- (BOOL)setButtonBackgroundImageFromLocalSource:(UIButton *)button localName:(NSString *)localname forState:(UIControlState)state;
 
 - (void)setButtonImageFromLocalSource:(UIButton *)button localName:(NSString *)localname forState:(UIControlState)state;
 

@@ -7,17 +7,17 @@
 
 
 #import "RWAppearanceHelper.h"
-#import "RWNode.h"
+#import "RWXmlNode.h"
 #import "UIColor+RWColor.h"
 #import "RWLOOK.h"
 
 
 @implementation RWAppearanceHelper {
-    RWNode *_localLook;
-    RWNode *_globalLook;
+    RWXmlNode *_localLook;
+    RWXmlNode *_globalLook;
 }
 
-- (id)initWithLocalLook:(RWNode *)localLook globalLook:(RWNode *)globalLook {
+- (id)initWithLocalLook:(RWXmlNode *)localLook globalLook:(RWXmlNode *)globalLook {
     self = [super init];
     if (self) {
         _localLook = localLook;
@@ -50,9 +50,12 @@
 	}
 }
 
-- (void)setButtonBackgroundImageFromLocalSource:(UIButton *)button localName:(NSString *)localname forState:(UIControlState)state{
-    if ([_localLook hasChild:localname])
+- (BOOL)setButtonBackgroundImageFromLocalSource:(UIButton *)button localName:(NSString *)localname forState:(UIControlState)state{
+    if ([_localLook hasChild:localname]){
         [button setBackgroundImage:[self getImageFromLocalSourceWithLocalName:localname] forState:state];
+		return true;
+	}
+	return false;
 }
 
 - (void)setButtonImageFromLocalSource:(UIButton *)button localName:(NSString *)localname forState:(UIControlState)state{
@@ -127,7 +130,7 @@
 - (UIColor *)getColorWithLocalName:(NSString *)localname globalName:(NSString *)globalname {
     if ([_localLook hasChild:localname])
         return [UIColor colorWithHexString:[_localLook getStringFromNode:localname]];
-    else if([[_globalLook getStringFromNode:globalname] isEqual:[RWLOOK INVISIBLE]])
+    else if([globalname isEqual:[RWLOOK INVISIBLE]])
 		return [UIColor colorWithHexString:@"00000000"];
 	else
         return [UIColor colorWithHexString:[_globalLook getStringFromNode:globalname]];

@@ -8,12 +8,12 @@
 
 #import <Foundation/Foundation.h>
 #import "TouchXML.h"
-#import "RWNode.h"
+#import "RWXmlNode.h"
 
 @interface RWXMLImporter : NSObject
 
 - (NSArray *)getResultNodesFromResource:(NSString *)resourceName identifier:(NSString *)nodesForXPath;
 
-- (RWNode *)getResultNodeFromResource:(NSString *)resourceName identifier:(NSString *)nodesForXPath;
+- (RWXmlNode *)getResultNodeFromResource:(NSString *)resourceName identifier:(NSString *)nodesForXPath;
 
 @end

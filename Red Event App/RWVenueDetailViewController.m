@@ -45,34 +45,34 @@
 -(void)setAppearance{
 	RWAppearanceHelper *helper = [[RWAppearanceHelper alloc] initWithLocalLook:_localLook globalLook:_globalLook];
 			
-	[helper setBackgroundColor:self.view localName:[RWLOOK VENUEDETAIL_BACKGROUNDCOLOR] globalName:[RWLOOK GLOBAL_BACKCOLOR]];
+	[helper setBackgroundColor:self.view localName:[RWLOOK VENUEDETAIL_BACKGROUNDCOLOR] globalName:[RWLOOK DEFAULT_BACKCOLOR]];
 	
-	[helper setLabelColor:_lblTitle localName:[RWLOOK VENUEDETAIL_TITLECOLOR] globalName:[RWLOOK GLOBAL_BACKTEXTCOLOR]];
-	[helper setLabelFont:_lblTitle localSizeName:[RWLOOK VENUEDETAIL_TITLESIZE] globalSizeName:[RWLOOK GLOBAL_TITLESIZE] localStyleName:[RWLOOK VENUEDETAIL_TITLESTYLE] globalStyleName:[RWLOOK GLOBAL_TITLESTYLE]];
-	[helper setLabelShadowColor:_lblTitle localName:[RWLOOK VENUEDETAIL_TITLESHADOWCOLOR] globalName:[RWLOOK GLOBAL_BACKTEXTSHADOWCOLOR]];
-	[helper setLabelShadowOffset:_lblTitle localName:[RWLOOK VENUEDETAIL_TITLESHADOWOFFSET] globalName:[RWLOOK GLOBAL_TITLESHADOWOFFSET]];
+	[helper setLabelColor:_lblTitle localName:[RWLOOK VENUEDETAIL_TITLECOLOR] globalName:[RWLOOK DEFAULT_BACKTEXTCOLOR]];
+	[helper setLabelFont:_lblTitle localSizeName:[RWLOOK VENUEDETAIL_TITLESIZE] globalSizeName:[RWLOOK DEFAULT_TITLESIZE] localStyleName:[RWLOOK VENUEDETAIL_TITLESTYLE] globalStyleName:[RWLOOK DEFAULT_TITLESTYLE]];
+	[helper setLabelShadowColor:_lblTitle localName:[RWLOOK VENUEDETAIL_TITLESHADOWCOLOR] globalName:[RWLOOK DEFAULT_BACKTEXTSHADOWCOLOR]];
+	[helper setLabelShadowOffset:_lblTitle localName:[RWLOOK VENUEDETAIL_TITLESHADOWOFFSET] globalName:[RWLOOK DEFAULT_TITLESHADOWOFFSET]];
 	
-	[helper setLabelColor:_lblAddressLabel localName:[RWLOOK VENUEDETAIL_LABELCOLOR] globalName:[RWLOOK GLOBAL_BACKTEXTCOLOR]];
-	[helper setLabelFont:_lblAddressLabel localSizeName:[RWLOOK VENUEDETAIL_LABELSIZE] globalSizeName:[RWLOOK GLOBAL_ITEMTITLESIZE] localStyleName:[RWLOOK VENUEDETAIL_LABELSTYLE] globalStyleName:[RWLOOK GLOBAL_ITEMTITLESTYLE]];
-	[helper setLabelShadowColor:_lblAddressLabel localName:[RWLOOK VENUEDETAIL_LABELSHADOWCOLOR] globalName:[RWLOOK GLOBAL_BACKTEXTSHADOWCOLOR]];
-	[helper setLabelShadowOffset:_lblAddressLabel localName:[RWLOOK VENUEDETAIL_LABELSHADOWOFFSET] globalName:[RWLOOK GLOBAL_ITEMTITLESHADOWOFFSET]];
+	[helper setLabelColor:_lblAddressLabel localName:[RWLOOK VENUEDETAIL_LABELCOLOR] globalName:[RWLOOK DEFAULT_BACKTEXTCOLOR]];
+	[helper setLabelFont:_lblAddressLabel localSizeName:[RWLOOK VENUEDETAIL_LABELSIZE] globalSizeName:[RWLOOK DEFAULT_ITEMTITLESIZE] localStyleName:[RWLOOK VENUEDETAIL_LABELSTYLE] globalStyleName:[RWLOOK DEFAULT_ITEMTITLESTYLE]];
+	[helper setLabelShadowColor:_lblAddressLabel localName:[RWLOOK VENUEDETAIL_LABELSHADOWCOLOR] globalName:[RWLOOK DEFAULT_BACKTEXTSHADOWCOLOR]];
+	[helper setLabelShadowOffset:_lblAddressLabel localName:[RWLOOK VENUEDETAIL_LABELSHADOWOFFSET] globalName:[RWLOOK DEFAULT_ITEMTITLESHADOWOFFSET]];
 	
-	[helper setLabelColor:_lblAddressValue localName:[RWLOOK VENUEDETAIL_TEXTCOLOR] globalName:[RWLOOK GLOBAL_BACKTEXTCOLOR]];
-	[helper setLabelFont:_lblAddressValue localSizeName:[RWLOOK VENUEDETAIL_TEXTSIZE] globalSizeName:[RWLOOK GLOBAL_TEXTSIZE] localStyleName:[RWLOOK VENUEDETAIL_TEXTSTYLE] globalStyleName:[RWLOOK GLOBAL_TEXTSTYLE]];
-	[helper setLabelShadowColor:_lblAddressValue localName:[RWLOOK VENUEDETAIL_TEXTSHADOWCOLOR] globalName:[RWLOOK GLOBAL_BACKTEXTSHADOWCOLOR]];
-	[helper setLabelShadowOffset:_lblAddressValue localName:[RWLOOK VENUEDETAIL_TEXTSHADOWOFFSET] globalName:[RWLOOK GLOBAL_TEXTSHADOWOFFSET]];
+	[helper setLabelColor:_lblAddressValue localName:[RWLOOK VENUEDETAIL_TEXTCOLOR] globalName:[RWLOOK DEFAULT_BACKTEXTCOLOR]];
+	[helper setLabelFont:_lblAddressValue localSizeName:[RWLOOK VENUEDETAIL_TEXTSIZE] globalSizeName:[RWLOOK DEFAULT_TEXTSIZE] localStyleName:[RWLOOK VENUEDETAIL_TEXTSTYLE] globalStyleName:[RWLOOK DEFAULT_TEXTSTYLE]];
+	[helper setLabelShadowColor:_lblAddressValue localName:[RWLOOK VENUEDETAIL_TEXTSHADOWCOLOR] globalName:[RWLOOK DEFAULT_BACKTEXTSHADOWCOLOR]];
+	[helper setLabelShadowOffset:_lblAddressValue localName:[RWLOOK VENUEDETAIL_TEXTSHADOWOFFSET] globalName:[RWLOOK DEFAULT_TEXTSHADOWOFFSET]];
 
-	[helper setBackgroundColor:_btnMap localName:[RWLOOK VENUEDETAIL_BUTTONCOLOR] globalName:[RWLOOK GLOBAL_ALTCOLOR]];
-	[helper setButtonTitleColor:_btnMap forState:UIControlStateNormal localName:[RWLOOK VENUEDETAIL_BUTTONTEXTCOLOR] globalName:[RWLOOK GLOBAL_ALTTEXTCOLOR]];
-    [helper setButtonTitleFont:_btnMap forState:UIControlStateNormal localSizeName:[RWLOOK VENUEDETAIL_BUTTONTEXTSIZE] globalSizeName:[RWLOOK GLOBAL_TEXTSIZE]
-                localStyleName:[RWLOOK VENUEDETAIL_BUTTONTEXTSTYLE] globalStyleName:[RWLOOK GLOBAL_TEXTSTYLE]];
-    [helper setButtonTitleShadowColor:_btnMap forState:UIControlStateNormal localName:[RWLOOK VENUEDETAIL_BUTTONTEXTSHADOWCOLOR] globalName:[RWLOOK GLOBAL_ALTTEXTSHADOWCOLOR]];
-    [helper setButtonTitleShadowOffset:_btnMap forState:UIControlStateNormal localName:[RWLOOK VENUEDETAIL_BUTTONTEXTSHADOWOFFSET] globalName:[RWLOOK GLOBAL_TEXTSHADOWOFFSET]];
+	[helper setBackgroundColor:_btnMap localName:[RWLOOK VENUEDETAIL_BUTTONCOLOR] globalName:[RWLOOK DEFAULT_ALTCOLOR]];
+	[helper setButtonTitleColor:_btnMap forState:UIControlStateNormal localName:[RWLOOK VENUEDETAIL_BUTTONTEXTCOLOR] globalName:[RWLOOK DEFAULT_ALTTEXTCOLOR]];
+    [helper setButtonTitleFont:_btnMap forState:UIControlStateNormal localSizeName:[RWLOOK VENUEDETAIL_BUTTONTEXTSIZE] globalSizeName:[RWLOOK DEFAULT_TEXTSIZE]
+                localStyleName:[RWLOOK VENUEDETAIL_BUTTONTEXTSTYLE] globalStyleName:[RWLOOK DEFAULT_TEXTSTYLE]];
+    [helper setButtonTitleShadowColor:_btnMap forState:UIControlStateNormal localName:[RWLOOK VENUEDETAIL_BUTTONTEXTSHADOWCOLOR] globalName:[RWLOOK DEFAULT_ALTTEXTSHADOWCOLOR]];
+    [helper setButtonTitleShadowOffset:_btnMap forState:UIControlStateNormal localName:[RWLOOK VENUEDETAIL_BUTTONTEXTSHADOWOFFSET] globalName:[RWLOOK DEFAULT_TEXTSHADOWOFFSET]];
 	
-	[helper setLabelColor:_lblBody localName:[RWLOOK VENUEDETAIL_TEXTCOLOR] globalName:[RWLOOK GLOBAL_BACKTEXTCOLOR]];
-	[helper setLabelFont:_lblBody localSizeName:[RWLOOK VENUEDETAIL_TEXTSIZE] globalSizeName:[RWLOOK GLOBAL_TEXTSIZE] localStyleName:[RWLOOK VENUEDETAIL_TEXTSTYLE] globalStyleName:[RWLOOK GLOBAL_TEXTSTYLE]];
-	[helper setLabelShadowColor:_lblBody localName:[RWLOOK VENUEDETAIL_TEXTSHADOWCOLOR] globalName:[RWLOOK GLOBAL_BACKTEXTSHADOWCOLOR]];
-	[helper setLabelShadowOffset:_lblBody localName:[RWLOOK VENUEDETAIL_TEXTSHADOWOFFSET] globalName:[RWLOOK GLOBAL_TEXTSHADOWOFFSET]];
+	[helper setLabelColor:_lblBody localName:[RWLOOK VENUEDETAIL_TEXTCOLOR] globalName:[RWLOOK DEFAULT_BACKTEXTCOLOR]];
+	[helper setLabelFont:_lblBody localSizeName:[RWLOOK VENUEDETAIL_TEXTSIZE] globalSizeName:[RWLOOK DEFAULT_TEXTSIZE] localStyleName:[RWLOOK VENUEDETAIL_TEXTSTYLE] globalStyleName:[RWLOOK DEFAULT_TEXTSTYLE]];
+	[helper setLabelShadowColor:_lblBody localName:[RWLOOK VENUEDETAIL_TEXTSHADOWCOLOR] globalName:[RWLOOK DEFAULT_BACKTEXTSHADOWCOLOR]];
+	[helper setLabelShadowOffset:_lblBody localName:[RWLOOK VENUEDETAIL_TEXTSHADOWOFFSET] globalName:[RWLOOK DEFAULT_TEXTSHADOWOFFSET]];
 }
 
 -(void)setText{
@@ -107,7 +107,7 @@
 }
 
 - (IBAction)btnMapPressed:(id)sender{
-	RWNode *childPage = [_xml getPage:_childname];
+	RWXmlNode *childPage = [_xml getPage:_childname];
  	NSMutableDictionary *childDictionary = [NSMutableDictionary dictionaryWithDictionary:[childPage getDictionaryFromNode]];
 	[childDictionary setValue:[NSNumber numberWithInt:_venue.venueid] forKey:[RWPAGE VENUEID]];
 	[_app.navController pushViewWithParameters:childDictionary];

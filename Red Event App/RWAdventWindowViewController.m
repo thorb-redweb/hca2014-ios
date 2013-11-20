@@ -93,24 +93,24 @@
 -(void)setAppearance{
 	RWAppearanceHelper *helper = [[RWAppearanceHelper alloc] initWithLocalLook:_localLook globalLook:_globalLook];
 	
-	[helper setBackgroundTileImageOrColor:self.view localImageName:[RWLOOK ADVENTWINDOW_BACKGROUNDIMAGE] localColorName:[RWLOOK ADVENTWINDOW_BACKGROUNDCOLOR] globalName:[RWLOOK GLOBAL_BACKCOLOR]];
+	[helper setBackgroundTileImageOrColor:self.view localImageName:[RWLOOK ADVENTWINDOW_BACKGROUNDIMAGE] localColorName:[RWLOOK ADVENTWINDOW_BACKGROUNDCOLOR] globalName:[RWLOOK DEFAULT_BACKCOLOR]];
 	
-	[helper setLabelColor:_lblTitle localName:[RWLOOK ADVENTWINDOW_TITLECOLOR] globalName:[RWLOOK GLOBAL_BACKTEXTCOLOR]];
-	[helper setLabelFont:_lblTitle localSizeName:[RWLOOK ADVENTWINDOW_TITLESIZE] globalSizeName:[RWLOOK GLOBAL_TITLESIZE] localStyleName:[RWLOOK ADVENTWINDOW_TITLESTYLE] globalStyleName:[RWLOOK GLOBAL_TITLESTYLE]];
-	[helper setLabelShadowColor:_lblTitle localName:[RWLOOK ADVENTWINDOW_TITLESHADOWCOLOR] globalName:[RWLOOK GLOBAL_BACKTEXTSHADOWCOLOR]];
-	[helper setLabelShadowOffset:_lblTitle localName:[RWLOOK ADVENTWINDOW_TITLESHADOWOFFSET] globalName:[RWLOOK GLOBAL_TITLESHADOWOFFSET]];
+	[helper setLabelColor:_lblTitle localName:[RWLOOK ADVENTWINDOW_TITLECOLOR] globalName:[RWLOOK DEFAULT_BACKTEXTCOLOR]];
+	[helper setLabelFont:_lblTitle localSizeName:[RWLOOK ADVENTWINDOW_TITLESIZE] globalSizeName:[RWLOOK DEFAULT_TITLESIZE] localStyleName:[RWLOOK ADVENTWINDOW_TITLESTYLE] globalStyleName:[RWLOOK DEFAULT_TITLESTYLE]];
+	[helper setLabelShadowColor:_lblTitle localName:[RWLOOK ADVENTWINDOW_TITLESHADOWCOLOR] globalName:[RWLOOK DEFAULT_BACKTEXTSHADOWCOLOR]];
+	[helper setLabelShadowOffset:_lblTitle localName:[RWLOOK ADVENTWINDOW_TITLESHADOWOFFSET] globalName:[RWLOOK DEFAULT_TITLESHADOWOFFSET]];
 	
-	[helper setLabelColor:_lblBody localName:[RWLOOK ADVENTWINDOW_TEXTCOLOR] globalName:[RWLOOK GLOBAL_BACKTEXTCOLOR]];
-	[helper setLabelFont:_lblBody localSizeName:[RWLOOK ADVENTWINDOW_TEXTSIZE] globalSizeName:[RWLOOK GLOBAL_TEXTSIZE] localStyleName:[RWLOOK ADVENTWINDOW_TEXTSTYLE] globalStyleName:[RWLOOK GLOBAL_TEXTSTYLE]];
-	[helper setLabelShadowColor:_lblBody localName:[RWLOOK ADVENTWINDOW_TEXTSHADOWCOLOR] globalName:[RWLOOK GLOBAL_BACKTEXTSHADOWCOLOR]];
-	[helper setLabelShadowOffset:_lblBody localName:[RWLOOK ADVENTWINDOW_TEXTSHADOWOFFSET] globalName:[RWLOOK GLOBAL_TEXTSHADOWOFFSET]];
+	[helper setLabelColor:_lblBody localName:[RWLOOK ADVENTWINDOW_TEXTCOLOR] globalName:[RWLOOK DEFAULT_BACKTEXTCOLOR]];
+	[helper setLabelFont:_lblBody localSizeName:[RWLOOK ADVENTWINDOW_TEXTSIZE] globalSizeName:[RWLOOK DEFAULT_TEXTSIZE] localStyleName:[RWLOOK ADVENTWINDOW_TEXTSTYLE] globalStyleName:[RWLOOK DEFAULT_TEXTSTYLE]];
+	[helper setLabelShadowColor:_lblBody localName:[RWLOOK ADVENTWINDOW_TEXTSHADOWCOLOR] globalName:[RWLOOK DEFAULT_BACKTEXTSHADOWCOLOR]];
+	[helper setLabelShadowOffset:_lblBody localName:[RWLOOK ADVENTWINDOW_TEXTSHADOWOFFSET] globalName:[RWLOOK DEFAULT_TEXTSHADOWOFFSET]];
 
-	[helper setButtonBackgroundImageOrColor:_btnBack localImageName:[RWLOOK ADVENTWINDOW_BACKBUTTONBACKGROUNDIMAGE] localColorName:[RWLOOK ADVENTWINDOW_BACKBUTTONBACKGROUNDCOLOR] globalColorName:[RWLOOK GLOBAL_ALTCOLOR] forState:UIControlStateNormal];
+	[helper setButtonBackgroundImageOrColor:_btnBack localImageName:[RWLOOK ADVENTWINDOW_BACKBUTTONBACKGROUNDIMAGE] localColorName:[RWLOOK ADVENTWINDOW_BACKBUTTONBACKGROUNDCOLOR] globalColorName:[RWLOOK DEFAULT_ALTCOLOR] forState:UIControlStateNormal];
 	[helper setButtonImageFromLocalSource:_btnBack localName:[RWLOOK ADVENTWINDOW_BACKBUTTONICON] forState:UIControlStateNormal];
-	[helper setButtonTitleColor:_btnBack forState:UIControlStateNormal localName:[RWLOOK ADVENTWINDOW_BACKBUTTONTEXTCOLOR] globalName:[RWLOOK GLOBAL_ALTTEXTCOLOR]];
-	[helper setButtonTitleFont:_btnBack forState:UIControlStateNormal localSizeName:[RWLOOK ADVENTWINDOW_BACKBUTTONTEXTSIZE] globalSizeName:[RWLOOK GLOBAL_ITEMTITLESIZE] localStyleName:[RWLOOK ADVENTWINDOW_BACKBUTTONTEXTSTYLE] globalStyleName:[RWLOOK GLOBAL_ITEMTITLESTYLE]];
-	[helper setButtonTitleShadowColor:_btnBack forState:UIControlStateNormal localName:[RWLOOK ADVENTWINDOW_BACKBUTTONTEXTSHADOWCOLOR] globalName:[RWLOOK GLOBAL_ALTTEXTSHADOWCOLOR]];
-	[helper setButtonTitleShadowOffset:_btnBack forState:UIControlStateNormal localName:[RWLOOK ADVENTWINDOW_BACKBUTTONTEXTSHADOWOFFSET] globalName:[RWLOOK GLOBAL_ITEMTITLESHADOWOFFSET]];
+	[helper setButtonTitleColor:_btnBack forState:UIControlStateNormal localName:[RWLOOK ADVENTWINDOW_BACKBUTTONTEXTCOLOR] globalName:[RWLOOK DEFAULT_ALTTEXTCOLOR]];
+	[helper setButtonTitleFont:_btnBack forState:UIControlStateNormal localSizeName:[RWLOOK ADVENTWINDOW_BACKBUTTONTEXTSIZE] globalSizeName:[RWLOOK DEFAULT_ITEMTITLESIZE] localStyleName:[RWLOOK ADVENTWINDOW_BACKBUTTONTEXTSTYLE] globalStyleName:[RWLOOK DEFAULT_ITEMTITLESTYLE]];
+	[helper setButtonTitleShadowColor:_btnBack forState:UIControlStateNormal localName:[RWLOOK ADVENTWINDOW_BACKBUTTONTEXTSHADOWCOLOR] globalName:[RWLOOK DEFAULT_ALTTEXTSHADOWCOLOR]];
+	[helper setButtonTitleShadowOffset:_btnBack forState:UIControlStateNormal localName:[RWLOOK ADVENTWINDOW_BACKBUTTONTEXTSHADOWOFFSET] globalName:[RWLOOK DEFAULT_ITEMTITLESHADOWOFFSET]];
 }
 
 -(void)setText{

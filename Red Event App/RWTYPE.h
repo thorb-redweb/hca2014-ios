@@ -37,6 +37,8 @@
 
 + (NSString *)SWIPEVIEW;
 
++ (NSString *)TABLENAVIGATOR;
+
 + (NSString *)UPCOMINGSESSIONS;
 
 + (NSString *)VENUEDETAIL;

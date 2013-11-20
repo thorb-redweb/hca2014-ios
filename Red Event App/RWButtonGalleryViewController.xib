@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="4510" systemVersion="12F37" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="4510" systemVersion="12F45" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
     </dependencies>
@@ -14,17 +14,16 @@
                 <outlet property="btn6" destination="TvQ-ZL-Lgs" id="m2Y-0h-wH7"/>
                 <outlet property="btn7" destination="K64-5X-hZg" id="UOW-UB-IMz"/>
                 <outlet property="btn8" destination="lul-AH-ACR" id="cti-9V-Xn8"/>
-                <outlet property="tabbar" destination="fQg-47-YFU" id="DeH-v3-SGT"/>
                 <outlet property="view" destination="1" id="3"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="1">
-            <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wl3-VI-hcX" userLabel="btn1">
-                    <rect key="frame" x="20" y="20" width="136" height="101"/>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1" verticalHuggingPriority="1" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wl3-VI-hcX" userLabel="btn1">
+                    <rect key="frame" x="20" y="20" width="136" height="126"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <state key="normal" title="Button">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -33,8 +32,8 @@
                         <action selector="btn1Pressed:" destination="-1" eventType="touchUpInside" id="D81-lO-BI8"/>
                     </connections>
                 </button>
-                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G44-kY-kqE" userLabel="btn2">
-                    <rect key="frame" x="164" y="20" width="136" height="102"/>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1" verticalHuggingPriority="1" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G44-kY-kqE" userLabel="btn2">
+                    <rect key="frame" x="164" y="20" width="136" height="126"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <state key="normal" title="Button">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -43,8 +42,8 @@
                         <action selector="btn2Pressed:" destination="-1" eventType="touchUpInside" id="1NA-JZ-HP7"/>
                     </connections>
                 </button>
-                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E8K-2f-oGf" userLabel="btn3">
-                    <rect key="frame" x="20" y="129" width="136" height="102"/>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1" verticalHuggingPriority="1" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E8K-2f-oGf" userLabel="btn3">
+                    <rect key="frame" x="20" y="154" width="136" height="126"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <state key="normal" title="Button">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -53,8 +52,8 @@
                         <action selector="btn3Pressed:" destination="-1" eventType="touchUpInside" id="XAf-aR-tEv"/>
                     </connections>
                 </button>
-                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9No-Tk-jkR" userLabel="btn4">
-                    <rect key="frame" x="164" y="130" width="136" height="102"/>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1" verticalHuggingPriority="1" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9No-Tk-jkR" userLabel="btn4">
+                    <rect key="frame" x="164" y="154" width="136" height="126"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <state key="normal" title="Button">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -63,8 +62,8 @@
                         <action selector="btn4Pressed:" destination="-1" eventType="touchUpInside" id="Byb-OR-ogB"/>
                     </connections>
                 </button>
-                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4HL-cV-Kda" userLabel="btn5">
-                    <rect key="frame" x="20" y="239" width="136" height="102"/>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1" verticalHuggingPriority="1" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4HL-cV-Kda" userLabel="btn5">
+                    <rect key="frame" x="20" y="288" width="136" height="126"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <state key="normal" title="Button">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -73,8 +72,8 @@
                         <action selector="btn5Pressed:" destination="-1" eventType="touchUpInside" id="pQm-jw-CHJ"/>
                     </connections>
                 </button>
-                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TvQ-ZL-Lgs" userLabel="btn6">
-                    <rect key="frame" x="164" y="240" width="136" height="102"/>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1" verticalHuggingPriority="1" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TvQ-ZL-Lgs" userLabel="btn6">
+                    <rect key="frame" x="164" y="288" width="136" height="126"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <state key="normal" title="Button">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -83,8 +82,8 @@
                         <action selector="btn6Pressed:" destination="-1" eventType="touchUpInside" id="o2I-Yp-EDF"/>
                     </connections>
                 </button>
-                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K64-5X-hZg" userLabel="btn7">
-                    <rect key="frame" x="20" y="349" width="136" height="102"/>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1" verticalHuggingPriority="1" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K64-5X-hZg" userLabel="btn7">
+                    <rect key="frame" x="20" y="422" width="136" height="126"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <state key="normal" title="Button">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -93,8 +92,8 @@
                         <action selector="btn7Pressed:" destination="-1" eventType="touchUpInside" id="dhH-yy-qzv"/>
                     </connections>
                 </button>
-                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lul-AH-ACR" userLabel="btn8">
-                    <rect key="frame" x="164" y="350" width="136" height="102"/>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1" verticalHuggingPriority="1" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lul-AH-ACR" userLabel="btn8">
+                    <rect key="frame" x="164" y="422" width="136" height="126"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <state key="normal" title="Button">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -103,18 +102,6 @@
                         <action selector="btn8Pressed:" destination="-1" eventType="touchUpInside" id="sE1-Vq-T2v"/>
                     </connections>
                 </button>
-                <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fQg-47-YFU" customClass="RWTabBar">
-                    <rect key="frame" x="0.0" y="451" width="320" height="49"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="49" id="2L1-ff-v41"/>
-                    </constraints>
-                    <items/>
-                    <connections>
-                        <outlet property="delegate" destination="-1" id="Gdj-BY-1j5"/>
-                    </connections>
-                </tabBar>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
@@ -122,16 +109,17 @@
                 <constraint firstAttribute="trailing" secondItem="TvQ-ZL-Lgs" secondAttribute="trailing" constant="20" symbolic="YES" id="10f-V2-p16"/>
                 <constraint firstItem="K64-5X-hZg" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="20" symbolic="YES" id="2ug-Eu-Vqp"/>
                 <constraint firstItem="E8K-2f-oGf" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="20" symbolic="YES" id="5bL-Pr-eoR"/>
-                <constraint firstItem="fQg-47-YFU" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="5nr-jA-MMD"/>
                 <constraint firstItem="TvQ-ZL-Lgs" firstAttribute="leading" secondItem="4HL-cV-Kda" secondAttribute="trailing" constant="8" symbolic="YES" id="7cW-MA-tMC"/>
                 <constraint firstItem="K64-5X-hZg" firstAttribute="width" secondItem="E8K-2f-oGf" secondAttribute="width" id="7vh-F8-aqA"/>
                 <constraint firstItem="wl3-VI-hcX" firstAttribute="top" secondItem="1" secondAttribute="top" constant="20" symbolic="YES" id="8R8-57-Rcc"/>
                 <constraint firstItem="G44-kY-kqE" firstAttribute="leading" secondItem="wl3-VI-hcX" secondAttribute="trailing" constant="8" symbolic="YES" id="Ayb-Tk-yNy"/>
                 <constraint firstItem="4HL-cV-Kda" firstAttribute="top" secondItem="E8K-2f-oGf" secondAttribute="bottom" constant="8" symbolic="YES" id="BOV-4v-gbO"/>
                 <constraint firstItem="4HL-cV-Kda" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="20" symbolic="YES" id="Bfn-QR-4Yq"/>
+                <constraint firstAttribute="bottom" secondItem="K64-5X-hZg" secondAttribute="bottom" constant="20" symbolic="YES" id="E9o-wT-ujP"/>
                 <constraint firstItem="G44-kY-kqE" firstAttribute="top" secondItem="1" secondAttribute="top" constant="20" symbolic="YES" id="Ejd-cW-V5y"/>
                 <constraint firstItem="K64-5X-hZg" firstAttribute="height" secondItem="9No-Tk-jkR" secondAttribute="height" id="Fu6-IX-l0b"/>
                 <constraint firstItem="wl3-VI-hcX" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="20" symbolic="YES" id="H5U-Ls-mZy"/>
+                <constraint firstAttribute="bottom" secondItem="lul-AH-ACR" secondAttribute="bottom" constant="20" symbolic="YES" id="L98-CI-5xW"/>
                 <constraint firstItem="TvQ-ZL-Lgs" firstAttribute="top" secondItem="9No-Tk-jkR" secondAttribute="bottom" constant="8" symbolic="YES" id="Mbj-Cb-JrG"/>
                 <constraint firstItem="K64-5X-hZg" firstAttribute="height" secondItem="lul-AH-ACR" secondAttribute="height" id="RRV-ck-1aj"/>
                 <constraint firstItem="K64-5X-hZg" firstAttribute="width" secondItem="lul-AH-ACR" secondAttribute="width" id="SYT-NB-dUH"/>
@@ -140,12 +128,10 @@
                 <constraint firstItem="9No-Tk-jkR" firstAttribute="top" secondItem="G44-kY-kqE" secondAttribute="bottom" constant="8" symbolic="YES" id="WIG-bL-x3j"/>
                 <constraint firstItem="K64-5X-hZg" firstAttribute="top" secondItem="4HL-cV-Kda" secondAttribute="bottom" constant="8" symbolic="YES" id="XGe-Xo-yHy"/>
                 <constraint firstItem="K64-5X-hZg" firstAttribute="width" secondItem="4HL-cV-Kda" secondAttribute="width" id="Z2q-JN-cA5"/>
-                <constraint firstItem="fQg-47-YFU" firstAttribute="top" secondItem="K64-5X-hZg" secondAttribute="bottom" constant="8" symbolic="YES" id="ZmL-ez-rFg"/>
                 <constraint firstItem="lul-AH-ACR" firstAttribute="leading" secondItem="K64-5X-hZg" secondAttribute="trailing" constant="8" symbolic="YES" id="aUf-qH-rE9"/>
                 <constraint firstItem="lul-AH-ACR" firstAttribute="top" secondItem="TvQ-ZL-Lgs" secondAttribute="bottom" constant="8" symbolic="YES" id="c8u-Ma-dBN"/>
                 <constraint firstItem="K64-5X-hZg" firstAttribute="width" secondItem="wl3-VI-hcX" secondAttribute="width" id="ddp-Es-x9x"/>
                 <constraint firstAttribute="trailing" secondItem="lul-AH-ACR" secondAttribute="trailing" constant="20" symbolic="YES" id="exG-Pf-6du"/>
-                <constraint firstAttribute="trailing" secondItem="fQg-47-YFU" secondAttribute="trailing" id="fdu-0W-5ja"/>
                 <constraint firstItem="K64-5X-hZg" firstAttribute="width" secondItem="9No-Tk-jkR" secondAttribute="width" id="gHL-dB-X5Y"/>
                 <constraint firstItem="K64-5X-hZg" firstAttribute="width" secondItem="G44-kY-kqE" secondAttribute="width" id="l3D-NP-SM9"/>
                 <constraint firstItem="K64-5X-hZg" firstAttribute="height" secondItem="E8K-2f-oGf" secondAttribute="height" id="lfq-5G-WgZ"/>
@@ -153,13 +139,10 @@
                 <constraint firstItem="9No-Tk-jkR" firstAttribute="leading" secondItem="E8K-2f-oGf" secondAttribute="trailing" constant="8" symbolic="YES" id="sVl-Np-ajd"/>
                 <constraint firstItem="K64-5X-hZg" firstAttribute="height" secondItem="TvQ-ZL-Lgs" secondAttribute="height" id="tPx-bu-0v7"/>
                 <constraint firstAttribute="trailing" secondItem="9No-Tk-jkR" secondAttribute="trailing" constant="20" symbolic="YES" id="uSk-Ro-zen"/>
-                <constraint firstAttribute="bottom" secondItem="fQg-47-YFU" secondAttribute="bottom" id="voo-AI-M6a"/>
                 <constraint firstItem="K64-5X-hZg" firstAttribute="height" secondItem="G44-kY-kqE" secondAttribute="height" id="woQ-Jv-agX"/>
-                <constraint firstItem="fQg-47-YFU" firstAttribute="top" secondItem="lul-AH-ACR" secondAttribute="bottom" constant="8" symbolic="YES" id="y6J-SH-K3R"/>
                 <constraint firstAttribute="trailing" secondItem="G44-kY-kqE" secondAttribute="trailing" constant="20" symbolic="YES" id="yIv-JM-qcz"/>
             </constraints>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
-            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" translucent="NO" prompted="NO"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
         </view>
     </objects>

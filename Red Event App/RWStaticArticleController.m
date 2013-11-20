@@ -30,7 +30,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    [self.view setTranslatesAutoresizingMaskIntoConstraints:NO];
 
     _model = [_db.Articles getVMFromId:_contid];
 
@@ -40,7 +40,7 @@
 - (void)setAppearance{
     RWAppearanceHelper *helper = [[RWAppearanceHelper alloc] initWithLocalLook:_localLook globalLook:_globalLook];
 
-    [helper setBackgroundColor:self.view localName:[RWLOOK STATICARTICLE_BACKGROUNDCOLOR] globalName:[RWLOOK GLOBAL_BACKCOLOR]];
+    [helper setBackgroundColor:self.view localName:[RWLOOK STATICARTICLE_BACKGROUNDCOLOR] globalName:[RWLOOK DEFAULT_BACKCOLOR]];
 }
 
 - (void)didReceiveMemoryWarning {

@@ -10,4 +10,16 @@
 @implementation RWJSONArticle {
 
 }
+
+-(NSString *)ARTICLE_ID{return @"articleid";}
+-(NSString *)CATID{return @"catid";}
+-(NSString *)TITLE{return @"title";}
+-(NSString *)ALIAS{return @"alias";}
+-(NSString *)INTROTEXT{return @"introtext";}
+-(NSString *)FULLTEXT{return @"fulltext";}
+-(NSString *)INTROIMAGEPATH{return @"introimagepath";}
+-(NSString *)MAINIMAGEPATH{return @"mainimagepath";}
+-(NSString *)PUBLISHDATE{return @"publishdate";}
+-(NSString *)ITEMTYPE{return @"itemtype";}
+-(NSString *)ACTIONTYPE{return @"actiontype";}
 @end

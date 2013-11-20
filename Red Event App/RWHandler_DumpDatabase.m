@@ -12,9 +12,16 @@
 #import "Session.h"
 #import "Venue.h"
 #import "RWDbSchemas.h"
+#import "RWJSONSchemas.h"
+#import "RWJSONArticle.h"
+#import "RWJSONEvent.h"
+#import "RWJSONSession.h"
+#import "RWJSONVenue.h"
 
 @implementation RWHandler_DumpDatabase {
     NSManagedObjectContext *_managedObjectContext;
+
+    RWJSONSchemas *_json;
 
     NSMutableArray *_events;
     NSMutableArray *_sessions;
@@ -25,6 +32,7 @@
     if (self = [super init]) {
         _managedObjectContext = managedObjectContext;
         _delegate = delegate;
+        _json = [[RWJSONSchemas alloc] init];
     }
     return self;
 }
@@ -81,35 +89,35 @@
 
 - (void)dumpContent:(NSDictionary *)entry {
     Article *content = (Article *) [NSEntityDescription insertNewObjectForEntityForName:[RWDbSchemas ART_TABLENAME] inManagedObjectContext:_managedObjectContext];
-    [content setArticleid:[NSDecimalNumber decimalNumberWithString:[entry objectForKey:@"articleid"]]];
-    [content setCatid:[NSDecimalNumber decimalNumberWithString:[entry objectForKey:@"catid"]]];
-    [content setTitle:[self removeBackSlashes:[entry objectForKey:@"title"]]];
-	[content setAlias:[self removeBackSlashes:[entry objectForKey:@"alias"]]];
-    [content setIntrotext:[self removeBackSlashes:[entry objectForKey:@"introtext"]]];
-    [content setFulltext:[self removeBackSlashes:[entry objectForKey:@"fulltext"]]];
-    if (!([[entry objectForKey:@"introimagepath"] isKindOfClass:[NSNull class]])) {
-        [content setIntroimagepath:[self removeBackSlashes:[entry objectForKey:@"introimagepath"]]];
+    [content setArticleid:[NSDecimalNumber decimalNumberWithString:[entry objectForKey:_json.Art.ARTICLE_ID]]];
+    [content setCatid:[NSDecimalNumber decimalNumberWithString:[entry objectForKey:_json.Art.CATID]]];
+    [content setTitle:[self removeBackSlashes:[entry objectForKey:_json.Art.TITLE]]];
+	[content setAlias:[self removeBackSlashes:[entry objectForKey:_json.Art.ALIAS]]];
+    [content setIntrotext:[self removeBackSlashes:[entry objectForKey:_json.Art.INTROTEXT]]];
+    [content setFulltext:[self removeBackSlashes:[entry objectForKey:_json.Art.FULLTEXT]]];
+    if (!([[entry objectForKey:_json.Art.INTROIMAGEPATH] isKindOfClass:[NSNull class]])) {
+        [content setIntroimagepath:[self removeBackSlashes:[entry objectForKey:_json.Art.INTROIMAGEPATH]]];
     }
     else {
         [content setIntroimagepath:@""];
     }
-    if (!([[entry objectForKey:@"mainimagepath"] isKindOfClass:[NSNull class]])) {
-        [content setMainimagepath:[self removeBackSlashes:[entry objectForKey:@"mainimagepath"]]];
+    if (!([[entry objectForKey:_json.Art.MAINIMAGEPATH] isKindOfClass:[NSNull class]])) {
+        [content setMainimagepath:[self removeBackSlashes:[entry objectForKey:_json.Art.MAINIMAGEPATH]]];
     }
     else {
         [content setMainimagepath:@""];
     }
-    [content setPublishdate:[self convertStringToDate:[entry objectForKey:@"publishdate"]]];
+    [content setPublishdate:[self convertStringToDate:[entry objectForKey:_json.Art.PUBLISHDATE]]];
 }
 
 - (void)dumpEvent:(NSDictionary *)entry {
     Event *event = (Event *) [NSEntityDescription insertNewObjectForEntityForName:[RWDbSchemas EVENT_TABLENAME] inManagedObjectContext:_managedObjectContext];
-    [event setEventid:[NSDecimalNumber decimalNumberWithString:[entry objectForKey:@"eventid"]]];
-    [event setTitle:[self removeBackSlashes:[entry objectForKey:@"title"]]];
-    [event setSummary:[self removeBackSlashes:[entry objectForKey:@"summary"]]];
-    [event setDetails:[self removeBackSlashes:[entry objectForKey:@"details"]]];
-    [event setImagepath:[self removeBackSlashes:[entry objectForKey:@"image"]]];
-    [event setSubmission:[self removeBackSlashes:[entry objectForKey:@"submission"]]];
+    [event setEventid:[NSDecimalNumber decimalNumberWithString:[entry objectForKey:_json.Event.EVENT_ID]]];
+    [event setTitle:[self removeBackSlashes:[entry objectForKey:_json.Event.TITLE]]];
+    [event setSummary:[self removeBackSlashes:[entry objectForKey:_json.Event.SUMMARY]]];
+    [event setDetails:[self removeBackSlashes:[entry objectForKey:_json.Event.DETAILS]]];
+    [event setImagepath:[self removeBackSlashes:[entry objectForKey:_json.Event.IMAGEPATH]]];
+    [event setSubmission:[self removeBackSlashes:[entry objectForKey:_json.Event.SUBMISSION]]];
 
     [_events addObject:event];
     for (Session *session in _sessions) {
@@ -121,20 +129,20 @@
 
 - (void)dumpSession:(NSDictionary *)entry {
     Session *session = (Session *) [NSEntityDescription insertNewObjectForEntityForName:[RWDbSchemas SES_TABLENAME] inManagedObjectContext:_managedObjectContext];
-    [session setSessionid:[NSDecimalNumber decimalNumberWithString:[entry objectForKey:@"sessionid"]]];
-    [session setEventid:[NSDecimalNumber decimalNumberWithString:[entry objectForKey:@"eventid"]]];
-    [session setVenueid:[NSDecimalNumber decimalNumberWithString:[entry objectForKey:@"venueid"]]];
-    [session setTitle:[self removeBackSlashes:[entry objectForKey:@"title"]]];
-    [session setDetails:[self removeBackSlashes:[entry objectForKey:@"details"]]];
+    [session setSessionid:[NSDecimalNumber decimalNumberWithString:[entry objectForKey:_json.Ses.SESSION_ID]]];
+    [session setEventid:[NSDecimalNumber decimalNumberWithString:[entry objectForKey:_json.Ses.EVENT_ID]]];
+    [session setVenueid:[NSDecimalNumber decimalNumberWithString:[entry objectForKey:_json.Ses.VENUE_ID]]];
+    [session setTitle:[self removeBackSlashes:[entry objectForKey:_json.Ses.TITLE]]];
+    [session setDetails:[self removeBackSlashes:[entry objectForKey:_json.Ses.DETAILS]]];
 
-    NSString *startDateString = [entry objectForKey:@"startdate"];
-    NSString *startTimeString = [entry objectForKey:@"starttime"];
+    NSString *startDateString = [entry objectForKey:_json.Ses.STARTDATE];
+    NSString *startTimeString = [entry objectForKey:_json.Ses.STARTTIME];
     NSString *startDateTimeString = [NSString stringWithFormat:@"%@ %@", startDateString, startTimeString];
     NSDate *startDateTime = [self convertStringToDate:startDateTimeString];
     [session setStartdatetime:startDateTime];
 
-    NSString *endDateString = [entry objectForKey:@"enddate"];
-    NSString *endTimeString = [entry objectForKey:@"endtime"];
+    NSString *endDateString = [entry objectForKey:_json.Ses.ENDDATE];
+    NSString *endTimeString = [entry objectForKey:_json.Ses.ENDTIME];
     NSString *endDateTimeString = [NSString stringWithFormat:@"%@ %@", endDateString, endTimeString];
     NSDate *endDateTime = [self convertStringToDate:endDateTimeString];
     [session setEnddatetime:endDateTime];
@@ -154,14 +162,14 @@
 
 - (void)dumpVenue:(NSDictionary *)entry {
     Venue *venue = (Venue *) [NSEntityDescription insertNewObjectForEntityForName:[RWDbSchemas VENUE_TABLENAME] inManagedObjectContext:_managedObjectContext];
-    [venue setVenueid:[NSDecimalNumber decimalNumberWithString:[entry objectForKey:@"venueid"]]];
-    [venue setTitle:[self removeBackSlashes:[entry objectForKey:@"title"]]];
-    [venue setDescript:[self removeBackSlashes:[entry objectForKey:@"description"]]];
-    [venue setStreet:[self removeBackSlashes:[entry objectForKey:@"street"]]];
-    [venue setCity:[self removeBackSlashes:[entry objectForKey:@"city"]]];
-    [venue setLatitude:[NSDecimalNumber decimalNumberWithString:[entry objectForKey:@"latitude"]]];
-    [venue setLongitude:[NSDecimalNumber decimalNumberWithString:[entry objectForKey:@"longitude"]]];
-    [venue setImagepath:[self removeBackSlashes:[entry objectForKey:@"imagepath"]]];
+    [venue setVenueid:[NSDecimalNumber decimalNumberWithString:[entry objectForKey:_json.Venue.VENUE_ID]]];
+    [venue setTitle:[self removeBackSlashes:[entry objectForKey:_json.Venue.TITLE]]];
+    [venue setDescript:[self removeBackSlashes:[entry objectForKey:_json.Venue.DESCRIPTION]]];
+    [venue setStreet:[self removeBackSlashes:[entry objectForKey:_json.Venue.STREET]]];
+    [venue setCity:[self removeBackSlashes:[entry objectForKey:_json.Venue.CITY]]];
+    [venue setLatitude:[NSDecimalNumber decimalNumberWithString:[entry objectForKey:_json.Venue.LATITUDE]]];
+    [venue setLongitude:[NSDecimalNumber decimalNumberWithString:[entry objectForKey:_json.Venue.LONGITUDE]]];
+    [venue setImagepath:[self removeBackSlashes:[entry objectForKey:_json.Venue.IMAGEPATH]]];
 
     [_venues addObject:venue];
     for (Session *session in _sessions) {

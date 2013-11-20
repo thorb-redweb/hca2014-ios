@@ -10,7 +10,9 @@
 #import <GoogleMaps/GoogleMaps.h>
 #import "RWBaseViewController.h"
 
-@interface RWBaseMapViewController : RWBaseViewController
+#import "RWInfoWindow.h"
+
+@interface RWBaseMapViewController : RWBaseViewController <GMSMapViewDelegate>
 
 @property(weak, nonatomic) IBOutlet UIView *mainView;
 @property(weak, nonatomic) IBOutlet GMSMapView *mapView;

@@ -20,7 +20,7 @@
 @implementation RWNewstickerView {
     RWAppDelegate *_app;
     RWXMLStore *_xml;
-    RWNode *_page;
+    RWXmlNode *_page;
 
     NSArray *datasource;
     NSMutableArray *itemViewControllers;
@@ -30,7 +30,7 @@
     NSTimer *_leafingTimer;
 }
 
-- (id)initWithFrame:(CGRect)frame subviewElement:(RWNode *)page {
+- (id)initWithFrame:(CGRect)frame subviewElement:(RWXmlNode *)page {
     self = [super initWithFrame:frame];
     if (self) {
         itemViewControllers = [[NSMutableArray alloc] init];

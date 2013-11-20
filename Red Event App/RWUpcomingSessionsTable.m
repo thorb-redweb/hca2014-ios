@@ -12,7 +12,7 @@
     RWUpcomingSessionsDelegate *delegate;
 }
 
-- (id)initWithFrame:(CGRect)frame subviewElement:(RWNode *)page {
+- (id)initWithFrame:(CGRect)frame subviewElement:(RWXmlNode *)page {
     self = [super initWithFrame:frame style:UITableViewStylePlain];
     if (self) {
         // Initialization code

@@ -10,7 +10,7 @@
 
 #import "RWArticleVM.h"
 
-@class RWNode;
+@class RWXmlNode;
 
 @interface RWNewstickerItem : UIViewController
 
@@ -25,6 +25,6 @@
 
 @property(nonatomic) int leafNumber;
 
-- (id)initWithModel:(RWArticleVM *)model page:(RWNode *)page;
+- (id)initWithModel:(RWArticleVM *)model page:(RWXmlNode *)page;
 
 @end

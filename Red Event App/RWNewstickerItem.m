@@ -21,10 +21,10 @@
 	RWAppDelegate *_app;
     RWXMLStore *_xml;
 
-    RWNode *_page;
+    RWXmlNode *_page;
 }
 
-- (id)initWithModel:(RWArticleVM *)model page:(RWNode *)page{
+- (id)initWithModel:(RWArticleVM *)model page:(RWXmlNode *)page{
     if ([self initWithNibName:@"RWNewstickerItem" bundle:nil]) {
         [self.view setTranslatesAutoresizingMaskIntoConstraints:NO];
         _model = model;
@@ -102,25 +102,25 @@
 
 - (void)setAppearance {
 
-    RWNode *globalLook = [_xml.appearance getChildFromNode:[RWLOOK GLOBAL]];
-    RWNode *localLook = [_xml.appearance getChildFromNode:[_page getStringFromNode:[RWPAGE NAME]]];
+    RWXmlNode *globalLook = [_xml.appearance getChildFromNode:[RWLOOK DEFAULT]];
+    RWXmlNode *localLook = [_xml.appearance getChildFromNode:[_page getStringFromNode:[RWPAGE NAME]]];
 
     RWAppearanceHelper *helper = [[RWAppearanceHelper alloc] initWithLocalLook:localLook globalLook:globalLook];
 
-    [helper setBackgroundColor:self.view localName:[RWLOOK NEWSTICKER_BACKGROUNDCOLOR] globalName:[RWLOOK GLOBAL_BACKCOLOR]];
-    [helper setBackgroundColor:_vwContentFrame localName:[RWLOOK NEWSTICKER_BACKGROUNDCOLOR] globalName:[RWLOOK GLOBAL_BACKCOLOR]];
+    [helper setBackgroundColor:self.view localName:[RWLOOK NEWSTICKER_BACKGROUNDCOLOR] globalName:[RWLOOK DEFAULT_BACKCOLOR]];
+    [helper setBackgroundColor:_vwContentFrame localName:[RWLOOK NEWSTICKER_BACKGROUNDCOLOR] globalName:[RWLOOK DEFAULT_BACKCOLOR]];
 	
-    [helper setLabelColor:_lblTitle localName:[RWLOOK NEWSTICKER_ITEMTITLECOLOR] globalName:[RWLOOK GLOBAL_BACKTEXTCOLOR]];
-    [helper setLabelFont:_lblTitle localSizeName:[RWLOOK NEWSTICKER_ITEMTITLESIZE] globalSizeName:[RWLOOK GLOBAL_ITEMTITLESIZE]
-								   localStyleName:[RWLOOK NEWSTICKER_ITEMTITLESTYLE] globalStyleName:[RWLOOK GLOBAL_ITEMTITLESTYLE]];
-    [helper setLabelShadowColor:_lblTitle localName:[RWLOOK NEWSTICKER_ITEMTITLESHADOWCOLOR] globalName:[RWLOOK GLOBAL_BACKTEXTSHADOWCOLOR]];
-    [helper setLabelShadowOffset:_lblTitle localName:[RWLOOK NEWSTICKER_ITEMTITLESHADOWOFFSET] globalName:[RWLOOK GLOBAL_ITEMTITLESHADOWOFFSET]];
+    [helper setLabelColor:_lblTitle localName:[RWLOOK NEWSTICKER_ITEMTITLECOLOR] globalName:[RWLOOK DEFAULT_BACKTEXTCOLOR]];
+    [helper setLabelFont:_lblTitle localSizeName:[RWLOOK NEWSTICKER_ITEMTITLESIZE] globalSizeName:[RWLOOK DEFAULT_ITEMTITLESIZE]
+								   localStyleName:[RWLOOK NEWSTICKER_ITEMTITLESTYLE] globalStyleName:[RWLOOK DEFAULT_ITEMTITLESTYLE]];
+    [helper setLabelShadowColor:_lblTitle localName:[RWLOOK NEWSTICKER_ITEMTITLESHADOWCOLOR] globalName:[RWLOOK DEFAULT_BACKTEXTSHADOWCOLOR]];
+    [helper setLabelShadowOffset:_lblTitle localName:[RWLOOK NEWSTICKER_ITEMTITLESHADOWOFFSET] globalName:[RWLOOK DEFAULT_ITEMTITLESHADOWOFFSET]];
 	
-    [helper setLabelColor:_lblBody localName:[RWLOOK NEWSTICKER_TEXTCOLOR] globalName:[RWLOOK GLOBAL_BACKTEXTCOLOR]];
-    [helper setLabelFont:_lblBody localSizeName:[RWLOOK NEWSTICKER_TEXTSIZE] globalSizeName:[RWLOOK GLOBAL_TEXTSIZE]
-		  localStyleName:[RWLOOK NEWSTICKER_TEXTSTYLE] globalStyleName:[RWLOOK GLOBAL_TEXTSTYLE]];
-    [helper setLabelShadowColor:_lblBody localName:[RWLOOK NEWSTICKER_TEXTSHADOWCOLOR] globalName:[RWLOOK GLOBAL_BACKTEXTSHADOWCOLOR]];
-    [helper setLabelShadowOffset:_lblBody localName:[RWLOOK NEWSTICKER_TEXTSHADOWOFFSET] globalName:[RWLOOK GLOBAL_TEXTSHADOWOFFSET]];
+    [helper setLabelColor:_lblBody localName:[RWLOOK NEWSTICKER_TEXTCOLOR] globalName:[RWLOOK DEFAULT_BACKTEXTCOLOR]];
+    [helper setLabelFont:_lblBody localSizeName:[RWLOOK NEWSTICKER_TEXTSIZE] globalSizeName:[RWLOOK DEFAULT_TEXTSIZE]
+		  localStyleName:[RWLOOK NEWSTICKER_TEXTSTYLE] globalStyleName:[RWLOOK DEFAULT_TEXTSTYLE]];
+    [helper setLabelShadowColor:_lblBody localName:[RWLOOK NEWSTICKER_TEXTSHADOWCOLOR] globalName:[RWLOOK DEFAULT_BACKTEXTSHADOWCOLOR]];
+    [helper setLabelShadowOffset:_lblBody localName:[RWLOOK NEWSTICKER_TEXTSHADOWOFFSET] globalName:[RWLOOK DEFAULT_TEXTSHADOWOFFSET]];
 }
 
 - (void)getReturnImage:(UIImage *)image {

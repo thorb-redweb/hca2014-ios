@@ -47,6 +47,7 @@
     for (RWVenueVM *venue in venueList) {
         GMSMarker *venueMarker = [[GMSMarker alloc] init];
         venueMarker.position = CLLocationCoordinate2DMake(venue.latitude, venue.longitude);
+		venueMarker.infoWindowAnchor = CGPointMake(0.44f, 0.45f);
         venueMarker.title = venue.title;
         venueMarker.snippet = @"Next event at 5:00";
         venueMarker.map = (GMSMapView *) super.mapView;

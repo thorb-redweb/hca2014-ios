@@ -66,7 +66,7 @@
 - (void)setAppearance{
 	RWAppearanceHelper *helper = [[RWAppearanceHelper alloc] initWithLocalLook:_localLook globalLook:_globalLook];
 	
-	[helper setBackgroundTileImageOrColor:self.view localImageName:[RWLOOK ADVENTCAL_BACKGROUNDIMAGE] localColorName:[RWLOOK ADVENTCAL_BACKGROUNDCOLOR] globalName:[RWLOOK GLOBAL_BACKCOLOR]];
+	[helper setBackgroundTileImageOrColor:self.view localImageName:[RWLOOK ADVENTCAL_BACKGROUNDIMAGE] localColorName:[RWLOOK ADVENTCAL_BACKGROUNDCOLOR] globalName:[RWLOOK DEFAULT_BACKCOLOR]];
 }
 
 - (IBAction)openWindow:(id)sender{
@@ -80,7 +80,7 @@
 	NSDate *today = [[NSDate alloc] init];
 	
 	if ([openDate compare: today] == NSOrderedAscending) {
-		RWNode *childPage = [_xml getPage:_childname];
+		RWXmlNode *childPage = [_xml getPage:_childname];
         NSMutableDictionary *childDictionary = [[NSMutableDictionary alloc] initWithDictionary:[childPage getDictionaryFromNode]];
 		[childDictionary setObject:chosenArticle.articleid forKey:[RWPAGE ARTICLEID]];
 		[_app.navController pushViewWithParameters:childDictionary];

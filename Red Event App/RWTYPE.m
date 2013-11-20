@@ -23,6 +23,7 @@
 + (NSString *)SPLITVIEW {return @"SplitView";}
 + (NSString *)STATICARTICLE {return @"StaticArticle";}
 + (NSString *)SWIPEVIEW {return @"SwipeView";}
++ (NSString *)TABLENAVIGATOR {return @"TableNavigator";}
 + (NSString *)UPCOMINGSESSIONS {return @"UpcomingSessions";}
 + (NSString *)VENUEDETAIL {return @"VenueDetail";}
 + (NSString *)VENUEMAP {return @"VenueMap";}

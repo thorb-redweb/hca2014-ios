@@ -47,6 +47,11 @@
 + (NSString *)BUTTON7CHILD {return @"button7child";}
 + (NSString *)BUTTON8CHILD {return @"button8child";}
 
+//TableNavigator Specific
++ (NSString *)ENTRY {return @"entry";}
++ (NSString *)FRONTICON {return @"fronticon";}
++ (NSString *)BACKICON {return @"backicon";}
+
 //Map Activity Specific
 + (NSString *)LATITUDE {return @"latitude";}
 + (NSString *)LONGITUDE {return @"longitude";}
