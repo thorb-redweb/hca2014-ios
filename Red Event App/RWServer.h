@@ -25,4 +25,5 @@
 
 //- (void)getImage:(NSObject *)delegate imageLink:(NSString *)imagePath wantedSize:(CGSize)wantedSize;
 
+- (void)sendProviderDeviceToken:(void const *)devTokenBytes;
 @end

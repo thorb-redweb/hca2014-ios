@@ -13,6 +13,7 @@
 #import "RWXMLStore.h"
 
 #import "RWTabBar.h"
+#import "RWHandler_UpdateDatabase.h"
 
 @interface RWAppDelegate : UIResponder <UIApplicationDelegate>
 

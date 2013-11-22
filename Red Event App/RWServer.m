@@ -37,7 +37,7 @@
 
     RWHandler_DumpServer *handler = [[RWHandler_DumpServer alloc] init];
     handler.delegate = self;
-    NSString *dumpFileString = [NSString stringWithFormat:@"%@%@", _dataFilesFolderPath, @"coreData.txt"];
+    NSString *dumpFileString = [NSString stringWithFormat:@"%@%@", _dataFilesFolderPath, @"getDump.php"];
     NSURL *dumpFileUrl = [NSURL URLWithString:dumpFileString];
     [handler startDownloadWithFromUrl:dumpFileUrl];
 
@@ -83,6 +83,10 @@
     [handler startDownload:url wantedSize:wantedSize];
 }
 
+- (void)sendProviderDeviceToken:(void const *)devTokenBytes {
+
+}
+
 - (void)errorOccured:(NSString *)errorMessage{
 	if (dumpServerDelegate != nil) {
 		[dumpServerDelegate errorOccured:errorMessage];
@@ -91,5 +95,4 @@
 		[updateDatabaseDelegate errorOccured:errorMessage];
 	}	
 }
-
 @end

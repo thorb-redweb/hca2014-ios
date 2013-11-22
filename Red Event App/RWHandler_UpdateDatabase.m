@@ -22,6 +22,10 @@
 #import "RWJSONEvent.h"
 #import "RWJSONSession.h"
 #import "RWJSONVenue.h"
+#import "RWJSONPushMessage.h"
+#import "RWJSONPushMessageGroup.h"
+#import "PushMessage.h"
+#import "RWDbPushMessages.h"
 
 @implementation RWHandler_UpdateDatabase {
     NSManagedObjectContext *_managedObjectContext;
@@ -89,7 +93,13 @@
 	} else if([itemtype isEqual:@"e"]){
 		NSLog(@"c %@: %@",itemtype,[entry objectForKey:_json.Event.EVENT_ID]);
 		[self updateEvent:entry];
-	} else if([itemtype isEqual:@"s"]){
+    } else if([itemtype isEqual:@"pm"]){
+        NSLog(@"c %@: %@",itemtype,[entry objectForKey:_json.Push.PUSHMESSAGE_ID]);
+        [self updatePushMessage:entry];
+    } else if([itemtype isEqual:@"pmg"]){
+        NSLog(@"c %@: %@",itemtype,[entry objectForKey:_json.PushGroup.GROUP_ID]);
+        [self updatePushMessageGroup:entry];
+    } else if([itemtype isEqual:@"s"]){
 		NSLog(@"c %@: %@",itemtype,[entry objectForKey:_json.Ses.SESSION_ID]);
 		[self updateSession:entry];
 	} else if([itemtype isEqual:@"v"]){
@@ -106,6 +116,10 @@
 		[self deleteArticle:entry];
 	} else if([itemtype isEqual:@"e"]){
 		[self deleteEvent:entry];
+    } else if([itemtype isEqual:@"pm"]){
+        [self deletePushMessage:entry];
+    } else if([itemtype isEqual:@"pmg"]){
+        [self deletePushMessageGroup:entry];
 	} else if([itemtype isEqual:@"s"]){
 		[self deleteSession:entry];
 	} else if([itemtype isEqual:@"v"]){
@@ -147,6 +161,61 @@
     if (![_managedObjectContext save:&cxtError]) {
         NSLog(@"did fail with error");
         NSLog(@"Context save failed in RWHandler_UpdateDatabase:updateArticle: %@", cxtError.description);
+    }
+}
+
+- (void)updateEvent:(NSDictionary *)entry {
+    int eventid = [[entry objectForKey:_json.Event.EVENT_ID] intValue];
+    Event *event = [_db.Events getFromId:eventid];
+    if (!event) {
+        event = (Event *) [NSEntityDescription insertNewObjectForEntityForName:[RWDbSchemas EVENT_TABLENAME] inManagedObjectContext:_managedObjectContext];
+    }
+
+    [event setEventid:[NSDecimalNumber decimalNumberWithString:[entry objectForKey:_json.Event.EVENT_ID]]];
+    [event setTitle:[self removeBackSlashes:[entry objectForKey:_json.Event.TITLE]]];
+    [event setSummary:[self removeBackSlashes:[entry objectForKey:_json.Event.SUMMARY]]];
+    [event setDetails:[self removeBackSlashes:[entry objectForKey:_json.Event.DETAILS]]];
+    [event setImagepath:[self removeBackSlashes:[entry objectForKey:_json.Event.IMAGEPATH]]];
+    [event setSubmission:[self removeBackSlashes:[entry objectForKey:_json.Event.SUBMISSION]]];
+
+    Session *session = [_db.Sessions getFromEventId:[[entry objectForKey:_json.Event.EVENT_ID] intValue]];
+    if (session) {
+        session.event = event;
+    }
+    NSError *cxtError = nil;
+    if (![_managedObjectContext save:&cxtError]) {
+        NSLog(@"did fail with error");
+        NSLog(@"Context save failed in RWHandler_UpdateDatabase:updateEvent: %@", cxtError.description);
+    }
+}
+
+- (void)updatePushMessage:(NSDictionary *)entry {
+    int messageid = [[entry objectForKey:_json.Push.PUSHMESSAGE_ID] intValue];
+    PushMessage *pushMessage = [_db.PushMessages getFromId:messageid];
+    if (!pushMessage) {
+        pushMessage = (PushMessage *) [NSEntityDescription insertNewObjectForEntityForName:[RWDbSchemas PUSH_TABLENAME] inManagedObjectContext:_managedObjectContext];
+    }
+
+    [pushMessage setPushmessageid:[NSDecimalNumber decimalNumberWithString:[entry objectForKey:_json.Push.PUSHMESSAGE_ID]]];
+    [pushMessage setGroupid:[NSDecimalNumber decimalNumberWithString:[entry objectForKey:_json.Push.GROUP_ID]]];
+    [pushMessage setIntro:[self removeBackSlashes:[entry objectForKey:_json.Push.INTRO]]];
+    [pushMessage setMessage:[self removeBackSlashes:[entry objectForKey:_json.Push.MESSAGE]]];
+
+    [event setEventid:[NSDecimalNumber decimalNumberWithString:[entry objectForKey:_json.Event.EVENT_ID]]];
+    [event setTitle:[self removeBackSlashes:[entry objectForKey:_json.Event.TITLE]]];
+    [event setSummary:[self removeBackSlashes:[entry objectForKey:_json.Event.SUMMARY]]];
+    [event setDetails:[self removeBackSlashes:[entry objectForKey:_json.Event.DETAILS]]];
+    [event setImagepath:[self removeBackSlashes:[entry objectForKey:_json.Event.IMAGEPATH]]];
+    [event setSubmission:[self removeBackSlashes:[entry objectForKey:_json.Event.SUBMISSION]]];
+
+    Session *session = [_db.Sessions getFromEventId:[[entry objectForKey:_json.Event.EVENT_ID] intValue]];
+    if (session) {
+        session.event = event;
+    }
+    NSError *cxtError = nil;
+    if (![_managedObjectContext save:&cxtError]) {
+        NSLog(@"did fail with error");
+        NSLog(@"Context save failed in RWHandler_UpdateDatabase:updateEvent: %@", cxtError.description);
     }
 }
 

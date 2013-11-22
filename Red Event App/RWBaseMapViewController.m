@@ -37,14 +37,19 @@
 	[self setAppearance];
 	[self setText];
 	
-    [_mapView addObserver:self forKeyPath:@"myLocation" options:NSKeyValueObservingOptionNew context:nil];
-	_mapView.delegate = self;
+    _mapView.delegate = self;
 	
 	
 	if(![_page hasChild:[RWPAGE RETURNBUTTON]] ||
 	   ([_page hasChild:[RWPAGE RETURNBUTTON]] && ![_page getBoolFromNode:[RWPAGE RETURNBUTTON]])){
 		[_btnBack RWsetHeightAsConstraint:0.0];
 	}	
+}
+
+-(void)viewDidAppear:(BOOL)animated{
+	[super viewDidAppear:animated];
+	
+	[_mapView addObserver:self forKeyPath:@"myLocation" options:NSKeyValueObservingOptionNew context:nil];
 }
 
 - (void)setAppearance{

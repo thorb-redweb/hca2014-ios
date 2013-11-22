@@ -70,6 +70,7 @@
         <parent>Begivenhed</parent>
         <child>Begivenhed</child>
         <returnbutton>YES</returnbutton>
+		<zoom>10</zoom>
     </page>
     <page>
         <name>OverviewMap</name>
@@ -90,5 +91,8 @@
         <name>VenueMap</name>
         <type>VenueMap</type>
         <parent>RedWeb</parent>
+		<longitude>10</longitude>
+		<latitude>10</latitude>
+		<zoom>10</zoom>
     </page>
 </pages>

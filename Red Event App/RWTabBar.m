@@ -15,7 +15,7 @@
     RWXMLStore *_xml;
 }
 - (void)baseInit {
-    RWAppDelegate *app = [[UIApplication sharedApplication] delegate];
+    RWAppDelegate *app = (RWAppDelegate *)[[UIApplication sharedApplication] delegate];
 
     _xml = app.xml;
     RWXmlNode *pages = _xml.pages;

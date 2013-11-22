@@ -55,7 +55,7 @@
 }
 
 - (void)pushViewWithParameters:(NSDictionary *)parameters {
-	RWAppDelegate *app = [[UIApplication sharedApplication] delegate];
+	RWAppDelegate *app = (RWAppDelegate *)[[UIApplication sharedApplication] delegate];
 	BOOL pageBelongsToSwipeView = [parameters objectForKey:[RWPAGE PARENT]] != nil && [app.xml nameBelongsToSwipeView:[parameters objectForKey:[RWPAGE PARENT]]];
 	if (!pageBelongsToSwipeView){
 		UIViewController *newViewController = [RWNavigationController getViewControllerFromDictionary:parameters];

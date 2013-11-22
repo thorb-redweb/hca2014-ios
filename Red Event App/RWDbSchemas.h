@@ -42,6 +42,28 @@
 
 + (NSString *)EVENT_SUBMISSION;
 
++ (NSString *)PUSH_TABLENAME;
+
++ (NSString *)PUSH_PUSHMESSAGEID;
+
++ (NSString *)PUSH_GROUPID;
+
++ (NSString *)PUSH_INTRO;
+
++ (NSString *)PUSH_MESSAGE;
+
++ (NSString *)PUSH_AUTHOR;
+
++ (NSString *)PUSH_SENDDATE;
+
++ (NSString *)PUSHGROUP_TABLENAME;
+
++ (NSString *)PUSHGROUP_GROUPID;
+
++ (NSString *)PUSHGROUP_NAME;
+
++ (NSString *)PUSHGROUP_SUBSCRIBED;
+
 + (NSString *)SES_TABLENAME;
 
 + (NSString *)SES_SESSIONID;

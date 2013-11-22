@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		26E7309E82C1ECB14617336D /* RWSessionListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26E73F88D34AF9FA1DCCCDF3 /* RWSessionListViewController.xib */; };
 		26E731070B3A8E0D7A469DA4 /* barbackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 26E7384515AAA226C33B8A6B /* barbackground.png */; };
+		26E7310DA927A709CB10946A /* RWPushMessageGroupVM.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E738FC4BA52C386E6DA46B /* RWPushMessageGroupVM.m */; };
 		26E7320BD4DD960ACEAE2F0C /* RWSessionDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E73054B0C3BF3B2F4E5504 /* RWSessionDetailViewController.m */; };
 		26E7321681940C0EDC527336 /* RWAppearanceHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E73E844A940B8F8FB0E9E3 /* RWAppearanceHelper.m */; };
 		26E73257952F9E9F8A78C456 /* RWDailySessionListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26E7394501587D1CC7391103 /* RWDailySessionListViewController.xib */; };
@@ -18,10 +19,12 @@
 		26E7354C3D33E5BBE387B0B9 /* RWDbSchemas.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E73CFDDE0756A9A7C15C9C /* RWDbSchemas.m */; };
 		26E7358C57205B061BD03C68 /* RWTableNavigatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E73442CF2B28F56D529977 /* RWTableNavigatorViewController.m */; };
 		26E7359A6F05B94B31DE494D /* RWStaticArticleController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E73E70DD991266C77557B1 /* RWStaticArticleController.m */; };
+		26E735A51E0632B5D94F4F7E /* RWPushMessageVM.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E73186F98A9B586C33AACD /* RWPushMessageVM.m */; };
 		26E735A82D981AAD64548A18 /* RWJSONPushMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E739D9DE81119FD2BA5E40 /* RWJSONPushMessage.m */; };
 		26E735A83CD4B9562C4CF691 /* RWJSONSchemas.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E73D223730A010838C2BB3 /* RWJSONSchemas.m */; };
 		26E73647E0BFE16C681E964C /* RWJSONPushMessageGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E738167753BDADDE171C6E /* RWJSONPushMessageGroup.m */; };
 		26E7372845AA4EBB83B70E49 /* RWStaticArticleController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26E73C88447F46EA13786763 /* RWStaticArticleController.xib */; };
+		26E737417E9A7D53ACC6F777 /* RWDbPushMessages.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E73E9F6EDFF30EF4B51C4E /* RWDbPushMessages.m */; };
 		26E737869BA3CD47EB4DF1C7 /* RWJSONSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E737DF6BBC2C84BC534A58 /* RWJSONSession.m */; };
 		26E7396EA34EF7D743E27B19 /* RWJSONArticle.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E739089CFBA6F0EC72E9DB /* RWJSONArticle.m */; };
 		26E739E27A8B0F6A3CC059DA /* RWVenuePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E735AB461FFEBD7FDBE2A3 /* RWVenuePickerViewController.m */; };
@@ -34,6 +37,7 @@
 		26E73C9AA3817CDE9AB356C0 /* RWJSONVenue.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E73007C7F063443A1D88DA /* RWJSONVenue.m */; };
 		26E73D9C36DBC520345EA4F2 /* RWVenuePickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26E73618D6B0CD9138BEEF16 /* RWVenuePickerViewController.xib */; };
 		26E73DBA4ADBF998256D88EF /* RWDailySessionListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E7311AA69FB2E51D64BF69 /* RWDailySessionListViewController.m */; };
+		26E73E6BFACAD78541169151 /* RWDbPushMessageGroups.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E736C4E82279860090FCAE /* RWDbPushMessageGroups.m */; };
 		26E73F1A5EA4CC6DE8A17E06 /* RWDbSessions.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E736D3806D4E23C6F45A93 /* RWDbSessions.m */; };
 		3604165917F5792D00B9A391 /* RWLOOK.m in Sources */ = {isa = PBXBuildFile; fileRef = 3604165817F5792D00B9A391 /* RWLOOK.m */; };
 		3604165C17F58A5800B9A391 /* RWPAGE.m in Sources */ = {isa = PBXBuildFile; fileRef = 3604165B17F58A5800B9A391 /* RWPAGE.m */; };
@@ -74,6 +78,12 @@
 		36214F67183CBB98001B0B63 /* RWTableNavigatorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36214F66183CBB98001B0B63 /* RWTableNavigatorViewController.xib */; };
 		36214F6B183CBC34001B0B63 /* RWTableNavigatorCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 36214F69183CBC34001B0B63 /* RWTableNavigatorCell.m */; };
 		36214F6C183CBC34001B0B63 /* RWTableNavigatorCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36214F6A183CBC34001B0B63 /* RWTableNavigatorCell.xib */; };
+		36214F83183F6DFE001B0B63 /* RWPushMessageDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36214F81183F6DFE001B0B63 /* RWPushMessageDetailViewController.m */; };
+		36214F84183F6DFE001B0B63 /* RWPushMessageDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36214F82183F6DFE001B0B63 /* RWPushMessageDetailViewController.xib */; };
+		36214F88183F6E0E001B0B63 /* RWPushMessageListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36214F86183F6E0E001B0B63 /* RWPushMessageListViewController.m */; };
+		36214F89183F6E0E001B0B63 /* RWPushMessageListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36214F87183F6E0E001B0B63 /* RWPushMessageListViewController.xib */; };
+		36214F98183F8206001B0B63 /* PushMessageGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 36214F97183F8206001B0B63 /* PushMessageGroup.m */; };
+		36214F9B183F8207001B0B63 /* PushMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 36214F9A183F8207001B0B63 /* PushMessage.m */; };
 		36354B02181E6C520046066E /* RWSwipeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36354B00181E6C520046066E /* RWSwipeViewController.m */; };
 		36354B03181E6C520046066E /* RWSwipeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36354B01181E6C520046066E /* RWSwipeViewController.xib */; };
 		36354BB2181FC3400046066E /* RWAdventCalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36354BB0181FC3400046066E /* RWAdventCalViewController.m */; };
@@ -239,7 +249,9 @@
 		26E73054B0C3BF3B2F4E5504 /* RWSessionDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWSessionDetailViewController.m; sourceTree = "<group>"; };
 		26E730A6419743C77DE8F010 /* RWDbSessions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWDbSessions.h; sourceTree = "<group>"; };
 		26E7311AA69FB2E51D64BF69 /* RWDailySessionListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWDailySessionListViewController.m; sourceTree = "<group>"; };
+		26E73186F98A9B586C33AACD /* RWPushMessageVM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWPushMessageVM.m; sourceTree = "<group>"; };
 		26E731EB6CC9B707B70C7079 /* RWDbVenues.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWDbVenues.m; sourceTree = "<group>"; };
+		26E7324779279897B890146A /* RWPushMessageVM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWPushMessageVM.h; sourceTree = "<group>"; };
 		26E732597E95C791AB5F327A /* RWJSONVenue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWJSONVenue.h; sourceTree = "<group>"; };
 		26E7331897DCA8E9DE078CC5 /* RWVenuePickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWVenuePickerViewController.h; sourceTree = "<group>"; };
 		26E7334659BD88F6FCBDA9B2 /* RWDbEvents.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWDbEvents.h; sourceTree = "<group>"; };
@@ -250,9 +262,11 @@
 		26E7347CEB33D30567713480 /* RWDailySessionListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWDailySessionListViewController.h; sourceTree = "<group>"; };
 		26E734B2FEEE40899984016B /* navbarbackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = navbarbackground.png; sourceTree = "<group>"; };
 		26E734F685B738DB294D1C5B /* RWDailySessionListItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWDailySessionListItem.m; sourceTree = "<group>"; };
+		26E73543A9172C6DAF867E6A /* RWDbPushMessages.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWDbPushMessages.h; sourceTree = "<group>"; };
 		26E7357085BD0C589D8EBCB6 /* RWDbEvents.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWDbEvents.m; sourceTree = "<group>"; };
 		26E735AB461FFEBD7FDBE2A3 /* RWVenuePickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWVenuePickerViewController.m; sourceTree = "<group>"; };
 		26E73618D6B0CD9138BEEF16 /* RWVenuePickerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RWVenuePickerViewController.xib; sourceTree = "<group>"; };
+		26E736C4E82279860090FCAE /* RWDbPushMessageGroups.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWDbPushMessageGroups.m; sourceTree = "<group>"; };
 		26E736D3806D4E23C6F45A93 /* RWDbSessions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWDbSessions.m; sourceTree = "<group>"; };
 		26E736F8BC3400ED70DC3994 /* RWDbHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWDbHelper.m; sourceTree = "<group>"; };
 		26E73772C4506CEEF7731857 /* RWDbHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWDbHelper.h; sourceTree = "<group>"; };
@@ -260,13 +274,16 @@
 		26E737DF6BBC2C84BC534A58 /* RWJSONSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWJSONSession.m; sourceTree = "<group>"; };
 		26E738167753BDADDE171C6E /* RWJSONPushMessageGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWJSONPushMessageGroup.m; sourceTree = "<group>"; };
 		26E7384515AAA226C33B8A6B /* barbackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = barbackground.png; sourceTree = "<group>"; };
+		26E738FC4BA52C386E6DA46B /* RWPushMessageGroupVM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWPushMessageGroupVM.m; sourceTree = "<group>"; };
 		26E739089CFBA6F0EC72E9DB /* RWJSONArticle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWJSONArticle.m; sourceTree = "<group>"; };
 		26E7394501587D1CC7391103 /* RWDailySessionListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RWDailySessionListViewController.xib; sourceTree = "<group>"; };
 		26E7399E33317ED9154F45D7 /* RWJSONArticle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWJSONArticle.h; sourceTree = "<group>"; };
+		26E7399E3F1AF897B942E842 /* RWPushMessageGroupVM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWPushMessageGroupVM.h; sourceTree = "<group>"; };
 		26E739D9DE81119FD2BA5E40 /* RWJSONPushMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWJSONPushMessage.m; sourceTree = "<group>"; };
 		26E739F46AB88CD8DCA12408 /* RWJSONPushMessageGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWJSONPushMessageGroup.h; sourceTree = "<group>"; };
 		26E73B05E15C0E62CFA02A71 /* RWTableNavigatorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWTableNavigatorViewController.h; sourceTree = "<group>"; };
 		26E73B071232B6F1DE91DD9C /* RWAppearanceHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWAppearanceHelper.h; sourceTree = "<group>"; };
+		26E73B79C4CEEF5D27BC15AB /* RWDbPushMessageGroups.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWDbPushMessageGroups.h; sourceTree = "<group>"; };
 		26E73BC4F5B5D8AFA136F02F /* RWDailySessionListItem.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RWDailySessionListItem.xib; sourceTree = "<group>"; };
 		26E73BC640BC920810ED80D4 /* RWDbSchemas.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWDbSchemas.h; sourceTree = "<group>"; };
 		26E73C368D96F9F2512E027C /* RWDbVenues.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWDbVenues.h; sourceTree = "<group>"; };
@@ -279,6 +296,7 @@
 		26E73DA790C8AEAC8D1CD1EB /* RWJSONEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWJSONEvent.h; sourceTree = "<group>"; };
 		26E73E70DD991266C77557B1 /* RWStaticArticleController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWStaticArticleController.m; sourceTree = "<group>"; };
 		26E73E844A940B8F8FB0E9E3 /* RWAppearanceHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWAppearanceHelper.m; sourceTree = "<group>"; };
+		26E73E9F6EDFF30EF4B51C4E /* RWDbPushMessages.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWDbPushMessages.m; sourceTree = "<group>"; };
 		26E73EB7E72C4EF159A09632 /* RWSessionDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWSessionDetailViewController.h; sourceTree = "<group>"; };
 		26E73ED8D5A9F454A92CA2AF /* RWSessionDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RWSessionDetailViewController.xib; sourceTree = "<group>"; };
 		26E73F88D34AF9FA1DCCCDF3 /* RWSessionListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RWSessionListViewController.xib; sourceTree = "<group>"; };
@@ -352,6 +370,16 @@
 		36214F68183CBC34001B0B63 /* RWTableNavigatorCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWTableNavigatorCell.h; sourceTree = "<group>"; };
 		36214F69183CBC34001B0B63 /* RWTableNavigatorCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWTableNavigatorCell.m; sourceTree = "<group>"; };
 		36214F6A183CBC34001B0B63 /* RWTableNavigatorCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RWTableNavigatorCell.xib; sourceTree = "<group>"; };
+		36214F80183F6DFE001B0B63 /* RWPushMessageDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWPushMessageDetailViewController.h; sourceTree = "<group>"; };
+		36214F81183F6DFE001B0B63 /* RWPushMessageDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWPushMessageDetailViewController.m; sourceTree = "<group>"; };
+		36214F82183F6DFE001B0B63 /* RWPushMessageDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RWPushMessageDetailViewController.xib; sourceTree = "<group>"; };
+		36214F85183F6E0E001B0B63 /* RWPushMessageListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWPushMessageListViewController.h; sourceTree = "<group>"; };
+		36214F86183F6E0E001B0B63 /* RWPushMessageListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWPushMessageListViewController.m; sourceTree = "<group>"; };
+		36214F87183F6E0E001B0B63 /* RWPushMessageListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RWPushMessageListViewController.xib; sourceTree = "<group>"; };
+		36214F96183F8206001B0B63 /* PushMessageGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PushMessageGroup.h; sourceTree = "<group>"; };
+		36214F97183F8206001B0B63 /* PushMessageGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PushMessageGroup.m; sourceTree = "<group>"; };
+		36214F99183F8207001B0B63 /* PushMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PushMessage.h; sourceTree = "<group>"; };
+		36214F9A183F8207001B0B63 /* PushMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PushMessage.m; sourceTree = "<group>"; };
 		36354AFF181E6C520046066E /* RWSwipeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWSwipeViewController.h; sourceTree = "<group>"; };
 		36354B00181E6C520046066E /* RWSwipeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWSwipeViewController.m; sourceTree = "<group>"; };
 		36354B01181E6C520046066E /* RWSwipeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RWSwipeViewController.xib; sourceTree = "<group>"; };
@@ -758,6 +786,10 @@
 				26E736D3806D4E23C6F45A93 /* RWDbSessions.m */,
 				26E73C368D96F9F2512E027C /* RWDbVenues.h */,
 				26E731EB6CC9B707B70C7079 /* RWDbVenues.m */,
+				26E73E9F6EDFF30EF4B51C4E /* RWDbPushMessages.m */,
+				26E73543A9172C6DAF867E6A /* RWDbPushMessages.h */,
+				26E736C4E82279860090FCAE /* RWDbPushMessageGroups.m */,
+				26E73B79C4CEEF5D27BC15AB /* RWDbPushMessageGroups.h */,
 			);
 			name = DBClasses;
 			sourceTree = "<group>";
@@ -888,6 +920,35 @@
 				3683F222182BB5F000C22E46 /* RWVenueMapViewController.m */,
 			);
 			name = VenueMap;
+			sourceTree = "<group>";
+		};
+		36214F7D183F6D96001B0B63 /* Push Messages */ = {
+			isa = PBXGroup;
+			children = (
+				36214F7E183F6DBD001B0B63 /* PushMessageDetail */,
+				36214F7F183F6DDB001B0B63 /* PushMessageList */,
+			);
+			name = "Push Messages";
+			sourceTree = "<group>";
+		};
+		36214F7E183F6DBD001B0B63 /* PushMessageDetail */ = {
+			isa = PBXGroup;
+			children = (
+				36214F80183F6DFE001B0B63 /* RWPushMessageDetailViewController.h */,
+				36214F81183F6DFE001B0B63 /* RWPushMessageDetailViewController.m */,
+				36214F82183F6DFE001B0B63 /* RWPushMessageDetailViewController.xib */,
+			);
+			name = PushMessageDetail;
+			sourceTree = "<group>";
+		};
+		36214F7F183F6DDB001B0B63 /* PushMessageList */ = {
+			isa = PBXGroup;
+			children = (
+				36214F85183F6E0E001B0B63 /* RWPushMessageListViewController.h */,
+				36214F86183F6E0E001B0B63 /* RWPushMessageListViewController.m */,
+				36214F87183F6E0E001B0B63 /* RWPushMessageListViewController.xib */,
+			);
+			name = PushMessageList;
 			sourceTree = "<group>";
 		};
 		36354AFE181E6C1E0046066E /* SwipeView */ = {
@@ -1126,6 +1187,7 @@
 				3645BFB317D75BE500047159 /* Frontpage Containers */,
 				36A7289217CB47F800374063 /* Map */,
 				361EA882180BD54C00441271 /* Navigation */,
+				36214F7D183F6D96001B0B63 /* Push Messages */,
 				36A79EF417C6089800AB211B /* Session */,
 				361EA88C180C0DC200441271 /* Venue */,
 				3645BFA617D077AC00047159 /* RWBaseViewController.h */,
@@ -1203,6 +1265,10 @@
 			children = (
 				36AB7C2D17BCF14D00316921 /* RWArticleVM.h */,
 				36AB7C2E17BCF14D00316921 /* RWArticleVM.m */,
+				26E7324779279897B890146A /* RWPushMessageVM.h */,
+				26E73186F98A9B586C33AACD /* RWPushMessageVM.m */,
+				26E7399E3F1AF897B942E842 /* RWPushMessageGroupVM.h */,
+				26E738FC4BA52C386E6DA46B /* RWPushMessageGroupVM.m */,
 				36A79EFA17C60A6500AB211B /* RWSessionVM.h */,
 				36A79EFB17C60A6500AB211B /* RWSessionVM.m */,
 				3645BF7617CDF07600047159 /* RWVenueVM.h */,
@@ -1222,6 +1288,10 @@
 				3645BF6417CC93B300047159 /* Session.m */,
 				36A79EEA17C5F85900AB211B /* Venue.h */,
 				36A79EEB17C5F85900AB211B /* Venue.m */,
+				36214F99183F8207001B0B63 /* PushMessage.h */,
+				36214F9A183F8207001B0B63 /* PushMessage.m */,
+				36214F96183F8206001B0B63 /* PushMessageGroup.h */,
+				36214F97183F8206001B0B63 /* PushMessageGroup.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -1460,6 +1530,7 @@
 				367628F8180408EB002ED534 /* RWUpcomingSessions.xib in Resources */,
 				36A727AA17C794E400374063 /* navbar.png in Resources */,
 				3683F1A8181FF54300C22E46 /* RWAdventWindowViewController.xib in Resources */,
+				36214F89183F6E0E001B0B63 /* RWPushMessageListViewController.xib in Resources */,
 				36354BD8181FC8410046066E /* xmas11.jpg in Resources */,
 				36A727AC17C7992100374063 /* appearance.xml in Resources */,
 				36354BD4181FC8410046066E /* xmas7.jpg in Resources */,
@@ -1496,6 +1567,7 @@
 				36354BD2181FC8410046066E /* xmas5.jpg in Resources */,
 				36354BE0181FC8410046066E /* xmas19.jpg in Resources */,
 				3683F216182A4F5F00C22E46 /* RWMainViewController.xib in Resources */,
+				36214F84183F6DFE001B0B63 /* RWPushMessageDetailViewController.xib in Resources */,
 				36354BDA181FC8410046066E /* xmas13.jpg in Resources */,
 				26E73BAC5180C9A138C7C0FD /* RWSessionDetailViewController.xib in Resources */,
 				26E7309E82C1ECB14617336D /* RWSessionListViewController.xib in Resources */,
@@ -1564,6 +1636,7 @@
 				361EA87E1806B0EC00441271 /* UIImage+GIF.m in Sources */,
 				36AB7C9817C203E000316921 /* CXMLNode_CreationExtensions.m in Sources */,
 				36AB7C9917C203E000316921 /* CXHTMLDocument.m in Sources */,
+				36214F98183F8206001B0B63 /* PushMessageGroup.m in Sources */,
 				36AB7C9A17C203E000316921 /* CXMLDocument_PrivateExtensions.m in Sources */,
 				361EA87B1806B0EC00441271 /* SDWebImageManager.m in Sources */,
 				361EA8761806B0EC00441271 /* SDImageCache.m in Sources */,
@@ -1640,15 +1713,22 @@
 				26E73521D46382491892E340 /* RWSessionListViewController.m in Sources */,
 				367628F11803FB91002ED534 /* RWTextHelper.m in Sources */,
 				26E73A16AE0BED83CB4BF2F2 /* RWDailySessionListItem.m in Sources */,
+				36214F83183F6DFE001B0B63 /* RWPushMessageDetailViewController.m in Sources */,
 				26E7359A6F05B94B31DE494D /* RWStaticArticleController.m in Sources */,
 				26E7396EA34EF7D743E27B19 /* RWJSONArticle.m in Sources */,
 				26E73AD842954C5E9551E3AD /* RWJSONEvent.m in Sources */,
 				26E735A82D981AAD64548A18 /* RWJSONPushMessage.m in Sources */,
 				26E73647E0BFE16C681E964C /* RWJSONPushMessageGroup.m in Sources */,
 				26E737869BA3CD47EB4DF1C7 /* RWJSONSession.m in Sources */,
+				36214F9B183F8207001B0B63 /* PushMessage.m in Sources */,
 				26E73C9AA3817CDE9AB356C0 /* RWJSONVenue.m in Sources */,
 				26E735A83CD4B9562C4CF691 /* RWJSONSchemas.m in Sources */,
 				26E7358C57205B061BD03C68 /* RWTableNavigatorViewController.m in Sources */,
+				36214F88183F6E0E001B0B63 /* RWPushMessageListViewController.m in Sources */,
+				26E735A51E0632B5D94F4F7E /* RWPushMessageVM.m in Sources */,
+				26E7310DA927A709CB10946A /* RWPushMessageGroupVM.m in Sources */,
+				26E737417E9A7D53ACC6F777 /* RWDbPushMessages.m in Sources */,
+				26E73E6BFACAD78541169151 /* RWDbPushMessageGroups.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
