@@ -34,7 +34,7 @@
 
     _model = [_db.Articles getVMFromId:_contid];
 
-    [_webBody loadHTMLString:_model.introtext baseURL:nil];
+    [_webBody loadHTMLString:_model.fulltext baseURL:nil];
 }
 
 - (void)setAppearance{

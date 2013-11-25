@@ -125,7 +125,6 @@
 		367628F8180408EB002ED534 /* RWUpcomingSessions.xib in Resources */ = {isa = PBXBuildFile; fileRef = 367628F6180408EB002ED534 /* RWUpcomingSessions.xib */; };
 		367628FB1804386A002ED534 /* RWUpcomingSessionsListItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 367628FA1804386A002ED534 /* RWUpcomingSessionsListItem.m */; };
 		367628FD18043896002ED534 /* RWUpcomingSessionsListItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 367628FC18043896002ED534 /* RWUpcomingSessionsListItem.xib */; };
-		367ACCD417D9D5E900AB92AC /* splash.png in Resources */ = {isa = PBXBuildFile; fileRef = 367ACCD317D9D5E900AB92AC /* splash.png */; };
 		3683F1A0181FEEF900C22E46 /* btnclose.png in Resources */ = {isa = PBXBuildFile; fileRef = 3683F19D181FEEF900C22E46 /* btnclose.png */; };
 		3683F1A1181FEEF900C22E46 /* btnseeyou.png in Resources */ = {isa = PBXBuildFile; fileRef = 3683F19E181FEEF900C22E46 /* btnseeyou.png */; };
 		3683F1A2181FEEF900C22E46 /* splash.png in Resources */ = {isa = PBXBuildFile; fileRef = 3683F19F181FEEF900C22E46 /* splash.png */; };
@@ -420,7 +419,6 @@
 		367628F91804386A002ED534 /* RWUpcomingSessionsListItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWUpcomingSessionsListItem.h; sourceTree = "<group>"; };
 		367628FA1804386A002ED534 /* RWUpcomingSessionsListItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWUpcomingSessionsListItem.m; sourceTree = "<group>"; };
 		367628FC18043896002ED534 /* RWUpcomingSessionsListItem.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RWUpcomingSessionsListItem.xib; sourceTree = "<group>"; };
-		367ACCD317D9D5E900AB92AC /* splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = splash.png; path = "Red Event App/Resources/splash.png"; sourceTree = "<group>"; };
 		3683F19D181FEEF900C22E46 /* btnclose.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btnclose.png; sourceTree = "<group>"; };
 		3683F19E181FEEF900C22E46 /* btnseeyou.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btnseeyou.png; sourceTree = "<group>"; };
 		3683F19F181FEEF900C22E46 /* splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splash.png; sourceTree = "<group>"; };
@@ -1183,7 +1181,6 @@
 				361EA88A180C0C3700441271 /* julebaggrund.jpg */,
 				3604166A17FAB4DB00B9A391 /* arrow_left.png */,
 				3604166B17FAB4DB00B9A391 /* arrow_right.png */,
-				367ACCD317D9D5E900AB92AC /* splash.png */,
 				36A7289E17CB695800374063 /* icon_youarehere.png */,
 				36A7287617CB37B300374063 /* tabbar.png */,
 				36A7287417C7A8DC00374063 /* navbar_backbutton.png */,
@@ -1488,7 +1485,6 @@
 				3683F1A0181FEEF900C22E46 /* btnclose.png in Resources */,
 				3645BF8217CE320500047159 /* Brandts.gpx in Resources */,
 				3645BF8317CE320500047159 /* Kongens Have.gpx in Resources */,
-				367ACCD417D9D5E900AB92AC /* splash.png in Resources */,
 				26E73257952F9E9F8A78C456 /* RWDailySessionListViewController.xib in Resources */,
 				36354BB5181FC76D0046066E /* logobar.png in Resources */,
 				26E73D9C36DBC520345EA4F2 /* RWVenuePickerViewController.xib in Resources */,
