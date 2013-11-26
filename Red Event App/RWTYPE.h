@@ -27,6 +27,10 @@
 
 + (NSString *)OVERVIEWMAP;
 
++ (NSString *)PUSHMESSAGEDETAIL;
+
++ (NSString *)PUSHMESSAGELIST;
+
 + (NSString *)SESSIONDETAIL;
 
 + (NSString *)SESSIONMAP;

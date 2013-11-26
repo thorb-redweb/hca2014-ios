@@ -43,32 +43,20 @@
     return NULL;
 }
 
-- (Session *)getFromEventId:(int)eventid {
+- (NSArray *)getListFromEventId:(int)eventid {
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"%K == %d", [RWDbSchemas SES_EVENTID], eventid];
 
     NSMutableArray *fetchResults = [_dbHelper getFromDatabase:[RWDbSchemas SES_TABLENAME] predicate:predicate];
 
-    if (fetchResults.count > 0) {
-        Session *session = [fetchResults objectAtIndex:0];
-
-        return session;
-    }
-
-    return NULL;
+    return fetchResults;
 }
 
-- (Session *)getFromVenueId:(int)venueid {
+- (NSArray *)getListFromVenueId:(int)venueid {
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"%K == %d", [RWDbSchemas SES_VENUEID], venueid];
 
     NSMutableArray *fetchResults = [_dbHelper getFromDatabase:[RWDbSchemas SES_TABLENAME] predicate:predicate];
 
-    if (fetchResults.count > 0) {
-        Session *session = [fetchResults objectAtIndex:0];
-
-        return session;
-    }
-
-    return NULL;
+    return fetchResults;
 }
 
 - (RWSessionVM *)getVMFromId:(int)sessionid {

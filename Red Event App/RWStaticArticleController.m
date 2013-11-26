@@ -6,6 +6,8 @@
 //  Copyright (c) 2013 redWEB. All rights reserved.
 //
 
+#import "UIWebView+RWWebView.h"
+
 #import "RWStaticArticleController.h"
 #import "RWArticleVM.h"
 #import "RWAppearanceHelper.h"
@@ -34,13 +36,17 @@
 
     _model = [_db.Articles getVMFromId:_contid];
 
-    [_webBody loadHTMLString:_model.introtext baseURL:nil];
+    [_webBody loadHTMLString:_model.fulltext baseURL:nil];
 }
 
 - (void)setAppearance{
     RWAppearanceHelper *helper = [[RWAppearanceHelper alloc] initWithLocalLook:_localLook globalLook:_globalLook];
 
     [helper setBackgroundColor:self.view localName:[RWLOOK STATICARTICLE_BACKGROUNDCOLOR] globalName:[RWLOOK DEFAULT_BACKCOLOR]];
+}
+
+- (void)webViewDidFinishLoad:(UIWebView *)webView {
+    [_webBody RWSizeThatFitsContent];
 }
 
 - (void)didReceiveMemoryWarning {

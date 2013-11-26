@@ -11,6 +11,8 @@
 
 @interface RWPushMessageListViewController : RWBaseViewController <UITableViewDelegate, UITableViewDataSource>
 
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+
 - (id)initWithName:(NSString *)name;
 
 @end

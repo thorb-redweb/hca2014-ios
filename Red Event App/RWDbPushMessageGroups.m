@@ -24,7 +24,7 @@
     return self;
 }
 
--(PushMessageGroup *)getById:(int)groupid{
+-(PushMessageGroup *)getFromId:(int)groupid{
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"%K == %d", [RWDbSchemas PUSHGROUP_GROUPID], groupid];
 
     NSArray *fetchResults = [_dbHelper getFromDatabase:[RWDbSchemas PUSHGROUP_TABLENAME] predicate:predicate];
@@ -50,7 +50,7 @@
 }
 
 -(NSArray *)getSubscribedGroupIds{
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"%K == %d", [RWDbSchemas PUSHGROUP_SUBSCRIBED], @"YES"];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"%K == %d", [RWDbSchemas PUSHGROUP_SUBSCRIBING], YES];
 
     NSMutableArray *fetchResults = [_dbHelper getFromDatabase:[RWDbSchemas PUSHGROUP_TABLENAME] predicate:predicate];
 
@@ -62,7 +62,7 @@
 }
 
 -(void)updateSubscriptionById:(int)groupid subscribed:(bool)subscribed{
-    PushMessageGroup *group = [self getById:groupid];
+    PushMessageGroup *group = [self getFromId:groupid];
     group.subscribing = [NSNumber numberWithBool:subscribed];
 }
 

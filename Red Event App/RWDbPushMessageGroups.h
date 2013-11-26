@@ -7,11 +7,14 @@
 #import <Foundation/Foundation.h>
 
 @class RWDbHelper;
+@class PushMessageGroup;
 
 
 @interface RWDbPushMessageGroups : NSObject
 
 - (id)initWithHelper:(RWDbHelper *)helper;
+
+- (PushMessageGroup *)getFromId:(int)groupid;
 
 - (NSArray *)getAllVMs;
 

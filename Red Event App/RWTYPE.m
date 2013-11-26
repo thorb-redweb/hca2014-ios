@@ -18,6 +18,8 @@
 + (NSString *)IMAGEARTICLELIST {return @"ImageArticleList";}
 + (NSString *)NEWSTICKER {return @"NewsTicker";}
 + (NSString *)OVERVIEWMAP {return @"OverviewMap";}
++ (NSString *)PUSHMESSAGEDETAIL {return @"PushMessageDetail";}
++ (NSString *)PUSHMESSAGELIST {return @"PushMessageList";}
 + (NSString *)SESSIONDETAIL {return @"SessionDetail";}
 + (NSString *)SESSIONMAP {return @"SessionMap";}
 + (NSString *)SPLITVIEW {return @"SplitView";}

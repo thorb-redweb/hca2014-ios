@@ -17,6 +17,10 @@
 #import "RWJSONEvent.h"
 #import "RWJSONSession.h"
 #import "RWJSONVenue.h"
+#import "PushMessage.h"
+#import "RWJSONPushMessage.h"
+#import "PushMessageGroup.h"
+#import "RWJSONPushMessageGroup.h"
 
 @implementation RWHandler_DumpDatabase {
     NSManagedObjectContext *_managedObjectContext;
@@ -26,6 +30,9 @@
     NSMutableArray *_events;
     NSMutableArray *_sessions;
     NSMutableArray *_venues;
+
+    NSMutableArray *_pushMessages;
+    NSMutableArray *_pushMessageGroups;
 }
 
 - (id)initWithManagedObjectContext:(NSManagedObjectContext *)managedObjectContext delegate:(id)delegate {
@@ -52,6 +59,9 @@
     _sessions = [[NSMutableArray alloc] init];
     _venues = [[NSMutableArray alloc] init];
 
+    _pushMessages = [[NSMutableArray alloc] init];
+    _pushMessageGroups = [[NSMutableArray alloc] init];
+
     for (NSDictionary *entry in dict) {
         NSString *itemtype = [entry objectForKey:@"itemtype"];
 
@@ -65,6 +75,12 @@
         }
         else if ([itemtype isEqual:@"e"]) {
             [self dumpEvent:entry];
+        }
+        else if ([itemtype isEqual:@"pm"]) {
+            [self dumpPushMessage:entry];
+        }
+        else if ([itemtype isEqual:@"pmg"]) {
+            [self dumpPushMessageGroup:entry];
         }
         else if ([itemtype isEqual:@"s"]) {
             [self dumpSession:entry];
@@ -123,6 +139,41 @@
     for (Session *session in _sessions) {
         if (session.eventid == event.eventid) {
             session.event = event;
+        }
+    }
+}
+
+- (void)dumpPushMessage:(NSDictionary *)entry {
+    PushMessage *pushMessage = (PushMessage *) [NSEntityDescription insertNewObjectForEntityForName:[RWDbSchemas PUSH_TABLENAME] inManagedObjectContext:_managedObjectContext];
+
+    [pushMessage setPushmessageid:[NSDecimalNumber decimalNumberWithString:[entry objectForKey:_json.Push.PUSHMESSAGE_ID]]];
+    [pushMessage setGroupid:[NSDecimalNumber decimalNumberWithString:[entry objectForKey:_json.Push.GROUP_ID]]];
+    [pushMessage setIntro:[self removeBackSlashes:[entry objectForKey:_json.Push.INTRO]]];
+    [pushMessage setMessage:[self removeBackSlashes:[entry objectForKey:_json.Push.MESSAGE]]];
+    [pushMessage setAuthor:[self removeBackSlashes:[entry objectForKey:_json.Push.AUTHOR]]];
+
+    NSString *dateString = [entry objectForKey:_json.Push.SENDDATE];
+    NSDate *dateTime = [self convertStringToDate:dateString];
+    [pushMessage setSenddate:dateTime];
+
+    [_pushMessages addObject:pushMessage];
+    for (PushMessageGroup *group in _pushMessageGroups) {
+        if (group.groupid == pushMessage.groupid) {
+            pushMessage.group = group;
+        }
+    }
+}
+
+- (void)dumpPushMessageGroup:(NSDictionary *)entry {
+    PushMessageGroup *group = (PushMessageGroup *) [NSEntityDescription insertNewObjectForEntityForName:[RWDbSchemas PUSHGROUP_TABLENAME] inManagedObjectContext:_managedObjectContext];
+
+    [group setGroupid:[NSDecimalNumber decimalNumberWithString:[entry objectForKey:_json.PushGroup.GROUP_ID]]];
+    [group setName:[self removeBackSlashes:[entry objectForKey:_json.PushGroup.NAME]]];
+
+    [_pushMessageGroups addObject:group];
+    for (PushMessage *message in _pushMessages) {
+        if (group.groupid == message.groupid) {
+            message.group = group;
         }
     }
 }

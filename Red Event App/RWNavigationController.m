@@ -20,6 +20,8 @@
 #import "RWImageArticleListViewController.h"
 #import "RWMainViewController.h"
 #import "RWOverviewMapViewController.h"
+#import "RWPushMessageDetailViewController.h"
+#import "RWPushMessageListViewController.h"
 #import "RWSessionDetailViewController.h"
 #import "RWSessionListViewController.h"
 #import "RWSessionMapViewController.h"
@@ -139,6 +141,13 @@
     else if ([viewControllerType isEqual:[RWTYPE IMAGEARTICLELIST]]) {
         int catid = [parameters[[RWPAGE CATID]] intValue];
         return [[RWImageArticleListViewController alloc] initWithNibName:@"RWImageArticleListViewController" bundle:nil name:name catid:catid];
+    }
+    else if ([viewControllerType isEqual:[RWTYPE PUSHMESSAGEDETAIL]]) {
+		int pushmessageid = [parameters[[RWPAGE PUSHMESSAGEID]] intValue];
+        return [[RWPushMessageDetailViewController alloc] initWithName:name pushmessageid:pushmessageid];
+    }
+    else if ([viewControllerType isEqual:[RWTYPE PUSHMESSAGELIST]]) {
+        return [[RWPushMessageListViewController alloc] initWithName:name];
     }
     else if ([viewControllerType isEqual:[RWTYPE OVERVIEWMAP]]) {
         return [[RWOverviewMapViewController alloc] initWithName:name];

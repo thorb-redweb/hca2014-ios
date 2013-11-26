@@ -16,4 +16,9 @@
 
 - (id)initWithPushMessageGroup:(PushMessageGroup *)pushMessageGroup;
 
+- (NSNumber *)groupid;
+
+- (NSString *)name;
+
+- (bool)subscribing;
 @end

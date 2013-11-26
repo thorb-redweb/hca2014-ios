@@ -23,4 +23,6 @@
 - (NSArray *)getVMListFromGroupIds:(NSArray *)groupids;
 
 - (NSArray *)getVMListFromSubscribedGroups;
+
+- (NSArray *)getListFromGroupId:(int)groupid;
 @end

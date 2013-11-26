@@ -36,6 +36,8 @@
 
 +(NSString *)NEWSTICKER_TITLE {return @"title";}
 
++(NSString *)PUSHMESSAGEDETAIL_BACKBUTTON {return @"backbutton";}
+
 +(NSString *)SESSIONDETAIL_DATE {return @"date";}
 +(NSString *)SESSIONDETAIL_PLACE {return @"place";}
 +(NSString *)SESSIONDETAIL_TIME {return @"time";}

@@ -6,8 +6,6 @@
 //  Copyright (c) 2013 redWEB. All rights reserved.
 //
 
-#import "UIView+RWViewLayout.h"
-
 #import "RWImageArticleListCell.h"
 
 @implementation RWImageArticleListCell

@@ -20,7 +20,12 @@
     return self;
 }
 
--(int)groupid{
+- (NSString *)description {
+    NSString *description = [NSString stringWithFormat:@"RWPushMessageGroupVM: \ngroupid: %@ \nname: %@ \nsubscribing: %@", _pushMessageGroup.groupid, _pushMessageGroup.name, _pushMessageGroup.subscribing];
+    return description;
+}
+
+-(NSNumber *)groupid{
     return _pushMessageGroup.groupid;
 }
 

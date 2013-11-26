@@ -16,9 +16,9 @@
 
 - (id)initWithPushMessage:(PushMessage *)pushMessage;
 
-- (int)pushmessageid;
+- (NSNumber *)pushmessageid;
 
-- (int)groupid;
+- (NSNumber *)groupid;
 
 - (NSString *)author;
 

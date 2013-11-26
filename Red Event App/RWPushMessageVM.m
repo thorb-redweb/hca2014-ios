@@ -19,11 +19,17 @@
     return self;
 }
 
--(int)pushmessageid{
+- (NSString *)description {
+    NSString *description = [NSString stringWithFormat:@"RWPushMessageVM: \npushmessageid: %@ \ngroupid: %@ \nauthor: %@ \nintro: %@ \nmessage: %@ \nsenddate: %@",
+                    _pushMessage.pushmessageid, _pushMessage.groupid, _pushMessage.author, _pushMessage.intro, _pushMessage.message, _pushMessage.senddate];
+    return description;
+}
+
+-(NSNumber *)pushmessageid{
     return _pushMessage.pushmessageid;
 }
 
--(int)groupid{
+-(NSNumber *)groupid{
     return _pushMessage.groupid;
 }
 

@@ -29,6 +29,8 @@
 	NSTimer *_splashTimer;
 	
 	UIAlertView *_alertview;
+	
+	bool _readyForDataFromServer;
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
@@ -39,6 +41,8 @@
 
         _db = app.db;
         _sv = app.sv;
+		
+		_readyForDataFromServer = false;
     }
     return self;
 }
@@ -48,14 +52,22 @@
 
     [_btnBackground setImage:[UIImage imageNamed:@"splash"] forState:UIControlStateNormal];
     [_btnBackground setImage:[UIImage imageNamed:@"splash"] forState:UIControlStateHighlighted];
+	
+	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(appHasEnteredForeground) name:UIApplicationWillEnterForegroundNotification object:nil];
 }
 
-- (void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
+- (void)viewWillAppear:(BOOL)animated{
+	[super viewWillAppear:animated];
+	[self getDataFromServer];
+}
+
+- (void)appHasEnteredForeground {
+	
 	[self getDataFromServer];
 }
 
 -(void)getDataFromServer{
+	_readyForDataFromServer = false;
 	NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
     NSString *dataversion = [prefs objectForKey:@"dataversion"];
     NSLog(@"Current dataversion: %@", dataversion);
@@ -134,7 +146,8 @@
 }
 
 - (void)alertOnClickCloseMessage{
-	
+	[self hideActivityViews];
+	_readyForDataFromServer = YES;
 }
 
 - (void)didReceiveMemoryWarning {
