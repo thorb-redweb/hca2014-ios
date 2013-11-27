@@ -22,6 +22,12 @@
 #import "RWJSONEvent.h"
 #import "RWJSONSession.h"
 #import "RWJSONVenue.h"
+#import "RWJSONPushMessage.h"
+#import "RWJSONPushMessageGroup.h"
+#import "PushMessage.h"
+#import "RWDbPushMessages.h"
+#import "RWDbPushMessageGroups.h"
+#import "PushMessageGroup.h"
 
 @implementation RWHandler_UpdateDatabase {
     NSManagedObjectContext *_managedObjectContext;
@@ -89,7 +95,13 @@
 	} else if([itemtype isEqual:@"e"]){
 		NSLog(@"c %@: %@",itemtype,[entry objectForKey:_json.Event.EVENT_ID]);
 		[self updateEvent:entry];
-	} else if([itemtype isEqual:@"s"]){
+    } else if([itemtype isEqual:@"pm"]){
+        NSLog(@"c %@: %@",itemtype,[entry objectForKey:_json.Push.PUSHMESSAGE_ID]);
+        [self updatePushMessage:entry];
+    } else if([itemtype isEqual:@"pmg"]){
+        NSLog(@"c %@: %@",itemtype,[entry objectForKey:_json.PushGroup.GROUP_ID]);
+        [self updatePushMessageGroup:entry];
+    } else if([itemtype isEqual:@"s"]){
 		NSLog(@"c %@: %@",itemtype,[entry objectForKey:_json.Ses.SESSION_ID]);
 		[self updateSession:entry];
 	} else if([itemtype isEqual:@"v"]){
@@ -106,6 +118,10 @@
 		[self deleteArticle:entry];
 	} else if([itemtype isEqual:@"e"]){
 		[self deleteEvent:entry];
+    } else if([itemtype isEqual:@"pm"]){
+        [self deletePushMessage:entry];
+    } else if([itemtype isEqual:@"pmg"]){
+        [self deletePushMessageGroup:entry];
 	} else if([itemtype isEqual:@"s"]){
 		[self deleteSession:entry];
 	} else if([itemtype isEqual:@"v"]){
@@ -164,14 +180,67 @@
     [event setImagepath:[self removeBackSlashes:[entry objectForKey:_json.Event.IMAGEPATH]]];
     [event setSubmission:[self removeBackSlashes:[entry objectForKey:_json.Event.SUBMISSION]]];
 
-    Session *session = [_db.Sessions getFromEventId:[[entry objectForKey:_json.Event.EVENT_ID] intValue]];
-    if (session) {
-        session.event = event;
+    NSArray *sessions = [_db.Sessions getListFromEventId:[[entry objectForKey:_json.Event.EVENT_ID] intValue]];
+    if (sessions) {
+        for(Session *session in sessions){
+            session.event = event;
+        }
     }
     NSError *cxtError = nil;
     if (![_managedObjectContext save:&cxtError]) {
         NSLog(@"did fail with error");
         NSLog(@"Context save failed in RWHandler_UpdateDatabase:updateEvent: %@", cxtError.description);
+    }
+}
+
+- (void)updatePushMessage:(NSDictionary *)entry {
+    int messageid = [[entry objectForKey:_json.Push.PUSHMESSAGE_ID] intValue];
+    PushMessage *pushMessage = [_db.PushMessages getFromId:messageid];
+    if (!pushMessage) {
+        pushMessage = (PushMessage *) [NSEntityDescription insertNewObjectForEntityForName:[RWDbSchemas PUSH_TABLENAME] inManagedObjectContext:_managedObjectContext];
+    }
+
+    [pushMessage setPushmessageid:[NSDecimalNumber decimalNumberWithString:[entry objectForKey:_json.Push.PUSHMESSAGE_ID]]];
+    [pushMessage setGroupid:[NSDecimalNumber decimalNumberWithString:[entry objectForKey:_json.Push.GROUP_ID]]];
+    [pushMessage setIntro:[self removeBackSlashes:[entry objectForKey:_json.Push.INTRO]]];
+    [pushMessage setMessage:[self removeBackSlashes:[entry objectForKey:_json.Push.MESSAGE]]];
+    [pushMessage setAuthor:[self removeBackSlashes:[entry objectForKey:_json.Push.AUTHOR]]];
+	
+	NSString *dateString = [entry objectForKey:_json.Push.SENDDATE];
+    NSDate *dateTime = [self convertStringToDate:dateString];
+	[pushMessage setSenddate:dateTime];
+
+    PushMessageGroup *group = [_db.PushMessageGroups getFromId:[[entry objectForKey:_json.Push.GROUP_ID] intValue]];
+    if (group) {
+        pushMessage.group = group;
+    }
+    NSError *cxtError = nil;
+    if (![_managedObjectContext save:&cxtError]) {
+        NSLog(@"did fail with error");
+        NSLog(@"Context save failed in RWHandler_UpdateDatabase:updatePushMessage: %@", cxtError.description);
+    }
+}
+
+- (void)updatePushMessageGroup:(NSDictionary *)entry {
+    int groupid = [[entry objectForKey:_json.PushGroup.GROUP_ID] intValue];
+    PushMessageGroup *group = [_db.PushMessageGroups getFromId:groupid];
+    if (!group) {
+        group = (PushMessageGroup *) [NSEntityDescription insertNewObjectForEntityForName:[RWDbSchemas PUSHGROUP_TABLENAME] inManagedObjectContext:_managedObjectContext];
+    }
+
+    [group setGroupid:[NSDecimalNumber decimalNumberWithString:[entry objectForKey:_json.PushGroup.GROUP_ID]]];
+    [group setName:[self removeBackSlashes:[entry objectForKey:_json.PushGroup.NAME]]];
+
+    NSArray *pushMessages = [_db.PushMessages getListFromGroupId:[[entry objectForKey:_json.Event.EVENT_ID] intValue]];
+    if (pushMessages) {
+        for(PushMessage *message in pushMessages) {
+            message.group = group;
+        }
+    }
+    NSError *cxtError = nil;
+    if (![_managedObjectContext save:&cxtError]) {
+        NSLog(@"did fail with error");
+        NSLog(@"Context save failed in RWHandler_UpdateDatabase:updatePushMessageGroup: %@", cxtError.description);
     }
 }
 
@@ -232,9 +301,11 @@
     [venue setLongitude:[NSDecimalNumber decimalNumberWithString:[entry objectForKey:_json.Venue.LONGITUDE]]];
     [venue setImagepath:[self removeBackSlashes:[entry objectForKey:_json.Venue.IMAGEPATH]]];
 
-    Session *session = [_db.Sessions getFromVenueId:[[entry objectForKey:_json.Venue.VENUE_ID] intValue]];
-    if (session) {
-        session.venue = venue;
+    NSArray *sessions = [_db.Sessions getListFromVenueId:venueid];
+    if (sessions) {
+        for(Session *session in sessions){
+            session.venue = venue;
+        }
     }
 
     NSError *cxtError = nil;
@@ -258,6 +329,22 @@
     if(event != nil){
 		[_managedObjectContext deleteObject:event];
 	}
+}
+
+- (void)deletePushMessage:(NSDictionary *)entry {
+    int messageid = [[entry objectForKey:_json.Push.PUSHMESSAGE_ID] intValue];
+    PushMessage *pushMessage = [_db.PushMessages getFromId:messageid];
+    if(pushMessage != nil){
+        [_managedObjectContext deleteObject:pushMessage];
+    }
+}
+
+- (void)deletePushMessageGroup:(NSDictionary *)entry {
+    int groupid = [[entry objectForKey:_json.PushGroup.GROUP_ID] intValue];
+    PushMessageGroup *group = [_db.PushMessageGroups getFromId:groupid];
+    if(group != nil){
+        [_managedObjectContext deleteObject:group];
+    }
 }
 
 - (void)deleteSession:(NSDictionary *)entry {

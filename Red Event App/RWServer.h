@@ -9,7 +9,6 @@
 #import <Foundation/Foundation.h>
 #import "RWDbInterface.h"
 #import "RWHandler_DumpServer.h"
-#import "RWHandler_GetImage.h"
 #import "RWHandler_UpdateFromServer.h"
 
 
@@ -21,8 +20,5 @@
 
 - (void)updateDatabase:(NSObject *)delegate;
 
-//- (void)getImage:(NSObject *)delegate imageLink:(NSString *)imagePath;
-
-//- (void)getImage:(NSObject *)delegate imageLink:(NSString *)imagePath wantedSize:(CGSize)wantedSize;
-
+- (void)sendProviderDeviceToken:(NSData *)devTokenBytes;
 @end

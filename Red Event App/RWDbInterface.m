@@ -18,6 +18,8 @@
 #import "RWHandler_DumpDatabase.h"
 #import "RWHandler_UpdateDatabase.h"
 #import "RWXMLStore.h"
+#import "RWDbPushMessages.h"
+#import "RWDbPushMessageGroups.h"
 
 
 @interface RWDbInterface ()
@@ -41,6 +43,8 @@
         _Articles = [[RWDbArticles alloc] initWithHelper:_dbHelper xml:_xml];
         _Common = [[RWDbCommon alloc] initWithHelper:_dbHelper];
         _Events = [[RWDbEvents alloc] initWithHelper:_dbHelper];
+        _PushMessages = [[RWDbPushMessages alloc] initWithHelper:_dbHelper dbInterface:self];
+        _PushMessageGroups = [[RWDbPushMessageGroups alloc] initWithHelper:_dbHelper];
         _Sessions = [[RWDbSessions alloc] initWithHelper:_dbHelper xml:_xml];
         _Venues = [[RWDbVenues alloc] initWithHelper:_dbHelper xml:_xml];
     }

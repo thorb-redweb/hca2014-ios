@@ -32,11 +32,22 @@
 + (NSString *)BACKBUTTONTEXTSTYLE {return @"backbuttontextstyle";}
 + (NSString *)BACKGROUNDCOLOR {return @"backgroundcolor";}
 + (NSString *)BACKGROUNDIMAGE {return @"backgroundimage";}
++ (NSString *)CELLBACKGROUNDCOLOR {return @"cellbackgroundcolor";}
++ (NSString *)ITEMTITLECOLOR {return @"itemtitlecolor";}
++ (NSString *)ITEMTITLESHADOWCOLOR {return @"itemtitleshadowcolor";}
++ (NSString *)ITEMTITLESHADOWOFFSET {return @"itemtitleshadowoffset";}
++ (NSString *)ITEMTITLESIZE {return @"itemtitlesize";}
++ (NSString *)ITEMTITLESTYLE {return @"itemtitlestyle";}
 + (NSString *)TEXTCOLOR {return @"textcolor";}
 + (NSString *)TEXTSHADOWCOLOR {return @"textshadowcolor";}
 + (NSString *)TEXTSHADOWOFFSET {return @"textshadowoffset";}
 + (NSString *)TEXTSIZE {return @"textsize";}
 + (NSString *)TEXTSTYLE {return @"textstyle";}
++ (NSString *)TITLECOLOR {return @"titlecolor";}
++ (NSString *)TITLESHADOWCOLOR {return @"titleshadowcolor";}
++ (NSString *)TITLESHADOWOFFSET {return @"titleshadowoffset";}
++ (NSString *)TITLESIZE {return @"titlesize";}
++ (NSString *)TITLESTYLE {return @"titlestyle";}
 
 //Default
 + (NSString *)DEFAULT {return @"default";}
@@ -234,6 +245,18 @@
 + (NSString *)NEWSTICKER_TITLESHADOWOFFSET {return @"titleshadowoffset";}
 + (NSString *)NEWSTICKER_TITLESIZE {return @"titlesize";}
 + (NSString *)NEWSTICKER_TITLESTYLE {return @"titlestyle";}
+
+//PushMessageDetail
++ (NSString *)PUSHMESSAGEDETAIL_AUTHORTEXTSHADOWCOLOR {return @"authortextshadowcolor";}
++ (NSString *)PUSHMESSAGEDETAIL_AUTHORTEXTSHADOWOFFSET {return @"authortextshadowoffset";}
++ (NSString *)PUSHMESSAGEDETAIL_AUTHORTEXTCOLOR {return @"authortextcolor";}
++ (NSString *)PUSHMESSAGEDETAIL_AUTHORTEXTSIZE {return @"authortextsize";}
++ (NSString *)PUSHMESSAGEDETAIL_AUTHORTEXTSTYLE {return @"authortextstyle";}
++ (NSString *)PUSHMESSAGEDETAIL_SENTTEXTSHADOWCOLOR {return @"senttextshadowcolor";}
++ (NSString *)PUSHMESSAGEDETAIL_SENTTEXTSHADOWOFFSET {return @"senttextshadowoffset";}
++ (NSString *)PUSHMESSAGEDETAIL_SENTTEXTCOLOR {return @"senttextcolor";}
++ (NSString *)PUSHMESSAGEDETAIL_SENTTEXTSIZE {return @"senttextsize";}
++ (NSString *)PUSHMESSAGEDETAIL_SENTTEXTSTYLE {return @"senttextstyle";}
 
 //SessionDetail
 + (NSString *)SESSIONDETAIL_BACKGROUNDCOLOR {return @"backgroundcolor";}

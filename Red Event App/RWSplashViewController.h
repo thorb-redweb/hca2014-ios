@@ -7,8 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import	<RWHandler_DumpDatabase.h>
-#import <RWHandler_UpdateDatabase.h>
+#import "RWHandler_DumpDatabase.h"
+#import "RWHandler_UpdateDatabase.h"
 
 @interface RWSplashViewController : UIViewController <RWDelegate_DumpDatabase, RWDelegate_UpdateDatabase, UIAlertViewDelegate>
 

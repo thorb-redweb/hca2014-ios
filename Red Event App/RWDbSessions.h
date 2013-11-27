@@ -19,9 +19,9 @@
 
 - (Session *)getFromId:(int)sessionid;
 
-- (Session *)getFromEventId:(int)eventid;
+- (NSArray *)getListFromEventId:(int)eventid;
 
-- (Session *)getFromVenueId:(int)venueid;
+- (NSArray *)getListFromVenueId:(int)venueid;
 
 - (RWSessionVM *)getVMFromId:(int)sessionid;
 

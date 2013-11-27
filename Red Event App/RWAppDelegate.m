@@ -20,7 +20,10 @@
 
 @end
 
-@implementation RWAppDelegate
+@implementation RWAppDelegate{
+    bool _registered;
+    NSDictionary *_localNotification;
+}
 
 @synthesize managedObjectContext = _managedObjectContext;
 @synthesize managedObjectModel = _managedObjectModel;
@@ -35,7 +38,7 @@
     self.window.backgroundColor = [UIColor whiteColor];
 
     [self setup_CoreData_Xml_Database_And_Server];
-    [self getInitializationData];
+    [self getInitializationData];    
 
     [self setAppearance];
 
@@ -45,7 +48,7 @@
     return YES;
 }
 
-- (void)setup_CoreData_Xml_Database_And_Server {
+-(void)setup_CoreData_Xml_Database_And_Server {
     _xml = [[RWXMLStore alloc] init];
 
     NSManagedObjectContext *context = [self managedObjectContext];
@@ -55,10 +58,19 @@
 
     _db = [[RWDbInterface alloc] initWithManagedObjectContext:context xml:_xml];
     _sv = [[RWServer alloc] initWithDatabase:_db datafilesfolderpath:_xml.dataFilesFolderPath];
+	_pmh = [[RWPushMessageSubscriptionHandler alloc] init];
 }
 
-- (void)getInitializationData {
+-(void)getInitializationData {
 
+}
+
+-(void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken{
+	[_pmh receiveRegistrationId:deviceToken];
+}
+
+-(void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error{
+    NSLog(@"Error in registration. Error: %@", error);
 }
 
 - (void)setAppearance {
@@ -110,8 +122,6 @@
         UIImage *backButtonImage = [[UIImage imageNamed:imageName] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 15, 0, 15)];
         [[UIBarButtonItem appearance] setBackButtonBackgroundImage:backButtonImage forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
     }
-
-    //[[UIBarButtonItem appearance] setTi]
 }
 
 - (void)setTabBarAppearance {
@@ -150,6 +160,37 @@
 
     [[UITabBarItem appearance] setTitleTextAttributes:tabbarAttributes forState:UIControlStateNormal];
 }
+
+-(void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)notification {
+    NSLog(@"Push message received, start data update");
+	_localNotification = notification;
+    [self checkForUpdates];
+}
+
+- (void)checkForUpdates {
+    [_sv updateDatabase:self];
+}
+
+- (void)continueAfterUpdate {
+    NSLog(@"Continue after update");
+    //Start by adding the frontpage
+    _navController = [[RWNavigationController alloc] init];
+    RWMainViewController *mainView = [[RWMainViewController alloc] initWithStartPage:[_xml getFrontPage]];
+    self.window.rootViewController = mainView;
+
+    //And then push the push message page on to the stack
+    NSString *messageid = _localNotification[@"content"][@"messageid"];
+    NSMutableDictionary *pushPage = [NSMutableDictionary dictionaryWithDictionary:[[_xml getPage:@"Nyhedsside"] getDictionaryFromNode]];
+    [pushPage setObject:messageid forKey:[RWPAGE ARTICLEID]];
+
+    [_navController pushViewWithParameters:pushPage];
+    NSLog(@"Continue to push content");
+}
+
+- (void)errorOccured:(NSString *)errorMessage {
+
+}
+
 
 - (void)startOnSplashScreen {
 	NSLog(@"Start on Splash Screen");

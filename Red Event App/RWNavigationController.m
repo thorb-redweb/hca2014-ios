@@ -20,6 +20,8 @@
 #import "RWImageArticleListViewController.h"
 #import "RWMainViewController.h"
 #import "RWOverviewMapViewController.h"
+#import "RWPushMessageDetailViewController.h"
+#import "RWPushMessageListViewController.h"
 #import "RWSessionDetailViewController.h"
 #import "RWSessionListViewController.h"
 #import "RWSessionMapViewController.h"
@@ -29,6 +31,7 @@
 #import "RWTableNavigatorViewController.h"
 #import "RWVenueDetailViewController.h"
 #import "RWVenueMapViewController.h"
+#import "RWPushMessageAutoSubscriberViewController.h"
 
 @interface RWNavigationController ()
 
@@ -55,24 +58,33 @@
 }
 
 - (void)pushViewWithParameters:(NSDictionary *)parameters {
-	RWAppDelegate *app = [[UIApplication sharedApplication] delegate];
-	BOOL pageBelongsToSwipeView = [parameters objectForKey:[RWPAGE PARENT]] != nil && [app.xml nameBelongsToSwipeView:[parameters objectForKey:[RWPAGE PARENT]]];
-	if (!pageBelongsToSwipeView){
-		UIViewController *newViewController = [RWNavigationController getViewControllerFromDictionary:parameters];
-		[self pushViewController:newViewController];
-	}
-	else {
-		RWXmlNode *swipeView = [app.xml getPage:[parameters objectForKey:[RWPAGE PARENT]]];
-		UIViewController *swipeViewController = [RWNavigationController getViewControllerFromDictionary:[swipeView getDictionaryFromNode]];
-		[self pushViewController:swipeViewController];
-	}
+    [self pushViewWithParameters:parameters addToBackStack:YES];
 }
 
-- (void)pushViewController:(UIViewController *)newViewController {
+- (void)pushViewWithParameters:(NSDictionary *)parameters addToBackStack:(bool)addToBackStack{
+	RWAppDelegate *app = (RWAppDelegate *)[[UIApplication sharedApplication] delegate];
+	BOOL pageBelongsToSwipeView = [parameters objectForKey:[RWPAGE PARENT]] != nil && [app.xml nameBelongsToSwipeView:[parameters objectForKey:[RWPAGE PARENT]]];
+	if (!pageBelongsToSwipeView && !([parameters[[RWPAGE TYPE]] isEqual: [RWTYPE PUSHMESSAGEAUTOSUBSCRIBER]])){
+		UIViewController *newViewController = [RWNavigationController getViewControllerFromDictionary:parameters];
+		[self pushViewController:newViewController addToBackStack:addToBackStack ];
+	}
+	else if(pageBelongsToSwipeView){
+		RWXmlNode *swipeView = [app.xml getPage:[parameters objectForKey:[RWPAGE PARENT]]];
+		UIViewController *swipeViewController = [RWNavigationController getViewControllerFromDictionary:[swipeView getDictionaryFromNode]];
+		[self pushViewController:swipeViewController addToBackStack:addToBackStack ];
+	}
+    else if([parameters[[RWPAGE TYPE]] isEqual:[RWTYPE PUSHMESSAGEAUTOSUBSCRIBER]]){
+        UIViewController *newViewController = [RWNavigationController getViewControllerFromDictionary:parameters];
+        [self pushViewController:newViewController addToBackStack:NO];
+    }
+}
+
+- (void)pushViewController:(UIViewController *)newViewController addToBackStack:(bool)addToBackStack {
 
 	UIViewController *currentViewController = viewControllers.lastObject;
-	
-	[viewControllers addObject:newViewController];
+	if(addToBackStack){
+	    [viewControllers addObject:newViewController];
+    }
 	
 	[UIView transitionWithView:_mainView duration:0.5
 					   options:UIViewAnimationOptionTransitionFlipFromRight
@@ -139,6 +151,16 @@
     else if ([viewControllerType isEqual:[RWTYPE IMAGEARTICLELIST]]) {
         int catid = [parameters[[RWPAGE CATID]] intValue];
         return [[RWImageArticleListViewController alloc] initWithNibName:@"RWImageArticleListViewController" bundle:nil name:name catid:catid];
+    }
+    else if ([viewControllerType isEqual:[RWTYPE PUSHMESSAGEAUTOSUBSCRIBER]]) {
+        return [[RWPushMessageAutoSubscriberViewController alloc] initWithName:name];
+    }
+    else if ([viewControllerType isEqual:[RWTYPE PUSHMESSAGEDETAIL]]) {
+		int pushmessageid = [parameters[[RWPAGE PUSHMESSAGEID]] intValue];
+        return [[RWPushMessageDetailViewController alloc] initWithName:name pushmessageid:pushmessageid];
+    }
+    else if ([viewControllerType isEqual:[RWTYPE PUSHMESSAGELIST]]) {
+        return [[RWPushMessageListViewController alloc] initWithName:name];
     }
     else if ([viewControllerType isEqual:[RWTYPE OVERVIEWMAP]]) {
         return [[RWOverviewMapViewController alloc] initWithName:name];

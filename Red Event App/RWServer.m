@@ -9,6 +9,7 @@
 #import "RWServer.h"
 
 #import "RWAppDelegate.h"
+#import "RWHandler_UploadRegistrationAttributes.h"
 
 @interface RWServer ()
 
@@ -37,7 +38,7 @@
 
     RWHandler_DumpServer *handler = [[RWHandler_DumpServer alloc] init];
     handler.delegate = self;
-    NSString *dumpFileString = [NSString stringWithFormat:@"%@%@", _dataFilesFolderPath, @"coreData.txt"];
+    NSString *dumpFileString = [NSString stringWithFormat:@"%@%@", _dataFilesFolderPath, @"getDump.php"];
     NSURL *dumpFileUrl = [NSURL URLWithString:dumpFileString];
     [handler startDownloadWithFromUrl:dumpFileUrl];
 
@@ -71,16 +72,11 @@
     [_db updateDatabase:data delegate:updateDatabaseDelegate];
 }
 
-- (void)getImage:(NSObject *)delegate imageLink:(NSURL *)url {
-    RWHandler_GetImage *handler = [[RWHandler_GetImage alloc] init];
-    handler.delegate = delegate;
-    [handler startDownload:url];
-}
-
-- (void)getImage:(NSObject *)delegate imageLink:(NSURL *)url wantedSize:(CGSize)wantedSize {
-    RWHandler_GetImage *handler = [[RWHandler_GetImage alloc] init];
-    handler.delegate = delegate;
-    [handler startDownload:url wantedSize:wantedSize];
+- (void)sendProviderDeviceToken:(NSData *)devTokenBytes {
+	RWHandler_UploadRegistrationAttributes *handler = [[RWHandler_UploadRegistrationAttributes  alloc] init];
+    NSString *webserviceString = [NSString stringWithFormat:@"%@pushhost.php", _dataFilesFolderPath];
+    NSURL *webserviceUrl = [NSURL URLWithString:webserviceString];
+    [handler startUploadWithFromUrl:webserviceUrl deviceToken:devTokenBytes];
 }
 
 - (void)errorOccured:(NSString *)errorMessage{
@@ -91,5 +87,4 @@
 		[updateDatabaseDelegate errorOccured:errorMessage];
 	}	
 }
-
 @end

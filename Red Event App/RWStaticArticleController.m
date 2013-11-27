@@ -6,6 +6,8 @@
 //  Copyright (c) 2013 redWEB. All rights reserved.
 //
 
+#import "UIWebView+RWWebView.h"
+
 #import "RWStaticArticleController.h"
 #import "RWArticleVM.h"
 #import "RWAppearanceHelper.h"
@@ -41,6 +43,10 @@
     RWAppearanceHelper *helper = [[RWAppearanceHelper alloc] initWithLocalLook:_localLook globalLook:_globalLook];
 
     [helper setBackgroundColor:self.view localName:[RWLOOK STATICARTICLE_BACKGROUNDCOLOR] globalName:[RWLOOK DEFAULT_BACKCOLOR]];
+}
+
+- (void)webViewDidFinishLoad:(UIWebView *)webView {
+    [_webBody RWSizeThatFitsContent];
 }
 
 - (void)didReceiveMemoryWarning {

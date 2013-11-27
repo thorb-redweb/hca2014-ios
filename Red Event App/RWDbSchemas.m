@@ -74,6 +74,19 @@
     return @"submission";
 }
 
++ (NSString *)PUSH_TABLENAME {return @"PushMessage";}
++ (NSString *)PUSH_PUSHMESSAGEID {return @"pushmessageid";}
++ (NSString *)PUSH_GROUPID {return @"groupid";}
++ (NSString *)PUSH_INTRO {return @"intro";}
++ (NSString *)PUSH_MESSAGE {return @"message";}
++ (NSString *)PUSH_AUTHOR {return @"author";}
++ (NSString *)PUSH_SENDDATE {return @"senddate";}
+
++ (NSString *)PUSHGROUP_TABLENAME {return @"PushMessageGroup";}
++ (NSString *)PUSHGROUP_GROUPID {return @"groupid";}
++ (NSString *)PUSHGROUP_NAME {return @"name";}
++ (NSString *)PUSHGROUP_SUBSCRIBING {return @"subscribing";}
+
 + (NSString *)SES_TABLENAME {
     return @"Session";
 }

@@ -20,12 +20,16 @@
 @class RWSessionVM;
 @class Venue;
 @class RWXMLStore;
+@class RWDbPushMessages;
+@class RWDbPushMessageGroups;
 
 @interface RWDbInterface : NSObject
 
 @property(strong, nonatomic) RWDbArticles *Articles;
 @property(strong, nonatomic) RWDbCommon *Common;
 @property(strong, nonatomic) RWDbEvents *Events;
+@property(strong, nonatomic) RWDbPushMessages *PushMessages;
+@property(strong, nonatomic) RWDbPushMessageGroups *PushMessageGroups;
 @property(strong, nonatomic) RWDbSessions *Sessions;
 @property(strong, nonatomic) RWDbVenues *Venues;
 

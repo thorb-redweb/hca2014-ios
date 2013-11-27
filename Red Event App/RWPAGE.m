@@ -23,6 +23,9 @@
 + (NSString *)NAVNAME {return @"navname";}
 + (NSString *)PAGE {return @"page";}
 + (NSString *)PARENT {return @"parent";}
++ (NSString *)PUSHMESSAGEID {return @"pushmessageid";}
++ (NSString *)PUSHGROUPID {return @"pushgroupid";}
++ (NSString *)PUSHGROUPIDS {return @"pushgroupids";}
 + (NSString *)RETURNBUTTON {return @"returnbutton";}
 + (NSString *)RETURNONTAP {return @"returnontap";}
 + (NSString *)SESSIONID {return @"sessionid";}
@@ -46,6 +49,9 @@
 + (NSString *)BUTTON6CHILD {return @"button6child";}
 + (NSString *)BUTTON7CHILD {return @"button7child";}
 + (NSString *)BUTTON8CHILD {return @"button8child";}
+
+//PushMessageList Specific
++ (NSString *)SUBSCRIPTIONS {return @"subscriptions";}
 
 //TableNavigator Specific
 + (NSString *)ENTRY {return @"entry";}

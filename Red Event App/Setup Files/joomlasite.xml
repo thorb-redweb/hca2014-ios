@@ -1,8 +1,8 @@
 <network>
 	<datafolder>
-		<path>http://jul.redweb.dk/appdata/</path>
+		<path>http://nhat.intern.redweb.dk/appdata/</path>
 	</datafolder>
 	<joomla>
-		<path>http://jul.redweb.dk/</path>
+		<path>http://nhat.intern.redweb.dk/</path>
 	</joomla>
 </network>

@@ -22,6 +22,8 @@
 
 +(NSString *)NEWSTICKER_TITLE {return @"Seneste Nyheder";}
 
++(NSString *)PUSHMESSAGEDETAIL_BACKBUTTON {return @"Tilbage";}
+
 +(NSString *)SESSIONDETAIL_DATE {return @"Dato";}
 +(NSString *)SESSIONDETAIL_PLACE {return @"Sted";}
 +(NSString *)SESSIONDETAIL_TIME {return @"Tidspunkt";}

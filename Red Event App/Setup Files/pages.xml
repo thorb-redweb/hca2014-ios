@@ -7,9 +7,18 @@
         <backgroundimage>splash.png</backgroundimage>
     </page>
     <page>
+        <name>AutoSubscriber</name>
+        <type>PushMessageAutoSubscriber</type>
+        <frontpage>true</frontpage>
+        <child>SwipeView</child>
+    </page>
+    <page>
         <name>TableNavigator</name>
         <type>TableNavigator</type>
-        <frontpage>true</frontpage>
+        <entry>
+            <name>SwipeView</name>
+            <backicon>arrow_right.png</backicon>
+        </entry>
         <entry>
             <name>Program</name>
             <backicon>arrow_right.png</backicon>
@@ -26,8 +35,8 @@
     <page>
         <name>SwipeView</name>
         <type>SwipeView</type>
-        <frontpage>true</frontpage>
         <section>Nyheder</section>
+        <section>PushMessageList</section>
         <section>About</section>
     </page>
     <page>
@@ -43,6 +52,19 @@
         <name>Nyhedsside</name>
         <type>ArticleDetail</type>
         <parent>Nyheder</parent>
+        <returnbutton>YES</returnbutton>
+    </page>
+    <page>
+        <name>PushMessageList</name>
+        <type>PushMessageList</type>
+        <navname>PushMessages</navname>
+        <parent>SwipeView</parent>
+        <child>PushMessage</child>
+    </page>
+    <page>
+        <name>PushMessage</name>
+        <type>PushMessageDetail</type>
+        <parent>PushMessageList</parent>
         <returnbutton>YES</returnbutton>
     </page>
     <page>
@@ -70,6 +92,7 @@
         <parent>Begivenhed</parent>
         <child>Begivenhed</child>
         <returnbutton>YES</returnbutton>
+		<zoom>10</zoom>
     </page>
     <page>
         <name>OverviewMap</name>
@@ -90,5 +113,8 @@
         <name>VenueMap</name>
         <type>VenueMap</type>
         <parent>RedWeb</parent>
+		<longitude>10</longitude>
+		<latitude>10</latitude>
+		<zoom>10</zoom>
     </page>
 </pages>

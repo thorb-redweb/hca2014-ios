@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 #import "RWBaseViewController.h"
-#import "RWHandler_GetImage.h"
 
 @interface RWImageArticleListViewController : RWBaseViewController <UITableViewDelegate, UITableViewDataSource>
 

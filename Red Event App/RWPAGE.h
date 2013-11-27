@@ -22,6 +22,9 @@
 + (NSString *)NAVNAME;
 + (NSString *)PAGE;
 + (NSString *)PARENT;
++ (NSString *)PUSHMESSAGEID;
++ (NSString *)PUSHGROUPID;
++ (NSString *)PUSHGROUPIDS;
 + (NSString *)RETURNBUTTON;
 + (NSString *)RETURNONTAP;
 + (NSString *)SECTION;
@@ -46,6 +49,9 @@
 + (NSString *)BUTTON7CHILD;
 + (NSString *)BUTTON8CHILD;
 
+//PushMessageList Specific
++ (NSString *)SUBSCRIPTIONS;
+
 //TableNavigator Specific
 + (NSString *)ENTRY;
 + (NSString *)BACKICON;
@@ -61,5 +67,4 @@
 
 //Tags
 + (NSString *)TAG_SESSIONTITLE;
-
 @end
