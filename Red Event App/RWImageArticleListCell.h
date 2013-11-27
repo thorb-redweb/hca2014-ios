@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 #import "RWArticleVM.h"
-#import "RWHandler_GetImage.h"
 
 @interface RWImageArticleListCell : UITableViewCell
 

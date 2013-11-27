@@ -38,9 +38,7 @@
     self.window.backgroundColor = [UIColor whiteColor];
 
     [self setup_CoreData_Xml_Database_And_Server];
-    [self getInitializationData];
-
-    [[UIApplication sharedApplication] registerForRemoteNotificationTypes:(UIRemoteNotificationTypeAlert|UIRemoteNotificationTypeSound)];
+    [self getInitializationData];    
 
     [self setAppearance];
 
@@ -50,7 +48,7 @@
     return YES;
 }
 
-- (void)setup_CoreData_Xml_Database_And_Server {
+-(void)setup_CoreData_Xml_Database_And_Server {
     _xml = [[RWXMLStore alloc] init];
 
     NSManagedObjectContext *context = [self managedObjectContext];
@@ -60,18 +58,15 @@
 
     _db = [[RWDbInterface alloc] initWithManagedObjectContext:context xml:_xml];
     _sv = [[RWServer alloc] initWithDatabase:_db datafilesfolderpath:_xml.dataFilesFolderPath];
+	_pmh = [[RWPushMessageSubscriptionHandler alloc] init];
 }
 
-- (void)getInitializationData {
+-(void)getInitializationData {
 
 }
 
 -(void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken{
-    const void *devTokenBytes = [deviceToken bytes];
-    _registered = YES;
-
-    [_sv sendProviderDeviceToken:devTokenBytes];
-	NSLog(@"My token is: %@", deviceToken);
+	[_pmh receiveRegistrationId:deviceToken];
 }
 
 -(void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error{

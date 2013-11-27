@@ -164,7 +164,7 @@
 
 - (IBAction)openVenuePickingView:(id)sender {
     RWVenuePickerViewController *controller = [[RWVenuePickerViewController alloc] initWithController:self page:_page];
-    [_app.navController pushViewController:controller];
+    [_app.navController pushViewController:controller addToBackStack:YES];
 }
 
 - (void)didReceiveMemoryWarning {

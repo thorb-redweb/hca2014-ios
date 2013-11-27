@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "RWNavigationController.h"
 #import "RWDbInterface.h"
+#import "RWPushMessageSubscriptionHandler.h"
 #import "RWServer.h"
 #import "RWXMLStore.h"
 
@@ -25,8 +26,11 @@
 
 @property(strong, nonatomic) RWNavigationController *navController;
 @property(strong, nonatomic) RWDbInterface *db;
+@property(strong, nonatomic) RWPushMessageSubscriptionHandler *pmh;
 @property(strong, nonatomic) RWServer *sv;
 @property(strong, nonatomic) RWXMLStore *xml;
+
+@property(strong, nonatomic) UIViewController *pushMessageHandler;
 
 - (void)saveContext;
 

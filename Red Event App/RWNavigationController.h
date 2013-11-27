@@ -19,7 +19,9 @@
 
 - (void)pushViewWithParameters:(NSDictionary *)parameters;
 
-- (void)pushViewController:(UIViewController *)newViewController;
+- (void)pushViewWithParameters:(NSDictionary *)parameters addToBackStack:(bool)addToBackStack;
+
+- (void)pushViewController:(UIViewController *)newViewController addToBackStack:(bool)addToBackStack;
 
 - (void)popViewController;
 

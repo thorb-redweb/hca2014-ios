@@ -7,6 +7,12 @@
         <backgroundimage>splash.png</backgroundimage>
     </page>
     <page>
+        <name>AutoSubscriber</name>
+        <type>PushMessageAutoSubscriber</type>
+        <frontpage>true</frontpage>
+        <child>SwipeView</child>
+    </page>
+    <page>
         <name>TableNavigator</name>
         <type>TableNavigator</type>
         <entry>
@@ -29,7 +35,6 @@
     <page>
         <name>SwipeView</name>
         <type>SwipeView</type>
-        <frontpage>true</frontpage>
         <section>Nyheder</section>
         <section>PushMessageList</section>
         <section>About</section>
