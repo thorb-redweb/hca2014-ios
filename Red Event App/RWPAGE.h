@@ -32,6 +32,9 @@
 + (NSString *)TABIMAGE;
 + (NSString *)TABNAME;
 + (NSString *)TYPE;
+
++ (NSString *)URL;
+
 + (NSString *)VENUEID;
 
 //SplitView Component Specific

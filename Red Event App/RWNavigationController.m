@@ -32,6 +32,7 @@
 #import "RWVenueDetailViewController.h"
 #import "RWVenueMapViewController.h"
 #import "RWPushMessageAutoSubscriberViewController.h"
+#import "RWWebViewController.h"
 
 @interface RWNavigationController ()
 
@@ -196,6 +197,10 @@
     else if ([viewControllerType isEqual:[RWTYPE VENUEMAP]]) {
         int venueid = [parameters[[RWPAGE VENUEID]] intValue];
         return [[RWVenueMapViewController alloc] initWithName:name venueid:venueid];
+    }
+    else if ([viewControllerType isEqual:[RWTYPE WEBVIEW]]) {
+		NSString *url = parameters[[RWPAGE URL]];
+        return [[RWWebViewController alloc] initWithName:name url:url];
     }
     return nil;
 }

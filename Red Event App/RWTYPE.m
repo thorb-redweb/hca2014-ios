@@ -30,4 +30,5 @@
 + (NSString *)UPCOMINGSESSIONS {return @"UpcomingSessions";}
 + (NSString *)VENUEDETAIL {return @"VenueDetail";}
 + (NSString *)VENUEMAP {return @"VenueMap";}
++ (NSString *)WEBVIEW {return @"WebView";}
 @end

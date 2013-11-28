@@ -161,6 +161,8 @@
 		36A0B3FF1845E2D6007A6C78 /* RWPushMessageAutoSubscriberViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36A0B3FD1845E2D6007A6C78 /* RWPushMessageAutoSubscriberViewController.m */; };
 		36A0B4001845E2D6007A6C78 /* RWPushMessageAutoSubscriberViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36A0B3FE1845E2D6007A6C78 /* RWPushMessageAutoSubscriberViewController.xib */; };
 		36A0B4041845E952007A6C78 /* RWPushMessageSubscriptionHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 36A0B4031845E952007A6C78 /* RWPushMessageSubscriptionHandler.m */; };
+		36A0B40A18474F4B007A6C78 /* RWWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36A0B40818474F4B007A6C78 /* RWWebViewController.m */; };
+		36A0B40B18474F4B007A6C78 /* RWWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36A0B40918474F4B007A6C78 /* RWWebViewController.xib */; };
 		36A727AA17C794E400374063 /* navbar.png in Resources */ = {isa = PBXBuildFile; fileRef = 36A727A917C794E400374063 /* navbar.png */; };
 		36A727AC17C7992100374063 /* appearance.xml in Resources */ = {isa = PBXBuildFile; fileRef = 36A727AB17C7992100374063 /* appearance.xml */; };
 		36A727AF17C799A500374063 /* UIColor+RWColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 36A727AE17C799A500374063 /* UIColor+RWColor.m */; };
@@ -497,6 +499,9 @@
 		36A0B3FE1845E2D6007A6C78 /* RWPushMessageAutoSubscriberViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RWPushMessageAutoSubscriberViewController.xib; sourceTree = "<group>"; };
 		36A0B4021845E952007A6C78 /* RWPushMessageSubscriptionHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWPushMessageSubscriptionHandler.h; sourceTree = "<group>"; };
 		36A0B4031845E952007A6C78 /* RWPushMessageSubscriptionHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWPushMessageSubscriptionHandler.m; sourceTree = "<group>"; };
+		36A0B40718474F4B007A6C78 /* RWWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWWebViewController.h; sourceTree = "<group>"; };
+		36A0B40818474F4B007A6C78 /* RWWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWWebViewController.m; sourceTree = "<group>"; };
+		36A0B40918474F4B007A6C78 /* RWWebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RWWebViewController.xib; sourceTree = "<group>"; };
 		36A727A917C794E400374063 /* navbar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = navbar.png; path = "Red Event App/Resources/navbar.png"; sourceTree = "<group>"; };
 		36A727AB17C7992100374063 /* appearance.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = appearance.xml; sourceTree = "<group>"; };
 		36A727AD17C799A500374063 /* UIColor+RWColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+RWColor.h"; sourceTree = "<group>"; };
@@ -1085,6 +1090,24 @@
 			name = PushMessages;
 			sourceTree = "<group>";
 		};
+		36A0B40518474F0C007A6C78 /* Misc */ = {
+			isa = PBXGroup;
+			children = (
+				36A0B40618474F19007A6C78 /* WebView */,
+			);
+			name = Misc;
+			sourceTree = "<group>";
+		};
+		36A0B40618474F19007A6C78 /* WebView */ = {
+			isa = PBXGroup;
+			children = (
+				36A0B40718474F4B007A6C78 /* RWWebViewController.h */,
+				36A0B40818474F4B007A6C78 /* RWWebViewController.m */,
+				36A0B40918474F4B007A6C78 /* RWWebViewController.xib */,
+			);
+			name = WebView;
+			sourceTree = "<group>";
+		};
 		36A7289217CB47F800374063 /* Map */ = {
 			isa = PBXGroup;
 			children = (
@@ -1243,6 +1266,7 @@
 				36A79EF317C6086E00AB211B /* Article */,
 				3645BFB317D75BE500047159 /* Frontpage Containers */,
 				36A7289217CB47F800374063 /* Map */,
+				36A0B40518474F0C007A6C78 /* Misc */,
 				361EA882180BD54C00441271 /* Navigation */,
 				36214F7D183F6D96001B0B63 /* Push Messages */,
 				36A79EF417C6089800AB211B /* Session */,
@@ -1571,6 +1595,7 @@
 				3683F1A1181FEEF900C22E46 /* btnseeyou.png in Resources */,
 				36354BCE181FC8410046066E /* xmas1.jpg in Resources */,
 				36AB7C6717BE5BB800316921 /* RWImageArticleListCell.xib in Resources */,
+				36A0B40B18474F4B007A6C78 /* RWWebViewController.xib in Resources */,
 				36AB7C7117BE6ACA00316921 /* default_icon.jpeg in Resources */,
 				36AB7CA617C2050600316921 /* pages.xml in Resources */,
 				361EA889180BD63100441271 /* RWButtonGalleryViewController.xib in Resources */,
@@ -1788,6 +1813,7 @@
 				26E7310DA927A709CB10946A /* RWPushMessageGroupVM.m in Sources */,
 				26E737417E9A7D53ACC6F777 /* RWDbPushMessages.m in Sources */,
 				26E73E6BFACAD78541169151 /* RWDbPushMessageGroups.m in Sources */,
+				36A0B40A18474F4B007A6C78 /* RWWebViewController.m in Sources */,
 				26E734A2B5323E2D6BAE0D92 /* RWHandler_UploadRegistrationAttributes.m in Sources */,
 				26E73F9B73057802C8C4ED73 /* Red_Event_App.xcdatamodel in Sources */,
 				26E735F06E488F1E88044871 /* RWAppearanceHelper.m in Sources */,
