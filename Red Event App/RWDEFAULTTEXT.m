@@ -33,4 +33,6 @@
 
 +(NSString *)VENUEDETAIL_ADDRESS {return @"Adresse";}
 +(NSString *)VENUEDETAIL_MAPBUTTON {return @"Find lokalitet på kort";}
+
++ (NSString *)WEBVIEW_BACKBUTTON {return @"Tilbage";}
 @end

@@ -47,4 +47,6 @@
 
 +(NSString *)VENUEDETAIL_ADDRESS {return @"address";}
 +(NSString *)VENUEDETAIL_MAPBUTTON {return @"mapbutton";}
+
++ (NSString *)WEBVIEW_BACKBUTTON {return @"backbutton";}
 @end

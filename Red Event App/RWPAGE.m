@@ -33,6 +33,7 @@
 + (NSString *)TABIMAGE {return @"tabimage";}
 + (NSString *)TABNAME {return @"tabname";}
 + (NSString *)TYPE {return @"type";}
++ (NSString *)URL {return @"url";}
 + (NSString *)VENUEID {return @"venueid";}
 
 //SplitView Component Specific

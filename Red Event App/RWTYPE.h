@@ -50,4 +50,6 @@
 + (NSString *)VENUEDETAIL;
 
 + (NSString *)VENUEMAP;
+
++ (NSString *)WEBVIEW;
 @end
