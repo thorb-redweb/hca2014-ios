@@ -15,6 +15,7 @@
     <page>
         <name>TableNavigator</name>
         <type>TableNavigator</type>
+        <tabname>Forside</tabname>
         <entry>
             <name>SwipeView</name>
             <backicon>arrow_right.png</backicon>
@@ -35,7 +36,7 @@
     <page>
         <name>SwipeView</name>
         <type>SwipeView</type>
-        <section>Nyheder</section>
+		<section>Nyheder</section>
         <section>PushMessageList</section>
         <section>About</section>
     </page>
@@ -43,7 +44,6 @@
         <name>Nyheder</name>
         <type>ImageArticleList</type>
         <catid>12</catid>
-        <tabname>Forside</tabname>
         <navname>Nyheder</navname>
         <parent>SwipeView</parent>
         <child>Nyhedsside</child>

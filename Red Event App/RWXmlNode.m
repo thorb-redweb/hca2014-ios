@@ -36,6 +36,30 @@
     return description;
 }
 
+- (RWXmlNode *)deepClone{
+	return [[RWXmlNode alloc] initWithName:_name value:[self deepCloneFromChildNode:self]];
+}
+
+- (NSMutableArray *)deepCloneFromChildNode:(RWXmlNode *)node {
+	
+    NSMutableArray *array = [[NSMutableArray alloc] init];
+	
+    for (RWXmlNode *child in node.value) {
+
+		NSObject *value;
+        if ([child.value isKindOfClass:[NSArray class]]) {
+			value = [self deepCloneFromChildNode:child];
+        }
+        else {
+            value = child.value;
+        }
+		RWXmlNode *copyChild = [[RWXmlNode alloc] initWithName:child.name value:value];
+		[array addObject:copyChild];
+    }
+	
+    return array;
+}
+
 - (int)childCount {
     if ([_value isKindOfClass:[NSArray class]]) {
         NSArray *array = _value;
@@ -116,6 +140,15 @@
             [nodeArray addObject:child];
     }
 	return nodeArray;
+}
+
+- (void)addNodeWithName:(NSString *)name value:(id)value{
+	if ([_value isKindOfClass:[NSMutableArray class]]) {
+		NSMutableArray *array = (NSMutableArray *)_value;
+		[array addObject:[[RWXmlNode alloc] initWithName:name value:value]];
+		return;
+	}
+	[NSException raise:@"Node does not contain an array" format:@"Node '%@' does not contain an array", _name];
 }
 
 - (NSDictionary *)getDictionaryFromNode {

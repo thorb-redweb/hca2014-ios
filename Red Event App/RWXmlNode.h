@@ -17,6 +17,8 @@
 
 - (NSString *)description;
 
+- (RWXmlNode *)deepClone;
+
 - (int)childCount;
 
 - (NSString *)getStringFromNode:(NSString *)name;
@@ -36,6 +38,8 @@
 - (RWXmlNode *)getChildFromNode:(NSString *)name;
 
 - (NSArray *)getAllChildNodesWithName:(NSString *)name;
+
+- (void)addNodeWithName:(NSString *)name value:(id)value;
 
 - (NSDictionary *)getDictionaryFromNode;
 

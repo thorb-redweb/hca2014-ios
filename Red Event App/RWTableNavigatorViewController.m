@@ -70,7 +70,6 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *CellIdentifier = @"RWTableNavigatorCell";
     RWTableNavigatorCell *cell = (RWTableNavigatorCell *) [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-
     if (cell == nil) {
         NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"RWTableNavigatorCell" owner:self options:nil];
         cell = [nib objectAtIndex:0];
