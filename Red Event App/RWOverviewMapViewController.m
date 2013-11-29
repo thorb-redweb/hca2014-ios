@@ -23,8 +23,8 @@
 }
 
 
-- (id)initWithName:(NSString *)name {
-    self = [super initWithName:name];
+- (id)initWithPage:(RWXmlNode *)page {
+    self = [super initWithPage:page];
     if (self) {
         firstLoadOfMyLocation = YES;
     }

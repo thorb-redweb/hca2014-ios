@@ -20,14 +20,13 @@
 @end
 
 @implementation RWAdventWindowViewController{
-	int _articleId;
-	RWArticleVM *_article;
+    RWArticleVM *_article;
 }
 
-- (id)initWithName:(NSString *)name articleid:(int)articleid{
-	self = [super initWithNibName:@"RWAdventWindowViewController" bundle:nil name:name];
+- (id)initWithPage:(RWXmlNode *)page{
+	self = [super initWithNibName:@"RWAdventWindowViewController" bundle:nil page:page];
     if (self) {
-		_articleId = articleid;
+
 	}
     return self;
 }
@@ -39,8 +38,9 @@
     [_scrollview setTranslatesAutoresizingMaskIntoConstraints:NO];
 	
     _scrollview.bounces = NO;
-	
-	_article = [_db.Articles getVMFromId:_articleId];
+
+    int articleId = [_page getIntegerFromNode:[RWPAGE ARTICLEID]];
+	_article = [_db.Articles getVMFromId:articleId];
 	
 	[self setAppearance];
 	[self setText];

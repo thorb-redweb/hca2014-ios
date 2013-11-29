@@ -17,6 +17,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *lblMessage;
 @property (weak, nonatomic) IBOutlet UIButton *btnBack;
 
-- (id)initWithName:(NSString *)name pushmessageid:(int)pushmessageid;
+- (id)initWithPage:(RWXmlNode *)page;
 
 @end

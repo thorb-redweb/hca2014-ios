@@ -13,6 +13,6 @@
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil name:(NSString *)name catid:(int)catid;
+- (id)initWithPage:(RWXmlNode *)page;
 
 @end

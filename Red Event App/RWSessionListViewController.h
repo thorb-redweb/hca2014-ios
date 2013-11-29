@@ -11,6 +11,6 @@
 
 @interface RWSessionListViewController : RWBaseViewController <UITabBarDelegate, UITableViewDelegate, UITableViewDataSource>
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil name:(NSString *)name;
+- (id)initWithPage:(RWXmlNode *)page;
 
 @end

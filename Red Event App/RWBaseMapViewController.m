@@ -20,9 +20,9 @@
     CLLocation *myLocation;
 }
 
-- (id)initWithName:(NSString *)name
+- (id)initWithPage:(RWXmlNode *)page
 {
-    self = [super initWithNibName:@"RWBaseMapView" bundle:nil name:name];
+    self = [super initWithNibName:@"RWBaseMapView" bundle:nil page:page];
     if (self) {
         firstLoadOfMyLocation = YES;
     }

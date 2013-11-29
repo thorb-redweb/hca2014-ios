@@ -11,6 +11,6 @@
 
 @interface RWVenueMapViewController : RWBaseMapViewController
 
-- (id)initWithName:(NSString *)name venueid:(int)venueid;
+- (id)initWithPage:(RWXmlNode *)page;
 
 @end

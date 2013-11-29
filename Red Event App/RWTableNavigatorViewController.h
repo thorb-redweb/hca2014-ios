@@ -14,6 +14,6 @@
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
-- (id)initWithName:(NSString *)name;
+- (id)initWithPage:(RWXmlNode *)page;
 
 @end

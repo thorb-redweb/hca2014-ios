@@ -20,7 +20,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *lblBody;
 @property (weak, nonatomic) IBOutlet UIWebView *webBody;
 
-- (id)initWithName:(NSString *)name venueId:(int)venueId;
+- (id)initWithPage:(RWXmlNode *)page;
 
 - (IBAction)btnMapPressed:(id)sender;
 

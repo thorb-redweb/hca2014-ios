@@ -19,15 +19,14 @@
 @end
 
 @implementation RWVenueDetailViewController{
-	int _venueId;
 	RWVenueVM *_venue;
 }
 
-- (id)initWithName:(NSString *)name venueId:(int)venueId
+- (id)initWithPage:(RWXmlNode *)page
 {
-    self = [super initWithNibName:@"RWVenueDetailViewController" bundle:nil name:name];
+    self = [super initWithNibName:@"RWVenueDetailViewController" bundle:nil page:page];
     if (self) {
-        _venueId = venueId;
+
     }
     return self;
 }
@@ -83,7 +82,8 @@
 }
 
 -(void)applyModel{
-	_venue = [_db.Venues getVMFromId:_venueId];
+    int venueId = [_page getIntegerFromNode:[RWPAGE VENUEID]];
+	_venue = [_db.Venues getVMFromId:venueId];
 	
 	[_lblTitle setText:_venue.title];
 	[_imgMain setImageWithURL:_venue.imageUrl placeholderImage:[UIImage imageNamed:@"default_icon.jpg"]];
@@ -108,9 +108,8 @@
 
 - (IBAction)btnMapPressed:(id)sender{
 	RWXmlNode *childPage = [_xml getPage:_childname];
- 	NSMutableDictionary *childDictionary = [NSMutableDictionary dictionaryWithDictionary:[childPage getDictionaryFromNode]];
-	[childDictionary setValue:[NSNumber numberWithInt:_venue.venueid] forKey:[RWPAGE VENUEID]];
-	[_app.navController pushViewWithParameters:childDictionary];
+    [childPage addNodeWithName:[RWPAGE VENUEID] value:[_page getStringFromNode:[RWPAGE VENUEID]]];
+	[_app.navController pushViewWithParameters:childPage];
 }
 
 - (void)didReceiveMemoryWarning

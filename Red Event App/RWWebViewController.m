@@ -15,14 +15,13 @@
 @end
 
 @implementation RWWebViewController{
-	NSString *_url;
 }
 
-- (id)initWithName:(NSString *)name url:(NSString *)url
+- (id)initWithPage:(RWXmlNode *)page
 {
-    self = [super initWithNibName:@"RWWebViewController" bundle:nil name:name];
+    self = [super initWithNibName:@"RWWebViewController" bundle:nil page:page];
     if (self) {
-		_url = url;
+
     }
     return self;
 }
@@ -35,7 +34,8 @@
     [self setAppearance];
     [self setText];
 
-    NSURL* nsUrl = [NSURL URLWithString:_url];
+    NSString * url = [_page getStringFromNode:[RWPAGE URL]];
+    NSURL* nsUrl = [NSURL URLWithString:url];
 
     NSURLRequest* request = [NSURLRequest requestWithURL:nsUrl cachePolicy:NSURLRequestReloadIgnoringLocalAndRemoteCacheData timeoutInterval:30];
 
@@ -79,11 +79,10 @@
 
 - (BOOL)webView:(UIWebView *)inWeb shouldStartLoadWithRequest:(NSURLRequest *)inRequest navigationType:(UIWebViewNavigationType)inType {
     if (inType == UIWebViewNavigationTypeLinkClicked) {
-		NSMutableDictionary *dictionary = [NSMutableDictionary dictionaryWithDictionary: [_page getDictionaryFromNode]];
-		[dictionary removeObjectForKey:[RWPAGE URL]];
-		NSString *url = [NSString stringWithFormat:@"%@/",inRequest.URL];
-		[dictionary setValue:url forKey:[RWPAGE URL]];
-		[_app.navController pushViewWithParameters:dictionary];
+		RWXmlNode *nextPage = _page.deepClone;
+        NSString *url = [NSString stringWithFormat:@"%@/",inRequest.URL];
+		[nextPage replaceValueOfNodeWithName:[RWPAGE URL] value:url];
+		[_app.navController pushViewWithParameters:nextPage];
 		
 //		NSURL *nsUrl = inRequest.URL;
 //		NSURLRequest* request = [NSURLRequest requestWithURL:nsUrl cachePolicy:NSURLRequestReloadIgnoringLocalAndRemoteCacheData timeoutInterval:30];

@@ -21,9 +21,9 @@
     NSArray *_dataSource;
 }
 
-- (id)initWithName:(NSString *)name
+- (id)initWithPage:(RWXmlNode *)page
 {
-    self = [super initWithNibName:nil bundle:nil name:name];
+    self = [super initWithNibName:nil bundle:nil page:page];
     if (self) {
         // Custom initialization
     }
@@ -69,10 +69,9 @@
     RWPushMessageVM *model = _dataSource[indexPath.row];
 
     RWXmlNode *childPage = [_xml getPage:_childname];
-    NSMutableDictionary *childDictionary = [[NSMutableDictionary alloc]initWithDictionary:[childPage getDictionaryFromNode]];
-    [childDictionary setObject:model.pushmessageid forKey:[RWPAGE PUSHMESSAGEID]];
+    [childPage addNodeWithName:[RWPAGE PUSHMESSAGEID] value:model.pushmessageid];
 
-    [_app.navController pushViewWithParameters:childDictionary];
+    [_app.navController pushViewWithParameters:childPage];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {

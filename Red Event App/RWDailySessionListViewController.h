@@ -22,7 +22,7 @@
 
 @property(nonatomic) RWVenueVM *filterVenue;
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil name:(NSString *)name;
+- (id)initWithPage:(RWXmlNode *)page;
 
 - (IBAction)previousDay:(id)sender;
 

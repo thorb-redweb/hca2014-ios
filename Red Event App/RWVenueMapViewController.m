@@ -16,14 +16,13 @@
 @implementation RWVenueMapViewController{
 	
     RWVenueVM *_model;
-    GMSMarker *myMarker;
 }
 
-- (id)initWithName:(NSString *)name venueid:(int)venueid
+- (id)initWithPage:(RWXmlNode *)page
 {
-    self = [super initWithName:name];
+    self = [super initWithPage:page];
     if (self) {
-        _model = [_db.Venues getVMFromId:venueid];
+
     }
     return self;
 }
@@ -31,7 +30,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+
+    int venueId = [_page getIntegerFromNode:[RWPAGE VENUEID]];
+    _model = [_db.Venues getVMFromId:venueId];
+
 	int zoom = [_page getIntegerFromNode:[RWPAGE ZOOM]];
 		
     super.mapView.camera = [GMSCameraPosition cameraWithLatitude:_model.latitude longitude:_model.longitude zoom:zoom];

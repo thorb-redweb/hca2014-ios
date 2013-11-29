@@ -17,15 +17,13 @@
 @end
 
 @implementation RWStaticArticleController {
-    int _contid;
-
     RWArticleVM *_model;
 }
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil name:(NSString *)name articleid:(int)contid {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil name:name];
+- (id)initWithPage:(RWXmlNode *)page {
+    self = [super initWithNibName:@"RWStaticArticleController" bundle:nil page:page];
     if (self) {
-        _contid = contid;
+
     }
     return self;
 }
@@ -34,7 +32,8 @@
     [super viewDidLoad];
     [self.view setTranslatesAutoresizingMaskIntoConstraints:NO];
 
-    _model = [_db.Articles getVMFromId:_contid];
+    int articleId = [_page getIntegerFromNode:[RWPAGE ARTICLEID]];
+    _model = [_db.Articles getVMFromId:articleId];
 
     [_webBody loadHTMLString:_model.fulltext baseURL:nil];
 }

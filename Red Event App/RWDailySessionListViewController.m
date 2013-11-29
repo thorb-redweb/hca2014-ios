@@ -37,8 +37,8 @@
 }
 
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil name:(NSString *)name {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil name:name];
+- (id)initWithPage:(RWXmlNode *)page {
+    self = [super initWithNibName:@"RWDailySessionListViewController" bundle:nil page:page];
     if (self) {
 		
     }
@@ -177,12 +177,10 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     RWSessionVM *model = dataSource[indexPath.row];
 
-    NSMutableDictionary *sessiondetailVariables = [[NSMutableDictionary alloc] init];
-    [sessiondetailVariables setObject:[RWTYPE SESSIONDETAIL] forKey:[RWPAGE TYPE]];
-    [sessiondetailVariables setObject:_childname forKey:[RWPAGE NAME]];
-    [sessiondetailVariables setObject:model.sessionid forKey:[RWPAGE SESSIONID]];
+    RWXmlNode *nextPage = [_xml getPage:_childname];
+    [nextPage addNodeWithName:[RWPAGE SESSIONID] value:model.sessionid];
 
-    [_app.navController pushViewWithParameters:sessiondetailVariables];
+    [_app.navController pushViewWithParameters:nextPage];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {

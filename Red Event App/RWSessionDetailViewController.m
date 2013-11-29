@@ -26,15 +26,14 @@
 @end
 
 @implementation RWSessionDetailViewController {
-    int _sessionid;
     RWSessionVM *_model;
 }
 
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil sessionid:(int)sessionid name:(NSString *)name {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil name:name];
+- (id)initWithPage:(RWXmlNode *)page {
+    self = [super initWithNibName:@"RWSessionDetailViewController" bundle:nil page:page];
     if (self) {
-        _sessionid = sessionid;
+
     }
     return self;
 }
@@ -45,8 +44,9 @@
 
 	[self setAppearance];
 	[self setText];
-	
-    _model = [_db.Sessions getVMFromId:_sessionid];
+
+    int sessionId = [_page getIntegerFromNode:[RWPAGE SESSIONID]];
+    _model = [_db.Sessions getVMFromId:sessionId];
 	
 	_lblTitle.text = _model.title;
     _lblDateText.text = [NSString stringWithFormat:@"%@", _model.startDateLong];
@@ -150,14 +150,10 @@
 }
 
 - (IBAction)btnMapPressed:(id)sender {
-    RWAppDelegate *app = [[UIApplication sharedApplication] delegate];
+    RWXmlNode *nextPage = [_xml getPage:_childname];
+    [nextPage addNodeWithName:[RWPAGE SESSIONID] value:_model.sessionid];
 
-    NSMutableDictionary *sessionmapVariables = [[NSMutableDictionary alloc] init];
-    [sessionmapVariables setObject:[RWTYPE SESSIONMAP] forKey:[RWPAGE TYPE]];
-    [sessionmapVariables setObject:_childname forKey:[RWPAGE NAME]];
-    [sessionmapVariables setObject:_model.sessionid forKey:[RWPAGE SESSIONID]];
-
-    [app.navController pushViewWithParameters:sessionmapVariables];
+    [_app.navController pushViewWithParameters:nextPage];
 }
 
 -(IBAction)btnBackClicked{

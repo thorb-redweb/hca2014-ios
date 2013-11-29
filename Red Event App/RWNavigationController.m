@@ -23,7 +23,6 @@
 #import "RWPushMessageDetailViewController.h"
 #import "RWPushMessageListViewController.h"
 #import "RWSessionDetailViewController.h"
-#import "RWSessionListViewController.h"
 #import "RWSessionMapViewController.h"
 #import "RWStaticArticleController.h"
 #import "RWSplitViewController.h"
@@ -52,30 +51,30 @@
 	_navbar = mainViewcontroller.navbar;
 }
 
-- (void)pushViewFromTab:(RWXmlNode *)tabPage {
-    NSDictionary *parameters = [tabPage getDictionaryFromNode];
-
-    [self pushViewWithParameters:parameters];
+- (void)pushViewWithParameters:(RWXmlNode *)page {
+    [self pushViewWithParameters:page addToBackStack:YES];
 }
 
-- (void)pushViewWithParameters:(NSDictionary *)parameters {
-    [self pushViewWithParameters:parameters addToBackStack:YES];
-}
-
-- (void)pushViewWithParameters:(NSDictionary *)parameters addToBackStack:(bool)addToBackStack{
+- (void)pushViewWithParameters:(RWXmlNode *)page addToBackStack:(bool)addToBackStack{
 	RWAppDelegate *app = (RWAppDelegate *)[[UIApplication sharedApplication] delegate];
-	BOOL pageBelongsToSwipeView = [parameters objectForKey:[RWPAGE PARENT]] != nil && [app.xml nameBelongsToSwipeView:[parameters objectForKey:[RWPAGE PARENT]]];
-	if (!pageBelongsToSwipeView && !([parameters[[RWPAGE TYPE]] isEqual: [RWTYPE PUSHMESSAGEAUTOSUBSCRIBER]])){
-		UIViewController *newViewController = [RWNavigationController getViewControllerFromDictionary:parameters];
+    NSString *type =  [page getStringFromNode:[RWPAGE TYPE]];
+    NSString *parent = nil;
+    BOOL pageBelongsToSwipeView = false;
+    if([page hasChild:[RWPAGE PARENT]]){
+        parent = [page getStringFromNode:[RWPAGE PARENT]];
+        pageBelongsToSwipeView = [app.xml nameBelongsToSwipeView:parent];
+    }
+	if (!pageBelongsToSwipeView && !([type isEqual: [RWTYPE PUSHMESSAGEAUTOSUBSCRIBER]])){
+		UIViewController *newViewController = [RWNavigationController getViewControllerFromPage:page];
 		[self pushViewController:newViewController addToBackStack:addToBackStack ];
 	}
 	else if(pageBelongsToSwipeView){
-		RWXmlNode *swipeView = [app.xml getPage:[parameters objectForKey:[RWPAGE PARENT]]];
-		UIViewController *swipeViewController = [RWNavigationController getViewControllerFromDictionary:[swipeView getDictionaryFromNode]];
+		RWXmlNode *swipeViewPage = [app.xml getPage:parent];
+		UIViewController *swipeViewController = [RWNavigationController getViewControllerFromPage:swipeViewPage];
 		[self pushViewController:swipeViewController addToBackStack:addToBackStack ];
 	}
-    else if([parameters[[RWPAGE TYPE]] isEqual:[RWTYPE PUSHMESSAGEAUTOSUBSCRIBER]]){
-        UIViewController *newViewController = [RWNavigationController getViewControllerFromDictionary:parameters];
+    else if([type isEqual:[RWTYPE PUSHMESSAGEAUTOSUBSCRIBER]]){
+        UIViewController *newViewController = [RWNavigationController getViewControllerFromPage:page];
         [self pushViewController:newViewController addToBackStack:NO];
     }
 }
@@ -126,81 +125,68 @@
 	[viewControllers removeObject:currentViewController];
 }
 
-+ (UIViewController *)getViewControllerFromDictionary:(NSDictionary *)parameters {
-    NSString *name = parameters[[RWPAGE NAME]];
-    NSString *viewControllerType = parameters[[RWPAGE TYPE]];
++ (UIViewController *)getViewControllerFromPage:(RWXmlNode *)page {
+    NSString *viewControllerType = [page getStringFromNode:[RWPAGE TYPE]];
+
 	if ([viewControllerType isEqual:[RWTYPE ADVENTCAL]]) {
-        return [[RWAdventCalViewController alloc] initWithName:name];
+        return [[RWAdventCalViewController alloc] initWithPage:page];
     }
     else if ([viewControllerType isEqual:[RWTYPE ADVENTWINDOW]]) {
-		int articleid = [parameters[[RWPAGE ARTICLEID]] intValue];
-        return [[RWAdventWindowViewController alloc] initWithName:name articleid:articleid];
+        return [[RWAdventWindowViewController alloc] initWithPage:page];
     }
     else if ([viewControllerType isEqual:[RWTYPE ARTICLELIST]]) {
-        int catid = [parameters[[RWPAGE CATID]] intValue];
-        return [[RWArticleListViewController alloc] initWithNibName:@"RWArticleListViewController" bundle:nil name:name catid:catid];
+        return [[RWArticleListViewController alloc] initWithPage:page];
     }
     else if ([viewControllerType isEqual:[RWTYPE ARTICLEDETAIL]]) {
-        int articleid = [parameters[[RWPAGE ARTICLEID]] intValue];
-        return [[RWArticleDetailViewController alloc] initWithNibName:@"RWArticleDetailViewController" bundle:nil name:name articleid:articleid];
+        return [[RWArticleDetailViewController alloc] initWithPage:page];
     }
     else if ([viewControllerType isEqual:[RWTYPE BUTTONGALLERY]]) {
-        return [[RWButtonGalleryViewController alloc] initWithName:name];
+        return [[RWButtonGalleryViewController alloc] initWithPage:page];
     }
     else if ([viewControllerType isEqual:[RWTYPE DAILYSESSIONLIST]]) {
-        return [[RWDailySessionListViewController alloc] initWithNibName:@"RWDailySessionListViewController" bundle:nil name:name];    }
+        return [[RWDailySessionListViewController alloc] initWithPage:page];
+    }
     else if ([viewControllerType isEqual:[RWTYPE IMAGEARTICLELIST]]) {
-        int catid = [parameters[[RWPAGE CATID]] intValue];
-        return [[RWImageArticleListViewController alloc] initWithNibName:@"RWImageArticleListViewController" bundle:nil name:name catid:catid];
+        return [[RWImageArticleListViewController alloc] initWithPage:page];
     }
     else if ([viewControllerType isEqual:[RWTYPE PUSHMESSAGEAUTOSUBSCRIBER]]) {
-        return [[RWPushMessageAutoSubscriberViewController alloc] initWithName:name];
+        return [[RWPushMessageAutoSubscriberViewController alloc] initWithPage:page];
     }
     else if ([viewControllerType isEqual:[RWTYPE PUSHMESSAGEDETAIL]]) {
-		int pushmessageid = [parameters[[RWPAGE PUSHMESSAGEID]] intValue];
-        return [[RWPushMessageDetailViewController alloc] initWithName:name pushmessageid:pushmessageid];
+        return [[RWPushMessageDetailViewController alloc] initWithPage:page];
     }
     else if ([viewControllerType isEqual:[RWTYPE PUSHMESSAGELIST]]) {
-        return [[RWPushMessageListViewController alloc] initWithName:name];
+        return [[RWPushMessageListViewController alloc] initWithPage:page];
     }
     else if ([viewControllerType isEqual:[RWTYPE OVERVIEWMAP]]) {
-        return [[RWOverviewMapViewController alloc] initWithName:name];
+        return [[RWOverviewMapViewController alloc] initWithPage:page];
     }
     else if ([viewControllerType isEqual:[RWTYPE SESSIONDETAIL]]) {
-        int sessionid = [parameters[[RWPAGE SESSIONID]] intValue];
-        return [[RWSessionDetailViewController alloc] initWithNibName:@"RWSessionDetailViewController" bundle:nil sessionid:sessionid name:name];
+        return [[RWSessionDetailViewController alloc] initWithPage:page];
     }
     else if ([viewControllerType isEqual:[RWTYPE SESSIONMAP]]) {
-        int sessionid = [parameters[[RWPAGE SESSIONID]] intValue];
-        return [[RWSessionMapViewController alloc] initWithName:name sessionid:sessionid];
+        return [[RWSessionMapViewController alloc] initWithPage:page];
     }
     else if ([viewControllerType isEqual:[RWTYPE SPLITVIEW]]) {
-        return [[RWSplitViewController alloc] initWithName:name];
-
+        return [[RWSplitViewController alloc] initWithPage:page];
     }
     else if ([viewControllerType isEqual:[RWTYPE STATICARTICLE]]) {
-        int articleid = [parameters[[RWPAGE ARTICLEID]] intValue];
-        return [[RWStaticArticleController alloc] initWithNibName:@"RWStaticArticleController" bundle:nil name:name articleid:articleid];
+        return [[RWStaticArticleController alloc] initWithPage:page];
     }
     else if ([viewControllerType isEqual:[RWTYPE SWIPEVIEW]]) {
-        return [[RWSwipeViewController alloc] initWithName:name];
-		
+        return [[RWSwipeViewController alloc] initWithPage:page];
     }
     else if ([viewControllerType isEqual:[RWTYPE TABLENAVIGATOR]]) {
-        return [[RWTableNavigatorViewController alloc] initWithName:name];
-		
+        return [[RWTableNavigatorViewController alloc] initWithPage:page];
     }
     else if ([viewControllerType isEqual:[RWTYPE VENUEDETAIL]]) {
-        int venueid = [parameters[[RWPAGE VENUEID]] intValue];
-        return [[RWVenueDetailViewController alloc] initWithName:name venueId:venueid];
+        return [[RWVenueDetailViewController alloc] initWithPage:page];
     }
     else if ([viewControllerType isEqual:[RWTYPE VENUEMAP]]) {
-        int venueid = [parameters[[RWPAGE VENUEID]] intValue];
-        return [[RWVenueMapViewController alloc] initWithName:name venueid:venueid];
+        return [[RWVenueMapViewController alloc] initWithPage:page];
     }
     else if ([viewControllerType isEqual:[RWTYPE WEBVIEW]]) {
-		NSString *url = parameters[[RWPAGE URL]];
-        return [[RWWebViewController alloc] initWithName:name url:url];
+        return [[RWWebViewController alloc] initWithPage:page];
     }
     return nil;
 }

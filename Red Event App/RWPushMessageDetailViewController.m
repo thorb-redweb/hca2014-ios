@@ -17,15 +17,14 @@
 @end
 
 @implementation RWPushMessageDetailViewController{
-    int _pushmessageid;
     RWPushMessageVM *_pushMessage;
 }
 
-- (id)initWithName:(NSString *)name pushmessageid:(int)pushmessageid
+- (id)initWithPage:(RWXmlNode *)page
 {
-    self = [super initWithNibName:@"RWPushMessageDetailViewController" bundle:nil name:name];
+    self = [super initWithNibName:@"RWPushMessageDetailViewController" bundle:nil page:page];
     if (self) {
-        _pushmessageid = pushmessageid;
+
     }
     return self;
 }
@@ -38,7 +37,8 @@
     [self setAppearance];
     [self setText];
 
-    _pushMessage = [_db.PushMessages getVMFromId:_pushmessageid];
+    int pushmessageId = [_page getIntegerFromNode:[RWPAGE PUSHMESSAGEID]];
+    _pushMessage = [_db.PushMessages getVMFromId:pushmessageId];
 
     _lblIntro.text = _pushMessage.intro;
     _lblAuthor.text = _pushMessage.author;

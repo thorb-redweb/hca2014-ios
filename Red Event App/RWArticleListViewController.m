@@ -21,14 +21,12 @@
 
 @implementation RWArticleListViewController {
     NSArray *dataSource;
-    int _catid;
 }
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil name:(NSString *)name catid:(int)catid {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil name:name];
+- (id)initWithPage:(RWXmlNode *)page {
+    self = [super initWithNibName:@"RWArticleListViewController" bundle:nil page:page];
     if (self) {
         [self.view setTranslatesAutoresizingMaskIntoConstraints:NO];
-        _catid = catid;
     }
     return self;
 }
@@ -36,7 +34,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    dataSource = [_db.Articles getVMListFromCatId:_catid];
+    int catid = [_page getIntegerFromNode:[RWPAGE CATID]];
+    dataSource = [_db.Articles getVMListFromCatId:catid];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -47,10 +46,10 @@
 #pragma mark - Table view selection
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    RWArticleVM *model = dataSource[indexPath.row];
+//    RWArticleVM *model = dataSource[indexPath.row];
 
-    RWArticleDetailViewController *viewController = [[RWArticleDetailViewController alloc] initWithNibName:@"RWContentDetailViewController" bundle:nil name:_childname articleid:[model.articleid intValue]];
-	[viewController setTitle:@"Temp"];
+//    RWArticleDetailViewController *viewController = [[RWArticleDetailViewController alloc] initWithNibName:@"RWContentDetailViewController" bundle:nil name:_childname articleid:[model.articleid intValue]];
+//	[viewController setTitle:@"Temp"];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {

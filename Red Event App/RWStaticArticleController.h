@@ -13,6 +13,6 @@
 
 @property(weak, nonatomic) IBOutlet UIWebView *webBody;
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil name:(NSString *)name articleid:(int)contid;
+- (id)initWithPage:(RWXmlNode *)page;
 
 @end

@@ -180,10 +180,10 @@
 
     //And then push the push message page on to the stack
     NSString *messageid = _localNotification[@"content"][@"messageid"];
-    NSMutableDictionary *pushPage = [NSMutableDictionary dictionaryWithDictionary:[[_xml getPage:@"Nyhedsside"] getDictionaryFromNode]];
-    [pushPage setObject:messageid forKey:[RWPAGE ARTICLEID]];
+    RWXmlNode *nextPage = [_xml getPage:@"Nyhedsside"];
+    [nextPage addNodeWithName:[RWPAGE ARTICLEID] value:messageid];
 
-    [_navController pushViewWithParameters:pushPage];
+    [_navController pushViewWithParameters:nextPage];
     NSLog(@"Continue to push content");
 }
 

@@ -41,6 +41,10 @@
 
 - (void)addNodeWithName:(NSString *)name value:(id)value;
 
+- (void)replaceValueOfNodeWithName:(NSString *)name value:(id)value;
+
+- (void)removeNodeWithName:(NSString *)name;
+
 - (NSDictionary *)getDictionaryFromNode;
 
 - (BOOL)hasChild:(NSString *)childname;

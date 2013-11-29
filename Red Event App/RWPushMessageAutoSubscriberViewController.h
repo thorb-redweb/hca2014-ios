@@ -11,5 +11,5 @@
 
 @interface RWPushMessageAutoSubscriberViewController : RWBaseViewController
 
-- (id)initWithName:(NSString *)name;
+- (id)initWithPage:(RWXmlNode *)page;
 @end

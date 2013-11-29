@@ -18,8 +18,8 @@
 }
 
 
-- (id)initWithName:(NSString *)name{
-    self = [super initWithNibName:@"RWTableNavigatorViewController" bundle:nil name:name];
+- (id)initWithPage:(RWXmlNode *)page{
+    self = [super initWithNibName:@"RWTableNavigatorViewController" bundle:nil page:page];
     if (self) {
 
     }
@@ -54,7 +54,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     RWXmlNode *entry = [dataSource objectAtIndex:indexPath.row];
     RWXmlNode *nextPage = [_xml getPage:[entry getStringFromNode:[RWPAGE NAME]]];
-    [_app.navController pushViewWithParameters:[nextPage getDictionaryFromNode]];
+    [_app.navController pushViewWithParameters:nextPage];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {

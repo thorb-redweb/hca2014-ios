@@ -26,7 +26,7 @@
 @property(weak, nonatomic) IBOutlet UIWebView *webBody;
 @property(weak, nonatomic) IBOutlet UIButton *btnBack;
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil sessionid:(int)sessionid name:(NSString *)name;
+- (id)initWithPage:(RWXmlNode *)page;
 
 - (IBAction)btnMapPressed:(id)sender;
 

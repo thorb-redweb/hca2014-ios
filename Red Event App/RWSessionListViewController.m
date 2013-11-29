@@ -25,8 +25,8 @@
 }
 
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil name:(NSString *)name {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil name:name];
+- (id)initWithPage:(RWXmlNode *)page {
+    self = [super initWithNibName:@"RWSessionListViewController" bundle:nil page:page];
     if (self) {
 
     }
@@ -46,15 +46,12 @@
 #pragma mark - Table view selection
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    RWAppDelegate *app = [[UIApplication sharedApplication] delegate];
     RWSessionVM *model = dataSource[indexPath.row];
 
-    NSMutableDictionary *sessiondetailVariables = [[NSMutableDictionary alloc] init];
-    [sessiondetailVariables setObject:@"SessionDetail" forKey:@"type"];
-    [sessiondetailVariables setObject:_childname forKey:@"name"];
-    [sessiondetailVariables setObject:model.sessionid forKey:@"sessionid"];
+    RWXmlNode *nextPage = [_xml getPage:_childname];
+    [nextPage addNodeWithName:[RWPAGE SESSIONID] value:model.sessionid];
 
-    [app.navController pushViewWithParameters:sessiondetailVariables];
+    [_app.navController pushViewWithParameters:nextPage];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {

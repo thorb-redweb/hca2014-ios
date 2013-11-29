@@ -20,24 +20,21 @@
 
 @implementation RWSessionMapViewController {
     RWSessionVM *_model;
-    CLLocation *myLocation;
-    GMSMarker *myMarker;
-
-    BOOL firstLoadOfMyLocation;
 }
 
-- (id)initWithName:(NSString *)name sessionid:(int)sessionid {
-    self = [super initWithName:name];
+- (id)initWithPage:(RWXmlNode *)page {
+    self = [super initWithPage:page];
     if (self) {
-        _model = [_db.Sessions getVMFromId:sessionid];
 
-        firstLoadOfMyLocation = YES;
     }
     return self;
 }
 
 - (void)viewDidLoad {
 	[super viewDidLoad];
+
+    int sessionId = [_page getIntegerFromNode:[RWPAGE SESSIONID]];
+    _model = [_db.Sessions getVMFromId:sessionId];
     
 	int zoom = [_page getIntegerFromNode:[RWPAGE ZOOM]];
 	

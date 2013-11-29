@@ -23,9 +23,9 @@
 }
 
 
-- (id)initWithName:(NSString *)name
+- (id)initWithPage:(RWXmlNode *)page
 {
-    self = [super initWithNibName:@"RWSwipeViewController" bundle:nil name:name];
+    self = [super initWithNibName:@"RWSwipeViewController" bundle:nil page:page];
     if (self) {
         [self.view setTranslatesAutoresizingMaskIntoConstraints:NO];
     }
@@ -47,7 +47,7 @@
 	
 	for (NSString *leafname in leafNames) {
 		RWXmlNode *leafpage = [_xml getPage:leafname];
-		UIViewController *viewController = [RWNavigationController getViewControllerFromDictionary:[leafpage getDictionaryFromNode]];
+		UIViewController *viewController = [RWNavigationController getViewControllerFromPage:leafpage];
 		[_datasource addObject:viewController];
 	}
 	

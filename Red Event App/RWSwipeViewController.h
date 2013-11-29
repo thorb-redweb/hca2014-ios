@@ -14,6 +14,6 @@
 
 @property (strong, nonatomic) UIPageViewController *pageViewController;
 
-- (id)initWithName:(NSString *)name;
+- (id)initWithPage:(RWXmlNode *)page;
 
 @end

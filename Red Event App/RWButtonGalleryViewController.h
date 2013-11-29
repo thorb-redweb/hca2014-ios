@@ -20,7 +20,7 @@
 @property(weak, nonatomic) IBOutlet UIButton *btn7;
 @property(weak, nonatomic) IBOutlet UIButton *btn8;
 
-- (id)initWithName:(NSString *)name;
+- (id)initWithPage:(RWXmlNode *)page;
 
 - (IBAction)btn1Pressed:(id)sender;
 - (IBAction)btn2Pressed:(id)sender;

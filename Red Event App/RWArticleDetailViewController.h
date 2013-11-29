@@ -19,7 +19,7 @@
 @property(weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property(weak, nonatomic) IBOutlet UIButton *btnBack;
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil name:(NSString *)name articleid:(int)contid;
+- (id)initWithPage:(RWXmlNode *)page;
 
 -(IBAction)btnBackClicked;
 

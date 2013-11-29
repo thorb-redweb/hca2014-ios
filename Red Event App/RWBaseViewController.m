@@ -17,17 +17,17 @@
 
 @implementation RWBaseViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil name:(NSString *)name {
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil page:(RWXmlNode *)page {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         _app = [[UIApplication sharedApplication] delegate];
         _db = _app.db;
         _sv = _app.sv;
         _xml = _app.xml;
-        _page = [_xml getPage:name];
-        _name = name;
-        if ([_page hasChild:@"child"])
-            _childname = [_page getStringFromNode:@"child"];
+        _page = page;
+        _name = [_page getStringFromNode:[RWPAGE NAME]];
+        if ([_page hasChild:[RWPAGE CHILD]])
+            _childname = [_page getStringFromNode:[RWPAGE CHILD]];
         else
             _childname = @"No Child";
 

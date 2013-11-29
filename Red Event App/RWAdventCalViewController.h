@@ -36,7 +36,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *btn23;
 @property (weak, nonatomic) IBOutlet UIButton *btn24;
 
--(id)initWithName:(NSString *)name;
+- (id)initWithPage:(RWXmlNode *)page;
 
 -(IBAction) openWindow:(id)sender;
 

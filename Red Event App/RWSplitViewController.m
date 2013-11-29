@@ -23,10 +23,10 @@
 	UIViewController *bottomView;
 }
 
-- (id)initWithName:(NSString *)name{
-    self = [super initWithNibName:@"RWSplitViewController" bundle:nil name:name];
+- (id)initWithPage:(RWXmlNode *)page{
+    self = [super initWithNibName:@"RWSplitViewController" bundle:nil page:page];
     if (self) {
-        self.title = @"RedEvent";
+
     }
     return self;
 }

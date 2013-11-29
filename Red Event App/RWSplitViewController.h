@@ -14,6 +14,6 @@
 @property(weak, nonatomic) IBOutlet UIView *vwMainTopPart;
 @property(weak, nonatomic) IBOutlet UIView *vwMainBottomPart;
 
-- (id)initWithName:(NSString *)name;
+- (id)initWithPage:(RWXmlNode *)page;
 
 @end

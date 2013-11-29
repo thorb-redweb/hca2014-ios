@@ -11,6 +11,6 @@
 
 @interface RWArticleListViewController : RWBaseViewController <UITableViewDelegate, UITableViewDataSource>
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil name:(NSString *)name catid:(int)catid;
+- (id)initWithPage:(RWXmlNode *)page;
 
 @end

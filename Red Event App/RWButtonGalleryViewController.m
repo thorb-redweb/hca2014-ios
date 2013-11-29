@@ -17,9 +17,9 @@
 
 @implementation RWButtonGalleryViewController
 
-- (id)initWithName:(NSString *)name
+- (id)initWithPage:(RWXmlNode *)page
 {
-    self = [super initWithNibName:@"RWButtonGalleryViewController" bundle:nil name:name];
+    self = [super initWithNibName:@"RWButtonGalleryViewController" bundle:nil page:page];
     if (self) {
         
     }
@@ -264,7 +264,7 @@
 -(void)goToNextPage:(NSString *)button{
 	if ([_page hasChild:button]) {
 		RWXmlNode *nextPage = [_xml getPage:[_page getStringFromNode:button]];
-		[_app.navController pushViewWithParameters:[nextPage getDictionaryFromNode]];
+		[_app.navController pushViewWithParameters:nextPage];
 	}
 }
 

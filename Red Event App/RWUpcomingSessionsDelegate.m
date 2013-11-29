@@ -92,14 +92,14 @@
 #pragma mark - Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    RWSessionVM *model = dataSource[indexPath.row];
-
-    NSMutableDictionary *sessiondetailVariables = [[NSMutableDictionary alloc] init];
-    [sessiondetailVariables setObject:@"SessionDetail" forKey:@"type"];
-    [sessiondetailVariables setObject:_childname forKey:@"name"];
-    [sessiondetailVariables setObject:model.sessionid forKey:@"sessionid"];
-
-    [_app.navController pushViewWithParameters:sessiondetailVariables];
+//    RWSessionVM *model = dataSource[indexPath.row];
+//
+//    NSMutableDictionary *sessiondetailVariables = [[NSMutableDictionary alloc] init];
+//    [sessiondetailVariables setObject:@"SessionDetail" forKey:@"type"];
+//    [sessiondetailVariables setObject:_childname forKey:@"name"];
+//    [sessiondetailVariables setObject:model.sessionid forKey:@"sessionid"];
+//
+//    [_app.navController pushViewWithParameters:sessiondetailVariables];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {

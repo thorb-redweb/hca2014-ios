@@ -15,16 +15,14 @@
 
 - (void)connectToMainView:(RWMainViewController *)mainViewcontroller;
 
-- (void)pushViewFromTab:(RWXmlNode *)tabPage;
+- (void)pushViewWithParameters:(RWXmlNode *)page;
 
-- (void)pushViewWithParameters:(NSDictionary *)parameters;
-
-- (void)pushViewWithParameters:(NSDictionary *)parameters addToBackStack:(bool)addToBackStack;
+- (void)pushViewWithParameters:(RWXmlNode *)page addToBackStack:(bool)addToBackStack;
 
 - (void)pushViewController:(UIViewController *)newViewController addToBackStack:(bool)addToBackStack;
 
 - (void)popViewController;
 
-+ (UIViewController *)getViewControllerFromDictionary:(NSDictionary *)parameters;
++ (UIViewController *)getViewControllerFromPage:(RWXmlNode *)parameters;
 
 @end

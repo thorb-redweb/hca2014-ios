@@ -18,8 +18,8 @@
 	NSArray *_articleVMs;
 }
 
--(id)initWithName:(NSString *)name{
-	self = [super initWithNibName:@"RWAdventCalViewController" bundle:nil name:name];
+-(id)initWithPage:(RWXmlNode *)page{
+	self = [super initWithNibName:@"RWAdventCalViewController" bundle:nil page:page];
     if (self) {
         
     }
@@ -81,9 +81,8 @@
 	
 	if ([openDate compare: today] == NSOrderedAscending) {
 		RWXmlNode *childPage = [_xml getPage:_childname];
-        NSMutableDictionary *childDictionary = [[NSMutableDictionary alloc] initWithDictionary:[childPage getDictionaryFromNode]];
-		[childDictionary setObject:chosenArticle.articleid forKey:[RWPAGE ARTICLEID]];
-		[_app.navController pushViewWithParameters:childDictionary];
+        [childPage addNodeWithName:[RWPAGE ARTICLEID] value:chosenArticle.articleid];
+		[_app.navController pushViewWithParameters:childPage];
 	}
 	
 }

@@ -14,7 +14,7 @@
 @property (weak, nonatomic) IBOutlet UIWebView *webBody;
 @property(weak, nonatomic) IBOutlet UIButton *btnBack;
 
-- (id)initWithName:(NSString *)name url:(NSString *)url;
+- (id)initWithPage:(RWXmlNode *)page;
 
 -(IBAction)btnBackClicked;
 

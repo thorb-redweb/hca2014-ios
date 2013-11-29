@@ -60,10 +60,10 @@
 }
 
 - (void)goToArticle {
-    RWArticleVM *model = datasource[self.currentLeaf];
-    NSString *childname = [_page getStringFromNode:[RWPAGE CHILD]];
-    RWArticleDetailViewController *controller = [[RWArticleDetailViewController alloc] initWithNibName:@"RWArticleDetailViewController" bundle:nil name:childname articleid:[model.articleid intValue]];
-    [controller setTitle:@"Temp"];
+//    RWArticleVM *model = datasource[self.currentLeaf];
+//    NSString *childname = [_page getStringFromNode:[RWPAGE CHILD]];
+//    RWArticleDetailViewController *controller = [[RWArticleDetailViewController alloc] initWithNibName:@"RWArticleDetailViewController" bundle:nil name:childname articleid:[model.articleid intValue]];
+//    [controller setTitle:@"Temp"];
 }
 
 - (void)addArticleItems {

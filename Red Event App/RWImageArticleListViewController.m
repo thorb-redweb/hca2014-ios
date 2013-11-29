@@ -25,14 +25,13 @@
 
 @implementation RWImageArticleListViewController {
     NSArray *dataSource;
-    int _catid;
 }
 
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil name:(NSString *)name catid:(int)catid {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil name:name];
+- (id)initWithPage:(RWXmlNode *)page {
+    self = [super initWithNibName:@"RWImageArticleListViewController" bundle:nil page:page];
     if (self) {
-        _catid = catid;
+
     }
     return self;
 }
@@ -44,8 +43,8 @@
 		[self.view setTranslatesAutoresizingMaskIntoConstraints:NO];
 	}
 
-
-    dataSource = [_db.Articles getVMListFromCatId:_catid];
+    int catid = [_page getIntegerFromNode:[RWPAGE CATID]];
+    dataSource = [_db.Articles getVMListFromCatId:catid];
 
     [self setAppearance];
 }
@@ -75,10 +74,9 @@
     RWArticleVM *model = dataSource[indexPath.row];
 	
 	RWXmlNode *childPage = [_xml getPage:_childname];
-	NSMutableDictionary *childDictionary = [[NSMutableDictionary alloc]initWithDictionary:[childPage getDictionaryFromNode]];
-	[childDictionary setObject:model.articleid forKey:[RWPAGE ARTICLEID]];
+	[childPage addNodeWithName:[RWPAGE ARTICLEID] value:model.articleid];
 
-	[_app.navController pushViewWithParameters:childDictionary];
+	[_app.navController pushViewWithParameters:childPage];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {

@@ -12,6 +12,6 @@
 
 @interface RWSessionMapViewController : RWBaseMapViewController
 
-- (id)initWithName:(NSString *)name sessionid:(int)sessionid;
+- (id)initWithPage:(RWXmlNode *)page;
 
 @end

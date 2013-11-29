@@ -10,8 +10,8 @@
 #import <GoogleMaps/GoogleMaps.h>
 #import "RWBaseMapViewController.h"
 
-@interface RWOverviewMapViewController : RWBaseMapViewController <UITabBarDelegate>
+@interface RWOverviewMapViewController : RWBaseMapViewController
 
-- (id)initWithName:(NSString *)name;
+- (id)initWithPage:(RWXmlNode *)page;
 
 @end

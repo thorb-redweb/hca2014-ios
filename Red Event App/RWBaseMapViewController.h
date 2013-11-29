@@ -19,7 +19,7 @@
 @property(weak, nonatomic) IBOutlet UIButton *btnBack;
 
 
-- (id)initWithName:(NSString *)name;
+- (id)initWithPage:(RWXmlNode *)page;
 
 -(IBAction)btnBackClicked;
 @end

@@ -151,6 +151,34 @@
 	[NSException raise:@"Node does not contain an array" format:@"Node '%@' does not contain an array", _name];
 }
 
+- (void)replaceValueOfNodeWithName:(NSString *)name value:(id)value{
+    if ([_value isKindOfClass:[NSMutableArray class]]) {
+        NSMutableArray *array = (NSMutableArray *)_value;
+        for(RWXmlNode *childNode in array){
+            if([childNode.name isEqualToString:name]){
+                childNode.value = value;
+				return;
+            }
+        }
+        [NSException raise:@"Node not found" format:@"Node '%@' does not contain a node '%@' to replace value of", _name, name];
+    }
+    [NSException raise:@"Node does not contain an array" format:@"Node '%@' does not contain an array", _name];
+}
+
+- (void)removeNodeWithName:(NSString *)name{
+    if ([_value isKindOfClass:[NSMutableArray class]]) {
+        NSMutableArray *array = (NSMutableArray *)_value;
+        for(int i = 0; i < array.count; i++){
+            if([((RWXmlNode *) array[i]).name isEqualToString:name]){
+                [array removeObjectAtIndex:i];
+                return;;
+            }
+        }
+        [NSException raise:@"Node not found" format:@"Node '%@' does not contain a node '%@' to remove", _name, name];
+    }
+    [NSException raise:@"Node does not contain an array" format:@"Node '%@' does not contain an array", _name];
+}
+
 - (NSDictionary *)getDictionaryFromNode {
     return [self getDictionaryFromChildNode:self];
 }

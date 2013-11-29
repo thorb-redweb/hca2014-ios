@@ -7,6 +7,7 @@
 //
 
 #import "RWPushMessageSubscriberViewController.h"
+#import "RWXmlNode.h"
 
 @interface RWPushMessageSubscriberViewController ()
 
@@ -14,9 +15,9 @@
 
 @implementation RWPushMessageSubscriberViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+- (id)initWithPage:(RWXmlNode *)page
 {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    self = [super initWithNibName:@"RWPushMessageSubscriberViewController" bundle:nil];
     if (self) {
         // Custom initialization
     }

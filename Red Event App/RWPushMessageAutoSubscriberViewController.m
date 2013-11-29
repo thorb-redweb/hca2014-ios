@@ -14,9 +14,9 @@
 
 @implementation RWPushMessageAutoSubscriberViewController
 
-- (id)initWithName:(NSString *)name
+- (id)initWithPage:(RWXmlNode *)page
 {
-    self = [super initWithNibName:@"RWPushMessageAutoSubscriberViewController" bundle:nil name:name];
+    self = [super initWithNibName:@"RWPushMessageAutoSubscriberViewController" bundle:nil page:page];
     if (self) {
         // Custom initialization
     }
@@ -37,7 +37,7 @@
 	[super viewDidAppear:animated];
 	
 	RWXmlNode *nextPage = [_xml getPage:_childname];
-	[_app.navController pushViewWithParameters:[nextPage getDictionaryFromNode]];
+	[_app.navController pushViewWithParameters:nextPage];
 }
 
 - (void)didReceiveMemoryWarning

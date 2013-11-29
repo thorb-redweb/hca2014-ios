@@ -20,14 +20,14 @@
 @end
 
 @implementation RWArticleDetailViewController {
-    int _contid;
+
     RWArticleVM *_model;
 }
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil name:(NSString *)name articleid:(int)contid {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil name:name];
+- (id)initWithPage:(RWXmlNode *)page {
+    self = [super initWithNibName:@"RWArticleDetailViewController" bundle:nil page:page];
     if (self) {
-        _contid = contid;
+
     }
     return self;
 }
@@ -43,8 +43,9 @@
 	[self setText];
 
     [self.view addConstraint:[NSLayoutConstraint constraintWithItem:_vwContentView attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeWidth multiplier:1.0 constant:0.0]];
-	
-	_model = [_db.Articles getVMFromId:_contid];
+
+    int articleId = [_page getIntegerFromNode:[RWPAGE ARTICLEID]];
+	_model = [_db.Articles getVMFromId:articleId];
 
     _lblTitle.text = _model.title;
 
