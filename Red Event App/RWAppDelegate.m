@@ -183,7 +183,7 @@
     RWXmlNode *nextPage = [_xml getPage:@"Nyhedsside"];
     [nextPage addNodeWithName:[RWPAGE ARTICLEID] value:messageid];
 
-    [_navController pushViewWithParameters:nextPage];
+    [_navController pushViewWithPage:nextPage];
     NSLog(@"Continue to push content");
 }
 

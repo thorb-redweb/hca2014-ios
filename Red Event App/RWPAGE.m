@@ -19,6 +19,7 @@
 + (NSString *)CATID {return @"catid";}
 + (NSString *)CHILD {return @"child";}
 + (NSString *)FRONTPAGE {return @"frontpage";}
++ (NSString *)FOLDER {return @"folder";}
 + (NSString *)NAME {return @"name";}
 + (NSString *)NAVNAME {return @"navname";}
 + (NSString *)PAGE {return @"page";}

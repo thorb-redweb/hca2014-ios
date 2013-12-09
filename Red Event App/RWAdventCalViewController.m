@@ -82,7 +82,7 @@
 	if ([openDate compare: today] == NSOrderedAscending) {
 		RWXmlNode *childPage = [_xml getPage:_childname];
         [childPage addNodeWithName:[RWPAGE ARTICLEID] value:chosenArticle.articleid];
-		[_app.navController pushViewWithParameters:childPage];
+        [_app.navController pushViewWithPage:childPage];
 	}
 	
 }

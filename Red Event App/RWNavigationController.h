@@ -15,9 +15,9 @@
 
 - (void)connectToMainView:(RWMainViewController *)mainViewcontroller;
 
-- (void)pushViewWithParameters:(RWXmlNode *)page;
+- (void)pushViewWithPage:(RWXmlNode *)page;
 
-- (void)pushViewWithParameters:(RWXmlNode *)page addToBackStack:(bool)addToBackStack;
+- (void)pushViewWithPage:(RWXmlNode *)page addToBackStack:(bool)addToBackStack;
 
 - (void)pushViewController:(UIViewController *)newViewController addToBackStack:(bool)addToBackStack;
 

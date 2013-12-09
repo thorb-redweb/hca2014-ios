@@ -17,7 +17,11 @@
 
 + (NSString *)ARTICLELIST;
 
++ (NSString *)BIKETRACKING;
+
 + (NSString *)BUTTONGALLERY;
+
++ (NSString *)CAMERAINTENT;
 
 + (NSString *)DAILYSESSIONLIST;
 

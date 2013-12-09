@@ -51,7 +51,7 @@
     RWXmlNode *nextPage = [_xml getPage:_childname];
     [nextPage addNodeWithName:[RWPAGE SESSIONID] value:model.sessionid];
 
-    [_app.navController pushViewWithParameters:nextPage];
+    [_app.navController pushViewWithPage:nextPage];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {

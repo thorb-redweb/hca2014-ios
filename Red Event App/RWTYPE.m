@@ -13,7 +13,9 @@
 + (NSString *)ADVENTWINDOW {return @"AdventWindow";}
 + (NSString *)ARTICLEDETAIL {return @"ArticleDetail";}
 + (NSString *)ARTICLELIST {return @"ArticleList";}
++ (NSString *)BIKETRACKING {return @"BikeTracking";}
 + (NSString *)BUTTONGALLERY {return @"ButtonGallery";}
++ (NSString *)CAMERAINTENT {return @"CameraIntent";}
 + (NSString *)DAILYSESSIONLIST {return @"DailySessionList";}
 + (NSString *)IMAGEARTICLELIST {return @"ImageArticleList";}
 + (NSString *)NEWSTICKER {return @"NewsTicker";}
@@ -31,4 +33,5 @@
 + (NSString *)VENUEDETAIL {return @"VenueDetail";}
 + (NSString *)VENUEMAP {return @"VenueMap";}
 + (NSString *)WEBVIEW {return @"WebView";}
+
 @end

@@ -45,7 +45,7 @@
 	
 	[app.navController connectToMainView:self];
 
-	[app.navController pushViewWithParameters:_childPage];
+    [app.navController pushViewWithPage:_childPage];
 	
 	[self setBarVisibility];
 	[self setAppearance];
@@ -83,7 +83,7 @@
 - (void)tabBar:(RWTabBar *)tabBar didSelectItem:(UITabBarItem *)item {
 	RWXmlNode *tabPage = tabBar.tabpages[item.tag];
     RWAppDelegate *app = [[UIApplication sharedApplication] delegate];
-    [app.navController pushViewWithParameters:tabPage];
+    [app.navController pushViewWithPage:tabPage];
 }
 
 - (void)didReceiveMemoryWarning

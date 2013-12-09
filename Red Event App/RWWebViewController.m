@@ -82,7 +82,7 @@
 		RWXmlNode *nextPage = _page.deepClone;
         NSString *url = [NSString stringWithFormat:@"%@/",inRequest.URL];
 		[nextPage replaceValueOfNodeWithName:[RWPAGE URL] value:url];
-		[_app.navController pushViewWithParameters:nextPage];
+        [_app.navController pushViewWithPage:nextPage];
 		
 //		NSURL *nsUrl = inRequest.URL;
 //		NSURLRequest* request = [NSURLRequest requestWithURL:nsUrl cachePolicy:NSURLRequestReloadIgnoringLocalAndRemoteCacheData timeoutInterval:30];

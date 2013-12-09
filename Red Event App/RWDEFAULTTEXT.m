@@ -13,6 +13,16 @@
 
 +(NSString *)ARTICLEDETAIL_BACKBUTTON {return @"Tilbage";}
 
++(NSString *)BIKETRACKING_AVERAGESPEED {return @"Average Speed:";}
++(NSString *)BIKETRACKING_TOPSPEED {return @"Top Speed:";}
++(NSString *)BIKETRACKING_DISTANCE {return @"Distance:";}
++(NSString *)BIKETRACKING_BACKBUTTON {return @"Tilbage";}
++(NSString *)BIKETRACKING_STARTBUTTON {return @"Start";}
++(NSString *)BIKETRACKING_STOPBUTTON {return @"Stop";}
++(NSString *)BIKETRACKING_CONTINUEBUTTON {return @"Fortsæt";}
++(NSString *)BIKETRACKING_RUNNING {return @"Kører";}
++(NSString *)BIKETRACKING_STOPPED {return @"Stoppet";}
+
 +(NSString *)DAILYSESSIONLIST_EMPTYLIST {return @"Ingen arrangementer matcher din søgning";}
 +(NSString *)DAILYSESSIONLIST_FILTERDATE {return @"Filtrer efter sted";}
 

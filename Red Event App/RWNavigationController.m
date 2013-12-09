@@ -32,6 +32,8 @@
 #import "RWVenueMapViewController.h"
 #import "RWPushMessageAutoSubscriberViewController.h"
 #import "RWWebViewController.h"
+#import "RWBikeTrackingViewController.h"
+#import "RWCameraIntentViewController.h"
 
 @interface RWNavigationController ()
 
@@ -51,11 +53,11 @@
 	_navbar = mainViewcontroller.navbar;
 }
 
-- (void)pushViewWithParameters:(RWXmlNode *)page {
-    [self pushViewWithParameters:page addToBackStack:YES];
+- (void)pushViewWithPage:(RWXmlNode *)page {
+    [self pushViewWithPage:page addToBackStack:YES];
 }
 
-- (void)pushViewWithParameters:(RWXmlNode *)page addToBackStack:(bool)addToBackStack{
+- (void)pushViewWithPage:(RWXmlNode *)page addToBackStack:(bool)addToBackStack{
 	RWAppDelegate *app = (RWAppDelegate *)[[UIApplication sharedApplication] delegate];
     NSString *type =  [page getStringFromNode:[RWPAGE TYPE]];
     NSString *parent = nil;
@@ -140,8 +142,14 @@
     else if ([viewControllerType isEqual:[RWTYPE ARTICLEDETAIL]]) {
         return [[RWArticleDetailViewController alloc] initWithPage:page];
     }
+    else if ([viewControllerType isEqual:[RWTYPE BIKETRACKING]]) {
+        return [[RWBikeTrackingViewController alloc] initWithPage:page];
+    }
     else if ([viewControllerType isEqual:[RWTYPE BUTTONGALLERY]]) {
         return [[RWButtonGalleryViewController alloc] initWithPage:page];
+    }
+    else if ([viewControllerType isEqual:[RWTYPE CAMERAINTENT]]) {
+        return [[RWCameraIntentViewController alloc] initWithPage:page];
     }
     else if ([viewControllerType isEqual:[RWTYPE DAILYSESSIONLIST]]) {
         return [[RWDailySessionListViewController alloc] initWithPage:page];

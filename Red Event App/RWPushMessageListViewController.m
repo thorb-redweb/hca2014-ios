@@ -71,7 +71,7 @@
     RWXmlNode *childPage = [_xml getPage:_childname];
     [childPage addNodeWithName:[RWPAGE PUSHMESSAGEID] value:model.pushmessageid];
 
-    [_app.navController pushViewWithParameters:childPage];
+    [_app.navController pushViewWithPage:childPage];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {

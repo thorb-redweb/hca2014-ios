@@ -45,9 +45,13 @@
     NSString *_childname;
 
 @protected
+    RWAppearanceHelper *_appearanceHelper;
+@protected
     RWXmlNode *_localLook;
 @protected
     RWXmlNode *_globalLook;
+@protected
+    RWTextHelper *_textHelper;
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil page:(RWXmlNode *)page;

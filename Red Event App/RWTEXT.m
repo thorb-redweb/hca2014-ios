@@ -18,6 +18,16 @@
 
 +(NSString *)ARTICLEDETAIL_BACKBUTTON {return @"backbutton";}
 
++(NSString *)BIKETRACKING_AVERAGESPEED {return @"avspeed";}
++(NSString *)BIKETRACKING_TOPSPEED {return @"topspeed";}
++(NSString *)BIKETRACKING_DISTANCE {return @"distance";}
++(NSString *)BIKETRACKING_BACKBUTTON {return @"backbutton";}
++(NSString *)BIKETRACKING_STARTBUTTON {return @"startbutton";}
++(NSString *)BIKETRACKING_STOPBUTTON {return @"stopbutton";}
++(NSString *)BIKETRACKING_CONTINUEBUTTON {return @"continuebutton";}
++(NSString *)BIKETRACKING_RUNNING {return @"running";}
++(NSString *)BIKETRACKING_STOPPED {return @"stopped";}
+
 +(NSString *)BUTTONGALLERY_BUTTON1 {return @"button1";}
 +(NSString *)BUTTONGALLERY_BUTTON2 {return @"button2";}
 +(NSString *)BUTTONGALLERY_BUTTON3 {return @"button3";}

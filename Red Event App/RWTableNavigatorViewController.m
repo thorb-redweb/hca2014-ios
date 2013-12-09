@@ -54,7 +54,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     RWXmlNode *entry = [dataSource objectAtIndex:indexPath.row];
     RWXmlNode *nextPage = [_xml getPage:[entry getStringFromNode:[RWPAGE NAME]]];
-    [_app.navController pushViewWithParameters:nextPage];
+    [_app.navController pushViewWithPage:nextPage];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {

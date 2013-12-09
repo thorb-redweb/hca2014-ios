@@ -264,7 +264,7 @@
 -(void)goToNextPage:(NSString *)button{
 	if ([_page hasChild:button]) {
 		RWXmlNode *nextPage = [_xml getPage:[_page getStringFromNode:button]];
-		[_app.navController pushViewWithParameters:nextPage];
+        [_app.navController pushViewWithPage:nextPage];
 	}
 }
 

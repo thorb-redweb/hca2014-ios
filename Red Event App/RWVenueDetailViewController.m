@@ -109,7 +109,7 @@
 - (IBAction)btnMapPressed:(id)sender{
 	RWXmlNode *childPage = [_xml getPage:_childname];
     [childPage addNodeWithName:[RWPAGE VENUEID] value:[_page getStringFromNode:[RWPAGE VENUEID]]];
-	[_app.navController pushViewWithParameters:childPage];
+    [_app.navController pushViewWithPage:childPage];
 }
 
 - (void)didReceiveMemoryWarning

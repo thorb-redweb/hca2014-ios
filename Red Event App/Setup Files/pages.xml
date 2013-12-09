@@ -7,6 +7,13 @@
         <backgroundimage>splash.png</backgroundimage>
     </page>
     <page>
+        <name>BikeTracking</name>
+        <type>CameraIntent</type>
+        <child>Program</child>
+        <folder>redApp</folder>
+        <frontpage>true</frontpage>
+    </page>
+    <page>
         <name>AutoSubscriber</name>
         <type>PushMessageAutoSubscriber</type>
         <frontpage>true</frontpage>

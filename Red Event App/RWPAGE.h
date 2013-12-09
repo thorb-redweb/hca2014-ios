@@ -70,4 +70,6 @@
 
 //Tags
 + (NSString *)TAG_SESSIONTITLE;
+
++ (NSString *)FOLDER;
 @end

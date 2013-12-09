@@ -39,6 +39,7 @@
 		26E73BB4C214260E2B123AA8 /* RWDbEvents.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E7357085BD0C589D8EBCB6 /* RWDbEvents.m */; };
 		26E73C4C64337676E427F193 /* navbarbackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 26E734B2FEEE40899984016B /* navbarbackground.png */; };
 		26E73C9AA3817CDE9AB356C0 /* RWJSONVenue.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E73007C7F063443A1D88DA /* RWJSONVenue.m */; };
+		26E73CEBB9ACF58FAC3B3EE8 /* RWBikeTracker.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E73835C0D70F2D88FB62BC /* RWBikeTracker.m */; };
 		26E73D9C36DBC520345EA4F2 /* RWVenuePickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26E73618D6B0CD9138BEEF16 /* RWVenuePickerViewController.xib */; };
 		26E73DBA4ADBF998256D88EF /* RWDailySessionListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E7311AA69FB2E51D64BF69 /* RWDailySessionListViewController.m */; };
 		26E73E6BFACAD78541169151 /* RWDbPushMessageGroups.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E736C4E82279860090FCAE /* RWDbPushMessageGroups.m */; };
@@ -163,6 +164,8 @@
 		36A0B4041845E952007A6C78 /* RWPushMessageSubscriptionHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 36A0B4031845E952007A6C78 /* RWPushMessageSubscriptionHandler.m */; };
 		36A0B40A18474F4B007A6C78 /* RWWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36A0B40818474F4B007A6C78 /* RWWebViewController.m */; };
 		36A0B40B18474F4B007A6C78 /* RWWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36A0B40918474F4B007A6C78 /* RWWebViewController.xib */; };
+		36A0B410184DD017007A6C78 /* RWBikeTrackingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36A0B40E184DD017007A6C78 /* RWBikeTrackingViewController.m */; };
+		36A0B411184DD017007A6C78 /* RWBikeTrackingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36A0B40F184DD017007A6C78 /* RWBikeTrackingViewController.xib */; };
 		36A727AA17C794E400374063 /* navbar.png in Resources */ = {isa = PBXBuildFile; fileRef = 36A727A917C794E400374063 /* navbar.png */; };
 		36A727AC17C7992100374063 /* appearance.xml in Resources */ = {isa = PBXBuildFile; fileRef = 36A727AB17C7992100374063 /* appearance.xml */; };
 		36A727AF17C799A500374063 /* UIColor+RWColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 36A727AE17C799A500374063 /* UIColor+RWColor.m */; };
@@ -189,6 +192,8 @@
 		36A79EEC17C5F85900AB211B /* Venue.m in Sources */ = {isa = PBXBuildFile; fileRef = 36A79EEB17C5F85900AB211B /* Venue.m */; };
 		36A79EF217C6078600AB211B /* NSString+RWString.m in Sources */ = {isa = PBXBuildFile; fileRef = 36A79EF117C6078600AB211B /* NSString+RWString.m */; };
 		36A79EFC17C60A6500AB211B /* RWSessionVM.m in Sources */ = {isa = PBXBuildFile; fileRef = 36A79EFB17C60A6500AB211B /* RWSessionVM.m */; };
+		36A97ACF1855FF620050EC8D /* RWCameraIntentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36A97ACD1855FF620050EC8D /* RWCameraIntentViewController.m */; };
+		36A97AD01855FF620050EC8D /* RWCameraIntentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36A97ACE1855FF620050EC8D /* RWCameraIntentViewController.xib */; };
 		36AB7BD317BB7D0E00316921 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36AB7BD217BB7D0E00316921 /* UIKit.framework */; };
 		36AB7BD517BB7D0E00316921 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36AB7BD417BB7D0E00316921 /* Foundation.framework */; };
 		36AB7BD717BB7D0E00316921 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36AB7BD617BB7D0E00316921 /* CoreGraphics.framework */; };
@@ -266,6 +271,7 @@
 		26E7331897DCA8E9DE078CC5 /* RWVenuePickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWVenuePickerViewController.h; sourceTree = "<group>"; };
 		26E7334659BD88F6FCBDA9B2 /* RWDbEvents.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWDbEvents.h; sourceTree = "<group>"; };
 		26E733A86AB79C4744EBB3F2 /* RWJSONPushMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWJSONPushMessage.h; sourceTree = "<group>"; };
+		26E73424045BBF165DA52BFA /* RWBikeTracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWBikeTracker.h; sourceTree = "<group>"; };
 		26E73442CF2B28F56D529977 /* RWTableNavigatorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWTableNavigatorViewController.m; sourceTree = "<group>"; };
 		26E734490EC2460280324CE1 /* RWStaticArticleController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWStaticArticleController.h; sourceTree = "<group>"; };
 		26E7346B6D529D9F76284790 /* RWJSONSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWJSONSession.h; sourceTree = "<group>"; };
@@ -287,6 +293,7 @@
 		26E737DF6BBC2C84BC534A58 /* RWJSONSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWJSONSession.m; sourceTree = "<group>"; };
 		26E738167753BDADDE171C6E /* RWJSONPushMessageGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWJSONPushMessageGroup.m; sourceTree = "<group>"; };
 		26E738279783E516345D36D2 /* RWHandler_UploadRegistrationAttributes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWHandler_UploadRegistrationAttributes.m; sourceTree = "<group>"; };
+		26E73835C0D70F2D88FB62BC /* RWBikeTracker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWBikeTracker.m; sourceTree = "<group>"; };
 		26E7384515AAA226C33B8A6B /* barbackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = barbackground.png; sourceTree = "<group>"; };
 		26E738FC4BA52C386E6DA46B /* RWPushMessageGroupVM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWPushMessageGroupVM.m; sourceTree = "<group>"; };
 		26E739089CFBA6F0EC72E9DB /* RWJSONArticle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWJSONArticle.m; sourceTree = "<group>"; };
@@ -502,6 +509,9 @@
 		36A0B40718474F4B007A6C78 /* RWWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWWebViewController.h; sourceTree = "<group>"; };
 		36A0B40818474F4B007A6C78 /* RWWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWWebViewController.m; sourceTree = "<group>"; };
 		36A0B40918474F4B007A6C78 /* RWWebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RWWebViewController.xib; sourceTree = "<group>"; };
+		36A0B40D184DD017007A6C78 /* RWBikeTrackingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWBikeTrackingViewController.h; sourceTree = "<group>"; };
+		36A0B40E184DD017007A6C78 /* RWBikeTrackingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWBikeTrackingViewController.m; sourceTree = "<group>"; };
+		36A0B40F184DD017007A6C78 /* RWBikeTrackingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RWBikeTrackingViewController.xib; sourceTree = "<group>"; };
 		36A727A917C794E400374063 /* navbar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = navbar.png; path = "Red Event App/Resources/navbar.png"; sourceTree = "<group>"; };
 		36A727AB17C7992100374063 /* appearance.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = appearance.xml; sourceTree = "<group>"; };
 		36A727AD17C799A500374063 /* UIColor+RWColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+RWColor.h"; sourceTree = "<group>"; };
@@ -535,6 +545,9 @@
 		36A79EF117C6078600AB211B /* NSString+RWString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+RWString.m"; sourceTree = "<group>"; };
 		36A79EFA17C60A6500AB211B /* RWSessionVM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWSessionVM.h; sourceTree = "<group>"; };
 		36A79EFB17C60A6500AB211B /* RWSessionVM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWSessionVM.m; sourceTree = "<group>"; };
+		36A97ACC1855FF620050EC8D /* RWCameraIntentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWCameraIntentViewController.h; sourceTree = "<group>"; };
+		36A97ACD1855FF620050EC8D /* RWCameraIntentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWCameraIntentViewController.m; sourceTree = "<group>"; };
+		36A97ACE1855FF620050EC8D /* RWCameraIntentViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RWCameraIntentViewController.xib; sourceTree = "<group>"; };
 		36AB7BCF17BB7D0E00316921 /* Red App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Red App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		36AB7BD217BB7D0E00316921 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		36AB7BD417BB7D0E00316921 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -620,6 +633,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				36A7287F17CB469A00374063 /* CoreLocation.framework in Frameworks */,
 				36A7288B17CB46DB00374063 /* libz.dylib in Frameworks */,
 				36A7288F17CB46EC00374063 /* QuartzCore.framework in Frameworks */,
 				36A7289117CB46F600374063 /* SystemConfiguration.framework in Frameworks */,
@@ -629,7 +643,6 @@
 				36A7288517CB46B600374063 /* ImageIO.framework in Frameworks */,
 				36A7288317CB46AE00374063 /* GLKit.framework in Frameworks */,
 				36A7288117CB46A200374063 /* CoreText.framework in Frameworks */,
-				36A7287F17CB469A00374063 /* CoreLocation.framework in Frameworks */,
 				36A7287D17CB468E00374063 /* AVFoundation.framework in Frameworks */,
 				36AB7BD317BB7D0E00316921 /* UIKit.framework in Frameworks */,
 				36AB7BD517BB7D0E00316921 /* Foundation.framework in Frameworks */,
@@ -653,6 +666,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		26E73251B7FCEB252531893A /* BikeTracking */ = {
+			isa = PBXGroup;
+			children = (
+				36A0B40D184DD017007A6C78 /* RWBikeTrackingViewController.h */,
+				36A0B40E184DD017007A6C78 /* RWBikeTrackingViewController.m */,
+				36A0B40F184DD017007A6C78 /* RWBikeTrackingViewController.xib */,
+				26E73424045BBF165DA52BFA /* RWBikeTracker.h */,
+				26E73835C0D70F2D88FB62BC /* RWBikeTracker.m */,
+			);
+			name = BikeTracking;
+			sourceTree = "<group>";
+		};
 		26E73496DF651A53BC2E4011 /* TableNavigator */ = {
 			isa = PBXGroup;
 			children = (
@@ -1093,6 +1118,8 @@
 		36A0B40518474F0C007A6C78 /* Misc */ = {
 			isa = PBXGroup;
 			children = (
+				36A97ACA1855FF300050EC8D /* CameraIntent */,
+				36A97ACB1855FF3B0050EC8D /* ImageUploader */,
 				36A0B40618474F19007A6C78 /* WebView */,
 			);
 			name = Misc;
@@ -1106,6 +1133,14 @@
 				36A0B40918474F4B007A6C78 /* RWWebViewController.xib */,
 			);
 			name = WebView;
+			sourceTree = "<group>";
+		};
+		36A0B40C184DCFF8007A6C78 /* Contest */ = {
+			isa = PBXGroup;
+			children = (
+				26E73251B7FCEB252531893A /* BikeTracking */,
+			);
+			name = Contest;
 			sourceTree = "<group>";
 		};
 		36A7289217CB47F800374063 /* Map */ = {
@@ -1147,6 +1182,23 @@
 			name = Session;
 			sourceTree = "<group>";
 		};
+		36A97ACA1855FF300050EC8D /* CameraIntent */ = {
+			isa = PBXGroup;
+			children = (
+				36A97ACC1855FF620050EC8D /* RWCameraIntentViewController.h */,
+				36A97ACD1855FF620050EC8D /* RWCameraIntentViewController.m */,
+				36A97ACE1855FF620050EC8D /* RWCameraIntentViewController.xib */,
+			);
+			name = CameraIntent;
+			sourceTree = "<group>";
+		};
+		36A97ACB1855FF3B0050EC8D /* ImageUploader */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = ImageUploader;
+			sourceTree = "<group>";
+		};
 		36AB7BC617BB7D0E00316921 = {
 			isa = PBXGroup;
 			children = (
@@ -1154,17 +1206,6 @@
 				3645BF7F17CE320200047159 /* Brandts.gpx */,
 				3645BF8017CE320300047159 /* Kongens Have.gpx */,
 				36A728A017CB6D0000374063 /* Track.gpx */,
-				36A7289017CB46F500374063 /* SystemConfiguration.framework */,
-				36A7288E17CB46EB00374063 /* QuartzCore.framework */,
-				36A7288C17CB46E200374063 /* OpenGLES.framework */,
-				36A7288A17CB46DB00374063 /* libz.dylib */,
-				36A7288817CB46D200374063 /* libicucore.dylib */,
-				36A7288617CB46C300374063 /* libc++.dylib */,
-				36A7288417CB46B600374063 /* ImageIO.framework */,
-				36A7288217CB46AE00374063 /* GLKit.framework */,
-				36A7288017CB46A200374063 /* CoreText.framework */,
-				36A7287E17CB469A00374063 /* CoreLocation.framework */,
-				36A7287C17CB468E00374063 /* AVFoundation.framework */,
 				36AB7C1E17BCD17200316921 /* Resources */,
 				36AB7BDA17BB7D0E00316921 /* Red App */,
 				36AB7BDB17BB7D0E00316921 /* Supporting Files */,
@@ -1187,6 +1228,17 @@
 		36AB7BD117BB7D0E00316921 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				36A7289017CB46F500374063 /* SystemConfiguration.framework */,
+				36A7288E17CB46EB00374063 /* QuartzCore.framework */,
+				36A7288C17CB46E200374063 /* OpenGLES.framework */,
+				36A7288A17CB46DB00374063 /* libz.dylib */,
+				36A7288817CB46D200374063 /* libicucore.dylib */,
+				36A7288617CB46C300374063 /* libc++.dylib */,
+				36A7288417CB46B600374063 /* ImageIO.framework */,
+				36A7288217CB46AE00374063 /* GLKit.framework */,
+				36A7288017CB46A200374063 /* CoreText.framework */,
+				36A7287E17CB469A00374063 /* CoreLocation.framework */,
+				36A7287C17CB468E00374063 /* AVFoundation.framework */,
 				36214F5C1834CAD7001B0B63 /* GoogleMaps.framework */,
 				36214F5A1834CAD0001B0B63 /* GoogleMaps.bundle */,
 				3683F20F182A445A00C22E46 /* SparkInspector.framework */,
@@ -1264,6 +1316,7 @@
 			isa = PBXGroup;
 			children = (
 				36A79EF317C6086E00AB211B /* Article */,
+				36A0B40C184DCFF8007A6C78 /* Contest */,
 				3645BFB317D75BE500047159 /* Frontpage Containers */,
 				36A7289217CB47F800374063 /* Map */,
 				36A0B40518474F0C007A6C78 /* Misc */,
@@ -1617,6 +1670,7 @@
 				3683F1A8181FF54300C22E46 /* RWAdventWindowViewController.xib in Resources */,
 				36214F89183F6E0E001B0B63 /* RWPushMessageListViewController.xib in Resources */,
 				36354BD8181FC8410046066E /* xmas11.jpg in Resources */,
+				36A97AD01855FF620050EC8D /* RWCameraIntentViewController.xib in Resources */,
 				36A727AC17C7992100374063 /* appearance.xml in Resources */,
 				36354BD4181FC8410046066E /* xmas7.jpg in Resources */,
 				36354BD3181FC8410046066E /* xmas6.jpg in Resources */,
@@ -1654,6 +1708,7 @@
 				3683F216182A4F5F00C22E46 /* RWMainViewController.xib in Resources */,
 				36214F84183F6DFE001B0B63 /* RWPushMessageDetailViewController.xib in Resources */,
 				36354BDA181FC8410046066E /* xmas13.jpg in Resources */,
+				36A0B411184DD017007A6C78 /* RWBikeTrackingViewController.xib in Resources */,
 				26E73BAC5180C9A138C7C0FD /* RWSessionDetailViewController.xib in Resources */,
 				368EFAEA1843A6460099089C /* RWPushMessageListCell.xib in Resources */,
 				26E7309E82C1ECB14617336D /* RWSessionListViewController.xib in Resources */,
@@ -1748,6 +1803,7 @@
 				361EA87C1806B0EC00441271 /* SDWebImagePrefetcher.m in Sources */,
 				36A0B4041845E952007A6C78 /* RWPushMessageSubscriptionHandler.m in Sources */,
 				3695C47817C4B798004DFA40 /* RWXMLImporter.m in Sources */,
+				36A0B410184DD017007A6C78 /* RWBikeTrackingViewController.m in Sources */,
 				3683F1A7181FF54300C22E46 /* RWAdventWindowViewController.m in Sources */,
 				367628EB1803F812002ED534 /* RWTEXT.m in Sources */,
 				3695C47D17C4CEA5004DFA40 /* RWXmlNode.m in Sources */,
@@ -1786,6 +1842,7 @@
 				3683F22A182BB6AC00C22E46 /* RWBaseMapViewController.m in Sources */,
 				26E73BB4C214260E2B123AA8 /* RWDbEvents.m in Sources */,
 				26E73F1A5EA4CC6DE8A17E06 /* RWDbSessions.m in Sources */,
+				36A97ACF1855FF620050EC8D /* RWCameraIntentViewController.m in Sources */,
 				3683F215182A4F5F00C22E46 /* RWMainViewController.m in Sources */,
 				36A0B3FA1844DCEE007A6C78 /* RWPushMessageSubscriberViewController.m in Sources */,
 				26E733AB7705EFE3D6443811 /* RWDbVenues.m in Sources */,
@@ -1820,6 +1877,7 @@
 				26E73A21F50C294AD5F2C98C /* RWNavigationController.m in Sources */,
 				26E7349D494E443BB8600B71 /* RWAppDelegate.m in Sources */,
 				26E730EABFC9FE09C156379D /* RWTextHelper.m in Sources */,
+				26E73CEBB9ACF58FAC3B3EE8 /* RWBikeTracker.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

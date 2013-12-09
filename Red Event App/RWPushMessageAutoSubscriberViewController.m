@@ -37,7 +37,7 @@
 	[super viewDidAppear:animated];
 	
 	RWXmlNode *nextPage = [_xml getPage:_childname];
-	[_app.navController pushViewWithParameters:nextPage];
+    [_app.navController pushViewWithPage:nextPage];
 }
 
 - (void)didReceiveMemoryWarning

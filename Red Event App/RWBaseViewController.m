@@ -35,7 +35,9 @@
             _localLook = [_xml.appearance getChildFromNode:_name];
         }
         _globalLook = [_xml.appearance getChildFromNode:[RWLOOK DEFAULT]];
-		
+
+        _appearanceHelper = [[RWAppearanceHelper alloc] initWithLocalLook:_localLook globalLook:_globalLook];
+        _textHelper = [[RWTextHelper alloc] initWithPageName:_name xmlStore:_xml];
     }
     return self;
 }
