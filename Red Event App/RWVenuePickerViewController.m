@@ -117,7 +117,7 @@
         _controller.filterVenue = ((RWVenueVM *) dataSource[indexPath.row - 1]);
     }
 
-    [_app.navController popViewController];
+    [_app.navController popPage];
 }
 
 @end

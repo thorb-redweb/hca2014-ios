@@ -22,6 +22,9 @@
 + (NSString *)NAVNAME;
 + (NSString *)PAGE;
 + (NSString *)PARENT;
+
++ (NSString *)PARENTPAGE;
+
 + (NSString *)PUSHMESSAGEID;
 + (NSString *)PUSHGROUPID;
 + (NSString *)PUSHGROUPIDS;
@@ -72,4 +75,6 @@
 + (NSString *)TAG_SESSIONTITLE;
 
 + (NSString *)FOLDER;
+
++ (NSString *)FILEPATH;
 @end

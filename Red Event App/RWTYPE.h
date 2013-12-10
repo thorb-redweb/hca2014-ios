@@ -25,6 +25,8 @@
 
 + (NSString *)DAILYSESSIONLIST;
 
++ (NSString *)FILEBROWSER;
+
 + (NSString *)IMAGEARTICLELIST;
 
 + (NSString *)NEWSTICKER;
@@ -56,4 +58,6 @@
 + (NSString *)VENUEMAP;
 
 + (NSString *)WEBVIEW;
+
++ (NSString *)IMAGEUPLOADER;
 @end

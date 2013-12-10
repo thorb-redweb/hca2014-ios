@@ -94,7 +94,7 @@
 }
 
 -(IBAction)btnBackClicked{
-    [_app.navController popViewController];
+    [_app.navController popPage];
 }
 
 - (void)didReceiveMemoryWarning

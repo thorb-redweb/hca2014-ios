@@ -56,20 +56,39 @@
 
     NSString *folderName = @"redApp";
     if([_page hasChild:[RWPAGE FOLDER]]){
-        NSString *folderName = [_page getStringFromNode:[RWPAGE FOLDER]];
+        folderName = [_page getStringFromNode:[RWPAGE FOLDER]];
     }
 
     NSDate *datetimeNow = [[NSDate alloc] init];
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setDateFormat:@"yyyy-MM-dd_HH-mm-ss-SSS"];
-    NSString *filename = [dateFormatter stringFromDate:datetimeNow];
+    NSString *filename = [NSString stringWithFormat:@"%@.png",[dateFormatter stringFromDate:datetimeNow]];
 
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *filePath = [NSString stringWithFormat:@"%@/%@/%@.png", [paths objectAtIndex:0], folderName, filename];
+    NSString *applicationDocumentsDir = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    NSString *folderPath = [applicationDocumentsDir stringByAppendingPathComponent:folderName];
+    NSString *filePath = [folderPath stringByAppendingPathComponent:filename];
 
-    [UIImagePNGRepresentation(cameraImage) writeToFile:filePath atomically:YES];
+    NSError *error = nil;
+    if(![[NSFileManager defaultManager] fileExistsAtPath:folderPath isDirectory:nil]){
+        [[NSFileManager defaultManager] createDirectoryAtPath:folderPath withIntermediateDirectories:NO
+                                                        attributes:nil error:&error];
+    }
 
-    [_app.navController pushViewWithPage:[RWPAGE CHILD]];
+    if(error != nil){
+        NSLog(@"Create directory error: %@", error);
+    }
+
+    [UIImagePNGRepresentation(cameraImage) writeToFile:filePath options:NSDataWritingAtomic error:&error];
+
+    if(error != nil){
+        NSLog(@"Error in saving image to disk. Error : %@", error);
+    }
+
+    RWXmlNode *nextPage = [_xml getPage:[_page getStringFromNode:[RWPAGE CHILD]]];
+    nextPage = [nextPage deepClone];
+    [nextPage addNodeWithName:[RWPAGE FILEPATH] value:filePath];
+
+    [_app.navController pushViewWithPage:nextPage];
 }
 
 -(void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {

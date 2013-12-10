@@ -17,7 +17,9 @@
 + (NSString *)BUTTONGALLERY {return @"ButtonGallery";}
 + (NSString *)CAMERAINTENT {return @"CameraIntent";}
 + (NSString *)DAILYSESSIONLIST {return @"DailySessionList";}
++ (NSString *)FILEBROWSER {return @"filebrowser";}
 + (NSString *)IMAGEARTICLELIST {return @"ImageArticleList";}
++ (NSString *)IMAGEUPLOADER {return @"ImageUploader";}
 + (NSString *)NEWSTICKER {return @"NewsTicker";}
 + (NSString *)OVERVIEWMAP {return @"OverviewMap";}
 + (NSString *)PUSHMESSAGEAUTOSUBSCRIBER {return @"PushMessageAutoSubscriber";}

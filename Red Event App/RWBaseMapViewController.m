@@ -82,7 +82,7 @@
 }
 
 -(IBAction)btnBackClicked{
-	[_app.navController popViewController];
+    [_app.navController popPage];
 }
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {

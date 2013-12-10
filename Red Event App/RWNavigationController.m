@@ -34,6 +34,8 @@
 #import "RWWebViewController.h"
 #import "RWBikeTrackingViewController.h"
 #import "RWCameraIntentViewController.h"
+#import "RWImageUploaderViewController.h"
+#import "RWImageUploadBrowserViewController.h"
 
 @interface RWNavigationController ()
 
@@ -105,7 +107,7 @@
 }
 
 
-- (void)popViewController{
+- (void)popPage {
 	UIViewController *previousViewController = viewControllers[viewControllers.count-2];
 	UIViewController *currentViewController = viewControllers.lastObject;
 		
@@ -154,8 +156,14 @@
     else if ([viewControllerType isEqual:[RWTYPE DAILYSESSIONLIST]]) {
         return [[RWDailySessionListViewController alloc] initWithPage:page];
     }
+    else if ([viewControllerType isEqual:[RWTYPE FILEBROWSER]]) {
+        return [[RWImageUploadBrowserViewController alloc] initWithPage:page];
+    }
     else if ([viewControllerType isEqual:[RWTYPE IMAGEARTICLELIST]]) {
         return [[RWImageArticleListViewController alloc] initWithPage:page];
+    }
+    else if ([viewControllerType isEqual:[RWTYPE IMAGEUPLOADER]]) {
+        return [[RWImageUploaderViewController alloc] initWithPage:page];
     }
     else if ([viewControllerType isEqual:[RWTYPE PUSHMESSAGEAUTOSUBSCRIBER]]) {
         return [[RWPushMessageAutoSubscriberViewController alloc] initWithPage:page];

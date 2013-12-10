@@ -21,7 +21,7 @@
 
 - (void)pushViewController:(UIViewController *)newViewController addToBackStack:(bool)addToBackStack;
 
-- (void)popViewController;
+- (void)popPage;
 
 + (UIViewController *)getViewControllerFromPage:(RWXmlNode *)parameters;
 

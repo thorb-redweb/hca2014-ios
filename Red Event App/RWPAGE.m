@@ -18,12 +18,14 @@
 + (NSString *)ARTICLEID {return @"articleid";}
 + (NSString *)CATID {return @"catid";}
 + (NSString *)CHILD {return @"child";}
-+ (NSString *)FRONTPAGE {return @"frontpage";}
++ (NSString *)FILEPATH {return @"filepath";}
 + (NSString *)FOLDER {return @"folder";}
++ (NSString *)FRONTPAGE {return @"frontpage";}
 + (NSString *)NAME {return @"name";}
 + (NSString *)NAVNAME {return @"navname";}
 + (NSString *)PAGE {return @"page";}
 + (NSString *)PARENT {return @"parent";}
++ (NSString *)PARENTPAGE {return @"parentpage";}
 + (NSString *)PUSHMESSAGEID {return @"pushmessageid";}
 + (NSString *)PUSHGROUPID {return @"pushgroupid";}
 + (NSString *)PUSHGROUPIDS {return @"pushgroupids";}

@@ -124,7 +124,7 @@
 }
 
 -(IBAction)btnBackClicked{
-	[_app.navController popViewController];
+    [_app.navController popPage];
 }
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView {

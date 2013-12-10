@@ -7,50 +7,23 @@
         <backgroundimage>splash.png</backgroundimage>
     </page>
     <page>
-        <name>BikeTracking</name>
-        <type>CameraIntent</type>
-        <child>Program</child>
-        <folder>redApp</folder>
-        <frontpage>true</frontpage>
-    </page>
-    <page>
         <name>AutoSubscriber</name>
         <type>PushMessageAutoSubscriber</type>
-        <frontpage>true</frontpage>
         <child>SwipeView</child>
-    </page>
-    <page>
-        <name>TableNavigator</name>
-        <type>TableNavigator</type>
-        <tabname>Forside</tabname>
-        <entry>
-            <name>SwipeView</name>
-            <backicon>arrow_right.png</backicon>
-        </entry>
-        <entry>
-            <name>Program</name>
-            <backicon>arrow_right.png</backicon>
-        </entry>
-        <entry>
-            <name>Nyheder</name>
-            <backicon>arrow_right.png</backicon>
-        </entry>
-        <entry>
-            <name>About</name>
-            <backicon>arrow_right.png</backicon>
-        </entry>
+        <frontpage>true</frontpage>
     </page>
     <page>
         <name>SwipeView</name>
         <type>SwipeView</type>
-		<section>Nyheder</section>
-        <section>PushMessageList</section>
+        <section>Nyheder</section>
+        <section>PMList</section>
         <section>About</section>
     </page>
     <page>
         <name>Nyheder</name>
         <type>ImageArticleList</type>
         <catid>12</catid>
+        <tabname>Forside</tabname>
         <navname>Nyheder</navname>
         <parent>SwipeView</parent>
         <child>Nyhedsside</child>
@@ -62,16 +35,17 @@
         <returnbutton>YES</returnbutton>
     </page>
     <page>
-        <name>PushMessageList</name>
+        <name>PMList</name>
         <type>PushMessageList</type>
-        <navname>PushMessages</navname>
+        <subscriptions>YES</subscriptions>
         <parent>SwipeView</parent>
-        <child>PushMessage</child>
+        <child>PMessage</child>
     </page>
     <page>
-        <name>PushMessage</name>
+        <name>PMessage</name>
         <type>PushMessageDetail</type>
-        <parent>PushMessageList</parent>
+        <parent>PMList</parent>
+        <returnontap>YES</returnontap>
         <returnbutton>YES</returnbutton>
     </page>
     <page>
@@ -81,9 +55,21 @@
         <returnbutton>YES</returnbutton>
     </page>
     <page>
+        <name>ButtonMenu</name>
+        <type>ButtonGallery</type>
+        <tabname>ButtonMenu</tabname>
+        <button1>Program</button1>
+        <button2>OverviewMap</button2>
+        <button3>WebView</button3>
+        <button4>RedWeb</button4>
+        <button5>Biking</button5>
+        <button6>Stairing</button6>
+        <button7>Camera</button7>
+        <button8>Image Uploader</button8>
+    </page>
+    <page>
         <name>Program</name>
         <type>DailySessionList</type>
-        <tabname>Program</tabname>
         <child>Begivenhed</child>
     </page>
     <page>
@@ -99,21 +85,15 @@
         <parent>Begivenhed</parent>
         <child>Begivenhed</child>
         <returnbutton>YES</returnbutton>
-		<zoom>10</zoom>
     </page>
     <page>
         <name>OverviewMap</name>
         <type>OverviewMap</type>
-		<longitude>10</longitude>
-		<latitude>10</latitude>
-		<zoom>10</zoom>
-        <tabname>Map</tabname>
         <returnbutton>YES</returnbutton>
     </page>
     <page>
         <name>WebView</name>
         <type>WebView</type>
-		<tabname>WebView</tabname>
         <url>http://redweb.dk/</url>
         <returnbutton>YES</returnbutton>
     </page>
@@ -127,8 +107,50 @@
         <name>VenueMap</name>
         <type>VenueMap</type>
         <parent>RedWeb</parent>
-		<longitude>10</longitude>
-		<latitude>10</latitude>
-		<zoom>10</zoom>
+    </page>
+    <page>
+        <name>Biking</name>
+        <type>BikeTracking</type>
+    </page>
+    <page>
+        <name>Stairing</name>
+        <type>StairTracking</type>
+    </page>
+    <page>
+        <name>Camera</name>
+        <type>CameraIntent</type>
+        <child>Image Uploader</child>
+        <folder>redApp</folder>
+    </page>
+    <page>
+        <name>Image Uploader</name>
+        <type>ImageUploader</type>
+        <folder>redApp</folder>
+    </page>
+    <page>
+        <name>PMInitializer</name>
+        <type>PushMessageSubscriber</type>
+        <child>TableNavigator</child>
+        <tabname>Settings</tabname>
+    </page>
+    <page>
+        <name>TableNavigator</name>
+        <type>TableNavigator</type>
+        <entry>
+            <name>Unsubscriber</name>
+            <backicon>arrow_right.png</backicon>
+        </entry>
+        <entry>
+            <name>PMGroupSettings</name>
+            <backicon>arrow_right.png</backicon>
+        </entry>
+    </page>
+    <page>
+        <name>Unsubscriber</name>
+        <type>PushMessageUnsubscriber</type>
+    </page>
+    <page>
+        <name>PMGroupSettings</name>
+        <type>PushMessageGroupSettings</type>
     </page>
 </pages>
