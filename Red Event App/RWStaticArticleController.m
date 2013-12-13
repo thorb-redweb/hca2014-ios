@@ -36,6 +36,7 @@
     _model = [_db.Articles getVMFromId:articleId];
 
     [_webBody loadHTMLString:_model.fulltext baseURL:nil];
+	[self.view setBackgroundColor:[UIColor redColor]];
 }
 
 - (void)setAppearance{
@@ -45,7 +46,7 @@
 }
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView {
-    [_webBody RWSizeThatFitsContent];
+//    [_webBody RWSizeThatFitsContent];
 }
 
 - (void)didReceiveMemoryWarning {

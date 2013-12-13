@@ -125,7 +125,20 @@
     <page>
         <name>Image Uploader</name>
         <type>ImageUploader</type>
+        <!--<filepath>/var/mobile/Applications/E7EB5D28-5B6C-4539-8554-958E46ECDA78/Documents/redApp/2013-12-10_12-49-43-016.png</filepath>-->
         <folder>redApp</folder>
+    </page>
+    <page>
+        <name>ButtonMenu2</name>
+        <type>ButtonGallery</type>
+        <tabname>BM2</tabname>
+        <button1>About2</button1>
+    </page>
+    <page>
+        <name>About2</name>
+        <type>StaticArticle</type>
+        <articleid>55</articleid>
+        <returnbutton>YES</returnbutton>
     </page>
     <page>
         <name>PMInitializer</name>

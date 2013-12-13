@@ -45,14 +45,14 @@
 + (NSString *)TOP {return @"top";}
 
 //ButtonGallery Specific
-+ (NSString *)BUTTON1CHILD {return @"button1child";}
-+ (NSString *)BUTTON2CHILD {return @"button2child";}
-+ (NSString *)BUTTON3CHILD {return @"button3child";}
-+ (NSString *)BUTTON4CHILD {return @"button4child";}
-+ (NSString *)BUTTON5CHILD {return @"button5child";}
-+ (NSString *)BUTTON6CHILD {return @"button6child";}
-+ (NSString *)BUTTON7CHILD {return @"button7child";}
-+ (NSString *)BUTTON8CHILD {return @"button8child";}
++ (NSString *)BUTTON1CHILD {return @"button1";}
++ (NSString *)BUTTON2CHILD {return @"button2";}
++ (NSString *)BUTTON3CHILD {return @"button3";}
++ (NSString *)BUTTON4CHILD {return @"button4";}
++ (NSString *)BUTTON5CHILD {return @"button5";}
++ (NSString *)BUTTON6CHILD {return @"button6";}
++ (NSString *)BUTTON7CHILD {return @"button7";}
++ (NSString *)BUTTON8CHILD {return @"button8";}
 
 //PushMessageList Specific
 + (NSString *)SUBSCRIPTIONS {return @"subscriptions";}

@@ -61,7 +61,13 @@
         _lblBody.text = _model.fulltextWithoutHtml;
 		
 		if (_model.mainImagePath && ![_model.mainImagePath isEqual:@""]) {
-			[_imgView setImageWithURL:_model.mainImageUrl placeholderImage:[UIImage imageNamed:@"default_icon.jpg"]];
+//			[_imgView setImageWithURL:_model.mainImageUrl placeholderImage:[UIImage imageNamed:@"default_icon.jpg"]];
+			[_imgView setImageWithURL:_model.mainImageUrl placeholderImage:[UIImage imageNamed:@"default_icon.jpg"]
+							completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType) {
+								float imageHeight = image.size.height;
+                                float aspectHeight = imageHeight * _imgView.frame.size.width / image.size.width;
+                                [_imgView RWsetHeightAsConstraint:aspectHeight];
+                            }];
 		}
 		else if (![_model.introImagePath isEqual:@""]) {
 			_imgView.image = _model.image;

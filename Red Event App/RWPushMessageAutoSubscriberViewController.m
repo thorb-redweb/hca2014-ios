@@ -12,13 +12,15 @@
 
 @end
 
-@implementation RWPushMessageAutoSubscriberViewController
+@implementation RWPushMessageAutoSubscriberViewController{
+    bool firstVisit;
+}
 
 - (id)initWithPage:(RWXmlNode *)page
 {
     self = [super initWithNibName:@"RWPushMessageAutoSubscriberViewController" bundle:nil page:page];
     if (self) {
-        // Custom initialization
+        firstVisit = true;
     }
     return self;
 }
@@ -35,9 +37,12 @@
 
 -(void)viewDidAppear:(BOOL)animated{
 	[super viewDidAppear:animated];
-	
-	RWXmlNode *nextPage = [_xml getPage:_childname];
-    [_app.navController pushViewWithPage:nextPage];
+
+    if(firstVisit){
+        firstVisit = false;
+        RWXmlNode *nextPage = [_xml getPage:_childname];
+        [_app.navController pushViewWithPage:nextPage];
+    }
 }
 
 - (void)didReceiveMemoryWarning

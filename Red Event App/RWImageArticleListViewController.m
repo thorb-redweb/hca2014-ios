@@ -73,7 +73,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     RWArticleVM *model = dataSource[indexPath.row];
 	
-	RWXmlNode *childPage = [_xml getPage:_childname];
+	RWXmlNode *childPage = [[_xml getPage:_childname] deepClone];
 	[childPage addNodeWithName:[RWPAGE ARTICLEID] value:model.articleid];
 
     [_app.navController pushViewWithPage:childPage];

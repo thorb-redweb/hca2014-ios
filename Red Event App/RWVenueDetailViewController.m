@@ -34,6 +34,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [super.view setTranslatesAutoresizingMaskIntoConstraints:NO];
 	_scrollView.translatesAutoresizingMaskIntoConstraints = NO;
     
 	[self setAppearance];
@@ -100,9 +101,7 @@
 }
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView {    
-    [_webBody RWSizeThatFitsContent];
-    [_scrollView RWContentSizeToFit];
-	
+
     _scrollView.bounces = NO;
 }
 

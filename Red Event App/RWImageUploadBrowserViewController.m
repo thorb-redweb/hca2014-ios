@@ -29,9 +29,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    if(![_xml swipeViewHasPage:_page]){
-        [self.view setTranslatesAutoresizingMaskIntoConstraints:NO];
-    }
+    [self.view setTranslatesAutoresizingMaskIntoConstraints:NO];
 
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *folderName = [_page getStringFromNode:[RWPAGE FOLDER]];
@@ -39,7 +37,8 @@
     NSArray *fileList = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:folderPath error:NULL];
 
     pathList = [[NSMutableArray alloc] init];
-    for(NSString *file in fileList){
+    for(int j = fileList.count-1; j >= 0; j--){
+        NSString *file = fileList[j];
         NSString *path = [folderPath stringByAppendingPathComponent:file];
         [pathList addObject:path];
     }
@@ -87,11 +86,6 @@
     }
 
     NSString *filePath = [pathList objectAtIndex:indexPath.row];
-
-//    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-//    NSString *folderName = [_page getStringFromNode:[RWPAGE FOLDER]];
-//    NSString *folderPath = [[paths objectAtIndex:0] stringByAppendingPathComponent:folderName];
-//    NSString *filePath = [folderPath stringByAppendingPathComponent:fileName];
 
     UIImage *image = [UIImage imageWithContentsOfFile:filePath];
     [cell.imgImageItem setImage: image];

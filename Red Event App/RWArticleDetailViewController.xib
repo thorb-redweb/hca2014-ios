@@ -30,8 +30,8 @@
                             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" misplaced="YES" text="&lt;Title>" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="189">
-                                    <rect key="frame" x="20" y="20" width="280" height="21"/>
+                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="&lt;Title>" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="98" translatesAutoresizingMaskIntoConstraints="NO" id="189">
+                                    <rect key="frame" x="20" y="20" width="98" height="21"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -76,6 +76,8 @@
                                 <constraint firstItem="233" firstAttribute="leading" secondItem="IoE-rY-F3b" secondAttribute="leading" constant="20" symbolic="YES" id="F4m-p6-bfP"/>
                                 <constraint firstAttribute="trailing" secondItem="Riv-XP-wAv" secondAttribute="trailing" constant="20" symbolic="YES" id="HPp-wc-c9h"/>
                                 <constraint firstAttribute="bottom" secondItem="ekN-5L-53p" secondAttribute="bottom" constant="20" symbolic="YES" id="Lbu-5e-oFf"/>
+                                <constraint firstItem="Riv-XP-wAv" firstAttribute="trailing" secondItem="216" secondAttribute="trailing" id="Llt-GX-KBc"/>
+                                <constraint firstItem="Riv-XP-wAv" firstAttribute="leading" secondItem="216" secondAttribute="leading" id="PDN-hi-gv1"/>
                                 <constraint firstItem="Riv-XP-wAv" firstAttribute="top" secondItem="233" secondAttribute="bottom" constant="8" symbolic="YES" id="Tyi-fb-Eah"/>
                                 <constraint firstItem="216" firstAttribute="bottom" secondItem="Riv-XP-wAv" secondAttribute="bottom" id="Xjb-m6-dl3"/>
                                 <constraint firstAttribute="trailing" secondItem="233" secondAttribute="trailing" constant="20" symbolic="YES" id="csL-OA-XXj"/>
@@ -88,7 +90,9 @@
                     </subviews>
                     <constraints>
                         <constraint firstItem="IoE-rY-F3b" firstAttribute="top" secondItem="182" secondAttribute="top" id="Fl4-KR-Zs2"/>
+                        <constraint firstItem="IoE-rY-F3b" firstAttribute="leading" secondItem="182" secondAttribute="leading" id="V6k-Vw-ohp"/>
                         <constraint firstAttribute="bottom" secondItem="IoE-rY-F3b" secondAttribute="bottom" id="ldb-LB-Ekg"/>
+                        <constraint firstAttribute="trailing" secondItem="IoE-rY-F3b" secondAttribute="trailing" id="uh4-Ss-0ae"/>
                     </constraints>
                 </scrollView>
             </subviews>

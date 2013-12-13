@@ -12,13 +12,15 @@
 
 @end
 
-@implementation RWCameraIntentViewController
+@implementation RWCameraIntentViewController{
+    bool firstTime;
+}
 
 - (id)initWithPage:(RWXmlNode *)page
 {
     self = [super initWithNibName:@"RWCameraIntentViewController" bundle:nil page:page];
     if (self) {
-        // Custom initialization
+        firstTime = true;
     }
     return self;
 }
@@ -34,17 +36,20 @@
 
     if(![UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]){
         UIAlertView *errorAlertView = [[UIAlertView alloc] initWithTitle:@"Error"
-                                                                 message:@"Device has no camera"
-                                                                delegate:nil
-                                                       cancelButtonTitle:@"OK"
-                                                       otherButtonTitles: nil];
+                                                           message:@"Device has no camera"
+                                                           delegate:nil
+                                                           cancelButtonTitle:@"OK"
+                                                           otherButtonTitles:nil];
         [errorAlertView show];
+        [_app.navController popPage];
     }
-    else {
+    else if(firstTime){
         UIImagePickerController *picker = [[UIImagePickerController  alloc] init];
         picker.delegate = self;
         picker.allowsEditing = YES;
         picker.sourceType = UIImagePickerControllerSourceTypeCamera;
+
+        firstTime = false;
 
         [self presentViewController:picker animated:YES completion:NULL];
     }
@@ -93,6 +98,8 @@
 
 -(void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
     [picker dismissViewControllerAnimated:YES completion:NULL];
+
+    [_app.navController popPage];
 }
 
 - (void)didReceiveMemoryWarning

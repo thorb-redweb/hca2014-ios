@@ -35,6 +35,7 @@
         NSString *imagePath = [_page getStringFromNode:[RWPAGE FILEPATH]];
         UIImage *image = [UIImage imageWithContentsOfFile:imagePath];
         [_imgToUpload setImage:image];
+        [_imgToUpload setContentMode:UIViewContentModeScaleAspectFit];
     }
     else {
         [self startBrowser];

@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "RWBaseViewController.h"
 
-@interface RWStaticArticleController : RWBaseViewController <UITabBarDelegate>
+@interface RWStaticArticleController : RWBaseViewController <UIWebViewDelegate>
 
 @property(weak, nonatomic) IBOutlet UIWebView *webBody;
 
