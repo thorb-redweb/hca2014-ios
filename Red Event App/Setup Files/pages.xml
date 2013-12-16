@@ -18,6 +18,7 @@
         <section>Nyheder</section>
         <section>PMList</section>
         <section>About</section>
+		<section>RedWeb</section>
     </page>
     <page>
         <name>Nyheder</name>
@@ -52,6 +53,7 @@
         <name>About</name>
         <type>StaticArticle</type>
         <articleid>55</articleid>
+        <parent>SwipeView</parent>
         <returnbutton>YES</returnbutton>
     </page>
     <page>
@@ -100,6 +102,7 @@
     <page>
         <name>RedWeb</name>
         <type>VenueDetail</type>
+        <parent>SwipeView</parent>
         <venueid>2</venueid>
         <child>VenueMap</child>
     </page>

@@ -16,6 +16,8 @@
     bool _newReadingSinceLastAverageSpeedCheck;
     double _topSpeed;
     bool _newReadingSinceLastTopSpeedCheck;
+
+    bool _deferringUpdates;
 }
 
 - (id)initWithDelegate:(id)delegate{
@@ -26,7 +28,8 @@
         _locationManager.delegate = self;
 
         _locations = [[NSMutableArray alloc] init];
-        _location = [[CLLocation alloc] init];
+
+        _deferringUpdates = false;
     }
     return self;
 }
@@ -59,29 +62,39 @@
 }
 
 -(void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations {
-    _location = locations.lastObject;
-    NSLog(@"%@",_location.description);
+    for(CLLocation *newLocation in locations){
+        NSLog(@"%@",newLocation.description);
+        if(newLocation.horizontalAccuracy <= 30.0){
+            if(_locations.count >= 1){
+                CLLocation *lastLoc = _locations.lastObject;
+                double lastLocDistance = [self calculateDistanceBetweenTwoLocations:lastLoc secondLocation:newLocation];
+                if(lastLocDistance >= 100.0)
+                {
+                    [_locations addObject:newLocation];
 
-    if(_location.horizontalAccuracy < 25.0){
-        if(_locations.count >= 2){
-            CLLocation *lastLoc = _locations[_locations.count-1];
-            double lastLocDistance = [self calculateDistanceBetweenTwoLocations:lastLoc secondLocation:_location];
-            if(lastLocDistance >= 50.0)
-            {
-                [_locations addObject:_location];
+                    _newReadingSinceLastTopSpeedCheck = true;
+                    _newReadingSinceLastAverageSpeedCheck = true;
+                    _newReadingSinceLastDistanceCheck = true;
 
-                _newReadingSinceLastTopSpeedCheck = true;
-                _newReadingSinceLastAverageSpeedCheck = true;
-                _newReadingSinceLastDistanceCheck = true;
+                    [_delegate topSpeedUpdated:[self getTopSpeed]];
+                    [_delegate averageSpeedUpdated:[self getAverageSpeed]];
+                    [_delegate distanceUpdated:[self getTotalDistanceTravelled]];
+                }
+            }
+            else {
+                [_locations addObject:newLocation];
+            }
 
-                [_delegate topSpeedUpdated:[self getTopSpeed]];
-                [_delegate averageSpeedUpdated:[self getAverageSpeed]];
-                [_delegate distanceUpdated:[self getTotalDistanceTravelled]];
+            if(!_deferringUpdates){
+                CLLocationDistance distance = 100;
+                NSTimeInterval time = 15;
+                [_locationManager allowDeferredLocationUpdatesUntilTraveled:distance timeout:time];
+
+                _deferringUpdates = true;
             }
         }
-        else{
-            [_locations addObject:_location];
-        }
+
+
     }
 }
 

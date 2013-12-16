@@ -24,6 +24,8 @@
 	RWXMLStore *_xml;
 	
 	RWXmlNode *_childPage;
+
+    bool _firstTime;
 }
 
 -(id)initWithStartPage:(RWXmlNode *)startPage
@@ -31,6 +33,7 @@
     self = [super initWithNibName:@"RWMainViewController" bundle:nil];
     if (self) {
 		_childPage = startPage;
+        _firstTime = true;
     }
     return self;
 }
@@ -39,16 +42,19 @@
 {
     [super viewDidLoad];
 	[self.view setTranslatesAutoresizingMaskIntoConstraints:NO];
-    
-	RWAppDelegate *app = [[UIApplication sharedApplication] delegate];
-	_xml = [app xml];
-	
-	[app.navController connectToMainView:self];
 
-    [app.navController pushViewWithPage:_childPage];
-	
-	[self setBarVisibility];
-	[self setAppearance];
+    if(_firstTime){
+        RWAppDelegate *app = [[UIApplication sharedApplication] delegate];
+        _xml = [app xml];
+
+        [app.navController connectToMainView:self];
+
+        [app.navController pushViewWithPage:_childPage];
+
+        [self setBarVisibility];
+        [self setAppearance];
+        _firstTime = false;
+    }
 }
 
 - (void)setBarVisibility{

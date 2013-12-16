@@ -46,6 +46,8 @@
 	RWMainViewController *_mainViewController;
 	UIView *_mainView;
 	NSMutableArray *viewControllers;
+	
+	RWSwipeViewController *_swipeview;
 }
 
 - (void)connectToMainView:(RWMainViewController *)mainViewcontroller{
@@ -68,19 +70,26 @@
         parent = [page getStringFromNode:[RWPAGE PARENT]];
         pageBelongsToSwipeView = [app.xml nameBelongsToSwipeView:parent];
     }
-	if (!pageBelongsToSwipeView && !([type isEqual: [RWTYPE PUSHMESSAGEAUTOSUBSCRIBER]])){
-		UIViewController *newViewController = [RWNavigationController getViewControllerFromPage:page];
-		[self pushViewController:newViewController addToBackStack:addToBackStack ];
-	}
-	else if(pageBelongsToSwipeView){
+	
+	if(pageBelongsToSwipeView){
 		RWXmlNode *swipeViewPage = [app.xml getPage:parent];
-		UIViewController *swipeViewController = [RWNavigationController getViewControllerFromPage:swipeViewPage];
+		RWSwipeViewController *swipeViewController = (RWSwipeViewController *)[RWNavigationController getViewControllerFromPage:swipeViewPage];
+		_swipeview = swipeViewController;
 		[self pushViewController:swipeViewController addToBackStack:addToBackStack ];
 	}
-    else if([type isEqual:[RWTYPE PUSHMESSAGEAUTOSUBSCRIBER]]){
+    else if([type isEqual:[RWTYPE SWIPEVIEW]]){
+        RWSwipeViewController *swipeViewController = (RWSwipeViewController *)[RWNavigationController getViewControllerFromPage:page];
+		_swipeview = swipeViewController;
+		[self pushViewController:swipeViewController addToBackStack:NO];
+    }
+	else if([type isEqual:[RWTYPE PUSHMESSAGEAUTOSUBSCRIBER]]){
         UIViewController *newViewController = [RWNavigationController getViewControllerFromPage:page];
         [self pushViewController:newViewController addToBackStack:NO];
     }
+	else{
+		UIViewController *newViewController = [RWNavigationController getViewControllerFromPage:page];
+		[self pushViewController:newViewController addToBackStack:addToBackStack ];
+	}
 }
 
 - (void)pushViewController:(UIViewController *)newViewController addToBackStack:(bool)addToBackStack {
@@ -127,6 +136,10 @@
 	[currentViewController removeFromParentViewController];
 	
 	[viewControllers removeObject:currentViewController];
+}
+
+- (RWSwipeViewController *)getSwipeView{
+	return _swipeview;
 }
 
 + (UIViewController *)getViewControllerFromPage:(RWXmlNode *)page {

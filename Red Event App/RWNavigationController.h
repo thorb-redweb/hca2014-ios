@@ -10,6 +10,7 @@
 
 @class RWXmlNode;
 @class RWMainViewController;
+@class RWSwipeViewController;
 
 @interface RWNavigationController : NSObject
 
@@ -22,6 +23,8 @@
 - (void)pushViewController:(UIViewController *)newViewController addToBackStack:(bool)addToBackStack;
 
 - (void)popPage;
+
+- (RWSwipeViewController *)getSwipeView;
 
 + (UIViewController *)getViewControllerFromPage:(RWXmlNode *)parameters;
 

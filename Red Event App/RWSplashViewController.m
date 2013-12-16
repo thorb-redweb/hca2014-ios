@@ -29,8 +29,8 @@
 	NSTimer *_splashTimer;
 	
 	UIAlertView *_alertview;
-	
-	bool _readyForDataFromServer;
+
+    bool _firstTime;
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
@@ -41,8 +41,8 @@
 
         _db = app.db;
         _sv = app.sv;
-		
-		_readyForDataFromServer = false;
+
+        _firstTime = true;
     }
     return self;
 }
@@ -62,12 +62,13 @@
 }
 
 - (void)appHasEnteredForeground {
-	
-	[self getDataFromServer];
+//    if(_firstTime){
+//	    [self getDataFromServer];
+//        _firstTime = false;
+//    }
 }
 
 -(void)getDataFromServer{
-	_readyForDataFromServer = false;
 	NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
     NSString *dataversion = [prefs objectForKey:@"dataversion"];
     NSLog(@"Current dataversion: %@", dataversion);
@@ -147,7 +148,6 @@
 
 - (void)alertOnClickCloseMessage{
 	[self hideActivityViews];
-	_readyForDataFromServer = YES;
 }
 
 - (void)didReceiveMemoryWarning {

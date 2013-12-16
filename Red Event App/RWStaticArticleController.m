@@ -6,11 +6,12 @@
 //  Copyright (c) 2013 redWEB. All rights reserved.
 //
 
-#import "UIWebView+RWWebView.h"
+#import "UIView+RWViewLayout.h"
 
 #import "RWStaticArticleController.h"
 #import "RWArticleVM.h"
 #import "RWAppearanceHelper.h"
+#import "RWSwipeViewController.h"
 
 @interface RWStaticArticleController ()
 
@@ -30,8 +31,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self.view setTranslatesAutoresizingMaskIntoConstraints:NO];
+    if(![_xml swipeViewHasPage:_page]){
+		[self.view setTranslatesAutoresizingMaskIntoConstraints:NO];
+	}
 
+	
     int articleId = [_page getIntegerFromNode:[RWPAGE ARTICLEID]];
     _model = [_db.Articles getVMFromId:articleId];
 
@@ -45,9 +49,17 @@
     [helper setBackgroundColor:self.view localName:[RWLOOK STATICARTICLE_BACKGROUNDCOLOR] globalName:[RWLOOK DEFAULT_BACKCOLOR]];
 }
 
-- (void)webViewDidFinishLoad:(UIWebView *)webView {
-//    [_webBody RWSizeThatFitsContent];
-}
+//-(void)updateViewConstraints{
+//	if(![_xml swipeViewHasPage:_page]){
+//		RWSwipeViewController *swipeViewController = [_app.navController getSwipeView];
+//		UIView *swipeView = swipeViewController.pageViewController.view;
+//		[swipeView RWpinChildToTop:self.view];
+//		[swipeView RWpinChildToSides:self.view];
+//		[swipeView RWpinChildToBottom:self.view];
+//	}
+//	
+//	[super updateViewConstraints];
+//}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
