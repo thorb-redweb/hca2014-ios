@@ -67,7 +67,13 @@
             _imgView.image = _model.image;
         }
         else {
-			[_imgView setImageWithURL:_model.imageUrl placeholderImage:[UIImage imageNamed:@"default_icon.jpg"]];
+//			[_imgView setImageWithURL:_model.imageUrl placeholderImage:[UIImage imageNamed:@"default_icon.jpeg"]];
+			[_imgView setImageWithURL:_model.imageUrl placeholderImage:[UIImage imageNamed:@"default_icon.jpg"]
+							completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType) {
+								float imageHeight = image.size.height;
+                                float aspectHeight = imageHeight * _imgView.frame.size.width / image.size.width;
+                                [_imgView RWsetHeightAsConstraint:aspectHeight];
+								}];
         }
     }
 	
@@ -157,6 +163,15 @@
 }
 
 -(IBAction)btnBackClicked{
+	NSArray *constraints = self.view.constraints;
+	constraints = [[NSArray alloc] init];
+	
+	UIScrollView *scrollView = _scrollView;
+	CGSize size = scrollView.contentSize;
+	NSArray *constraints2 = scrollView.constraints;
+	constraints2 = [[NSArray alloc] init];
+	size = CGSizeMake(0, 0);
+	
     [_app.navController popPage];
 }
 

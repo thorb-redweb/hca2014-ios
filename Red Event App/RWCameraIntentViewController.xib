@@ -6,8 +6,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RWCameraIntentViewController">
             <connections>
-                <outlet property="lblGoingToCamera" destination="IIG-gF-yA3" id="gB5-V4-EMK"/>
-                <outlet property="view" destination="1" id="3"/>
+                <outlet property="btnTakePicture" destination="7Pf-rp-hLM" id="6ER-BH-fCK"/>
+                <outlet property="previewView" destination="Z0U-yg-rBt" id="ir9-CY-hJY"/>
+                <outlet property="view" destination="1" id="dem-uk-XLQ"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -15,18 +16,32 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Connecting to camera.." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IIG-gF-yA3">
-                    <rect key="frame" x="56" y="122" width="180" height="21"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z0U-yg-rBt" customClass="AVCamPreviewView">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="320"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="320" id="KAs-eG-2gf"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Pf-rp-hLM">
+                    <rect key="frame" x="20" y="518" width="280" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="Take Picture">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="snapStillImage:" destination="-1" eventType="touchUpInside" id="9LT-XJ-Va7"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstAttribute="centerX" secondItem="IIG-gF-yA3" secondAttribute="centerX" constant="14" id="WvY-tu-Uaf"/>
-                <constraint firstAttribute="centerY" secondItem="IIG-gF-yA3" secondAttribute="centerY" constant="151.5" id="rma-Ub-gTw"/>
+                <constraint firstItem="Z0U-yg-rBt" firstAttribute="top" secondItem="1" secondAttribute="top" id="Czq-q7-wNn"/>
+                <constraint firstAttribute="trailing" secondItem="Z0U-yg-rBt" secondAttribute="trailing" id="Fmw-PL-Mpx"/>
+                <constraint firstAttribute="bottom" secondItem="7Pf-rp-hLM" secondAttribute="bottom" constant="20" symbolic="YES" id="UOK-g0-AFV"/>
+                <constraint firstItem="7Pf-rp-hLM" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="20" symbolic="YES" id="XvB-O9-Bee"/>
+                <constraint firstItem="Z0U-yg-rBt" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="cu8-jd-DJ8"/>
+                <constraint firstAttribute="trailing" secondItem="7Pf-rp-hLM" secondAttribute="trailing" constant="20" symbolic="YES" id="jJw-nQ-haO"/>
             </constraints>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>

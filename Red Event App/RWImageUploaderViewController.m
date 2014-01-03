@@ -6,6 +6,7 @@
 //  Copyright (c) 2013 redWEB. All rights reserved.
 //
 
+#import "UIView+RWViewLayout.h"
 #import "RWImageUploaderViewController.h"
 
 @interface RWImageUploaderViewController ()
@@ -35,7 +36,9 @@
         NSString *imagePath = [_page getStringFromNode:[RWPAGE FILEPATH]];
         UIImage *image = [UIImage imageWithContentsOfFile:imagePath];
         [_imgToUpload setImage:image];
-        [_imgToUpload setContentMode:UIViewContentModeScaleAspectFit];
+		
+		CGSize size = image.size;
+		size = CGSizeMake(0, 0);
     }
     else {
         [self startBrowser];

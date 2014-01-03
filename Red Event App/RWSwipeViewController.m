@@ -35,7 +35,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	[self.view setTranslatesAutoresizingMaskIntoConstraints:NO];
+//	[self.view setTranslatesAutoresizingMaskIntoConstraints:NO];
 	
 	self.pageViewController = [[UIPageViewController alloc] initWithTransitionStyle:UIPageViewControllerTransitionStyleScroll
                                                               navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal options:nil];
@@ -59,12 +59,12 @@
     [self.pageViewController didMoveToParentViewController:self];
 	
 	UIView *pageView = self.pageViewController.view;
-	NSDictionary *viewDictionary = NSDictionaryOfVariableBindings(pageView);
-	
-	[self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"|[pageView]|" options:0 metrics:nil views:viewDictionary]];
-	[self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[pageView]|" options:0 metrics:nil views:viewDictionary]];
-	
 	pageView.frame = self.view.frame;
+	
+//	NSDictionary *viewDictionary = NSDictionaryOfVariableBindings(pageView);//
+//	[self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"|[pageView]|" options:0 metrics:nil views:viewDictionary]];
+//	[self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[pageView]|" options:0 metrics:nil views:viewDictionary]];
+	
 	
 	[self setAppearance];
 }

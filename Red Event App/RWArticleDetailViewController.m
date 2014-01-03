@@ -36,7 +36,7 @@
     [super viewDidLoad];
 	[self.view setTranslatesAutoresizingMaskIntoConstraints:NO];
     [_scrollView setTranslatesAutoresizingMaskIntoConstraints:NO];
-	
+		
     _scrollView.bounces = NO;
 	
 	[self setAppearance];
@@ -79,7 +79,7 @@
 	if(![_page hasChild:[RWPAGE RETURNBUTTON]] ||
 	   ([_page hasChild:[RWPAGE RETURNBUTTON]] && ![_page getBoolFromNode:[RWPAGE RETURNBUTTON]])){
 		[_btnBack RWsetHeightAsConstraint:0.0];
-	} else if([[_xml getAppearanceForPage:_name] hasChild:[RWLOOK ADVENTWINDOW_BACKBUTTONBACKGROUNDIMAGE]]){
+	} else if([_xml.appearance hasChild:_name] && [[_xml getAppearanceForPage:_name] hasChild:[RWLOOK ADVENTWINDOW_BACKBUTTONBACKGROUNDIMAGE]]){
 		UIImage *btnImage = _btnBack.currentBackgroundImage;
 		float aspect = btnImage.size.height/btnImage.size.width;
 		[_btnBack addConstraint:[NSLayoutConstraint constraintWithItem:_btnBack attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:_btnBack attribute:NSLayoutAttributeWidth multiplier:aspect constant:0]];

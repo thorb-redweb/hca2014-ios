@@ -28,4 +28,6 @@
 
 + (UIViewController *)getViewControllerFromPage:(RWXmlNode *)parameters;
 
+-(void)resetRootViewSize;
+
 @end

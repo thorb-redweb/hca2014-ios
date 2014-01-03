@@ -107,7 +107,8 @@
 }
 
 - (NSString *)imagePath {
-    return _session.event.imagepath;
+	Event *event = _session.event;
+    return event.imagepath;
 }
 
 - (NSURL *)imageUrl{

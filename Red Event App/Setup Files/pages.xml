@@ -18,7 +18,6 @@
         <section>Nyheder</section>
         <section>PMList</section>
         <section>About</section>
-		<section>RedWeb</section>
     </page>
     <page>
         <name>Nyheder</name>
@@ -72,6 +71,7 @@
     <page>
         <name>Program</name>
         <type>DailySessionList</type>
+        <parent>SwipeView</parent>
         <child>Begivenhed</child>
     </page>
     <page>
@@ -102,7 +102,6 @@
     <page>
         <name>RedWeb</name>
         <type>VenueDetail</type>
-        <parent>SwipeView</parent>
         <venueid>2</venueid>
         <child>VenueMap</child>
     </page>
@@ -136,12 +135,20 @@
         <type>ButtonGallery</type>
         <tabname>BM2</tabname>
         <button1>About2</button1>
+		<button2>Nyheder2</button2>
     </page>
     <page>
         <name>About2</name>
         <type>StaticArticle</type>
         <articleid>55</articleid>
         <returnbutton>YES</returnbutton>
+    </page>
+    <page>
+        <name>Nyheder2</name>
+        <type>ImageArticleList</type>
+        <catid>12</catid>
+        <navname>Nyheder</navname>
+        <child>Nyhedsside</child>
     </page>
     <page>
         <name>PMInitializer</name>

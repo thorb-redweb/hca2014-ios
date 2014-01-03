@@ -2,12 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3b12e239-311e-4611-93d9-549bde44ed4e" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Red Event App/AVCamPreviewView.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Red Event App/AVCamPreviewView.m" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Red Event App/UIImage+RWImage.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Red Event App/UIImage+RWImage.m" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red App.xcodeproj/project.xcworkspace/xcuserdata/redwebpraktik.xcuserdatad/UserInterfaceState.xcuserstate" afterPath="$PROJECT_DIR$/Red App.xcodeproj/project.xcworkspace/xcuserdata/redwebpraktik.xcuserdatad/UserInterfaceState.xcuserstate" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/RWBikeTracker.h" afterPath="$PROJECT_DIR$/Red Event App/RWBikeTracker.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/RWBikeTracker.m" afterPath="$PROJECT_DIR$/Red Event App/RWBikeTracker.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/RWMainViewController.m" afterPath="$PROJECT_DIR$/Red Event App/RWMainViewController.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/RWSplashViewController.m" afterPath="$PROJECT_DIR$/Red Event App/RWSplashViewController.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/Red App-Info.plist" afterPath="$PROJECT_DIR$/Red Event App/Red App-Info.plist" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/RWAppDelegate.m" afterPath="$PROJECT_DIR$/Red Event App/RWAppDelegate.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/RWArticleDetailViewController.m" afterPath="$PROJECT_DIR$/Red Event App/RWArticleDetailViewController.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/RWArticleDetailViewController.xib" afterPath="$PROJECT_DIR$/Red Event App/RWArticleDetailViewController.xib" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/RWCameraIntentViewController.h" afterPath="$PROJECT_DIR$/Red Event App/RWCameraIntentViewController.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/RWCameraIntentViewController.m" afterPath="$PROJECT_DIR$/Red Event App/RWCameraIntentViewController.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/RWCameraIntentViewController.xib" afterPath="$PROJECT_DIR$/Red Event App/RWCameraIntentViewController.xib" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/RWImageUploaderViewController.m" afterPath="$PROJECT_DIR$/Red Event App/RWImageUploaderViewController.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/RWImageUploaderViewController.xib" afterPath="$PROJECT_DIR$/Red Event App/RWImageUploaderViewController.xib" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/RWNavigationController.h" afterPath="$PROJECT_DIR$/Red Event App/RWNavigationController.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/RWNavigationController.m" afterPath="$PROJECT_DIR$/Red Event App/RWNavigationController.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/RWOverviewMapViewController.m" afterPath="$PROJECT_DIR$/Red Event App/RWOverviewMapViewController.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/RWSessionDetailViewController.m" afterPath="$PROJECT_DIR$/Red Event App/RWSessionDetailViewController.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/RWSessionDetailViewController.xib" afterPath="$PROJECT_DIR$/Red Event App/RWSessionDetailViewController.xib" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/RWSessionVM.m" afterPath="$PROJECT_DIR$/Red Event App/RWSessionVM.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/RWSwipeViewController.m" afterPath="$PROJECT_DIR$/Red Event App/RWSwipeViewController.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/RWVenueDetailViewController.m" afterPath="$PROJECT_DIR$/Red Event App/RWVenueDetailViewController.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/Setup Files/pages.xml" afterPath="$PROJECT_DIR$/Red Event App/Setup Files/pages.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red App.xcodeproj/project.pbxproj" afterPath="$PROJECT_DIR$/Red App.xcodeproj/project.pbxproj" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Red Event App.iws" />
@@ -31,73 +48,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="main.m" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Red Event App/main.m">
+      <file leaf-file-name="RWBikeTracker.m" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Red Event App/RWBikeTracker.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="0" selection-start="243" selection-end="243" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="315">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RWHandler_UpdateDatabase.m" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Red Event App/RWHandler_UpdateDatabase.m">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="52" column="0" selection-start="1305" selection-end="1305" vertical-scroll-proportion="0.0" vertical-offset="293" max-vertical-offset="5460">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RWDbInterface.m" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Red Event App/RWDbInterface.m">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="63" column="0" selection-start="2074" selection-end="2074" vertical-scroll-proportion="0.0" vertical-offset="399" max-vertical-offset="915">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RWServer.m" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Red Event App/RWServer.m">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="71" column="0" selection-start="2051" selection-end="2051" vertical-scroll-proportion="0.0" vertical-offset="848" max-vertical-offset="1395">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RWHandler_UpdateFromServer.m" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Red Event App/RWHandler_UpdateFromServer.m">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="50" column="0" selection-start="1631" selection-end="1631" vertical-scroll-proportion="0.0" vertical-offset="399" max-vertical-offset="915">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RWSplashViewController.m" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Red Event App/RWSplashViewController.m">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="68" column="0" selection-start="1606" selection-end="1606" vertical-scroll-proportion="0.5810345" vertical-offset="563" max-vertical-offset="2340">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RWAppDelegate.m" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Red Event App/RWAppDelegate.m">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="197" column="0" selection-start="8633" selection-end="8633" vertical-scroll-proportion="0.0" vertical-offset="1573" max-vertical-offset="4785">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RWMainViewController.m" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Red Event App/RWMainViewController.m">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="15" selection-start="494" selection-end="494" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1485">
+            <state line="70" column="42" selection-start="2328" selection-end="2328" vertical-scroll-proportion="0.0" vertical-offset="1050" max-vertical-offset="2850">
               <folding />
             </state>
           </provider>
@@ -106,16 +60,79 @@
       <file leaf-file-name="RWBikeTrackingViewController.m" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Red Event App/RWBikeTrackingViewController.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="1085" max-vertical-offset="1665">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1680">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RWBikeTracker.m" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Red Event App/RWBikeTracker.m">
+      <file leaf-file-name="RWMainViewController.m" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Red Event App/RWMainViewController.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="70" column="42" selection-start="2328" selection-end="2328" vertical-scroll-proportion="0.0" vertical-offset="863" max-vertical-offset="2835">
+            <state line="30" column="15" selection-start="494" selection-end="494" vertical-scroll-proportion="0.0" vertical-offset="450" max-vertical-offset="1605">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RWAppDelegate.m" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Red Event App/RWAppDelegate.m">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="201" column="0" selection-start="8728" selection-end="8728" vertical-scroll-proportion="0.0" vertical-offset="3015" max-vertical-offset="5010">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RWCameraIntentViewController.m" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Red Event App/RWCameraIntentViewController.m">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="13" column="0" selection-start="398" selection-end="398" vertical-scroll-proportion="0.0816092" vertical-offset="124" max-vertical-offset="6120">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RWSplashViewController.m" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Red Event App/RWSplashViewController.m">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="68" column="0" selection-start="1606" selection-end="1606" vertical-scroll-proportion="0.0" vertical-offset="1020" max-vertical-offset="2460">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RWHandler_UpdateFromServer.m" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Red Event App/RWHandler_UpdateFromServer.m">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="50" column="0" selection-start="1631" selection-end="1631" vertical-scroll-proportion="0.0" vertical-offset="750" max-vertical-offset="915">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RWServer.m" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Red Event App/RWServer.m">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="71" column="0" selection-start="2051" selection-end="2051" vertical-scroll-proportion="0.0" vertical-offset="1065" max-vertical-offset="1440">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RWDbInterface.m" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Red Event App/RWDbInterface.m">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="63" column="0" selection-start="2074" selection-end="2074" vertical-scroll-proportion="0.0" vertical-offset="945" max-vertical-offset="1110">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RWHandler_UpdateDatabase.m" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Red Event App/RWHandler_UpdateDatabase.m">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="52" column="0" selection-start="1305" selection-end="1305" vertical-scroll-proportion="0.0" vertical-offset="780" max-vertical-offset="5775">
               <folding />
             </state>
           </provider>
@@ -144,7 +161,6 @@
         <option value="$PROJECT_DIR$/Red Event App/RWImageUploadBrowserListItem.m" />
         <option value="$PROJECT_DIR$/Red Event App/RWImageUploadBrowserViewController.m" />
         <option value="$PROJECT_DIR$/Red Event App/RWImageUploaderViewController.m" />
-        <option value="$PROJECT_DIR$/Red Event App/RWCameraIntentViewController.m" />
         <option value="$PROJECT_DIR$/Red Event App/Setup Files/pages.xml" />
         <option value="$PROJECT_DIR$/Red Event App/RWStaticArticleController.m" />
         <option value="$PROJECT_DIR$/Red Event App/RWImageArticleListViewController.m" />
@@ -155,13 +171,14 @@
         <option value="$PROJECT_DIR$/Red Event App/RWBikeTracker.m" />
         <option value="$PROJECT_DIR$/Red Event App/RWMainViewController.m" />
         <option value="$PROJECT_DIR$/Red Event App/RWSplashViewController.m" />
+        <option value="$PROJECT_DIR$/Red Event App/RWCameraIntentViewController.m" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="y" value="22" />
     <option name="width" value="1920" />
-    <option name="height" value="975" />
+    <option name="height" value="980" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -205,7 +222,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Cidr.FilesView" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -285,25 +301,22 @@
               <option name="myItemId" value="Contest" />
               <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BikeTracking" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
-            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Cidr.FilesView" />
       <pane id="DirectoryView.Xcode" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="options.lastSelected" value="Errors" />
     <property name="recentsLimit" value="5" />
+    <property name="options.lastSelected" value="Errors" />
     <property name="last_opened_file_path" value="$USER_HOME$/Documents/MediaMemo" />
     <property name="FullScreen" value="false" />
     <property name="OBJC.PRESERVED_TARGET_SELECTION" value="Red App" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RunManager" selected="Application.Red App Development">
     <configuration default="true" type="AppleRunConfiguration" factoryName="Application" PROJECT_NAME="Red Event App" TARGET_NAME="Red Event App" CONFIG_NAME="Debug" PASS_PARENT_ENVS="FALSE" RUN_TARGET_PROJECT_NAME="Red Event App" RUN_TARGET_NAME="Red Event App" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
@@ -360,23 +373,23 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1920" height="975" extended-state="0" />
-    <editor active="true" />
+    <frame x="0" y="22" width="1920" height="980" extended-state="6" />
+    <editor active="false" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32560706" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32990867" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32671082" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1796875" sideWeight="0.67108166" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1796875" sideWeight="0.6750823" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39955848" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3289183" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3289183" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3289183" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32671082" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32491767" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -392,29 +405,13 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/Red Event App/RWAppDelegate.m</url>
-          <line>177</line>
-          <option name="timeStamp" value="69" />
-        </line-breakpoint>
-      </breakpoints>
       <option name="time" value="91" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Red Event App/RWSwipeViewController.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="580">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Red Event App/RWBikeTracker.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="65" selection-start="592" selection-end="592" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
-          <folding />
-        </state>
+        <state line="22" column="65" selection-start="592" selection-end="592" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Red Event App/RWNavigationController.m">
@@ -426,9 +423,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Red Event App/Red App-Info.plist">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="27" selection-start="790" selection-end="790" vertical-scroll-proportion="0.5948276" vertical-offset="0" max-vertical-offset="630">
-          <folding />
-        </state>
+        <state line="23" column="27" selection-start="790" selection-end="790" vertical-scroll-proportion="0.5948276" vertical-offset="0" max-vertical-offset="630" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Red Event App/Default.png">
@@ -438,16 +433,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Red Event App/en.lproj/InfoPlist.strings">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="580">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="580" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Red Event App/main.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="0" selection-start="243" selection-end="243" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="315">
-          <folding />
-        </state>
+        <state line="14" column="0" selection-start="243" selection-end="243" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="315" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Red Event App/RWBikeTracker.m">
@@ -492,23 +483,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Red Event App/RWHandler_UpdateDatabase.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="0" selection-start="1305" selection-end="1305" vertical-scroll-proportion="0.0" vertical-offset="293" max-vertical-offset="5460">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Red Event App/RWAppDelegate.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="197" column="0" selection-start="8633" selection-end="8633" vertical-scroll-proportion="0.0" vertical-offset="1573" max-vertical-offset="4785">
+        <state line="201" column="0" selection-start="8728" selection-end="8728" vertical-scroll-proportion="0.0" vertical-offset="3015" max-vertical-offset="5010">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Red Event App/RWSplashViewController.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="68" column="0" selection-start="1606" selection-end="1606" vertical-scroll-proportion="0.5810345" vertical-offset="563" max-vertical-offset="2340">
+        <state line="68" column="0" selection-start="1606" selection-end="1606" vertical-scroll-proportion="0.0" vertical-offset="1020" max-vertical-offset="2460">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Red Event App/RWCameraIntentViewController.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="0" selection-start="398" selection-end="398" vertical-scroll-proportion="0.0816092" vertical-offset="124" max-vertical-offset="6120">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Red Event App/RWHandler_UpdateDatabase.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="52" column="0" selection-start="1305" selection-end="1305" vertical-scroll-proportion="0.0" vertical-offset="293" max-vertical-offset="5460">
           <folding />
         </state>
       </provider>

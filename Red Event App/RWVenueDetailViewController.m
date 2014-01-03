@@ -34,8 +34,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [super.view setTranslatesAutoresizingMaskIntoConstraints:NO];
-	_scrollView.translatesAutoresizingMaskIntoConstraints = NO;
+	if(![_xml swipeViewHasPage:_page]){
+		[super.view setTranslatesAutoresizingMaskIntoConstraints:NO];
+		_scrollView.translatesAutoresizingMaskIntoConstraints = NO;
+	}
     
 	[self setAppearance];
 	[self setText];

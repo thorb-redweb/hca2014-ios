@@ -161,6 +161,27 @@
     [[UITabBarItem appearance] setTitleTextAttributes:tabbarAttributes forState:UIControlStateNormal];
 }
 
+//
+// Splash Page Start
+
+- (void)startOnSplashScreen {
+	NSLog(@"Start on Splash Screen");
+    RWSplashViewController *viewController = [[RWSplashViewController alloc] initWithNibName:@"RWSplashViewController" bundle:nil];
+    self.window.rootViewController = viewController;
+}
+
+- (void)startNavController {
+    _navController = [[RWNavigationController alloc] init];
+	//Note that the navcontroller is not functional until it has connected to the mainView in the
+	//RWMainViewController's onViewLoaded method
+	
+    RWMainViewController *mainView = [[RWMainViewController alloc] initWithStartPage:[_xml getFrontPage]];
+	self.window.rootViewController = mainView;
+}
+
+//
+// Notification Start
+
 -(void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)notification {
     NSLog(@"Push message received, start data update");
 	_localNotification = notification;
@@ -189,22 +210,6 @@
 
 - (void)errorOccured:(NSString *)errorMessage {
 
-}
-
-
-- (void)startOnSplashScreen {
-	NSLog(@"Start on Splash Screen");
-    RWSplashViewController *viewController = [[RWSplashViewController alloc] initWithNibName:@"RWSplashViewController" bundle:nil];
-    self.window.rootViewController = viewController;
-}
-
-- (void)startNavController {
-    _navController = [[RWNavigationController alloc] init];
-	//Note that the navcontroller is not functional until it has connected to the mainView in the
-	//RWMainViewController's onViewLoaded method
-	
-    RWMainViewController *mainView = [[RWMainViewController alloc] initWithStartPage:[_xml getFrontPage]];
-	self.window.rootViewController = mainView;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

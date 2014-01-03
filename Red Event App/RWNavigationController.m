@@ -50,6 +50,11 @@
 	RWSwipeViewController *_swipeview;
 }
 
+-(void)resetRootViewSize{
+	_mainViewController.view.frame = [UIScreen mainScreen].applicationFrame;
+	_mainView = _mainViewController.mainView;
+}
+
 - (void)connectToMainView:(RWMainViewController *)mainViewcontroller{
 	viewControllers = [[NSMutableArray alloc] init];
 	_mainViewController = mainViewcontroller;
@@ -80,7 +85,7 @@
     else if([type isEqual:[RWTYPE SWIPEVIEW]]){
         RWSwipeViewController *swipeViewController = (RWSwipeViewController *)[RWNavigationController getViewControllerFromPage:page];
 		_swipeview = swipeViewController;
-		[self pushViewController:swipeViewController addToBackStack:NO];
+		[self pushViewController:swipeViewController addToBackStack:YES];
     }
 	else if([type isEqual:[RWTYPE PUSHMESSAGEAUTOSUBSCRIBER]]){
         UIViewController *newViewController = [RWNavigationController getViewControllerFromPage:page];

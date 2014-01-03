@@ -200,6 +200,8 @@
 		36A97ADA185708330050EC8D /* RWImageUploadBrowserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36A97AD8185708330050EC8D /* RWImageUploadBrowserViewController.xib */; };
 		36A97ADD185708920050EC8D /* RWImageUploadBrowserListItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 36A97ADC185708920050EC8D /* RWImageUploadBrowserListItem.m */; };
 		36A97ADF185708A40050EC8D /* RWImageUploadBrowserListItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36A97ADE185708A40050EC8D /* RWImageUploadBrowserListItem.xib */; };
+		36A97B351861A3470050EC8D /* AVCamPreviewView.m in Sources */ = {isa = PBXBuildFile; fileRef = 36A97B341861A3470050EC8D /* AVCamPreviewView.m */; };
+		36A97B3A1861D80C0050EC8D /* UIImage+RWImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 36A97B391861D80C0050EC8D /* UIImage+RWImage.m */; };
 		36AB7BD317BB7D0E00316921 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36AB7BD217BB7D0E00316921 /* UIKit.framework */; };
 		36AB7BD517BB7D0E00316921 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36AB7BD417BB7D0E00316921 /* Foundation.framework */; };
 		36AB7BD717BB7D0E00316921 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36AB7BD617BB7D0E00316921 /* CoreGraphics.framework */; };
@@ -563,6 +565,12 @@
 		36A97ADB185708920050EC8D /* RWImageUploadBrowserListItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWImageUploadBrowserListItem.h; sourceTree = "<group>"; };
 		36A97ADC185708920050EC8D /* RWImageUploadBrowserListItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWImageUploadBrowserListItem.m; sourceTree = "<group>"; };
 		36A97ADE185708A40050EC8D /* RWImageUploadBrowserListItem.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RWImageUploadBrowserListItem.xib; sourceTree = "<group>"; };
+		36A97B331861A3470050EC8D /* AVCamPreviewView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVCamPreviewView.h; sourceTree = "<group>"; };
+		36A97B341861A3470050EC8D /* AVCamPreviewView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVCamPreviewView.m; sourceTree = "<group>"; };
+		36A97B361861A85A0050EC8D /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		36A97B381861D80C0050EC8D /* UIImage+RWImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+RWImage.h"; sourceTree = "<group>"; };
+		36A97B391861D80C0050EC8D /* UIImage+RWImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+RWImage.m"; sourceTree = "<group>"; };
+		36A97B3E1861E3DC0050EC8D /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
 		36AB7BCF17BB7D0E00316921 /* Red App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Red App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		36AB7BD217BB7D0E00316921 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		36AB7BD417BB7D0E00316921 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -1203,6 +1211,8 @@
 				36A97ACC1855FF620050EC8D /* RWCameraIntentViewController.h */,
 				36A97ACD1855FF620050EC8D /* RWCameraIntentViewController.m */,
 				36A97ACE1855FF620050EC8D /* RWCameraIntentViewController.xib */,
+				36A97B331861A3470050EC8D /* AVCamPreviewView.h */,
+				36A97B341861A3470050EC8D /* AVCamPreviewView.m */,
 			);
 			name = CameraIntent;
 			sourceTree = "<group>";
@@ -1252,6 +1262,8 @@
 		36AB7BD117BB7D0E00316921 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				36A97B3E1861E3DC0050EC8D /* CoreImage.framework */,
+				36A97B361861A85A0050EC8D /* AssetsLibrary.framework */,
 				36A7289017CB46F500374063 /* SystemConfiguration.framework */,
 				36A7288E17CB46EB00374063 /* QuartzCore.framework */,
 				36A7288C17CB46E200374063 /* OpenGLES.framework */,
@@ -1499,6 +1511,8 @@
 				36A79EF117C6078600AB211B /* NSString+RWString.m */,
 				36A727AD17C799A500374063 /* UIColor+RWColor.h */,
 				36A727AE17C799A500374063 /* UIColor+RWColor.m */,
+				36A97B381861D80C0050EC8D /* UIImage+RWImage.h */,
+				36A97B391861D80C0050EC8D /* UIImage+RWImage.m */,
 				368DF1C417E1B4DB00D1F304 /* UIScrollView+RWScrollView.h */,
 				368DF1C517E1B4DB00D1F304 /* UIScrollView+RWScrollView.m */,
 				3604A6CD17E339BE00822B9B /* UIView+RWView.h */,
@@ -1833,6 +1847,7 @@
 				36A0B4041845E952007A6C78 /* RWPushMessageSubscriptionHandler.m in Sources */,
 				3695C47817C4B798004DFA40 /* RWXMLImporter.m in Sources */,
 				36A0B410184DD017007A6C78 /* RWBikeTrackingViewController.m in Sources */,
+				36A97B351861A3470050EC8D /* AVCamPreviewView.m in Sources */,
 				3683F1A7181FF54300C22E46 /* RWAdventWindowViewController.m in Sources */,
 				367628EB1803F812002ED534 /* RWTEXT.m in Sources */,
 				3695C47D17C4CEA5004DFA40 /* RWXmlNode.m in Sources */,
@@ -1876,6 +1891,7 @@
 				3683F215182A4F5F00C22E46 /* RWMainViewController.m in Sources */,
 				36A0B3FA1844DCEE007A6C78 /* RWPushMessageSubscriberViewController.m in Sources */,
 				26E733AB7705EFE3D6443811 /* RWDbVenues.m in Sources */,
+				36A97B3A1861D80C0050EC8D /* UIImage+RWImage.m in Sources */,
 				26E73B64E8DE4729BD70A1E1 /* RWDbHelper.m in Sources */,
 				26E7354C3D33E5BBE387B0B9 /* RWDbSchemas.m in Sources */,
 				368EFAE81843A6210099089C /* RWPushMessageListCell.m in Sources */,

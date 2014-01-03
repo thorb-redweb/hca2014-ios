@@ -36,9 +36,27 @@
 	
     NSArray *venueList = [_db.Venues getVMList];
 	
-    double standardLatitude = [_page getDoubleFromNode:[RWPAGE LATITUDE]];
-    double standardLongitude = [_page getDoubleFromNode:[RWPAGE LONGITUDE]];
-    float standardZoom = [_page getFloatFromNode:[RWPAGE ZOOM]];
+	double standardLatitude;
+	if([_page hasChild:[RWPAGE LATITUDE]]){
+		standardLatitude = [_page getDoubleFromNode:[RWPAGE LATITUDE]];
+	}
+	else{
+		standardLatitude = 55.390641;
+	}
+	double standardLongitude;
+	if([_page hasChild:[RWPAGE LONGITUDE]]){
+		standardLongitude = [_page getDoubleFromNode:[RWPAGE LONGITUDE]];
+	}
+	else {
+		standardLongitude = 10.437864;
+	}
+    float standardZoom;
+	if([_page hasChild:[RWPAGE ZOOM]]){
+		standardZoom= [_page getFloatFromNode:[RWPAGE ZOOM]];
+	}
+	else{
+		standardZoom = 12;
+	}
 	
     super.mapView.camera = [GMSCameraPosition cameraWithLatitude:standardLatitude longitude:standardLongitude zoom:standardZoom];
 	
