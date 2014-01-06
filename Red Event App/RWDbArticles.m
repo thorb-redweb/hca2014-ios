@@ -6,6 +6,8 @@
 //  Copyright (c) 2013 redWEB. All rights reserved.
 //
 
+#import "MyLog.h"
+
 #import "RWDbArticles.h"
 #import "Article.h"
 #import "RWArticleVM.h"
@@ -24,7 +26,7 @@
         _dbHelper = helper;
 		_xml = xml;
     }
-    else {NSLog(@"Database not initialized");}
+    else {DDLogError(@"RWDbArticles not initialized");}
     return self;
 }
 

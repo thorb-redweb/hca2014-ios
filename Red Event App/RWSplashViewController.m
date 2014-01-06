@@ -6,6 +6,8 @@
 //  Copyright (c) 2013 redWEB. All rights reserved.
 //
 
+#import "MyLog.h"
+
 #import "RWSplashViewController.h"
 
 #import "RWAppDelegate.h"
@@ -71,21 +73,21 @@
 -(void)getDataFromServer{
 	NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
     NSString *dataversion = [prefs objectForKey:@"dataversion"];
-    NSLog(@"Current dataversion: %@", dataversion);
+    DDLogInfo(@"Current dataversion: %@", dataversion);
     if (!dataversion) {
         _splashDelay = 2.0;
         [self showActivityViews];
         [_sv dumpServer:self];
     }
     else {
-        NSLog(@"No need for dump");
+        DDLogInfo(@"No need for dump");
         _splashDelay = 5.0;
         [self checkForUpdates];
     }
 }
 
 - (void)continueAfterDump {
-	NSLog(@"After dump, check for updates");
+	DDLogVerbose(@"After dump, check for updates");
     [self checkForUpdates];
 }
 
@@ -94,14 +96,14 @@
 }
 
 - (void)continueAfterUpdate {
-	NSLog(@"Continue after update");
+	DDLogInfo(@"Ready to Continue to Front Page");
     [self hideActivityViews];
 	[_btnBackground addTarget:self action:@selector(continueToApp) forControlEvents:UIControlEventTouchUpInside];
     _splashTimer = [NSTimer scheduledTimerWithTimeInterval:_splashDelay target:self selector:@selector(continueToApp:) userInfo:nil repeats:NO];
 }
 
 - (void)continueToApp{
-	NSLog(@"Continue to app");
+	DDLogVerbose(@"Continue to front page");
 	[_splashTimer invalidate];
 	RWAppDelegate *app = [[UIApplication sharedApplication] delegate];
     [app startNavController];

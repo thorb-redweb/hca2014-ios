@@ -7,13 +7,13 @@
 //
 
 #import "UIView+RWViewLayout.h"
+#import "DDLog.h"
 
 #import "RWNavigationController.h"
 #import "RWAppDelegate.h"
 
 #import "RWAdventCalViewController.h"
 #import "RWAdventWindowViewController.h"
-#import "RWArticleListViewController.h"
 #import "RWArticleDetailViewController.h"
 #import "RWButtonGalleryViewController.h"
 #import "RWDailySessionListViewController.h"
@@ -41,6 +41,8 @@
 
 @end
 
+static const int ddLogLevel = LOG_LEVEL_INFO;
+
 @implementation RWNavigationController{
 	UINavigationBar *_navbar;
 	RWMainViewController *_mainViewController;
@@ -67,6 +69,9 @@
 }
 
 - (void)pushViewWithPage:(RWXmlNode *)page addToBackStack:(bool)addToBackStack{
+	if([page hasChild:[RWPAGE NAME]]){
+		DDLogDebug(@"Pushing view with page: %@",[page getStringFromNode:[RWPAGE NAME]]);
+	}
 	RWAppDelegate *app = (RWAppDelegate *)[[UIApplication sharedApplication] delegate];
     NSString *type =  [page getStringFromNode:[RWPAGE TYPE]];
     NSString *parent = nil;
@@ -149,15 +154,14 @@
 
 + (UIViewController *)getViewControllerFromPage:(RWXmlNode *)page {
     NSString *viewControllerType = [page getStringFromNode:[RWPAGE TYPE]];
+	
+	DDLogDebug(@"View controller pagetype: %@", viewControllerType);
 
 	if ([viewControllerType isEqual:[RWTYPE ADVENTCAL]]) {
         return [[RWAdventCalViewController alloc] initWithPage:page];
     }
     else if ([viewControllerType isEqual:[RWTYPE ADVENTWINDOW]]) {
         return [[RWAdventWindowViewController alloc] initWithPage:page];
-    }
-    else if ([viewControllerType isEqual:[RWTYPE ARTICLELIST]]) {
-        return [[RWArticleListViewController alloc] initWithPage:page];
     }
     else if ([viewControllerType isEqual:[RWTYPE ARTICLEDETAIL]]) {
         return [[RWArticleDetailViewController alloc] initWithPage:page];

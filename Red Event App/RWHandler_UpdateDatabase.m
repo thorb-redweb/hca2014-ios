@@ -6,6 +6,8 @@
 //  Copyright (c) 2013 redWEB. All rights reserved.
 //
 
+#import "MyLog.h"
+
 #import "RWHandler_UpdateDatabase.h"
 
 #import "Article.h"
@@ -49,15 +51,15 @@
 
 - (void)updateDatabase:(NSMutableData *)data {
 	if (data.length == 0) {
-		NSLog(@"No data received. No update necessary.");
+		DDLogInfo(@"No update data received. No update necessary.");
 		[_delegate continueAfterUpdate];
 		return;
 	}
     NSError *dictError = nil;
     NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableLeaves error:&dictError];
     if (dictError != nil) {
-        NSLog(@"did fail with error");
-        NSLog(@"Dictionary setup failed in RWDbInterface:updateDatabase: %@", dictError.description);
+        DDLogError(@"did fail with error");
+        DDLogError(@"Dictionary setup failed in RWDbInterface:updateDatabase: %@", dictError.description);
 		[_delegate errorOccured:[NSString stringWithFormat: @"Dictionary setup failed in RWDbInterface:updateDatabase: %@", dictError.description]];
 		return;
     }
@@ -69,7 +71,7 @@
 			NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
 			[prefs setObject:[entry objectForKey:@"version"] forKey:@"dataversion"];
 			[prefs synchronize];
-			NSLog(@"Database updated to version: %@", [entry objectForKey:@"version"]);
+			DDLogInfo(@"Database updated to version: %@", [entry objectForKey:@"version"]);
 		}
 		else{
 			NSString *actiontype = [entry objectForKey:@"actiontype"];
@@ -82,7 +84,7 @@
 		}
     }
 
-    NSLog(@"Update Complete");
+    DDLogVerbose(@"Update Complete");
 
     [_delegate continueAfterUpdate];
 }
@@ -90,25 +92,25 @@
 - (void)updateEntry:(NSDictionary *)entry{
 	NSString *itemtype = [entry objectForKey:@"itemtype"];
 	if([itemtype isEqual:@"a"]){
-		NSLog(@"c %@: %@",itemtype,[entry objectForKey:_json.Art.ARTICLE_ID]);
+		DDLogDebug(@"c %@: %@",itemtype,[entry objectForKey:_json.Art.ARTICLE_ID]);
 		[self updateArticle:entry];
 	} else if([itemtype isEqual:@"e"]){
-		NSLog(@"c %@: %@",itemtype,[entry objectForKey:_json.Event.EVENT_ID]);
+		DDLogDebug(@"c %@: %@",itemtype,[entry objectForKey:_json.Event.EVENT_ID]);
 		[self updateEvent:entry];
     } else if([itemtype isEqual:@"pm"]){
-        NSLog(@"c %@: %@",itemtype,[entry objectForKey:_json.Push.PUSHMESSAGE_ID]);
+        DDLogDebug(@"c %@: %@",itemtype,[entry objectForKey:_json.Push.PUSHMESSAGE_ID]);
         [self updatePushMessage:entry];
     } else if([itemtype isEqual:@"pmg"]){
-        NSLog(@"c %@: %@",itemtype,[entry objectForKey:_json.PushGroup.GROUP_ID]);
+        DDLogDebug(@"c %@: %@",itemtype,[entry objectForKey:_json.PushGroup.GROUP_ID]);
         [self updatePushMessageGroup:entry];
     } else if([itemtype isEqual:@"s"]){
-		NSLog(@"c %@: %@",itemtype,[entry objectForKey:_json.Ses.SESSION_ID]);
+		DDLogDebug(@"c %@: %@",itemtype,[entry objectForKey:_json.Ses.SESSION_ID]);
 		[self updateSession:entry];
 	} else if([itemtype isEqual:@"v"]){
-		NSLog(@"c %@: %@",itemtype,[entry objectForKey:_json.Venue.VENUE_ID]);
+		DDLogDebug(@"c %@: %@",itemtype,[entry objectForKey:_json.Venue.VENUE_ID]);
 		[self updateVenue:entry];
 	} else {
-		NSLog(@"Unknown itemtype at itemcreation");
+		DDLogWarn(@"Unknown itemtype at itemcreation");
 	}
 }
 
@@ -127,7 +129,7 @@
 	} else if([itemtype isEqual:@"v"]){
 		[self deleteVenue:entry];
 	} else {
-		NSLog(@"Unknown itemtype at itemdeletion");
+		DDLogWarn(@"Unknown itemtype at itemdeletion");
 	}
 }
 
@@ -161,8 +163,8 @@
 
     NSError *cxtError = nil;
     if (![_managedObjectContext save:&cxtError]) {
-        NSLog(@"did fail with error");
-        NSLog(@"Context save failed in RWHandler_UpdateDatabase:updateArticle: %@", cxtError.description);
+        DDLogError(@"did fail with error");
+        DDLogError(@"Context save failed in RWHandler_UpdateDatabase:updateArticle: %@", cxtError.description);
     }
 }
 
@@ -188,8 +190,8 @@
     }
     NSError *cxtError = nil;
     if (![_managedObjectContext save:&cxtError]) {
-        NSLog(@"did fail with error");
-        NSLog(@"Context save failed in RWHandler_UpdateDatabase:updateEvent: %@", cxtError.description);
+        DDLogError(@"did fail with error");
+        DDLogError(@"Context save failed in RWHandler_UpdateDatabase:updateEvent: %@", cxtError.description);
     }
 }
 
@@ -216,8 +218,8 @@
     }
     NSError *cxtError = nil;
     if (![_managedObjectContext save:&cxtError]) {
-        NSLog(@"did fail with error");
-        NSLog(@"Context save failed in RWHandler_UpdateDatabase:updatePushMessage: %@", cxtError.description);
+        DDLogError(@"did fail with error");
+        DDLogError(@"Context save failed in RWHandler_UpdateDatabase:updatePushMessage: %@", cxtError.description);
     }
 }
 
@@ -239,8 +241,8 @@
     }
     NSError *cxtError = nil;
     if (![_managedObjectContext save:&cxtError]) {
-        NSLog(@"did fail with error");
-        NSLog(@"Context save failed in RWHandler_UpdateDatabase:updatePushMessageGroup: %@", cxtError.description);
+        DDLogError(@"did fail with error");
+        DDLogError(@"Context save failed in RWHandler_UpdateDatabase:updatePushMessageGroup: %@", cxtError.description);
     }
 }
 
@@ -280,8 +282,8 @@
 
     NSError *cxtError = nil;
     if (![_managedObjectContext save:&cxtError]) {
-        NSLog(@"did fail with error");
-        NSLog(@"Context save failed in RWHandler_UpdateDatabase:updateSession: %@", cxtError.description);
+        DDLogError(@"did fail with error");
+        DDLogError(@"Context save failed in RWHandler_UpdateDatabase:updateSession: %@", cxtError.description);
     }
 }
 
@@ -310,8 +312,8 @@
 
     NSError *cxtError = nil;
     if (![_managedObjectContext save:&cxtError]) {
-        NSLog(@"did fail with error");
-        NSLog(@"Context save failed in RWHandler_UpdateDatabase:updateVenue: %@", cxtError.description);
+        DDLogError(@"did fail with error");
+        DDLogError(@"Context save failed in RWHandler_UpdateDatabase:updateVenue: %@", cxtError.description);
     }
 }
 

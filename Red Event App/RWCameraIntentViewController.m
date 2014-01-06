@@ -3,6 +3,7 @@
 //#import <AssetsLibrary/AssetsLibrary.h>
 
 #import "UIImage+RWImage.h"
+#import "MyLog.h"
 
 #import "RWCameraIntentViewController.h"
 #import "AVCamPreviewView.h"
@@ -80,7 +81,7 @@ static void * SessionRunningAndDeviceAuthorizedContext = &SessionRunningAndDevic
         
         if (error)
         {
-            NSLog(@"%@", error);
+            DDLogError(@"%@", error);
         }
         
         if ([session canAddInput:videoDeviceInput])
@@ -215,14 +216,14 @@ static void * SessionRunningAndDeviceAuthorizedContext = &SessionRunningAndDevic
 				}
 				
 				if(error != nil){
-					NSLog(@"Create directory error: %@", error);
+					DDLogError(@"Create directory error: %@", error);
 					imagesaved = false;
 				}
 				
 				[UIImagePNGRepresentation(image) writeToFile:filePath options:NSDataWritingAtomic error:&error];
 				
 				if(error != nil){
-					NSLog(@"Error in saving image to disk. Error : %@", error);
+					DDLogError(@"Error in saving image to disk. Error : %@", error);
 					imagesaved = false;
 				}
             }
@@ -289,7 +290,7 @@ static void * SessionRunningAndDeviceAuthorizedContext = &SessionRunningAndDevic
 
 - (IBAction)focusAndExposeTap:(UIGestureRecognizer *)gestureRecognizer
 {
-	NSLog(@"Focus Tapped");
+	DDLogDebug(@"Focus Tapped");
     CGPoint devicePoint = [(AVCaptureVideoPreviewLayer *)[[self previewView] layer] captureDevicePointOfInterestForPoint:[gestureRecognizer locationInView:[gestureRecognizer view]]];
     [self focusWithMode:AVCaptureFocusModeAutoFocus exposeWithMode:AVCaptureExposureModeAutoExpose atDevicePoint:devicePoint monitorSubjectAreaChange:YES];
 }
@@ -324,7 +325,7 @@ static void * SessionRunningAndDeviceAuthorizedContext = &SessionRunningAndDevic
         }
         else
         {
-            NSLog(@"%@", error);
+            DDLogError(@"%@", error);
         }
     });
 }
@@ -341,7 +342,7 @@ static void * SessionRunningAndDeviceAuthorizedContext = &SessionRunningAndDevic
         }
         else
         {
-            NSLog(@"%@", error);
+            DDLogError(@"%@", error);
         }
     }
 }

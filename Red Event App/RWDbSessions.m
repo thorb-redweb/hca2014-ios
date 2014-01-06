@@ -5,6 +5,7 @@
 // To change the template use AppCode | Preferences | File Templates.
 //
 
+#import "MyLog.h"
 
 #import "RWDbSessions.h"
 #import "RWDbHelper.h"
@@ -23,7 +24,7 @@
         _dbHelper = helper;
 		_xml = xml;
     }
-    else {NSLog(@"Database not initialized");}
+    else {DDLogWarn(@"RWDbSessions not initialized");}
     return self;
 }
 

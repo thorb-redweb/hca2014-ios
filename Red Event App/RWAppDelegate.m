@@ -8,6 +8,9 @@
 
 #import "UIColor+RWColor.h"
 #import <GoogleMaps/GoogleMaps.h>
+#import "DDTTYLogger.h"
+#import "DDFileLogger.h"
+#import "MyLog.h"
 
 #import "RWAppDelegate.h"
 
@@ -30,7 +33,7 @@
 @synthesize persistentStoreCoordinator = _persistentStoreCoordinator;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+	self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
 
     [GMSServices provideAPIKey:@"AIzaSyCpSOR5gXO1zDC3B5uRnpek-oRt4e9nF3Q"];
@@ -38,6 +41,7 @@
     self.window.backgroundColor = [UIColor whiteColor];
 
     [self setup_CoreData_Xml_Database_And_Server];
+	[self setup_Lumberjack];
     [self getInitializationData];    
 
     [self setAppearance];
@@ -53,12 +57,25 @@
 
     NSManagedObjectContext *context = [self managedObjectContext];
     if (!context) {
-        NSLog(@"setup_CoreData_Xml_Database_And_Server: NSManagedObjectContext is nil");
+        DDLogWarn(@"setup_CoreData_Xml_Database_And_Server: NSManagedObjectContext is nil");
     }
 
     _db = [[RWDbInterface alloc] initWithManagedObjectContext:context xml:_xml];
     _sv = [[RWServer alloc] initWithDatabase:_db datafilesfolderpath:_xml.dataFilesFolderPath];
 	_pmh = [[RWPushMessageSubscriptionHandler alloc] init];
+}
+
+-(void)setup_Lumberjack{
+	[DDLog addLogger:[DDTTYLogger sharedInstance]];
+	
+	DDFileLogger *fileLogger = [[DDFileLogger alloc] init];
+	fileLogger.rollingFrequency = 60 * 60 * 24;
+	fileLogger.logFileManager.maximumNumberOfLogFiles = 7;
+	fileLogger.maximumFileSize = 384 * 1024;
+	[fileLogger setLogFormatter:[[DDLogFileFormatterDefault alloc] init]];
+	[DDLog addLogger:fileLogger];
+	
+	[[DDTTYLogger sharedInstance] setColorsEnabled:YES];
 }
 
 -(void)getInitializationData {
@@ -70,7 +87,7 @@
 }
 
 -(void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error{
-    NSLog(@"Error in registration. Error: %@", error);
+    DDLogError(@"Error in registration. Error: %@", error);
 }
 
 - (void)setAppearance {
@@ -165,7 +182,7 @@
 // Splash Page Start
 
 - (void)startOnSplashScreen {
-	NSLog(@"Start on Splash Screen");
+	DDLogVerbose(@"Start on Splash Screen");
     RWSplashViewController *viewController = [[RWSplashViewController alloc] initWithNibName:@"RWSplashViewController" bundle:nil];
     self.window.rootViewController = viewController;
 }
@@ -183,7 +200,7 @@
 // Notification Start
 
 -(void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)notification {
-    NSLog(@"Push message received, start data update");
+    DDLogInfo(@"Push message received, start data update");
 	_localNotification = notification;
     [self checkForUpdates];
 }
@@ -193,7 +210,7 @@
 }
 
 - (void)continueAfterUpdate {
-    NSLog(@"Continue after update");
+    DDLogVerbose(@"Continue after update");
     //Start by adding the frontpage
     _navController = [[RWNavigationController alloc] init];
     RWMainViewController *mainView = [[RWMainViewController alloc] initWithStartPage:[_xml getFrontPage]];
@@ -205,7 +222,7 @@
     [nextPage addNodeWithName:[RWPAGE ARTICLEID] value:messageid];
 
     [_navController pushViewWithPage:nextPage];
-    NSLog(@"Continue to push content");
+    DDLogInfo(@"Show push message content");
 }
 
 - (void)errorOccured:(NSString *)errorMessage {
@@ -242,7 +259,7 @@
         if ([managedObjectContext hasChanges] && ![managedObjectContext save:&error]) {
             // Replace this implementation with code to handle the error appropriately.
             // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-            NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+            DDLogError(@"Unresolved error %@, %@", error, [error userInfo]);
             abort();
         }
     }
@@ -311,7 +328,7 @@
          Lightweight migration will only work for a limited set of schema changes; consult "Core Data Model Versioning and Data Migration Programming Guide" for details.
          
          */
-        NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+        DDLogError(@"Unresolved error %@, %@", error, [error userInfo]);
         abort();
     }
 

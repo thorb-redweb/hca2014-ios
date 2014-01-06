@@ -5,6 +5,7 @@
 // To change the template use AppCode | Preferences | File Templates.
 //
 
+#import "MyLog.h"
 
 #import "RWDbEvents.h"
 #import "RWDbHelper.h"
@@ -19,7 +20,7 @@
     if (self = [super init]) {
         _dbHelper = helper;
     }
-    else {NSLog(@"Database not initialized");}
+    else {DDLogError(@"RWDbEvents not initialized");}
     return self;
 }
 

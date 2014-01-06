@@ -6,6 +6,8 @@
 //  Copyright (c) 2013 redWEB. All rights reserved.
 //
 
+#import "MyLog.h"
+
 #import "RWHandler_UpdateFromServer.h"
 
 @interface RWHandler_UpdateFromServer ()
@@ -20,7 +22,7 @@
     NSURLRequest *myRequest = [NSURLRequest requestWithURL:updateFileUrl];
     _data = [[NSMutableData alloc] initWithLength:0];
     _openConnection = [[NSURLConnection alloc] initWithRequest:myRequest delegate:self];
-    NSLog(@"Start Update Download in RWHandler_UpdateDatabase.m");
+    DDLogVerbose(@"Start Update Download in RWHandler_UpdateDatabase.m");
 
 }
 
@@ -35,8 +37,8 @@
 
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
     [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
-    NSLog(@"did fail with error");
-    NSLog(@"Connection failed: %@", error.description);
+    DDLogError(@"did fail with error");
+    DDLogError(@"Connection failed: %@", error.description);
 	[_delegate errorOccured:[NSString stringWithFormat: @"Connection failed: %@", error.description]];	
 }
 

@@ -27,7 +27,7 @@
         _pages = [_importer getResultNodeFromResource:[RWPAGE PAGESFILENAME] identifier:@"//pages"];
 		_text = [_importer getResultNodeFromResource:[RWTEXT TEXTFILENAME] identifier:@"//text"];
 
-        RWXmlNode *node = [_importer getResultNodeFromResource:@"joomlasite.xml" identifier:@"//network"];
+        RWXmlNode *node = [_importer getResultNodeFromResource:@"server.xml" identifier:@"//network"];
         _dataFilesFolderPath = [[node getChildFromNode:@"datafolder"] getStringFromNode:@"path"];
         _imagesRootPath = [[node getChildFromNode:@"joomla"] getStringFromNode:@"path"];
     }

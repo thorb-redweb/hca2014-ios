@@ -6,6 +6,8 @@
 //  Copyright (c) 2013 redWEB. All rights reserved.
 //
 
+#import "MyLog.h"
+
 #import "RWServer.h"
 
 #import "RWAppDelegate.h"
@@ -28,12 +30,12 @@
         _db = db;
         _dataFilesFolderPath = dataFilesFolderPath;
     }
-    else {NSLog(@"Server not initialized");}
+    else {DDLogWarn(@"Server not initialized");}
     return self;
 }
 
 - (void)dumpServer:(id)delegate {
-    NSLog(@"dumpServerBegin");
+    DDLogVerbose(@"dumpServerBegin");
     dumpServerDelegate = delegate;
 
     RWHandler_DumpServer *handler = [[RWHandler_DumpServer alloc] init];
@@ -42,7 +44,7 @@
     NSURL *dumpFileUrl = [NSURL URLWithString:dumpFileString];
     [handler startDownloadWithFromUrl:dumpFileUrl];
 
-    NSLog(@"dumpServerEnd");
+    DDLogVerbose(@"dumpServerEnd");
 }
 
 - (void)putBuildDataInDatabase:(NSMutableData *)data {
@@ -51,7 +53,7 @@
 }
 
 - (void)updateDatabase:(id)delegate {
-    NSLog(@"updateDatabaseBegin");
+    DDLogVerbose(@"updateDatabaseBegin");
     updateDatabaseDelegate = delegate;
 
     NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
@@ -60,11 +62,11 @@
     RWHandler_UpdateFromServer *handler = [[RWHandler_UpdateFromServer alloc] init];
     handler.delegate = self;
     NSString *updateFileString = [NSString stringWithFormat:@"%@hcam-%@.txt", _dataFilesFolderPath, dataversion];
-	NSLog(@"Getting update from: %@",updateFileString);
+	DDLogDebug(@"Getting update from: %@",updateFileString);
     NSURL *updateFileUrl = [NSURL URLWithString:updateFileString];
     [handler startDownloadWithFromUrl:updateFileUrl];
 
-    NSLog(@"updateDatabaseEnd");
+    DDLogVerbose(@"updateDatabaseEnd");
 }
 
 - (void)putUpdateDataInDatabase:(NSMutableData *)data {

@@ -6,6 +6,8 @@
 //  Copyright (c) 2013 redWEB. All rights reserved.
 //
 
+#import "MyLog.h"
+
 #import "RWPushMessageAutoSubscriberViewController.h"
 
 @interface RWPushMessageAutoSubscriberViewController ()
@@ -31,7 +33,7 @@
 	[self.view setTranslatesAutoresizingMaskIntoConstraints:NO];
 
 	[_app.pmh subscribeToPushMessages];
-	NSLog(@"Subscribing to push messages");
+	DDLogInfo(@"Subscribing to push messages");
 	
 }
 

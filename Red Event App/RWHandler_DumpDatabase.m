@@ -5,6 +5,7 @@
 //  Created by redWEB Praktik on 8/27/13.
 //  Copyright (c) 2013 redWEB. All rights reserved.
 //
+#import "MyLog.h"
 
 #import "RWHandler_DumpDatabase.h"
 #import "Article.h"
@@ -45,12 +46,12 @@
 }
 
 - (void)addDatabaseDump:(NSMutableData *)data {
-	NSLog(@"start dumping to database");
+	DDLogVerbose(@"start dumping to database");
     NSError *dictError = nil;
     NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableLeaves error:&dictError];
     if (dictError != nil) {
-        NSLog(@"did fail with error");
-        NSLog(@"Dictionary setup failed in RWDbInterface:addContentDump: %@", dictError.description);
+        DDLogError(@"did fail with error");
+        DDLogError(@"Dictionary setup failed in RWDbInterface:addContentDump: %@", dictError.description);
 		[_delegate errorOccured:[NSString stringWithFormat: @"Dictionary setup failed in RWDbInterface:addContentDump: %@", dictError.description]];
 		return;
     }
@@ -92,13 +93,13 @@
 
     NSError *cxtError = nil;
     if (![_managedObjectContext save:&cxtError]) {
-        NSLog(@"did fail with error");
-        NSLog(@"Context save failed in RWDbInterface:dumpEvent: %@", cxtError.description);
+        DDLogError(@"did fail with error");
+        DDLogError(@"Context save failed in RWDbInterface:dumpEvent: %@", cxtError.description);
 		[_delegate errorOccured:[NSString stringWithFormat: @"Context save failed in RWDbInterface:dumpEvent: %@", cxtError.description]];
 		return;
     }
 
-    NSLog(@"Dump Complete");
+    DDLogVerbose(@"Dump Complete");
 
     [_delegate continueAfterDump];
 }

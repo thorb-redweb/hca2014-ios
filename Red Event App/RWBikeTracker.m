@@ -5,8 +5,11 @@
 
 
 #import <CoreLocation/CoreLocation.h>
+#import "MyLog.h"
+
 #import "RWBikeTracker.h"
 
+static const int localLogLevel = LOG_LEVEL_DEBUG;
 
 @implementation RWBikeTracker {
     NSMutableArray *_locations;
@@ -22,6 +25,10 @@
 
 - (id)initWithDelegate:(id)delegate{
     if(self = [super init]){
+		if(localLogLevel != LOG_LEVEL_GLOBAL){
+			ddLogLevel = localLogLevel;
+		}
+		
         _delegate = delegate;
         _locationManager = [[CLLocationManager alloc] init];
         _locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters;
@@ -63,7 +70,6 @@
 
 -(void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations {
     for(CLLocation *newLocation in locations){
-        NSLog(@"%@",newLocation.description);
         if(newLocation.horizontalAccuracy <= 30.0){
             if(_locations.count >= 1){
                 CLLocation *lastLoc = _locations.lastObject;
@@ -71,6 +77,7 @@
                 if(lastLocDistance >= 100.0)
                 {
                     [_locations addObject:newLocation];
+					DDLogDebug(@"Location added: %@", newLocation.description);
 
                     _newReadingSinceLastTopSpeedCheck = true;
                     _newReadingSinceLastAverageSpeedCheck = true;
@@ -80,9 +87,13 @@
                     [_delegate averageSpeedUpdated:[self getAverageSpeed]];
                     [_delegate distanceUpdated:[self getTotalDistanceTravelled]];
                 }
+				else{
+					DDLogVerbose(@"Location dropped: %@",newLocation.description);
+				}
             }
             else {
                 [_locations addObject:newLocation];
+				DDLogDebug(@"Location added: %@", newLocation.description);
             }
 
             if(!_deferringUpdates){

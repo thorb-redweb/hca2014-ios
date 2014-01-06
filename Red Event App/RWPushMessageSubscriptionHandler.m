@@ -6,6 +6,8 @@
 //  Copyright (c) 2013 redWEB. All rights reserved.
 //
 
+#import "MyLog.h"
+
 #import "RWPushMessageSubscriptionHandler.h"
 #import "RWAppDelegate.h"
 
@@ -20,7 +22,7 @@
 
     RWAppDelegate *app = [[UIApplication sharedApplication] delegate];
 	[app.sv sendProviderDeviceToken:deviceToken];
-	NSLog(@"My token is: %@", deviceToken);	
+	DDLogDebug(@"My token is: %@", deviceToken);
 }
 
 @end
