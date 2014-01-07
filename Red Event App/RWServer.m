@@ -16,7 +16,7 @@
 @interface RWServer ()
 
 @property(strong, nonatomic) RWDbInterface *db;
-@property(strong, nonatomic) NSString *dataFilesFolderPath;
+@property(strong, nonatomic) NSURL *dataFilesFolderUrl;
 
 @end
 
@@ -28,7 +28,7 @@
 - (id)initWithDatabase:(RWDbInterface *)db datafilesfolderpath:(NSString *)dataFilesFolderPath {
     if (self = [super init]) {
         _db = db;
-        _dataFilesFolderPath = dataFilesFolderPath;
+		_dataFilesFolderUrl = [NSURL URLWithString:dataFilesFolderPath];
     }
     else {DDLogWarn(@"Server not initialized");}
     return self;
@@ -40,8 +40,7 @@
 
     RWHandler_DumpServer *handler = [[RWHandler_DumpServer alloc] init];
     handler.delegate = self;
-    NSString *dumpFileString = [NSString stringWithFormat:@"%@%@", _dataFilesFolderPath, @"getDump.php"];
-    NSURL *dumpFileUrl = [NSURL URLWithString:dumpFileString];
+	NSURL *dumpFileUrl = [_dataFilesFolderUrl URLByAppendingPathComponent:@"getDump.php"];
     [handler startDownloadWithFromUrl:dumpFileUrl];
 
     DDLogVerbose(@"dumpServerEnd");
@@ -61,9 +60,9 @@
 
     RWHandler_UpdateFromServer *handler = [[RWHandler_UpdateFromServer alloc] init];
     handler.delegate = self;
-    NSString *updateFileString = [NSString stringWithFormat:@"%@hcam-%@.txt", _dataFilesFolderPath, dataversion];
-	DDLogDebug(@"Getting update from: %@",updateFileString);
-    NSURL *updateFileUrl = [NSURL URLWithString:updateFileString];
+	NSString *hcamFile = [NSString stringWithFormat:@"hcam-%@.txt", dataversion];
+	NSURL *updateFileUrl = [_dataFilesFolderUrl URLByAppendingPathComponent:hcamFile];
+	DDLogDebug(@"Getting update from: %@",[updateFileUrl path]);
     [handler startDownloadWithFromUrl:updateFileUrl];
 
     DDLogVerbose(@"updateDatabaseEnd");
@@ -76,8 +75,7 @@
 
 - (void)sendProviderDeviceToken:(NSData *)devTokenBytes {
 	RWHandler_UploadRegistrationAttributes *handler = [[RWHandler_UploadRegistrationAttributes  alloc] init];
-    NSString *webserviceString = [NSString stringWithFormat:@"%@pushhost.php", _dataFilesFolderPath];
-    NSURL *webserviceUrl = [NSURL URLWithString:webserviceString];
+	NSURL *webserviceUrl = [_dataFilesFolderUrl URLByAppendingPathComponent:@"pushhost.php"];
     [handler startUploadWithFromUrl:webserviceUrl deviceToken:devTokenBytes];
 }
 

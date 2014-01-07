@@ -71,17 +71,6 @@
 	if ([page hasChild:[RWPAGE PARENT]] && [self nameBelongsToSwipeView:[page getStringFromNode:[RWPAGE PARENT]]]) {
 		return true;
 	}
-//	for (RWXmlNode *possibleSwipeView in _pages.children) {
-//        if ([possibleSwipeView hasChild:[RWPAGE TYPE]] && [[possibleSwipeView getStringFromNode:[RWPAGE TYPE]] isEqual:[RWTYPE SWIPEVIEW]]) {
-//			RWXmlNode *swipeView = possibleSwipeView;
-//			NSArray *sections = [swipeView getAllChildValuesWithName:[RWPAGE SECTION]];
-//			for(NSString *name in sections){
-//				if ([name isEqual:[page getStringFromNode:[RWPAGE NAME]]]) {
-//					return true;
-//				}
-//			}
-//        }
-//    }
 	return false;
 }
 

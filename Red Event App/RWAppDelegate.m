@@ -16,7 +16,6 @@
 
 #import "RWSplashViewController.h"
 #import "RWMainViewController.h"
-#import "RWSplitViewController.h"
 #import "RWAppearanceHelper.h"
 
 @interface RWAppDelegate ()
@@ -288,8 +287,7 @@
     if (_managedObjectModel != nil) {
         return _managedObjectModel;
     }
-    NSURL *modelURL = [[NSBundle mainBundle] URLForResource:@"Red_Event_App" withExtension:@"momd"];
-    _managedObjectModel = [[NSManagedObjectModel alloc] initWithContentsOfURL:modelURL];
+    _managedObjectModel = [NSManagedObjectModel mergedModelFromBundles:nil];
     return _managedObjectModel;
 }
 
