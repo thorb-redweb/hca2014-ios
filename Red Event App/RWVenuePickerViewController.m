@@ -56,6 +56,8 @@
     RWAppearanceHelper *helper = [[RWAppearanceHelper alloc] initWithLocalLook:localLook globalLook:globalLook];
 
     [helper setBackgroundColor:[self tableView] localName:[RWLOOK DAILYSESSIONLIST_BACKGROUNDCOLOR] globalName:[RWLOOK DEFAULT_BACKCOLOR]];
+	
+	[helper setScrollBounces:[self tableView] localName:[RWLOOK SCROLLBOUNCES] globalName:[RWLOOK SCROLLBOUNCES]];
 }
 
 - (void)didReceiveMemoryWarning {

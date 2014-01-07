@@ -6,7 +6,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RWPushMessageListViewController">
             <connections>
-                <outlet property="tableView" destination="5nN-OM-OEO" id="S98-SB-2qS"/>
+                <outlet property="lstTableView" destination="5nN-OM-OEO" id="AtC-5c-Vbx"/>
                 <outlet property="view" destination="1" id="3"/>
             </connections>
         </placeholder>

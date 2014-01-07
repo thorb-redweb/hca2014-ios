@@ -15,6 +15,9 @@
 //Color Constants
 + (NSString *)INVISIBLE {return @"invisible";}
 
+//Gui Constants
++ (NSString *)SCROLLBOUNCES {return @"scrollbounces";}
+
 //Style Constants
 + (NSString *)TYPEFACE_BOLD {return @"bold";}
 + (NSString *)TYPEFACE_BOLD_ITALIC {return @"bold_italic";}

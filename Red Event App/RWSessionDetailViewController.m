@@ -67,7 +67,6 @@
             _imgView.image = _model.image;
         }
         else {
-//			[_imgView setImageWithURL:_model.imageUrl placeholderImage:[UIImage imageNamed:@"default_icon.jpeg"]];
 			[_imgView setImageWithURL:_model.imageUrl placeholderImage:[UIImage imageNamed:@"default_icon.jpg"]
 							completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType) {
 								float imageHeight = image.size.height;
@@ -130,6 +129,8 @@
 	[helper setButtonTitleFont:_btnBack forState:UIControlStateNormal localSizeName:[RWLOOK BACKBUTTONTEXTSIZE] globalSizeName:[RWLOOK DEFAULT_ITEMTITLESIZE] localStyleName:[RWLOOK BACKBUTTONTEXTSTYLE] globalStyleName:[RWLOOK DEFAULT_ITEMTITLESTYLE]];
 	[helper setButtonTitleShadowColor:_btnBack forState:UIControlStateNormal localName:[RWLOOK BACKBUTTONTEXTSHADOWCOLOR] globalName:[RWLOOK DEFAULT_ALTTEXTSHADOWCOLOR]];
 	[helper setButtonTitleShadowOffset:_btnBack forState:UIControlStateNormal localName:[RWLOOK BACKBUTTONTEXTSHADOWOFFSET] globalName:[RWLOOK DEFAULT_ITEMTITLESHADOWOFFSET]];
+	
+	[helper setScrollBounces:_scrollView localName:[RWLOOK SCROLLBOUNCES] globalName:[RWLOOK SCROLLBOUNCES]];
 }
 
 - (void)setText{
@@ -151,8 +152,6 @@
 
     [webView RWSizeThatFitsContent];
     [_scrollView RWContentSizeToFit];
-
-    _scrollView.bounces = NO;
 }
 
 - (IBAction)btnMapPressed:(id)sender {

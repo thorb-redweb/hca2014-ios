@@ -50,6 +50,8 @@
 
 - (void)setLogo:(UIImageView *)imageview imagename:(NSString *)imagename;
 
+-(void)setScrollBounces:(UIScrollView *)scrollView localName:(NSString *)localname globalName:(NSString *)globalname;
+
 - (UIColor *)getColorWithLocalName:(NSString *)localname globalName:(NSString *)globalname;
 
 - (float)getFloatWithLocalName:(NSString *)localname globalName:(NSString *)globalname;

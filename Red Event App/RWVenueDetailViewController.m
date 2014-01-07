@@ -75,6 +75,8 @@
 	[helper setLabelFont:_lblBody localSizeName:[RWLOOK VENUEDETAIL_TEXTSIZE] globalSizeName:[RWLOOK DEFAULT_TEXTSIZE] localStyleName:[RWLOOK VENUEDETAIL_TEXTSTYLE] globalStyleName:[RWLOOK DEFAULT_TEXTSTYLE]];
 	[helper setLabelShadowColor:_lblBody localName:[RWLOOK VENUEDETAIL_TEXTSHADOWCOLOR] globalName:[RWLOOK DEFAULT_BACKTEXTSHADOWCOLOR]];
 	[helper setLabelShadowOffset:_lblBody localName:[RWLOOK VENUEDETAIL_TEXTSHADOWOFFSET] globalName:[RWLOOK DEFAULT_TEXTSHADOWOFFSET]];
+	
+	[helper setScrollBounces:_scrollView localName:[RWLOOK SCROLLBOUNCES] globalName:[RWLOOK SCROLLBOUNCES]];
 }
 
 -(void)setText{
@@ -100,11 +102,6 @@
         [_webBody setHidden:YES];
         _lblBody.text = _venue.descriptionWithoutHtml;
 	}
-}
-
-- (void)webViewDidFinishLoad:(UIWebView *)webView {    
-
-    _scrollView.bounces = NO;
 }
 
 - (IBAction)btnMapPressed:(id)sender{

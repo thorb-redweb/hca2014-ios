@@ -37,9 +37,7 @@
 	[self.view setTranslatesAutoresizingMaskIntoConstraints:NO];
     [_scrollView setTranslatesAutoresizingMaskIntoConstraints:NO];
 		
-    _scrollView.bounces = NO;
-	
-	[self setAppearance];
+    [self setAppearance];
 	[self setText];
 
     [self.view addConstraint:[NSLayoutConstraint constraintWithItem:_vwContentView attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeWidth multiplier:1.0 constant:0.0]];
@@ -88,6 +86,18 @@
 
 - (void)setAppearance{
     RWAppearanceHelper *helper = [[RWAppearanceHelper alloc] initWithLocalLook:_localLook globalLook:_globalLook];
+	
+	UIInterpolatingMotionEffect *xAxis = [[UIInterpolatingMotionEffect alloc] initWithKeyPath:@"center.x" type:UIInterpolatingMotionEffectTypeTiltAlongHorizontalAxis];
+	xAxis.minimumRelativeValue = @-40;
+	xAxis.maximumRelativeValue = @40;
+	UIInterpolatingMotionEffect *yAxis = [[UIInterpolatingMotionEffect alloc] initWithKeyPath:@"center.y" type:UIInterpolatingMotionEffectTypeTiltAlongVerticalAxis];
+	yAxis.minimumRelativeValue = @-40;
+	yAxis.maximumRelativeValue = @40;
+	
+	UIMotionEffectGroup *group = [[UIMotionEffectGroup alloc] init];
+	group.motionEffects = @[xAxis, yAxis];
+	
+	[_imgView addMotionEffect:group];
 
     [helper setBackgroundColor:self.view localName:[RWLOOK ARTICLEDETAIL_BACKGROUNDCOLOR] globalName:[RWLOOK DEFAULT_BACKCOLOR]];
 
@@ -109,6 +119,8 @@
 	[helper setButtonTitleFont:_btnBack forState:UIControlStateNormal localSizeName:[RWLOOK ARTICLEDETAIL_BACKBUTTONTEXTSIZE] globalSizeName:[RWLOOK DEFAULT_ITEMTITLESIZE] localStyleName:[RWLOOK ARTICLEDETAIL_BACKBUTTONTEXTSTYLE] globalStyleName:[RWLOOK DEFAULT_ITEMTITLESTYLE]];
 	[helper setButtonTitleShadowColor:_btnBack forState:UIControlStateNormal localName:[RWLOOK ARTICLEDETAIL_BACKBUTTONTEXTSHADOWCOLOR] globalName:[RWLOOK DEFAULT_ALTTEXTSHADOWCOLOR]];
 	[helper setButtonTitleShadowOffset:_btnBack forState:UIControlStateNormal localName:[RWLOOK ARTICLEDETAIL_BACKBUTTONTEXTSHADOWOFFSET] globalName:[RWLOOK DEFAULT_ITEMTITLESHADOWOFFSET]];
+	
+	[helper setScrollBounces:_scrollView localName:[RWLOOK SCROLLBOUNCES] globalName:[RWLOOK SCROLLBOUNCES]];
 }
 
 -(void)setText{

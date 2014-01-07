@@ -41,7 +41,9 @@
     RWAppearanceHelper *helper = [[RWAppearanceHelper alloc] initWithLocalLook:_localLook globalLook:_globalLook];
 	
     [helper setBackgroundTileImageOrColor:self.view localImageName:[RWLOOK BACKBUTTONBACKGROUNDIMAGE] localColorName:[RWLOOK BACKGROUNDCOLOR] globalName:[RWLOOK DEFAULT_BACKCOLOR]];
-	[_tableView setBackgroundColor:[UIColor colorWithHexString:@"00000000"]];
+	[_lstTableView setBackgroundColor:[UIColor colorWithHexString:@"00000000"]];
+	
+	[helper setScrollBounces:_lstTableView localName:[RWLOOK SCROLLBOUNCES] globalName:[RWLOOK SCROLLBOUNCES]];
 }
 
 - (void)didReceiveMemoryWarning {

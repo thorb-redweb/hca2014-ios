@@ -18,7 +18,7 @@
 @property(weak, nonatomic) IBOutlet UIButton *btnPrevious;
 @property(weak, nonatomic) IBOutlet UIButton *btnNext;
 @property(weak, nonatomic) IBOutlet UIButton *btnVenuePicker;
-@property(weak, nonatomic) IBOutlet UITableView *tableView;
+@property(weak, nonatomic) IBOutlet UITableView *lstTableView;
 
 @property(nonatomic) RWVenueVM *filterVenue;
 

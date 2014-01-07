@@ -15,6 +15,9 @@
 //Color Constants
 + (NSString *)INVISIBLE;
 
+//Gui Constants
++ (NSString *)SCROLLBOUNCES;
+
 //Style Constants
 + (NSString *)TYPEFACE_BOLD;
 + (NSString *)TYPEFACE_BOLD_ITALIC;

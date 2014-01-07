@@ -6,7 +6,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RWTableNavigatorViewController">
             <connections>
-                <outlet property="tableView" destination="xQg-eD-E1s" id="xLn-PB-A8X"/>
+                <outlet property="lstTableView" destination="xQg-eD-E1s" id="08G-eH-YFT"/>
                 <outlet property="view" destination="1" id="4xe-b0-4CC"/>
             </connections>
         </placeholder>

@@ -37,8 +37,6 @@
 	[self.view setTranslatesAutoresizingMaskIntoConstraints:NO];
     [_scrollview setTranslatesAutoresizingMaskIntoConstraints:NO];
 	
-    _scrollview.bounces = NO;
-
     int articleId = [_page getIntegerFromNode:[RWPAGE ARTICLEID]];
 	_article = [_db.Articles getVMFromId:articleId];
 	
@@ -111,6 +109,8 @@
 	[helper setButtonTitleFont:_btnBack forState:UIControlStateNormal localSizeName:[RWLOOK ADVENTWINDOW_BACKBUTTONTEXTSIZE] globalSizeName:[RWLOOK DEFAULT_ITEMTITLESIZE] localStyleName:[RWLOOK ADVENTWINDOW_BACKBUTTONTEXTSTYLE] globalStyleName:[RWLOOK DEFAULT_ITEMTITLESTYLE]];
 	[helper setButtonTitleShadowColor:_btnBack forState:UIControlStateNormal localName:[RWLOOK ADVENTWINDOW_BACKBUTTONTEXTSHADOWCOLOR] globalName:[RWLOOK DEFAULT_ALTTEXTSHADOWCOLOR]];
 	[helper setButtonTitleShadowOffset:_btnBack forState:UIControlStateNormal localName:[RWLOOK ADVENTWINDOW_BACKBUTTONTEXTSHADOWOFFSET] globalName:[RWLOOK DEFAULT_ITEMTITLESHADOWOFFSET]];
+	
+	[helper setScrollBounces:_scrollview localName:[RWLOOK SCROLLBOUNCES] globalName:[RWLOOK SCROLLBOUNCES]];
 }
 
 -(void)setText{

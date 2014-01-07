@@ -127,6 +127,23 @@
 	imageview.image = logo;
 }
 
+-(void)setScrollBounces:(UIScrollView *)scrollView localName:(NSString *)localname globalName:(NSString *)globalname{
+	if([self pageOrGlobalHasLocalName:localname globalName:globalname]){
+		scrollView.bounces = [self getBooleanWithLocalName:localname globalName:globalname];
+	}
+	else {
+		scrollView.bounces = NO;
+	}
+	
+}
+
+- (BOOL)getBooleanWithLocalName:(NSString *)localname globalName:(NSString *)globalname{
+	if ([_localLook hasChild:localname])
+        return [_localLook getBoolFromNode:localname];
+    else
+        return [_globalLook getBoolFromNode:globalname];
+}
+
 - (UIColor *)getColorWithLocalName:(NSString *)localname globalName:(NSString *)globalname {
     if ([_localLook hasChild:localname])
         return [UIColor colorWithHexString:[_localLook getStringFromNode:localname]];

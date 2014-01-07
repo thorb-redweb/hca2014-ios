@@ -34,32 +34,22 @@
     if(![_xml swipeViewHasPage:_page]){
 		[self.view setTranslatesAutoresizingMaskIntoConstraints:NO];
 	}
-
 	
     int articleId = [_page getIntegerFromNode:[RWPAGE ARTICLEID]];
     _model = [_db.Articles getVMFromId:articleId];
 
     [_webBody loadHTMLString:_model.fulltext baseURL:nil];
-	[self.view setBackgroundColor:[UIColor redColor]];
+
+	[self setAppearance];
 }
 
 - (void)setAppearance{
     RWAppearanceHelper *helper = [[RWAppearanceHelper alloc] initWithLocalLook:_localLook globalLook:_globalLook];
 
     [helper setBackgroundColor:self.view localName:[RWLOOK STATICARTICLE_BACKGROUNDCOLOR] globalName:[RWLOOK DEFAULT_BACKCOLOR]];
+	
+	[helper setScrollBounces:_webBody.scrollView localName:[RWLOOK SCROLLBOUNCES] globalName:[RWLOOK SCROLLBOUNCES]];
 }
-
-//-(void)updateViewConstraints{
-//	if(![_xml swipeViewHasPage:_page]){
-//		RWSwipeViewController *swipeViewController = [_app.navController getSwipeView];
-//		UIView *swipeView = swipeViewController.pageViewController.view;
-//		[swipeView RWpinChildToTop:self.view];
-//		[swipeView RWpinChildToSides:self.view];
-//		[swipeView RWpinChildToBottom:self.view];
-//	}
-//	
-//	[super updateViewConstraints];
-//}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

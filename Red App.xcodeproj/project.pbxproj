@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		26E7309E82C1ECB14617336D /* RWSessionListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26E73F88D34AF9FA1DCCCDF3 /* RWSessionListViewController.xib */; };
 		26E730EABFC9FE09C156379D /* RWTextHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E736EA2901B4EACFC2F0F3 /* RWTextHelper.m */; };
 		26E731070B3A8E0D7A469DA4 /* barbackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 26E7384515AAA226C33B8A6B /* barbackground.png */; };
 		26E7310DA927A709CB10946A /* RWPushMessageGroupVM.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E738FC4BA52C386E6DA46B /* RWPushMessageGroupVM.m */; };
@@ -17,7 +16,6 @@
 		26E7347869677503A25B7CE1 /* RWDailySessionListItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26E73BC4F5B5D8AFA136F02F /* RWDailySessionListItem.xib */; };
 		26E7349D494E443BB8600B71 /* RWAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E73D381CB60F3282780BBE /* RWAppDelegate.m */; };
 		26E734A2B5323E2D6BAE0D92 /* RWHandler_UploadRegistrationAttributes.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E738279783E516345D36D2 /* RWHandler_UploadRegistrationAttributes.m */; };
-		26E73521D46382491892E340 /* RWSessionListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E73C5504E965F3193C7E63 /* RWSessionListViewController.m */; };
 		26E7354C3D33E5BBE387B0B9 /* RWDbSchemas.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E73CFDDE0756A9A7C15C9C /* RWDbSchemas.m */; };
 		26E7358C57205B061BD03C68 /* RWTableNavigatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E73442CF2B28F56D529977 /* RWTableNavigatorViewController.m */; };
 		26E7359A6F05B94B31DE494D /* RWStaticArticleController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E73E70DD991266C77557B1 /* RWStaticArticleController.m */; };
@@ -216,8 +214,6 @@
 		36AB7C0117BB7D0E00316921 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 36AB7BFF17BB7D0E00316921 /* InfoPlist.strings */; };
 		36AB7C0417BB7D0E00316921 /* Red_Event_AppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 36AB7C0317BB7D0E00316921 /* Red_Event_AppTests.m */; };
 		36AB7C2F17BCF14D00316921 /* RWArticleVM.m in Sources */ = {isa = PBXBuildFile; fileRef = 36AB7C2E17BCF14D00316921 /* RWArticleVM.m */; };
-		36AB7C3717BD047700316921 /* RWSplitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36AB7C3517BD047700316921 /* RWSplitViewController.m */; };
-		36AB7C3817BD047700316921 /* RWSplitViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36AB7C3617BD047700316921 /* RWSplitViewController.xib */; };
 		36AB7C4217BD137400316921 /* RWServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 36AB7C4117BD137400316921 /* RWServer.m */; };
 		36AB7C4517BD140100316921 /* RWHandler_DumpServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 36AB7C4417BD140100316921 /* RWHandler_DumpServer.m */; };
 		36AB7C4C17BE0C8C00316921 /* RWDbInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = 36AB7C4B17BE0C8C00316921 /* RWDbInterface.m */; };
@@ -261,7 +257,6 @@
 
 /* Begin PBXFileReference section */
 		26E73007C7F063443A1D88DA /* RWJSONVenue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWJSONVenue.m; sourceTree = "<group>"; };
-		26E73021144A9AAAAEDA24F0 /* RWSessionListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWSessionListViewController.h; sourceTree = "<group>"; };
 		26E73054B0C3BF3B2F4E5504 /* RWSessionDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWSessionDetailViewController.m; sourceTree = "<group>"; };
 		26E730A6419743C77DE8F010 /* RWDbSessions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWDbSessions.h; sourceTree = "<group>"; };
 		26E7310552D87B4F5BE8558B /* RWHandler_UploadRegistrationAttributes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWHandler_UploadRegistrationAttributes.h; sourceTree = "<group>"; };
@@ -312,7 +307,6 @@
 		26E73BC4F5B5D8AFA136F02F /* RWDailySessionListItem.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RWDailySessionListItem.xib; sourceTree = "<group>"; };
 		26E73BC640BC920810ED80D4 /* RWDbSchemas.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWDbSchemas.h; sourceTree = "<group>"; };
 		26E73C368D96F9F2512E027C /* RWDbVenues.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWDbVenues.h; sourceTree = "<group>"; };
-		26E73C5504E965F3193C7E63 /* RWSessionListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWSessionListViewController.m; sourceTree = "<group>"; };
 		26E73C88447F46EA13786763 /* RWStaticArticleController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RWStaticArticleController.xib; sourceTree = "<group>"; };
 		26E73CC5E6EF246B14E5BABA /* RWJSONEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWJSONEvent.m; sourceTree = "<group>"; };
 		26E73CDD18BE023E7C3F1834 /* RWDailySessionListItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWDailySessionListItem.h; sourceTree = "<group>"; };
@@ -326,7 +320,6 @@
 		26E73E9F6EDFF30EF4B51C4E /* RWDbPushMessages.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWDbPushMessages.m; sourceTree = "<group>"; };
 		26E73EB7E72C4EF159A09632 /* RWSessionDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWSessionDetailViewController.h; sourceTree = "<group>"; };
 		26E73ED8D5A9F454A92CA2AF /* RWSessionDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RWSessionDetailViewController.xib; sourceTree = "<group>"; };
-		26E73F88D34AF9FA1DCCCDF3 /* RWSessionListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RWSessionListViewController.xib; sourceTree = "<group>"; };
 		3604165717F5792D00B9A391 /* RWLOOK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWLOOK.h; sourceTree = "<group>"; };
 		3604165817F5792D00B9A391 /* RWLOOK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWLOOK.m; sourceTree = "<group>"; };
 		3604165A17F58A5800B9A391 /* RWPAGE.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWPAGE.h; sourceTree = "<group>"; };
@@ -586,9 +579,6 @@
 		36AB7C0317BB7D0E00316921 /* Red_Event_AppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Red_Event_AppTests.m; sourceTree = "<group>"; };
 		36AB7C2D17BCF14D00316921 /* RWArticleVM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWArticleVM.h; sourceTree = "<group>"; };
 		36AB7C2E17BCF14D00316921 /* RWArticleVM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWArticleVM.m; sourceTree = "<group>"; };
-		36AB7C3417BD047600316921 /* RWSplitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWSplitViewController.h; sourceTree = "<group>"; };
-		36AB7C3517BD047700316921 /* RWSplitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWSplitViewController.m; sourceTree = "<group>"; };
-		36AB7C3617BD047700316921 /* RWSplitViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RWSplitViewController.xib; sourceTree = "<group>"; };
 		36AB7C4017BD137400316921 /* RWServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWServer.h; sourceTree = "<group>"; };
 		36AB7C4117BD137400316921 /* RWServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWServer.m; sourceTree = "<group>"; };
 		36AB7C4317BD140100316921 /* RWHandler_DumpServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWHandler_DumpServer.h; sourceTree = "<group>"; };
@@ -703,16 +693,6 @@
 				36214F6A183CBC34001B0B63 /* RWTableNavigatorCell.xib */,
 			);
 			name = TableNavigator;
-			sourceTree = "<group>";
-		};
-		26E736D2619136181E628CDC /* SessionList */ = {
-			isa = PBXGroup;
-			children = (
-				26E73021144A9AAAAEDA24F0 /* RWSessionListViewController.h */,
-				26E73C5504E965F3193C7E63 /* RWSessionListViewController.m */,
-				26E73F88D34AF9FA1DCCCDF3 /* RWSessionListViewController.xib */,
-			);
-			name = SessionList;
 			sourceTree = "<group>";
 		};
 		26E737B07BB6C2B4BD56EC40 /* StaticArticle */ = {
@@ -898,21 +878,10 @@
 			isa = PBXGroup;
 			children = (
 				361EA884180BD5DF00441271 /* ButtonGallery */,
-				361EA883180BD5D400441271 /* Splitview */,
 				36354AFE181E6C1E0046066E /* SwipeView */,
 				26E73496DF651A53BC2E4011 /* TableNavigator */,
 			);
 			name = Navigation;
-			sourceTree = "<group>";
-		};
-		361EA883180BD5D400441271 /* Splitview */ = {
-			isa = PBXGroup;
-			children = (
-				36AB7C3417BD047600316921 /* RWSplitViewController.h */,
-				36AB7C3517BD047700316921 /* RWSplitViewController.m */,
-				36AB7C3617BD047700316921 /* RWSplitViewController.xib */,
-			);
-			name = Splitview;
 			sourceTree = "<group>";
 		};
 		361EA884180BD5DF00441271 /* ButtonGallery */ = {
@@ -1135,7 +1104,6 @@
 			children = (
 				26E738E9D474A2BA072FB280 /* DailySessionList */,
 				26E737EC23C3B49D94A8F564 /* SessionDetail */,
-				26E736D2619136181E628CDC /* SessionList */,
 			);
 			name = Session;
 			sourceTree = "<group>";
@@ -1655,7 +1623,6 @@
 				36AB7BE917BB7D0E00316921 /* Default@2x.png in Resources */,
 				36AB7BEB17BB7D0E00316921 /* Default-568h@2x.png in Resources */,
 				36354BD0181FC8410046066E /* xmas3.jpg in Resources */,
-				36AB7C3817BD047700316921 /* RWSplitViewController.xib in Resources */,
 				3604166C17FAB4DB00B9A391 /* arrow_left.png in Resources */,
 				36AB7C6217BE59F300316921 /* RWImageArticleListViewController.xib in Resources */,
 				3683F1A1181FEEF900C22E46 /* btnseeyou.png in Resources */,
@@ -1726,7 +1693,6 @@
 				36A0B411184DD017007A6C78 /* RWBikeTrackingViewController.xib in Resources */,
 				26E73BAC5180C9A138C7C0FD /* RWSessionDetailViewController.xib in Resources */,
 				368EFAEA1843A6460099089C /* RWPushMessageListCell.xib in Resources */,
-				26E7309E82C1ECB14617336D /* RWSessionListViewController.xib in Resources */,
 				26E7347869677503A25B7CE1 /* RWDailySessionListItem.xib in Resources */,
 				26E7372845AA4EBB83B70E49 /* RWStaticArticleController.xib in Resources */,
 				36354BD7181FC8410046066E /* xmas10.jpg in Resources */,
@@ -1771,7 +1737,6 @@
 				3604A6CF17E339BE00822B9B /* UIView+RWView.m in Sources */,
 				36A97AD9185708330050EC8D /* RWImageUploadBrowserViewController.m in Sources */,
 				36AB7C2F17BCF14D00316921 /* RWArticleVM.m in Sources */,
-				36AB7C3717BD047700316921 /* RWSplitViewController.m in Sources */,
 				36214F6518351BF1001B0B63 /* RWInfoWindow.m in Sources */,
 				36AB7C4217BD137400316921 /* RWServer.m in Sources */,
 				36AB7C4517BD140100316921 /* RWHandler_DumpServer.m in Sources */,
@@ -1871,7 +1836,6 @@
 				26E73DBA4ADBF998256D88EF /* RWDailySessionListViewController.m in Sources */,
 				26E739E27A8B0F6A3CC059DA /* RWVenuePickerViewController.m in Sources */,
 				26E7320BD4DD960ACEAE2F0C /* RWSessionDetailViewController.m in Sources */,
-				26E73521D46382491892E340 /* RWSessionListViewController.m in Sources */,
 				26E73A16AE0BED83CB4BF2F2 /* RWDailySessionListItem.m in Sources */,
 				36214F83183F6DFE001B0B63 /* RWPushMessageDetailViewController.m in Sources */,
 				26E7359A6F05B94B31DE494D /* RWStaticArticleController.m in Sources */,
@@ -2006,9 +1970,6 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"\\\\\\\\\\\\\\\"$(SRCROOT)/Red\\\\\\\\\\\\\\ Event\\\\\\\\\\\\\\ App/GoogleMaps-iOS-1.4.2\\\\\\\\\\\\\\\"",
-					"/Users/redwebpraktik/IphoneProjects/Red\\ Event\\ App",
-					"/Users/redwebpraktik/IphoneProjects/Jule\\ App\\ 2",
 					"/Users/redwebpraktik/IphoneProjects/Red\\ App",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -2020,8 +1981,6 @@
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-lxml2",
-					"-framework",
-					SparkInspector,
 				);
 				PRODUCT_NAME = "Red App";
 				PROVISIONING_PROFILE = "";
@@ -2038,9 +1997,6 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"\\\\\\\\\\\\\\\"$(SRCROOT)/Red\\\\\\\\\\\\\\ Event\\\\\\\\\\\\\\ App/GoogleMaps-iOS-1.4.2\\\\\\\\\\\\\\\"",
-					"/Users/redwebpraktik/IphoneProjects/Red\\ Event\\ App",
-					"/Users/redwebpraktik/IphoneProjects/Jule\\ App\\ 2",
 					"/Users/redwebpraktik/IphoneProjects/Red\\ App",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -2052,8 +2008,6 @@
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-lxml2",
-					"-framework",
-					SparkInspector,
 				);
 				PRODUCT_NAME = "Red App";
 				PROVISIONING_PROFILE = "";

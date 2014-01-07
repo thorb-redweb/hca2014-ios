@@ -65,7 +65,7 @@
     RWAppearanceHelper *helper = [[RWAppearanceHelper alloc] initWithLocalLook:_localLook globalLook:_globalLook];
 
     [helper setBackgroundColor:self.view localName:[RWLOOK DAILYSESSIONLIST_BACKGROUNDCOLOR] globalName:[RWLOOK DEFAULT_BACKCOLOR]];
-    [helper setBackgroundColor:[self tableView] localName:[RWLOOK DAILYSESSIONLIST_BACKGROUNDCOLOR] globalName:[RWLOOK DEFAULT_BACKCOLOR]];
+    [helper setBackgroundColor:_lstTableView localName:[RWLOOK DAILYSESSIONLIST_BACKGROUNDCOLOR] globalName:[RWLOOK DEFAULT_BACKCOLOR]];
 
     [helper setButtonBackgroundImageFromLocalSource:_btnPrevious localName:[RWLOOK DAILYSESSIONLIST_LEFTARROW] forState:UIControlStateNormal];
     [helper setButtonBackgroundImageFromLocalSource:_btnNext localName:[RWLOOK DAILYSESSIONLIST_RIGHTARROW] forState:UIControlStateNormal];
@@ -83,6 +83,8 @@
                 localStyleName:[RWLOOK DAILYSESSIONLIST_TEXTSTYLE] globalStyleName:[RWLOOK DEFAULT_TEXTSTYLE]];
     [helper setButtonTitleShadowColor:_btnVenuePicker forState:UIControlStateNormal localName:[RWLOOK DAILYSESSIONLIST_TEXTSHADOWCOLOR] globalName:[RWLOOK DEFAULT_BACKTEXTSHADOWCOLOR]];
     [helper setButtonTitleShadowOffset:_btnVenuePicker forState:UIControlStateNormal localName:[RWLOOK DAILYSESSIONLIST_TEXTSHADOWOFFSET] globalName:[RWLOOK DEFAULT_TEXTSHADOWOFFSET]];
+	
+	[helper setScrollBounces:_lstTableView localName:[RWLOOK SCROLLBOUNCES] globalName:[RWLOOK SCROLLBOUNCES]];
 }
 
 - (void)setText{
@@ -128,7 +130,7 @@
     else {
         _btnNext.hidden = NO;
     }
-    [_tableView reloadData];
+    [_lstTableView reloadData];
 }
 
 - (BOOL)isYesterdayBeforeFirstSession {

@@ -11,7 +11,7 @@
 
 @interface RWPushMessageListViewController : RWBaseViewController <UITableViewDelegate, UITableViewDataSource>
 
-@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet UITableView *lstTableView;
 
 - (id)initWithPage:(RWXmlNode *)page;
 
