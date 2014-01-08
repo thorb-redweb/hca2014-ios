@@ -9,8 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "RWBaseViewController.h"
 #import "AVCamPreviewView.h"
+#import "RWCameraHandler.h"
 
-@interface RWCameraIntentViewController : RWBaseViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+@interface RWCameraIntentViewController : RWBaseViewController <RWDelegate_CameraHandler, UINavigationControllerDelegate>
 
 @property (nonatomic, weak) IBOutlet AVCamPreviewView *previewView;
 @property (nonatomic, weak) IBOutlet UIButton *btnTakePicture;
