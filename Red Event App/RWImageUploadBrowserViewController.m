@@ -81,11 +81,12 @@
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath{
 	if(editingStyle == UITableViewCellEditingStyleDelete){
-		[pathList removeObjectAtIndex:indexPath.row];
-		[_lstImageFiles deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
 		
 		NSString *filePath = pathList[indexPath.row];
 		
+		[pathList removeObjectAtIndex:indexPath.row];
+		[_lstImageFiles deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+				
 		NSFileManager *fileManager = [NSFileManager defaultManager];
 		[fileManager removeItemAtPath:filePath error:nil];
 	}
