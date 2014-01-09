@@ -64,6 +64,10 @@
 
 -(void)setScrollBounces:(UIScrollView *)scrollView localName:(NSString *)localname globalName:(NSString *)globalname;
 
+-(UIMotionEffectGroup *)getTopMotionEffectGroup;
+
+-(UIMotionEffectGroup *)getBottomMotionEffectGroup;
+
 - (UIColor *)getColorWithLocalName:(NSString *)localname globalName:(NSString *)globalname;
 
 - (float)getFloatWithLocalName:(NSString *)localname globalName:(NSString *)globalname;

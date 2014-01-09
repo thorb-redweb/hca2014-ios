@@ -5,7 +5,6 @@
 // To change the template use AppCode | Preferences | File Templates.
 //
 
-
 #import "RWAppearanceHelper.h"
 #import "RWXmlNode.h"
 #import "UIColor+RWColor.h"
@@ -247,6 +246,34 @@
 
     NSArray *offsets = [offsetAsString componentsSeparatedByString:@","];
     return [NSValue valueWithUIOffset:UIOffsetMake([offsets[0] floatValue], [offsets[1] floatValue])];
+}
+
+//Not used currently. Demo outcommented in ArticleDetailViewController:setAppearance
+-(UIMotionEffectGroup *)getTopMotionEffectGroup{
+	UIInterpolatingMotionEffect *xAxis = [[UIInterpolatingMotionEffect alloc] initWithKeyPath:@"center.x" type:UIInterpolatingMotionEffectTypeTiltAlongHorizontalAxis];
+	xAxis.minimumRelativeValue = @-40;
+	xAxis.maximumRelativeValue = @40;
+	UIInterpolatingMotionEffect *yAxis = [[UIInterpolatingMotionEffect alloc] initWithKeyPath:@"center.y" type:UIInterpolatingMotionEffectTypeTiltAlongVerticalAxis];
+	yAxis.minimumRelativeValue = @-40;
+	yAxis.maximumRelativeValue = @40;
+	
+	UIMotionEffectGroup *group = [[UIMotionEffectGroup alloc] init];
+	group.motionEffects = @[xAxis, yAxis];
+	return group;
+}
+
+//Not used currently. Demo outcommented in ArticleDetailViewController:setAppearance
+-(UIMotionEffectGroup *)getBottomMotionEffectGroup{
+	UIInterpolatingMotionEffect *xAxis = [[UIInterpolatingMotionEffect alloc] initWithKeyPath:@"center.x" type:UIInterpolatingMotionEffectTypeTiltAlongHorizontalAxis];
+	xAxis.minimumRelativeValue = @40;
+	xAxis.maximumRelativeValue = @-40;
+	UIInterpolatingMotionEffect *yAxis = [[UIInterpolatingMotionEffect alloc] initWithKeyPath:@"center.y" type:UIInterpolatingMotionEffectTypeTiltAlongVerticalAxis];
+	yAxis.minimumRelativeValue = @40;
+	yAxis.maximumRelativeValue = @-40;
+	
+	UIMotionEffectGroup *group = [[UIMotionEffectGroup alloc] init];
+	group.motionEffects = @[xAxis, yAxis];
+	return group;
 }
 
 - (bool)pageOrGlobalHasLocalName:(NSString *)localname globalName:(NSString *)globalname {

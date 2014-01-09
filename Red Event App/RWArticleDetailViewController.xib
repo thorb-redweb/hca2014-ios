@@ -8,6 +8,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RWArticleDetailViewController">
             <connections>
                 <outlet property="btnBack" destination="ekN-5L-53p" id="Yo9-Hm-far"/>
+                <outlet property="imgBackground" destination="crT-3b-enT" id="lL1-RA-VSr"/>
                 <outlet property="imgView" destination="233" id="242"/>
                 <outlet property="lblBody" destination="Riv-XP-wAv" id="wkx-A5-CX7"/>
                 <outlet property="lblTitle" destination="189" id="212"/>
@@ -22,6 +23,10 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="crT-3b-enT">
+                    <rect key="frame" x="-40" y="-40" width="400" height="648"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="182">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -37,13 +42,6 @@
                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="233" userLabel="imgView">
-                                    <rect key="frame" x="20" y="92" width="280" height="74"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <constraints>
-                                        <constraint firstAttribute="height" constant="74" placeholder="YES" id="WqY-4U-4KD"/>
-                                    </constraints>
-                                </imageView>
                                 <webView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="216" userLabel="webBody">
                                     <rect key="frame" x="20" y="174" width="280" height="336"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -76,6 +74,13 @@
                                         <action selector="btnBackClicked" destination="-1" eventType="touchUpInside" id="3Te-Jf-YsT"/>
                                     </connections>
                                 </button>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="233" userLabel="imgView">
+                                    <rect key="frame" x="20" y="92" width="280" height="74"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="74" placeholder="YES" id="WqY-4U-4KD"/>
+                                    </constraints>
+                                </imageView>
                             </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <constraints>
@@ -111,6 +116,10 @@
                 <constraint firstItem="182" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="183"/>
                 <constraint firstItem="182" firstAttribute="trailing" secondItem="1" secondAttribute="trailing" id="186"/>
                 <constraint firstItem="182" firstAttribute="top" secondItem="1" secondAttribute="top" id="187"/>
+                <constraint firstItem="crT-3b-enT" firstAttribute="top" secondItem="1" secondAttribute="top" constant="-40" id="5NJ-qJ-DV6"/>
+                <constraint firstItem="crT-3b-enT" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="-40" id="A1d-5c-UC5"/>
+                <constraint firstAttribute="trailing" secondItem="crT-3b-enT" secondAttribute="trailing" constant="-40" id="Gqp-Kj-PYX"/>
+                <constraint firstAttribute="bottom" secondItem="crT-3b-enT" secondAttribute="bottom" constant="-40" id="Uzl-G1-Irg"/>
                 <constraint firstAttribute="bottom" secondItem="182" secondAttribute="bottom" id="eBa-Xg-xf6"/>
             </constraints>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>

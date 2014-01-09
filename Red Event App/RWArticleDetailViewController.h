@@ -11,6 +11,8 @@
 
 @interface RWArticleDetailViewController : RWBaseViewController <UIWebViewDelegate>
 
+@property(weak, nonatomic) IBOutlet UIImageView *imgBackground;
+
 @property(weak, nonatomic) IBOutlet UILabel *lblTitle;
 @property(weak, nonatomic) IBOutlet UIView *vwContentView;
 @property(weak, nonatomic) IBOutlet UIImageView *imgView;
