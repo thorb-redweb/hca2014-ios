@@ -629,8 +629,8 @@
 		36AB7CB417C263AE00316921 /* icon_map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_map.png; path = "Red Event App/Resources/icon_map.png"; sourceTree = "<group>"; };
 		36AB7CB517C263AE00316921 /* icon_news_bottombar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_news_bottombar.png; path = "Red Event App/Resources/icon_news_bottombar.png"; sourceTree = "<group>"; };
 		36AB7CBF17C3609500316921 /* server.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = server.xml; sourceTree = "<group>"; };
-		36E2A0AC1876CE3E001AB669 /* MyLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyLog.h; sourceTree = "<group>"; };
-		36E2A0AD1876CE3E001AB669 /* MyLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyLog.m; sourceTree = "<group>"; };
+		36E2A0AC1876CE3E001AB669 /* MyLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyLog.h; path = ../Lumberjack/MyLog.h; sourceTree = "<group>"; };
+		36E2A0AD1876CE3E001AB669 /* MyLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyLog.m; path = ../Lumberjack/MyLog.m; sourceTree = "<group>"; };
 		36E2A0B5187D4C3E001AB669 /* RWCameraHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWCameraHandler.h; sourceTree = "<group>"; };
 		36E2A0B6187D4C3E001AB669 /* RWCameraHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWCameraHandler.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -1156,8 +1156,6 @@
 				36A97B4A1876B0DD0050EC8D /* DDTTYLogger.h */,
 				36A97B4B1876B0DD0050EC8D /* DDTTYLogger.m */,
 				36A97B4C1876B0DD0050EC8D /* Extensions */,
-				36E2A0AC1876CE3E001AB669 /* MyLog.h */,
-				36E2A0AD1876CE3E001AB669 /* MyLog.m */,
 			);
 			path = Lumberjack;
 			sourceTree = "<group>";
@@ -1248,6 +1246,8 @@
 				26E73D381CB60F3282780BBE /* RWAppDelegate.m */,
 				26E737DA3D0E735DA8611185 /* RWAppearanceHelper.h */,
 				26E73D5AF3D6D605B74D6FF5 /* RWAppearanceHelper.m */,
+				36E2A0AC1876CE3E001AB669 /* MyLog.h */,
+				36E2A0AD1876CE3E001AB669 /* MyLog.m */,
 				26E735B3346295998942E475 /* RWNavigationController.h */,
 				26E73CECBA81E777D3175471 /* RWNavigationController.m */,
 				26E739DB32089B8F2580147B /* RWTextHelper.h */,

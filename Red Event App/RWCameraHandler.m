@@ -56,7 +56,7 @@ static void * CapturingStillImageContext = &CapturingStillImageContext;
 	// Create the AVCaptureSession
     _session = [[AVCaptureSession alloc] init];
     [self setSession:_session];
-	_session.sessionPreset = AVCaptureSessionPresetHigh; //This line decides the format (size) of the picture
+	_session.sessionPreset = AVCaptureSessionPresetMedium; //This line decides the format (size) of the picture
 	
 	AVCaptureDevice *videoDevice = [RWCameraHandler deviceWithMediaType:AVMediaTypeVideo preferringPosition:AVCaptureDevicePositionBack];
     
@@ -135,7 +135,8 @@ static void * CapturingStillImageContext = &CapturingStillImageContext;
 -(void)snapStillImage:(AVCamPreviewView *)previewView{
 	dispatch_async([self sessionQueue], ^{
         // Update the orientation on the still image output video connection before capturing.
-        [[[self stillImageOutput] connectionWithMediaType:AVMediaTypeVideo] setVideoOrientation:[[(AVCaptureVideoPreviewLayer *)[previewView layer] connection] videoOrientation]];
+		
+        [[[self stillImageOutput] connectionWithMediaType:AVMediaTypeVideo] setVideoOrientation:AVCaptureVideoOrientationPortrait];
         
         // Flash set to Auto for Still Capture
         [RWCameraHandler setFlashMode:AVCaptureFlashModeAuto forDevice:[[self videoDeviceInput] device]];

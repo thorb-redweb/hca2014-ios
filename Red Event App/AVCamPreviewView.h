@@ -4,6 +4,6 @@
 
 @interface AVCamPreviewView : UIView
 
-@property (nonatomic) AVCaptureSession *session;
+- (void)setSession:(AVCaptureSession *)session;
 
 @end

@@ -17,11 +17,8 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z0U-yg-rBt" customClass="AVCamPreviewView">
-                    <rect key="frame" x="0.0" y="0.0" width="320" height="320"/>
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="510"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="320" id="KAs-eG-2gf"/>
-                    </constraints>
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Pf-rp-hLM">
                     <rect key="frame" x="20" y="518" width="280" height="30"/>
@@ -37,6 +34,7 @@
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="Z0U-yg-rBt" firstAttribute="top" secondItem="1" secondAttribute="top" id="Czq-q7-wNn"/>
+                <constraint firstItem="7Pf-rp-hLM" firstAttribute="top" secondItem="Z0U-yg-rBt" secondAttribute="bottom" constant="8" symbolic="YES" id="Dzc-Vb-Vj1"/>
                 <constraint firstAttribute="trailing" secondItem="Z0U-yg-rBt" secondAttribute="trailing" id="Fmw-PL-Mpx"/>
                 <constraint firstAttribute="bottom" secondItem="7Pf-rp-hLM" secondAttribute="bottom" constant="20" symbolic="YES" id="UOK-g0-AFV"/>
                 <constraint firstItem="7Pf-rp-hLM" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="20" symbolic="YES" id="XvB-O9-Bee"/>

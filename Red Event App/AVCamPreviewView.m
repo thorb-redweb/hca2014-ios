@@ -1,21 +1,15 @@
 #import "AVCamPreviewView.h"
 #import <AVFoundation/AVFoundation.h>
 
-@implementation AVCamPreviewView
-
-+ (Class)layerClass
-{
-    return [AVCaptureVideoPreviewLayer class];
+@implementation AVCamPreviewView{
+	AVCaptureVideoPreviewLayer *previewLayer;
 }
 
-- (AVCaptureSession *)session
-{
-    return [(AVCaptureVideoPreviewLayer *)[self layer] session];
-}
-
-- (void)setSession:(AVCaptureSession *)session
-{
-    [(AVCaptureVideoPreviewLayer *)[self layer] setSession:session];
+- (void)setSession:(AVCaptureSession *)session{
+	previewLayer = [AVCaptureVideoPreviewLayer layerWithSession:session];
+	[self.layer addSublayer: previewLayer];
+	previewLayer.videoGravity = AVLayerVideoGravityResizeAspectFill;
+	previewLayer.frame = self.bounds;
 }
 
 @end
