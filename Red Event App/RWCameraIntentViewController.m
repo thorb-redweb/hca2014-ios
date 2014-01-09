@@ -24,7 +24,6 @@ static void * CapturingStillImageContext = &CapturingStillImageContext;
 @end
 
 @implementation RWCameraIntentViewController{
-	AVCaptureDevice *videoDevice;
 	RWCameraHandler *cameraHandler;
 }
 
@@ -57,6 +56,28 @@ static void * CapturingStillImageContext = &CapturingStillImageContext;
 	
     // Setup the preview view
     [[self previewView] setSession:[cameraHandler getSession]];
+	
+	[self setAppearance];
+	[self setText];
+}
+
+-(void)setAppearance{
+    RWAppearanceHelper *helper = _appearanceHelper;
+
+    [helper setBackgroundTileImageOrColor:self.view localImageName:[RWLOOK BACKGROUNDIMAGE] localColorName:[RWLOOK BACKGROUNDCOLOR] globalName:[RWLOOK DEFAULT_BACKCOLOR]];
+
+    [helper setButtonBackgroundImageOrColor:_btnTakePicture localImageName:[RWLOOK BUTTONBACKGROUNDIMAGE] localColorName:[RWLOOK BUTTONBACKGROUNDCOLOR] globalColorName:[RWLOOK DEFAULT_ALTCOLOR] forState:UIControlStateNormal];
+    [helper setButtonImageFromLocalSource:_btnTakePicture localName:[RWLOOK BUTTONICON] forState:UIControlStateNormal];
+    [helper setButtonTitleColor:_btnTakePicture forState:UIControlStateNormal localName:[RWLOOK BUTTONTEXTCOLOR] globalName:[RWLOOK DEFAULT_ALTTEXTCOLOR]];
+    [helper setButtonTitleFont:_btnTakePicture forState:UIControlStateNormal localSizeName:[RWLOOK BUTTONTEXTSIZE] globalSizeName:[RWLOOK DEFAULT_ITEMTITLESIZE] localStyleName:[RWLOOK BUTTONTEXTSTYLE] globalStyleName:[RWLOOK DEFAULT_ITEMTITLESTYLE]];
+    [helper setButtonTitleShadowColor:_btnTakePicture forState:UIControlStateNormal localName:[RWLOOK BUTTONTEXTSHADOWCOLOR] globalName:[RWLOOK DEFAULT_ALTTEXTSHADOWCOLOR]];
+    [helper setButtonTitleShadowOffset:_btnTakePicture forState:UIControlStateNormal localName:[RWLOOK BUTTONTEXTSHADOWOFFSET] globalName:[RWLOOK DEFAULT_ITEMTITLESHADOWOFFSET]];
+}
+
+-(void)setText{
+    RWTextHelper *helper = _textHelper;
+
+    [helper setButtonText:_btnTakePicture textName:[RWTEXT CAMERAINTENT_CAMERABUTTON] defaultText:[RWDEFAULTTEXT CAMERAINTENT_CAMERABUTTON]];
 }
 
 - (void)viewWillAppear:(BOOL)animated

@@ -37,14 +37,14 @@
 +(NSString *)BUTTONGALLERY_BUTTON7 {return @"button7";}
 +(NSString *)BUTTONGALLERY_BUTTON8 {return @"button8";}
 
-+(NSString *)DAILYSESSIONLIST_EMPTYLIST {return @"emptylist";}
++(NSString *)CAMERAINTENT_CAMERABUTTON {return @"camerabutton";}
+
 +(NSString *)DAILYSESSIONLIST_FILTERDATE {return @"filterdate";}
 
-+(NSString *)IMAGEARTICLELIST_EMPTYLIST {return @"emptylist";}
++(NSString *)IMAGEUPLOADER_BROWSERBUTTON {return @"browserbutton";}
++(NSString *)IMAGEUPLOADER_UPLOADBUTTON {return @"uploadbutton";}
 
 +(NSString *)MAPVIEW_BACKBUTTON {return @"backbutton";}
-
-+(NSString *)NEWSTICKER_TITLE {return @"title";}
 
 +(NSString *)PUSHMESSAGEDETAIL_BACKBUTTON {return @"backbutton";}
 
@@ -52,8 +52,6 @@
 +(NSString *)SESSIONDETAIL_PLACE {return @"place";}
 +(NSString *)SESSIONDETAIL_TIME {return @"time";}
 +(NSString *)SESSIONDETAIL_MAPBUTTON {return @"mapbutton";}
-
-+(NSString *)UPCOMINGSESSIONS_TITLE {return @"title";}
 
 +(NSString *)VENUEDETAIL_ADDRESS {return @"address";}
 +(NSString *)VENUEDETAIL_MAPBUTTON {return @"mapbutton";}

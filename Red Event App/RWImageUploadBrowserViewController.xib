@@ -11,7 +11,7 @@
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="1">
+        <view contentMode="scaleToFill" id="1" userLabel="MainView">
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
@@ -27,9 +27,9 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstAttribute="bottom" secondItem="9eC-xC-mAX" secondAttribute="bottom" id="5at-AC-wT5"/>
                 <constraint firstItem="9eC-xC-mAX" firstAttribute="top" secondItem="1" secondAttribute="top" id="LLK-5y-CeL"/>
                 <constraint firstAttribute="trailing" secondItem="9eC-xC-mAX" secondAttribute="trailing" id="Zvh-RY-U3W"/>
-                <constraint firstAttribute="bottom" secondItem="9eC-xC-mAX" secondAttribute="bottom" id="ln6-V2-s9y"/>
                 <constraint firstItem="9eC-xC-mAX" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="x21-Aw-qRq"/>
             </constraints>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>

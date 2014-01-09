@@ -23,14 +23,14 @@
 +(NSString *)BIKETRACKING_RUNNING {return @"Kører";}
 +(NSString *)BIKETRACKING_STOPPED {return @"Stoppet";}
 
-+(NSString *)DAILYSESSIONLIST_EMPTYLIST {return @"Ingen arrangementer matcher din søgning";}
++(NSString *)CAMERAINTENT_CAMERABUTTON {return @"Tag Billede";}
+
 +(NSString *)DAILYSESSIONLIST_FILTERDATE {return @"Filtrer efter sted";}
 
-+(NSString *)IMAGEARTICLELIST_EMPTYLIST {return @"Ingen arrangementer matcher din søgning";}
++(NSString *)IMAGEUPLOADER_BROWSERBUTTON {return @"Billed browser";}
++(NSString *)IMAGEUPLOADER_UPLOADBUTTON {return @"Upload billede";}
 
 +(NSString *)MAPVIEW_BACKBUTTON {return @"Tilbage";}
-
-+(NSString *)NEWSTICKER_TITLE {return @"Seneste Nyheder";}
 
 +(NSString *)PUSHMESSAGEDETAIL_BACKBUTTON {return @"Tilbage";}
 
@@ -38,8 +38,6 @@
 +(NSString *)SESSIONDETAIL_PLACE {return @"Sted";}
 +(NSString *)SESSIONDETAIL_TIME {return @"Tidspunkt";}
 +(NSString *)SESSIONDETAIL_MAPBUTTON {return @"Find vej på kort";}
-
-+(NSString *)UPCOMINGSESSIONS_TITLE {return @"Næste Begivenheder";}
 
 +(NSString *)VENUEDETAIL_ADDRESS {return @"Adresse";}
 +(NSString *)VENUEDETAIL_MAPBUTTON {return @"Find lokalitet på kort";}

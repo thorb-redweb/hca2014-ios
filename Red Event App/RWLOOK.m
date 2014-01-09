@@ -35,6 +35,14 @@
 + (NSString *)BACKBUTTONTEXTSTYLE {return @"backbuttontextstyle";}
 + (NSString *)BACKGROUNDCOLOR {return @"backgroundcolor";}
 + (NSString *)BACKGROUNDIMAGE {return @"backgroundimage";}
++ (NSString *)BUTTONBACKGROUNDCOLOR {return @"buttoncolor";}
++ (NSString *)BUTTONBACKGROUNDIMAGE {return @"buttonimage";}
++ (NSString *)BUTTONICON {return @"buttonicon";}
++ (NSString *)BUTTONTEXTCOLOR {return @"buttontextcolor";}
++ (NSString *)BUTTONTEXTSHADOWCOLOR {return @"buttontextshadowcolor";}
++ (NSString *)BUTTONTEXTSHADOWOFFSET {return @"buttontextshadowoffset";}
++ (NSString *)BUTTONTEXTSIZE {return @"buttontextsize";}
++ (NSString *)BUTTONTEXTSTYLE {return @"buttontextstyle";}
 + (NSString *)CELLBACKGROUNDCOLOR {return @"cellbackgroundcolor";}
 + (NSString *)ITEMTITLECOLOR {return @"itemtitlecolor";}
 + (NSString *)ITEMTITLESHADOWCOLOR {return @"itemtitleshadowcolor";}
@@ -231,24 +239,6 @@
 + (NSString *)IMAGEARTICLELIST_TEXTSIZE {return @"textsize";}
 + (NSString *)IMAGEARTICLELIST_TEXTSTYLE {return @"textstyle";}
 
-//NewsTicker
-+ (NSString *)NEWSTICKER_BACKGROUNDCOLOR {return @"backgroundcolor";}
-+ (NSString *)NEWSTICKER_ITEMTITLECOLOR {return @"articletitlecolor";}
-+ (NSString *)NEWSTICKER_ITEMTITLESHADOWCOLOR {return @"articletitleshadowcolor";}
-+ (NSString *)NEWSTICKER_ITEMTITLESHADOWOFFSET {return @"articletitleshadowoffset";}
-+ (NSString *)NEWSTICKER_ITEMTITLESIZE {return @"articletitlesize";}
-+ (NSString *)NEWSTICKER_ITEMTITLESTYLE {return @"articletitlestyle";}
-+ (NSString *)NEWSTICKER_TEXTSHADOWCOLOR {return @"articletextshadowcolor";}
-+ (NSString *)NEWSTICKER_TEXTSHADOWOFFSET {return @"articletextshadowoffset";}
-+ (NSString *)NEWSTICKER_TEXTCOLOR {return @"articletextcolor";}
-+ (NSString *)NEWSTICKER_TEXTSIZE {return @"articletextsize";}
-+ (NSString *)NEWSTICKER_TEXTSTYLE {return @"articletextstyle";}
-+ (NSString *)NEWSTICKER_TITLECOLOR {return @"titlecolor";}
-+ (NSString *)NEWSTICKER_TITLESHADOWCOLOR {return @"titleshadowcolor";}
-+ (NSString *)NEWSTICKER_TITLESHADOWOFFSET {return @"titleshadowoffset";}
-+ (NSString *)NEWSTICKER_TITLESIZE {return @"titlesize";}
-+ (NSString *)NEWSTICKER_TITLESTYLE {return @"titlestyle";}
-
 //PushMessageDetail
 + (NSString *)PUSHMESSAGEDETAIL_AUTHORTEXTSHADOWCOLOR {return @"authortextshadowcolor";}
 + (NSString *)PUSHMESSAGEDETAIL_AUTHORTEXTSHADOWOFFSET {return @"authortextshadowoffset";}
@@ -294,20 +284,6 @@
 + (NSString *)SWIPEVIEW_BACKGROUNDIMAGE {return @"backgroundimage";}
 + (NSString *)SWIPEVIEW_SELECTEDPAGECOLOR {return @"selectedpagecolor";}
 + (NSString *)SWIPEVIEW_UNSELECTEDPAGECOLOR {return @"unselectedpagecolor";}
-
-//UpcomingSessions
-+ (NSString *)UPCOMINGSESSIONS_BACKGROUNDCOLOR {return @"backgroundcolor";}
-+ (NSString *)UPCOMINGSESSIONS_TITLEUNDERLINECOLOR {return @"titleunderlinecolor";}
-+ (NSString *)UPCOMINGSESSIONS_TEXTCOLOR {return @"textcolor";}
-+ (NSString *)UPCOMINGSESSIONS_TEXTSHADOWCOLOR {return @"textshadowcolor";}
-+ (NSString *)UPCOMINGSESSIONS_TEXTSHADOWOFFSET {return @"textshadowoffset";}
-+ (NSString *)UPCOMINGSESSIONS_TEXTSIZE {return @"textsize";}
-+ (NSString *)UPCOMINGSESSIONS_TEXTSTYLE {return @"textstyle";}
-+ (NSString *)UPCOMINGSESSIONS_TITLECOLOR {return @"titlecolor";}
-+ (NSString *)UPCOMINGSESSIONS_TITLESHADOWCOLOR {return @"titleshadowcolor";}
-+ (NSString *)UPCOMINGSESSIONS_TITLESHADOWOFFSET {return @"titleshadowoffset";}
-+ (NSString *)UPCOMINGSESSIONS_TITLESIZE {return @"titlesize";}
-+ (NSString *)UPCOMINGSESSIONS_TITLESTYLE {return @"titlestyle";}
 
 //VenueDetail
 + (NSString *)VENUEDETAIL_BACKGROUNDCOLOR {return @"backgroundcolor";}

@@ -82,6 +82,43 @@
         [button.titleLabel setShadowOffset: [self getCGSizeWithLocalName:localname globalName:globalname]];
 }
 
+- (void)setButtonBackgroundImageOrColors:(NSArray *)buttons localImageName:(NSString *)localImageName localColorName:(NSString *)localColorName globalColorName:(NSString *)globalColorName forState:(UIControlState)state{
+    for(UIButton *button in buttons){
+		[self setBackgroundTileImageOrColor:button localImageName:localImageName localColorName:localColorName globalName:globalColorName];
+	}
+}
+
+- (void)setButtonImageFromLocalSources:(NSArray *)buttons localName:(NSString *)localname forState:(UIControlState)state{
+	for(UIButton *button in buttons){
+		[self setButtonImageFromLocalSource:button localName:localname forState:state];
+	}
+}
+
+- (void)setButtonTitleColors:(NSArray *)buttons forState:(UIControlState)state localName:(NSString *)localname globalName:(NSString *)globalname {
+	for(UIButton *button in buttons){
+		[self setButtonTitleColor:button forState:state localName:localname globalName:globalname];
+	}
+}
+
+- (void)setButtonTitleFonts:(NSArray *)buttons forState:(UIControlState)state localSizeName:(NSString *)localsizename globalSizeName:(NSString *)globalsizename
+			localStyleName:(NSString *)localstylename globalStyleName:(NSString *)globalstylename {
+	for(UIButton *button in buttons){
+		[self setButtonTitleFont:button forState:state localSizeName:localsizename globalSizeName:globalsizename localStyleName:localstylename globalStyleName:globalstylename];
+	}
+}
+
+- (void)setButtonTitleShadowColors:(NSArray *)buttons forState:(UIControlState)state localName:(NSString *)localname globalName:(NSString *)globalname {
+	for(UIButton *button in buttons){
+		[self setButtonTitleShadowColor:button forState:state localName:localname globalName:globalname];
+	}
+}
+
+- (void)setButtonTitleShadowOffsets:(NSArray *)buttons forState:(UIControlState)state localName:(NSString *)localname globalName:(NSString *)globalname {
+	for(UIButton *button in buttons){
+		[self setButtonTitleShadowOffset:button forState:state localName:localname globalName:globalname];
+	}
+}
+
 - (void)setLabelColor:(UILabel *)label localName:(NSString *)localname globalName:(NSString *)globalname {
     label.textColor = [self getColorWithLocalName:localname globalName:globalname];
 }

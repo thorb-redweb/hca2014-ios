@@ -54,6 +54,8 @@
 
     [helper setBackgroundColor:self.view localName:[RWLOOK IMAGEARTICLELIST_BACKGROUNDCOLOR] globalName:[RWLOOK DEFAULT_BACKCOLOR]];
 	[_lstTableView setBackgroundColor:[UIColor colorWithHexString:@"00000000"]];
+	
+	[helper setScrollBounces:_lstTableView localName:[RWLOOK SCROLLBOUNCES] globalName:[RWLOOK SCROLLBOUNCES]];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -128,8 +130,6 @@
           localStyleName:[RWLOOK IMAGEARTICLELIST_TEXTSTYLE] globalStyleName:[RWLOOK DEFAULT_TEXTSTYLE]];
     [helper setLabelShadowColor:cell.lblIntro localName:[RWLOOK IMAGEARTICLELIST_TEXTSHADOWCOLOR] globalName:[RWLOOK DEFAULT_BACKTEXTSHADOWCOLOR]];
     [helper setLabelShadowOffset:cell.lblIntro localName:[RWLOOK IMAGEARTICLELIST_TEXTSHADOWOFFSET] globalName:[RWLOOK DEFAULT_TEXTSHADOWOFFSET]];
-	
-	[helper setScrollBounces:_lstTableView localName:[RWLOOK SCROLLBOUNCES] globalName:[RWLOOK SCROLLBOUNCES]];
 }
 
 @end

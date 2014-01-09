@@ -32,6 +32,18 @@
 
 - (void)setButtonTitleShadowOffset:(UIButton *)button forState:(UIControlState)state localName:(NSString *)localname globalName:(NSString *)globalname;
 
+- (void)setButtonBackgroundImageOrColors:(NSArray *)buttons localImageName:(NSString *)localImageName localColorName:(NSString *)localColorName globalColorName:(NSString *)globalColorName forState:(UIControlState)state;
+
+- (void)setButtonImageFromLocalSources:(NSArray *)buttons localName:(NSString *)localname forState:(UIControlState)state;
+
+- (void)setButtonTitleColors:(NSArray *)buttons forState:(UIControlState)state localName:(NSString *)localname globalName:(NSString *)globalname;
+
+- (void)setButtonTitleFonts:(NSArray *)buttons forState:(UIControlState)state localSizeName:(NSString *)localsizename globalSizeName:(NSString *)globalsizename localStyleName:(NSString *)localstylename globalStyleName:(NSString *)globalstylename;
+
+- (void)setButtonTitleShadowColors:(NSArray *)buttons forState:(UIControlState)state localName:(NSString *)localname globalName:(NSString *)globalname;
+
+- (void)setButtonTitleShadowOffsets:(NSArray *)buttons forState:(UIControlState)state localName:(NSString *)localname globalName:(NSString *)globalname;
+
 - (void)setLabelColor:(UILabel *)label localName:(NSString *)localname globalName:(NSString *)globalname;
 
 - (void)setLabelFont:(UILabel *)label localSizeName:(NSString *)localsizename globalSizeName:(NSString *)globalsizename localStyleName:(NSString *)localstylename globalStyleName:(NSString *)globalstylename;

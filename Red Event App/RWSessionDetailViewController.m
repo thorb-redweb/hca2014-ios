@@ -107,7 +107,7 @@
     [helper setLabelShadowColors:texts localName:[RWLOOK SESSIONDETAIL_TEXTSHADOWCOLOR] globalName:[RWLOOK DEFAULT_BACKTEXTSHADOWCOLOR]];
     [helper setLabelShadowOffsets:texts localName:[RWLOOK SESSIONDETAIL_TEXTSHADOWOFFSET] globalName:[RWLOOK DEFAULT_TEXTSHADOWOFFSET]];
 
-    [helper setBackgroundColor:_btnMap localName:[RWLOOK SESSIONDETAIL_BACKGROUNDCOLOR] globalName:[RWLOOK DEFAULT_ALTCOLOR]];
+    [helper setBackgroundColor:_btnMap localName:[RWLOOK SESSIONDETAIL_BUTTONCOLOR] globalName:[RWLOOK DEFAULT_ALTCOLOR]];
 
     [helper setButtonTitleColor:_btnMap forState:UIControlStateNormal localName:[RWLOOK SESSIONDETAIL_BUTTONTEXTCOLOR] globalName:[RWLOOK DEFAULT_ALTTEXTCOLOR]];
     [helper setButtonTitleFont:_btnMap forState:UIControlStateNormal localSizeName:[RWLOOK SESSIONDETAIL_BUTTONTEXTSIZE] globalSizeName:[RWLOOK DEFAULT_TEXTSIZE]

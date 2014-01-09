@@ -27,6 +27,30 @@
 {
     [super viewDidLoad];
     [self.view setTranslatesAutoresizingMaskIntoConstraints:NO];
+	
+	[self setAppearance];
+	[self setText];
+}
+
+-(void)setAppearance{
+    RWAppearanceHelper *helper = _appearanceHelper;
+
+    [helper setBackgroundTileImageOrColor:self.view localImageName:[RWLOOK BACKGROUNDIMAGE] localColorName:[RWLOOK BACKGROUNDCOLOR] globalName:[RWLOOK DEFAULT_BACKCOLOR]];
+
+    NSArray *buttons = [[NSArray alloc] initWithObjects: _btnBrowser, _btnUploading, nil];
+
+    [helper setButtonBackgroundImageOrColors:buttons localImageName:[RWLOOK BUTTONBACKGROUNDIMAGE] localColorName:[RWLOOK BUTTONBACKGROUNDCOLOR] globalColorName:[RWLOOK DEFAULT_ALTCOLOR] forState:UIControlStateNormal];
+    [helper setButtonTitleColors:buttons forState:UIControlStateNormal localName:[RWLOOK BUTTONTEXTCOLOR] globalName:[RWLOOK DEFAULT_ALTTEXTCOLOR]];
+    [helper setButtonTitleFonts:buttons forState:UIControlStateNormal localSizeName:[RWLOOK BUTTONTEXTSIZE] globalSizeName:[RWLOOK DEFAULT_ITEMTITLESIZE] localStyleName:[RWLOOK BUTTONTEXTSTYLE] globalStyleName:[RWLOOK DEFAULT_ITEMTITLESTYLE]];
+    [helper setButtonTitleShadowColors:buttons forState:UIControlStateNormal localName:[RWLOOK BUTTONTEXTSHADOWCOLOR] globalName:[RWLOOK DEFAULT_ALTTEXTSHADOWCOLOR]];
+    [helper setButtonTitleShadowOffsets:buttons forState:UIControlStateNormal localName:[RWLOOK BUTTONTEXTSHADOWOFFSET] globalName:[RWLOOK DEFAULT_ITEMTITLESHADOWOFFSET]];
+}
+
+-(void)setText{
+    RWTextHelper *helper = _textHelper;
+
+    [helper setButtonText:_btnBrowser textName:[RWTEXT IMAGEUPLOADER_BROWSERBUTTON] defaultText:[RWDEFAULTTEXT IMAGEUPLOADER_BROWSERBUTTON]];
+    [helper setButtonText:_btnUploading textName:[RWTEXT IMAGEUPLOADER_UPLOADBUTTON] defaultText:[RWDEFAULTTEXT IMAGEUPLOADER_UPLOADBUTTON]];
 }
 
 -(void)viewDidAppear:(BOOL)animated {
@@ -36,9 +60,9 @@
         NSString *imagePath = [_page getStringFromNode:[RWPAGE FILEPATH]];
         UIImage *image = [UIImage imageWithContentsOfFile:imagePath];
         [_imgToUpload setImage:image];
-		
-		CGSize size = image.size;
-		size = CGSizeMake(0, 0);
+
+        CGSize size = image.size;
+        size = CGSizeMake(0, 0);
     }
     else {
         [self startBrowser];

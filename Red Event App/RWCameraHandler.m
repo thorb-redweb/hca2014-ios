@@ -56,7 +56,7 @@ static void * CapturingStillImageContext = &CapturingStillImageContext;
 	// Create the AVCaptureSession
     _session = [[AVCaptureSession alloc] init];
     [self setSession:_session];
-	_session.sessionPreset = AVCaptureSessionPresetMedium; //This line decides the format (size) of the picture
+	_session.sessionPreset = AVCaptureSessionPresetHigh; //This line decides the format (size) of the picture
 	
 	AVCaptureDevice *videoDevice = [RWCameraHandler deviceWithMediaType:AVMediaTypeVideo preferringPosition:AVCaptureDevicePositionBack];
     
