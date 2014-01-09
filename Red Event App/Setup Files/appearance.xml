@@ -55,6 +55,7 @@
     </Nyheder>
 	
     <Nyhedsside>
+		<backgroundimage>julebaggrund.jpg</backgroundimage>
         <titlecolor>#b4282e</titlecolor>
         <backbuttonimage>btnclose.png</backbuttonimage>
     </Nyhedsside>
