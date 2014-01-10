@@ -104,28 +104,28 @@
         UIImage *navBarBackground = [UIImage imageNamed:[localLook getStringFromNode:[RWLOOK NAVBAR_BACKGROUNDIMAGE]]];
         [[UINavigationBar appearance] setBackgroundImage:navBarBackground forBarMetrics:UIBarMetricsDefault];
     } else {
-        UIColor *backgroundColor = [helper getColorWithLocalName:[RWLOOK NAVBAR_BACKGROUNDCOLOR] globalName:[RWLOOK DEFAULT_BARCOLOR]];
+        UIColor *backgroundColor = [helper.getter getColorWithLocalName:[RWLOOK NAVBAR_BACKGROUNDCOLOR] globalName:[RWLOOK DEFAULT_BARCOLOR]];
         [[UINavigationBar appearance] setBarTintColor:backgroundColor];
     }
 
     //Title
     NSMutableDictionary *titleBarAttributes = [NSMutableDictionary dictionaryWithDictionary:[[UINavigationBar appearance] titleTextAttributes]];
 
-    UIColor *titleColor = [helper getColorWithLocalName:[RWLOOK NAVBAR_TITLECOLOR] globalName:[RWLOOK DEFAULT_BARTEXTCOLOR]];
+    UIColor *titleColor = [helper.getter getColorWithLocalName:[RWLOOK NAVBAR_TITLECOLOR] globalName:[RWLOOK DEFAULT_BARTEXTCOLOR]];
     [titleBarAttributes setValue:titleColor forKey:NSForegroundColorAttributeName];
 
-    UIFont *titleFont = [helper getTextFontWithLocalSizeName:[RWLOOK NAVBAR_TITLESIZE] globalSizeName:[RWLOOK DEFAULT_TITLESIZE]
+    UIFont *titleFont = [helper.getter getTextFontWithLocalSizeName:[RWLOOK NAVBAR_TITLESIZE] globalSizeName:[RWLOOK DEFAULT_TITLESIZE]
                                               localStyleName:[RWLOOK NAVBAR_TITLESTYLE] globalStyleName:[RWLOOK DEFAULT_TITLESTYLE]];
     [titleBarAttributes setValue:titleFont forKey:NSFontAttributeName];
 
     NSShadow *titleShadow = [[NSShadow alloc] init];
     if([localLook hasChild:[RWLOOK NAVBAR_TITLESHADOWCOLOR]] || [globalLook hasChild:[RWLOOK DEFAULT_BARTEXTSHADOWCOLOR]])   {
-        UIColor *titleShadowColor = [helper getColorWithLocalName:[RWLOOK NAVBAR_TITLESHADOWCOLOR] globalName:[RWLOOK DEFAULT_BARTEXTSHADOWCOLOR]];
+        UIColor *titleShadowColor = [helper.getter getColorWithLocalName:[RWLOOK NAVBAR_TITLESHADOWCOLOR] globalName:[RWLOOK DEFAULT_BARTEXTSHADOWCOLOR]];
         [titleShadow setShadowColor:titleShadowColor];
 
     }
     if([localLook hasChild:[RWLOOK NAVBAR_TITLESHADOWOFFSET]] || [globalLook hasChild:[RWLOOK DEFAULT_TITLESHADOWOFFSET]])   {
-        CGSize titleShadowOffset = [helper getCGSizeWithLocalName:[RWLOOK NAVBAR_TITLESHADOWOFFSET] globalName:[RWLOOK DEFAULT_TITLESHADOWOFFSET]];
+        CGSize titleShadowOffset = [helper.getter getCGSizeWithLocalName:[RWLOOK NAVBAR_TITLESHADOWOFFSET] globalName:[RWLOOK DEFAULT_TITLESHADOWOFFSET]];
         [titleShadow setShadowOffset:titleShadowOffset];
     }
     [titleBarAttributes setValue:titleShadow forKey:NSShadowAttributeName];
@@ -151,12 +151,12 @@
         UIImage *tabBarBackground = [UIImage imageNamed:[localLook getStringFromNode:[RWLOOK TABBAR_BACKGROUNDIMAGE]]];
         [[UITabBar appearance] setBackgroundImage:tabBarBackground];
     } else {
-        UIColor *backgroundColor = [helper getColorWithLocalName:[RWLOOK TABBAR_BACKGROUNDCOLOR] globalName:[RWLOOK DEFAULT_BARCOLOR]];
+        UIColor *backgroundColor = [helper.getter getColorWithLocalName:[RWLOOK TABBAR_BACKGROUNDCOLOR] globalName:[RWLOOK DEFAULT_BARCOLOR]];
         [[UITabBar appearance] setBackgroundColor:backgroundColor];
     }
 
-    UIColor *tabbarTextColor = [helper getColorWithLocalName:[RWLOOK TABBAR_TEXTCOLOR] globalName:[RWLOOK DEFAULT_BARTEXTCOLOR]];
-    UIFont *tabbarTextFont = [helper getTextFontWithLocalSizeName:[RWLOOK TABBAR_TEXTSIZE] globalSizeName:[RWLOOK DEFAULT_TEXTSIZE] localStyleName:[RWLOOK TABBAR_TEXTSTYLE] globalStyleName:[RWLOOK DEFAULT_TEXTSTYLE]];
+    UIColor *tabbarTextColor = [helper.getter getColorWithLocalName:[RWLOOK TABBAR_TEXTCOLOR] globalName:[RWLOOK DEFAULT_BARTEXTCOLOR]];
+    UIFont *tabbarTextFont = [helper.getter getTextFontWithLocalSizeName:[RWLOOK TABBAR_TEXTSIZE] globalSizeName:[RWLOOK DEFAULT_TEXTSIZE] localStyleName:[RWLOOK TABBAR_TEXTSTYLE] globalStyleName:[RWLOOK DEFAULT_TEXTSTYLE]];
 
     NSMutableDictionary *tabbarAttributes = [NSMutableDictionary dictionaryWithObjectsAndKeys:
             tabbarTextFont, NSFontAttributeName,
@@ -165,11 +165,11 @@
 
     NSShadow *tabbarTextShadow = [[NSShadow alloc] init];
     if([localLook hasChild:[RWLOOK TABBAR_TEXTSHADOWCOLOR]] || [globalLook hasChild:[RWLOOK DEFAULT_BARTEXTSHADOWCOLOR]])   {
-        UIColor *tabbarShadowColor = [helper getColorWithLocalName:[RWLOOK TABBAR_TEXTSHADOWCOLOR] globalName:[RWLOOK DEFAULT_BARTEXTSHADOWCOLOR]];
+        UIColor *tabbarShadowColor = [helper.getter getColorWithLocalName:[RWLOOK TABBAR_TEXTSHADOWCOLOR] globalName:[RWLOOK DEFAULT_BARTEXTSHADOWCOLOR]];
         [tabbarTextShadow setShadowColor:tabbarShadowColor];
     }
     if([localLook hasChild:[RWLOOK TABBAR_TEXTSHADOWOFFSET]] || [globalLook hasChild:[RWLOOK DEFAULT_TEXTSHADOWOFFSET]])   {
-        CGSize tabbarShadowOffset = [helper getCGSizeWithLocalName:[RWLOOK TABBAR_TEXTSHADOWOFFSET] globalName:[RWLOOK DEFAULT_TEXTSHADOWOFFSET]];
+        CGSize tabbarShadowOffset = [helper.getter getCGSizeWithLocalName:[RWLOOK TABBAR_TEXTSHADOWOFFSET] globalName:[RWLOOK DEFAULT_TEXTSHADOWOFFSET]];
         [tabbarTextShadow setShadowOffset:tabbarShadowOffset];
     }
     [tabbarAttributes setValue:tabbarTextShadow forKey:NSShadowAttributeName];

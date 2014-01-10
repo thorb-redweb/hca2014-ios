@@ -67,22 +67,21 @@
     [helper setBackgroundColor:self.view localName:[RWLOOK DAILYSESSIONLIST_BACKGROUNDCOLOR] globalName:[RWLOOK DEFAULT_BACKCOLOR]];
     [helper setBackgroundColor:_lstTableView localName:[RWLOOK DAILYSESSIONLIST_BACKGROUNDCOLOR] globalName:[RWLOOK DEFAULT_BACKCOLOR]];
 
-    [helper setButtonBackgroundImageFromLocalSource:_btnPrevious localName:[RWLOOK DAILYSESSIONLIST_LEFTARROW] forState:UIControlStateNormal];
-    [helper setButtonBackgroundImageFromLocalSource:_btnNext localName:[RWLOOK DAILYSESSIONLIST_RIGHTARROW] forState:UIControlStateNormal];
+    [helper.button setBackgroundImageFromLocalSource:_btnPrevious localName:[RWLOOK DAILYSESSIONLIST_LEFTARROW]];
+    [helper.button setBackgroundImageFromLocalSource:_btnNext localName:[RWLOOK DAILYSESSIONLIST_RIGHTARROW]];
 
-    [helper setLabelColor:_lblDate localName:[RWLOOK DAILYSESSIONLIST_DATETEXTCOLOR] globalName:[RWLOOK DEFAULT_BACKTEXTCOLOR]];
-    [helper setLabelFont:_lblDate localSizeName:[RWLOOK DAILYSESSIONLIST_DATETEXTSIZE] globalSizeName:[RWLOOK DEFAULT_TITLESIZE]
-          localStyleName:[RWLOOK DAILYSESSIONLIST_DATETEXTSTYLE] globalStyleName:[RWLOOK DEFAULT_TITLESTYLE]];
-	[helper setLabelShadowColor:_lblDate localName:[RWLOOK DAILYSESSIONLIST_DATETEXTSHADOWCOLOR] globalName:[RWLOOK DEFAULT_BACKTEXTSHADOWCOLOR]];
-    [helper setLabelShadowOffset:_lblDate localName:[RWLOOK DAILYSESSIONLIST_DATETEXTSHADOWOFFSET] globalName:[RWLOOK DEFAULT_TITLESHADOWOFFSET]];
+    [helper.label setColor:_lblDate localName:[RWLOOK DAILYSESSIONLIST_DATETEXTCOLOR] globalName:[RWLOOK DEFAULT_BACKTEXTCOLOR]];
+    [helper.label setFont:_lblDate localSizeName:[RWLOOK DAILYSESSIONLIST_DATETEXTSIZE] globalSizeName:[RWLOOK DEFAULT_TITLESIZE]
+           localStyleName:[RWLOOK DAILYSESSIONLIST_DATETEXTSTYLE] globalStyleName:[RWLOOK DEFAULT_TITLESTYLE]];
+    [helper.label setShadowColor:_lblDate localName:[RWLOOK DAILYSESSIONLIST_DATETEXTSHADOWCOLOR] globalName:[RWLOOK DEFAULT_BACKTEXTSHADOWCOLOR]];
+    [helper.label setShadowOffset:_lblDate localName:[RWLOOK DAILYSESSIONLIST_DATETEXTSHADOWOFFSET] globalName:[RWLOOK DEFAULT_TITLESHADOWOFFSET]];
 
     [helper setBackgroundColor:_viewDateUnderline localName:[RWLOOK DAILYSESSIONLIST_DATEUNDERLINECOLOR] globalName:[RWLOOK DEFAULT_ALTCOLOR]];
 
-    [helper setButtonTitleColor:_btnVenuePicker forState:UIControlStateNormal localName:[RWLOOK DAILYSESSIONLIST_TEXTCOLOR] globalName:[RWLOOK DEFAULT_BACKTEXTCOLOR]];
-    [helper setButtonTitleFont:_btnVenuePicker forState:UIControlStateNormal localSizeName:[RWLOOK DAILYSESSIONLIST_TEXTSIZE] globalSizeName:[RWLOOK DEFAULT_TEXTSIZE]
-                localStyleName:[RWLOOK DAILYSESSIONLIST_TEXTSTYLE] globalStyleName:[RWLOOK DEFAULT_TEXTSTYLE]];
-    [helper setButtonTitleShadowColor:_btnVenuePicker forState:UIControlStateNormal localName:[RWLOOK DAILYSESSIONLIST_TEXTSHADOWCOLOR] globalName:[RWLOOK DEFAULT_BACKTEXTSHADOWCOLOR]];
-    [helper setButtonTitleShadowOffset:_btnVenuePicker forState:UIControlStateNormal localName:[RWLOOK DAILYSESSIONLIST_TEXTSHADOWOFFSET] globalName:[RWLOOK DEFAULT_TEXTSHADOWOFFSET]];
+    [helper.button setTitleColor:_btnVenuePicker localName:[RWLOOK DAILYSESSIONLIST_TEXTCOLOR] globalName:[RWLOOK DEFAULT_BACKTEXTCOLOR]];
+    [helper.button setTitleFont:_btnVenuePicker localSizeName:[RWLOOK DAILYSESSIONLIST_TEXTSIZE] globalSizeName:[RWLOOK DEFAULT_TEXTSIZE] localStyleName:[RWLOOK DAILYSESSIONLIST_TEXTSTYLE] globalStyleName:[RWLOOK DEFAULT_TEXTSTYLE]];
+    [helper.button setTitleShadowColor:_btnVenuePicker localName:[RWLOOK DAILYSESSIONLIST_TEXTSHADOWCOLOR] globalName:[RWLOOK DEFAULT_BACKTEXTSHADOWCOLOR]];
+    [helper.button setTitleShadowOffset:_btnVenuePicker localName:[RWLOOK DAILYSESSIONLIST_TEXTSHADOWOFFSET] globalName:[RWLOOK DEFAULT_TEXTSHADOWOFFSET]];
 	
 	[helper setScrollBounces:_lstTableView localName:[RWLOOK SCROLLBOUNCES] globalName:[RWLOOK SCROLLBOUNCES]];
 }
@@ -217,17 +216,17 @@
 
     [helper setBackgroundColor:cell localName:[RWLOOK DAILYSESSIONLIST_BACKGROUNDCOLOR] globalName:[RWLOOK DEFAULT_BACKCOLOR]];
 
-    [helper setLabelColor:cell.lblTimeAndPlace localName:[RWLOOK DAILYSESSIONLIST_TEXTCOLOR] globalName:[RWLOOK DEFAULT_BACKTEXTCOLOR]];
-    [helper setLabelFont:cell.lblTimeAndPlace localSizeName:[RWLOOK DAILYSESSIONLIST_TEXTSIZE] globalSizeName:[RWLOOK DEFAULT_TEXTSIZE]
-          localStyleName:[RWLOOK DAILYSESSIONLIST_TEXTSTYLE] globalStyleName:[RWLOOK DEFAULT_TEXTSTYLE]];
-    [helper setLabelShadowColor:cell.lblTimeAndPlace localName:[RWLOOK DAILYSESSIONLIST_TEXTSHADOWCOLOR] globalName:[RWLOOK DEFAULT_BACKTEXTSHADOWCOLOR]];
-    [helper setLabelShadowOffset:cell.lblTimeAndPlace localName:[RWLOOK DAILYSESSIONLIST_TEXTSHADOWOFFSET] globalName:[RWLOOK DEFAULT_TEXTSHADOWOFFSET]];
+    [helper.label setColor:cell.lblTimeAndPlace localName:[RWLOOK DAILYSESSIONLIST_TEXTCOLOR] globalName:[RWLOOK DEFAULT_BACKTEXTCOLOR]];
+    [helper.label setFont:cell.lblTimeAndPlace localSizeName:[RWLOOK DAILYSESSIONLIST_TEXTSIZE] globalSizeName:[RWLOOK DEFAULT_TEXTSIZE]
+           localStyleName:[RWLOOK DAILYSESSIONLIST_TEXTSTYLE] globalStyleName:[RWLOOK DEFAULT_TEXTSTYLE]];
+    [helper.label setShadowColor:cell.lblTimeAndPlace localName:[RWLOOK DAILYSESSIONLIST_TEXTSHADOWCOLOR] globalName:[RWLOOK DEFAULT_BACKTEXTSHADOWCOLOR]];
+    [helper.label setShadowOffset:cell.lblTimeAndPlace localName:[RWLOOK DAILYSESSIONLIST_TEXTSHADOWOFFSET] globalName:[RWLOOK DEFAULT_TEXTSHADOWOFFSET]];
 
-    [helper setLabelColor:cell.lblEvent localName:[RWLOOK DAILYSESSIONLIST_TEXTCOLOR] globalName:[RWLOOK DEFAULT_BACKTEXTCOLOR]];
-    [helper setLabelFont:cell.lblEvent localSizeName:[RWLOOK DAILYSESSIONLIST_TEXTSIZE] globalSizeName:[RWLOOK DEFAULT_TEXTSIZE]
-          localStyleName:[RWLOOK DAILYSESSIONLIST_TEXTSTYLE] globalStyleName:[RWLOOK DEFAULT_TEXTSTYLE]];
-    [helper setLabelShadowColor:cell.lblEvent localName:[RWLOOK DAILYSESSIONLIST_TEXTSHADOWCOLOR] globalName:[RWLOOK DEFAULT_BACKTEXTSHADOWCOLOR]];
-    [helper setLabelShadowOffset:cell.lblEvent localName:[RWLOOK DAILYSESSIONLIST_TEXTSHADOWOFFSET] globalName:[RWLOOK DEFAULT_TEXTSHADOWOFFSET]];
+    [helper.label setColor:cell.lblEvent localName:[RWLOOK DAILYSESSIONLIST_TEXTCOLOR] globalName:[RWLOOK DEFAULT_BACKTEXTCOLOR]];
+    [helper.label setFont:cell.lblEvent localSizeName:[RWLOOK DAILYSESSIONLIST_TEXTSIZE] globalSizeName:[RWLOOK DEFAULT_TEXTSIZE]
+           localStyleName:[RWLOOK DAILYSESSIONLIST_TEXTSTYLE] globalStyleName:[RWLOOK DEFAULT_TEXTSTYLE]];
+    [helper.label setShadowColor:cell.lblEvent localName:[RWLOOK DAILYSESSIONLIST_TEXTSHADOWCOLOR] globalName:[RWLOOK DEFAULT_BACKTEXTSHADOWCOLOR]];
+    [helper.label setShadowOffset:cell.lblEvent localName:[RWLOOK DAILYSESSIONLIST_TEXTSHADOWOFFSET] globalName:[RWLOOK DEFAULT_TEXTSHADOWOFFSET]];
 }
 
 @end

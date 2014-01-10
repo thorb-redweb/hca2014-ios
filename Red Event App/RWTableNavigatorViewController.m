@@ -102,12 +102,12 @@
     RWAppearanceHelper *helper = [[RWAppearanceHelper alloc] initWithLocalLook:_localLook globalLook:_globalLook];
 	
     [helper setBackgroundColor:cell localName:[RWLOOK BACKGROUNDCOLOR] globalName:[RWLOOK INVISIBLE]];
-	
-    [helper setLabelColor:cell.lblTitle localName:[RWLOOK TEXTCOLOR] globalName:[RWLOOK DEFAULT_BACKTEXTCOLOR]];
-    [helper setLabelFont:cell.lblTitle localSizeName:[RWLOOK TEXTSIZE] globalSizeName:[RWLOOK DEFAULT_ITEMTITLESIZE]
-          localStyleName:[RWLOOK TEXTSTYLE] globalStyleName:[RWLOOK DEFAULT_ITEMTITLESTYLE]];
-    [helper setLabelShadowColor:cell.lblTitle localName:[RWLOOK TEXTSHADOWCOLOR] globalName:[RWLOOK DEFAULT_BACKTEXTSHADOWCOLOR]];
-    [helper setLabelShadowOffset:cell.lblTitle localName:[RWLOOK TEXTSHADOWOFFSET] globalName:[RWLOOK DEFAULT_ITEMTITLESHADOWOFFSET]];
+
+    [helper.label setColor:cell.lblTitle localName:[RWLOOK TEXTCOLOR] globalName:[RWLOOK DEFAULT_BACKTEXTCOLOR]];
+    [helper.label setFont:cell.lblTitle localSizeName:[RWLOOK TEXTSIZE] globalSizeName:[RWLOOK DEFAULT_ITEMTITLESIZE]
+           localStyleName:[RWLOOK TEXTSTYLE] globalStyleName:[RWLOOK DEFAULT_ITEMTITLESTYLE]];
+    [helper.label setShadowColor:cell.lblTitle localName:[RWLOOK TEXTSHADOWCOLOR] globalName:[RWLOOK DEFAULT_BACKTEXTSHADOWCOLOR]];
+    [helper.label setShadowOffset:cell.lblTitle localName:[RWLOOK TEXTSHADOWOFFSET] globalName:[RWLOOK DEFAULT_ITEMTITLESHADOWOFFSET]];
 }
 
 @end

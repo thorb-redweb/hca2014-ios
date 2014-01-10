@@ -124,6 +124,11 @@
 		3645BFA817D077AF00047159 /* RWBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3645BFA717D077AD00047159 /* RWBaseViewController.m */; };
 		3645BFAB17D4D24100047159 /* RWHandler_UpdateFromServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3645BFAA17D4D24000047159 /* RWHandler_UpdateFromServer.m */; };
 		3645BFAE17D4D4BA00047159 /* RWHandler_UpdateDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 3645BFAD17D4D4BA00047159 /* RWHandler_UpdateDatabase.m */; };
+		364E9C3F187FF026008D0DCC /* RWButtonAppearanceHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 364E9C3E187FF026008D0DCC /* RWButtonAppearanceHelper.m */; };
+		364E9C42187FF0B1008D0DCC /* RWApperanceHelperGetter.m in Sources */ = {isa = PBXBuildFile; fileRef = 364E9C41187FF0B1008D0DCC /* RWApperanceHelperGetter.m */; };
+		364E9C4518800187008D0DCC /* RWButtonAppearanceForwarder.m in Sources */ = {isa = PBXBuildFile; fileRef = 364E9C4418800187008D0DCC /* RWButtonAppearanceForwarder.m */; };
+		364E9C4A188007F5008D0DCC /* RWLabelAppearanceForwarder.m in Sources */ = {isa = PBXBuildFile; fileRef = 364E9C49188007F5008D0DCC /* RWLabelAppearanceForwarder.m */; };
+		364E9C4D18800805008D0DCC /* RWLabelAppearanceHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 364E9C4C18800805008D0DCC /* RWLabelAppearanceHelper.m */; };
 		367628EB1803F812002ED534 /* RWTEXT.m in Sources */ = {isa = PBXBuildFile; fileRef = 367628EA1803F812002ED534 /* RWTEXT.m */; };
 		367628EE1803F821002ED534 /* RWDEFAULTTEXT.m in Sources */ = {isa = PBXBuildFile; fileRef = 367628ED1803F821002ED534 /* RWDEFAULTTEXT.m */; };
 		367628F318040475002ED534 /* text.xml in Resources */ = {isa = PBXBuildFile; fileRef = 367628F218040475002ED534 /* text.xml */; };
@@ -444,6 +449,16 @@
 		3645BFAA17D4D24000047159 /* RWHandler_UpdateFromServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWHandler_UpdateFromServer.m; sourceTree = "<group>"; };
 		3645BFAC17D4D4BA00047159 /* RWHandler_UpdateDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWHandler_UpdateDatabase.h; sourceTree = "<group>"; };
 		3645BFAD17D4D4BA00047159 /* RWHandler_UpdateDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWHandler_UpdateDatabase.m; sourceTree = "<group>"; };
+		364E9C3D187FF026008D0DCC /* RWButtonAppearanceHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWButtonAppearanceHelper.h; sourceTree = "<group>"; };
+		364E9C3E187FF026008D0DCC /* RWButtonAppearanceHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWButtonAppearanceHelper.m; sourceTree = "<group>"; };
+		364E9C40187FF0B1008D0DCC /* RWApperanceHelperGetter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWApperanceHelperGetter.h; sourceTree = "<group>"; };
+		364E9C41187FF0B1008D0DCC /* RWApperanceHelperGetter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWApperanceHelperGetter.m; sourceTree = "<group>"; };
+		364E9C4318800187008D0DCC /* RWButtonAppearanceForwarder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWButtonAppearanceForwarder.h; sourceTree = "<group>"; };
+		364E9C4418800187008D0DCC /* RWButtonAppearanceForwarder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWButtonAppearanceForwarder.m; sourceTree = "<group>"; };
+		364E9C48188007F5008D0DCC /* RWLabelAppearanceForwarder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWLabelAppearanceForwarder.h; sourceTree = "<group>"; };
+		364E9C49188007F5008D0DCC /* RWLabelAppearanceForwarder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWLabelAppearanceForwarder.m; sourceTree = "<group>"; };
+		364E9C4B18800805008D0DCC /* RWLabelAppearanceHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWLabelAppearanceHelper.h; sourceTree = "<group>"; };
+		364E9C4C18800805008D0DCC /* RWLabelAppearanceHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWLabelAppearanceHelper.m; sourceTree = "<group>"; };
 		367628E91803F812002ED534 /* RWTEXT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWTEXT.h; sourceTree = "<group>"; };
 		367628EA1803F812002ED534 /* RWTEXT.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWTEXT.m; sourceTree = "<group>"; };
 		367628EC1803F821002ED534 /* RWDEFAULTTEXT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWDEFAULTTEXT.h; sourceTree = "<group>"; };
@@ -1004,6 +1019,59 @@
 			name = Libraries;
 			sourceTree = "<group>";
 		};
+		364E9C3A187FEC65008D0DCC /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				364E9C3B187FEF2D008D0DCC /* AppearanceHelper */,
+				364E9C3C187FEF35008D0DCC /* TextHelper */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		364E9C3B187FEF2D008D0DCC /* AppearanceHelper */ = {
+			isa = PBXGroup;
+			children = (
+				364E9C46188007CB008D0DCC /* Buttons */,
+				364E9C47188007DB008D0DCC /* Labels */,
+				26E737DA3D0E735DA8611185 /* RWAppearanceHelper.h */,
+				26E73D5AF3D6D605B74D6FF5 /* RWAppearanceHelper.m */,
+				364E9C40187FF0B1008D0DCC /* RWApperanceHelperGetter.h */,
+				364E9C41187FF0B1008D0DCC /* RWApperanceHelperGetter.m */,
+			);
+			name = AppearanceHelper;
+			sourceTree = "<group>";
+		};
+		364E9C3C187FEF35008D0DCC /* TextHelper */ = {
+			isa = PBXGroup;
+			children = (
+				26E739DB32089B8F2580147B /* RWTextHelper.h */,
+				26E736EA2901B4EACFC2F0F3 /* RWTextHelper.m */,
+			);
+			name = TextHelper;
+			sourceTree = "<group>";
+		};
+		364E9C46188007CB008D0DCC /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				364E9C4318800187008D0DCC /* RWButtonAppearanceForwarder.h */,
+				364E9C4418800187008D0DCC /* RWButtonAppearanceForwarder.m */,
+				364E9C3D187FF026008D0DCC /* RWButtonAppearanceHelper.h */,
+				364E9C3E187FF026008D0DCC /* RWButtonAppearanceHelper.m */,
+			);
+			name = Buttons;
+			sourceTree = "<group>";
+		};
+		364E9C47188007DB008D0DCC /* Labels */ = {
+			isa = PBXGroup;
+			children = (
+				364E9C48188007F5008D0DCC /* RWLabelAppearanceForwarder.h */,
+				364E9C49188007F5008D0DCC /* RWLabelAppearanceForwarder.m */,
+				364E9C4B18800805008D0DCC /* RWLabelAppearanceHelper.h */,
+				364E9C4C18800805008D0DCC /* RWLabelAppearanceHelper.m */,
+			);
+			name = Labels;
+			sourceTree = "<group>";
+		};
 		3683F1A3181FF35700C22E46 /* AdventWindow */ = {
 			isa = PBXGroup;
 			children = (
@@ -1234,6 +1302,7 @@
 				36AB7CA417C2050600316921 /* Customization Files */,
 				36AB7C5517BE4AE100316921 /* Categories */,
 				36AB7C4917BE0C5D00316921 /* Database */,
+				364E9C3A187FEC65008D0DCC /* Helpers */,
 				36AB7C3017BCF15000316921 /* Model */,
 				36AB7C3F17BD134000316921 /* Network */,
 				3604165617F578F700B9A391 /* Static Names */,
@@ -1244,14 +1313,10 @@
 				26E73A2CBD587EAB5648BA2B /* Red_Event_App.xcdatamodel */,
 				26E732C8F6489FD1278505A6 /* RWAppDelegate.h */,
 				26E73D381CB60F3282780BBE /* RWAppDelegate.m */,
-				26E737DA3D0E735DA8611185 /* RWAppearanceHelper.h */,
-				26E73D5AF3D6D605B74D6FF5 /* RWAppearanceHelper.m */,
 				36E2A0AC1876CE3E001AB669 /* MyLog.h */,
 				36E2A0AD1876CE3E001AB669 /* MyLog.m */,
 				26E735B3346295998942E475 /* RWNavigationController.h */,
 				26E73CECBA81E777D3175471 /* RWNavigationController.m */,
-				26E739DB32089B8F2580147B /* RWTextHelper.h */,
-				26E736EA2901B4EACFC2F0F3 /* RWTextHelper.m */,
 			);
 			name = "Red App";
 			path = "Red Event App";
@@ -1742,6 +1807,7 @@
 				3604A6CF17E339BE00822B9B /* UIView+RWView.m in Sources */,
 				36A97AD9185708330050EC8D /* RWImageUploadBrowserViewController.m in Sources */,
 				36AB7C2F17BCF14D00316921 /* RWArticleVM.m in Sources */,
+				364E9C4518800187008D0DCC /* RWButtonAppearanceForwarder.m in Sources */,
 				36214F6518351BF1001B0B63 /* RWInfoWindow.m in Sources */,
 				36AB7C4217BD137400316921 /* RWServer.m in Sources */,
 				36AB7C4517BD140100316921 /* RWHandler_DumpServer.m in Sources */,
@@ -1777,6 +1843,7 @@
 				36354BB2181FC3400046066E /* RWAdventCalViewController.m in Sources */,
 				36AB7C9F17C203E000316921 /* CXMLNamespaceNode.m in Sources */,
 				36AB7CA017C203E000316921 /* CXMLNode_PrivateExtensions.m in Sources */,
+				364E9C42187FF0B1008D0DCC /* RWApperanceHelperGetter.m in Sources */,
 				36AB7CA117C203E000316921 /* CXMLNode_XPathExtensions.m in Sources */,
 				36AB7CA217C203E000316921 /* CXMLNode.m in Sources */,
 				368DF1D017E1C9BC00D1F304 /* UIView+RWViewLayout.m in Sources */,
@@ -1810,12 +1877,14 @@
 				3604165C17F58A5800B9A391 /* RWPAGE.m in Sources */,
 				36A7289617CB48C200374063 /* RWSessionMapViewController.m in Sources */,
 				36A728AC17CB8D6F00374063 /* RWSplashViewController.m in Sources */,
+				364E9C4D18800805008D0DCC /* RWLabelAppearanceHelper.m in Sources */,
 				3645BF6217CC939C00047159 /* Event.m in Sources */,
 				3645BF6517CC93B300047159 /* Session.m in Sources */,
 				3604165F17F5917100B9A391 /* Article.m in Sources */,
 				3645BF7017CCB58D00047159 /* RWHandler_DumpDatabase.m in Sources */,
 				3645BF7417CDECC000047159 /* RWOverviewMapViewController.m in Sources */,
 				36354B02181E6C520046066E /* RWSwipeViewController.m in Sources */,
+				364E9C4A188007F5008D0DCC /* RWLabelAppearanceForwarder.m in Sources */,
 				3645BF7817CDF07700047159 /* RWVenueVM.m in Sources */,
 				3645BFA217CE5AD400047159 /* NSDate+RWDate.m in Sources */,
 				361EA87A1806B0EC00441271 /* SDWebImageDownloaderOperation.m in Sources */,
@@ -1864,6 +1933,7 @@
 				26E734A2B5323E2D6BAE0D92 /* RWHandler_UploadRegistrationAttributes.m in Sources */,
 				26E73F9B73057802C8C4ED73 /* Red_Event_App.xcdatamodel in Sources */,
 				26E735F06E488F1E88044871 /* RWAppearanceHelper.m in Sources */,
+				364E9C3F187FF026008D0DCC /* RWButtonAppearanceHelper.m in Sources */,
 				26E73A21F50C294AD5F2C98C /* RWNavigationController.m in Sources */,
 				26E7349D494E443BB8600B71 /* RWAppDelegate.m in Sources */,
 				26E730EABFC9FE09C156379D /* RWTextHelper.m in Sources */,

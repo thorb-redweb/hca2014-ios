@@ -60,36 +60,36 @@
 
     [helper setBackgroundColor:self.view localName:[RWLOOK BACKGROUNDCOLOR] globalName:[RWLOOK DEFAULT_BACKCOLOR]];
 
-    [helper setLabelColor:_lblIntro localName:[RWLOOK TITLECOLOR] globalName:[RWLOOK DEFAULT_BACKTEXTCOLOR]];
-    [helper setLabelFont:_lblIntro localSizeName:[RWLOOK TITLESIZE] globalSizeName:[RWLOOK DEFAULT_TITLESIZE]
-          localStyleName:[RWLOOK TITLESTYLE] globalStyleName:[RWLOOK DEFAULT_TITLESTYLE]];
-    [helper setLabelShadowColor:_lblIntro localName:[RWLOOK TITLESHADOWCOLOR] globalName:[RWLOOK DEFAULT_BACKTEXTSHADOWCOLOR]];
-    [helper setLabelShadowOffset:_lblIntro localName:[RWLOOK TITLESHADOWOFFSET] globalName:[RWLOOK DEFAULT_TITLESHADOWOFFSET]];
+    [helper.label setColor:_lblIntro localName:[RWLOOK TITLECOLOR] globalName:[RWLOOK DEFAULT_BACKTEXTCOLOR]];
+    [helper.label setFont:_lblIntro localSizeName:[RWLOOK TITLESIZE] globalSizeName:[RWLOOK DEFAULT_TITLESIZE]
+           localStyleName:[RWLOOK TITLESTYLE] globalStyleName:[RWLOOK DEFAULT_TITLESTYLE]];
+    [helper.label setShadowColor:_lblIntro localName:[RWLOOK TITLESHADOWCOLOR] globalName:[RWLOOK DEFAULT_BACKTEXTSHADOWCOLOR]];
+    [helper.label setShadowOffset:_lblIntro localName:[RWLOOK TITLESHADOWOFFSET] globalName:[RWLOOK DEFAULT_TITLESHADOWOFFSET]];
 
-    [helper setLabelColor:_lblAuthor localName:[RWLOOK PUSHMESSAGEDETAIL_AUTHORTEXTCOLOR] globalName:[RWLOOK DEFAULT_BACKTEXTCOLOR]];
-    [helper setLabelFont:_lblAuthor localSizeName:[RWLOOK PUSHMESSAGEDETAIL_AUTHORTEXTSIZE] globalSizeName:[RWLOOK DEFAULT_ITEMTITLESIZE]
-          localStyleName:[RWLOOK PUSHMESSAGEDETAIL_AUTHORTEXTSTYLE] globalStyleName:[RWLOOK DEFAULT_ITEMTITLESTYLE]];
-    [helper setLabelShadowColor:_lblAuthor localName:[RWLOOK PUSHMESSAGEDETAIL_AUTHORTEXTSHADOWCOLOR] globalName:[RWLOOK DEFAULT_BACKTEXTSHADOWCOLOR]];
-    [helper setLabelShadowOffset:_lblAuthor localName:[RWLOOK PUSHMESSAGEDETAIL_AUTHORTEXTSHADOWOFFSET] globalName:[RWLOOK DEFAULT_ITEMTITLESHADOWOFFSET]];
+    [helper.label setColor:_lblAuthor localName:[RWLOOK PUSHMESSAGEDETAIL_AUTHORTEXTCOLOR] globalName:[RWLOOK DEFAULT_BACKTEXTCOLOR]];
+    [helper.label setFont:_lblAuthor localSizeName:[RWLOOK PUSHMESSAGEDETAIL_AUTHORTEXTSIZE] globalSizeName:[RWLOOK DEFAULT_ITEMTITLESIZE]
+           localStyleName:[RWLOOK PUSHMESSAGEDETAIL_AUTHORTEXTSTYLE] globalStyleName:[RWLOOK DEFAULT_ITEMTITLESTYLE]];
+    [helper.label setShadowColor:_lblAuthor localName:[RWLOOK PUSHMESSAGEDETAIL_AUTHORTEXTSHADOWCOLOR] globalName:[RWLOOK DEFAULT_BACKTEXTSHADOWCOLOR]];
+    [helper.label setShadowOffset:_lblAuthor localName:[RWLOOK PUSHMESSAGEDETAIL_AUTHORTEXTSHADOWOFFSET] globalName:[RWLOOK DEFAULT_ITEMTITLESHADOWOFFSET]];
 
-    [helper setLabelColor:_lblSenddate localName:[RWLOOK PUSHMESSAGEDETAIL_SENTTEXTCOLOR] globalName:[RWLOOK DEFAULT_BACKTEXTCOLOR]];
-    [helper setLabelFont:_lblSenddate localSizeName:[RWLOOK PUSHMESSAGEDETAIL_SENTTEXTSIZE] globalSizeName:[RWLOOK DEFAULT_ITEMTITLESIZE]
-          localStyleName:[RWLOOK PUSHMESSAGEDETAIL_SENTTEXTSTYLE] globalStyleName:[RWLOOK DEFAULT_ITEMTITLESTYLE]];
-    [helper setLabelShadowColor:_lblSenddate localName:[RWLOOK PUSHMESSAGEDETAIL_SENTTEXTSHADOWCOLOR] globalName:[RWLOOK DEFAULT_BACKTEXTSHADOWCOLOR]];
-    [helper setLabelShadowOffset:_lblSenddate localName:[RWLOOK PUSHMESSAGEDETAIL_SENTTEXTSHADOWOFFSET] globalName:[RWLOOK DEFAULT_ITEMTITLESHADOWOFFSET]];
+    [helper.label setColor:_lblSenddate localName:[RWLOOK PUSHMESSAGEDETAIL_SENTTEXTCOLOR] globalName:[RWLOOK DEFAULT_BACKTEXTCOLOR]];
+    [helper.label setFont:_lblSenddate localSizeName:[RWLOOK PUSHMESSAGEDETAIL_SENTTEXTSIZE] globalSizeName:[RWLOOK DEFAULT_ITEMTITLESIZE]
+           localStyleName:[RWLOOK PUSHMESSAGEDETAIL_SENTTEXTSTYLE] globalStyleName:[RWLOOK DEFAULT_ITEMTITLESTYLE]];
+    [helper.label setShadowColor:_lblSenddate localName:[RWLOOK PUSHMESSAGEDETAIL_SENTTEXTSHADOWCOLOR] globalName:[RWLOOK DEFAULT_BACKTEXTSHADOWCOLOR]];
+    [helper.label setShadowOffset:_lblSenddate localName:[RWLOOK PUSHMESSAGEDETAIL_SENTTEXTSHADOWOFFSET] globalName:[RWLOOK DEFAULT_ITEMTITLESHADOWOFFSET]];
 
-    [helper setLabelColor:_lblMessage localName:[RWLOOK TEXTCOLOR] globalName:[RWLOOK DEFAULT_BACKTEXTCOLOR]];
-    [helper setLabelFont:_lblMessage localSizeName:[RWLOOK TEXTSIZE] globalSizeName:[RWLOOK DEFAULT_TEXTSIZE]
-          localStyleName:[RWLOOK TEXTSTYLE] globalStyleName:[RWLOOK DEFAULT_TEXTSTYLE]];
-    [helper setLabelShadowColor:_lblMessage localName:[RWLOOK TEXTSHADOWCOLOR] globalName:[RWLOOK DEFAULT_BACKTEXTSHADOWCOLOR]];
-    [helper setLabelShadowOffset:_lblMessage localName:[RWLOOK TEXTSHADOWOFFSET] globalName:[RWLOOK DEFAULT_TEXTSHADOWOFFSET]];
+    [helper.label setColor:_lblMessage localName:[RWLOOK TEXTCOLOR] globalName:[RWLOOK DEFAULT_BACKTEXTCOLOR]];
+    [helper.label setFont:_lblMessage localSizeName:[RWLOOK TEXTSIZE] globalSizeName:[RWLOOK DEFAULT_TEXTSIZE]
+           localStyleName:[RWLOOK TEXTSTYLE] globalStyleName:[RWLOOK DEFAULT_TEXTSTYLE]];
+    [helper.label setShadowColor:_lblMessage localName:[RWLOOK TEXTSHADOWCOLOR] globalName:[RWLOOK DEFAULT_BACKTEXTSHADOWCOLOR]];
+    [helper.label setShadowOffset:_lblMessage localName:[RWLOOK TEXTSHADOWOFFSET] globalName:[RWLOOK DEFAULT_TEXTSHADOWOFFSET]];
 
-    [helper setButtonBackgroundImageOrColor:_btnBack localImageName:[RWLOOK BACKBUTTONBACKGROUNDIMAGE] localColorName:[RWLOOK BACKBUTTONBACKGROUNDCOLOR] globalColorName:[RWLOOK DEFAULT_ALTCOLOR] forState:UIControlStateNormal];
-    [helper setButtonImageFromLocalSource:_btnBack localName:[RWLOOK BACKBUTTONICON] forState:UIControlStateNormal];
-    [helper setButtonTitleColor:_btnBack forState:UIControlStateNormal localName:[RWLOOK BACKBUTTONTEXTCOLOR] globalName:[RWLOOK DEFAULT_ALTTEXTCOLOR]];
-    [helper setButtonTitleFont:_btnBack forState:UIControlStateNormal localSizeName:[RWLOOK BACKBUTTONTEXTSIZE] globalSizeName:[RWLOOK DEFAULT_ITEMTITLESIZE] localStyleName:[RWLOOK BACKBUTTONTEXTSTYLE] globalStyleName:[RWLOOK DEFAULT_ITEMTITLESTYLE]];
-    [helper setButtonTitleShadowColor:_btnBack forState:UIControlStateNormal localName:[RWLOOK BACKBUTTONTEXTSHADOWCOLOR] globalName:[RWLOOK DEFAULT_ALTTEXTSHADOWCOLOR]];
-    [helper setButtonTitleShadowOffset:_btnBack forState:UIControlStateNormal localName:[RWLOOK BACKBUTTONTEXTSHADOWOFFSET] globalName:[RWLOOK DEFAULT_ITEMTITLESHADOWOFFSET]];
+    [helper.button setBackgroundImageOrColor:_btnBack localImageName:[RWLOOK BACKBUTTONBACKGROUNDIMAGE] localColorName:[RWLOOK BACKBUTTONBACKGROUNDCOLOR] globalColorName:[RWLOOK DEFAULT_ALTCOLOR]];
+    [helper.button setImageFromLocalSource:_btnBack localName:[RWLOOK BACKBUTTONICON]];
+    [helper.button setTitleColor:_btnBack localName:[RWLOOK BACKBUTTONTEXTCOLOR] globalName:[RWLOOK DEFAULT_ALTTEXTCOLOR]];
+    [helper.button setTitleFont:_btnBack localSizeName:[RWLOOK BACKBUTTONTEXTSIZE] globalSizeName:[RWLOOK DEFAULT_ITEMTITLESIZE] localStyleName:[RWLOOK BACKBUTTONTEXTSTYLE] globalStyleName:[RWLOOK DEFAULT_ITEMTITLESTYLE]];
+    [helper.button setTitleShadowColor:_btnBack localName:[RWLOOK BACKBUTTONTEXTSHADOWCOLOR] globalName:[RWLOOK DEFAULT_ALTTEXTSHADOWCOLOR]];
+    [helper.button setTitleShadowOffset:_btnBack localName:[RWLOOK BACKBUTTONTEXTSHADOWOFFSET] globalName:[RWLOOK DEFAULT_ITEMTITLESHADOWOFFSET]];
 }
 
 -(void)setText{

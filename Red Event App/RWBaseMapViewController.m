@@ -43,6 +43,7 @@
 	if(![_page hasChild:[RWPAGE RETURNBUTTON]] ||
 	   ([_page hasChild:[RWPAGE RETURNBUTTON]] && ![_page getBoolFromNode:[RWPAGE RETURNBUTTON]])){
 		[_btnBack RWsetHeightAsConstraint:0.0];
+		[_btnBack setHidden:YES];
 	}	
 }
 
@@ -56,13 +57,13 @@
 	RWAppearanceHelper *helper = [[RWAppearanceHelper alloc] initWithLocalLook:_localLook globalLook:_globalLook];
 	
 	[helper setBackgroundTileImageOrColor:self.view localImageName:[RWLOOK MAPVIEW_BACKGROUNDIMAGE] localColorName:[RWLOOK MAPVIEW_BACKGROUNDCOLOR] globalName:[RWLOOK DEFAULT_BACKCOLOR]];
-	
-	[helper setButtonBackgroundImageOrColor:_btnBack localImageName:[RWLOOK MAPVIEW_BACKBUTTONBACKGROUNDIMAGE] localColorName:[RWLOOK MAPVIEW_BACKBUTTONBACKGROUNDCOLOR] globalColorName:[RWLOOK DEFAULT_ALTCOLOR] forState:UIControlStateNormal];
-	[helper setButtonImageFromLocalSource:_btnBack localName:[RWLOOK MAPVIEW_BACKBUTTONICON] forState:UIControlStateNormal];
-	[helper setButtonTitleColor:_btnBack forState:UIControlStateNormal localName:[RWLOOK MAPVIEW_BACKBUTTONTEXTCOLOR] globalName:[RWLOOK DEFAULT_ALTTEXTCOLOR]];
-	[helper setButtonTitleFont:_btnBack forState:UIControlStateNormal localSizeName:[RWLOOK MAPVIEW_BACKBUTTONTEXTSIZE] globalSizeName:[RWLOOK DEFAULT_ITEMTITLESIZE] localStyleName:[RWLOOK MAPVIEW_BACKBUTTONTEXTSTYLE] globalStyleName:[RWLOOK DEFAULT_ITEMTITLESTYLE]];
-	[helper setButtonTitleShadowColor:_btnBack forState:UIControlStateNormal localName:[RWLOOK MAPVIEW_BACKBUTTONTEXTSHADOWCOLOR] globalName:[RWLOOK DEFAULT_ALTTEXTSHADOWCOLOR]];
-	[helper setButtonTitleShadowOffset:_btnBack forState:UIControlStateNormal localName:[RWLOOK MAPVIEW_BACKBUTTONTEXTSHADOWOFFSET] globalName:[RWLOOK DEFAULT_ITEMTITLESHADOWOFFSET]];
+
+    [helper.button setBackgroundImageOrColor:_btnBack localImageName:[RWLOOK MAPVIEW_BACKBUTTONBACKGROUNDIMAGE] localColorName:[RWLOOK MAPVIEW_BACKBUTTONBACKGROUNDCOLOR] globalColorName:[RWLOOK DEFAULT_ALTCOLOR]];
+    [helper.button setImageFromLocalSource:_btnBack localName:[RWLOOK MAPVIEW_BACKBUTTONICON]];
+    [helper.button setTitleColor:_btnBack localName:[RWLOOK MAPVIEW_BACKBUTTONTEXTCOLOR] globalName:[RWLOOK DEFAULT_ALTTEXTCOLOR]];
+    [helper.button setTitleFont:_btnBack localSizeName:[RWLOOK MAPVIEW_BACKBUTTONTEXTSIZE] globalSizeName:[RWLOOK DEFAULT_ITEMTITLESIZE] localStyleName:[RWLOOK MAPVIEW_BACKBUTTONTEXTSTYLE] globalStyleName:[RWLOOK DEFAULT_ITEMTITLESTYLE]];
+    [helper.button setTitleShadowColor:_btnBack localName:[RWLOOK MAPVIEW_BACKBUTTONTEXTSHADOWCOLOR] globalName:[RWLOOK DEFAULT_ALTTEXTSHADOWCOLOR]];
+    [helper.button setTitleShadowOffset:_btnBack localName:[RWLOOK MAPVIEW_BACKBUTTONTEXTSHADOWOFFSET] globalName:[RWLOOK DEFAULT_ITEMTITLESHADOWOFFSET]];
 }
 
 - (void)setText{

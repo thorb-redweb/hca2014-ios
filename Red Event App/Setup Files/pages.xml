@@ -71,7 +71,6 @@
     <page>
         <name>Program</name>
         <type>DailySessionList</type>
-        <parent>SwipeView</parent>
         <child>Begivenhed</child>
     </page>
     <page>
@@ -86,6 +85,7 @@
         <type>SessionMap</type>
         <parent>Begivenhed</parent>
         <child>Begivenhed</child>
+		<zoom>5</zoom>
         <returnbutton>YES</returnbutton>
     </page>
     <page>
@@ -109,6 +109,7 @@
         <name>VenueMap</name>
         <type>VenueMap</type>
         <parent>RedWeb</parent>
+		<zoom>5</zoom>
     </page>
     <page>
         <name>Biking</name>

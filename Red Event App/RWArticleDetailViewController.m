@@ -93,29 +93,29 @@
 	[helper setBackgroundTileImageOrColor:_imgBackground localImageName:[RWLOOK BACKGROUNDIMAGE] localColorName:[RWLOOK BACKGROUNDCOLOR] globalName:[RWLOOK DEFAULT_BACKCOLOR]];
 
 //	[_imgBackground addMotionEffect:bottomGroup];
-	
-    [helper setLabelColor:_lblTitle localName:[RWLOOK ARTICLEDETAIL_TITLECOLOR] globalName:[RWLOOK DEFAULT_BACKTEXTCOLOR]];
-    [helper setLabelFont:_lblTitle localSizeName:[RWLOOK ARTICLEDETAIL_TITLESIZE] globalSizeName:[RWLOOK DEFAULT_TITLESIZE]
-          localStyleName:[RWLOOK ARTICLEDETAIL_TITLESTYLE] globalStyleName:[RWLOOK DEFAULT_TITLESTYLE]];
-    [helper setLabelShadowColor:_lblTitle localName:[RWLOOK ARTICLEDETAIL_TITLESHADOWCOLOR] globalName:[RWLOOK DEFAULT_BACKTEXTSHADOWCOLOR]];
-    [helper setLabelShadowOffset:_lblTitle localName:[RWLOOK ARTICLEDETAIL_TITLESHADOWOFFSET] globalName:[RWLOOK DEFAULT_TITLESHADOWOFFSET]];
+
+    [helper.label setColor:_lblTitle localName:[RWLOOK ARTICLEDETAIL_TITLECOLOR] globalName:[RWLOOK DEFAULT_BACKTEXTCOLOR]];
+    [helper.label setFont:_lblTitle localSizeName:[RWLOOK ARTICLEDETAIL_TITLESIZE] globalSizeName:[RWLOOK DEFAULT_TITLESIZE]
+           localStyleName:[RWLOOK ARTICLEDETAIL_TITLESTYLE] globalStyleName:[RWLOOK DEFAULT_TITLESTYLE]];
+    [helper.label setShadowColor:_lblTitle localName:[RWLOOK ARTICLEDETAIL_TITLESHADOWCOLOR] globalName:[RWLOOK DEFAULT_BACKTEXTSHADOWCOLOR]];
+    [helper.label setShadowOffset:_lblTitle localName:[RWLOOK ARTICLEDETAIL_TITLESHADOWOFFSET] globalName:[RWLOOK DEFAULT_TITLESHADOWOFFSET]];
 //	[_lblTitle addMotionEffect:topGroup];
 	
 //    [_imgView addMotionEffect:topGroup];
-	
-    [helper setLabelColor:_lblBody localName:[RWLOOK ARTICLEDETAIL_TEXTCOLOR] globalName:[RWLOOK DEFAULT_BACKTEXTCOLOR]];
-    [helper setLabelFont:_lblBody localSizeName:[RWLOOK ARTICLEDETAIL_TEXTSIZE] globalSizeName:[RWLOOK DEFAULT_TEXTSIZE]
-          localStyleName:[RWLOOK ARTICLEDETAIL_TEXTSTYLE] globalStyleName:[RWLOOK DEFAULT_TEXTSTYLE]];
-    [helper setLabelShadowColor:_lblBody localName:[RWLOOK ARTICLEDETAIL_TEXTSHADOWCOLOR] globalName:[RWLOOK DEFAULT_BACKTEXTSHADOWCOLOR]];
-    [helper setLabelShadowOffset:_lblBody localName:[RWLOOK ARTICLEDETAIL_TEXTSHADOWOFFSET] globalName:[RWLOOK DEFAULT_TEXTSHADOWOFFSET]];
+
+    [helper.label setColor:_lblBody localName:[RWLOOK ARTICLEDETAIL_TEXTCOLOR] globalName:[RWLOOK DEFAULT_BACKTEXTCOLOR]];
+    [helper.label setFont:_lblBody localSizeName:[RWLOOK ARTICLEDETAIL_TEXTSIZE] globalSizeName:[RWLOOK DEFAULT_TEXTSIZE]
+           localStyleName:[RWLOOK ARTICLEDETAIL_TEXTSTYLE] globalStyleName:[RWLOOK DEFAULT_TEXTSTYLE]];
+    [helper.label setShadowColor:_lblBody localName:[RWLOOK ARTICLEDETAIL_TEXTSHADOWCOLOR] globalName:[RWLOOK DEFAULT_BACKTEXTSHADOWCOLOR]];
+    [helper.label setShadowOffset:_lblBody localName:[RWLOOK ARTICLEDETAIL_TEXTSHADOWOFFSET] globalName:[RWLOOK DEFAULT_TEXTSHADOWOFFSET]];
 //	[_lblBody addMotionEffect:topGroup];
-	
-	[helper setButtonBackgroundImageOrColor:_btnBack localImageName:[RWLOOK ARTICLEDETAIL_BACKBUTTONBACKGROUNDIMAGE] localColorName:[RWLOOK ARTICLEDETAIL_BACKBUTTONBACKGROUNDCOLOR] globalColorName:[RWLOOK DEFAULT_ALTCOLOR] forState:UIControlStateNormal];
-	[helper setButtonImageFromLocalSource:_btnBack localName:[RWLOOK ARTICLEDETAIL_BACKBUTTONICON] forState:UIControlStateNormal];
-	[helper setButtonTitleColor:_btnBack forState:UIControlStateNormal localName:[RWLOOK ARTICLEDETAIL_BACKBUTTONTEXTCOLOR] globalName:[RWLOOK DEFAULT_ALTTEXTCOLOR]];
-	[helper setButtonTitleFont:_btnBack forState:UIControlStateNormal localSizeName:[RWLOOK ARTICLEDETAIL_BACKBUTTONTEXTSIZE] globalSizeName:[RWLOOK DEFAULT_ITEMTITLESIZE] localStyleName:[RWLOOK ARTICLEDETAIL_BACKBUTTONTEXTSTYLE] globalStyleName:[RWLOOK DEFAULT_ITEMTITLESTYLE]];
-	[helper setButtonTitleShadowColor:_btnBack forState:UIControlStateNormal localName:[RWLOOK ARTICLEDETAIL_BACKBUTTONTEXTSHADOWCOLOR] globalName:[RWLOOK DEFAULT_ALTTEXTSHADOWCOLOR]];
-	[helper setButtonTitleShadowOffset:_btnBack forState:UIControlStateNormal localName:[RWLOOK ARTICLEDETAIL_BACKBUTTONTEXTSHADOWOFFSET] globalName:[RWLOOK DEFAULT_ITEMTITLESHADOWOFFSET]];
+
+    [helper.button setBackgroundImageOrColor:_btnBack localImageName:[RWLOOK ARTICLEDETAIL_BACKBUTTONBACKGROUNDIMAGE] localColorName:[RWLOOK ARTICLEDETAIL_BACKBUTTONBACKGROUNDCOLOR] globalColorName:[RWLOOK DEFAULT_ALTCOLOR]];
+    [helper.button setImageFromLocalSource:_btnBack localName:[RWLOOK ARTICLEDETAIL_BACKBUTTONICON]];
+    [helper.button setTitleColor:_btnBack localName:[RWLOOK ARTICLEDETAIL_BACKBUTTONTEXTCOLOR] globalName:[RWLOOK DEFAULT_ALTTEXTCOLOR]];
+    [helper.button setTitleFont:_btnBack localSizeName:[RWLOOK ARTICLEDETAIL_BACKBUTTONTEXTSIZE] globalSizeName:[RWLOOK DEFAULT_ITEMTITLESIZE] localStyleName:[RWLOOK ARTICLEDETAIL_BACKBUTTONTEXTSTYLE] globalStyleName:[RWLOOK DEFAULT_ITEMTITLESTYLE]];
+    [helper.button setTitleShadowColor:_btnBack localName:[RWLOOK ARTICLEDETAIL_BACKBUTTONTEXTSHADOWCOLOR] globalName:[RWLOOK DEFAULT_ALTTEXTSHADOWCOLOR]];
+    [helper.button setTitleShadowOffset:_btnBack localName:[RWLOOK ARTICLEDETAIL_BACKBUTTONTEXTSHADOWOFFSET] globalName:[RWLOOK DEFAULT_ITEMTITLESHADOWOFFSET]];
 //	[_btnBack addMotionEffect:topGroup];
 	
 	[helper setScrollBounces:_scrollView localName:[RWLOOK SCROLLBOUNCES] globalName:[RWLOOK SCROLLBOUNCES]];

@@ -11,7 +11,7 @@
                 <outlet property="btnPrevious" destination="19" id="83"/>
                 <outlet property="btnVenuePicker" destination="106" id="117"/>
                 <outlet property="lblDate" destination="28" id="35"/>
-                <outlet property="tableView" destination="10" id="81"/>
+                <outlet property="lstTableView" destination="10" id="mfE-g7-fDh"/>
                 <outlet property="view" destination="1" id="3"/>
                 <outlet property="viewDateUnderline" destination="97a-3H-qJh" id="ZiC-4i-Tgl"/>
             </connections>

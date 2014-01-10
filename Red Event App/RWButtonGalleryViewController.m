@@ -49,125 +49,125 @@
 	
     [helper setBackgroundColor:self.view localName:[RWLOOK STATICARTICLE_BACKGROUNDCOLOR] globalName:[RWLOOK DEFAULT_BACKCOLOR]];
 	
-	bool hasUniqueImage1 = [helper setButtonBackgroundImageFromLocalSource:_btn1 localName:[RWLOOK BUTTONGALLERY_BUTTON1BACKGROUNDIMAGE] forState:UIControlStateNormal];
+	bool hasUniqueImage1 = [helper.button setBackgroundImageFromLocalSource:_btn1 localName:[RWLOOK BUTTONGALLERY_BUTTON1BACKGROUNDIMAGE]];
 	if (!hasUniqueImage1) {
-			[helper setButtonBackgroundImageOrColor:_btn1 localImageName:[RWLOOK BUTTONGALLERY_BUTTONBACKGROUNDIMAGE] localColorName:[RWLOOK BUTTONGALLERY_BUTTONBACKGROUNDCOLOR] globalColorName:[RWLOOK DEFAULT_ALTCOLOR] forState:UIControlStateNormal];
+        [helper.button setBackgroundImageOrColor:_btn1 localImageName:[RWLOOK BUTTONGALLERY_BUTTONBACKGROUNDIMAGE] localColorName:[RWLOOK BUTTONGALLERY_BUTTONBACKGROUNDCOLOR] globalColorName:[RWLOOK DEFAULT_ALTCOLOR]];
 	}
 	if ([_localLook hasChild:[RWLOOK BUTTONGALLERY_BUTTON1ICON]]) {
-		[helper setButtonBackgroundImageFromLocalSource:_btn1 localName:[RWLOOK BUTTONGALLERY_BUTTON1ICON] forState:UIControlStateNormal];
+        [helper.button setBackgroundImageFromLocalSource:_btn1 localName:[RWLOOK BUTTONGALLERY_BUTTON1ICON]];
 	}
 	if([_localLook hasChild:[RWLOOK BUTTONGALLERY_BUTTONICON]]){
-		[helper setButtonBackgroundImageFromLocalSource:_btn1 localName:[RWLOOK BUTTONGALLERY_BUTTONICON] forState:UIControlStateNormal];
+        [helper.button setBackgroundImageFromLocalSource:_btn1 localName:[RWLOOK BUTTONGALLERY_BUTTONICON]];
 	}
-	[helper setButtonTitleColor:_btn1 forState:UIControlStateNormal localName:[RWLOOK BUTTONGALLERY_BUTTONTEXTCOLOR] globalName:[RWLOOK DEFAULT_ALTTEXTCOLOR]];
-	[helper setButtonTitleFont:_btn1 forState:UIControlStateNormal localSizeName:[RWLOOK BUTTONGALLERY_BUTTONTEXTSIZE] globalSizeName:[RWLOOK DEFAULT_ITEMTITLESIZE] localStyleName:[RWLOOK BUTTONGALLERY_BUTTONTEXTSTYLE] globalStyleName:[RWLOOK DEFAULT_ITEMTITLESTYLE]];
-	[helper setButtonTitleShadowColor:_btn1 forState:UIControlStateNormal localName:[RWLOOK BUTTONGALLERY_BUTTONTEXTSHADOWCOLOR] globalName:[RWLOOK DEFAULT_ALTTEXTSHADOWCOLOR]];
-	[helper setButtonTitleShadowOffset:_btn1 forState:UIControlStateNormal localName:[RWLOOK BUTTONGALLERY_BUTTONTEXTSHADOWOFFSET] globalName:[RWLOOK DEFAULT_ITEMTITLESHADOWOFFSET]];
+    [helper.button setTitleColor:_btn1 localName:[RWLOOK BUTTONGALLERY_BUTTONTEXTCOLOR] globalName:[RWLOOK DEFAULT_ALTTEXTCOLOR]];
+    [helper.button setTitleFont:_btn1 localSizeName:[RWLOOK BUTTONGALLERY_BUTTONTEXTSIZE] globalSizeName:[RWLOOK DEFAULT_ITEMTITLESIZE] localStyleName:[RWLOOK BUTTONGALLERY_BUTTONTEXTSTYLE] globalStyleName:[RWLOOK DEFAULT_ITEMTITLESTYLE]];
+    [helper.button setTitleShadowColor:_btn1 localName:[RWLOOK BUTTONGALLERY_BUTTONTEXTSHADOWCOLOR] globalName:[RWLOOK DEFAULT_ALTTEXTSHADOWCOLOR]];
+    [helper.button setTitleShadowOffset:_btn1 localName:[RWLOOK BUTTONGALLERY_BUTTONTEXTSHADOWOFFSET] globalName:[RWLOOK DEFAULT_ITEMTITLESHADOWOFFSET]];
 	
-	bool hasUniqueImage2 = [helper setButtonBackgroundImageFromLocalSource:_btn2 localName:[RWLOOK BUTTONGALLERY_BUTTON2BACKGROUNDIMAGE] forState:UIControlStateNormal];
+	bool hasUniqueImage2 = [helper.button setBackgroundImageFromLocalSource:_btn2 localName:[RWLOOK BUTTONGALLERY_BUTTON2BACKGROUNDIMAGE]];
 	if (!hasUniqueImage2) {
-		[helper setButtonBackgroundImageOrColor:_btn2 localImageName:[RWLOOK BUTTONGALLERY_BUTTONBACKGROUNDIMAGE] localColorName:[RWLOOK BUTTONGALLERY_BUTTONBACKGROUNDCOLOR] globalColorName:[RWLOOK DEFAULT_ALTCOLOR] forState:UIControlStateNormal];
+        [helper.button setBackgroundImageOrColor:_btn2 localImageName:[RWLOOK BUTTONGALLERY_BUTTONBACKGROUNDIMAGE] localColorName:[RWLOOK BUTTONGALLERY_BUTTONBACKGROUNDCOLOR] globalColorName:[RWLOOK DEFAULT_ALTCOLOR]];
 	}
 	if ([_localLook hasChild:[RWLOOK BUTTONGALLERY_BUTTON2ICON]]) {
-		[helper setButtonBackgroundImageFromLocalSource:_btn2 localName:[RWLOOK BUTTONGALLERY_BUTTON2ICON] forState:UIControlStateNormal];
+        [helper.button setBackgroundImageFromLocalSource:_btn2 localName:[RWLOOK BUTTONGALLERY_BUTTON2ICON]];
 	}
 	if([_localLook hasChild:[RWLOOK BUTTONGALLERY_BUTTONICON]]){
-		[helper setButtonBackgroundImageFromLocalSource:_btn2 localName:[RWLOOK BUTTONGALLERY_BUTTONICON] forState:UIControlStateNormal];
+        [helper.button setBackgroundImageFromLocalSource:_btn2 localName:[RWLOOK BUTTONGALLERY_BUTTONICON]];
 	}
-	[helper setButtonTitleColor:_btn2 forState:UIControlStateNormal localName:[RWLOOK BUTTONGALLERY_BUTTONTEXTCOLOR] globalName:[RWLOOK DEFAULT_ALTTEXTCOLOR]];
-	[helper setButtonTitleFont:_btn2 forState:UIControlStateNormal localSizeName:[RWLOOK BUTTONGALLERY_BUTTONTEXTSIZE] globalSizeName:[RWLOOK DEFAULT_ITEMTITLESIZE] localStyleName:[RWLOOK BUTTONGALLERY_BUTTONTEXTSTYLE] globalStyleName:[RWLOOK DEFAULT_ITEMTITLESTYLE]];
-	[helper setButtonTitleShadowColor:_btn2 forState:UIControlStateNormal localName:[RWLOOK BUTTONGALLERY_BUTTONTEXTSHADOWCOLOR] globalName:[RWLOOK DEFAULT_ALTTEXTSHADOWCOLOR]];
-	[helper setButtonTitleShadowOffset:_btn2 forState:UIControlStateNormal localName:[RWLOOK BUTTONGALLERY_BUTTONTEXTSHADOWOFFSET] globalName:[RWLOOK DEFAULT_ITEMTITLESHADOWOFFSET]];
+    [helper.button setTitleColor:_btn2 localName:[RWLOOK BUTTONGALLERY_BUTTONTEXTCOLOR] globalName:[RWLOOK DEFAULT_ALTTEXTCOLOR]];
+    [helper.button setTitleFont:_btn2 localSizeName:[RWLOOK BUTTONGALLERY_BUTTONTEXTSIZE] globalSizeName:[RWLOOK DEFAULT_ITEMTITLESIZE] localStyleName:[RWLOOK BUTTONGALLERY_BUTTONTEXTSTYLE] globalStyleName:[RWLOOK DEFAULT_ITEMTITLESTYLE]];
+    [helper.button setTitleShadowColor:_btn2 localName:[RWLOOK BUTTONGALLERY_BUTTONTEXTSHADOWCOLOR] globalName:[RWLOOK DEFAULT_ALTTEXTSHADOWCOLOR]];
+    [helper.button setTitleShadowOffset:_btn2 localName:[RWLOOK BUTTONGALLERY_BUTTONTEXTSHADOWOFFSET] globalName:[RWLOOK DEFAULT_ITEMTITLESHADOWOFFSET]];
 	
-	bool hasUniqueImage3 = [helper setButtonBackgroundImageFromLocalSource:_btn3 localName:[RWLOOK BUTTONGALLERY_BUTTON1BACKGROUNDIMAGE] forState:UIControlStateNormal];
+	bool hasUniqueImage3 = [helper.button setBackgroundImageFromLocalSource:_btn3 localName:[RWLOOK BUTTONGALLERY_BUTTON1BACKGROUNDIMAGE]];
 	if (!hasUniqueImage3) {
-		[helper setButtonBackgroundImageOrColor:_btn3 localImageName:[RWLOOK BUTTONGALLERY_BUTTONBACKGROUNDIMAGE] localColorName:[RWLOOK BUTTONGALLERY_BUTTONBACKGROUNDCOLOR] globalColorName:[RWLOOK DEFAULT_ALTCOLOR] forState:UIControlStateNormal];
+        [helper.button setBackgroundImageOrColor:_btn3 localImageName:[RWLOOK BUTTONGALLERY_BUTTONBACKGROUNDIMAGE] localColorName:[RWLOOK BUTTONGALLERY_BUTTONBACKGROUNDCOLOR] globalColorName:[RWLOOK DEFAULT_ALTCOLOR]];
 	}
 	if ([_localLook hasChild:[RWLOOK BUTTONGALLERY_BUTTON3ICON]]) {
-		[helper setButtonBackgroundImageFromLocalSource:_btn3 localName:[RWLOOK BUTTONGALLERY_BUTTON3ICON] forState:UIControlStateNormal];
+        [helper.button setBackgroundImageFromLocalSource:_btn3 localName:[RWLOOK BUTTONGALLERY_BUTTON3ICON]];
 	}
 	if([_localLook hasChild:[RWLOOK BUTTONGALLERY_BUTTONICON]]){
-		[helper setButtonBackgroundImageFromLocalSource:_btn3 localName:[RWLOOK BUTTONGALLERY_BUTTONICON] forState:UIControlStateNormal];
+        [helper.button setBackgroundImageFromLocalSource:_btn3 localName:[RWLOOK BUTTONGALLERY_BUTTONICON]];
 	}
-	[helper setButtonTitleColor:_btn3 forState:UIControlStateNormal localName:[RWLOOK BUTTONGALLERY_BUTTONTEXTCOLOR] globalName:[RWLOOK DEFAULT_ALTTEXTCOLOR]];
-	[helper setButtonTitleFont:_btn3 forState:UIControlStateNormal localSizeName:[RWLOOK BUTTONGALLERY_BUTTONTEXTSIZE] globalSizeName:[RWLOOK DEFAULT_ITEMTITLESIZE] localStyleName:[RWLOOK BUTTONGALLERY_BUTTONTEXTSTYLE] globalStyleName:[RWLOOK DEFAULT_ITEMTITLESTYLE]];
-	[helper setButtonTitleShadowColor:_btn3 forState:UIControlStateNormal localName:[RWLOOK BUTTONGALLERY_BUTTONTEXTSHADOWCOLOR] globalName:[RWLOOK DEFAULT_ALTTEXTSHADOWCOLOR]];
-	[helper setButtonTitleShadowOffset:_btn3 forState:UIControlStateNormal localName:[RWLOOK BUTTONGALLERY_BUTTONTEXTSHADOWOFFSET] globalName:[RWLOOK DEFAULT_ITEMTITLESHADOWOFFSET]];
+    [helper.button setTitleColor:_btn3 localName:[RWLOOK BUTTONGALLERY_BUTTONTEXTCOLOR] globalName:[RWLOOK DEFAULT_ALTTEXTCOLOR]];
+    [helper.button setTitleFont:_btn3 localSizeName:[RWLOOK BUTTONGALLERY_BUTTONTEXTSIZE] globalSizeName:[RWLOOK DEFAULT_ITEMTITLESIZE] localStyleName:[RWLOOK BUTTONGALLERY_BUTTONTEXTSTYLE] globalStyleName:[RWLOOK DEFAULT_ITEMTITLESTYLE]];
+    [helper.button setTitleShadowColor:_btn3 localName:[RWLOOK BUTTONGALLERY_BUTTONTEXTSHADOWCOLOR] globalName:[RWLOOK DEFAULT_ALTTEXTSHADOWCOLOR]];
+    [helper.button setTitleShadowOffset:_btn3 localName:[RWLOOK BUTTONGALLERY_BUTTONTEXTSHADOWOFFSET] globalName:[RWLOOK DEFAULT_ITEMTITLESHADOWOFFSET]];
 	
-	bool hasUniqueImage4 = [helper setButtonBackgroundImageFromLocalSource:_btn4 localName:[RWLOOK BUTTONGALLERY_BUTTON4BACKGROUNDIMAGE] forState:UIControlStateNormal];
+	bool hasUniqueImage4 = [helper.button setBackgroundImageFromLocalSource:_btn4 localName:[RWLOOK BUTTONGALLERY_BUTTON4BACKGROUNDIMAGE]];
 	if (!hasUniqueImage4) {
-		[helper setButtonBackgroundImageOrColor:_btn4 localImageName:[RWLOOK BUTTONGALLERY_BUTTONBACKGROUNDIMAGE] localColorName:[RWLOOK BUTTONGALLERY_BUTTONBACKGROUNDCOLOR] globalColorName:[RWLOOK DEFAULT_ALTCOLOR] forState:UIControlStateNormal];
+        [helper.button setBackgroundImageOrColor:_btn4 localImageName:[RWLOOK BUTTONGALLERY_BUTTONBACKGROUNDIMAGE] localColorName:[RWLOOK BUTTONGALLERY_BUTTONBACKGROUNDCOLOR] globalColorName:[RWLOOK DEFAULT_ALTCOLOR]];
 	}
 	if ([_localLook hasChild:[RWLOOK BUTTONGALLERY_BUTTON4ICON]]) {
-		[helper setButtonBackgroundImageFromLocalSource:_btn4 localName:[RWLOOK BUTTONGALLERY_BUTTON4ICON] forState:UIControlStateNormal];
+        [helper.button setBackgroundImageFromLocalSource:_btn4 localName:[RWLOOK BUTTONGALLERY_BUTTON4ICON]];
 	}
 	if([_localLook hasChild:[RWLOOK BUTTONGALLERY_BUTTONICON]]){
-		[helper setButtonBackgroundImageFromLocalSource:_btn4 localName:[RWLOOK BUTTONGALLERY_BUTTONICON] forState:UIControlStateNormal];
+        [helper.button setBackgroundImageFromLocalSource:_btn4 localName:[RWLOOK BUTTONGALLERY_BUTTONICON]];
 	}
-	[helper setButtonTitleColor:_btn4 forState:UIControlStateNormal localName:[RWLOOK BUTTONGALLERY_BUTTONTEXTCOLOR] globalName:[RWLOOK DEFAULT_ALTTEXTCOLOR]];
-	[helper setButtonTitleFont:_btn4 forState:UIControlStateNormal localSizeName:[RWLOOK BUTTONGALLERY_BUTTONTEXTSIZE] globalSizeName:[RWLOOK DEFAULT_ITEMTITLESIZE] localStyleName:[RWLOOK BUTTONGALLERY_BUTTONTEXTSTYLE] globalStyleName:[RWLOOK DEFAULT_ITEMTITLESTYLE]];
-	[helper setButtonTitleShadowColor:_btn4 forState:UIControlStateNormal localName:[RWLOOK BUTTONGALLERY_BUTTONTEXTSHADOWCOLOR] globalName:[RWLOOK DEFAULT_ALTTEXTSHADOWCOLOR]];
-	[helper setButtonTitleShadowOffset:_btn4 forState:UIControlStateNormal localName:[RWLOOK BUTTONGALLERY_BUTTONTEXTSHADOWOFFSET] globalName:[RWLOOK DEFAULT_ITEMTITLESHADOWOFFSET]];
+    [helper.button setTitleColor:_btn4 localName:[RWLOOK BUTTONGALLERY_BUTTONTEXTCOLOR] globalName:[RWLOOK DEFAULT_ALTTEXTCOLOR]];
+    [helper.button setTitleFont:_btn4 localSizeName:[RWLOOK BUTTONGALLERY_BUTTONTEXTSIZE] globalSizeName:[RWLOOK DEFAULT_ITEMTITLESIZE] localStyleName:[RWLOOK BUTTONGALLERY_BUTTONTEXTSTYLE] globalStyleName:[RWLOOK DEFAULT_ITEMTITLESTYLE]];
+    [helper.button setTitleShadowColor:_btn4 localName:[RWLOOK BUTTONGALLERY_BUTTONTEXTSHADOWCOLOR] globalName:[RWLOOK DEFAULT_ALTTEXTSHADOWCOLOR]];
+    [helper.button setTitleShadowOffset:_btn4 localName:[RWLOOK BUTTONGALLERY_BUTTONTEXTSHADOWOFFSET] globalName:[RWLOOK DEFAULT_ITEMTITLESHADOWOFFSET]];
 	
-	bool hasUniqueImage5 = [helper setButtonBackgroundImageFromLocalSource:_btn5 localName:[RWLOOK BUTTONGALLERY_BUTTON5BACKGROUNDIMAGE] forState:UIControlStateNormal];
+	bool hasUniqueImage5 = [helper.button setBackgroundImageFromLocalSource:_btn5 localName:[RWLOOK BUTTONGALLERY_BUTTON5BACKGROUNDIMAGE]];
 	if (!hasUniqueImage5) {
-		[helper setButtonBackgroundImageOrColor:_btn5 localImageName:[RWLOOK BUTTONGALLERY_BUTTONBACKGROUNDIMAGE] localColorName:[RWLOOK BUTTONGALLERY_BUTTONBACKGROUNDCOLOR] globalColorName:[RWLOOK DEFAULT_ALTCOLOR] forState:UIControlStateNormal];
+        [helper.button setBackgroundImageOrColor:_btn5 localImageName:[RWLOOK BUTTONGALLERY_BUTTONBACKGROUNDIMAGE] localColorName:[RWLOOK BUTTONGALLERY_BUTTONBACKGROUNDCOLOR] globalColorName:[RWLOOK DEFAULT_ALTCOLOR]];
 	}
 	if ([_localLook hasChild:[RWLOOK BUTTONGALLERY_BUTTON5ICON]]) {
-		[helper setButtonBackgroundImageFromLocalSource:_btn5 localName:[RWLOOK BUTTONGALLERY_BUTTON5ICON] forState:UIControlStateNormal];
+        [helper.button setBackgroundImageFromLocalSource:_btn5 localName:[RWLOOK BUTTONGALLERY_BUTTON5ICON]];
 	}
 	if([_localLook hasChild:[RWLOOK BUTTONGALLERY_BUTTONICON]]){
-		[helper setButtonBackgroundImageFromLocalSource:_btn5 localName:[RWLOOK BUTTONGALLERY_BUTTONICON] forState:UIControlStateNormal];
+        [helper.button setBackgroundImageFromLocalSource:_btn5 localName:[RWLOOK BUTTONGALLERY_BUTTONICON]];
 	}
-	[helper setButtonTitleColor:_btn5 forState:UIControlStateNormal localName:[RWLOOK BUTTONGALLERY_BUTTONTEXTCOLOR] globalName:[RWLOOK DEFAULT_ALTTEXTCOLOR]];
-	[helper setButtonTitleFont:_btn5 forState:UIControlStateNormal localSizeName:[RWLOOK BUTTONGALLERY_BUTTONTEXTSIZE] globalSizeName:[RWLOOK DEFAULT_ITEMTITLESIZE] localStyleName:[RWLOOK BUTTONGALLERY_BUTTONTEXTSTYLE] globalStyleName:[RWLOOK DEFAULT_ITEMTITLESTYLE]];
-	[helper setButtonTitleShadowColor:_btn5 forState:UIControlStateNormal localName:[RWLOOK BUTTONGALLERY_BUTTONTEXTSHADOWCOLOR] globalName:[RWLOOK DEFAULT_ALTTEXTSHADOWCOLOR]];
-	[helper setButtonTitleShadowOffset:_btn5 forState:UIControlStateNormal localName:[RWLOOK BUTTONGALLERY_BUTTONTEXTSHADOWOFFSET] globalName:[RWLOOK DEFAULT_ITEMTITLESHADOWOFFSET]];
+    [helper.button setTitleColor:_btn5 localName:[RWLOOK BUTTONGALLERY_BUTTONTEXTCOLOR] globalName:[RWLOOK DEFAULT_ALTTEXTCOLOR]];
+    [helper.button setTitleFont:_btn5 localSizeName:[RWLOOK BUTTONGALLERY_BUTTONTEXTSIZE] globalSizeName:[RWLOOK DEFAULT_ITEMTITLESIZE] localStyleName:[RWLOOK BUTTONGALLERY_BUTTONTEXTSTYLE] globalStyleName:[RWLOOK DEFAULT_ITEMTITLESTYLE]];
+    [helper.button setTitleShadowColor:_btn5 localName:[RWLOOK BUTTONGALLERY_BUTTONTEXTSHADOWCOLOR] globalName:[RWLOOK DEFAULT_ALTTEXTSHADOWCOLOR]];
+    [helper.button setTitleShadowOffset:_btn5 localName:[RWLOOK BUTTONGALLERY_BUTTONTEXTSHADOWOFFSET] globalName:[RWLOOK DEFAULT_ITEMTITLESHADOWOFFSET]];
 	
-	bool hasUniqueImage6 = [helper setButtonBackgroundImageFromLocalSource:_btn6 localName:[RWLOOK BUTTONGALLERY_BUTTON1BACKGROUNDIMAGE] forState:UIControlStateNormal];
+	bool hasUniqueImage6 = [helper.button setBackgroundImageFromLocalSource:_btn6 localName:[RWLOOK BUTTONGALLERY_BUTTON1BACKGROUNDIMAGE]];
 	if (!hasUniqueImage6) {
-		[helper setButtonBackgroundImageOrColor:_btn6 localImageName:[RWLOOK BUTTONGALLERY_BUTTONBACKGROUNDIMAGE] localColorName:[RWLOOK BUTTONGALLERY_BUTTONBACKGROUNDCOLOR] globalColorName:[RWLOOK DEFAULT_ALTCOLOR] forState:UIControlStateNormal];
+        [helper.button setBackgroundImageOrColor:_btn6 localImageName:[RWLOOK BUTTONGALLERY_BUTTONBACKGROUNDIMAGE] localColorName:[RWLOOK BUTTONGALLERY_BUTTONBACKGROUNDCOLOR] globalColorName:[RWLOOK DEFAULT_ALTCOLOR]];
 	}
 	if ([_localLook hasChild:[RWLOOK BUTTONGALLERY_BUTTON6ICON]]) {
-		[helper setButtonBackgroundImageFromLocalSource:_btn6 localName:[RWLOOK BUTTONGALLERY_BUTTON6ICON] forState:UIControlStateNormal];
+        [helper.button setBackgroundImageFromLocalSource:_btn6 localName:[RWLOOK BUTTONGALLERY_BUTTON6ICON]];
 	}
 	if([_localLook hasChild:[RWLOOK BUTTONGALLERY_BUTTONICON]]){
-		[helper setButtonBackgroundImageFromLocalSource:_btn6 localName:[RWLOOK BUTTONGALLERY_BUTTONICON] forState:UIControlStateNormal];
+        [helper.button setBackgroundImageFromLocalSource:_btn6 localName:[RWLOOK BUTTONGALLERY_BUTTONICON]];
 	}
-	[helper setButtonTitleColor:_btn6 forState:UIControlStateNormal localName:[RWLOOK BUTTONGALLERY_BUTTONTEXTCOLOR] globalName:[RWLOOK DEFAULT_ALTTEXTCOLOR]];
-	[helper setButtonTitleFont:_btn6 forState:UIControlStateNormal localSizeName:[RWLOOK BUTTONGALLERY_BUTTONTEXTSIZE] globalSizeName:[RWLOOK DEFAULT_ITEMTITLESIZE] localStyleName:[RWLOOK BUTTONGALLERY_BUTTONTEXTSTYLE] globalStyleName:[RWLOOK DEFAULT_ITEMTITLESTYLE]];
-	[helper setButtonTitleShadowColor:_btn6 forState:UIControlStateNormal localName:[RWLOOK BUTTONGALLERY_BUTTONTEXTSHADOWCOLOR] globalName:[RWLOOK DEFAULT_ALTTEXTSHADOWCOLOR]];
-	[helper setButtonTitleShadowOffset:_btn6 forState:UIControlStateNormal localName:[RWLOOK BUTTONGALLERY_BUTTONTEXTSHADOWOFFSET] globalName:[RWLOOK DEFAULT_ITEMTITLESHADOWOFFSET]];
+    [helper.button setTitleColor:_btn6 localName:[RWLOOK BUTTONGALLERY_BUTTONTEXTCOLOR] globalName:[RWLOOK DEFAULT_ALTTEXTCOLOR]];
+    [helper.button setTitleFont:_btn6 localSizeName:[RWLOOK BUTTONGALLERY_BUTTONTEXTSIZE] globalSizeName:[RWLOOK DEFAULT_ITEMTITLESIZE] localStyleName:[RWLOOK BUTTONGALLERY_BUTTONTEXTSTYLE] globalStyleName:[RWLOOK DEFAULT_ITEMTITLESTYLE]];
+    [helper.button setTitleShadowColor:_btn6 localName:[RWLOOK BUTTONGALLERY_BUTTONTEXTSHADOWCOLOR] globalName:[RWLOOK DEFAULT_ALTTEXTSHADOWCOLOR]];
+    [helper.button setTitleShadowOffset:_btn6 localName:[RWLOOK BUTTONGALLERY_BUTTONTEXTSHADOWOFFSET] globalName:[RWLOOK DEFAULT_ITEMTITLESHADOWOFFSET]];
 	
-	bool hasUniqueImage7 = [helper setButtonBackgroundImageFromLocalSource:_btn7 localName:[RWLOOK BUTTONGALLERY_BUTTON7BACKGROUNDIMAGE] forState:UIControlStateNormal];
+	bool hasUniqueImage7 = [helper.button setBackgroundImageFromLocalSource:_btn7 localName:[RWLOOK BUTTONGALLERY_BUTTON7BACKGROUNDIMAGE]];
 	if (!hasUniqueImage7) {
-		[helper setButtonBackgroundImageOrColor:_btn7 localImageName:[RWLOOK BUTTONGALLERY_BUTTONBACKGROUNDIMAGE] localColorName:[RWLOOK BUTTONGALLERY_BUTTONBACKGROUNDCOLOR] globalColorName:[RWLOOK DEFAULT_ALTCOLOR] forState:UIControlStateNormal];
+        [helper.button setBackgroundImageOrColor:_btn7 localImageName:[RWLOOK BUTTONGALLERY_BUTTONBACKGROUNDIMAGE] localColorName:[RWLOOK BUTTONGALLERY_BUTTONBACKGROUNDCOLOR] globalColorName:[RWLOOK DEFAULT_ALTCOLOR]];
 	}
 	if ([_localLook hasChild:[RWLOOK BUTTONGALLERY_BUTTON7ICON]]) {
-		[helper setButtonBackgroundImageFromLocalSource:_btn7 localName:[RWLOOK BUTTONGALLERY_BUTTON7ICON] forState:UIControlStateNormal];
+        [helper.button setBackgroundImageFromLocalSource:_btn7 localName:[RWLOOK BUTTONGALLERY_BUTTON7ICON]];
 	}
 	if([_localLook hasChild:[RWLOOK BUTTONGALLERY_BUTTONICON]]){
-		[helper setButtonBackgroundImageFromLocalSource:_btn7 localName:[RWLOOK BUTTONGALLERY_BUTTONICON] forState:UIControlStateNormal];
+        [helper.button setBackgroundImageFromLocalSource:_btn7 localName:[RWLOOK BUTTONGALLERY_BUTTONICON]];
 	}
-	[helper setButtonTitleColor:_btn7 forState:UIControlStateNormal localName:[RWLOOK BUTTONGALLERY_BUTTONTEXTCOLOR] globalName:[RWLOOK DEFAULT_ALTTEXTCOLOR]];
-	[helper setButtonTitleFont:_btn7 forState:UIControlStateNormal localSizeName:[RWLOOK BUTTONGALLERY_BUTTONTEXTSIZE] globalSizeName:[RWLOOK DEFAULT_ITEMTITLESIZE] localStyleName:[RWLOOK BUTTONGALLERY_BUTTONTEXTSTYLE] globalStyleName:[RWLOOK DEFAULT_ITEMTITLESTYLE]];
-	[helper setButtonTitleShadowColor:_btn7 forState:UIControlStateNormal localName:[RWLOOK BUTTONGALLERY_BUTTONTEXTSHADOWCOLOR] globalName:[RWLOOK DEFAULT_ALTTEXTSHADOWCOLOR]];
-	[helper setButtonTitleShadowOffset:_btn7 forState:UIControlStateNormal localName:[RWLOOK BUTTONGALLERY_BUTTONTEXTSHADOWOFFSET] globalName:[RWLOOK DEFAULT_ITEMTITLESHADOWOFFSET]];
+    [helper.button setTitleColor:_btn7 localName:[RWLOOK BUTTONGALLERY_BUTTONTEXTCOLOR] globalName:[RWLOOK DEFAULT_ALTTEXTCOLOR]];
+    [helper.button setTitleFont:_btn7 localSizeName:[RWLOOK BUTTONGALLERY_BUTTONTEXTSIZE] globalSizeName:[RWLOOK DEFAULT_ITEMTITLESIZE] localStyleName:[RWLOOK BUTTONGALLERY_BUTTONTEXTSTYLE] globalStyleName:[RWLOOK DEFAULT_ITEMTITLESTYLE]];
+    [helper.button setTitleShadowColor:_btn7 localName:[RWLOOK BUTTONGALLERY_BUTTONTEXTSHADOWCOLOR] globalName:[RWLOOK DEFAULT_ALTTEXTSHADOWCOLOR]];
+    [helper.button setTitleShadowOffset:_btn7 localName:[RWLOOK BUTTONGALLERY_BUTTONTEXTSHADOWOFFSET] globalName:[RWLOOK DEFAULT_ITEMTITLESHADOWOFFSET]];
 	
-	bool hasUniqueImage8 = [helper setButtonBackgroundImageFromLocalSource:_btn8 localName:[RWLOOK BUTTONGALLERY_BUTTON8BACKGROUNDIMAGE] forState:UIControlStateNormal];
+	bool hasUniqueImage8 = [helper.button setBackgroundImageFromLocalSource:_btn8 localName:[RWLOOK BUTTONGALLERY_BUTTON8BACKGROUNDIMAGE]];
 	if (!hasUniqueImage8) {
-		[helper setButtonBackgroundImageOrColor:_btn8 localImageName:[RWLOOK BUTTONGALLERY_BUTTONBACKGROUNDIMAGE] localColorName:[RWLOOK BUTTONGALLERY_BUTTONBACKGROUNDCOLOR] globalColorName:[RWLOOK DEFAULT_ALTCOLOR] forState:UIControlStateNormal];
+        [helper.button setBackgroundImageOrColor:_btn8 localImageName:[RWLOOK BUTTONGALLERY_BUTTONBACKGROUNDIMAGE] localColorName:[RWLOOK BUTTONGALLERY_BUTTONBACKGROUNDCOLOR] globalColorName:[RWLOOK DEFAULT_ALTCOLOR]];
 	}
 	if ([_localLook hasChild:[RWLOOK BUTTONGALLERY_BUTTON8ICON]]) {
-		[helper setButtonBackgroundImageFromLocalSource:_btn8 localName:[RWLOOK BUTTONGALLERY_BUTTON8ICON] forState:UIControlStateNormal];
+        [helper.button setBackgroundImageFromLocalSource:_btn8 localName:[RWLOOK BUTTONGALLERY_BUTTON8ICON]];
 	}
 	if([_localLook hasChild:[RWLOOK BUTTONGALLERY_BUTTONICON]]){
-		[helper setButtonBackgroundImageFromLocalSource:_btn8 localName:[RWLOOK BUTTONGALLERY_BUTTONICON] forState:UIControlStateNormal];
+        [helper.button setBackgroundImageFromLocalSource:_btn8 localName:[RWLOOK BUTTONGALLERY_BUTTONICON]];
 	}
-	[helper setButtonTitleColor:_btn8 forState:UIControlStateNormal localName:[RWLOOK BUTTONGALLERY_BUTTONTEXTCOLOR] globalName:[RWLOOK DEFAULT_ALTTEXTCOLOR]];
-	[helper setButtonTitleFont:_btn8 forState:UIControlStateNormal localSizeName:[RWLOOK BUTTONGALLERY_BUTTONTEXTSIZE] globalSizeName:[RWLOOK DEFAULT_ITEMTITLESIZE] localStyleName:[RWLOOK BUTTONGALLERY_BUTTONTEXTSTYLE] globalStyleName:[RWLOOK DEFAULT_ITEMTITLESTYLE]];
-	[helper setButtonTitleShadowColor:_btn8 forState:UIControlStateNormal localName:[RWLOOK BUTTONGALLERY_BUTTONTEXTSHADOWCOLOR] globalName:[RWLOOK DEFAULT_ALTTEXTSHADOWCOLOR]];
-	[helper setButtonTitleShadowOffset:_btn8 forState:UIControlStateNormal localName:[RWLOOK BUTTONGALLERY_BUTTONTEXTSHADOWOFFSET] globalName:[RWLOOK DEFAULT_ITEMTITLESHADOWOFFSET]];
+    [helper.button setTitleColor:_btn8 localName:[RWLOOK BUTTONGALLERY_BUTTONTEXTCOLOR] globalName:[RWLOOK DEFAULT_ALTTEXTCOLOR]];
+    [helper.button setTitleFont:_btn8 localSizeName:[RWLOOK BUTTONGALLERY_BUTTONTEXTSIZE] globalSizeName:[RWLOOK DEFAULT_ITEMTITLESIZE] localStyleName:[RWLOOK BUTTONGALLERY_BUTTONTEXTSTYLE] globalStyleName:[RWLOOK DEFAULT_ITEMTITLESTYLE]];
+    [helper.button setTitleShadowColor:_btn8 localName:[RWLOOK BUTTONGALLERY_BUTTONTEXTSHADOWCOLOR] globalName:[RWLOOK DEFAULT_ALTTEXTSHADOWCOLOR]];
+    [helper.button setTitleShadowOffset:_btn8 localName:[RWLOOK BUTTONGALLERY_BUTTONTEXTSHADOWOFFSET] globalName:[RWLOOK DEFAULT_ITEMTITLESHADOWOFFSET]];
 }
 
 - (void)setText{
