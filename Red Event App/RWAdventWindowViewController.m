@@ -81,7 +81,7 @@
 	if(![_page hasChild:[RWPAGE RETURNBUTTON]] ||
 	   ([_page hasChild:[RWPAGE RETURNBUTTON]] && ![_page getBoolFromNode:[RWPAGE RETURNBUTTON]])){
 		[_btnBack RWsetHeightAsConstraint:0.0];
-	} else if([[_xml getAppearanceForPage:_name] hasChild:[RWLOOK ADVENTWINDOW_BACKBUTTONBACKGROUNDIMAGE]]){
+	} else if([[_xml getAppearanceForPage:_name] hasChild:[RWLOOK BACKBUTTONBACKGROUNDIMAGE]]){
 		UIImage *btnImage = _btnBack.currentBackgroundImage;
 		float aspect = btnImage.size.height/btnImage.size.width;
 		[_btnBack addConstraint:[NSLayoutConstraint constraintWithItem:_btnBack attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:_btnBack attribute:NSLayoutAttributeWidth multiplier:aspect constant:0]];
@@ -91,24 +91,13 @@
 -(void)setAppearance{
 	RWAppearanceHelper *helper = [[RWAppearanceHelper alloc] initWithLocalLook:_localLook globalLook:_globalLook];
 	
-	[helper setBackgroundTileImageOrColor:self.view localImageName:[RWLOOK ADVENTWINDOW_BACKGROUNDIMAGE] localColorName:[RWLOOK ADVENTWINDOW_BACKGROUNDCOLOR] globalName:[RWLOOK DEFAULT_BACKCOLOR]];
+	[helper setBackgroundTileImageOrColor:self.view localImageName:[RWLOOK BACKGROUNDIMAGE] localColorName:[RWLOOK BACKGROUNDCOLOR] globalName:[RWLOOK DEFAULT_BACKCOLOR]];
 
-    [helper.label setColor:_lblTitle localName:[RWLOOK ADVENTWINDOW_TITLECOLOR] globalName:[RWLOOK DEFAULT_BACKTEXTCOLOR]];
-    [helper.label setFont:_lblTitle localSizeName:[RWLOOK ADVENTWINDOW_TITLESIZE] globalSizeName:[RWLOOK DEFAULT_TITLESIZE] localStyleName:[RWLOOK ADVENTWINDOW_TITLESTYLE] globalStyleName:[RWLOOK DEFAULT_TITLESTYLE]];
-    [helper.label setShadowColor:_lblTitle localName:[RWLOOK ADVENTWINDOW_TITLESHADOWCOLOR] globalName:[RWLOOK DEFAULT_BACKTEXTSHADOWCOLOR]];
-    [helper.label setShadowOffset:_lblTitle localName:[RWLOOK ADVENTWINDOW_TITLESHADOWOFFSET] globalName:[RWLOOK DEFAULT_TITLESHADOWOFFSET]];
+    [helper.label setTitleStyle:_lblTitle];
 
-    [helper.label setColor:_lblBody localName:[RWLOOK ADVENTWINDOW_TEXTCOLOR] globalName:[RWLOOK DEFAULT_BACKTEXTCOLOR]];
-    [helper.label setFont:_lblBody localSizeName:[RWLOOK ADVENTWINDOW_TEXTSIZE] globalSizeName:[RWLOOK DEFAULT_TEXTSIZE] localStyleName:[RWLOOK ADVENTWINDOW_TEXTSTYLE] globalStyleName:[RWLOOK DEFAULT_TEXTSTYLE]];
-    [helper.label setShadowColor:_lblBody localName:[RWLOOK ADVENTWINDOW_TEXTSHADOWCOLOR] globalName:[RWLOOK DEFAULT_BACKTEXTSHADOWCOLOR]];
-    [helper.label setShadowOffset:_lblBody localName:[RWLOOK ADVENTWINDOW_TEXTSHADOWOFFSET] globalName:[RWLOOK DEFAULT_TEXTSHADOWOFFSET]];
+    [helper.label setBackTextStyle:_lblBody];
 
-    [helper.button setBackgroundImageOrColor:_btnBack localImageName:[RWLOOK ADVENTWINDOW_BACKBUTTONBACKGROUNDIMAGE] localColorName:[RWLOOK ADVENTWINDOW_BACKBUTTONBACKGROUNDCOLOR] globalColorName:[RWLOOK DEFAULT_ALTCOLOR]];
-    [helper.button setImageFromLocalSource:_btnBack localName:[RWLOOK ADVENTWINDOW_BACKBUTTONICON]];
-    [helper.button setTitleColor:_btnBack localName:[RWLOOK ADVENTWINDOW_BACKBUTTONTEXTCOLOR] globalName:[RWLOOK DEFAULT_ALTTEXTCOLOR]];
-    [helper.button setTitleFont:_btnBack localSizeName:[RWLOOK ADVENTWINDOW_BACKBUTTONTEXTSIZE] globalSizeName:[RWLOOK DEFAULT_ITEMTITLESIZE] localStyleName:[RWLOOK ADVENTWINDOW_BACKBUTTONTEXTSTYLE] globalStyleName:[RWLOOK DEFAULT_ITEMTITLESTYLE]];
-    [helper.button setTitleShadowColor:_btnBack localName:[RWLOOK ADVENTWINDOW_BACKBUTTONTEXTSHADOWCOLOR] globalName:[RWLOOK DEFAULT_ALTTEXTSHADOWCOLOR]];
-    [helper.button setTitleShadowOffset:_btnBack localName:[RWLOOK ADVENTWINDOW_BACKBUTTONTEXTSHADOWOFFSET] globalName:[RWLOOK DEFAULT_ITEMTITLESHADOWOFFSET]];
+    [helper.button setBackButtonStyle:_btnBack];
 	
 	[helper setScrollBounces:_scrollview localName:[RWLOOK SCROLLBOUNCES] globalName:[RWLOOK SCROLLBOUNCES]];
 }
@@ -116,7 +105,7 @@
 -(void)setText{
 	RWTextHelper *helper = [[RWTextHelper alloc] initWithPageName:_name xmlStore:_xml];
 	
-	BOOL backButtonHasBackgroundImage = [_xml.appearance hasChild:_name] && [[_xml getAppearanceForPage:_name] hasChild:[RWLOOK ADVENTWINDOW_BACKBUTTONBACKGROUNDIMAGE]];
+	BOOL backButtonHasBackgroundImage = [_xml.appearance hasChild:_name] && [[_xml getAppearanceForPage:_name] hasChild:[RWLOOK BACKBUTTONBACKGROUNDIMAGE]];
 	
 	if(!backButtonHasBackgroundImage){
 		[helper setButtonText:_btnBack textName:[RWTEXT ADVENTWINDOW_BACKBUTTON] defaultText:[RWDEFAULTTEXT ADVENTWINDOW_BACKBUTTON]];

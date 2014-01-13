@@ -12,6 +12,7 @@
 @interface RWStaticArticleController : RWBaseViewController <UIWebViewDelegate>
 
 @property(weak, nonatomic) IBOutlet UIWebView *webBody;
+@property(weak, nonatomic) IBOutlet UIButton *btnBack;
 
 - (id)initWithPage:(RWXmlNode *)page;
 

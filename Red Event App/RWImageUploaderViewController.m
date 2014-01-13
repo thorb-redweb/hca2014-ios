@@ -37,13 +37,8 @@
 
     [helper setBackgroundTileImageOrColor:self.view localImageName:[RWLOOK BACKGROUNDIMAGE] localColorName:[RWLOOK BACKGROUNDCOLOR] globalName:[RWLOOK DEFAULT_BACKCOLOR]];
 
-    NSArray *buttons = [[NSArray alloc] initWithObjects: _btnBrowser, _btnUploading, nil];
-
-    [helper.button setBackgroundImageOrColorsForList:buttons localImageName:[RWLOOK BUTTONBACKGROUNDIMAGE] localColorName:[RWLOOK BUTTONBACKGROUNDCOLOR] globalColorName:[RWLOOK DEFAULT_ALTCOLOR]];
-    [helper.button setTitleColorsForList:buttons localName:[RWLOOK BUTTONTEXTCOLOR] globalName:[RWLOOK DEFAULT_ALTTEXTCOLOR]];
-    [helper.button setTitleFontsForList:buttons localSizeName:[RWLOOK BUTTONTEXTSIZE] globalSizeName:[RWLOOK DEFAULT_ITEMTITLESIZE] localStyleName:[RWLOOK BUTTONTEXTSTYLE] globalStyleName:[RWLOOK DEFAULT_ITEMTITLESTYLE]];
-    [helper.button setTitleShadowColorsForList:buttons localName:[RWLOOK BUTTONTEXTSHADOWCOLOR] globalName:[RWLOOK DEFAULT_ALTTEXTSHADOWCOLOR]];
-    [helper.button setTitleShadowOffsetsForList:buttons localName:[RWLOOK BUTTONTEXTSHADOWOFFSET] globalName:[RWLOOK DEFAULT_ITEMTITLESHADOWOFFSET]];
+	[helper.button setButtonStyle:_btnBrowser];
+	[helper.button setButtonStyle:_btnUploading];
 }
 
 -(void)setText{

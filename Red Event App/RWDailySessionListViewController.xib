@@ -102,14 +102,14 @@
                 <constraint firstAttribute="trailing" secondItem="10" secondAttribute="trailing" id="73"/>
                 <constraint firstItem="106" firstAttribute="top" secondItem="19" secondAttribute="bottom" constant="8" symbolic="YES" id="113"/>
                 <constraint firstItem="106" firstAttribute="top" secondItem="28" secondAttribute="bottom" constant="8" symbolic="YES" id="114"/>
-                <constraint firstItem="106" firstAttribute="leading" secondItem="28" secondAttribute="leading" id="119"/>
-                <constraint firstItem="28" firstAttribute="trailing" secondItem="106" secondAttribute="trailing" id="121"/>
                 <constraint firstItem="10" firstAttribute="top" secondItem="106" secondAttribute="bottom" constant="8" symbolic="YES" id="125"/>
                 <constraint firstItem="97a-3H-qJh" firstAttribute="top" secondItem="28" secondAttribute="bottom" id="4ap-gu-4RB"/>
                 <constraint firstAttribute="centerX" secondItem="28" secondAttribute="centerX" id="4gM-Il-5oT"/>
                 <constraint firstItem="28" firstAttribute="trailing" secondItem="97a-3H-qJh" secondAttribute="trailing" id="BFU-Cs-WbS"/>
                 <constraint firstAttribute="bottom" secondItem="10" secondAttribute="bottom" id="Gss-HM-vTh"/>
+                <constraint firstItem="106" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="1" secondAttribute="leading" constant="20" symbolic="YES" id="HYY-9y-Za6"/>
                 <constraint firstItem="19" firstAttribute="width" secondItem="22" secondAttribute="width" id="ee9-68-QwH"/>
+                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="106" secondAttribute="trailing" constant="20" symbolic="YES" id="mR0-9U-Iqd"/>
                 <constraint firstItem="28" firstAttribute="leading" secondItem="97a-3H-qJh" secondAttribute="leading" id="rXU-5J-par"/>
                 <constraint firstAttribute="centerX" secondItem="106" secondAttribute="centerX" id="sJ9-uV-7Ej"/>
             </constraints>

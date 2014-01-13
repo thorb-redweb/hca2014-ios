@@ -136,10 +136,6 @@
 	
     [helper setBackgroundColor:cell localName:[RWLOOK BACKGROUNDCOLOR] globalName:[RWLOOK INVISIBLE]];
 
-    [helper.label setColor:cell.lblFilePath localName:[RWLOOK ITEMTITLECOLOR] globalName:[RWLOOK DEFAULT_BACKTEXTCOLOR]];
-    [helper.label setFont:cell.lblFilePath localSizeName:[RWLOOK ITEMTITLESIZE] globalSizeName:[RWLOOK DEFAULT_ITEMTITLESIZE]
-           localStyleName:[RWLOOK ITEMTITLESTYLE] globalStyleName:[RWLOOK DEFAULT_ITEMTITLESTYLE]];
-    [helper.label setShadowColor:cell.lblFilePath localName:[RWLOOK ITEMTITLESHADOWCOLOR] globalName:[RWLOOK DEFAULT_BACKTEXTSHADOWCOLOR]];
-    [helper.label setShadowOffset:cell.lblFilePath localName:[RWLOOK ITEMTITLESHADOWOFFSET] globalName:[RWLOOK DEFAULT_ITEMTITLESHADOWOFFSET]];
+    [helper.label setBackItemTitleStyle:cell.lblFilePath];
 }
 @end

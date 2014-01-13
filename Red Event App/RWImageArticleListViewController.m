@@ -52,7 +52,7 @@
 - (void)setAppearance{
     RWAppearanceHelper *helper = [[RWAppearanceHelper alloc] initWithLocalLook:_localLook globalLook:_globalLook];
 
-    [helper setBackgroundColor:self.view localName:[RWLOOK IMAGEARTICLELIST_BACKGROUNDCOLOR] globalName:[RWLOOK DEFAULT_BACKCOLOR]];
+    [helper setBackgroundTileImageOrColor:self.view localImageName:[RWLOOK BACKGROUNDIMAGE] localColorName:[RWLOOK BACKGROUNDCOLOR] globalName:[RWLOOK DEFAULT_BACKCOLOR]];
 	[_lstTableView setBackgroundColor:[UIColor colorWithHexString:@"00000000"]];
 	
 	[helper setScrollBounces:_lstTableView localName:[RWLOOK SCROLLBOUNCES] globalName:[RWLOOK SCROLLBOUNCES]];
@@ -117,19 +117,11 @@
 - (void)setCellAppearance:(RWImageArticleListCell *)cell{
     RWAppearanceHelper *helper = [[RWAppearanceHelper alloc] initWithLocalLook:_localLook globalLook:_globalLook];
 
-    [helper setBackgroundColor:cell localName:[RWLOOK IMAGEARTICLELIST_BACKGROUNDCOLOR] globalName:[RWLOOK INVISIBLE]];
+    [helper setBackgroundColor:cell localName:[RWLOOK BACKGROUNDCOLOR] globalName:[RWLOOK INVISIBLE]];
 
-    [helper.label setColor:cell.lblTitle localName:[RWLOOK IMAGEARTICLELIST_ITEMTITLECOLOR] globalName:[RWLOOK DEFAULT_BACKTEXTCOLOR]];
-    [helper.label setFont:cell.lblTitle localSizeName:[RWLOOK IMAGEARTICLELIST_ITEMTITLESIZE] globalSizeName:[RWLOOK DEFAULT_ITEMTITLESIZE]
-           localStyleName:[RWLOOK IMAGEARTICLELIST_ITEMTITLESTYLE] globalStyleName:[RWLOOK DEFAULT_ITEMTITLESTYLE]];
-    [helper.label setShadowColor:cell.lblTitle localName:[RWLOOK IMAGEARTICLELIST_ITEMTITLESHADOWCOLOR] globalName:[RWLOOK DEFAULT_BACKTEXTSHADOWCOLOR]];
-    [helper.label setShadowOffset:cell.lblTitle localName:[RWLOOK IMAGEARTICLELIST_ITEMTITLESHADOWOFFSET] globalName:[RWLOOK DEFAULT_ITEMTITLESHADOWOFFSET]];
+	[helper.label setBackItemTitleStyle:cell.lblTitle];
 
-    [helper.label setColor:cell.lblIntro localName:[RWLOOK IMAGEARTICLELIST_TEXTCOLOR] globalName:[RWLOOK DEFAULT_BACKTEXTCOLOR]];
-    [helper.label setFont:cell.lblIntro localSizeName:[RWLOOK IMAGEARTICLELIST_TEXTSIZE] globalSizeName:[RWLOOK DEFAULT_TEXTSIZE]
-           localStyleName:[RWLOOK IMAGEARTICLELIST_TEXTSTYLE] globalStyleName:[RWLOOK DEFAULT_TEXTSTYLE]];
-    [helper.label setShadowColor:cell.lblIntro localName:[RWLOOK IMAGEARTICLELIST_TEXTSHADOWCOLOR] globalName:[RWLOOK DEFAULT_BACKTEXTSHADOWCOLOR]];
-    [helper.label setShadowOffset:cell.lblIntro localName:[RWLOOK IMAGEARTICLELIST_TEXTSHADOWOFFSET] globalName:[RWLOOK DEFAULT_TEXTSHADOWOFFSET]];
+	[helper.label setBackTextStyle:cell.lblIntro];
 }
 
 @end

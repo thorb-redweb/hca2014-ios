@@ -17,20 +17,29 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="22">
-                    <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="450"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <connections>
                         <outlet property="delegate" destination="-1" id="Op0-tD-m1I"/>
                     </connections>
                 </webView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qQ2-QV-wxg">
+                    <rect key="frame" x="137" y="450" width="46" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="Button">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="22" firstAttribute="trailing" secondItem="1" secondAttribute="trailing" id="33"/>
                 <constraint firstItem="22" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="39"/>
                 <constraint firstItem="22" firstAttribute="top" secondItem="1" secondAttribute="top" id="81"/>
-                <constraint firstAttribute="bottom" secondItem="22" secondAttribute="bottom" id="pHg-bZ-aIZ"/>
+                <constraint firstAttribute="bottom" secondItem="qQ2-QV-wxg" secondAttribute="bottom" id="20V-rG-MZw"/>
+                <constraint firstAttribute="centerX" secondItem="qQ2-QV-wxg" secondAttribute="centerX" id="fSA-Vo-PFu"/>
+                <constraint firstItem="qQ2-QV-wxg" firstAttribute="top" secondItem="22" secondAttribute="bottom" id="k49-yj-f5b"/>
             </constraints>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
         </view>

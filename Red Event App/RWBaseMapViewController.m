@@ -56,20 +56,15 @@
 - (void)setAppearance{
 	RWAppearanceHelper *helper = [[RWAppearanceHelper alloc] initWithLocalLook:_localLook globalLook:_globalLook];
 	
-	[helper setBackgroundTileImageOrColor:self.view localImageName:[RWLOOK MAPVIEW_BACKGROUNDIMAGE] localColorName:[RWLOOK MAPVIEW_BACKGROUNDCOLOR] globalName:[RWLOOK DEFAULT_BACKCOLOR]];
+	[helper setBackgroundTileImageOrColor:self.view localImageName:[RWLOOK BACKGROUNDIMAGE] localColorName:[RWLOOK BACKGROUNDCOLOR] globalName:[RWLOOK DEFAULT_BACKCOLOR]];
 
-    [helper.button setBackgroundImageOrColor:_btnBack localImageName:[RWLOOK MAPVIEW_BACKBUTTONBACKGROUNDIMAGE] localColorName:[RWLOOK MAPVIEW_BACKBUTTONBACKGROUNDCOLOR] globalColorName:[RWLOOK DEFAULT_ALTCOLOR]];
-    [helper.button setImageFromLocalSource:_btnBack localName:[RWLOOK MAPVIEW_BACKBUTTONICON]];
-    [helper.button setTitleColor:_btnBack localName:[RWLOOK MAPVIEW_BACKBUTTONTEXTCOLOR] globalName:[RWLOOK DEFAULT_ALTTEXTCOLOR]];
-    [helper.button setTitleFont:_btnBack localSizeName:[RWLOOK MAPVIEW_BACKBUTTONTEXTSIZE] globalSizeName:[RWLOOK DEFAULT_ITEMTITLESIZE] localStyleName:[RWLOOK MAPVIEW_BACKBUTTONTEXTSTYLE] globalStyleName:[RWLOOK DEFAULT_ITEMTITLESTYLE]];
-    [helper.button setTitleShadowColor:_btnBack localName:[RWLOOK MAPVIEW_BACKBUTTONTEXTSHADOWCOLOR] globalName:[RWLOOK DEFAULT_ALTTEXTSHADOWCOLOR]];
-    [helper.button setTitleShadowOffset:_btnBack localName:[RWLOOK MAPVIEW_BACKBUTTONTEXTSHADOWOFFSET] globalName:[RWLOOK DEFAULT_ITEMTITLESHADOWOFFSET]];
+	[helper.button setBackButtonStyle:_btnBack];
 }
 
 - (void)setText{
 	RWTextHelper *helper = [[RWTextHelper alloc] initWithPageName:_name xmlStore:_xml];
 	
-	BOOL backButtonHasBackgroundImage = [_xml.appearance hasChild:_name] && [[_xml getAppearanceForPage:_name] hasChild:[RWLOOK MAPVIEW_BACKBUTTONBACKGROUNDIMAGE]];
+	BOOL backButtonHasBackgroundImage = [_xml.appearance hasChild:_name] && [[_xml getAppearanceForPage:_name] hasChild:[RWLOOK BACKBUTTONBACKGROUNDIMAGE]];
 	
 	if(!backButtonHasBackgroundImage){
 		[helper setButtonText:_btnBack textName:[RWTEXT MAPVIEW_BACKBUTTON] defaultText:[RWDEFAULTTEXT MAPVIEW_BACKBUTTON]];

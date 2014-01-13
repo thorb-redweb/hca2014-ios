@@ -109,17 +109,9 @@
 
     [helper setBackgroundColor:cell localName:[RWLOOK CELLBACKGROUNDCOLOR] globalName:[RWLOOK INVISIBLE]];
 
-    [helper.label setColor:cell.lblTitle localName:[RWLOOK ITEMTITLECOLOR] globalName:[RWLOOK DEFAULT_BACKTEXTCOLOR]];
-    [helper.label setFont:cell.lblTitle localSizeName:[RWLOOK ITEMTITLESIZE] globalSizeName:[RWLOOK DEFAULT_ITEMTITLESIZE]
-           localStyleName:[RWLOOK ITEMTITLESTYLE] globalStyleName:[RWLOOK DEFAULT_ITEMTITLESTYLE]];
-    [helper.label setShadowColor:cell.lblTitle localName:[RWLOOK ITEMTITLESHADOWCOLOR] globalName:[RWLOOK DEFAULT_BACKTEXTSHADOWCOLOR]];
-    [helper.label setShadowOffset:cell.lblTitle localName:[RWLOOK ITEMTITLESHADOWOFFSET] globalName:[RWLOOK DEFAULT_ITEMTITLESHADOWOFFSET]];
-
-    [helper.label setColor:cell.lblBody localName:[RWLOOK TEXTCOLOR] globalName:[RWLOOK DEFAULT_BACKTEXTCOLOR]];
-    [helper.label setFont:cell.lblBody localSizeName:[RWLOOK TEXTSIZE] globalSizeName:[RWLOOK DEFAULT_TEXTSIZE]
-           localStyleName:[RWLOOK TEXTSTYLE] globalStyleName:[RWLOOK DEFAULT_TEXTSTYLE]];
-    [helper.label setShadowColor:cell.lblBody localName:[RWLOOK TEXTSHADOWCOLOR] globalName:[RWLOOK DEFAULT_BACKTEXTSHADOWCOLOR]];
-    [helper.label setShadowOffset:cell.lblBody localName:[RWLOOK TEXTSHADOWOFFSET] globalName:[RWLOOK DEFAULT_TEXTSHADOWOFFSET]];
+	[helper.label setBackItemTitleStyle:cell.lblTitle];
+	
+	[helper.label setBackTextStyle:cell.lblBody];
 }
 
 @end

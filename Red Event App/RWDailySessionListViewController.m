@@ -71,17 +71,14 @@
     [helper.button setBackgroundImageFromLocalSource:_btnNext localName:[RWLOOK DAILYSESSIONLIST_RIGHTARROW]];
 
     [helper.label setColor:_lblDate localName:[RWLOOK DAILYSESSIONLIST_DATETEXTCOLOR] globalName:[RWLOOK DEFAULT_BACKTEXTCOLOR]];
-    [helper.label setFont:_lblDate localSizeName:[RWLOOK DAILYSESSIONLIST_DATETEXTSIZE] globalSizeName:[RWLOOK DEFAULT_TITLESIZE]
+    [helper.label setFontForLast:[RWLOOK DAILYSESSIONLIST_DATETEXTSIZE] globalSizeName:[RWLOOK DEFAULT_TITLESIZE]
            localStyleName:[RWLOOK DAILYSESSIONLIST_DATETEXTSTYLE] globalStyleName:[RWLOOK DEFAULT_TITLESTYLE]];
-    [helper.label setShadowColor:_lblDate localName:[RWLOOK DAILYSESSIONLIST_DATETEXTSHADOWCOLOR] globalName:[RWLOOK DEFAULT_BACKTEXTSHADOWCOLOR]];
-    [helper.label setShadowOffset:_lblDate localName:[RWLOOK DAILYSESSIONLIST_DATETEXTSHADOWOFFSET] globalName:[RWLOOK DEFAULT_TITLESHADOWOFFSET]];
+    [helper.label setShadowColorForLast:[RWLOOK DAILYSESSIONLIST_DATETEXTSHADOWCOLOR] globalName:[RWLOOK DEFAULT_BACKTEXTSHADOWCOLOR]];
+    [helper.label setShadowOffsetForLast:[RWLOOK DAILYSESSIONLIST_DATETEXTSHADOWOFFSET] globalName:[RWLOOK DEFAULT_TITLESHADOWOFFSET]];
 
     [helper setBackgroundColor:_viewDateUnderline localName:[RWLOOK DAILYSESSIONLIST_DATEUNDERLINECOLOR] globalName:[RWLOOK DEFAULT_ALTCOLOR]];
 
-    [helper.button setTitleColor:_btnVenuePicker localName:[RWLOOK DAILYSESSIONLIST_TEXTCOLOR] globalName:[RWLOOK DEFAULT_BACKTEXTCOLOR]];
-    [helper.button setTitleFont:_btnVenuePicker localSizeName:[RWLOOK DAILYSESSIONLIST_TEXTSIZE] globalSizeName:[RWLOOK DEFAULT_TEXTSIZE] localStyleName:[RWLOOK DAILYSESSIONLIST_TEXTSTYLE] globalStyleName:[RWLOOK DEFAULT_TEXTSTYLE]];
-    [helper.button setTitleShadowColor:_btnVenuePicker localName:[RWLOOK DAILYSESSIONLIST_TEXTSHADOWCOLOR] globalName:[RWLOOK DEFAULT_BACKTEXTSHADOWCOLOR]];
-    [helper.button setTitleShadowOffset:_btnVenuePicker localName:[RWLOOK DAILYSESSIONLIST_TEXTSHADOWOFFSET] globalName:[RWLOOK DEFAULT_TEXTSHADOWOFFSET]];
+    [helper.button setButtonStyle:_btnVenuePicker];
 	
 	[helper setScrollBounces:_lstTableView localName:[RWLOOK SCROLLBOUNCES] globalName:[RWLOOK SCROLLBOUNCES]];
 }
@@ -216,17 +213,8 @@
 
     [helper setBackgroundColor:cell localName:[RWLOOK DAILYSESSIONLIST_BACKGROUNDCOLOR] globalName:[RWLOOK DEFAULT_BACKCOLOR]];
 
-    [helper.label setColor:cell.lblTimeAndPlace localName:[RWLOOK DAILYSESSIONLIST_TEXTCOLOR] globalName:[RWLOOK DEFAULT_BACKTEXTCOLOR]];
-    [helper.label setFont:cell.lblTimeAndPlace localSizeName:[RWLOOK DAILYSESSIONLIST_TEXTSIZE] globalSizeName:[RWLOOK DEFAULT_TEXTSIZE]
-           localStyleName:[RWLOOK DAILYSESSIONLIST_TEXTSTYLE] globalStyleName:[RWLOOK DEFAULT_TEXTSTYLE]];
-    [helper.label setShadowColor:cell.lblTimeAndPlace localName:[RWLOOK DAILYSESSIONLIST_TEXTSHADOWCOLOR] globalName:[RWLOOK DEFAULT_BACKTEXTSHADOWCOLOR]];
-    [helper.label setShadowOffset:cell.lblTimeAndPlace localName:[RWLOOK DAILYSESSIONLIST_TEXTSHADOWOFFSET] globalName:[RWLOOK DEFAULT_TEXTSHADOWOFFSET]];
-
-    [helper.label setColor:cell.lblEvent localName:[RWLOOK DAILYSESSIONLIST_TEXTCOLOR] globalName:[RWLOOK DEFAULT_BACKTEXTCOLOR]];
-    [helper.label setFont:cell.lblEvent localSizeName:[RWLOOK DAILYSESSIONLIST_TEXTSIZE] globalSizeName:[RWLOOK DEFAULT_TEXTSIZE]
-           localStyleName:[RWLOOK DAILYSESSIONLIST_TEXTSTYLE] globalStyleName:[RWLOOK DEFAULT_TEXTSTYLE]];
-    [helper.label setShadowColor:cell.lblEvent localName:[RWLOOK DAILYSESSIONLIST_TEXTSHADOWCOLOR] globalName:[RWLOOK DEFAULT_BACKTEXTSHADOWCOLOR]];
-    [helper.label setShadowOffset:cell.lblEvent localName:[RWLOOK DAILYSESSIONLIST_TEXTSHADOWOFFSET] globalName:[RWLOOK DEFAULT_TEXTSHADOWOFFSET]];
+    [helper.label setBackTextStyle:cell.lblTimeAndPlace];
+    [helper.label setBackTextStyle:cell.lblEvent];
 }
 
 @end

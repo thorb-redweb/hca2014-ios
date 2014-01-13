@@ -41,12 +41,23 @@
     [_webBody loadHTMLString:_model.fulltext baseURL:nil];
 
 	[self setAppearance];
+	
+	if(![_page hasChild:[RWPAGE RETURNBUTTON]] || ([_page hasChild:[RWPAGE RETURNBUTTON]] && ![_page getBoolFromNode:[RWPAGE RETURNBUTTON]])){
+		[_btnBack RWsetHeightAsConstraint:0.0];
+		[_btnBack setHidden:YES];
+	} else if([_xml.appearance hasChild:_name] && [[_xml getAppearanceForPage:_name] hasChild:[RWLOOK BACKBUTTONBACKGROUNDIMAGE]]){
+		UIImage *btnImage = _btnBack.currentBackgroundImage;
+		float aspect = btnImage.size.height/btnImage.size.width;
+		[_btnBack addConstraint:[NSLayoutConstraint constraintWithItem:_btnBack attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:_btnBack attribute:NSLayoutAttributeWidth multiplier:aspect constant:0]];
+	}
 }
 
 - (void)setAppearance{
     RWAppearanceHelper *helper = [[RWAppearanceHelper alloc] initWithLocalLook:_localLook globalLook:_globalLook];
 
-    [helper setBackgroundColor:self.view localName:[RWLOOK STATICARTICLE_BACKGROUNDCOLOR] globalName:[RWLOOK DEFAULT_BACKCOLOR]];
+    [helper setBackgroundTileImageOrColor:self.view localImageName:[RWLOOK BACKGROUNDIMAGE] localColorName:[RWLOOK BACKGROUNDCOLOR] globalName:[RWLOOK DEFAULT_BACKCOLOR]];
+	
+	[helper.button setBackButtonStyle:_btnBack];
 	
 	[helper setScrollBounces:_webBody.scrollView localName:[RWLOOK SCROLLBOUNCES] globalName:[RWLOOK SCROLLBOUNCES]];
 }

@@ -66,7 +66,7 @@
 - (void)setAppearance{
 	RWAppearanceHelper *helper = [[RWAppearanceHelper alloc] initWithLocalLook:_localLook globalLook:_globalLook];
 	
-	[helper setBackgroundTileImageOrColor:self.view localImageName:[RWLOOK ADVENTCAL_BACKGROUNDIMAGE] localColorName:[RWLOOK ADVENTCAL_BACKGROUNDCOLOR] globalName:[RWLOOK DEFAULT_BACKCOLOR]];
+	[helper setBackgroundTileImageOrColor:self.view localImageName:[RWLOOK BACKGROUNDIMAGE] localColorName:[RWLOOK BACKGROUNDCOLOR] globalName:[RWLOOK DEFAULT_BACKCOLOR]];
 }
 
 - (IBAction)openWindow:(id)sender{
