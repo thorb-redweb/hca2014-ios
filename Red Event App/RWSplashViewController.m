@@ -55,12 +55,13 @@
     [_btnBackground setImage:[UIImage imageNamed:@"splash"] forState:UIControlStateNormal];
     [_btnBackground setImage:[UIImage imageNamed:@"splash"] forState:UIControlStateHighlighted];
 	
-	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(appHasEnteredForeground) name:UIApplicationWillEnterForegroundNotification object:nil];
+//	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(appHasEnteredForeground) name:UIApplicationWillEnterForegroundNotification object:nil];
 }
 
 - (void)viewWillAppear:(BOOL)animated{
 	[super viewWillAppear:animated];
-	[self getDataFromServer];
+	[self continueAfterUpdate];
+//	[self getDataFromServer];
 }
 
 - (void)appHasEnteredForeground {

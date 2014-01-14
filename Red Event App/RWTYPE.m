@@ -29,6 +29,7 @@
 + (NSString *)SESSIONMAP {return @"SessionMap";}
 + (NSString *)SPLITVIEW {return @"SplitView";}
 + (NSString *)STATICARTICLE {return @"StaticArticle";}
++ (NSString *)STYLEDSESSIONLIST {return @"StyledSessionList";}
 + (NSString *)SWIPEVIEW {return @"SwipeView";}
 + (NSString *)TABLENAVIGATOR {return @"TableNavigator";}
 + (NSString *)UPCOMINGSESSIONS {return @"UpcomingSessions";}

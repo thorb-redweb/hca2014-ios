@@ -108,6 +108,24 @@
     [self setShadowOffsetsForList:lastChangedLabelList localName:localname globalName:globalname];
 }
 
+- (void)setCustomTextStyle:(UILabel *)label tag:(NSString *)tag defaultColor:(NSString *)defColor defaultSize:(NSString *)defSize{
+	NSString *localColor = [NSString stringWithFormat:@"%@%@", tag, [RWLOOK APPEARANCEHELPER_DEF_COLOR]];
+	NSString *globalColor = [NSString stringWithFormat:@"%@%@",defColor,[RWLOOK APPEARANCEHELPER_DEF_TEXTCOLOR]];
+	NSString *localSize = [NSString stringWithFormat:@"%@%@", tag, [RWLOOK APPEARANCEHELPER_DEF_SIZE]];
+	NSString *globalSize = [NSString stringWithFormat:@"%@%@", defSize, [RWLOOK APPEARANCEHELPER_DEF_SIZE]];
+	NSString *localStyle = [NSString stringWithFormat:@"%@%@", tag, [RWLOOK APPEARANCEHELPER_DEF_STYLE]];
+	NSString *globalStyle = [NSString stringWithFormat:@"%@%@", defSize, [RWLOOK APPEARANCEHELPER_DEF_STYLE]];
+	NSString *localShadowColor = [NSString stringWithFormat:@"%@%@",tag,[RWLOOK APPEARANCEHELPER_DEF_SHADOWCOLOR]];
+	NSString *globalShadowColor = [NSString stringWithFormat:@"%@%@",defColor,[RWLOOK APPEARANCEHELPER_DEF_TEXTSHADOWCOLOR]];
+	NSString *localShadowOffset = [NSString stringWithFormat:@"%@%@", tag, [RWLOOK APPEARANCEHELPER_DEF_SHADOWOFFSET]];
+	NSString *globalShadowOffset = [NSString stringWithFormat:@"%@%@",defSize,[RWLOOK APPEARANCEHELPER_DEF_TEXTSHADOWOFFSET]];
+	
+	[self setColor:label localName:localColor globalName:globalColor];
+    [self setFont:label localSizeName:localSize globalSizeName:globalSize localStyleName:localStyle globalStyleName:globalStyle];
+    [self setShadowColor:label localName:localShadowColor globalName:globalShadowColor];
+    [self setShadowOffset:label localName:localShadowOffset globalName:globalShadowOffset];
+}
+
 - (void)setTitleStyle:(UILabel *)label{
     [self setColor:label localName:[RWLOOK TITLECOLOR] globalName:[RWLOOK DEFAULT_BACKTEXTCOLOR]];
     [self setFont:label localSizeName:[RWLOOK TITLESIZE] globalSizeName:[RWLOOK DEFAULT_TITLESIZE] localStyleName:[RWLOOK TITLESTYLE] globalStyleName:[RWLOOK DEFAULT_TITLESTYLE]];

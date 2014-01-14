@@ -17,6 +17,7 @@
 + (NSString *)ARTICLEID;
 + (NSString *)CATID;
 + (NSString *)CHILD;
++ (NSString *)CHILD2;
 + (NSString *)FRONTPAGE;
 + (NSString *)NAME;
 + (NSString *)NAVNAME;

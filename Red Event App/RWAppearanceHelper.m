@@ -46,6 +46,10 @@
 	}
 }
 
+- (void)setBorderColor:(UIView *)view localName:(NSString *)localname globalName:(NSString *)globalname{
+	view.layer.borderColor = [_getter getColorWithLocalName:localname globalName:globalname].CGColor;
+}
+
 - (void)setLogo:(UIImageView *)imageview imagename:(NSString *)imagename{
 	UIImage *logo = [UIImage imageNamed:imagename];
 	imageview.image = logo;

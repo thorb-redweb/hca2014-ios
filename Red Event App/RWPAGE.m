@@ -18,6 +18,7 @@
 + (NSString *)ARTICLEID {return @"articleid";}
 + (NSString *)CATID {return @"catid";}
 + (NSString *)CHILD {return @"child";}
++ (NSString *)CHILD2 {return @"child2";}
 + (NSString *)FILEPATH {return @"filepath";}
 + (NSString *)FOLDER {return @"folder";}
 + (NSString *)FRONTPAGE {return @"frontpage";}

@@ -47,6 +47,8 @@
 
 + (NSString *)STATICARTICLE;
 
++ (NSString *)STYLEDSESSIONLIST;
+
 + (NSString *)SWIPEVIEW;
 
 + (NSString *)TABLENAVIGATOR;

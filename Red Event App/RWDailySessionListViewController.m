@@ -175,7 +175,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     RWSessionVM *model = dataSource[indexPath.row];
 
-    RWXmlNode *nextPage = [_xml getPage:_childname];
+    RWXmlNode *nextPage = [[_xml getPage:_childname] deepClone];
     [nextPage addNodeWithName:[RWPAGE SESSIONID] value:model.sessionid];
 
     [_app.navController pushViewWithPage:nextPage];

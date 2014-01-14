@@ -60,6 +60,23 @@
 + (NSString *)TITLESIZE {return @"titlesize";}
 + (NSString *)TITLESTYLE {return @"titlestyle";}
 
+//Default Snippets for Custom Styles
++ (NSString *)DEFCOLOR_ALT {return @"alt";}
++ (NSString *)DEFCOLOR_BACK {return @"back";}
++ (NSString *)DEFCOLOR_BAR {return @"bar";}
++ (NSString *)DEFSIZE_ITEMTITLE {return @"itemtitle";}
++ (NSString *)DEFSIZE_TEXT {return @"text";}
++ (NSString *)DEFSIZE_TITLE {return @"title";}
+
++ (NSString *)APPEARANCEHELPER_DEF_COLOR {return @"color";}
++ (NSString *)APPEARANCEHELPER_DEF_TEXTCOLOR {return @"textcolor";}
++ (NSString *)APPEARANCEHELPER_DEF_SHADOWCOLOR {return @"shadowcolor";}
++ (NSString *)APPEARANCEHELPER_DEF_TEXTSHADOWCOLOR {return @"textshadowcolor";}
++ (NSString *)APPEARANCEHELPER_DEF_SHADOWOFFSET {return @"shadowoffset";}
++ (NSString *)APPEARANCEHELPER_DEF_TEXTSHADOWOFFSET {return @"textshadowoffset";}
++ (NSString *)APPEARANCEHELPER_DEF_SIZE {return @"size";}
++ (NSString *)APPEARANCEHELPER_DEF_STYLE {return @"style";}
+
 //Default
 + (NSString *)DEFAULT {return @"default";}
 + (NSString *)DEFAULT_ALTCOLOR {return @"altcolor";}
@@ -168,6 +185,13 @@
 + (NSString *)SESSIONDETAIL_LABELSIZE {return @"labelsize";}
 + (NSString *)SESSIONDETAIL_LABELSTYLE {return @"labelstyle";}
 
+//StyledSessionList
++(NSString *)STYLEDSESSIONLIST_LISTBACKGROUNDCOLOR {return @"listbackgroundcolor";}
++(NSString *)STYLEDSESSIONLIST_LISTLINECOLOR {return @"listlinecolor";}
++(NSString *)STYLEDSESSIONLIST_CAMERABUTTONIMAGE {return @"camerabuttonimage";}
++(NSString *)STYLEDSESSIONLIST_ARCHIVEBUTTONIMAGE {return @"archivebuttonimage";}
+
+//Swipeview
 + (NSString *)SWIPEVIEW_SELECTEDPAGECOLOR {return @"selectedpagecolor";}
 + (NSString *)SWIPEVIEW_UNSELECTEDPAGECOLOR {return @"unselectedpagecolor";}
 

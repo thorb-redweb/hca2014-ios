@@ -53,6 +53,8 @@
 +(NSString *)SESSIONDETAIL_TIME {return @"time";}
 +(NSString *)SESSIONDETAIL_MAPBUTTON {return @"mapbutton";}
 
++(NSString *)STYLEDSESSIONLIST_TITLE {return @"title";}
+
 +(NSString *)VENUEDETAIL_ADDRESS {return @"address";}
 +(NSString *)VENUEDETAIL_MAPBUTTON {return @"mapbutton";}
 

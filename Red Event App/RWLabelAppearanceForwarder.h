@@ -51,6 +51,8 @@
 
 - (void)setShadowOffsetsForLastList:(NSString *)localname globalName:(NSString *)globalname;
 
+- (void)setCustomTextStyle:(UILabel *)label tag:(NSString *)tag defaultColor:(NSString *)defColor defaultSize:(NSString *)defSize;
+
 - (void)setTitleStyle:(UILabel *)label;
 
 - (void)setBackItemTitleStyle:(UILabel *)label;

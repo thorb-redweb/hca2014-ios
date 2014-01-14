@@ -26,6 +26,8 @@
 
 - (void)setBackgroundTileImageOrColor:(UIView *)view localImageName:(NSString *)localimagename localColorName:(NSString *)localcolorname globalName:(NSString *)globalname;
 
+- (void)setBorderColor:(UIView *)view localName:(NSString *)localname globalName:(NSString *)globalname;
+
 - (void)setLogo:(UIImageView *)imageview imagename:(NSString *)imagename;
 
 -(void)setScrollBounces:(UIScrollView *)scrollView localName:(NSString *)localname globalName:(NSString *)globalname;
