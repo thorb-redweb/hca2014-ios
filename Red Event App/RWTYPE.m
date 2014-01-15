@@ -25,6 +25,7 @@
 + (NSString *)PUSHMESSAGEAUTOSUBSCRIBER {return @"PushMessageAutoSubscriber";}
 + (NSString *)PUSHMESSAGEDETAIL {return @"PushMessageDetail";}
 + (NSString *)PUSHMESSAGELIST {return @"PushMessageList";}
++ (NSString *)REDUPLOAD {return @"RedUpload";}
 + (NSString *)SESSIONDETAIL {return @"SessionDetail";}
 + (NSString *)SESSIONMAP {return @"SessionMap";}
 + (NSString *)SPLITVIEW {return @"SplitView";}

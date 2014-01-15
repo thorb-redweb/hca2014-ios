@@ -54,6 +54,9 @@
 + (NSString *)TEXTSHADOWOFFSET {return @"textshadowoffset";}
 + (NSString *)TEXTSIZE {return @"textsize";}
 + (NSString *)TEXTSTYLE {return @"textstyle";}
++ (NSString *)TEXTFIELDCOLOR {return @"textfieldcolor";}
++ (NSString *)TEXTFIELDSIZE {return @"textfieldsize";}
++ (NSString *)TEXTFIELDSTYLE {return @"textfieldstyle";}
 + (NSString *)TITLECOLOR {return @"titlecolor";}
 + (NSString *)TITLESHADOWCOLOR {return @"titleshadowcolor";}
 + (NSString *)TITLESHADOWOFFSET {return @"titleshadowoffset";}
@@ -76,6 +79,11 @@
 + (NSString *)APPEARANCEHELPER_DEF_TEXTSHADOWOFFSET {return @"textshadowoffset";}
 + (NSString *)APPEARANCEHELPER_DEF_SIZE {return @"size";}
 + (NSString *)APPEARANCEHELPER_DEF_STYLE {return @"style";}
++ (NSString *)APPEARANCEHELPER_DEF_BACKGROUNDCOLOR {return @"color";}
++ (NSString *)APPEARANCEHELPER_DEF_BACKGROUNDIMAGE {return @"image";}
++ (NSString *)APPEARANCEHELPER_DEF_ICON {return @"icon";}
++ (NSString *)APPEARANCEHELPER_DEF_TEXTSIZE {return @"textsize";}
++ (NSString *)APPEARANCEHELPER_DEF_TEXTSTYLE {return @"textstyle";}
 
 //Default
 + (NSString *)DEFAULT {return @"default";}
@@ -177,6 +185,9 @@
 + (NSString *)PUSHMESSAGEDETAIL_SENTTEXTCOLOR {return @"senttextcolor";}
 + (NSString *)PUSHMESSAGEDETAIL_SENTTEXTSIZE {return @"senttextsize";}
 + (NSString *)PUSHMESSAGEDETAIL_SENTTEXTSTYLE {return @"senttextstyle";}
+
+//RedUpload
++ (NSString *)REDUPLOAD_APPROVALBOXCOLOR {return @"approvalboxcolor";}
 
 //SessionDetail
 + (NSString *)SESSIONDETAIL_LABELCOLOR {return @"labelcolor";}

@@ -29,7 +29,7 @@ static void * CapturingStillImageContext = &CapturingStillImageContext;
 
 -(id)initWithPage:(RWXmlNode *)page{
 	if(self = [super initWithNibName:@"RWCameraIntentViewController" bundle:Nil page:page]){
-		
+
 	}
 	return self;
 }
@@ -116,6 +116,9 @@ static void * CapturingStillImageContext = &CapturingStillImageContext;
 	nextPage = [nextPage deepClone];
 	if(imagesaved){
 		[nextPage addNodeWithName:[RWPAGE FILEPATH] value:[cameraHandler filePath]];
+	}
+	if([_page hasChild:[RWPAGE SESSIONID]]){
+		[nextPage addNodeWithName:[RWPAGE SESSIONID] value:[_page getStringFromNode:[RWPAGE SESSIONID]]];
 	}
 	
 	[_app.navController pushViewWithPage:nextPage];

@@ -18,6 +18,8 @@
 
 -(void)setButtonText:(UIButton *)button textName:(NSString *)textName defaultText:(NSString *)defaultText;
 
+-(void)setTextFieldPlaceHolderText:(UITextField *)textField textName:(NSString *)textName defaultText:(NSString *)defaultText;
+
 -(void)tryText:(UILabel *)label textName:(NSString *)textName;
 
 @end

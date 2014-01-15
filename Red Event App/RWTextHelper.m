@@ -45,6 +45,17 @@
 	[button setTitle:text forState:UIControlStateNormal];
 }
 
+-(void)setTextFieldPlaceHolderText:(UITextField *)textField textName:(NSString *)textName defaultText:(NSString *)defaultText{
+	NSString *text;
+	if([textStore hasChild:textName]){
+		text = [textStore getStringFromNode:textName];
+	} else {
+		text = defaultText;
+	}
+	
+	[textField setPlaceholder:text];
+}
+
 -(void)tryText:(UILabel *)label textName:(NSString *)textName{
 	if([textStore hasChild:textName]){
 		[self setText:label textName:textName defaultText:@""];

@@ -60,4 +60,6 @@
 
 - (NSString *)getName;
 
+- (IBAction)removeKeyboard;
+
 @end

@@ -161,6 +161,32 @@
     [self setTitleShadowOffsetsForList:lastChangedButtonList localName:localname globalName:globalname];
 }
 
+- (void)setCustomStyle:(UIButton *)button tag:(NSString *)tag defaultColor:(NSString *)defColor defaultSize:(NSString *)defSize{
+
+	NSString *localImage = [NSString stringWithFormat:@"%@%@", tag, [RWLOOK APPEARANCEHELPER_DEF_BACKGROUNDIMAGE]];
+	NSString *localBackgroundColor = [NSString stringWithFormat:@"%@%@", tag, [RWLOOK APPEARANCEHELPER_DEF_BACKGROUNDCOLOR]];
+	NSString *globalBackgroundColor = [NSString stringWithFormat:@"%@%@", defColor, [RWLOOK APPEARANCEHELPER_DEF_COLOR]];
+	NSString *localIcon = [NSString stringWithFormat:@"%@%@", tag, [RWLOOK APPEARANCEHELPER_DEF_ICON]];
+
+	NSString *localColor = [NSString stringWithFormat:@"%@%@", tag, [RWLOOK APPEARANCEHELPER_DEF_TEXTCOLOR]];
+	NSString *globalColor = [NSString stringWithFormat:@"%@%@",defColor,[RWLOOK APPEARANCEHELPER_DEF_TEXTCOLOR]];
+	NSString *localSize = [NSString stringWithFormat:@"%@%@", tag, [RWLOOK APPEARANCEHELPER_DEF_TEXTSIZE]];
+	NSString *globalSize = [NSString stringWithFormat:@"%@%@", defSize, [RWLOOK APPEARANCEHELPER_DEF_SIZE]];
+	NSString *localStyle = [NSString stringWithFormat:@"%@%@", tag, [RWLOOK APPEARANCEHELPER_DEF_TEXTSTYLE]];
+	NSString *globalStyle = [NSString stringWithFormat:@"%@%@", defSize, [RWLOOK APPEARANCEHELPER_DEF_STYLE]];
+	NSString *localShadowColor = [NSString stringWithFormat:@"%@%@",tag,[RWLOOK APPEARANCEHELPER_DEF_TEXTSHADOWCOLOR]];
+	NSString *globalShadowColor = [NSString stringWithFormat:@"%@%@",defColor,[RWLOOK APPEARANCEHELPER_DEF_TEXTSHADOWCOLOR]];
+	NSString *localShadowOffset = [NSString stringWithFormat:@"%@%@", tag, [RWLOOK APPEARANCEHELPER_DEF_TEXTSHADOWOFFSET]];
+	NSString *globalShadowOffset = [NSString stringWithFormat:@"%@%@",defSize,[RWLOOK APPEARANCEHELPER_DEF_TEXTSHADOWOFFSET]];
+	
+	[self setBackgroundImageOrColor:button localImageName:localImage localColorName:localBackgroundColor globalColorName:globalBackgroundColor];
+    [self setImageFromLocalSource:button localName:localIcon];
+	[self setTitleColor:button localName:localColor globalName:globalColor];
+    [self setTitleFont:button localSizeName:localSize globalSizeName:globalSize localStyleName:localStyle globalStyleName:globalStyle];
+    [self setTitleShadowColor:button localName:localShadowColor globalName:globalShadowColor];
+    [self setTitleShadowOffset:button localName:localShadowOffset globalName:globalShadowOffset];
+}
+
 - (void)setButtonStyle:(UIButton *)button{
     [self setBackgroundImageOrColor:button localImageName:[RWLOOK BUTTONBACKGROUNDIMAGE] localColorName:[RWLOOK BUTTONBACKGROUNDCOLOR] globalColorName:[RWLOOK DEFAULT_ALTCOLOR]];
     [self setImageFromLocalSource:button localName:[RWLOOK BUTTONICON]];

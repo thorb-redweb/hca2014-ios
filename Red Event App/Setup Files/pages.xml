@@ -138,6 +138,8 @@
         <button1>About2</button1>
 		<button2>Nyheder2</button2>
 		<button3>SSessionList</button3>
+		<button5>Camera2</button5>
+		<button6>RedUploader</button6>
     </page>
     <page>
         <name>About2</name>
@@ -157,6 +159,20 @@
         <type>StyledSessionList</type>
         <child>Camera</child>
 		<child2>Begivenhed</child2>
+    </page>
+    <page>
+        <name>Camera2</name>
+        <type>CameraIntent</type>
+        <child>RedUploader</child>
+        <folder>redApp</folder>
+		<sessionid>2</sessionid>
+    </page>
+    <page>
+        <name>RedUploader</name>
+        <type>RedUpload</type>
+        <child>Begivenhed</child>
+        <folder>redApp</folder>
+		<sessionid>2</sessionid>
     </page>
     <page>
         <name>PMInitializer</name>

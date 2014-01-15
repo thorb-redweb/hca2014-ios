@@ -11,6 +11,7 @@
 #import "RWApperanceHelperGetter.h"
 #import "RWButtonAppearanceForwarder.h"
 #import "RWLabelAppearanceForwarder.h"
+#import "RWTextFieldAppearanceForwarder.h"
 
 @class RWXmlNode;
 
@@ -19,6 +20,7 @@
 @property (strong, nonatomic) RWApperanceHelperGetter *getter;
 @property (strong, nonatomic) RWButtonAppearanceForwarder *button;
 @property (strong, nonatomic) RWLabelAppearanceForwarder *label;
+@property (strong, nonatomic) RWTextFieldAppearanceForwarder *textField;
 
 - (id)initWithLocalLook:(RWXmlNode *)localLook globalLook:(RWXmlNode *)globalLook;
 

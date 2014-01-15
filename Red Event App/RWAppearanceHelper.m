@@ -27,6 +27,7 @@
 		
 		_button = [[RWButtonAppearanceForwarder alloc] initWithHelper:self Getter:_getter];
 		_label = [[RWLabelAppearanceForwarder alloc] initWithHelper:self Getter:_getter];
+		_textField = [[RWTextFieldAppearanceForwarder alloc] initWithHelper:self Getter:_getter];
     }
     return self;
 }

@@ -48,6 +48,16 @@
 
 +(NSString *)PUSHMESSAGEDETAIL_BACKBUTTON {return @"backbutton";}
 
++(NSString *)REDUPLOAD_BACKBUTTON {return @"backbutton";}
++(NSString *)REDUPLOAD_TOPRIGHTBUTTON; {return @"topbutton";}
++(NSString *)REDUPLOAD_BOTTOMLEFTBUTTONAPPROVED; {return @"bottombuttonapproved";}
++(NSString *)REDUPLOAD_BOTTOMLEFTBUTTONUNAPPROVED; {return @"bottombuttonunapproved";}
++(NSString *)REDUPLOAD_DELETEPICTUREBUTTON; {return @"deletepicturebutton";}
++(NSString *)REDUPLOAD_PICTURETEXTHINT; {return @"picturetexthint";}
++(NSString *)REDUPLOAD_APPROVALSTATEMENT; {return @"approvalstatement";}
++(NSString *)REDUPLOAD_APPROVALSTATUSYES; {return @"approvalstatusyes";}
++(NSString *)REDUPLOAD_APPROVALSTATUSNO; {return @"approvalstatusno";}
+
 +(NSString *)SESSIONDETAIL_DATE {return @"date";}
 +(NSString *)SESSIONDETAIL_PLACE {return @"place";}
 +(NSString *)SESSIONDETAIL_TIME {return @"time";}

@@ -71,6 +71,8 @@
 
 - (void)setTitleShadowOffsetsForLastList:(NSString *)localname globalName:(NSString *)globalname;
 
+- (void)setCustomStyle:(UIButton *)button tag:(NSString *)tag defaultColor:(NSString *)defColor defaultSize:(NSString *)defSize;
+
 - (void)setButtonStyle:(UIButton *)button;
 
 - (void)setBackButtonStyle:(UIButton *)button;

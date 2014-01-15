@@ -10,56 +10,31 @@
 
 @interface RWTYPE : NSObject
 + (NSString *)ADVENTCAL;
-
 + (NSString *)ADVENTWINDOW;
-
 + (NSString *)ARTICLEDETAIL;
-
 + (NSString *)ARTICLELIST;
-
 + (NSString *)BIKETRACKING;
-
 + (NSString *)BUTTONGALLERY;
-
 + (NSString *)CAMERAINTENT;
-
 + (NSString *)DAILYSESSIONLIST;
-
 + (NSString *)FILEBROWSER;
-
 + (NSString *)IMAGEARTICLELIST;
-
 + (NSString *)NEWSTICKER;
-
 + (NSString *)OVERVIEWMAP;
-
 + (NSString *)PUSHMESSAGEAUTOSUBSCRIBER;
-
 + (NSString *)PUSHMESSAGEDETAIL;
-
 + (NSString *)PUSHMESSAGELIST;
-
++ (NSString *)REDUPLOAD;
 + (NSString *)SESSIONDETAIL;
-
 + (NSString *)SESSIONMAP;
-
 + (NSString *)SPLITVIEW;
-
 + (NSString *)STATICARTICLE;
-
 + (NSString *)STYLEDSESSIONLIST;
-
 + (NSString *)SWIPEVIEW;
-
 + (NSString *)TABLENAVIGATOR;
-
 + (NSString *)UPCOMINGSESSIONS;
-
 + (NSString *)VENUEDETAIL;
-
 + (NSString *)VENUEMAP;
-
 + (NSString *)WEBVIEW;
-
 + (NSString *)IMAGEUPLOADER;
 @end

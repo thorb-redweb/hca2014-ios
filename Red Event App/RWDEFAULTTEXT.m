@@ -34,6 +34,16 @@
 
 +(NSString *)PUSHMESSAGEDETAIL_BACKBUTTON {return @"Tilbage";}
 
++(NSString *)REDUPLOAD_BACKBUTTON {return @"Tilbage";}
++(NSString *)REDUPLOAD_TOPRIGHTBUTTON {return @"Tag flere billeder";}
++(NSString *)REDUPLOAD_BOTTOMLEFTBUTTONAPPROVED {return @"Upload";}
++(NSString *)REDUPLOAD_BOTTOMLEFTBUTTONUNAPPROVED {return @"Få tilladelse";}
++(NSString *)REDUPLOAD_DELETEPICTUREBUTTON {return @"Slet billede";}
++(NSString *)REDUPLOAD_PICTURETEXTHINT {return @"Billed Tekst";}
++(NSString *)REDUPLOAD_APPROVALSTATEMENT {return @"Tilladelse givet";}
++(NSString *)REDUPLOAD_APPROVALSTATUSYES {return @"Ja";}
++(NSString *)REDUPLOAD_APPROVALSTATUSNO {return @"Nej";}
+
 +(NSString *)SESSIONDETAIL_DATE {return @"Dato";}
 +(NSString *)SESSIONDETAIL_PLACE {return @"Sted";}
 +(NSString *)SESSIONDETAIL_TIME {return @"Tidspunkt";}

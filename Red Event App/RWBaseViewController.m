@@ -24,7 +24,7 @@
         _db = _app.db;
         _sv = _app.sv;
         _xml = _app.xml;
-        _page = page;
+        _page = [page deepClone];
         _name = [_page getStringFromNode:[RWPAGE NAME]];
         if ([_page hasChild:[RWPAGE CHILD]])
             _childname = [_page getStringFromNode:[RWPAGE CHILD]];
@@ -67,6 +67,11 @@
 
 - (NSString *)getName{
 	return _name;
+}
+
+//In the NIB file, connect from the UITextField to the File's Owner on the option DidEndOnExit.
+- (IBAction)removeKeyboard{
+	[self.view endEditing:YES];
 }
 
 - (void)didReceiveMemoryWarning {
