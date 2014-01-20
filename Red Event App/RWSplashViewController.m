@@ -23,6 +23,7 @@
 @end
 
 @implementation RWSplashViewController {
+	RWAppDelegate *_app;
     RWDbInterface *_db;
     RWServer *_sv;
     RWXMLStore *_xmlDist;
@@ -38,11 +39,11 @@
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        RWAppDelegate *app = [[UIApplication sharedApplication] delegate];
-        _xmlDist = app.xml;
+        _app = [[UIApplication sharedApplication] delegate];
+        _xmlDist = _app.xml;
 
-        _db = app.db;
-        _sv = app.sv;
+        _db = _app.db;
+        _sv = _app.sv;
 
         _firstTime = true;
     }
@@ -54,21 +55,16 @@
 
     [_btnBackground setImage:[UIImage imageNamed:@"splash"] forState:UIControlStateNormal];
     [_btnBackground setImage:[UIImage imageNamed:@"splash"] forState:UIControlStateHighlighted];
-	
-//	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(appHasEnteredForeground) name:UIApplicationWillEnterForegroundNotification object:nil];
 }
 
 - (void)viewWillAppear:(BOOL)animated{
 	[super viewWillAppear:animated];
-	[self continueAfterUpdate];
-//	[self getDataFromServer];
-}
-
-- (void)appHasEnteredForeground {
-//    if(_firstTime){
-//	    [self getDataFromServer];
-//        _firstTime = false;
-//    }
+	if(![_app shouldSkipUpdate]){
+		[self getDataFromServer];
+	}
+	else{
+		[self continueAfterUpdate];
+	}
 }
 
 -(void)getDataFromServer{

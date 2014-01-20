@@ -35,6 +35,10 @@
         <attribute name="subscribing" optional="YES" attributeType="Boolean" syncable="YES"/>
         <relationship name="pushmessages" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="PushMessage" inverseName="group" inverseEntity="PushMessage" syncable="YES"/>
     </entity>
+    <entity name="RedUploadImage" representedClassName="RedUploadImage" syncable="YES">
+        <attribute name="localimagepath" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="serverfolder" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
     <entity name="Session" representedClassName="Session" syncable="YES">
         <attribute name="details" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="enddatetime" optional="YES" attributeType="Date" syncable="YES"/>
@@ -58,11 +62,12 @@
         <relationship name="sessions" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Session" inverseName="venue" inverseEntity="Session" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Article" positionX="-128" positionY="252" width="128" height="180"/>
-        <element name="Event" positionX="-45" positionY="-90" width="128" height="150"/>
-        <element name="Session" positionX="-225" positionY="0" width="128" height="180"/>
-        <element name="Venue" positionX="367" positionY="-54" width="128" height="180"/>
-        <element name="PushMessage" positionX="160" positionY="192" width="128" height="150"/>
-        <element name="PushMessageGroup" positionX="448" positionY="219" width="128" height="103"/>
+        <element name="Article" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="Event" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="PushMessage" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="PushMessageGroup" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="Session" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="Venue" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="RedUploadImage" positionX="0" positionY="0" width="0" height="0"/>
     </elements>
 </model>

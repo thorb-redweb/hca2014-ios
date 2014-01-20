@@ -1,5 +1,5 @@
 //
-//  RWStyledSessionListItem.h
+//  RWRedUploadSessionFolderListItem.h
 //  Red App
 //
 //  Created by Thorbjørn Steen on 1/13/14.
@@ -10,7 +10,7 @@
 
 #import "RWBaseListItem.h"
 
-@interface RWStyledSessionListItem : RWBaseListItem
+@interface RWRedUploadSessionFolderListItem : RWBaseListItem
 
 @property (weak, nonatomic) IBOutlet UILabel *lblTitle;
 @property (weak, nonatomic) IBOutlet UILabel *lblBody;

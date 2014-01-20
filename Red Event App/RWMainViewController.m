@@ -77,8 +77,8 @@
 - (void)setAppearance{
 	RWAppearanceHelper *helper = [[RWAppearanceHelper alloc] initWithLocalLook:nil globalLook:[_xml getAppearanceForPage:[RWLOOK DEFAULT]]];
 	
-	if([_xml.pages hasChild:@"global"] && [[_xml.pages getChildFromNode:@"global"] hasChild:@"toplogo"]){
-		NSString *toplogoimagename = [[_xml.pages getChildFromNode:@"global"] getStringFromNode:@"toplogo"];
+	if([_xml.pages hasChild:[RWPAGE GLOBAL]] && [[_xml.pages getChildFromNode:[RWPAGE GLOBAL]] hasChild:@"toplogo"]){
+		NSString *toplogoimagename = [[_xml.pages getChildFromNode:[RWPAGE GLOBAL]] getStringFromNode:@"toplogo"];
 		[_logobar RWsetHeightAsConstraint:50.0];
 		[helper setLogo:_logobar imagename:toplogoimagename];
 	} else {

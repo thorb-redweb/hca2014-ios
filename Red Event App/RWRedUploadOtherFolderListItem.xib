@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="4510" systemVersion="12F45" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="108" id="RcT-tf-Fuw" customClass="RWRedUploadOtherFolderListItem">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="108"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="RcT-tf-Fuw" id="oHc-P2-XSe">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="107"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" horizontalHuggingPriority="200" horizontalCompressionResistancePriority="850" translatesAutoresizingMaskIntoConstraints="NO" id="VMb-kQ-CW4" userLabel="vwBox">
+                        <rect key="frame" x="0.0" y="-2" width="320" height="109"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="200" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rwd-vT-KBi" userLabel="lblBody">
+                                <rect key="frame" x="10" y="44" width="204" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ea5-kV-NjM" userLabel="btnTakePicture">
+                                <rect key="frame" x="222" y="35" width="40" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="DuW-93-Xpx"/>
+                                    <constraint firstAttribute="height" constant="40" id="FTL-Zt-vEt"/>
+                                </constraints>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnCameraClicked" destination="RcT-tf-Fuw" eventType="touchUpInside" id="gRx-3B-7cv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hiO-Cc-Znr" userLabel="btnSeeArchive">
+                                <rect key="frame" x="270" y="35" width="40" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="FJ5-4h-I2b"/>
+                                    <constraint firstAttribute="height" constant="40" id="dIR-nW-7vx"/>
+                                </constraints>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnArchiveClicked" destination="RcT-tf-Fuw" eventType="touchUpInside" id="AlS-vX-9vy"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ea5-kV-NjM" firstAttribute="leading" secondItem="rwd-vT-KBi" secondAttribute="trailing" constant="8" symbolic="YES" id="3do-gi-BVF"/>
+                            <constraint firstItem="rwd-vT-KBi" firstAttribute="top" relation="greaterThanOrEqual" secondItem="VMb-kQ-CW4" secondAttribute="top" constant="10" id="5yz-E7-56B"/>
+                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="rwd-vT-KBi" secondAttribute="bottom" constant="10" id="CS9-xb-Cig"/>
+                            <constraint firstItem="rwd-vT-KBi" firstAttribute="leading" secondItem="VMb-kQ-CW4" secondAttribute="leading" constant="10" id="FVz-mH-Oux"/>
+                            <constraint firstAttribute="trailing" secondItem="hiO-Cc-Znr" secondAttribute="trailing" constant="10" id="Fk5-hC-Csq"/>
+                            <constraint firstItem="hiO-Cc-Znr" firstAttribute="leading" secondItem="ea5-kV-NjM" secondAttribute="trailing" constant="8" symbolic="YES" id="Rsp-5w-gYu"/>
+                            <constraint firstAttribute="centerY" secondItem="rwd-vT-KBi" secondAttribute="centerY" id="Zh4-eB-VqR"/>
+                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="ea5-kV-NjM" secondAttribute="bottom" constant="10" id="c2h-GP-T8h"/>
+                            <constraint firstAttribute="centerY" secondItem="hiO-Cc-Znr" secondAttribute="centerY" id="ix6-aj-bOq"/>
+                            <constraint firstItem="ea5-kV-NjM" firstAttribute="top" relation="greaterThanOrEqual" secondItem="VMb-kQ-CW4" secondAttribute="top" constant="10" id="leD-2t-iec"/>
+                            <constraint firstAttribute="centerY" secondItem="ea5-kV-NjM" secondAttribute="centerY" id="pTU-kH-gs4"/>
+                            <constraint firstItem="hiO-Cc-Znr" firstAttribute="top" relation="greaterThanOrEqual" secondItem="VMb-kQ-CW4" secondAttribute="top" constant="10" id="pVc-lr-UPf"/>
+                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="hiO-Cc-Znr" secondAttribute="bottom" constant="10" id="xas-tW-GAI"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="VMb-kQ-CW4" secondAttribute="trailing" id="9SG-Om-273"/>
+                    <constraint firstItem="VMb-kQ-CW4" firstAttribute="leading" secondItem="oHc-P2-XSe" secondAttribute="leading" id="Ile-sD-PSH"/>
+                    <constraint firstAttribute="bottom" secondItem="VMb-kQ-CW4" secondAttribute="bottom" id="fYb-Uo-6xZ"/>
+                    <constraint firstItem="VMb-kQ-CW4" firstAttribute="top" secondItem="oHc-P2-XSe" secondAttribute="top" constant="-2" id="iuI-wy-EFU"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <connections>
+                <outlet property="btnSeeArchive" destination="hiO-Cc-Znr" id="eGC-3Q-ojx"/>
+                <outlet property="btnTakePicture" destination="ea5-kV-NjM" id="vaq-1c-Rli"/>
+                <outlet property="lblBody" destination="rwd-vT-KBi" id="Bry-Nd-MmL"/>
+                <outlet property="leftConstraint" destination="Ile-sD-PSH" id="k0R-Bu-TYn"/>
+                <outlet property="topConstraint" destination="iuI-wy-EFU" id="McU-Il-qIV"/>
+                <outlet property="vwBox" destination="VMb-kQ-CW4" id="Ucc-aa-QkY"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>

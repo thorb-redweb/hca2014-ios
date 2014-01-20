@@ -87,6 +87,10 @@
 + (NSString *)PUSHGROUP_NAME {return @"name";}
 + (NSString *)PUSHGROUP_SUBSCRIBING {return @"subscribing";}
 
++ (NSString *)RUI_TABLENAME{return @"RedUploadImage";}
++ (NSString *)RUI_LOCALIMAGEPATH{return @"localimagepath";}
++ (NSString *)RUI_SERVERFOLDER{return @"serverfolder";}
+
 + (NSString *)SES_TABLENAME {
     return @"Session";
 }

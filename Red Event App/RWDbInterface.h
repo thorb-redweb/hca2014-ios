@@ -22,6 +22,7 @@
 @class RWXMLStore;
 @class RWDbPushMessages;
 @class RWDbPushMessageGroups;
+@class RWDbRedUploadImages;
 
 @interface RWDbInterface : NSObject
 
@@ -30,6 +31,7 @@
 @property(strong, nonatomic) RWDbEvents *Events;
 @property(strong, nonatomic) RWDbPushMessages *PushMessages;
 @property(strong, nonatomic) RWDbPushMessageGroups *PushMessageGroups;
+@property(strong, nonatomic) RWDbRedUploadImages *RedUploadImages;
 @property(strong, nonatomic) RWDbSessions *Sessions;
 @property(strong, nonatomic) RWDbVenues *Venues;
 

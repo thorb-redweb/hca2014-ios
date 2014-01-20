@@ -1,5 +1,5 @@
 //
-//  RWStyledSessionListViewController.h
+//  RWRedUploadFolderViewController.h
 //  Red App
 //
 //  Created by Thorbjørn Steen on 1/13/14.
@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "RWBaseViewController.h"
 
-@interface RWStyledSessionListViewController : RWBaseViewController <UITableViewDelegate, UITableViewDataSource>
+@interface RWRedUploadFolderViewController : RWBaseViewController <UITableViewDelegate, UITableViewDataSource>
 
 @property (weak, nonatomic) IBOutlet UILabel *lblTitle;
 @property (weak, nonatomic) IBOutlet UIView *scrTableScrollView;

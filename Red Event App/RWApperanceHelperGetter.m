@@ -35,12 +35,37 @@
 }
 
 - (UIColor *)getColorWithLocalName:(NSString *)localname globalName:(NSString *)globalname {
-    if ([_localLook hasChild:localname])
-        return [UIColor colorWithHexString:[_localLook getStringFromNode:localname]];
-    else if([globalname isEqual:[RWLOOK INVISIBLE]])
-		return [UIColor colorWithHexString:@"00000000"];
-	else
-        return [UIColor colorWithHexString:[_globalLook getStringFromNode:globalname]];
+	if([self staticColors:globalname]){
+		return [UIColor colorWithHexString:[self staticColors:globalname]];
+	}
+	
+    if ([_localLook hasChild:localname]) {
+		return [self getColorWithName: [_localLook getStringFromNode:localname]];
+	}
+	else {
+		return [self getColorWithName: [_globalLook getStringFromNode:globalname]];
+	}
+}
+
+- (UIColor *)getColorWithName:(NSString *)name{
+	if([self staticColors:name]){
+		return [UIColor colorWithHexString:[self staticColors:name]];
+	}
+	
+	return [UIColor colorWithHexString:name];
+}
+
+- (NSString *)staticColors:(NSString *)hexString{
+	if([hexString isEqualToString:[RWLOOK BLACK]]){
+		return @"#000000";
+	}
+	else if([hexString isEqualToString:[RWLOOK INVISIBLE]]){
+		return @"#00000000";
+	}
+	else if([hexString isEqualToString:[RWLOOK WHITE]]){
+		return @"#FFFFFF";
+	}
+	return nil;
 }
 
 - (float)getFloatWithLocalName:(NSString *)localname globalName:(NSString *)globalname {

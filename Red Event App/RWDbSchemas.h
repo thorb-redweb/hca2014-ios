@@ -64,6 +64,12 @@
 
 + (NSString *)PUSHGROUP_SUBSCRIBING;
 
++ (NSString *)RUI_TABLENAME;
+
++ (NSString *)RUI_LOCALIMAGEPATH;
+
++ (NSString *)RUI_SERVERFOLDER;
+
 + (NSString *)SES_TABLENAME;
 
 + (NSString *)SES_SESSIONID;

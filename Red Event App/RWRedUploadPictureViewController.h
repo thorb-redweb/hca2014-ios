@@ -1,5 +1,5 @@
 //
-//  RWRedUploadViewController.h
+//  RWRedUploadPictureViewController.h
 //  Red App
 //
 //  Created by Thorbjørn Steen on 1/15/14.
@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "RWBaseViewController.h"
 
-@interface RWRedUploadViewController : RWBaseViewController
+@interface RWRedUploadPictureViewController : RWBaseViewController
 
 @property (weak, nonatomic) IBOutlet UIScrollView *scrMainScrollView;
 @property (weak, nonatomic) IBOutlet UIView *vwScrollBackground;

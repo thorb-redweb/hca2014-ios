@@ -50,6 +50,12 @@
     [parentView addConstraints:[NSArray arrayWithObject:pinConstraint]];
 }
 
+- (void)RWpinChildToLeading:(UIView *)childView constant:(int)constant{
+	UIView *parentView = self;
+    NSLayoutConstraint *pinConstraint = [NSLayoutConstraint constraintWithItem:childView attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:parentView attribute:NSLayoutAttributeLeading multiplier:1.0f constant:constant];
+    [parentView addConstraints:[NSArray arrayWithObject:pinConstraint]];
+}
+
 - (void)RWpinChildToTrailing:(UIView *)childView {
     UIView *parentView = self;
     NSLayoutConstraint *pinConstraint = [NSLayoutConstraint constraintWithItem:childView attribute:NSLayoutAttributeTrailing relatedBy:NSLayoutRelationEqual toItem:parentView attribute:NSLayoutAttributeTrailing multiplier:1.0f constant:0];

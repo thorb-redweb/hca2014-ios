@@ -6,27 +6,27 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell opaque="NO" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="S0n-sS-6bT" customClass="RWStyledSessionListItem">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
+        <tableViewCell opaque="NO" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="97" id="S0n-sS-6bT" customClass="RWRedUploadSessionFolderListItem">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="97"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="S0n-sS-6bT" id="jAC-di-4z8">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="63"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="96"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jvJ-ih-Rd2" userLabel="lblTitle">
-                        <rect key="frame" x="10" y="10" width="204" height="21"/>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="300" translatesAutoresizingMaskIntoConstraints="NO" id="jvJ-ih-Rd2" userLabel="lblTitle">
+                        <rect key="frame" x="10" y="10" width="300" height="21"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="204" translatesAutoresizingMaskIntoConstraints="NO" id="1Nv-A1-dxh" userLabel="lblBody">
-                        <rect key="frame" x="10" y="31" width="204" height="22"/>
+                        <rect key="frame" x="10" y="31" width="204" height="55"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="27r-eF-sMw" userLabel="btnTakePicture">
-                        <rect key="frame" x="222" y="12" width="40" height="40"/>
+                        <rect key="frame" x="222" y="39" width="40" height="40"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="40" id="DdE-Sk-LZs"/>
@@ -40,7 +40,7 @@
                         </connections>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hiz-JL-PXU" userLabel="btnSeeArchive">
-                        <rect key="frame" x="270" y="12" width="40" height="40"/>
+                        <rect key="frame" x="270" y="39" width="40" height="40"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="40" id="Jl7-V4-WVV"/>
@@ -54,7 +54,7 @@
                         </connections>
                     </button>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l2h-UC-FOb" userLabel="vwSeperator">
-                        <rect key="frame" x="0.0" y="61" width="320" height="2"/>
+                        <rect key="frame" x="0.0" y="94" width="320" height="2"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -66,18 +66,19 @@
                 <constraints>
                     <constraint firstItem="l2h-UC-FOb" firstAttribute="leading" secondItem="jAC-di-4z8" secondAttribute="leading" id="2ZB-aL-R7Z"/>
                     <constraint firstItem="jvJ-ih-Rd2" firstAttribute="leading" secondItem="jAC-di-4z8" secondAttribute="leading" constant="10" id="2zH-Nd-Z7i"/>
+                    <constraint firstAttribute="trailing" secondItem="jvJ-ih-Rd2" secondAttribute="trailing" constant="10" id="6B2-BK-m80"/>
                     <constraint firstItem="Hiz-JL-PXU" firstAttribute="leading" secondItem="27r-eF-sMw" secondAttribute="trailing" constant="8" symbolic="YES" id="9g6-Za-IIh"/>
-                    <constraint firstItem="jvJ-ih-Rd2" firstAttribute="trailing" secondItem="1Nv-A1-dxh" secondAttribute="trailing" id="B8p-HG-r9o"/>
-                    <constraint firstAttribute="centerY" secondItem="Hiz-JL-PXU" secondAttribute="centerY" constant="-0.5" id="INb-mi-HEb"/>
+                    <constraint firstItem="Hiz-JL-PXU" firstAttribute="centerY" secondItem="27r-eF-sMw" secondAttribute="centerY" priority="900" id="Dpy-Rn-AUn"/>
+                    <constraint firstItem="27r-eF-sMw" firstAttribute="top" relation="greaterThanOrEqual" secondItem="jvJ-ih-Rd2" secondAttribute="bottom" constant="2" id="Er8-GJ-yWx"/>
                     <constraint firstAttribute="trailing" secondItem="Hiz-JL-PXU" secondAttribute="trailing" constant="10" id="JLc-6i-Db7"/>
                     <constraint firstItem="jvJ-ih-Rd2" firstAttribute="top" secondItem="jAC-di-4z8" secondAttribute="top" constant="10" id="LOe-wt-QgE"/>
                     <constraint firstItem="1Nv-A1-dxh" firstAttribute="top" secondItem="jvJ-ih-Rd2" secondAttribute="bottom" id="NcG-WO-wWM"/>
-                    <constraint firstItem="27r-eF-sMw" firstAttribute="leading" secondItem="jvJ-ih-Rd2" secondAttribute="trailing" constant="8" symbolic="YES" id="Q3o-l5-nhq"/>
+                    <constraint firstItem="Hiz-JL-PXU" firstAttribute="centerY" secondItem="1Nv-A1-dxh" secondAttribute="centerY" priority="900" id="Vg7-FW-bLa"/>
                     <constraint firstAttribute="bottom" secondItem="1Nv-A1-dxh" secondAttribute="bottom" constant="10" id="ZCx-Oj-C33"/>
                     <constraint firstAttribute="bottom" secondItem="l2h-UC-FOb" secondAttribute="bottom" id="flr-tJ-8j2"/>
                     <constraint firstItem="1Nv-A1-dxh" firstAttribute="leading" secondItem="jAC-di-4z8" secondAttribute="leading" constant="10" id="iaH-Ng-YJZ"/>
-                    <constraint firstAttribute="centerY" secondItem="27r-eF-sMw" secondAttribute="centerY" constant="-0.5" id="jak-nu-HYx"/>
                     <constraint firstAttribute="trailing" secondItem="l2h-UC-FOb" secondAttribute="trailing" id="lUw-is-gAt"/>
+                    <constraint firstItem="27r-eF-sMw" firstAttribute="leading" secondItem="1Nv-A1-dxh" secondAttribute="trailing" constant="8" symbolic="YES" id="ofS-NT-eaN"/>
                 </constraints>
             </tableViewCellContentView>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>

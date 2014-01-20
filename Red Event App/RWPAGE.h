@@ -13,6 +13,11 @@
 
 + (NSString *)FRONTPAGETYPE;
 
++ (NSString *)GLOBAL;
+
+//Activate Subcomponents
++ (NSString *)USEREDUPLOAD;
+
 //Page Globals
 + (NSString *)ARTICLEID;
 + (NSString *)CATID;
@@ -58,6 +63,12 @@
 
 //PushMessageList Specific
 + (NSString *)SUBSCRIPTIONS;
+
+//RedUpload Specific
++ (NSString *)REDUPLOADFOLDERTYPE;
++ (NSString *)REDUPLOADFOLDERTYPESESSION;
++ (NSString *)REDUPLOADFOLDERTYPEOTHER;
++ (NSString *)REDUPLOADFOLDERID;
 
 //TableNavigator Specific
 + (NSString *)ENTRY;

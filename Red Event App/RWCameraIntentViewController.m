@@ -117,8 +117,8 @@ static void * CapturingStillImageContext = &CapturingStillImageContext;
 	if(imagesaved){
 		[nextPage addNodeWithName:[RWPAGE FILEPATH] value:[cameraHandler filePath]];
 	}
-	if([_page hasChild:[RWPAGE SESSIONID]]){
-		[nextPage addNodeWithName:[RWPAGE SESSIONID] value:[_page getStringFromNode:[RWPAGE SESSIONID]]];
+	if([_page hasChild:[RWPAGE REDUPLOADFOLDERID]]){
+		[nextPage addNodeWithName:[RWPAGE REDUPLOADFOLDERID] value:[_page getStringFromNode:[RWPAGE REDUPLOADFOLDERID]]];
 	}
 	
 	[_app.navController pushViewWithPage:nextPage];

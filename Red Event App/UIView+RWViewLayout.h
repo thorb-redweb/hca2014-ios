@@ -24,6 +24,8 @@
 
 - (void)RWpinChildToLeading:(UIView *)childView;
 
+- (void)RWpinChildToLeading:(UIView *)childView constant:(int)constant;
+
 - (void)RWpinChildToTrailing:(UIView *)childView;
 
 - (void)RWpinChildToSides:(UIView *)childView;

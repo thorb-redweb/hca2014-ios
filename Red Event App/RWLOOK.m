@@ -13,7 +13,9 @@
 + (NSString *)APPEARANCEFILENAME {return @"appearance.xml";}
 
 //Color Constants
++ (NSString *)BLACK {return @"black";}
 + (NSString *)INVISIBLE {return @"invisible";}
++ (NSString *)WHITE {return @"white";}
 
 //Gui Constants
 + (NSString *)SCROLLBOUNCES {return @"scrollbounces";}
@@ -187,7 +189,7 @@
 + (NSString *)PUSHMESSAGEDETAIL_SENTTEXTSTYLE {return @"senttextstyle";}
 
 //RedUpload
-+ (NSString *)REDUPLOAD_APPROVALBOXCOLOR {return @"approvalboxcolor";}
++ (NSString *)REDUPLOADPICTUREVIEW_APPROVALBOXCOLOR {return @"approvalboxcolor";}
 
 //SessionDetail
 + (NSString *)SESSIONDETAIL_LABELCOLOR {return @"labelcolor";}
@@ -197,10 +199,10 @@
 + (NSString *)SESSIONDETAIL_LABELSTYLE {return @"labelstyle";}
 
 //StyledSessionList
-+(NSString *)STYLEDSESSIONLIST_LISTBACKGROUNDCOLOR {return @"listbackgroundcolor";}
-+(NSString *)STYLEDSESSIONLIST_LISTLINECOLOR {return @"listlinecolor";}
-+(NSString *)STYLEDSESSIONLIST_CAMERABUTTONIMAGE {return @"camerabuttonimage";}
-+(NSString *)STYLEDSESSIONLIST_ARCHIVEBUTTONIMAGE {return @"archivebuttonimage";}
++(NSString *)REDUPLOADFOLDERVIEW_LISTBACKGROUNDCOLOR {return @"listbackgroundcolor";}
++(NSString *)REDUPLOADFOLDERVIEW_LISTLINECOLOR {return @"listlinecolor";}
++(NSString *)REDUPLOADFOLDERVIEW_CAMERABUTTONIMAGE {return @"camerabuttonimage";}
++(NSString *)REDUPLOADFOLDERVIEW_ARCHIVEBUTTONIMAGE {return @"archivebuttonimage";}
 
 //Swipeview
 + (NSString *)SWIPEVIEW_SELECTEDPAGECOLOR {return @"selectedpagecolor";}

@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RWRedUploadViewController">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RWRedUploadPictureViewController">
             <connections>
                 <outlet property="btnBack" destination="o3i-pt-caO" id="U8Z-oY-oR1"/>
                 <outlet property="btnBottomLeft" destination="5ux-fh-Tme" id="7Aq-SQ-3sZ"/>

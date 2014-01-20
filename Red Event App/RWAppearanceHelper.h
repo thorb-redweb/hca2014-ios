@@ -28,6 +28,8 @@
 
 - (void)setBackgroundTileImageOrColor:(UIView *)view localImageName:(NSString *)localimagename localColorName:(NSString *)localcolorname globalName:(NSString *)globalname;
 
+- (void)setBackgroundAsShape:(UIView *)view localBackgroundColorName:(NSString *)localBackgroundColorName globalBackgroundColorName:(NSString *)globalBackgroundColorName borderWidth:(int)borderWidth localBorderColorName:(NSString *)localBorderColorName globalBorderColorName:(NSString *)globalBorderColorName cornerRadius:(int)cornerRadius;
+
 - (void)setBorderColor:(UIView *)view localName:(NSString *)localname globalName:(NSString *)globalname;
 
 - (void)setLogo:(UIImageView *)imageview imagename:(NSString *)imagename;

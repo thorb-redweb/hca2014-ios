@@ -8,9 +8,12 @@
 
 #import "UIColor+RWColor.h"
 
+#import "RWLOOK.h"
+
 @implementation UIColor (RWColor)
 
 + (UIColor *)colorWithHexString:(NSString *)hexString {
+	
     NSString *colorString = [[hexString stringByReplacingOccurrencesOfString:@"#" withString:@""] uppercaseString];
     CGFloat alpha, red, blue, green;
     switch ([colorString length]) {

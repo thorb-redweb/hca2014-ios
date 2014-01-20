@@ -1,5 +1,5 @@
 //
-//  RWRedUploadViewController.m
+//  RWRedUploadPictureViewController.m
 //  Red App
 //
 //  Created by Thorbjørn Steen on 1/15/14.
@@ -8,21 +8,27 @@
 
 #import "MyLog.h"
 
-#import "RWRedUploadViewController.h"
+#import "RWRedUploadPictureViewController.h"
 
-#import "RWSessionVM.h"
+#import "RWVolatileDataStores.h"
+#import "RWRedUploadDataStore.h"
+#import "RWRedUploadServerFolder.h"
 
-@interface RWRedUploadViewController ()
+#import "RWDbSchemas.h"
+#import "RWDbRedUploadImages.h"
+
+@interface RWRedUploadPictureViewController ()
 
 @end
 
-@implementation RWRedUploadViewController{
+@implementation RWRedUploadPictureViewController {
 	bool approved;
-	RWSessionVM *session;
+	RWRedUploadServerFolder *folder;
+	NSString *imagePath;
 }
 
 - (id)initWithPage:(RWXmlNode *)page {
-    self = [super initWithNibName:@"RWRedUploadViewController" bundle:nil page:page];
+    self = [super initWithNibName:@"RWRedUploadPictureViewController" bundle:nil page:page];
     if (self) {
 		approved = NO;
     }
@@ -35,11 +41,26 @@
     [self.view setTranslatesAutoresizingMaskIntoConstraints:NO];
     [_scrMainScrollView setTranslatesAutoresizingMaskIntoConstraints:NO];
 	
-	if ([_page hasChild:[RWPAGE SESSIONID]]) {
-		int sessionId = [_page getIntegerFromNode:[RWPAGE SESSIONID]];
-		session = [_db.Sessions getVMFromId:sessionId];
-	}
+	int folderId = [_page getIntegerFromNode:[RWPAGE REDUPLOADFOLDERID]];
+	RWRedUploadDataStore *redUpload = [_app.volatileDataStores getRedUpload];
+	folder = [redUpload getFolder:folderId];
 	
+	if([_page hasChild:[RWPAGE FILEPATH]]){
+        imagePath = [_page getStringFromNode:[RWPAGE FILEPATH]];
+		
+		if([_db.RedUploadImages noDatabaseEntryWithServerFolder:folder.serverFolder imagePath:imagePath]){
+			NSMutableDictionary *entry = [[NSMutableDictionary alloc] initWithObjectsAndKeys:folder.serverFolder, [RWDbSchemas RUI_SERVERFOLDER], imagePath, [RWDbSchemas RUI_LOCALIMAGEPATH], nil];
+			[_db.RedUploadImages createEntry:entry];
+		}
+    }
+    else {
+		[_btnTopRight setEnabled:NO];
+		[_btnBottomLeft setEnabled:NO];
+		[_btnDeletePicture setEnabled:NO];
+        DDLogError(@"No filepath provided for image");
+    }
+	
+	[self setControls];
 	[self setAppearance];
 	[self setText];
 }
@@ -47,7 +68,6 @@
 -(void)setControls{
 	[_swcApproval setEnabled:NO];
 	[_swcApproval setOn:NO];
-	[_scrMainScrollView setBounces:[_page getBoolFromNode:[RWLOOK SCROLLBOUNCES]]];
 }
 
 -(void)setAppearance{
@@ -59,14 +79,16 @@
 	[helper.button setCustomStyle:_btnBack tag:@"topbutton" defaultColor:[RWLOOK DEFCOLOR_ALT] defaultSize:[RWLOOK DEFSIZE_ITEMTITLE]];
 	[helper.button setCustomStyle:_btnTopRight tag:@"topbutton" defaultColor:[RWLOOK DEFCOLOR_ALT] defaultSize:[RWLOOK DEFSIZE_ITEMTITLE]];
 	
-	[helper.button setCustomStyle:_btnBack tag:@"bottombutton" defaultColor:[RWLOOK DEFCOLOR_BACK] defaultSize:[RWLOOK DEFSIZE_ITEMTITLE]];
-	[helper.button setCustomStyle:_btnTopRight tag:@"bottombutton" defaultColor:[RWLOOK DEFCOLOR_BACK] defaultSize:[RWLOOK DEFSIZE_ITEMTITLE]];
+	[helper.button setCustomStyle:_btnBottomLeft tag:@"bottombutton" defaultColor:[RWLOOK DEFCOLOR_BACK] defaultSize:[RWLOOK DEFSIZE_ITEMTITLE]];
+	[helper.button setCustomStyle:_btnDeletePicture tag:@"bottombutton" defaultColor:[RWLOOK DEFCOLOR_BACK] defaultSize:[RWLOOK DEFSIZE_ITEMTITLE]];
 	
 	[helper.label setTitleStyle:_lblTitle];
 	
-	[helper setBackgroundColor:_vwApprovalBox localName:[RWLOOK REDUPLOAD_APPROVALBOXCOLOR] globalName:[RWLOOK DEFAULT_ALTCOLOR]];
+	[helper setBackgroundColor:_vwApprovalBox localName:[RWLOOK REDUPLOADPICTUREVIEW_APPROVALBOXCOLOR] globalName:[RWLOOK DEFAULT_ALTCOLOR]];
 	[helper.label setAltTextStyle:_lblApprovalStatement];
 	[helper.label setAltTextStyle:_lblApprovalStatus];
+	
+	[helper setScrollBounces:_scrMainScrollView localName:[RWLOOK SCROLLBOUNCES] globalName:[RWLOOK SCROLLBOUNCES]];
 }
 
 -(void)setText{
@@ -74,7 +96,7 @@
 	
     [helper setButtonText:_btnBack textName:[RWTEXT REDUPLOAD_BACKBUTTON] defaultText:[RWDEFAULTTEXT REDUPLOAD_BACKBUTTON]];
     [helper setButtonText:_btnTopRight textName:[RWTEXT REDUPLOAD_TOPRIGHTBUTTON] defaultText:[RWDEFAULTTEXT REDUPLOAD_TOPRIGHTBUTTON]];
-	[_lblTitle setText:session.title];
+	[_lblTitle setText:folder.name];
 	[helper setTextFieldPlaceHolderText:_txtPictureText textName:[RWTEXT REDUPLOAD_PICTURETEXTHINT] defaultText:[RWDEFAULTTEXT REDUPLOAD_PICTURETEXTHINT]];
 	[helper setText:_lblApprovalStatement textName:[RWTEXT REDUPLOAD_APPROVALSTATEMENT] defaultText:[RWDEFAULTTEXT REDUPLOAD_APPROVALSTATEMENT]];
 	[helper setText:_lblApprovalStatus textName:[RWTEXT REDUPLOAD_APPROVALSTATUSNO] defaultText:[RWDEFAULTTEXT REDUPLOAD_APPROVALSTATUSNO]];
@@ -85,8 +107,7 @@
 -(void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
 	
-	if([_page hasChild:[RWPAGE FILEPATH]]){
-        NSString *imagePath = [_page getStringFromNode:[RWPAGE FILEPATH]];
+	if(imagePath){
         UIImage *image = [UIImage imageWithContentsOfFile:imagePath];
         [_imgPicture setImage:image];
 		
@@ -100,24 +121,18 @@
 	        DDLogError(@"No image exists for given path");
 		}
     }
-    else {
-		[_btnTopRight setEnabled:NO];
-		[_btnBottomLeft setEnabled:NO];
-		[_btnDeletePicture setEnabled:NO];
-        DDLogError(@"No filepath provided for image");
-    }
 }
 
 - (IBAction)backButtonClicked:(id)sender{
-	[_app.navController popPage];
+	RWXmlNode *parentPage = [_xml getPage:[_page getStringFromNode:[RWPAGE PARENT]]];
+
+	[_app.navController pushViewWithPage:parentPage];
 }
 
 - (IBAction)topRightButtonClicked:(id)sender{
-	RWXmlNode *nextPage = [_xml getPage:_childname];
-	if ([_page hasChild:[RWPAGE SESSIONID]]) {
-		[nextPage addNodeWithName:[RWPAGE SESSIONID] value:[_page getStringFromNode:[RWPAGE SESSIONID]]];
-	}	
-    [_app.navController pushViewWithPage:nextPage];
+	RWXmlNode *cameraPage = [_xml getPage:[_page getStringFromNode:[RWPAGE CHILD]]];
+	
+	[_app.navController pushViewWithPage:cameraPage];
 }
 
 - (IBAction)bottomLeftButtonClicked:(id)sender{
@@ -131,13 +146,16 @@
     } else {
         
     }
-	
 }
 
 - (IBAction)deletePictureButtonClicked:(id)sender{
+	
 	NSString *filePath = [_page getStringFromNode:[RWPAGE FILEPATH]];
+
+	[_db.RedUploadImages deleteEntryWithImagePath:filePath];
+	
 	NSFileManager *fileManager = [NSFileManager defaultManager];
-	[fileManager removeItemAtPath:filePath error:nil];
+	[fileManager removeItemAtPath:filePath error:nil];	
 	
 	[_app.navController popPage];
 }

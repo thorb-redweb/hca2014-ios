@@ -24,6 +24,10 @@
     return self;
 }
 
+- (NSMutableArray *)getFromDatabase:(NSString *)itemType {
+    return [self getFromDatabase:itemType predicate:nil sort:nil prefetching:nil fetchLimit:0];
+}
+
 - (NSMutableArray *)getFromDatabase:(NSString *)itemType predicate:(NSPredicate *)predicate {
     return [self getFromDatabase:itemType predicate:predicate sort:nil prefetching:nil fetchLimit:0];
 }

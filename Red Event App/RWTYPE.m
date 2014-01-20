@@ -25,12 +25,12 @@
 + (NSString *)PUSHMESSAGEAUTOSUBSCRIBER {return @"PushMessageAutoSubscriber";}
 + (NSString *)PUSHMESSAGEDETAIL {return @"PushMessageDetail";}
 + (NSString *)PUSHMESSAGELIST {return @"PushMessageList";}
-+ (NSString *)REDUPLOAD {return @"RedUpload";}
++ (NSString *)REDUPLOADFOLDERVIEW {return @"RedUploadFolderView";}
++ (NSString *)REDUPLOADPICTUREVIEW {return @"RedUploadPictureView";}
 + (NSString *)SESSIONDETAIL {return @"SessionDetail";}
 + (NSString *)SESSIONMAP {return @"SessionMap";}
 + (NSString *)SPLITVIEW {return @"SplitView";}
 + (NSString *)STATICARTICLE {return @"StaticArticle";}
-+ (NSString *)STYLEDSESSIONLIST {return @"StyledSessionList";}
 + (NSString *)SWIPEVIEW {return @"SwipeView";}
 + (NSString *)TABLENAVIGATOR {return @"TableNavigator";}
 + (NSString *)UPCOMINGSESSIONS {return @"UpcomingSessions";}

@@ -16,7 +16,12 @@
 
 #import "RWSplashViewController.h"
 #import "RWMainViewController.h"
+
+#import "RWRedUploadDataStore.h"
+
 #import "RWAppearanceHelper.h"
+#import "RWPAGE.h"
+#import "RWVolatileDataStores.h"
 
 @interface RWAppDelegate ()
 
@@ -25,7 +30,10 @@
 @implementation RWAppDelegate{
     bool _registered;
     NSDictionary *_localNotification;
+	bool _debugSkipUpdates;
 }
+
+- (bool) shouldSkipUpdate{ return _debugSkipUpdates; }
 
 @synthesize managedObjectContext = _managedObjectContext;
 @synthesize managedObjectModel = _managedObjectModel;
@@ -35,6 +43,8 @@
 	self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
 
+	 _debugSkipUpdates = NO;
+	
     [GMSServices provideAPIKey:@"AIzaSyCpSOR5gXO1zDC3B5uRnpek-oRt4e9nF3Q"];
 
     self.window.backgroundColor = [UIColor whiteColor];
@@ -78,7 +88,13 @@
 }
 
 -(void)getInitializationData {
-
+	_volatileDataStores = [[RWVolatileDataStores alloc] init];
+	if([_xml.pages hasChild:[RWPAGE GLOBAL]]){
+		RWXmlNode *global = [_xml.pages getChildFromNode:[RWPAGE GLOBAL]];
+		if([global hasChild:[RWPAGE USEREDUPLOAD]] && [global getBoolFromNode:[RWPAGE USEREDUPLOAD]]){
+			[_volatileDataStores addObject:[[RWRedUploadDataStore alloc] initWithDb:_db]];
+		}
+	}
 }
 
 -(void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken{

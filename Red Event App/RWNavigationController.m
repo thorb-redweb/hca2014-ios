@@ -22,11 +22,11 @@
 #import "RWOverviewMapViewController.h"
 #import "RWPushMessageDetailViewController.h"
 #import "RWPushMessageListViewController.h"
-#import "RWRedUploadViewController.h"
+#import "RWRedUploadPictureViewController.h"
 #import "RWSessionDetailViewController.h"
 #import "RWSessionMapViewController.h"
 #import "RWStaticArticleController.h"
-#import "RWStyledSessionListViewController.h"
+#import "RWRedUploadFolderViewController.h"
 #import "RWSwipeViewController.h"
 #import "RWTableNavigatorViewController.h"
 #import "RWVenueDetailViewController.h"
@@ -200,8 +200,11 @@ static const int ddLogLevel = LOG_LEVEL_INFO;
     else if ([viewControllerType isEqual:[RWTYPE OVERVIEWMAP]]) {
         return [[RWOverviewMapViewController alloc] initWithPage:page];
     }
-    else if ([viewControllerType isEqual:[RWTYPE REDUPLOAD]]) {
-        return [[RWRedUploadViewController alloc] initWithPage:page];
+    else if ([viewControllerType isEqual:[RWTYPE REDUPLOADFOLDERVIEW]]) {
+        return [[RWRedUploadFolderViewController alloc] initWithPage:page];
+    }
+    else if ([viewControllerType isEqual:[RWTYPE REDUPLOADPICTUREVIEW]]) {
+        return [[RWRedUploadPictureViewController alloc] initWithPage:page];
     }
     else if ([viewControllerType isEqual:[RWTYPE SESSIONDETAIL]]) {
         return [[RWSessionDetailViewController alloc] initWithPage:page];
@@ -211,9 +214,6 @@ static const int ddLogLevel = LOG_LEVEL_INFO;
     }
     else if ([viewControllerType isEqual:[RWTYPE STATICARTICLE]]) {
         return [[RWStaticArticleController alloc] initWithPage:page];
-    }
-    else if ([viewControllerType isEqual:[RWTYPE STYLEDSESSIONLIST]]) {
-        return [[RWStyledSessionListViewController alloc] initWithPage:page];
     }
     else if ([viewControllerType isEqual:[RWTYPE SWIPEVIEW]]) {
         return [[RWSwipeViewController alloc] initWithPage:page];

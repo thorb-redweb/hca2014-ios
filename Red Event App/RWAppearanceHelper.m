@@ -47,6 +47,15 @@
 	}
 }
 
+- (void)setBackgroundAsShape:(UIView *)view localBackgroundColorName:(NSString *)localBackgroundColorName globalBackgroundColorName:(NSString *)globalBackgroundColorName borderWidth:(int)borderWidth localBorderColorName:(NSString *)localBorderColorName globalBorderColorName:(NSString *)globalBorderColorName cornerRadius:(int)cornerRadius {
+	[self setBackgroundColor:view localName:localBackgroundColorName globalName:globalBackgroundColorName];
+	
+	[self setBorderColor:view localName:localBorderColorName globalName:globalBorderColorName];
+	view.layer.cornerRadius = cornerRadius;
+	view.layer.masksToBounds = YES;
+	view.layer.borderWidth = borderWidth;
+}
+
 - (void)setBorderColor:(UIView *)view localName:(NSString *)localname globalName:(NSString *)globalname{
 	view.layer.borderColor = [_getter getColorWithLocalName:localname globalName:globalname].CGColor;
 }

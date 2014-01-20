@@ -14,6 +14,11 @@
 
 + (NSString *)FRONTPAGETYPE {return @"FrontPage";}
 
++ (NSString *)GLOBAL {return @"global";}
+
+//Activate Subcomponents
++ (NSString *)USEREDUPLOAD {return @"redupload";}
+
 //Page Globals
 + (NSString *)ARTICLEID {return @"articleid";}
 + (NSString *)CATID {return @"catid";}
@@ -57,6 +62,12 @@
 
 //PushMessageList Specific
 + (NSString *)SUBSCRIPTIONS {return @"subscriptions";}
+
+//RedUpload Specific
++ (NSString *)REDUPLOADFOLDERTYPE {return @"foldertype";}
++ (NSString *)REDUPLOADFOLDERTYPESESSION {return @"session";}
++ (NSString *)REDUPLOADFOLDERTYPEOTHER {return @"other";}
++ (NSString *)REDUPLOADFOLDERID {return @"folderid";}
 
 //TableNavigator Specific
 + (NSString *)ENTRY {return @"entry";}
