@@ -23,8 +23,9 @@
 
 @implementation RWRedUploadPictureViewController {
 	bool approved;
-	RWRedUploadServerFolder *folder;
-	NSString *imagePath;
+	RWRedUploadServerFolder *_folder;
+	NSString *_imagePath;
+	RedUploadImage *_redUploadImageObject;
 }
 
 - (id)initWithPage:(RWXmlNode *)page {
@@ -43,14 +44,17 @@
 	
 	int folderId = [_page getIntegerFromNode:[RWPAGE REDUPLOADFOLDERID]];
 	RWRedUploadDataStore *redUpload = [_app.volatileDataStores getRedUpload];
-	folder = [redUpload getFolder:folderId];
+	_folder = [redUpload getFolder:folderId];
 	
 	if([_page hasChild:[RWPAGE FILEPATH]]){
-        imagePath = [_page getStringFromNode:[RWPAGE FILEPATH]];
+        _imagePath = [_page getStringFromNode:[RWPAGE FILEPATH]];
 		
-		if([_db.RedUploadImages noDatabaseEntryWithServerFolder:folder.serverFolder imagePath:imagePath]){
-			NSMutableDictionary *entry = [[NSMutableDictionary alloc] initWithObjectsAndKeys:folder.serverFolder, [RWDbSchemas RUI_SERVERFOLDER], imagePath, [RWDbSchemas RUI_LOCALIMAGEPATH], nil];
-			[_db.RedUploadImages createEntry:entry];
+		if([_db.RedUploadImages noDatabaseEntryWithServerFolder:_folder.serverFolder imagePath:_imagePath]){
+			NSMutableDictionary *entry = [[NSMutableDictionary alloc] initWithObjectsAndKeys:_folder.serverFolder, [RWDbSchemas RUI_SERVERFOLDER], _imagePath, [RWDbSchemas RUI_LOCALIMAGEPATH], nil];
+			_redUploadImageObject = [_db.RedUploadImages createEntry:entry];
+		}
+		else {
+			_redUploadImageObject = [_db.RedUploadImages getFromImagePath:_imagePath];
 		}
     }
     else {
@@ -96,7 +100,7 @@
 	
     [helper setButtonText:_btnBack textName:[RWTEXT REDUPLOAD_BACKBUTTON] defaultText:[RWDEFAULTTEXT REDUPLOAD_BACKBUTTON]];
     [helper setButtonText:_btnTopRight textName:[RWTEXT REDUPLOAD_TOPRIGHTBUTTON] defaultText:[RWDEFAULTTEXT REDUPLOAD_TOPRIGHTBUTTON]];
-	[_lblTitle setText:folder.name];
+	[_lblTitle setText:_folder.name];
 	[helper setTextFieldPlaceHolderText:_txtPictureText textName:[RWTEXT REDUPLOAD_PICTURETEXTHINT] defaultText:[RWDEFAULTTEXT REDUPLOAD_PICTURETEXTHINT]];
 	[helper setText:_lblApprovalStatement textName:[RWTEXT REDUPLOAD_APPROVALSTATEMENT] defaultText:[RWDEFAULTTEXT REDUPLOAD_APPROVALSTATEMENT]];
 	[helper setText:_lblApprovalStatus textName:[RWTEXT REDUPLOAD_APPROVALSTATUSNO] defaultText:[RWDEFAULTTEXT REDUPLOAD_APPROVALSTATUSNO]];
@@ -107,12 +111,9 @@
 -(void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
 	
-	if(imagePath){
-        UIImage *image = [UIImage imageWithContentsOfFile:imagePath];
+	if(_imagePath){
+        UIImage *image = [UIImage imageWithContentsOfFile:_imagePath];
         [_imgPicture setImage:image];
-		
-        CGSize size = image.size;
-        size = CGSizeMake(0, 0);
 		
 		if(!image){
 			[_btnTopRight setEnabled:NO];
@@ -123,6 +124,14 @@
     }
 }
 
+- (IBAction)textFieldChanged:(id)sender{
+	_redUploadImageObject.text = _txtPictureText.text;
+	NSError *error = nil;
+	if (![_app.managedObjectContext save:&error]) {
+		DDLogError(@"Error when saving the changed text");
+	}
+}
+
 - (IBAction)backButtonClicked:(id)sender{
 	RWXmlNode *parentPage = [_xml getPage:[_page getStringFromNode:[RWPAGE PARENT]]];
 
@@ -131,6 +140,8 @@
 
 - (IBAction)topRightButtonClicked:(id)sender{
 	RWXmlNode *cameraPage = [_xml getPage:[_page getStringFromNode:[RWPAGE CHILD]]];
+	
+	[cameraPage addNodeWithName:[RWPAGE REDUPLOADFOLDERID] value:_folder.folderId];
 	
 	[_app.navController pushViewWithPage:cameraPage];
 }
@@ -157,7 +168,7 @@
 	NSFileManager *fileManager = [NSFileManager defaultManager];
 	[fileManager removeItemAtPath:filePath error:nil];	
 	
-	[_app.navController popPage];
+	[self backButtonClicked:nil];
 }
 
 - (void)didReceiveMemoryWarning

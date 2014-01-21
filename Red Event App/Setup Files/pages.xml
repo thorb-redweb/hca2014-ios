@@ -139,6 +139,7 @@
 		<button2>Nyheder2</button2>
 		<button3>RUEvents</button3>
 		<button4>RUOther</button4>
+		<button5>ContentFolder</button5>
     </page>
     <page>
         <name>About2</name>
@@ -180,6 +181,10 @@
         <child>Camera2</child>
 		<folder>redApp</folder>
     </page>
+	<page>
+		<name>ContentFolder</name>
+		<type>RedUploadFolderContentView</type>
+	</page>
     <page>
         <name>PMInitializer</name>
         <type>PushMessageSubscriber</type>

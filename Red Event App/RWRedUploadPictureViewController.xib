@@ -76,6 +76,7 @@
                                     <textInputTraits key="textInputTraits"/>
                                     <connections>
                                         <action selector="removeKeyboard" destination="-1" eventType="editingDidEndOnExit" id="UBf-hT-42S"/>
+                                        <action selector="textFieldChanged:" destination="-1" eventType="editingChanged" id="uOi-PO-GsW"/>
                                     </connections>
                                 </textField>
                                 <view contentMode="scaleToFill" horizontalCompressionResistancePriority="745" translatesAutoresizingMaskIntoConstraints="NO" id="2Xn-8U-SNy" userLabel="vwApprovalBox">

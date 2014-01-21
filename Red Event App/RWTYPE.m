@@ -26,6 +26,7 @@
 + (NSString *)PUSHMESSAGEDETAIL {return @"PushMessageDetail";}
 + (NSString *)PUSHMESSAGELIST {return @"PushMessageList";}
 + (NSString *)REDUPLOADFOLDERVIEW {return @"RedUploadFolderView";}
++ (NSString *)REDUPLOADFOLDERCONTENTVIEW {return @"RedUploadFolderContentView";}
 + (NSString *)REDUPLOADPICTUREVIEW {return @"RedUploadPictureView";}
 + (NSString *)SESSIONDETAIL {return @"SessionDetail";}
 + (NSString *)SESSIONMAP {return @"SessionMap";}

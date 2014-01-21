@@ -23,7 +23,7 @@
 
 - (bool)noDatabaseEntryWithServerFolder:(NSString *)serverFolder imagePath:(NSString *)imagePath;
 
-- (void)createEntry:(NSDictionary *)entry;
+- (RedUploadImage *)createEntry:(NSDictionary *)entry;
 
 - (void)deleteEntryWithImagePath:(NSString *)path;
 

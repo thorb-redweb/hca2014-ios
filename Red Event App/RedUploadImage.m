@@ -2,7 +2,7 @@
 //  RedUploadImage.m
 //  Red App
 //
-//  Created by Thorbjørn Steen on 1/16/14.
+//  Created by Thorbjørn Steen on 1/20/14.
 //  Copyright (c) 2014 redWEB. All rights reserved.
 //
 
@@ -13,5 +13,7 @@
 
 @dynamic localimagepath;
 @dynamic serverfolder;
+@dynamic text;
+@dynamic approved;
 
 @end

@@ -44,7 +44,7 @@
 	for (RedUploadImage *image in redUploadImages) {
 		bool folderDoesntExist = YES;
 		for (RWRedUploadServerFolder *folder in _sessionFolders) {
-			if (folder.serverFolder == image.serverfolder) {
+			if ([folder.serverFolder isEqualToString: image.serverfolder]) {
 				folderDoesntExist = NO;
 				break;
 			}

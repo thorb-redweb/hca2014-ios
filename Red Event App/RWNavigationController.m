@@ -22,11 +22,12 @@
 #import "RWOverviewMapViewController.h"
 #import "RWPushMessageDetailViewController.h"
 #import "RWPushMessageListViewController.h"
+#import "RWRedUploadFolderViewController.h"
+#import "RWRedUploadFolderContentViewController.h"
 #import "RWRedUploadPictureViewController.h"
 #import "RWSessionDetailViewController.h"
 #import "RWSessionMapViewController.h"
 #import "RWStaticArticleController.h"
-#import "RWRedUploadFolderViewController.h"
 #import "RWSwipeViewController.h"
 #import "RWTableNavigatorViewController.h"
 #import "RWVenueDetailViewController.h"
@@ -202,6 +203,9 @@ static const int ddLogLevel = LOG_LEVEL_INFO;
     }
     else if ([viewControllerType isEqual:[RWTYPE REDUPLOADFOLDERVIEW]]) {
         return [[RWRedUploadFolderViewController alloc] initWithPage:page];
+    }
+    else if ([viewControllerType isEqual:[RWTYPE REDUPLOADFOLDERCONTENTVIEW]]) {
+        return [[RWRedUploadFolderContentViewController alloc] initWithPage:page];
     }
     else if ([viewControllerType isEqual:[RWTYPE REDUPLOADPICTUREVIEW]]) {
         return [[RWRedUploadPictureViewController alloc] initWithPage:page];

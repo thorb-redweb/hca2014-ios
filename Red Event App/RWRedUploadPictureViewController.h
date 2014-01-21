@@ -27,6 +27,7 @@
 
 - (id)initWithPage:(RWXmlNode *)page;
 
+- (IBAction)textFieldChanged:(id)sender;
 - (IBAction)backButtonClicked:(id)sender;
 - (IBAction)topRightButtonClicked:(id)sender;
 - (IBAction)bottomLeftButtonClicked:(id)sender;

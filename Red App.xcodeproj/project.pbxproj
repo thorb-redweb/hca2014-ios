@@ -142,7 +142,6 @@
 		364E9C6C1886A882008D0DCC /* RWTextFieldAppearanceHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 364E9C6B1886A882008D0DCC /* RWTextFieldAppearanceHelper.m */; };
 		364E9C7018882490008D0DCC /* RWVolatileDataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 364E9C6F18882490008D0DCC /* RWVolatileDataStore.m */; };
 		364E9C731888277F008D0DCC /* RWRedUploadDataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 364E9C721888277F008D0DCC /* RWRedUploadDataStore.m */; };
-		364E9C761888292C008D0DCC /* RedUploadImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 364E9C751888292C008D0DCC /* RedUploadImage.m */; };
 		364E9C7918882957008D0DCC /* RWDbRedUploadImages.m in Sources */ = {isa = PBXBuildFile; fileRef = 364E9C7818882957008D0DCC /* RWDbRedUploadImages.m */; };
 		364E9C7C18882EFA008D0DCC /* RWRedUploadServerFolder.m in Sources */ = {isa = PBXBuildFile; fileRef = 364E9C7B18882EFA008D0DCC /* RWRedUploadServerFolder.m */; };
 		364E9C7F18883090008D0DCC /* RWRedUploadServerSessionFolder.m in Sources */ = {isa = PBXBuildFile; fileRef = 364E9C7E18883090008D0DCC /* RWRedUploadServerSessionFolder.m */; };
@@ -150,6 +149,12 @@
 		364E9C8718892509008D0DCC /* RWVolatileDataStores.m in Sources */ = {isa = PBXBuildFile; fileRef = 364E9C8618892509008D0DCC /* RWVolatileDataStores.m */; };
 		364E9C8A188951B7008D0DCC /* RWRedUploadOtherFolderListItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 364E9C89188951B7008D0DCC /* RWRedUploadOtherFolderListItem.m */; };
 		364E9C8C188951C9008D0DCC /* RWRedUploadOtherFolderListItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 364E9C8B188951C9008D0DCC /* RWRedUploadOtherFolderListItem.xib */; };
+		364E9C91188D4FF7008D0DCC /* RWRedUploadFolderContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 364E9C8F188D4FF7008D0DCC /* RWRedUploadFolderContentViewController.m */; };
+		364E9C92188D4FF7008D0DCC /* RWRedUploadFolderContentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 364E9C90188D4FF7008D0DCC /* RWRedUploadFolderContentViewController.xib */; };
+		364E9C95188D66C4008D0DCC /* RWRedUploadFolderContentItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 364E9C94188D66C4008D0DCC /* RWRedUploadFolderContentItem.m */; };
+		364E9C97188D66E4008D0DCC /* RWRedUploadFolderContentItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 364E9C96188D66E4008D0DCC /* RWRedUploadFolderContentItem.xib */; };
+		364E9C9A188D6963008D0DCC /* RedUploadImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 364E9C99188D6963008D0DCC /* RedUploadImage.m */; };
+		364E9C9D188D7D24008D0DCC /* RWBaseCollectionItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 364E9C9C188D7D24008D0DCC /* RWBaseCollectionItem.m */; };
 		367628EB1803F812002ED534 /* RWTEXT.m in Sources */ = {isa = PBXBuildFile; fileRef = 367628EA1803F812002ED534 /* RWTEXT.m */; };
 		367628EE1803F821002ED534 /* RWDEFAULTTEXT.m in Sources */ = {isa = PBXBuildFile; fileRef = 367628ED1803F821002ED534 /* RWDEFAULTTEXT.m */; };
 		367628F318040475002ED534 /* text.xml in Resources */ = {isa = PBXBuildFile; fileRef = 367628F218040475002ED534 /* text.xml */; };
@@ -501,8 +506,6 @@
 		364E9C6F18882490008D0DCC /* RWVolatileDataStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWVolatileDataStore.m; sourceTree = "<group>"; };
 		364E9C711888277F008D0DCC /* RWRedUploadDataStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWRedUploadDataStore.h; sourceTree = "<group>"; };
 		364E9C721888277F008D0DCC /* RWRedUploadDataStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWRedUploadDataStore.m; sourceTree = "<group>"; };
-		364E9C741888292C008D0DCC /* RedUploadImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RedUploadImage.h; sourceTree = "<group>"; };
-		364E9C751888292C008D0DCC /* RedUploadImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RedUploadImage.m; sourceTree = "<group>"; };
 		364E9C7718882957008D0DCC /* RWDbRedUploadImages.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWDbRedUploadImages.h; sourceTree = "<group>"; };
 		364E9C7818882957008D0DCC /* RWDbRedUploadImages.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWDbRedUploadImages.m; sourceTree = "<group>"; };
 		364E9C7A18882EFA008D0DCC /* RWRedUploadServerFolder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWRedUploadServerFolder.h; sourceTree = "<group>"; };
@@ -516,6 +519,16 @@
 		364E9C88188951B7008D0DCC /* RWRedUploadOtherFolderListItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWRedUploadOtherFolderListItem.h; sourceTree = "<group>"; };
 		364E9C89188951B7008D0DCC /* RWRedUploadOtherFolderListItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWRedUploadOtherFolderListItem.m; sourceTree = "<group>"; };
 		364E9C8B188951C9008D0DCC /* RWRedUploadOtherFolderListItem.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RWRedUploadOtherFolderListItem.xib; sourceTree = "<group>"; };
+		364E9C8E188D4FF7008D0DCC /* RWRedUploadFolderContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWRedUploadFolderContentViewController.h; sourceTree = "<group>"; };
+		364E9C8F188D4FF7008D0DCC /* RWRedUploadFolderContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWRedUploadFolderContentViewController.m; sourceTree = "<group>"; };
+		364E9C90188D4FF7008D0DCC /* RWRedUploadFolderContentViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RWRedUploadFolderContentViewController.xib; sourceTree = "<group>"; };
+		364E9C93188D66C4008D0DCC /* RWRedUploadFolderContentItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWRedUploadFolderContentItem.h; sourceTree = "<group>"; };
+		364E9C94188D66C4008D0DCC /* RWRedUploadFolderContentItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWRedUploadFolderContentItem.m; sourceTree = "<group>"; };
+		364E9C96188D66E4008D0DCC /* RWRedUploadFolderContentItem.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RWRedUploadFolderContentItem.xib; sourceTree = "<group>"; };
+		364E9C98188D6963008D0DCC /* RedUploadImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RedUploadImage.h; sourceTree = "<group>"; };
+		364E9C99188D6963008D0DCC /* RedUploadImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RedUploadImage.m; sourceTree = "<group>"; };
+		364E9C9B188D7D24008D0DCC /* RWBaseCollectionItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWBaseCollectionItem.h; sourceTree = "<group>"; };
+		364E9C9C188D7D24008D0DCC /* RWBaseCollectionItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWBaseCollectionItem.m; sourceTree = "<group>"; };
 		367628E91803F812002ED534 /* RWTEXT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWTEXT.h; sourceTree = "<group>"; };
 		367628EA1803F812002ED534 /* RWTEXT.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWTEXT.m; sourceTree = "<group>"; };
 		367628EC1803F821002ED534 /* RWDEFAULTTEXT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWDEFAULTTEXT.h; sourceTree = "<group>"; };
@@ -1135,6 +1148,7 @@
 		364E9C6018868CBF008D0DCC /* RedUpload */ = {
 			isa = PBXGroup;
 			children = (
+				364E9C8D188D4ED4008D0DCC /* RedUploadFolderContentView */,
 				364E9C841889231E008D0DCC /* RedUploadFolderView */,
 				364E9C831889230C008D0DCC /* RedUploadPictureView */,
 			);
@@ -1195,6 +1209,19 @@
 				364E9C8B188951C9008D0DCC /* RWRedUploadOtherFolderListItem.xib */,
 			);
 			name = RedUploadFolderView;
+			sourceTree = "<group>";
+		};
+		364E9C8D188D4ED4008D0DCC /* RedUploadFolderContentView */ = {
+			isa = PBXGroup;
+			children = (
+				364E9C8E188D4FF7008D0DCC /* RWRedUploadFolderContentViewController.h */,
+				364E9C8F188D4FF7008D0DCC /* RWRedUploadFolderContentViewController.m */,
+				364E9C90188D4FF7008D0DCC /* RWRedUploadFolderContentViewController.xib */,
+				364E9C93188D66C4008D0DCC /* RWRedUploadFolderContentItem.h */,
+				364E9C94188D66C4008D0DCC /* RWRedUploadFolderContentItem.m */,
+				364E9C96188D66E4008D0DCC /* RWRedUploadFolderContentItem.xib */,
+			);
+			name = RedUploadFolderContentView;
 			sourceTree = "<group>";
 		};
 		3683F1A3181FF35700C22E46 /* AdventWindow */ = {
@@ -1496,6 +1523,8 @@
 				26E7389FD9B1A2416EA7EED5 /* Settings */,
 				26E739DD242040DD71C7F3C9 /* System */,
 				361EA88C180C0DC200441271 /* Venue */,
+				364E9C9B188D7D24008D0DCC /* RWBaseCollectionItem.h */,
+				364E9C9C188D7D24008D0DCC /* RWBaseCollectionItem.m */,
 				364E9C5D1885682F008D0DCC /* RWBaseListItem.h */,
 				364E9C5E1885682F008D0DCC /* RWBaseListItem.m */,
 				3645BFA617D077AC00047159 /* RWBaseViewController.h */,
@@ -1601,8 +1630,8 @@
 				36214F9A183F8207001B0B63 /* PushMessage.m */,
 				36214F96183F8206001B0B63 /* PushMessageGroup.h */,
 				36214F97183F8206001B0B63 /* PushMessageGroup.m */,
-				364E9C741888292C008D0DCC /* RedUploadImage.h */,
-				364E9C751888292C008D0DCC /* RedUploadImage.m */,
+				364E9C98188D6963008D0DCC /* RedUploadImage.h */,
+				364E9C99188D6963008D0DCC /* RedUploadImage.m */,
 			);
 			name = DatabaseModel;
 			sourceTree = "<group>";
@@ -1847,6 +1876,7 @@
 				36AB7CB817C263AE00316921 /* icon_news_bottombar.png in Resources */,
 				364E9C8C188951C9008D0DCC /* RWRedUploadOtherFolderListItem.xib in Resources */,
 				36354BD9181FC8410046066E /* xmas12.jpg in Resources */,
+				364E9C92188D4FF7008D0DCC /* RWRedUploadFolderContentViewController.xib in Resources */,
 				36354BD1181FC8410046066E /* xmas4.jpg in Resources */,
 				36AB7CC017C3609500316921 /* server.xml in Resources */,
 				36354BD6181FC8410046066E /* xmas9.jpg in Resources */,
@@ -1857,6 +1887,7 @@
 				36A727AA17C794E400374063 /* navbar.png in Resources */,
 				3683F1A8181FF54300C22E46 /* RWAdventWindowViewController.xib in Resources */,
 				36214F89183F6E0E001B0B63 /* RWPushMessageListViewController.xib in Resources */,
+				364E9C97188D66E4008D0DCC /* RWRedUploadFolderContentItem.xib in Resources */,
 				36A97ADF185708A40050EC8D /* RWImageUploadBrowserListItem.xib in Resources */,
 				36354BD8181FC8410046066E /* xmas11.jpg in Resources */,
 				36A97AD01855FF620050EC8D /* RWCameraIntentViewController.xib in Resources */,
@@ -1950,6 +1981,7 @@
 				36214F6518351BF1001B0B63 /* RWInfoWindow.m in Sources */,
 				36AB7C4217BD137400316921 /* RWServer.m in Sources */,
 				36AB7C4517BD140100316921 /* RWHandler_DumpServer.m in Sources */,
+				364E9C95188D66C4008D0DCC /* RWRedUploadFolderContentItem.m in Sources */,
 				361EA8801806B0EC00441271 /* UIImage+WebP.m in Sources */,
 				361EA891180C0DE700441271 /* RWVenueDetailViewController.m in Sources */,
 				36AB7C4C17BE0C8C00316921 /* RWDbInterface.m in Sources */,
@@ -2025,7 +2057,9 @@
 				3645BF6217CC939C00047159 /* Event.m in Sources */,
 				3645BF6517CC93B300047159 /* Session.m in Sources */,
 				3604165F17F5917100B9A391 /* Article.m in Sources */,
+				364E9C91188D4FF7008D0DCC /* RWRedUploadFolderContentViewController.m in Sources */,
 				364E9C6418868CE3008D0DCC /* RWRedUploadPictureViewController.m in Sources */,
+				364E9C9A188D6963008D0DCC /* RedUploadImage.m in Sources */,
 				3645BF7017CCB58D00047159 /* RWHandler_DumpDatabase.m in Sources */,
 				3645BF7417CDECC000047159 /* RWOverviewMapViewController.m in Sources */,
 				36354B02181E6C520046066E /* RWSwipeViewController.m in Sources */,
@@ -2071,7 +2105,6 @@
 				26E737869BA3CD47EB4DF1C7 /* RWJSONSession.m in Sources */,
 				36214F9B183F8207001B0B63 /* PushMessage.m in Sources */,
 				26E73C9AA3817CDE9AB356C0 /* RWJSONVenue.m in Sources */,
-				364E9C761888292C008D0DCC /* RedUploadImage.m in Sources */,
 				26E735A83CD4B9562C4CF691 /* RWJSONSchemas.m in Sources */,
 				36A97B561876B0DD0050EC8D /* DDFileLogger.m in Sources */,
 				26E7358C57205B061BD03C68 /* RWTableNavigatorViewController.m in Sources */,
@@ -2091,6 +2124,7 @@
 				26E7349D494E443BB8600B71 /* RWAppDelegate.m in Sources */,
 				26E730EABFC9FE09C156379D /* RWTextHelper.m in Sources */,
 				364E9C8A188951B7008D0DCC /* RWRedUploadOtherFolderListItem.m in Sources */,
+				364E9C9D188D7D24008D0DCC /* RWBaseCollectionItem.m in Sources */,
 				26E73CEBB9ACF58FAC3B3EE8 /* RWBikeTracker.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

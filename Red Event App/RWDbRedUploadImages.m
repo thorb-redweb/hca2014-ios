@@ -35,7 +35,7 @@
 }
 
 -(RedUploadImage *)getFromImagePath:(NSString *)imagePath{
-	NSPredicate *predicate = [NSPredicate predicateWithFormat:@"%K == %d", [RWDbSchemas RUI_LOCALIMAGEPATH], imagePath];
+	NSPredicate *predicate = [NSPredicate predicateWithFormat:@"%K == %@", [RWDbSchemas RUI_LOCALIMAGEPATH], imagePath];
     NSMutableArray *fetchResults = [_dbHelper getFromDatabase:[RWDbSchemas RUI_TABLENAME] predicate:predicate];
 	
 	if(fetchResults.count > 0){
@@ -45,14 +45,14 @@
 }
 
 -(NSMutableArray *)getFromServerFolder:(NSString *)serverFolder{
-	NSPredicate *predicate = [NSPredicate predicateWithFormat:@"%K == %d", [RWDbSchemas RUI_SERVERFOLDER], serverFolder];
+	NSPredicate *predicate = [NSPredicate predicateWithFormat:@"%K == %@", [RWDbSchemas RUI_SERVERFOLDER], serverFolder];
     NSMutableArray *fetchResults = [_dbHelper getFromDatabase:[RWDbSchemas RUI_TABLENAME] predicate:predicate];
 	
     return fetchResults;
 }
 
 - (bool)noDatabaseEntryWithServerFolder:(NSString *)serverFolder imagePath:(NSString *)imagePath{
-	NSString *stringPredicate = [NSString stringWithFormat:@"%@ == '%@' AND %@ != '%@'",
+	NSString *stringPredicate = [NSString stringWithFormat:@"%@ == '%@' AND %@ == '%@'",
 								 [RWDbSchemas RUI_SERVERFOLDER], serverFolder, [RWDbSchemas RUI_LOCALIMAGEPATH], imagePath];
 	NSPredicate *predicate = [NSPredicate predicateWithFormat:stringPredicate];
 	
@@ -63,7 +63,7 @@
     return YES;
 }
 
-- (void)createEntry:(NSDictionary *)entry {
+- (RedUploadImage *)createEntry:(NSDictionary *)entry {
     RedUploadImage *content = (RedUploadImage *) [NSEntityDescription insertNewObjectForEntityForName:[RWDbSchemas RUI_TABLENAME] inManagedObjectContext:_mContext];
 	[content setLocalimagepath:[entry objectForKey:[RWDbSchemas RUI_LOCALIMAGEPATH]]];
 	[content setServerfolder:[entry objectForKey:[RWDbSchemas RUI_SERVERFOLDER]]];
@@ -72,14 +72,23 @@
     if (![_mContext save:&cxtError]) {
         DDLogError(@"did fail with error");
         DDLogError(@"Context save failed in RWDbRedUploadImages:createEntry: %@", cxtError.description);
-		return;
+		return nil;
     }
+	return content;
 }
 
 - (void)deleteEntryWithImagePath:(NSString *)path {
 	RedUploadImage *image = [self getFromImagePath:path];
 	if(image != nil){
 		[_mContext deleteObject:image];
+		NSError *cxtError = nil;
+		if (![_mContext save:&cxtError]) {
+			DDLogError(@"did fail with error");
+			DDLogError(@"Context save failed in RWDbRedUploadImages:deleteEntryWithImagePath: %@", cxtError.description);
+		}
+	}
+	else {
+		DDLogWarn(@"RedUploadImage to be deleted does not exist in database");
 	}
 }
 
