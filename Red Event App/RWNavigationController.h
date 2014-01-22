@@ -24,6 +24,8 @@
 
 - (void)popPage;
 
+- (void)popTwoPages;
+
 - (RWSwipeViewController *)getSwipeView;
 
 + (UIViewController *)getViewControllerFromPage:(RWXmlNode *)parameters;

@@ -30,7 +30,7 @@
 + (NSString *)PARENT;
 
 + (NSString *)PARENTPAGE;
-
++ (NSString *)POPTWICE;
 + (NSString *)PUSHMESSAGEID;
 + (NSString *)PUSHGROUPID;
 + (NSString *)PUSHGROUPIDS;

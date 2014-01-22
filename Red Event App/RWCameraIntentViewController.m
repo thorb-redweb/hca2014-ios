@@ -77,7 +77,12 @@ static void * CapturingStillImageContext = &CapturingStillImageContext;
 
 - (void)viewWillAppear:(BOOL)animated
 {
-    [cameraHandler openCamera];
+	[super viewWillAppear:animated];
+}
+
+- (void)viewDidAppear:(BOOL)animated{
+	[super viewDidAppear:animated];
+	[cameraHandler openCamera];
 }
 
 - (void)viewDidDisappear:(BOOL)animated
@@ -120,6 +125,7 @@ static void * CapturingStillImageContext = &CapturingStillImageContext;
 	if([_page hasChild:[RWPAGE REDUPLOADFOLDERID]]){
 		[nextPage addNodeWithName:[RWPAGE REDUPLOADFOLDERID] value:[_page getStringFromNode:[RWPAGE REDUPLOADFOLDERID]]];
 	}
+	[nextPage addNodeWithName:[RWPAGE POPTWICE] value:@"YES"];
 	
 	[_app.navController pushViewWithPage:nextPage];
 }

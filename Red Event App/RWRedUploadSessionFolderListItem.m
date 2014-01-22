@@ -10,12 +10,15 @@
 
 #import "RWSessionVM.h"
 #import "RWRedUploadServerSessionFolder.h"
+#import "RWDbRedUploadImages.h"
 
 
 @implementation RWRedUploadSessionFolderListItem {
 	RWRedUploadServerSessionFolder *_folder;
 	NSArray *_dataSource;
 	bool _lastRow;
+	
+	bool _archiveEmpty;
 }
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
@@ -36,10 +39,21 @@
 	
 	_dataSource = dataSource;
 	_folder = _dataSource[row];
-	_lastRow = !(row < dataSource.count -1);	
+	_lastRow = !(row < dataSource.count -1);
+	_archiveEmpty = YES;
+	if([_db.RedUploadImages getFromServerFolder:_folder.serverFolder].count > 0){
+		_archiveEmpty = NO;
+	}
 	
+	[self setControls];
 	[self setAppearance];
 	[self setCellContents];
+}
+
+- (void)setControls{
+	if (_archiveEmpty) {
+		[_btnSeeArchive setEnabled:NO];
+	}
 }
 
 - (void)setAppearance{
@@ -74,12 +88,14 @@
 }
 
 - (IBAction)btnArchiveClicked{
-    NSString *childName = [_page getStringFromNode:[RWPAGE CHILD2]];
-	RWXmlNode *nextPage = [[_xml getPage:childName] deepClone];
-	
-	[nextPage addNodeWithName:[RWPAGE REDUPLOADFOLDERID] value:_folder.folderId];
-	
-	[_app.navController pushViewWithPage:nextPage];
+	if(!_archiveEmpty){
+		NSString *childName = [_page getStringFromNode:[RWPAGE CHILD2]];
+		RWXmlNode *nextPage = [[_xml getPage:childName] deepClone];
+		
+		[nextPage addNodeWithName:[RWPAGE REDUPLOADFOLDERID] value:_folder.folderId];
+		
+		[_app.navController pushViewWithPage:nextPage];
+	}
 }
 
 @end

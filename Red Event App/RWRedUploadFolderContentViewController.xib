@@ -6,6 +6,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RWRedUploadFolderContentViewController">
             <connections>
+                <outlet property="btnBack" destination="EEi-mR-k2Z" id="eYX-CL-hAN"/>
+                <outlet property="btnEdit" destination="XPD-sz-gLT" id="WHZ-CZ-y6e"/>
+                <outlet property="btnTakePicture" destination="8JW-aa-Udu" id="L8D-q0-kZ8"/>
+                <outlet property="btnUpload" destination="LN6-oy-S1S" id="9W9-J6-ixs"/>
                 <outlet property="collectionView" destination="QkU-Hc-wLb" id="0Gc-dS-6HJ"/>
                 <outlet property="view" destination="1" id="3"/>
             </connections>
@@ -16,7 +20,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="QkU-Hc-wLb">
-                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <rect key="frame" x="0.0" y="58" width="320" height="452"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="dbt-kb-mqY">
                         <size key="itemSize" width="50" height="50"/>
@@ -30,13 +34,66 @@
                         <outlet property="delegate" destination="-1" id="NnI-pE-6e2"/>
                     </connections>
                 </collectionView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EEi-mR-k2Z">
+                    <rect key="frame" x="20" y="20" width="46" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="Button">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="backButtonClicked:" destination="-1" eventType="touchUpInside" id="5OH-xZ-fpZ"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8JW-aa-Udu">
+                    <rect key="frame" x="254" y="20" width="46" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="Button">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="pictureButtonClicked:" destination="-1" eventType="touchUpInside" id="7CE-e2-6ie"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LN6-oy-S1S">
+                    <rect key="frame" x="20" y="518" width="136" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="Button">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="uploadButtonClicked:" destination="-1" eventType="touchUpInside" id="9cx-gT-4Py"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XPD-sz-gLT">
+                    <rect key="frame" x="164" y="518" width="136" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="Button">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="editButtonClicked:" destination="-1" eventType="touchUpInside" id="EoN-4l-hKR"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstItem="XPD-sz-gLT" firstAttribute="width" secondItem="LN6-oy-S1S" secondAttribute="width" id="0HA-Yx-0HW"/>
+                <constraint firstAttribute="bottom" secondItem="LN6-oy-S1S" secondAttribute="bottom" constant="20" symbolic="YES" id="0Mq-fJ-ug4"/>
+                <constraint firstItem="8JW-aa-Udu" firstAttribute="top" secondItem="1" secondAttribute="top" constant="20" symbolic="YES" id="1hl-75-Jzz"/>
+                <constraint firstItem="QkU-Hc-wLb" firstAttribute="top" secondItem="EEi-mR-k2Z" secondAttribute="bottom" constant="8" symbolic="YES" id="3Ad-fS-eo6"/>
+                <constraint firstItem="QkU-Hc-wLb" firstAttribute="top" secondItem="8JW-aa-Udu" secondAttribute="bottom" constant="8" symbolic="YES" id="4Fl-dJ-CDA"/>
                 <constraint firstAttribute="trailing" secondItem="QkU-Hc-wLb" secondAttribute="trailing" id="P7G-f1-i1m"/>
                 <constraint firstItem="QkU-Hc-wLb" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="Qd2-KI-vQV"/>
-                <constraint firstAttribute="bottom" secondItem="QkU-Hc-wLb" secondAttribute="bottom" id="b5b-cd-9Nw"/>
-                <constraint firstItem="QkU-Hc-wLb" firstAttribute="top" secondItem="1" secondAttribute="top" id="rBe-4M-nhy"/>
+                <constraint firstItem="XPD-sz-gLT" firstAttribute="leading" secondItem="LN6-oy-S1S" secondAttribute="trailing" constant="8" symbolic="YES" id="RdF-2c-SeA"/>
+                <constraint firstAttribute="trailing" secondItem="XPD-sz-gLT" secondAttribute="trailing" constant="20" symbolic="YES" id="X2T-fy-cU7"/>
+                <constraint firstItem="LN6-oy-S1S" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="20" symbolic="YES" id="f3d-Ka-5qT"/>
+                <constraint firstAttribute="trailing" secondItem="8JW-aa-Udu" secondAttribute="trailing" constant="20" symbolic="YES" id="fxD-9E-c7u"/>
+                <constraint firstItem="LN6-oy-S1S" firstAttribute="top" secondItem="QkU-Hc-wLb" secondAttribute="bottom" constant="8" symbolic="YES" id="hGb-1T-SLn"/>
+                <constraint firstItem="EEi-mR-k2Z" firstAttribute="top" secondItem="1" secondAttribute="top" constant="20" symbolic="YES" id="hes-nH-dmx"/>
+                <constraint firstItem="EEi-mR-k2Z" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="20" symbolic="YES" id="iTK-lv-FWr"/>
+                <constraint firstItem="XPD-sz-gLT" firstAttribute="top" secondItem="QkU-Hc-wLb" secondAttribute="bottom" constant="8" symbolic="YES" id="rtV-8T-oP3"/>
+                <constraint firstItem="8JW-aa-Udu" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="EEi-mR-k2Z" secondAttribute="trailing" constant="8" symbolic="YES" id="tbo-B6-iZb"/>
+                <constraint firstAttribute="bottom" secondItem="XPD-sz-gLT" secondAttribute="bottom" constant="20" symbolic="YES" id="uXt-rc-TFU"/>
             </constraints>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>

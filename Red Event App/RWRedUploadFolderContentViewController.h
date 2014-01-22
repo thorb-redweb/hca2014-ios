@@ -14,6 +14,11 @@
 
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 
+@property (weak, nonatomic) IBOutlet UIButton *btnBack;
+@property (weak, nonatomic) IBOutlet UIButton *btnTakePicture;
+@property (weak, nonatomic) IBOutlet UIButton *btnUpload;
+@property (weak, nonatomic) IBOutlet UIButton *btnEdit;
+
 - (id)initWithPage:(RWXmlNode *)page;
 
 @end

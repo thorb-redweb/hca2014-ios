@@ -129,8 +129,19 @@ static const int ddLogLevel = LOG_LEVEL_INFO;
 
 
 - (void)popPage {
-	UIViewController *previousViewController = viewControllers[viewControllers.count-2];
-	UIViewController *currentViewController = viewControllers.lastObject;
+	[self popPageNumberTimes:1];
+}
+
+- (void)popTwoPages {
+	[self popPageNumberTimes:2];
+}
+
+- (void)popPageNumberTimes:(int)popTimes {
+	UIViewController *previousViewController = viewControllers[viewControllers.count-(popTimes+1)];
+	NSMutableArray *viewControllersToDrop = [[NSMutableArray alloc] init];
+	for (int i = viewControllers.count - 1; i >= viewControllers.count - popTimes; i--) {
+		[viewControllersToDrop addObject:viewControllers[i]];
+	}
 		
 	[UIView transitionWithView:_mainView duration:0.5
 					   options: UIViewAnimationOptionTransitionFlipFromLeft
@@ -144,10 +155,12 @@ static const int ddLogLevel = LOG_LEVEL_INFO;
 	
 	[_mainViewController addChildViewController:previousViewController];
 	
-	[currentViewController.view removeFromSuperview];
-	[currentViewController removeFromParentViewController];
+	[((UIViewController *)viewControllersToDrop[0]).view removeFromSuperview];
+	[viewControllersToDrop[0] removeFromParentViewController];
 	
-	[viewControllers removeObject:currentViewController];
+	for (UIViewController *viewController in viewControllersToDrop) {
+		[viewControllers removeObject:viewController];
+	}
 }
 
 - (RWSwipeViewController *)getSwipeView{

@@ -22,7 +22,6 @@
 @end
 
 @implementation RWRedUploadPictureViewController {
-	bool approved;
 	RWRedUploadServerFolder *_folder;
 	NSString *_imagePath;
 	RedUploadImage *_redUploadImageObject;
@@ -31,7 +30,6 @@
 - (id)initWithPage:(RWXmlNode *)page {
     self = [super initWithNibName:@"RWRedUploadPictureViewController" bundle:nil page:page];
     if (self) {
-		approved = NO;
     }
     return self;
 }
@@ -49,12 +47,10 @@
 	if([_page hasChild:[RWPAGE FILEPATH]]){
         _imagePath = [_page getStringFromNode:[RWPAGE FILEPATH]];
 		
-		if([_db.RedUploadImages noDatabaseEntryWithServerFolder:_folder.serverFolder imagePath:_imagePath]){
+		_redUploadImageObject = [_db.RedUploadImages getFromImagePath:_imagePath];
+		if(!_redUploadImageObject){
 			NSMutableDictionary *entry = [[NSMutableDictionary alloc] initWithObjectsAndKeys:_folder.serverFolder, [RWDbSchemas RUI_SERVERFOLDER], _imagePath, [RWDbSchemas RUI_LOCALIMAGEPATH], nil];
 			_redUploadImageObject = [_db.RedUploadImages createEntry:entry];
-		}
-		else {
-			_redUploadImageObject = [_db.RedUploadImages getFromImagePath:_imagePath];
 		}
     }
     else {
@@ -70,8 +66,11 @@
 }
 
 -(void)setControls{
+
+	[_txtPictureText setText:_redUploadImageObject.text];
+	
 	[_swcApproval setEnabled:NO];
-	[_swcApproval setOn:NO];
+	[_swcApproval setOn:_redUploadImageObject.approved.boolValue animated:YES];
 }
 
 -(void)setAppearance{
@@ -103,9 +102,16 @@
 	[_lblTitle setText:_folder.name];
 	[helper setTextFieldPlaceHolderText:_txtPictureText textName:[RWTEXT REDUPLOAD_PICTURETEXTHINT] defaultText:[RWDEFAULTTEXT REDUPLOAD_PICTURETEXTHINT]];
 	[helper setText:_lblApprovalStatement textName:[RWTEXT REDUPLOAD_APPROVALSTATEMENT] defaultText:[RWDEFAULTTEXT REDUPLOAD_APPROVALSTATEMENT]];
-	[helper setText:_lblApprovalStatus textName:[RWTEXT REDUPLOAD_APPROVALSTATUSNO] defaultText:[RWDEFAULTTEXT REDUPLOAD_APPROVALSTATUSNO]];
-    [helper setButtonText:_btnBottomLeft textName:[RWTEXT REDUPLOAD_BOTTOMLEFTBUTTONUNAPPROVED] defaultText:[RWDEFAULTTEXT REDUPLOAD_BOTTOMLEFTBUTTONUNAPPROVED]];
     [helper setButtonText:_btnDeletePicture textName:[RWTEXT REDUPLOAD_DELETEPICTUREBUTTON] defaultText:[RWDEFAULTTEXT REDUPLOAD_DELETEPICTUREBUTTON]];
+	
+	if(_redUploadImageObject.approved.boolValue){
+		[helper setText:_lblApprovalStatus textName:[RWTEXT REDUPLOAD_APPROVALSTATUSNO] defaultText:[RWDEFAULTTEXT REDUPLOAD_APPROVALSTATUSYES]];
+		[helper setButtonText:_btnBottomLeft textName:[RWTEXT REDUPLOAD_BOTTOMLEFTBUTTONAPPROVED] defaultText:[RWDEFAULTTEXT REDUPLOAD_BOTTOMLEFTBUTTONAPPROVED]];
+	}
+	else {
+		[helper setText:_lblApprovalStatus textName:[RWTEXT REDUPLOAD_APPROVALSTATUSNO] defaultText:[RWDEFAULTTEXT REDUPLOAD_APPROVALSTATUSNO]];
+		[helper setButtonText:_btnBottomLeft textName:[RWTEXT REDUPLOAD_BOTTOMLEFTBUTTONUNAPPROVED] defaultText:[RWDEFAULTTEXT REDUPLOAD_BOTTOMLEFTBUTTONUNAPPROVED]];
+	}
 }
 
 -(void)viewDidAppear:(BOOL)animated {
@@ -114,6 +120,10 @@
 	if(_imagePath){
         UIImage *image = [UIImage imageWithContentsOfFile:_imagePath];
         [_imgPicture setImage:image];
+		
+		float aspect = image.size.height/image.size.width;
+		[_imgPicture addConstraint:[NSLayoutConstraint constraintWithItem:_imgPicture attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:_imgPicture attribute:NSLayoutAttributeWidth multiplier:aspect constant:0]];
+
 		
 		if(!image){
 			[_btnTopRight setEnabled:NO];
@@ -126,20 +136,20 @@
 
 - (IBAction)textFieldChanged:(id)sender{
 	_redUploadImageObject.text = _txtPictureText.text;
-	NSError *error = nil;
-	if (![_app.managedObjectContext save:&error]) {
-		DDLogError(@"Error when saving the changed text");
-	}
+	[self saveDatabaseChange:@"Error when saving the changed text"];
 }
 
 - (IBAction)backButtonClicked:(id)sender{
-	RWXmlNode *parentPage = [_xml getPage:[_page getStringFromNode:[RWPAGE PARENT]]];
-
-	[_app.navController pushViewWithPage:parentPage];
+	if ([_page hasChild:[RWPAGE POPTWICE]] && [_page getBoolFromNode:[RWPAGE POPTWICE]]) {
+		[_app.navController popTwoPages];
+	}
+	else {
+		[_app.navController popPage];
+	}
 }
 
 - (IBAction)topRightButtonClicked:(id)sender{
-	RWXmlNode *cameraPage = [_xml getPage:[_page getStringFromNode:[RWPAGE CHILD]]];
+	RWXmlNode *cameraPage = [[_xml getPage:[_page getStringFromNode:[RWPAGE CHILD]]] deepClone];
 	
 	[cameraPage addNodeWithName:[RWPAGE REDUPLOADFOLDERID] value:_folder.folderId];
 	
@@ -148,12 +158,15 @@
 
 - (IBAction)bottomLeftButtonClicked:(id)sender{
 	
-	if (!approved) {
+	if (!_redUploadImageObject.approved) {
         RWTextHelper *helper = _textHelper;
-		approved = YES;
 		[_swcApproval setOn:YES animated:YES];
 		[helper setText:_lblApprovalStatus textName:[RWTEXT REDUPLOAD_APPROVALSTATUSYES] defaultText:[RWDEFAULTTEXT REDUPLOAD_APPROVALSTATUSYES]];
 		[helper setButtonText:_btnBottomLeft textName:[RWTEXT REDUPLOAD_BOTTOMLEFTBUTTONAPPROVED] defaultText:[RWDEFAULTTEXT REDUPLOAD_BOTTOMLEFTBUTTONAPPROVED]];
+		
+		[_redUploadImageObject setApproved:[NSNumber numberWithBool:YES]];
+		
+		[self saveDatabaseChange:@"Error when saving approved status"];
     } else {
         
     }
@@ -175,6 +188,14 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)saveDatabaseChange:(NSString *)errorMessage{
+	NSError *error = nil;
+	bool success = [_app.managedObjectContext save:&error];
+	if (!success) {
+		DDLogError(errorMessage, error);
+	}
 }
 
 @end

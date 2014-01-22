@@ -32,6 +32,7 @@
 + (NSString *)PAGE {return @"page";}
 + (NSString *)PARENT {return @"parent";}
 + (NSString *)PARENTPAGE {return @"parentpage";}
++ (NSString *)POPTWICE {return @"poptwice";}
 + (NSString *)PUSHMESSAGEID {return @"pushmessageid";}
 + (NSString *)PUSHGROUPID {return @"pushgroupid";}
 + (NSString *)PUSHGROUPIDS {return @"pushgroupids";}
