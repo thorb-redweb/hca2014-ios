@@ -30,6 +30,12 @@
 
 - (void)setBackgroundAsShape:(UIView *)view localBackgroundColorName:(NSString *)localBackgroundColorName globalBackgroundColorName:(NSString *)globalBackgroundColorName borderWidth:(int)borderWidth localBorderColorName:(NSString *)localBorderColorName globalBorderColorName:(NSString *)globalBorderColorName cornerRadius:(int)cornerRadius;
 
+- (void)setBackgroundsAsShape:(NSArray *)views localBackgroundColorName:(NSString *)localBackgroundColorName globalBackgroundColorName:(NSString *)globalBackgroundColorName borderWidth:(int)borderWidth localBorderColorName:(NSString *)localBorderColorName globalBorderColorName:(NSString *)globalBorderColorName cornerRadius:(int)cornerRadius;
+
+- (void)setBackgroundAsShapeWithGradiant:(UIView *)view localBackgroundColorName1:(NSString *)localBackgroundColorName1 globalBackgroundColorName1:(NSString *)globalBackgroundColorName1
+			   localBackgroundColorName2:(NSString *)localBackgroundColorName2 globalBackgroundColorName2:(NSString *)globalBackgroundColorName2
+							 borderWidth:(int)borderWidth localBorderColorName:(NSString *)localBorderColorName globalBorderColorName:(NSString *)globalBorderColorName cornerRadius:(int)cornerRadius;
+
 - (void)setBorderColor:(UIView *)view localName:(NSString *)localname globalName:(NSString *)globalname;
 
 - (void)setLogo:(UIImageView *)imageview imagename:(NSString *)imagename;

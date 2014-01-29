@@ -49,7 +49,7 @@
 +(NSString *)SESSIONDETAIL_TIME {return @"Tidspunkt";}
 +(NSString *)SESSIONDETAIL_MAPBUTTON {return @"Find vej på kort";}
 
-+(NSString *)STYLEDSESSIONLIST_TITLE {return @"Dagens Events";}
++(NSString *)STYLEDSESSIONLIST_TITLE {return @"Foldere";}
 
 +(NSString *)VENUEDETAIL_ADDRESS {return @"Adresse";}
 +(NSString *)VENUEDETAIL_MAPBUTTON {return @"Find lokalitet på kort";}

@@ -59,6 +59,9 @@
 	if([hexString isEqualToString:[RWLOOK BLACK]]){
 		return @"#000000";
 	}
+	else if([hexString isEqualToString:[RWLOOK DARKGREY]]){
+		return @"#666666";
+	}
 	else if([hexString isEqualToString:[RWLOOK INVISIBLE]]){
 		return @"#00000000";
 	}

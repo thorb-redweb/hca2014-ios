@@ -89,6 +89,10 @@
     [buttonHelper setTitleColor:button localName:localname globalName:globalname forState:UIControlStateNormal];
 }
 
+- (void)setDisabledTitleColor:(UIButton *)button localName:(NSString *)localname globalName:(NSString *)globalname {
+    [buttonHelper setTitleColor:button localName:localname globalName:globalname forState:UIControlStateDisabled];
+}
+
 - (void)setTitleColorForLast:(NSString *)localname globalName:(NSString *)globalname {
     [self setTitleColor:lastChangedButton localName:localname globalName:globalname];
 }

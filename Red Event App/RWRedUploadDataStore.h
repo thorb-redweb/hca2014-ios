@@ -16,7 +16,6 @@
 
 @property (strong, nonatomic) NSMutableArray *sessionFolders;
 @property (strong, nonatomic) NSMutableArray *otherFolders;
-@property (strong, nonatomic) NSMutableArray *redUploadImages;
 
 -(id)initWithDb:(RWDbInterface *)db;
 

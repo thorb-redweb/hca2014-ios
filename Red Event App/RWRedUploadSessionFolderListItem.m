@@ -15,15 +15,14 @@
 
 @implementation RWRedUploadSessionFolderListItem {
 	RWRedUploadServerSessionFolder *_folder;
-	NSArray *_dataSource;
-	bool _lastRow;
 	
 	bool _archiveEmpty;
 }
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
-    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
+//    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
+    self = [super initWithFrame:CGRectMake(0, 0, 50, 50)];
     if (self) {
 
     }
@@ -36,18 +35,16 @@
 }
 
 - (void)setupCellWithRow:(int)row dataSource:(NSArray *)dataSource{
+	_folder = dataSource[row];
 	
-	_dataSource = dataSource;
-	_folder = _dataSource[row];
-	_lastRow = !(row < dataSource.count -1);
-	_archiveEmpty = YES;
-	if([_db.RedUploadImages getFromServerFolder:_folder.serverFolder].count > 0){
-		_archiveEmpty = NO;
-	}
-	
+	[self setValues:row dataSource:dataSource];
 	[self setControls];
 	[self setAppearance];
 	[self setCellContents];
+}
+
+- (void)setValues:(int)row dataSource:(NSArray *)dataSource{
+	_archiveEmpty = [_db.RedUploadImages getFromServerFolder:_folder.serverFolder].count == 0;
 }
 
 - (void)setControls{
@@ -59,18 +56,18 @@
 - (void)setAppearance{
     RWAppearanceHelper *helper = [[RWAppearanceHelper alloc] initWithLocalLook:_localLook globalLook:_globalLook];
 	
-	if(!_lastRow){
-		[helper setBackgroundColor:_vwSeperator localName:[RWLOOK REDUPLOADFOLDERVIEW_LISTLINECOLOR] globalName:[RWLOOK DEFAULT_ALTTEXTCOLOR]];
-	}
-	else{
-		[helper setBackgroundColor:_vwSeperator localName:nil globalName:[RWLOOK INVISIBLE]];
-	}
+	[helper setBackgroundAsShape:_vwFrontBox localBackgroundColorName:[RWLOOK REDUPLOAD_ITEMBACKGROUNDCOLOR] globalBackgroundColorName:[RWLOOK DEFAULT_BACKCOLOR] borderWidth:2 localBorderColorName:@"itembordercolor" globalBorderColorName:[RWLOOK DEFAULT_BACKTEXTCOLOR] cornerRadius:15];
+	[helper setBackgroundAsShape:_vwBackBox localBackgroundColorName:[RWLOOK REDUPLOAD_ITEMBACKGROUNDCOLOR] globalBackgroundColorName:[RWLOOK DEFAULT_BACKCOLOR] borderWidth:2 localBorderColorName:@"itembordercolor" globalBorderColorName:[RWLOOK DEFAULT_BACKTEXTCOLOR] cornerRadius:0];
 	
-	[helper.label setCustomTextStyle:_lblTitle tag:@"itemtitle" defaultColor:[RWLOOK DEFCOLOR_ALT] defaultSize:[RWLOOK DEFSIZE_TEXT]];
-    [helper.label setCustomTextStyle:_lblBody tag:@"itembody" defaultColor:[RWLOOK DEFCOLOR_ALT] defaultSize:[RWLOOK DEFSIZE_TEXT]];
 	
-	[helper.button setBackgroundImageFromLocalSource:_btnTakePicture localName:[RWLOOK REDUPLOADFOLDERVIEW_CAMERABUTTONIMAGE]];
-	[helper.button setBackgroundImageFromLocalSource:_btnSeeArchive localName:[RWLOOK REDUPLOADFOLDERVIEW_ARCHIVEBUTTONIMAGE]];
+	[helper setBackgroundColor:_btnTakePicture localName:@"camerabuttoncolor" globalName:[RWLOOK DEFAULT_ALTCOLOR]];
+	[helper.button setImageFromLocalSource:_btnTakePicture localName:@"camerabuttonimage"];
+	
+	
+	[helper.button setImageFromLocalSource:_btnSeeArchive localName:@"archivebuttonimage"];
+	
+	[helper.label setAltItemTitleStyle:_lblTitle];
+    [helper.label setAltTextStyle:_lblBody];
 }
 
 - (void)setCellContents{

@@ -8,14 +8,16 @@
 
 #import "UIView+RWViewLayout.h"
 
+#import "RedUploadImage.h"
 #import "RWRedUploadOtherFolderListItem.h"
 #import "RWRedUploadServerOtherFolder.h"
 
 #import "RWAppearanceHelper.h"
+#import "RWDbRedUploadImages.h"
 
 @implementation RWRedUploadOtherFolderListItem{
 	RWRedUploadServerOtherFolder *_folder;
-	NSArray *_dataSource;
+	bool _archiveEmpty;
 }
 
 
@@ -23,7 +25,7 @@
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
-
+		
     }
     return self;
 }
@@ -31,43 +33,63 @@
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated
 {
     [super setSelected:selected animated:animated];
-
+	
     // Configure the view for the selected state
 }
 
 - (void)setupCellWithRow:(int)row dataSource:(NSArray *)dataSource{
-	[self.vwBox setTranslatesAutoresizingMaskIntoConstraints:NO];
+	[_vwFrontBox setTranslatesAutoresizingMaskIntoConstraints:NO];
+	[_vwBackBox setTranslatesAutoresizingMaskIntoConstraints:NO];
 	
-	_dataSource = dataSource;
-	_folder = _dataSource[row];
-		
+	_folder = dataSource[row];
+	
+	[self setValues:row dataSource:dataSource];
 	[self setControls];
-	[self setAppearance];
 	[self setCellContents];
+	[self setAppearance];
+}
+
+- (void)setValues:(int)row dataSource:(NSArray *)dataSource{
+	_archiveEmpty = [_db.RedUploadImages getFromServerFolder:_folder.serverFolder].count == 0;
 }
 
 - (void)setControls{
-	int level = _folder.level;
-	if(level == 0){
-		[_topConstraint setConstant:10];
+	if (_archiveEmpty) {
+		[_btnSeeArchive setEnabled:NO];
 	}
-	[_leftConstraint setConstant:level*10];
+}
 
+- (void)setCellContents{
+    _lblBody.text = _folder.name;
 }
 
 - (void)setAppearance{
     RWAppearanceHelper *helper = [[RWAppearanceHelper alloc] initWithLocalLook:_localLook globalLook:_globalLook];
 	
-	[helper setBackgroundAsShape:_vwBox localBackgroundColorName:[RWLOOK REDUPLOADFOLDERVIEW_LISTBACKGROUNDCOLOR] globalBackgroundColorName:[RWLOOK DEFAULT_ALTCOLOR] borderWidth:2.0f localBorderColorName:[RWLOOK REDUPLOADFOLDERVIEW_LISTLINECOLOR] globalBorderColorName:[RWLOOK DEFAULT_ALTTEXTCOLOR] cornerRadius:5];
+	if(_folder.level == 0){
+		[helper setBackgroundAsShape:_vwFrontBox localBackgroundColorName:[RWLOOK REDUPLOAD_ITEMBACKGROUNDCOLOR] globalBackgroundColorName:[RWLOOK DEFAULT_BACKCOLOR] borderWidth:2 localBorderColorName:@"itembordercolor" globalBorderColorName:[RWLOOK DEFAULT_BACKTEXTCOLOR] cornerRadius:15];
+	}
+	else {
+		[helper setBackgroundAsShape:_vwFrontBox localBackgroundColorName:[RWLOOK REDUPLOAD_ITEMBACKGROUNDCOLOR] globalBackgroundColorName:[RWLOOK DEFAULT_BACKCOLOR] borderWidth:2 localBorderColorName:@"itembordercolor" globalBorderColorName:[RWLOOK DEFAULT_BACKTEXTCOLOR] cornerRadius:0];
+	}
+	[helper setBackgroundAsShape:_vwBackBox localBackgroundColorName:[RWLOOK REDUPLOAD_ITEMBACKGROUNDCOLOR] globalBackgroundColorName:[RWLOOK DEFAULT_BACKCOLOR] borderWidth:2 localBorderColorName:@"itembordercolor" globalBorderColorName:[RWLOOK DEFAULT_BACKTEXTCOLOR] cornerRadius:0];
 	
-    [helper.label setCustomTextStyle:_lblBody tag:@"itembody" defaultColor:[RWLOOK DEFCOLOR_ALT] defaultSize:[RWLOOK DEFSIZE_TEXT]];
 	
-	[helper.button setBackgroundImageFromLocalSource:_btnTakePicture localName:[RWLOOK REDUPLOADFOLDERVIEW_CAMERABUTTONIMAGE]];
-	[helper.button setBackgroundImageFromLocalSource:_btnSeeArchive localName:[RWLOOK REDUPLOADFOLDERVIEW_ARCHIVEBUTTONIMAGE]];
-}
-
-- (void)setCellContents{
-    _lblBody.text = _folder.name;
+	[helper.label setAltTextStyle:_lblBody];
+	
+	[helper setBackgroundColor:_btnTakePicture localName:@"camerabuttoncolor" globalName:[RWLOOK DEFAULT_ALTCOLOR]];
+	[helper.button setImageFromLocalSource:_btnTakePicture localName:[RWLOOK REDUPLOADFOLDERVIEW_CAMERABUTTONIMAGE]];
+	[helper.button setImageFromLocalSource:_btnSeeArchive localName:[RWLOOK REDUPLOADFOLDERVIEW_ARCHIVEBUTTONIMAGE]];
+	
+	int level = _folder.level;
+	int leftPadding = 15 * level;
+	int topPadding = -2;
+	if(level == 0){
+		topPadding = 10;
+	}
+	
+	[_frontTopConstraint setConstant:topPadding];
+	[_leftConstraint setConstant:leftPadding];
 }
 
 - (IBAction)btnCameraClicked{

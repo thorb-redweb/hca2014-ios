@@ -2,63 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3b12e239-311e-4611-93d9-549bde44ed4e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Red Event App/RWDbRedUploadImages.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Red Event App/RWDbRedUploadImages.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Red Event App/RWRedUploadDataStore.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Red Event App/RWRedUploadDataStore.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Red Event App/RWRedUploadOtherFolderListItem.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Red Event App/RWRedUploadOtherFolderListItem.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Red Event App/RWRedUploadOtherFolderListItem.xib" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Red Event App/RWRedUploadServerFolder.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Red Event App/RWRedUploadServerFolder.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Red Event App/RWRedUploadServerOtherFolder.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Red Event App/RWRedUploadServerOtherFolder.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Red Event App/RWRedUploadServerSessionFolder.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Red Event App/RWRedUploadServerSessionFolder.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Red Event App/RWVolatileDataStore.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Red Event App/RWVolatileDataStore.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Red Event App/RWVolatileDataStores.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Red Event App/RWVolatileDataStores.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Red Event App/RedUploadImage.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Red Event App/RedUploadImage.m" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Red Event App/RWRedUploadViewController.h" afterPath="$PROJECT_DIR$/Red Event App/RWRedUploadPictureViewController.h" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Red Event App/RWRedUploadViewController.m" afterPath="$PROJECT_DIR$/Red Event App/RWRedUploadPictureViewController.m" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Red Event App/RWRedUploadViewController.xib" afterPath="$PROJECT_DIR$/Red Event App/RWRedUploadPictureViewController.xib" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Red Event App/RWStyledSessionListItem.h" afterPath="$PROJECT_DIR$/Red Event App/RWRedUploadSessionFolderListItem.h" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Red Event App/RWStyledSessionListItem.m" afterPath="$PROJECT_DIR$/Red Event App/RWRedUploadSessionFolderListItem.m" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Red Event App/RWStyledSessionListItem.xib" afterPath="$PROJECT_DIR$/Red Event App/RWRedUploadSessionFolderListItem.xib" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Red Event App/RWStyledSessionListViewController.h" afterPath="$PROJECT_DIR$/Red Event App/RWRedUploadFolderViewController.h" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Red Event App/RWStyledSessionListViewController.m" afterPath="$PROJECT_DIR$/Red Event App/RWRedUploadFolderViewController.m" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Red Event App/RWStyledSessionListViewController.xib" afterPath="$PROJECT_DIR$/Red Event App/RWRedUploadFolderViewController.xib" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/RWAppDelegate.h" afterPath="$PROJECT_DIR$/Red Event App/RWAppDelegate.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/RWAppDelegate.m" afterPath="$PROJECT_DIR$/Red Event App/RWAppDelegate.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/RWAppearanceHelper.h" afterPath="$PROJECT_DIR$/Red Event App/RWAppearanceHelper.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/RWAppearanceHelper.m" afterPath="$PROJECT_DIR$/Red Event App/RWAppearanceHelper.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/RWApperanceHelperGetter.m" afterPath="$PROJECT_DIR$/Red Event App/RWApperanceHelperGetter.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/RWCameraIntentViewController.m" afterPath="$PROJECT_DIR$/Red Event App/RWCameraIntentViewController.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/RWDbHelper.h" afterPath="$PROJECT_DIR$/Red Event App/RWDbHelper.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/RWDbHelper.m" afterPath="$PROJECT_DIR$/Red Event App/RWDbHelper.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/RWDbInterface.h" afterPath="$PROJECT_DIR$/Red Event App/RWDbInterface.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/RWDbInterface.m" afterPath="$PROJECT_DIR$/Red Event App/RWDbInterface.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/RWDbSchemas.h" afterPath="$PROJECT_DIR$/Red Event App/RWDbSchemas.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/RWDbSchemas.m" afterPath="$PROJECT_DIR$/Red Event App/RWDbSchemas.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/RWLOOK.h" afterPath="$PROJECT_DIR$/Red Event App/RWLOOK.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/RWLOOK.m" afterPath="$PROJECT_DIR$/Red Event App/RWLOOK.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/RWMainViewController.m" afterPath="$PROJECT_DIR$/Red Event App/RWMainViewController.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/RWNavigationController.m" afterPath="$PROJECT_DIR$/Red Event App/RWNavigationController.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/RWPAGE.h" afterPath="$PROJECT_DIR$/Red Event App/RWPAGE.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/RWPAGE.m" afterPath="$PROJECT_DIR$/Red Event App/RWPAGE.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/RWSplashViewController.m" afterPath="$PROJECT_DIR$/Red Event App/RWSplashViewController.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/RWTYPE.h" afterPath="$PROJECT_DIR$/Red Event App/RWTYPE.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/RWDEFAULTTEXT.m" afterPath="$PROJECT_DIR$/Red Event App/RWDEFAULTTEXT.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/RWRedUploadDataStore.h" afterPath="$PROJECT_DIR$/Red Event App/RWRedUploadDataStore.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/RWRedUploadDataStore.m" afterPath="$PROJECT_DIR$/Red Event App/RWRedUploadDataStore.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/RWRedUploadFolderContentViewController.m" afterPath="$PROJECT_DIR$/Red Event App/RWRedUploadFolderContentViewController.m" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/RWTYPE.m" afterPath="$PROJECT_DIR$/Red Event App/RWTYPE.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/UIColor+RWColor.m" afterPath="$PROJECT_DIR$/Red Event App/UIColor+RWColor.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/UIView+RWViewLayout.h" afterPath="$PROJECT_DIR$/Red Event App/UIView+RWViewLayout.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/UIView+RWViewLayout.m" afterPath="$PROJECT_DIR$/Red Event App/UIView+RWViewLayout.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/Setup Files/appearance.xml" afterPath="$PROJECT_DIR$/Red Event App/Setup Files/appearance.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/Red_Event_App.xcdatamodel/contents" afterPath="$PROJECT_DIR$/Red Event App/Red_Event_App.xcdatamodel/contents" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/Setup Files/pages.xml" afterPath="$PROJECT_DIR$/Red Event App/Setup Files/pages.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red App.xcodeproj/project.pbxproj" afterPath="$PROJECT_DIR$/Red App.xcodeproj/project.pbxproj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Red Event App.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -81,19 +31,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="RWRedUploadFolderViewController.h" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Red Event App/RWRedUploadFolderViewController.h">
+      <file leaf-file-name="RWRedUploadFolderViewController.m" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Red Event App/RWRedUploadFolderViewController.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="28" selection-start="241" selection-end="241" vertical-scroll-proportion="0.0" vertical-offset="165" max-vertical-offset="405">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RWRedUploadPictureViewController.m" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Red Event App/RWRedUploadPictureViewController.m">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="51" column="189" selection-start="1520" selection-end="1520" vertical-scroll-proportion="0.50962627" vertical-offset="180" max-vertical-offset="2445">
+            <state line="36" column="1" selection-start="910" selection-end="910" vertical-scroll-proportion="0.0" vertical-offset="247" max-vertical-offset="2880">
               <folding />
             </state>
           </provider>
@@ -102,16 +43,25 @@
       <file leaf-file-name="RWRedUploadSessionFolderListItem.m" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Red Event App/RWRedUploadSessionFolderListItem.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="79" column="72" selection-start="2494" selection-end="2494" vertical-scroll-proportion="0.0" vertical-offset="1185" max-vertical-offset="1365">
+            <state line="95" column="8" selection-start="2812" selection-end="2812" vertical-scroll-proportion="0.0" vertical-offset="1425" max-vertical-offset="1605">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RWRedUploadFolderViewController.m" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Red Event App/RWRedUploadFolderViewController.m">
+      <file leaf-file-name="RWRedUploadPictureViewController.m" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Red Event App/RWRedUploadPictureViewController.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="1" selection-start="910" selection-end="910" vertical-scroll-proportion="0.0" vertical-offset="247" max-vertical-offset="2880">
+            <state line="54" column="5" selection-start="1624" selection-end="1624" vertical-scroll-proportion="-0.41379312" vertical-offset="1170" max-vertical-offset="3105">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RWRedUploadFolderViewController.h" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Red Event App/RWRedUploadFolderViewController.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="11" column="28" selection-start="241" selection-end="241" vertical-scroll-proportion="0.0" vertical-offset="165" max-vertical-offset="405">
               <folding />
             </state>
           </provider>
@@ -201,7 +151,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Cidr.FilesView" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -307,10 +256,6 @@
               <option name="myItemId" value="RedUpload" />
               <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RedUploadFolderView" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -350,18 +295,19 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Cidr.FilesView" />
       <pane id="DirectoryView.Xcode" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="options.lastSelected" value="Errors" />
     <property name="recentsLimit" value="5" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Documents/MediaMemo" />
+    <property name="options.lastSelected" value="Errors" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Documents/ABSI/FC Randers" />
     <property name="FullScreen" value="false" />
     <property name="OBJC.PRESERVED_TARGET_SELECTION" value="Red App" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RunManager" selected="Application.Red App Development">
     <configuration default="true" type="AppleRunConfiguration" factoryName="Application" PROJECT_NAME="Red Event App" TARGET_NAME="Red Event App" CONFIG_NAME="Debug" PASS_PARENT_ENVS="FALSE" RUN_TARGET_PROJECT_NAME="Red Event App" RUN_TARGET_NAME="Red Event App" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
@@ -420,13 +366,13 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1920" height="980" extended-state="0" />
-    <editor active="true" />
+    <frame x="0" y="22" width="1920" height="980" extended-state="6" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32990867" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1796875" sideWeight="0.6717892" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1796875" sideWeight="0.6717892" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39955848" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3289183" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -507,7 +453,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Red Event App/RWRedUploadSessionFolderListItem.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="79" column="72" selection-start="2494" selection-end="2494" vertical-scroll-proportion="0.0" vertical-offset="1185" max-vertical-offset="1365">
+        <state line="95" column="8" selection-start="2812" selection-end="2812" vertical-scroll-proportion="0.0" vertical-offset="1425" max-vertical-offset="1605">
           <folding />
         </state>
       </provider>
@@ -541,7 +487,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Red Event App/RWRedUploadPictureViewController.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="189" selection-start="1520" selection-end="1520" vertical-scroll-proportion="0.50962627" vertical-offset="180" max-vertical-offset="2445">
+        <state line="54" column="5" selection-start="1624" selection-end="1624" vertical-scroll-proportion="-0.41379312" vertical-offset="1170" max-vertical-offset="3105">
           <folding />
         </state>
       </provider>

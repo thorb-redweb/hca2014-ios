@@ -2,10 +2,10 @@
     <global>
         <redupload>YES</redupload>
     </global>
-    <page>
-        <type>Splash</type>
+	<page>
+		<type>Splash</type>
         <backgroundimage>splash.png</backgroundimage>
-    </page>
+	</page>
     <page>
         <name>AutoSubscriber</name>
         <type>PushMessageAutoSubscriber</type>
@@ -20,14 +20,14 @@
         <section>About</section>
     </page>
     <page>
-        <name>Nyheder</name>
-        <type>ImageArticleList</type>
-        <catid>12</catid>
+		<name>Nyheder</name>
+		<type>ImageArticleList</type>
+		<catid>12</catid>
         <tabname>Forside</tabname>
         <navname>Nyheder</navname>
         <parent>SwipeView</parent>
         <child>Nyhedsside</child>
-    </page>
+	</page>
     <page>
         <name>Nyhedsside</name>
         <type>ArticleDetail</type>
@@ -52,7 +52,6 @@
         <name>About</name>
         <type>StaticArticle</type>
         <articleid>55</articleid>
-        <parent>SwipeView</parent>
         <returnbutton>YES</returnbutton>
     </page>
     <page>
@@ -85,7 +84,6 @@
         <type>SessionMap</type>
         <parent>Begivenhed</parent>
         <child>Begivenhed</child>
-		<zoom>5</zoom>
         <returnbutton>YES</returnbutton>
     </page>
     <page>
@@ -109,7 +107,6 @@
         <name>VenueMap</name>
         <type>VenueMap</type>
         <parent>RedWeb</parent>
-		<zoom>5</zoom>
     </page>
     <page>
         <name>Biking</name>
@@ -128,7 +125,6 @@
     <page>
         <name>Image Uploader</name>
         <type>ImageUploader</type>
-        <!--<filepath>/var/mobile/Applications/E7EB5D28-5B6C-4539-8554-958E46ECDA78/Documents/redApp/2013-12-10_12-49-43-016.png</filepath>-->
         <folder>redApp</folder>
     </page>
     <page>
@@ -136,10 +132,9 @@
         <type>ButtonGallery</type>
         <tabname>BM2</tabname>
         <button1>About2</button1>
-		<button2>Nyheder2</button2>
-		<button3>RUEvents</button3>
-		<button4>RUOther</button4>
-		<button5>ContentFolder</button5>
+        <button2>Nyheder2</button2>
+        <button3>RUEvents</button3>
+        <button4>RUOther</button4>
     </page>
     <page>
         <name>About2</name>
@@ -156,36 +151,37 @@
     </page>
     <page>
         <name>RUEvents</name>
-        <type>RedUploadFolderView</type>
+        <type>RedUploadFolder</type>
         <child>Camera2</child>
-		<child2>ContentFolder</child2>
-		<foldertype>session</foldertype>
+        <child2>ContentFolder</child2>
+        <foldertype>session</foldertype>
     </page>
     <page>
         <name>RUOther</name>
-        <type>RedUploadFolderView</type>
+        <type>RedUploadFolder</type>
         <child>Camera2</child>
-		<child2>ContentFolder</child2>
-		<foldertype>other</foldertype>
+        <child2>ContentFolder</child2>
+        <foldertype>other</foldertype>
     </page>
     <page>
         <name>Camera2</name>
         <type>CameraIntent</type>
         <child>RedUploader</child>
         <folder>redApp</folder>
+        <sessionid>2</sessionid>
     </page>
-	<page>
-		<name>ContentFolder</name>
-		<type>RedUploadFolderContentView</type>
-		<child>Camera2</child>
-		<child2>RedUploader</child2>
-	</page>
+    <page>
+        <name>ContentFolder</name>
+        <type>RedUploadFolderContent</type>
+        <child>Camera2</child>
+        <child2>RedUploader</child2>
+    </page>
     <page>
         <name>RedUploader</name>
         <type>RedUploadPictureView</type>
-		<parent>RUEvents</parent>
+        <parent>RUEvents</parent>
         <child>Camera2</child>
-		<folder>redApp</folder>
+        <folder>redApp</folder>
     </page>
     <page>
         <name>PMInitializer</name>

@@ -56,6 +56,30 @@
 	view.layer.borderWidth = borderWidth;
 }
 
+- (void)setBackgroundsAsShape:(NSArray *)views localBackgroundColorName:(NSString *)localBackgroundColorName globalBackgroundColorName:(NSString *)globalBackgroundColorName borderWidth:(int)borderWidth localBorderColorName:(NSString *)localBorderColorName globalBorderColorName:(NSString *)globalBorderColorName cornerRadius:(int)cornerRadius {
+	for(UIView *view in views){
+		[self setBackgroundAsShape:view localBackgroundColorName:localBackgroundColorName globalBackgroundColorName:globalBackgroundColorName borderWidth:borderWidth localBorderColorName:localBorderColorName globalBorderColorName:globalBorderColorName cornerRadius:cornerRadius];
+	}
+}
+
+- (void)setBackgroundAsShapeWithGradiant:(UIView *)view localBackgroundColorName1:(NSString *)localBackgroundColorName1 globalBackgroundColorName1:(NSString *)globalBackgroundColorName1
+							  localBackgroundColorName2:(NSString *)localBackgroundColorName2 globalBackgroundColorName2:(NSString *)globalBackgroundColorName2
+							  borderWidth:(int)borderWidth localBorderColorName:(NSString *)localBorderColorName globalBorderColorName:(NSString *)globalBorderColorName cornerRadius:(int)cornerRadius {
+	CAGradientLayer *gradiantLayer = [CAGradientLayer layer];
+	gradiantLayer.frame = view.bounds;
+	gradiantLayer.colors = [NSArray arrayWithObjects:
+							(id)[[_getter getColorWithLocalName:localBackgroundColorName1 globalName:globalBackgroundColorName1] CGColor],
+							(id)[[_getter getColorWithLocalName:localBackgroundColorName2 globalName:globalBackgroundColorName2] CGColor], nil];
+	[view.layer insertSublayer:gradiantLayer atIndex:0];
+	
+	[view setClipsToBounds:YES];
+	
+	view.layer.cornerRadius = cornerRadius;
+	view.layer.masksToBounds = YES;
+	view.layer.borderWidth = borderWidth;
+	[self setBorderColor:view localName:localBorderColorName globalName:globalBorderColorName];
+}
+
 - (void)setBorderColor:(UIView *)view localName:(NSString *)localname globalName:(NSString *)globalname{
 	view.layer.borderColor = [_getter getColorWithLocalName:localname globalName:globalname].CGColor;
 }

@@ -13,72 +13,95 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="96"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="300" translatesAutoresizingMaskIntoConstraints="NO" id="jvJ-ih-Rd2" userLabel="lblTitle">
-                        <rect key="frame" x="10" y="10" width="300" height="21"/>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G3U-TW-bBF" userLabel="vwFrontBox">
+                        <rect key="frame" x="0.0" y="0.0" width="245" height="91"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="204" translatesAutoresizingMaskIntoConstraints="NO" id="1Nv-A1-dxh" userLabel="lblBody">
-                        <rect key="frame" x="10" y="31" width="204" height="55"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="27r-eF-sMw" userLabel="btnTakePicture">
-                        <rect key="frame" x="222" y="39" width="40" height="40"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="204" translatesAutoresizingMaskIntoConstraints="NO" id="jvJ-ih-Rd2" userLabel="lblTitle">
+                                <rect key="frame" x="8" y="8" width="204" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="24" placeholder="YES" id="YUo-P5-ovV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="204" translatesAutoresizingMaskIntoConstraints="NO" id="1Nv-A1-dxh" userLabel="lblBody">
+                                <rect key="frame" x="8" y="32" width="204" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="24" placeholder="YES" id="2Ph-fC-Z0t"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="jvJ-ih-Rd2" firstAttribute="leading" secondItem="G3U-TW-bBF" secondAttribute="leading" constant="8" id="2J1-x7-3Kf"/>
+                            <constraint firstItem="jvJ-ih-Rd2" firstAttribute="top" secondItem="G3U-TW-bBF" secondAttribute="top" constant="8" id="C2H-1a-VSO"/>
+                            <constraint firstItem="1Nv-A1-dxh" firstAttribute="leading" secondItem="G3U-TW-bBF" secondAttribute="leading" constant="8" id="I3w-Fq-igc"/>
+                            <constraint firstItem="jvJ-ih-Rd2" firstAttribute="trailing" secondItem="1Nv-A1-dxh" secondAttribute="trailing" id="KYw-5e-dmI"/>
+                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="1Nv-A1-dxh" secondAttribute="bottom" constant="8" id="a5v-q7-so6"/>
+                            <constraint firstItem="1Nv-A1-dxh" firstAttribute="top" secondItem="jvJ-ih-Rd2" secondAttribute="bottom" id="m9h-fm-KWJ"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vyu-l6-cp0" userLabel="vwBackBox">
+                        <rect key="frame" x="245" y="0.0" width="75" height="91"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="252" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hiz-JL-PXU" userLabel="btnSeeArchive">
+                                <rect key="frame" x="25" y="0.0" width="50" height="91"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="F6n-Uq-8Dv"/>
+                                </constraints>
+                                <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnArchiveClicked" destination="S0n-sS-6bT" eventType="touchUpInside" id="VUE-Wv-aIx"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="Hiz-JL-PXU" secondAttribute="bottom" id="bZd-Zj-nwA"/>
+                            <constraint firstAttribute="trailing" secondItem="Hiz-JL-PXU" secondAttribute="trailing" id="f9P-NR-mcZ"/>
+                            <constraint firstItem="Hiz-JL-PXU" firstAttribute="top" secondItem="Vyu-l6-cp0" secondAttribute="top" id="xvW-Tn-Q5Y"/>
+                        </constraints>
+                    </view>
+                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="27r-eF-sMw" userLabel="btnTakePicture">
+                        <rect key="frame" x="220" y="0.0" width="50" height="91"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="40" id="DdE-Sk-LZs"/>
-                            <constraint firstAttribute="height" constant="40" id="Y3I-dT-ci7"/>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="DIh-mh-Pkw"/>
                         </constraints>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <state key="normal">
+                            <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                         </state>
                         <connections>
                             <action selector="btnCameraClicked" destination="S0n-sS-6bT" eventType="touchUpInside" id="mN2-uA-dYp"/>
                         </connections>
                     </button>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hiz-JL-PXU" userLabel="btnSeeArchive">
-                        <rect key="frame" x="270" y="39" width="40" height="40"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="40" id="Jl7-V4-WVV"/>
-                            <constraint firstAttribute="height" constant="40" id="n9U-dZ-5qf"/>
-                        </constraints>
-                        <state key="normal">
-                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                        </state>
-                        <connections>
-                            <action selector="btnArchiveClicked" destination="S0n-sS-6bT" eventType="touchUpInside" id="VUE-Wv-aIx"/>
-                        </connections>
-                    </button>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l2h-UC-FOb" userLabel="vwSeperator">
-                        <rect key="frame" x="0.0" y="94" width="320" height="2"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="2" id="hsV-8N-Ktr"/>
-                        </constraints>
-                    </view>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 <constraints>
-                    <constraint firstItem="l2h-UC-FOb" firstAttribute="leading" secondItem="jAC-di-4z8" secondAttribute="leading" id="2ZB-aL-R7Z"/>
-                    <constraint firstItem="jvJ-ih-Rd2" firstAttribute="leading" secondItem="jAC-di-4z8" secondAttribute="leading" constant="10" id="2zH-Nd-Z7i"/>
-                    <constraint firstAttribute="trailing" secondItem="jvJ-ih-Rd2" secondAttribute="trailing" constant="10" id="6B2-BK-m80"/>
-                    <constraint firstItem="Hiz-JL-PXU" firstAttribute="leading" secondItem="27r-eF-sMw" secondAttribute="trailing" constant="8" symbolic="YES" id="9g6-Za-IIh"/>
-                    <constraint firstItem="Hiz-JL-PXU" firstAttribute="centerY" secondItem="27r-eF-sMw" secondAttribute="centerY" priority="900" id="Dpy-Rn-AUn"/>
-                    <constraint firstItem="27r-eF-sMw" firstAttribute="top" relation="greaterThanOrEqual" secondItem="jvJ-ih-Rd2" secondAttribute="bottom" constant="2" id="Er8-GJ-yWx"/>
-                    <constraint firstAttribute="trailing" secondItem="Hiz-JL-PXU" secondAttribute="trailing" constant="10" id="JLc-6i-Db7"/>
-                    <constraint firstItem="jvJ-ih-Rd2" firstAttribute="top" secondItem="jAC-di-4z8" secondAttribute="top" constant="10" id="LOe-wt-QgE"/>
-                    <constraint firstItem="1Nv-A1-dxh" firstAttribute="top" secondItem="jvJ-ih-Rd2" secondAttribute="bottom" id="NcG-WO-wWM"/>
-                    <constraint firstItem="Hiz-JL-PXU" firstAttribute="centerY" secondItem="1Nv-A1-dxh" secondAttribute="centerY" priority="900" id="Vg7-FW-bLa"/>
-                    <constraint firstAttribute="bottom" secondItem="1Nv-A1-dxh" secondAttribute="bottom" constant="10" id="ZCx-Oj-C33"/>
-                    <constraint firstAttribute="bottom" secondItem="l2h-UC-FOb" secondAttribute="bottom" id="flr-tJ-8j2"/>
-                    <constraint firstItem="1Nv-A1-dxh" firstAttribute="leading" secondItem="jAC-di-4z8" secondAttribute="leading" constant="10" id="iaH-Ng-YJZ"/>
-                    <constraint firstAttribute="trailing" secondItem="l2h-UC-FOb" secondAttribute="trailing" id="lUw-is-gAt"/>
-                    <constraint firstItem="27r-eF-sMw" firstAttribute="leading" secondItem="1Nv-A1-dxh" secondAttribute="trailing" constant="8" symbolic="YES" id="ofS-NT-eaN"/>
+                    <constraint firstItem="G3U-TW-bBF" firstAttribute="top" secondItem="Vyu-l6-cp0" secondAttribute="top" id="6W6-Yg-LkB"/>
+                    <constraint firstItem="G3U-TW-bBF" firstAttribute="bottom" secondItem="27r-eF-sMw" secondAttribute="bottom" id="CP4-6m-ju0"/>
+                    <constraint firstItem="Vyu-l6-cp0" firstAttribute="leading" secondItem="27r-eF-sMw" secondAttribute="trailing" constant="-25" id="DmK-Cb-2DA"/>
+                    <constraint firstAttribute="bottom" secondItem="G3U-TW-bBF" secondAttribute="bottom" constant="5" id="HCJ-bP-Sff"/>
+                    <constraint firstItem="G3U-TW-bBF" firstAttribute="top" secondItem="27r-eF-sMw" secondAttribute="top" id="Iw4-UX-VRT"/>
+                    <constraint firstAttribute="trailing" secondItem="Vyu-l6-cp0" secondAttribute="trailing" id="QuV-h6-1bQ"/>
+                    <constraint firstItem="27r-eF-sMw" firstAttribute="leading" secondItem="jvJ-ih-Rd2" secondAttribute="trailing" constant="8" id="Qzv-fq-mvm"/>
+                    <constraint firstItem="G3U-TW-bBF" firstAttribute="bottom" secondItem="Vyu-l6-cp0" secondAttribute="bottom" id="VvW-I8-Wc3"/>
+                    <constraint firstItem="G3U-TW-bBF" firstAttribute="leading" secondItem="jAC-di-4z8" secondAttribute="leading" id="XCC-LN-Pmb"/>
+                    <constraint firstItem="27r-eF-sMw" firstAttribute="leading" secondItem="G3U-TW-bBF" secondAttribute="trailing" constant="-25" id="gB1-3L-BMY"/>
+                    <constraint firstItem="G3U-TW-bBF" firstAttribute="top" secondItem="jAC-di-4z8" secondAttribute="top" id="vsj-U4-lW4"/>
+                    <constraint firstItem="Hiz-JL-PXU" firstAttribute="leading" secondItem="27r-eF-sMw" secondAttribute="trailing" id="ytm-Mg-8fw"/>
                 </constraints>
             </tableViewCellContentView>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -87,7 +110,8 @@
                 <outlet property="btnTakePicture" destination="27r-eF-sMw" id="Yr7-RF-hY2"/>
                 <outlet property="lblBody" destination="1Nv-A1-dxh" id="PML-rk-JJA"/>
                 <outlet property="lblTitle" destination="jvJ-ih-Rd2" id="BoZ-HJ-Yd3"/>
-                <outlet property="vwSeperator" destination="l2h-UC-FOb" id="2PM-wm-qwN"/>
+                <outlet property="vwBackBox" destination="Vyu-l6-cp0" id="5ee-Ks-kUi"/>
+                <outlet property="vwFrontBox" destination="G3U-TW-bBF" id="g53-2a-sDL"/>
             </connections>
         </tableViewCell>
     </objects>

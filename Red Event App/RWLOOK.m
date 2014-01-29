@@ -14,6 +14,7 @@
 
 //Color Constants
 + (NSString *)BLACK {return @"black";}
++ (NSString *)DARKGREY {return @"darkgrey";}
 + (NSString *)INVISIBLE {return @"invisible";}
 + (NSString *)WHITE {return @"white";}
 
@@ -190,6 +191,7 @@
 
 //RedUpload
 + (NSString *)REDUPLOADPICTUREVIEW_APPROVALBOXCOLOR {return @"approvalboxcolor";}
++(NSString *)REDUPLOAD_ITEMBACKGROUNDCOLOR {return @"itembackgroundcolor";}
 
 //SessionDetail
 + (NSString *)SESSIONDETAIL_LABELCOLOR {return @"labelcolor";}

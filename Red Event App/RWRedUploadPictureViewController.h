@@ -11,10 +11,13 @@
 
 @interface RWRedUploadPictureViewController : RWBaseViewController
 
-@property (weak, nonatomic) IBOutlet UIScrollView *scrMainScrollView;
-@property (weak, nonatomic) IBOutlet UIView *vwScrollBackground;
 @property (weak, nonatomic) IBOutlet UIButton *btnBack;
-@property (weak, nonatomic) IBOutlet UIButton *btnTopRight;
+
+@property (weak, nonatomic) IBOutlet UIView *vwTakePicture;
+@property (weak, nonatomic) IBOutlet UIView *vwFrontBox;
+@property (weak, nonatomic) IBOutlet UILabel *lblTakePicture;
+@property (weak, nonatomic) IBOutlet UIImageView *imgTakePicture;
+
 @property (weak, nonatomic) IBOutlet UILabel *lblTitle;
 @property (weak, nonatomic) IBOutlet UIImageView *imgPicture;
 @property (weak, nonatomic) IBOutlet UITextField *txtPictureText;

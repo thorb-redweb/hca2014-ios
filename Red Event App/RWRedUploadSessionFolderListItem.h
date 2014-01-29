@@ -12,11 +12,12 @@
 
 @interface RWRedUploadSessionFolderListItem : RWBaseListItem
 
+@property (weak, nonatomic) IBOutlet UIView *vwFrontBox;
+@property (weak, nonatomic) IBOutlet UIView *vwBackBox;
 @property (weak, nonatomic) IBOutlet UILabel *lblTitle;
 @property (weak, nonatomic) IBOutlet UILabel *lblBody;
 @property (weak, nonatomic) IBOutlet UIButton *btnTakePicture;
 @property (weak, nonatomic) IBOutlet UIButton *btnSeeArchive;
-@property (weak, nonatomic) IBOutlet UIView *vwSeperator;
 
 - (void)setupCellWithRow:(int)row dataSource:(NSArray *)dataSource;
 

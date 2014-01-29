@@ -184,6 +184,9 @@
 		36A0B40B18474F4B007A6C78 /* RWWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36A0B40918474F4B007A6C78 /* RWWebViewController.xib */; };
 		36A0B410184DD017007A6C78 /* RWBikeTrackingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36A0B40E184DD017007A6C78 /* RWBikeTrackingViewController.m */; };
 		36A0B411184DD017007A6C78 /* RWBikeTrackingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36A0B40F184DD017007A6C78 /* RWBikeTrackingViewController.xib */; };
+		36A0F3D31897AA1000E6032D /* icon_camera.png in Resources */ = {isa = PBXBuildFile; fileRef = 36A0F3D11897AA1000E6032D /* icon_camera.png */; };
+		36A0F3D41897AA1000E6032D /* icon_eye.png in Resources */ = {isa = PBXBuildFile; fileRef = 36A0F3D21897AA1000E6032D /* icon_eye.png */; };
+		36A0F3D61897AADB00E6032D /* bg_tile.png in Resources */ = {isa = PBXBuildFile; fileRef = 36A0F3D51897AADB00E6032D /* bg_tile.png */; };
 		36A727AA17C794E400374063 /* navbar.png in Resources */ = {isa = PBXBuildFile; fileRef = 36A727A917C794E400374063 /* navbar.png */; };
 		36A727AC17C7992100374063 /* appearance.xml in Resources */ = {isa = PBXBuildFile; fileRef = 36A727AB17C7992100374063 /* appearance.xml */; };
 		36A727AF17C799A500374063 /* UIColor+RWColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 36A727AE17C799A500374063 /* UIColor+RWColor.m */; };
@@ -576,6 +579,9 @@
 		36A0B40D184DD017007A6C78 /* RWBikeTrackingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWBikeTrackingViewController.h; sourceTree = "<group>"; };
 		36A0B40E184DD017007A6C78 /* RWBikeTrackingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWBikeTrackingViewController.m; sourceTree = "<group>"; };
 		36A0B40F184DD017007A6C78 /* RWBikeTrackingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RWBikeTrackingViewController.xib; sourceTree = "<group>"; };
+		36A0F3D11897AA1000E6032D /* icon_camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_camera.png; sourceTree = "<group>"; };
+		36A0F3D21897AA1000E6032D /* icon_eye.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_eye.png; sourceTree = "<group>"; };
+		36A0F3D51897AADB00E6032D /* bg_tile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_tile.png; sourceTree = "<group>"; };
 		36A727A917C794E400374063 /* navbar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = navbar.png; path = "Red Event App/Resources/navbar.png"; sourceTree = "<group>"; };
 		36A727AB17C7992100374063 /* appearance.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = appearance.xml; sourceTree = "<group>"; };
 		36A727AD17C799A500374063 /* UIColor+RWColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+RWColor.h"; sourceTree = "<group>"; };
@@ -1148,8 +1154,8 @@
 		364E9C6018868CBF008D0DCC /* RedUpload */ = {
 			isa = PBXGroup;
 			children = (
-				364E9C8D188D4ED4008D0DCC /* RedUploadFolderContentView */,
-				364E9C841889231E008D0DCC /* RedUploadFolderView */,
+				364E9C8D188D4ED4008D0DCC /* RedUploadFolderContent */,
+				364E9C841889231E008D0DCC /* RedUploadFolder */,
 				364E9C831889230C008D0DCC /* RedUploadPictureView */,
 			);
 			name = RedUpload;
@@ -1169,8 +1175,6 @@
 		364E9C6D1888246D008D0DCC /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				364E9C6E18882490008D0DCC /* RWVolatileDataStore.h */,
-				364E9C6F18882490008D0DCC /* RWVolatileDataStore.m */,
 				364E9C711888277F008D0DCC /* RWRedUploadDataStore.h */,
 				364E9C721888277F008D0DCC /* RWRedUploadDataStore.m */,
 				364E9C7A18882EFA008D0DCC /* RWRedUploadServerFolder.h */,
@@ -1179,6 +1183,8 @@
 				364E9C7E18883090008D0DCC /* RWRedUploadServerSessionFolder.m */,
 				364E9C8018891DFE008D0DCC /* RWRedUploadServerOtherFolder.h */,
 				364E9C8118891DFE008D0DCC /* RWRedUploadServerOtherFolder.m */,
+				364E9C6E18882490008D0DCC /* RWVolatileDataStore.h */,
+				364E9C6F18882490008D0DCC /* RWVolatileDataStore.m */,
 				364E9C8518892509008D0DCC /* RWVolatileDataStores.h */,
 				364E9C8618892509008D0DCC /* RWVolatileDataStores.m */,
 			);
@@ -1195,7 +1201,7 @@
 			name = RedUploadPictureView;
 			sourceTree = "<group>";
 		};
-		364E9C841889231E008D0DCC /* RedUploadFolderView */ = {
+		364E9C841889231E008D0DCC /* RedUploadFolder */ = {
 			isa = PBXGroup;
 			children = (
 				364E9C4F18840AB3008D0DCC /* RWRedUploadFolderViewController.h */,
@@ -1208,10 +1214,10 @@
 				364E9C89188951B7008D0DCC /* RWRedUploadOtherFolderListItem.m */,
 				364E9C8B188951C9008D0DCC /* RWRedUploadOtherFolderListItem.xib */,
 			);
-			name = RedUploadFolderView;
+			name = RedUploadFolder;
 			sourceTree = "<group>";
 		};
-		364E9C8D188D4ED4008D0DCC /* RedUploadFolderContentView */ = {
+		364E9C8D188D4ED4008D0DCC /* RedUploadFolderContent */ = {
 			isa = PBXGroup;
 			children = (
 				364E9C8E188D4FF7008D0DCC /* RWRedUploadFolderContentViewController.h */,
@@ -1221,7 +1227,7 @@
 				364E9C94188D66C4008D0DCC /* RWRedUploadFolderContentItem.m */,
 				364E9C96188D66E4008D0DCC /* RWRedUploadFolderContentItem.xib */,
 			);
-			name = RedUploadFolderContentView;
+			name = RedUploadFolderContent;
 			sourceTree = "<group>";
 		};
 		3683F1A3181FF35700C22E46 /* AdventWindow */ = {
@@ -1580,11 +1586,14 @@
 				3604166A17FAB4DB00B9A391 /* arrow_left.png */,
 				3604166B17FAB4DB00B9A391 /* arrow_right.png */,
 				26E7384515AAA226C33B8A6B /* barbackground.png */,
+				36A0F3D51897AADB00E6032D /* bg_tile.png */,
 				3683F19D181FEEF900C22E46 /* btnclose.png */,
 				3683F19E181FEEF900C22E46 /* btnseeyou.png */,
 				364E9C5918855F9A008D0DCC /* camera.png */,
 				364E9C5A18855F9A008D0DCC /* eye.png */,
 				36AB7CB317C263AE00316921 /* icon_about_bottombar.png */,
+				36A0F3D11897AA1000E6032D /* icon_camera.png */,
+				36A0F3D21897AA1000E6032D /* icon_eye.png */,
 				36AB7CB417C263AE00316921 /* icon_map.png */,
 				36AB7CB517C263AE00316921 /* icon_news_bottombar.png */,
 				36A7289E17CB695800374063 /* icon_youarehere.png */,
@@ -1862,9 +1871,11 @@
 				36354BCE181FC8410046066E /* xmas1.jpg in Resources */,
 				36AB7C6717BE5BB800316921 /* RWImageArticleListCell.xib in Resources */,
 				36A97AD518560F940050EC8D /* RWImageUploaderViewController.xib in Resources */,
+				36A0F3D41897AA1000E6032D /* icon_eye.png in Resources */,
 				36A0B40B18474F4B007A6C78 /* RWWebViewController.xib in Resources */,
 				36AB7C7117BE6ACA00316921 /* default_icon.jpeg in Resources */,
 				36AB7CA617C2050600316921 /* pages.xml in Resources */,
+				36A0F3D61897AADB00E6032D /* bg_tile.png in Resources */,
 				361EA889180BD63100441271 /* RWButtonGalleryViewController.xib in Resources */,
 				36AB7CB617C263AE00316921 /* icon_about_bottombar.png in Resources */,
 				36354BE1181FC8410046066E /* xmas20.jpg in Resources */,
@@ -1873,6 +1884,7 @@
 				36AB7CB717C263AE00316921 /* icon_map.png in Resources */,
 				364E9C5818840AF4008D0DCC /* RWRedUploadSessionFolderListItem.xib in Resources */,
 				36354BE3181FC8410046066E /* xmas22.jpg in Resources */,
+				36A0F3D31897AA1000E6032D /* icon_camera.png in Resources */,
 				36AB7CB817C263AE00316921 /* icon_news_bottombar.png in Resources */,
 				364E9C8C188951C9008D0DCC /* RWRedUploadOtherFolderListItem.xib in Resources */,
 				36354BD9181FC8410046066E /* xmas12.jpg in Resources */,

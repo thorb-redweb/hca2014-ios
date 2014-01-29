@@ -13,6 +13,7 @@
 #import "RWRedUploadFolderViewController.h"
 #import "RWRedUploadSessionFolderListItem.h"
 #import "RWRedUploadOtherFolderListItem.h"
+#import "RWDbRedUploadImages.h"
 
 #import "RWSessionVM.h"
 
@@ -53,6 +54,12 @@
 		[self.view setTranslatesAutoresizingMaskIntoConstraints:NO];
 	}
 	
+	[self setValues];
+	[self setAppearance];
+	[self setText];
+}
+
+- (void)setValues{
 	if([_folderstype isEqualToString:[RWPAGE REDUPLOADFOLDERTYPESESSION]]){
 		UINib *cellNib = [UINib nibWithNibName:sessionNib bundle:nil];
 		[_lstSessions registerNib:cellNib forCellReuseIdentifier:cellIdentifier];
@@ -62,10 +69,24 @@
 		UINib *cellNib = [UINib nibWithNibName:otherNib bundle:nil];
 		[_lstSessions registerNib:cellNib forCellReuseIdentifier:cellIdentifier];
 		dataSource = [[_app.volatileDataStores getRedUpload] otherFolders];
-	}	
+	}
+}
+
+- (void)setAppearance{
+	RWAppearanceHelper *helper = _appearanceHelper;
+
+    [helper setBackgroundTileImageOrColor:self.view localImageName:[RWLOOK BACKGROUNDIMAGE] localColorName:[RWLOOK BACKGROUNDCOLOR] globalName:[RWLOOK DEFAULT_BACKCOLOR]];
+	[_scrTableScrollView setBackgroundColor:[UIColor colorWithHexString:@"#00000000"]];
+
+    [helper.label setTitleStyle:_lblTitle];
+
+	[_lstSessions setSeparatorStyle:UITableViewCellSeparatorStyleNone];	
+}
+
+- (void)setText{
+	RWTextHelper *helper = _textHelper;
 	
-	[self setAppearance];
-	[self setText];
+	[helper setText:_lblTitle textName:[RWTEXT STYLEDSESSIONLIST_TITLE] defaultText:[RWDEFAULTTEXT STYLEDSESSIONLIST_TITLE]];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -78,36 +99,18 @@
 - (void)viewDidAppear:(BOOL)animated{
 	[super viewDidAppear:animated];
 	
+	NSArray *allItem = [_db.RedUploadImages getAll];
+	for(RedUploadImage *image in allItem){
+		NSString *local = image.localimagepath;
+		NSString *folder = image.serverfolder;
+		if(local && folder){}
+	}
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-
-- (void)setAppearance{
-	RWAppearanceHelper *helper = _appearanceHelper;
-
-    [helper setBackgroundTileImageOrColor:self.view localImageName:[RWLOOK BACKGROUNDIMAGE] localColorName:[RWLOOK BACKGROUNDCOLOR] globalName:[RWLOOK DEFAULT_BACKCOLOR]];
-	[_scrTableScrollView setBackgroundColor:[UIColor colorWithHexString:@"#00000000"]];
-
-    [helper.label setTitleStyle:_lblTitle];
-
-	[_lstSessions setSeparatorStyle:UITableViewCellSeparatorStyleNone];
-	if([_folderstype isEqualToString:[RWPAGE REDUPLOADFOLDERTYPESESSION]]){
-		[helper setBackgroundAsShape:_vwTableBackground localBackgroundColorName:[RWLOOK REDUPLOADFOLDERVIEW_LISTBACKGROUNDCOLOR] globalBackgroundColorName:[RWLOOK DEFAULT_ALTCOLOR] borderWidth:2.0f localBorderColorName:[RWLOOK REDUPLOADFOLDERVIEW_LISTLINECOLOR] globalBorderColorName:[RWLOOK DEFAULT_ALTTEXTCOLOR] cornerRadius:5];
-	}
-	else if([_folderstype isEqualToString:[RWPAGE REDUPLOADFOLDERTYPEOTHER]]){
-		[_vwTableBackground setBackgroundColor:[UIColor colorWithHexString:@"#00000000"]];
-		[_lstSessions setBackgroundColor:[UIColor colorWithHexString:@"#00000000"]];
-	}
-}
-
-- (void)setText{
-	RWTextHelper *helper = _textHelper;
-	
-	[helper setText:_lblTitle textName:[RWTEXT STYLEDSESSIONLIST_TITLE] defaultText:[RWDEFAULTTEXT STYLEDSESSIONLIST_TITLE]];
 }
 
 #pragma mark - Table view layout
@@ -139,6 +142,7 @@
 //}
 
 #pragma mark - Table view data source
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
     return dataSource.count;
@@ -163,7 +167,7 @@
 		
 		[scell setupCellWithRow:indexPath.row dataSource:dataSource];
 		
-		scell.lblTitle.preferredMaxLayoutWidth = CGRectGetWidth(tableView.frame) - 20;
+		scell.lblTitle.preferredMaxLayoutWidth = CGRectGetWidth(tableView.frame) - 116;
 		scell.lblBody.preferredMaxLayoutWidth = CGRectGetWidth(tableView.frame) - 116;
 		return scell;
 	}

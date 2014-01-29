@@ -25,8 +25,8 @@
 + (NSString *)PUSHMESSAGEAUTOSUBSCRIBER {return @"PushMessageAutoSubscriber";}
 + (NSString *)PUSHMESSAGEDETAIL {return @"PushMessageDetail";}
 + (NSString *)PUSHMESSAGELIST {return @"PushMessageList";}
-+ (NSString *)REDUPLOADFOLDERVIEW {return @"RedUploadFolderView";}
-+ (NSString *)REDUPLOADFOLDERCONTENTVIEW {return @"RedUploadFolderContentView";}
++ (NSString *)REDUPLOADFOLDERVIEW {return @"RedUploadFolder";}
++ (NSString *)REDUPLOADFOLDERCONTENTVIEW {return @"RedUploadFolderContent";}
 + (NSString *)REDUPLOADPICTUREVIEW {return @"RedUploadPictureView";}
 + (NSString *)SESSIONDETAIL {return @"SessionDetail";}
 + (NSString *)SESSIONMAP {return @"SessionMap";}

@@ -38,8 +38,14 @@
 {
     [super viewDidLoad];
     [self.view setTranslatesAutoresizingMaskIntoConstraints:NO];
-    [_scrMainScrollView setTranslatesAutoresizingMaskIntoConstraints:NO];
 	
+	[self setValues];
+	[self setControls];
+	[self setAppearance];
+	[self setText];
+}
+
+-(void)setValues{
 	int folderId = [_page getIntegerFromNode:[RWPAGE REDUPLOADFOLDERID]];
 	RWRedUploadDataStore *redUpload = [_app.volatileDataStores getRedUpload];
 	_folder = [redUpload getFolder:folderId];
@@ -53,21 +59,13 @@
 			_redUploadImageObject = [_db.RedUploadImages createEntry:entry];
 		}
     }
-    else {
-		[_btnTopRight setEnabled:NO];
-		[_btnBottomLeft setEnabled:NO];
-		[_btnDeletePicture setEnabled:NO];
-        DDLogError(@"No filepath provided for image");
-    }
-	
-	[self setControls];
-	[self setAppearance];
-	[self setText];
 }
 
 -(void)setControls{
-
+	
 	[_txtPictureText setText:_redUploadImageObject.text];
+	
+	[_vwTakePicture addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(topRightButtonClicked:)]];
 	
 	[_swcApproval setEnabled:NO];
 	[_swcApproval setOn:_redUploadImageObject.approved.boolValue animated:YES];
@@ -77,28 +75,42 @@
     RWAppearanceHelper *helper = _appearanceHelper;
 	
     [helper setBackgroundTileImageOrColor:self.view localImageName:[RWLOOK BACKGROUNDIMAGE] localColorName:[RWLOOK BACKGROUNDCOLOR] globalName:[RWLOOK DEFAULT_BACKCOLOR]];
-	[helper setBackgroundTileImageOrColor:_vwScrollBackground localImageName:[RWLOOK BACKGROUNDIMAGE] localColorName:[RWLOOK BACKGROUNDCOLOR] globalName:[RWLOOK DEFAULT_BACKCOLOR]];
 	
-	[helper.button setCustomStyle:_btnBack tag:@"topbutton" defaultColor:[RWLOOK DEFCOLOR_ALT] defaultSize:[RWLOOK DEFSIZE_ITEMTITLE]];
-	[helper.button setCustomStyle:_btnTopRight tag:@"topbutton" defaultColor:[RWLOOK DEFCOLOR_ALT] defaultSize:[RWLOOK DEFSIZE_ITEMTITLE]];
+	[helper.button setCustomStyle:_btnBack tag:@"topbutton" defaultColor:[RWLOOK DEFCOLOR_BACK] defaultSize:[RWLOOK DEFSIZE_ITEMTITLE]];
+	[helper setBackgroundAsShape:_btnBack localBackgroundColorName:@"topbuttonbackgroundcolor" globalBackgroundColorName:[RWLOOK DEFAULT_BACKCOLOR] borderWidth:1 localBorderColorName:@"topbuttonbordercolor" globalBorderColorName:[RWLOOK DEFAULT_BACKTEXTCOLOR] cornerRadius:15];
 	
-	[helper.button setCustomStyle:_btnBottomLeft tag:@"bottombutton" defaultColor:[RWLOOK DEFCOLOR_BACK] defaultSize:[RWLOOK DEFSIZE_ITEMTITLE]];
-	[helper.button setCustomStyle:_btnDeletePicture tag:@"bottombutton" defaultColor:[RWLOOK DEFCOLOR_BACK] defaultSize:[RWLOOK DEFSIZE_ITEMTITLE]];
+	[helper setBackgroundColor:_vwTakePicture localName:nil globalName:[RWLOOK INVISIBLE]];
+	[helper setBackgroundAsShape:_vwFrontBox localBackgroundColorName:@"topbuttonbackgroundcolor" globalBackgroundColorName:[RWLOOK DEFAULT_BACKCOLOR] borderWidth:1 localBorderColorName:@"topbuttonbordercolor" globalBorderColorName:[RWLOOK DEFAULT_BACKTEXTCOLOR] cornerRadius:15];
+	[helper.label setColor:_lblTakePicture localName:@"topbuttontextcolor" globalName:[RWLOOK DEFAULT_BACKTEXTCOLOR]];
+	[helper.label setFont:_lblTakePicture localSizeName:@"topbuttontextsize" globalSizeName:[RWLOOK DEFAULT_ITEMTITLESIZE] localStyleName:@"topbuttontextstyle" globalStyleName:[RWLOOK DEFAULT_ITEMTITLESTYLE]];
+	[helper.label setShadowColor:_lblTakePicture localName:@"topbuttontextshadowcolor" globalName:[RWLOOK DEFAULT_BACKTEXTSHADOWCOLOR]];
+	[helper.label setShadowOffset:_lblTakePicture localName:@"topbuttontextshadowoffset" globalName:[RWLOOK DEFAULT_ITEMTITLESHADOWOFFSET]];
+	[helper setBackgroundColor:_imgTakePicture localName:@"camerabuttoniconcolor" globalName:[RWLOOK DEFAULT_ALTCOLOR]];
+	[_imgTakePicture setImage:[_appearanceHelper.getter getImageFromLocalSourceWithLocalName:@"camerabuttonicon"]];
 	
 	[helper.label setTitleStyle:_lblTitle];
 	
-	[helper setBackgroundColor:_vwApprovalBox localName:[RWLOOK REDUPLOADPICTUREVIEW_APPROVALBOXCOLOR] globalName:[RWLOOK DEFAULT_ALTCOLOR]];
+	[helper setBackgroundAsShape:_txtPictureText localBackgroundColorName:@"textboxbackgroundcolor" globalBackgroundColorName:[RWLOOK DEFAULT_BACKCOLOR] borderWidth:1 localBorderColorName:@"textboxbordercolor" globalBorderColorName:[RWLOOK DEFAULT_BACKTEXTCOLOR] cornerRadius:5];
+	
+	[helper setBackgroundAsShape:_vwApprovalBox localBackgroundColorName:[RWLOOK REDUPLOADPICTUREVIEW_APPROVALBOXCOLOR] globalBackgroundColorName:[RWLOOK DEFAULT_BACKCOLOR] borderWidth:1 localBorderColorName:@"approvalboxbordercolor" globalBorderColorName:[RWLOOK DEFAULT_BACKTEXTCOLOR] cornerRadius:15];
 	[helper.label setAltTextStyle:_lblApprovalStatement];
 	[helper.label setAltTextStyle:_lblApprovalStatus];
 	
-	[helper setScrollBounces:_scrMainScrollView localName:[RWLOOK SCROLLBOUNCES] globalName:[RWLOOK SCROLLBOUNCES]];
+	[helper.button setCustomStyle:_btnBottomLeft tag:@"uploadbutton" defaultColor:[RWLOOK DEFCOLOR_BACK] defaultSize:[RWLOOK DEFSIZE_ITEMTITLE]];
+	[helper setBackgroundAsShapeWithGradiant:_btnBottomLeft localBackgroundColorName1:@"uploadbuttonbackgroundcolor" globalBackgroundColorName1:[RWLOOK DEFAULT_BACKCOLOR] localBackgroundColorName2:@"uploadbuttonbackgroundcolor2" globalBackgroundColorName2:[RWLOOK DEFAULT_BACKCOLOR]
+								 borderWidth:1 localBorderColorName:@"uploadbuttonbordercolor" globalBorderColorName:[RWLOOK DEFAULT_BACKTEXTCOLOR] cornerRadius:15];
+	
+	[helper.button setCustomStyle:_btnDeletePicture tag:@"deletebutton" defaultColor:[RWLOOK DEFCOLOR_BACK] defaultSize:[RWLOOK DEFSIZE_ITEMTITLE]];
+	[helper setBackgroundAsShapeWithGradiant:_btnDeletePicture localBackgroundColorName1:@"deletebuttonbackgroundcolor" globalBackgroundColorName1:[RWLOOK DEFAULT_BACKCOLOR]
+				   localBackgroundColorName2:@"deletebuttonbackgroundcolor2" globalBackgroundColorName2:[RWLOOK DEFAULT_BACKCOLOR]
+								 borderWidth:1 localBorderColorName:@"deletebuttonbordercolor" globalBorderColorName:[RWLOOK DEFAULT_BACKTEXTCOLOR] cornerRadius:15];
 }
 
 -(void)setText{
     RWTextHelper *helper = _textHelper;
 	
     [helper setButtonText:_btnBack textName:[RWTEXT REDUPLOAD_BACKBUTTON] defaultText:[RWDEFAULTTEXT REDUPLOAD_BACKBUTTON]];
-    [helper setButtonText:_btnTopRight textName:[RWTEXT REDUPLOAD_TOPRIGHTBUTTON] defaultText:[RWDEFAULTTEXT REDUPLOAD_TOPRIGHTBUTTON]];
+    [helper setText:_lblTakePicture textName:@"nextbutton" defaultText:[RWDEFAULTTEXT REDUPLOAD_TOPRIGHTBUTTON]];
 	[_lblTitle setText:_folder.name];
 	[helper setTextFieldPlaceHolderText:_txtPictureText textName:[RWTEXT REDUPLOAD_PICTURETEXTHINT] defaultText:[RWDEFAULTTEXT REDUPLOAD_PICTURETEXTHINT]];
 	[helper setText:_lblApprovalStatement textName:[RWTEXT REDUPLOAD_APPROVALSTATEMENT] defaultText:[RWDEFAULTTEXT REDUPLOAD_APPROVALSTATEMENT]];
@@ -121,16 +133,9 @@
         UIImage *image = [UIImage imageWithContentsOfFile:_imagePath];
         [_imgPicture setImage:image];
 		
-		float aspect = image.size.height/image.size.width;
-		[_imgPicture addConstraint:[NSLayoutConstraint constraintWithItem:_imgPicture attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:_imgPicture attribute:NSLayoutAttributeWidth multiplier:aspect constant:0]];
-
+		//		float aspect = image.size.height/image.size.width;
+		//		[_imgPicture addConstraint:[NSLayoutConstraint constraintWithItem:_imgPicture attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:_imgPicture attribute:NSLayoutAttributeWidth multiplier:aspect constant:0]];
 		
-		if(!image){
-			[_btnTopRight setEnabled:NO];
-			[_btnBottomLeft setEnabled:NO];
-			[_btnDeletePicture setEnabled:NO];
-	        DDLogError(@"No image exists for given path");
-		}
     }
 }
 
@@ -175,11 +180,11 @@
 - (IBAction)deletePictureButtonClicked:(id)sender{
 	
 	NSString *filePath = [_page getStringFromNode:[RWPAGE FILEPATH]];
-
+	
 	[_db.RedUploadImages deleteEntryWithImagePath:filePath];
 	
 	NSFileManager *fileManager = [NSFileManager defaultManager];
-	[fileManager removeItemAtPath:filePath error:nil];	
+	[fileManager removeItemAtPath:filePath error:nil];
 	
 	[self backButtonClicked:nil];
 }

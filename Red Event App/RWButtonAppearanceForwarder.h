@@ -31,6 +31,8 @@
 
 - (BOOL)setBackgroundImageFromLocalSourceForLast:(NSString *)localname;
 
+- (void)setDisabledTitleColor:(UIButton *)button localName:(NSString *)localname globalName:(NSString *)globalname;
+
 - (void)setImageFromLocalSource:(UIButton *)button localName:(NSString *)localname;
 
 - (void)setImageFromLocalSourceForLast:(NSString *)localname;

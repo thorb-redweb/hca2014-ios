@@ -17,8 +17,6 @@
 
 -(id)initWithDb:(RWDbInterface *)db{
 	if (self = [super init]) {
-		_redUploadImages = [db.RedUploadImages getAll];
-
 		_sessionFolders = [[NSMutableArray alloc] init];
 		[_sessionFolders addObject:[[RWRedUploadServerSessionFolder alloc] initWithId:1 name:@"Odense Marcipan og Claus Bager" time:@"Kl. 10.00 - 12.00" serverfolder:@"odense"]];
 		[_sessionFolders addObject:[[RWRedUploadServerSessionFolder alloc] initWithId:2 name:@"Klaveret, der kom forbi - med Findus og Den Halve Kvartet" time:@"Kl. 10.00" serverfolder:@"klaver"]];
@@ -42,14 +40,21 @@
 	NSMutableArray *redUploadImages = [db.RedUploadImages getAll];
 	
 	for (RedUploadImage *image in redUploadImages) {
-		bool folderDoesntExist = YES;
+		bool sessionFolderDoesntExist = YES;
 		for (RWRedUploadServerFolder *folder in _sessionFolders) {
 			if ([folder.serverFolder isEqualToString: image.serverfolder]) {
-				folderDoesntExist = NO;
+				sessionFolderDoesntExist = NO;
 				break;
 			}
 		}
-		if(folderDoesntExist){
+		bool otherFolderDoesntExist = YES;
+		for (RWRedUploadServerFolder *folder in _otherFolders) {
+			if ([folder.serverFolder isEqualToString: image.serverfolder]) {
+				otherFolderDoesntExist = NO;
+				break;
+			}
+		}
+		if(sessionFolderDoesntExist && otherFolderDoesntExist){
 			[db.RedUploadImages deleteEntryWithImagePath:image.localimagepath];
 		}
 	}
