@@ -22,4 +22,6 @@
 - (RWArticleVM *)getVMFromId:(int)articleid;
 
 - (NSArray *)getVMListFromCatId:(int)catid;
+
+- (NSArray *)getVMListOfLastThree:(int)catid;
 @end

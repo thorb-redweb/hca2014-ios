@@ -38,6 +38,7 @@
 #import "RWCameraIntentViewController.h"
 #import "RWImageUploaderViewController.h"
 #import "RWImageUploadBrowserViewController.h"
+#import "RWHcaSplitView.h"
 
 @interface RWNavigationController ()
 
@@ -195,6 +196,9 @@ static const int ddLogLevel = LOG_LEVEL_INFO;
     }
     else if ([viewControllerType isEqual:[RWTYPE FILEBROWSER]]) {
         return [[RWImageUploadBrowserViewController alloc] initWithPage:page];
+    }
+    else if ([viewControllerType isEqual:[RWTYPE HCASPLITVIEW]]) {
+        return [[RWHcaSplitView alloc] initWithPage:page];
     }
     else if ([viewControllerType isEqual:[RWTYPE IMAGEARTICLELIST]]) {
         return [[RWImageArticleListViewController alloc] initWithPage:page];

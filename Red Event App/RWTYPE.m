@@ -18,6 +18,7 @@
 + (NSString *)CAMERAINTENT {return @"CameraIntent";}
 + (NSString *)DAILYSESSIONLIST {return @"DailySessionList";}
 + (NSString *)FILEBROWSER {return @"filebrowser";}
++ (NSString *)HCASPLITVIEW {return @"HcaSplitView";}
 + (NSString *)IMAGEARTICLELIST {return @"ImageArticleList";}
 + (NSString *)IMAGEUPLOADER {return @"ImageUploader";}
 + (NSString *)NEWSTICKER {return @"NewsTicker";}

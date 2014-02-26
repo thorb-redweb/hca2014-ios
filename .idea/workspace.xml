@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3b12e239-311e-4611-93d9-549bde44ed4e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/RWDEFAULTTEXT.m" afterPath="$PROJECT_DIR$/Red Event App/RWDEFAULTTEXT.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/RWRedUploadDataStore.h" afterPath="$PROJECT_DIR$/Red Event App/RWRedUploadDataStore.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/RWRedUploadDataStore.m" afterPath="$PROJECT_DIR$/Red Event App/RWRedUploadDataStore.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/RWRedUploadFolderContentViewController.m" afterPath="$PROJECT_DIR$/Red Event App/RWRedUploadFolderContentViewController.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/RWTYPE.m" afterPath="$PROJECT_DIR$/Red Event App/RWTYPE.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/Setup Files/pages.xml" afterPath="$PROJECT_DIR$/Red Event App/Setup Files/pages.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red App.xcodeproj/project.pbxproj" afterPath="$PROJECT_DIR$/Red App.xcodeproj/project.pbxproj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Red Event App.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -31,19 +25,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="RWRedUploadFolderViewController.m" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Red Event App/RWRedUploadFolderViewController.m">
+      <file leaf-file-name="RWRedUploadFolderViewController.h" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Red Event App/RWRedUploadFolderViewController.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="1" selection-start="910" selection-end="910" vertical-scroll-proportion="0.0" vertical-offset="247" max-vertical-offset="2880">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RWRedUploadSessionFolderListItem.m" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Red Event App/RWRedUploadSessionFolderListItem.m">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="95" column="8" selection-start="2812" selection-end="2812" vertical-scroll-proportion="0.0" vertical-offset="1425" max-vertical-offset="1605">
+            <state line="11" column="28" selection-start="241" selection-end="241" vertical-scroll-proportion="0.0" vertical-offset="165" max-vertical-offset="405">
               <folding />
             </state>
           </provider>
@@ -52,16 +37,25 @@
       <file leaf-file-name="RWRedUploadPictureViewController.m" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Red Event App/RWRedUploadPictureViewController.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="54" column="5" selection-start="1624" selection-end="1624" vertical-scroll-proportion="-0.41379312" vertical-offset="1170" max-vertical-offset="3105">
+            <state line="66" column="4" selection-start="1733" selection-end="1733" vertical-scroll-proportion="-0.41379312" vertical-offset="1350" max-vertical-offset="3180">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RWRedUploadFolderViewController.h" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Red Event App/RWRedUploadFolderViewController.h">
+      <file leaf-file-name="RWRedUploadSessionFolderListItem.m" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Red Event App/RWRedUploadSessionFolderListItem.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="28" selection-start="241" selection-end="241" vertical-scroll-proportion="0.0" vertical-offset="165" max-vertical-offset="405">
+            <state line="92" column="8" selection-start="3024" selection-end="3024" vertical-scroll-proportion="0.0" vertical-offset="1380" max-vertical-offset="1560">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RWRedUploadFolderViewController.m" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Red Event App/RWRedUploadFolderViewController.m">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="37" column="1" selection-start="942" selection-end="942" vertical-scroll-proportion="0.0" vertical-offset="262" max-vertical-offset="2940">
               <folding />
             </state>
           </provider>
@@ -151,6 +145,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Cidr.FilesView" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -295,19 +290,18 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Cidr.FilesView" />
       <pane id="DirectoryView.Xcode" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="recentsLimit" value="5" />
     <property name="options.lastSelected" value="Errors" />
+    <property name="recentsLimit" value="5" />
     <property name="last_opened_file_path" value="$USER_HOME$/Documents/ABSI/FC Randers" />
     <property name="FullScreen" value="false" />
     <property name="OBJC.PRESERVED_TARGET_SELECTION" value="Red App" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="RunManager" selected="Application.Red App Development">
     <configuration default="true" type="AppleRunConfiguration" factoryName="Application" PROJECT_NAME="Red Event App" TARGET_NAME="Red Event App" CONFIG_NAME="Debug" PASS_PARENT_ENVS="FALSE" RUN_TARGET_PROJECT_NAME="Red Event App" RUN_TARGET_NAME="Red Event App" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
@@ -404,9 +398,7 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Red Event App/RWNavigationController.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.8513053" vertical-offset="750" max-vertical-offset="3180">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.8513053" vertical-offset="750" max-vertical-offset="3180" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Red Event App/RWVolatileDataStores.h">
@@ -417,13 +409,6 @@
     <entry file="file://$PROJECT_DIR$/Red Event App/RWVolatileDataStores.m">
       <provider selected="true" editor-type-id="text-editor">
         <state line="16" column="63" selection-start="428" selection-end="428" vertical-scroll-proportion="0.2724177" vertical-offset="0" max-vertical-offset="881" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Red Event App/RWRedUploadFolderViewController.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="28" selection-start="241" selection-end="241" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="390">
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Red Event App/RWAppDelegate.m">
@@ -451,13 +436,6 @@
         <state line="24" column="155" selection-start="1097" selection-end="1097" vertical-scroll-proportion="0.323496" vertical-offset="0" max-vertical-offset="881" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Red Event App/RWRedUploadSessionFolderListItem.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="95" column="8" selection-start="2812" selection-end="2812" vertical-scroll-proportion="0.0" vertical-offset="1425" max-vertical-offset="1605">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Red Event App/RWRedUploadPictureViewController.h">
       <provider selected="true" editor-type-id="text-editor">
         <state line="1" column="4" selection-start="7" selection-end="7" vertical-scroll-proportion="0.017026106" vertical-offset="0" max-vertical-offset="881" />
@@ -478,16 +456,30 @@
         <state line="21" column="0" selection-start="514" selection-end="532" vertical-scroll-proportion="0.35754824" vertical-offset="0" max-vertical-offset="881" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Red Event App/RWRedUploadFolderViewController.m">
+    <entry file="file://$PROJECT_DIR$/Red Event App/RWRedUploadFolderViewController.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="1" selection-start="910" selection-end="910" vertical-scroll-proportion="0.0" vertical-offset="247" max-vertical-offset="2880">
+        <state line="11" column="28" selection-start="241" selection-end="241" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="390">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Red Event App/RWRedUploadPictureViewController.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="5" selection-start="1624" selection-end="1624" vertical-scroll-proportion="-0.41379312" vertical-offset="1170" max-vertical-offset="3105">
+        <state line="66" column="4" selection-start="1733" selection-end="1733" vertical-scroll-proportion="-0.41379312" vertical-offset="1350" max-vertical-offset="3180">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Red Event App/RWRedUploadSessionFolderListItem.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="92" column="8" selection-start="3024" selection-end="3024" vertical-scroll-proportion="0.0" vertical-offset="1380" max-vertical-offset="1560">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Red Event App/RWRedUploadFolderViewController.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="1" selection-start="942" selection-end="942" vertical-scroll-proportion="0.0" vertical-offset="262" max-vertical-offset="2940">
           <folding />
         </state>
       </provider>

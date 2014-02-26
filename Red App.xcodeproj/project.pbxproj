@@ -187,6 +187,13 @@
 		36A0F3D31897AA1000E6032D /* icon_camera.png in Resources */ = {isa = PBXBuildFile; fileRef = 36A0F3D11897AA1000E6032D /* icon_camera.png */; };
 		36A0F3D41897AA1000E6032D /* icon_eye.png in Resources */ = {isa = PBXBuildFile; fileRef = 36A0F3D21897AA1000E6032D /* icon_eye.png */; };
 		36A0F3D61897AADB00E6032D /* bg_tile.png in Resources */ = {isa = PBXBuildFile; fileRef = 36A0F3D51897AADB00E6032D /* bg_tile.png */; };
+		36A29BA918BCD2EB00E64B7A /* RWHcaSplitView.m in Sources */ = {isa = PBXBuildFile; fileRef = 36A29BA818BCD2EB00E64B7A /* RWHcaSplitView.m */; };
+		36A29BAB18BCD35300E64B7A /* RWHcaSplitView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36A29BAA18BCD35300E64B7A /* RWHcaSplitView.xib */; };
+		36A29BAE18BCD5DD00E64B7A /* RWHcaListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 36A29BAD18BCD5DD00E64B7A /* RWHcaListCell.m */; };
+		36A29BB118BCD5EC00E64B7A /* RWNewstickerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 36A29BB018BCD5EC00E64B7A /* RWNewstickerCell.m */; };
+		36A29BB318BCD60700E64B7A /* RWHcaListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36A29BB218BCD60700E64B7A /* RWHcaListCell.xib */; };
+		36A29BB518BCD61D00E64B7A /* RWNewstickerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36A29BB418BCD61D00E64B7A /* RWNewstickerCell.xib */; };
+		36A29BB818BCEBE000E64B7A /* RWNewsticker.m in Sources */ = {isa = PBXBuildFile; fileRef = 36A29BB718BCEBE000E64B7A /* RWNewsticker.m */; };
 		36A727AA17C794E400374063 /* navbar.png in Resources */ = {isa = PBXBuildFile; fileRef = 36A727A917C794E400374063 /* navbar.png */; };
 		36A727AC17C7992100374063 /* appearance.xml in Resources */ = {isa = PBXBuildFile; fileRef = 36A727AB17C7992100374063 /* appearance.xml */; };
 		36A727AF17C799A500374063 /* UIColor+RWColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 36A727AE17C799A500374063 /* UIColor+RWColor.m */; };
@@ -582,6 +589,17 @@
 		36A0F3D11897AA1000E6032D /* icon_camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_camera.png; sourceTree = "<group>"; };
 		36A0F3D21897AA1000E6032D /* icon_eye.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_eye.png; sourceTree = "<group>"; };
 		36A0F3D51897AADB00E6032D /* bg_tile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_tile.png; sourceTree = "<group>"; };
+		36A29BA718BCD2EB00E64B7A /* RWHcaSplitView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWHcaSplitView.h; sourceTree = "<group>"; };
+		36A29BA818BCD2EB00E64B7A /* RWHcaSplitView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWHcaSplitView.m; sourceTree = "<group>"; };
+		36A29BAA18BCD35300E64B7A /* RWHcaSplitView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RWHcaSplitView.xib; sourceTree = "<group>"; };
+		36A29BAC18BCD5DD00E64B7A /* RWHcaListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWHcaListCell.h; sourceTree = "<group>"; };
+		36A29BAD18BCD5DD00E64B7A /* RWHcaListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWHcaListCell.m; sourceTree = "<group>"; };
+		36A29BAF18BCD5EC00E64B7A /* RWNewstickerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWNewstickerCell.h; sourceTree = "<group>"; };
+		36A29BB018BCD5EC00E64B7A /* RWNewstickerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWNewstickerCell.m; sourceTree = "<group>"; };
+		36A29BB218BCD60700E64B7A /* RWHcaListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RWHcaListCell.xib; sourceTree = "<group>"; };
+		36A29BB418BCD61D00E64B7A /* RWNewstickerCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RWNewstickerCell.xib; sourceTree = "<group>"; };
+		36A29BB618BCEBE000E64B7A /* RWNewsticker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWNewsticker.h; sourceTree = "<group>"; };
+		36A29BB718BCEBE000E64B7A /* RWNewsticker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWNewsticker.m; sourceTree = "<group>"; };
 		36A727A917C794E400374063 /* navbar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = navbar.png; path = "Red Event App/Resources/navbar.png"; sourceTree = "<group>"; };
 		36A727AB17C7992100374063 /* appearance.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = appearance.xml; sourceTree = "<group>"; };
 		36A727AD17C799A500374063 /* UIColor+RWColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+RWColor.h"; sourceTree = "<group>"; };
@@ -1300,6 +1318,24 @@
 			name = Contest;
 			sourceTree = "<group>";
 		};
+		36A29BA618BCD28300E64B7A /* SplitView */ = {
+			isa = PBXGroup;
+			children = (
+				36A29BA718BCD2EB00E64B7A /* RWHcaSplitView.h */,
+				36A29BA818BCD2EB00E64B7A /* RWHcaSplitView.m */,
+				36A29BAA18BCD35300E64B7A /* RWHcaSplitView.xib */,
+				36A29BAC18BCD5DD00E64B7A /* RWHcaListCell.h */,
+				36A29BAD18BCD5DD00E64B7A /* RWHcaListCell.m */,
+				36A29BB218BCD60700E64B7A /* RWHcaListCell.xib */,
+				36A29BB618BCEBE000E64B7A /* RWNewsticker.h */,
+				36A29BB718BCEBE000E64B7A /* RWNewsticker.m */,
+				36A29BAF18BCD5EC00E64B7A /* RWNewstickerCell.h */,
+				36A29BB018BCD5EC00E64B7A /* RWNewstickerCell.m */,
+				36A29BB418BCD61D00E64B7A /* RWNewstickerCell.xib */,
+			);
+			name = SplitView;
+			sourceTree = "<group>";
+		};
 		36A7289217CB47F800374063 /* Map */ = {
 			isa = PBXGroup;
 			children = (
@@ -1527,6 +1563,7 @@
 				364E9C6018868CBF008D0DCC /* RedUpload */,
 				36A79EF417C6089800AB211B /* Session */,
 				26E7389FD9B1A2416EA7EED5 /* Settings */,
+				36A29BA618BCD28300E64B7A /* SplitView */,
 				26E739DD242040DD71C7F3C9 /* System */,
 				361EA88C180C0DC200441271 /* Venue */,
 				364E9C9B188D7D24008D0DCC /* RWBaseCollectionItem.h */,
@@ -1918,8 +1955,10 @@
 				3604166D17FAB4DB00B9A391 /* arrow_right.png in Resources */,
 				36A7289F17CB695800374063 /* icon_youarehere.png in Resources */,
 				36354BDE181FC8410046066E /* xmas17.jpg in Resources */,
+				36A29BB518BCD61D00E64B7A /* RWNewstickerCell.xib in Resources */,
 				367628F318040475002ED534 /* text.xml in Resources */,
 				36A728A117CB6D0000374063 /* Track.gpx in Resources */,
+				36A29BB318BCD60700E64B7A /* RWHcaListCell.xib in Resources */,
 				364E9C5318840AB3008D0DCC /* RWRedUploadFolderViewController.xib in Resources */,
 				36A728AD17CB8D6F00374063 /* RWSplashViewController.xib in Resources */,
 				36214F6C183CBC34001B0B63 /* RWTableNavigatorCell.xib in Resources */,
@@ -1945,6 +1984,7 @@
 				36A0B411184DD017007A6C78 /* RWBikeTrackingViewController.xib in Resources */,
 				26E73BAC5180C9A138C7C0FD /* RWSessionDetailViewController.xib in Resources */,
 				368EFAEA1843A6460099089C /* RWPushMessageListCell.xib in Resources */,
+				36A29BAB18BCD35300E64B7A /* RWHcaSplitView.xib in Resources */,
 				26E7347869677503A25B7CE1 /* RWDailySessionListItem.xib in Resources */,
 				26E7372845AA4EBB83B70E49 /* RWStaticArticleController.xib in Resources */,
 				36354BD7181FC8410046066E /* xmas10.jpg in Resources */,
@@ -2002,11 +2042,13 @@
 				361EA8811806B0EC00441271 /* UIImageView+WebCache.m in Sources */,
 				367628EE1803F821002ED534 /* RWDEFAULTTEXT.m in Sources */,
 				36AB7C6517BE5B9E00316921 /* RWImageArticleListCell.m in Sources */,
+				36A29BB118BCD5EC00E64B7A /* RWNewstickerCell.m in Sources */,
 				36AB7C9717C203E000316921 /* CXMLDocument_CreationExtensions.m in Sources */,
 				361EA87E1806B0EC00441271 /* UIImage+GIF.m in Sources */,
 				364E9C7018882490008D0DCC /* RWVolatileDataStore.m in Sources */,
 				36AB7C9817C203E000316921 /* CXMLNode_CreationExtensions.m in Sources */,
 				36A0B3FF1845E2D6007A6C78 /* RWPushMessageAutoSubscriberViewController.m in Sources */,
+				36A29BB818BCEBE000E64B7A /* RWNewsticker.m in Sources */,
 				36A97B5B1876B0DD0050EC8D /* DDMultiFormatter.m in Sources */,
 				36AB7C9917C203E000316921 /* CXHTMLDocument.m in Sources */,
 				36214F98183F8206001B0B63 /* PushMessageGroup.m in Sources */,
@@ -2104,6 +2146,7 @@
 				368EFAE81843A6210099089C /* RWPushMessageListCell.m in Sources */,
 				26E73DBA4ADBF998256D88EF /* RWDailySessionListViewController.m in Sources */,
 				26E739E27A8B0F6A3CC059DA /* RWVenuePickerViewController.m in Sources */,
+				36A29BA918BCD2EB00E64B7A /* RWHcaSplitView.m in Sources */,
 				26E7320BD4DD960ACEAE2F0C /* RWSessionDetailViewController.m in Sources */,
 				26E73A16AE0BED83CB4BF2F2 /* RWDailySessionListItem.m in Sources */,
 				36214F83183F6DFE001B0B63 /* RWPushMessageDetailViewController.m in Sources */,
@@ -2117,6 +2160,7 @@
 				26E737869BA3CD47EB4DF1C7 /* RWJSONSession.m in Sources */,
 				36214F9B183F8207001B0B63 /* PushMessage.m in Sources */,
 				26E73C9AA3817CDE9AB356C0 /* RWJSONVenue.m in Sources */,
+				36A29BAE18BCD5DD00E64B7A /* RWHcaListCell.m in Sources */,
 				26E735A83CD4B9562C4CF691 /* RWJSONSchemas.m in Sources */,
 				36A97B561876B0DD0050EC8D /* DDFileLogger.m in Sources */,
 				26E7358C57205B061BD03C68 /* RWTableNavigatorViewController.m in Sources */,

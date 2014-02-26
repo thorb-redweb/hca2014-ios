@@ -74,4 +74,21 @@
     return vmList;
 }
 
+- (NSArray *)getVMListOfLastThree:(int)catid{
+	NSPredicate *predicate = [NSPredicate predicateWithFormat:@"%K == %d", [RWDbSchemas ART_CATID], catid];
+	
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:[RWDbSchemas ART_PUBLISHDATE] ascending:NO];
+    NSArray *sortDescriptors = [[NSArray alloc] initWithObjects:sortDescriptor, nil];
+	
+    NSMutableArray *fetchResults = [_dbHelper getFromDatabase:[RWDbSchemas ART_TABLENAME] predicate:predicate sort:sortDescriptors fetchLimit:3];
+	
+    NSMutableArray *vmList = [[NSMutableArray alloc] initWithCapacity:0];
+    for (Article *article in fetchResults) {
+        RWArticleVM *vm = [[RWArticleVM alloc] initWithArticle:article xml:_xml];
+        [vmList addObject:vm];
+    }
+	
+    return vmList;
+}
+
 @end
