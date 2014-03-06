@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>77CAA27D-85A2-4955-9E01-A397420A1AD6</string>
+	<key>IDESourceControlProjectName</key>
+	<string>hca2014</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>E4CFF10C-670A-46B4-9986-9F70FE33A697</key>
+		<string>file://localhost/Users/redwebpraktik/IphoneProjects/Red%20App/</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>hca2014.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>E4CFF10C-670A-46B4-9986-9F70FE33A697</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>file://localhost/Users/redwebpraktik/IphoneProjects/Red%20App/</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>E4CFF10C-670A-46B4-9986-9F70FE33A697</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>E4CFF10C-670A-46B4-9986-9F70FE33A697</string>
+			<key>IDESourceControlWCCName</key>
+			<string>hca2014</string>
+		</dict>
+	</array>
+</dict>
+</plist>

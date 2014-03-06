@@ -11,16 +11,15 @@
 
 #import "RWVenueVM.h"
 
-@interface RWDailySessionListViewController : RWBaseViewController <UITableViewDelegate, UITableViewDataSource>
+@interface RWDailySessionListViewController : RWBaseViewController <UITableViewDelegate, UITableViewDataSource, UIAlertViewDelegate>
 
 @property(weak, nonatomic) IBOutlet UILabel *lblDate;
 @property(weak, nonatomic) IBOutlet UIView *viewDateUnderline;
 @property(weak, nonatomic) IBOutlet UIButton *btnPrevious;
 @property(weak, nonatomic) IBOutlet UIButton *btnNext;
+@property(weak, nonatomic) IBOutlet UIButton *btnTypePicker;
 @property(weak, nonatomic) IBOutlet UIButton *btnVenuePicker;
 @property(weak, nonatomic) IBOutlet UITableView *lstTableView;
-
-@property(nonatomic) RWVenueVM *filterVenue;
 
 - (id)initWithPage:(RWXmlNode *)page;
 
@@ -28,6 +27,7 @@
 
 - (IBAction)nextDay:(id)sender;
 
+- (IBAction)openTypePickingView:(id)sender;
 - (IBAction)openVenuePickingView:(id)sender;
 
 @end

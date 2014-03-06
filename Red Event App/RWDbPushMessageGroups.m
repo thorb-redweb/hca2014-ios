@@ -30,7 +30,10 @@
 
     NSArray *fetchResults = [_dbHelper getFromDatabase:[RWDbSchemas PUSHGROUP_TABLENAME] predicate:predicate];
 
-    return fetchResults[0];
+	if(fetchResults.count > 0){
+		return fetchResults[0];
+	}
+	return nil;
 }
 
 -(NSArray *)getAll{

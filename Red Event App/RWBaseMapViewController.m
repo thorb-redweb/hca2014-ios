@@ -73,12 +73,24 @@
 
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
-	
-    [_mapView removeObserver:self forKeyPath:@"myLocation"];
+	@try{
+		[_mapView removeObserver:self forKeyPath:@"myLocation"];
+	}
+	@catch (id anException) {
+		//Hopefully this will only be thrown in the instances where the observer haven't yet been added
+	}
 }
 
 -(IBAction)btnBackClicked{
     [_app.navController popPage];
+}
+
+- (void)mapView:(GMSMapView *)mapView didTapInfoWindowOfMarker:(GMSMarker *)marker{
+	NSArray *snippets = [marker.snippet componentsSeparatedByString:@"//"];
+	
+	RWXmlNode *childPage = [[_xml getPage:_childname] deepClone];
+	[childPage addNodeWithName:[RWPAGE SESSIONID] value:snippets[1]];
+	[_app.navController pushViewWithPage:childPage];
 }
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
@@ -103,11 +115,13 @@
 
 - (UIView *)mapView:(GMSMapView *)mapView markerInfoWindow:(GMSMarker *)marker{
 	RWInfoWindow *view = [[[NSBundle mainBundle] loadNibNamed:@"RWInfoWindow" owner:self options:nil] objectAtIndex:0];
+	[view setBackgroundColor:[[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"MapInfoWindow"]]];
+	//set the content
 	view.lblTitle.text = marker.title;
-	view.lblBody.text = @"Working";
+	NSArray *snippets = [marker.snippet componentsSeparatedByString:@"//"];
+	view.lblBody.text = snippets[0];
 	return view;
 }
-
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

@@ -119,6 +119,10 @@
     return @"title";
 }
 
++ (NSString *)SES_TYPE {
+    return @"type";
+}
+
 + (NSString *)SES_DETAILS {
     return @"details";
 }

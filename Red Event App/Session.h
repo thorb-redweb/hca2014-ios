@@ -19,6 +19,7 @@
 @property (nonatomic, retain) NSNumber * sessionid;
 @property (nonatomic, retain) NSDate * startdatetime;
 @property (nonatomic, retain) NSString * title;
+@property (nonatomic, retain) NSString * type;
 @property (nonatomic, retain) NSNumber * venueid;
 @property (nonatomic, retain) Event *event;
 @property (nonatomic, retain) Venue *venue;

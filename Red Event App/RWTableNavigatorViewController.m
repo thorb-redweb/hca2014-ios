@@ -57,6 +57,8 @@
     RWXmlNode *entry = [dataSource objectAtIndex:indexPath.row];
     RWXmlNode *nextPage = [_xml getPage:[entry getStringFromNode:[RWPAGE NAME]]];
     [_app.navController pushViewWithPage:nextPage];
+	
+	[tableView deselectRowAtIndexPath:indexPath animated:FALSE];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {

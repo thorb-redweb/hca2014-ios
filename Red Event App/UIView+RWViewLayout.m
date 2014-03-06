@@ -70,6 +70,15 @@
     [parentView addConstraints:[NSArray arrayWithObject:pinleadingConstraint]];
 }
 
+- (void)RWpinChildToEdges:(UIView *)childView padding:(int)padding {
+    UIView *parentView = self;
+    NSLayoutConstraint *pintrailingConstraint = [NSLayoutConstraint constraintWithItem:childView attribute:NSLayoutAttributeTrailing relatedBy:NSLayoutRelationEqual toItem:parentView attribute:NSLayoutAttributeTrailing multiplier:1.0f constant:padding];
+    NSLayoutConstraint *pinleadingConstraint = [NSLayoutConstraint constraintWithItem:childView attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:parentView attribute:NSLayoutAttributeLeading multiplier:1.0f constant:padding];
+    NSLayoutConstraint *pintopConstraint = [NSLayoutConstraint constraintWithItem:childView attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:parentView attribute:NSLayoutAttributeBottom multiplier:1.0f constant:padding];
+    NSLayoutConstraint *pinbottomConstraint = [NSLayoutConstraint constraintWithItem:childView attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:parentView attribute:NSLayoutAttributeBottom multiplier:1.0f constant:padding];
+    [parentView addConstraints:[NSArray arrayWithObjects:pinleadingConstraint, pintrailingConstraint, pintopConstraint, pinbottomConstraint, nil]];
+}
+
 - (void)RWpinChildToTop:(UIView *)childView {
     UIView *parentView = self;
     NSLayoutConstraint *pinConstraint = [NSLayoutConstraint constraintWithItem:childView attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:parentView attribute:NSLayoutAttributeTop multiplier:1.0f constant:0];

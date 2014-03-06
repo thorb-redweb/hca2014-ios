@@ -78,6 +78,8 @@
 
 + (NSString *)SES_EVENTID;
 
++ (NSString *)SES_TYPE;
+
 + (NSString *)SES_VENUE;
 
 + (NSString *)SES_VENUEID;

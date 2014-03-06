@@ -258,6 +258,7 @@
     [session setVenueid:[NSDecimalNumber decimalNumberWithString:[entry objectForKey:_json.Ses.VENUE_ID]]];
     [session setTitle:[self removeBackSlashes:[entry objectForKey:_json.Ses.TITLE]]];
     [session setDetails:[self removeBackSlashes:[entry objectForKey:_json.Ses.DETAILS]]];
+    [session setType:[self removeBackSlashes:[entry objectForKey:_json.Ses.SESSIONTYPE]]];
 
     NSString *startDateString = [entry objectForKey:_json.Ses.STARTDATE];
     NSString *startTimeString = [entry objectForKey:_json.Ses.STARTTIME];

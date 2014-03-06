@@ -36,7 +36,6 @@
     RWServer *_sv;
 @protected
     RWXMLStore *_xml;
-
 @protected
     RWXmlNode *_page;
 @protected
@@ -53,6 +52,7 @@
 @protected
     RWTextHelper *_textHelper;
 }
+@property (strong, nonatomic) RWXmlNode *controllerPage;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil page:(RWXmlNode *)page;
 

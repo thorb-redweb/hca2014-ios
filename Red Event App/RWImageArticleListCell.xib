@@ -14,15 +14,15 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="79"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5" userLabel="lblTitle">
-                        <rect key="frame" x="85" y="3" width="215" height="36"/>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" verticalCompressionResistancePriority="751" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5" userLabel="lblTitle">
+                        <rect key="frame" x="85" y="3" width="215" height="51"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </label>
-                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="215" translatesAutoresizingMaskIntoConstraints="NO" id="6" userLabel="lblIntro">
-                        <rect key="frame" x="85" y="41" width="215" height="36"/>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="215" translatesAutoresizingMaskIntoConstraints="NO" id="6" userLabel="lblIntro">
+                        <rect key="frame" x="85" y="56" width="215" height="21"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -41,7 +41,6 @@
                     <constraint firstAttribute="bottom" secondItem="6" secondAttribute="bottom" constant="2" id="0WX-2e-G5F"/>
                     <constraint firstItem="7" firstAttribute="top" secondItem="NPP-Pg-xcG" secondAttribute="top" constant="3" id="6Cj-uW-n4S"/>
                     <constraint firstItem="6" firstAttribute="leading" secondItem="7" secondAttribute="trailing" constant="8" id="By7-eo-hK4"/>
-                    <constraint firstItem="5" firstAttribute="height" secondItem="6" secondAttribute="height" id="F2f-yP-w7h"/>
                     <constraint firstAttribute="trailing" secondItem="5" secondAttribute="trailing" constant="20" id="PLo-my-HT7"/>
                     <constraint firstItem="7" firstAttribute="leading" secondItem="NPP-Pg-xcG" secondAttribute="leading" constant="3" id="f83-bX-TQu"/>
                     <constraint firstAttribute="bottom" secondItem="7" secondAttribute="bottom" constant="2" id="gEp-rG-GIu"/>

@@ -8,10 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "RWBaseViewController.h"
+#import "RWNavController.h"
 
-@interface RWMainViewController : UIViewController <UITabBarDelegate>;
+@interface RWMainViewController : UIViewController <UITabBarDelegate, UIWebViewDelegate>;
 
-@property (weak, nonatomic) IBOutlet UINavigationBar *navbar;
+@property (weak, nonatomic) IBOutlet RWNavController *navbar;
 @property (weak, nonatomic) IBOutlet UIImageView *logobar;
 @property (weak, nonatomic) IBOutlet UIView *mainView;
 @property (weak, nonatomic) IBOutlet UITabBar *tabbar;

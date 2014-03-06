@@ -25,6 +25,8 @@
 
 - (bool)getBoolFromNode:(NSString *)name;
 
+- (bool)getBoolWithNoneAsFalse:(NSString *)name;
+
 - (double)getDoubleFromNode:(NSString *)name;
 
 - (float)getFloatFromNode:(NSString *)name;

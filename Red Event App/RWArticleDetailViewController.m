@@ -51,15 +51,12 @@
     {
         [_lblBody setHidden:YES];
 		[_imgView setHidden:YES];
-        [_webBody loadHTMLString:_model.fulltextWithHtml baseURL:nil];
-		
-		[_vwContentView RWsetChildHWidthAsConstraintWithMultiplier:0.66 view1:_btnBack view2:_webBody relatedBy:NSLayoutRelationLessThanOrEqual];
+        [_webBody loadHTMLString:[NSString stringWithFormat:@"%@%@", _xml.css, _model.fulltextWithHtml] baseURL:[NSURL URLWithString:_xml.imagesRootPath]];
     } else {
         [_webBody setHidden:YES];
         _lblBody.text = _model.fulltextWithoutHtml;
 		
 		if (_model.mainImagePath && ![_model.mainImagePath isEqual:@""]) {
-//			[_imgView setImageWithURL:_model.mainImageUrl placeholderImage:[UIImage imageNamed:@"default_icon.jpg"]];
 			[_imgView setImageWithURL:_model.mainImageUrl placeholderImage:[UIImage imageNamed:@"default_icon.jpg"]
 							completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType) {
 								float imageHeight = image.size.height;
@@ -70,18 +67,7 @@
 		else if (![_model.introImagePath isEqual:@""]) {
 			_imgView.image = _model.image;
 		}
-		
-		[_vwContentView RWsetChildHWidthAsConstraintWithMultiplier:0.66 view1:_btnBack view2:_lblBody relatedBy:NSLayoutRelationLessThanOrEqual];
     }
-	
-	if(![_page hasChild:[RWPAGE RETURNBUTTON]] ||
-	   ([_page hasChild:[RWPAGE RETURNBUTTON]] && ![_page getBoolFromNode:[RWPAGE RETURNBUTTON]])){
-		[_btnBack RWsetHeightAsConstraint:0.0];
-	} else if([_xml.appearance hasChild:_name] && [[_xml getAppearanceForPage:_name] hasChild:[RWLOOK BACKBUTTONBACKGROUNDIMAGE]]){
-		UIImage *btnImage = _btnBack.currentBackgroundImage;
-		float aspect = btnImage.size.height/btnImage.size.width;
-		[_btnBack addConstraint:[NSLayoutConstraint constraintWithItem:_btnBack attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:_btnBack attribute:NSLayoutAttributeWidth multiplier:aspect constant:0]];
-	}
 }
 
 - (void)setAppearance{
@@ -101,21 +87,12 @@
 
     [helper.label setBackTextStyle:_lblBody];
 //	[_lblBody addMotionEffect:topGroup];
-
-    [helper.button setBackButtonStyle:_btnBack];
-//	[_btnBack addMotionEffect:topGroup];
 	
 	[helper setScrollBounces:_scrollView localName:[RWLOOK SCROLLBOUNCES] globalName:[RWLOOK SCROLLBOUNCES]];
 }
 
 -(void)setText{
-	RWTextHelper *helper = [[RWTextHelper alloc] initWithPageName:_name xmlStore:_xml];
 	
-	BOOL backButtonHasBackgroundImage = [_xml.appearance hasChild:_name] && [[_xml getAppearanceForPage:_name] hasChild:[RWLOOK BACKBUTTONBACKGROUNDIMAGE]];
-	
-	if(!backButtonHasBackgroundImage){
-		[helper setButtonText:_btnBack textName:[RWTEXT ARTICLEDETAIL_BACKBUTTON] defaultText:[RWDEFAULTTEXT ARTICLEDETAIL_BACKBUTTON]];
-	}
 }
 
 - (void)getReturnImage:(UIImage *)image {
@@ -127,14 +104,14 @@
     [webView RWSizeThatFitsContent];
 }
 
-- (BOOL)webView:(UIWebView *)inWeb shouldStartLoadWithRequest:(NSURLRequest *)inRequest navigationType:(UIWebViewNavigationType)inType {
-    if (inType == UIWebViewNavigationTypeLinkClicked) {
-        [[UIApplication sharedApplication] openURL:[inRequest URL]];
-        return NO;
-    }
-
-    return YES;
-}
+//- (BOOL)webView:(UIWebView *)inWeb shouldStartLoadWithRequest:(NSURLRequest *)inRequest navigationType:(UIWebViewNavigationType)inType {
+//    if (inType == UIWebViewNavigationTypeLinkClicked) {
+//		[[UIApplication sharedApplication] openURL:[inRequest URL]];
+//        return NO;
+//    }
+//
+//    return YES;
+//}
 
 -(IBAction)btnBackClicked{
     [_app.navController popPage];

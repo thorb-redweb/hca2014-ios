@@ -13,9 +13,11 @@
 - (NSString *)stringByStrippingHTML {
     NSRange r;
     NSString *s = [self copy];
+    while ((r = [s rangeOfString:@"&nbsp;" options:NSRegularExpressionSearch]).location != NSNotFound)
+        s = [s stringByReplacingCharactersInRange:r withString:@" "];
     while ((r = [s rangeOfString:@"<[^>]+>" options:NSRegularExpressionSearch]).location != NSNotFound)
         s = [s stringByReplacingCharactersInRange:r withString:@""];
-    [s stringByStrippingJoomlaTags];
+    s = [s stringByStrippingJoomlaTags];
     return s;
 }
 
@@ -26,16 +28,18 @@
         s = [s stringByReplacingCharactersInRange:r withString:@""];
     while ((r = [s rangeOfString:@"\\[.*?\\]" options:NSRegularExpressionSearch]).location != NSNotFound)
         s = [s stringByReplacingCharactersInRange:r withString:@""];
+    while ((r = [s rangeOfString:@"<a href[^>]+>" options:NSRegularExpressionSearch]).location != NSNotFound)
+        s = [s stringByReplacingCharactersInRange:r withString:@""];
     return s;
 }
 
 - (NSString *)htmlStringWithSystemFont {
     NSString *s = [self copy];
+    s = [s stringByStrippingJoomlaTags];
     UIFont *systemfont = [UIFont systemFontOfSize:14];
     NSString *font = systemfont.familyName;
     NSNumber *fontsize = [NSNumber numberWithInt:14];
     s = [NSString stringWithFormat:@"<html><head><style type=\"text/css\">body {font-family\"%@\"; font-size: %@;}</style></head><body>%@</body></html>", font, fontsize, s];
-    [s stringByStrippingJoomlaTags];
     return s;
 }
 

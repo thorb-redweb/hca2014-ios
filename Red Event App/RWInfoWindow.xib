@@ -7,32 +7,30 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="568" id="Hjc-cP-yk5" customClass="RWInfoWindow">
-            <rect key="frame" x="0.0" y="0.0" width="250" height="80"/>
+            <rect key="frame" x="0.0" y="0.0" width="250" height="85"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kk0-Xk-cyj">
-                    <rect key="frame" x="2" y="2" width="246" height="34"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jyM-We-qg2">
-                    <rect key="frame" x="2" y="44" width="246" height="34"/>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kk0-Xk-cyj">
+                    <rect key="frame" x="4" y="2" width="242" height="21"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label Label2" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="242" translatesAutoresizingMaskIntoConstraints="NO" id="jyM-We-qg2">
+                    <rect key="frame" x="4" y="25" width="242" height="36"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="jyM-We-qg2" firstAttribute="leading" secondItem="Hjc-cP-yk5" secondAttribute="leading" constant="2" id="2cO-4x-LDT"/>
-                <constraint firstItem="jyM-We-qg2" firstAttribute="top" secondItem="kk0-Xk-cyj" secondAttribute="bottom" constant="8" symbolic="YES" id="Ego-hR-N6t"/>
-                <constraint firstAttribute="bottom" secondItem="jyM-We-qg2" secondAttribute="bottom" constant="2" id="FKo-uj-Kr2"/>
-                <constraint firstAttribute="trailing" secondItem="kk0-Xk-cyj" secondAttribute="trailing" constant="2" id="IKK-4y-zdK"/>
-                <constraint firstItem="kk0-Xk-cyj" firstAttribute="leading" secondItem="Hjc-cP-yk5" secondAttribute="leading" constant="2" id="eUb-h5-8zh"/>
-                <constraint firstAttribute="trailing" secondItem="jyM-We-qg2" secondAttribute="trailing" constant="2" id="sro-UX-tUf"/>
+                <constraint firstItem="jyM-We-qg2" firstAttribute="leading" secondItem="Hjc-cP-yk5" secondAttribute="leading" constant="4" id="2cO-4x-LDT"/>
+                <constraint firstItem="jyM-We-qg2" firstAttribute="top" secondItem="kk0-Xk-cyj" secondAttribute="bottom" constant="2" id="Ego-hR-N6t"/>
+                <constraint firstAttribute="trailing" secondItem="kk0-Xk-cyj" secondAttribute="trailing" constant="4" id="IKK-4y-zdK"/>
+                <constraint firstItem="kk0-Xk-cyj" firstAttribute="leading" secondItem="Hjc-cP-yk5" secondAttribute="leading" constant="4" id="eUb-h5-8zh"/>
+                <constraint firstAttribute="trailing" secondItem="jyM-We-qg2" secondAttribute="trailing" constant="4" id="sro-UX-tUf"/>
                 <constraint firstItem="kk0-Xk-cyj" firstAttribute="top" secondItem="Hjc-cP-yk5" secondAttribute="top" constant="2" id="xj7-vS-O00"/>
-                <constraint firstItem="jyM-We-qg2" firstAttribute="height" secondItem="kk0-Xk-cyj" secondAttribute="height" id="zvz-eO-Xx5"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>

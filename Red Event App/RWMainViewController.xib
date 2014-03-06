@@ -8,7 +8,7 @@
             <connections>
                 <outlet property="logobar" destination="HMC-T6-LEk" id="DYZ-qE-JgM"/>
                 <outlet property="mainView" destination="u7V-XP-vcu" id="udf-4F-a7N"/>
-                <outlet property="navbar" destination="ZWG-zG-tNz" id="YPr-a1-vXr"/>
+                <outlet property="navbar" destination="SJB-PK-9Fg" id="iR9-rM-6eK"/>
                 <outlet property="tabbar" destination="jJ1-Em-1QX" id="JRl-Tf-vZf"/>
                 <outlet property="view" destination="1" id="3"/>
             </connections>
@@ -18,16 +18,14 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZWG-zG-tNz">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SJB-PK-9Fg" customClass="RWNavController">
                     <rect key="frame" x="0.0" y="20" width="320" height="44"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="44" placeholder="YES" id="Sas-wb-kFF"/>
+                        <constraint firstAttribute="height" constant="44" id="DN0-y0-uw2"/>
                     </constraints>
-                    <items>
-                        <navigationItem title="Title" id="t52-Yv-Vm6"/>
-                    </items>
-                </navigationBar>
+                </view>
                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HMC-T6-LEk">
                     <rect key="frame" x="0.0" y="64" width="320" height="50"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -35,7 +33,7 @@
                         <constraint firstAttribute="height" constant="50" placeholder="YES" id="CXW-D6-VC1"/>
                     </constraints>
                 </imageView>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u7V-XP-vcu">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u7V-XP-vcu" userLabel="MainView">
                     <rect key="frame" x="0.0" y="114" width="320" height="405"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -52,19 +50,19 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="ZWG-zG-tNz" firstAttribute="top" secondItem="1" secondAttribute="top" constant="20" id="BaP-2I-lC3"/>
-                <constraint firstAttribute="trailing" secondItem="ZWG-zG-tNz" secondAttribute="trailing" id="CU2-Df-kGz"/>
-                <constraint firstItem="u7V-XP-vcu" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="Emx-EO-rKE"/>
-                <constraint firstAttribute="trailing" secondItem="u7V-XP-vcu" secondAttribute="trailing" id="FPY-CV-4oQ"/>
+                <constraint firstItem="u7V-XP-vcu" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="7CO-Oj-Y6j"/>
                 <constraint firstAttribute="trailing" secondItem="HMC-T6-LEk" secondAttribute="trailing" id="GpJ-i6-AYK"/>
                 <constraint firstItem="jJ1-Em-1QX" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="IOo-4P-odc"/>
                 <constraint firstAttribute="trailing" secondItem="jJ1-Em-1QX" secondAttribute="trailing" id="ISg-wL-axr"/>
-                <constraint firstItem="jJ1-Em-1QX" firstAttribute="top" secondItem="u7V-XP-vcu" secondAttribute="bottom" id="M7O-bp-4cr"/>
+                <constraint firstItem="SJB-PK-9Fg" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="Njg-uK-VEl"/>
+                <constraint firstItem="SJB-PK-9Fg" firstAttribute="top" secondItem="1" secondAttribute="top" constant="20" id="OH9-mt-Hrv"/>
+                <constraint firstAttribute="trailing" secondItem="SJB-PK-9Fg" secondAttribute="trailing" id="aFf-dM-X1y"/>
                 <constraint firstAttribute="bottom" secondItem="jJ1-Em-1QX" secondAttribute="bottom" id="cFl-QH-ywj"/>
-                <constraint firstItem="ZWG-zG-tNz" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="dGP-g3-9WS"/>
-                <constraint firstItem="u7V-XP-vcu" firstAttribute="top" secondItem="HMC-T6-LEk" secondAttribute="bottom" id="gtH-oh-W8b"/>
-                <constraint firstItem="HMC-T6-LEk" firstAttribute="top" secondItem="ZWG-zG-tNz" secondAttribute="bottom" id="k40-91-7QE"/>
+                <constraint firstItem="HMC-T6-LEk" firstAttribute="top" secondItem="SJB-PK-9Fg" secondAttribute="bottom" id="kbr-1J-0cW"/>
                 <constraint firstItem="HMC-T6-LEk" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="lc6-ur-fgg"/>
+                <constraint firstAttribute="trailing" secondItem="u7V-XP-vcu" secondAttribute="trailing" id="pEe-JY-Uym"/>
+                <constraint firstItem="u7V-XP-vcu" firstAttribute="top" secondItem="HMC-T6-LEk" secondAttribute="bottom" id="pnQ-CU-rcP"/>
+                <constraint firstItem="jJ1-Em-1QX" firstAttribute="top" secondItem="u7V-XP-vcu" secondAttribute="bottom" id="sig-MD-f4W"/>
             </constraints>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>

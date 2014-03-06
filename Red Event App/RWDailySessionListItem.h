@@ -12,5 +12,8 @@
 
 @property(nonatomic, weak) IBOutlet UILabel *lblTimeAndPlace;
 @property(nonatomic, weak) IBOutlet UILabel *lblEvent;
+@property(nonatomic, weak) IBOutlet UILabel *lblType;
+@property(nonatomic, weak) IBOutlet UIImageView *imgType;
+@property(nonatomic, weak) IBOutlet UIView *vwRightBorder;
 
 @end

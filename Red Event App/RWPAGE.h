@@ -21,6 +21,7 @@
 //Page Globals
 + (NSString *)ARTICLEID;
 + (NSString *)CATID;
++ (NSString *)CATIDS;
 + (NSString *)CHILD;
 + (NSString *)CHILD2;
 + (NSString *)FRONTPAGE;

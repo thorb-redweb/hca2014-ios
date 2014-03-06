@@ -30,6 +30,7 @@
         RWXmlNode *node = [_importer getResultNodeFromResource:@"server.xml" identifier:@"//network"];
         _dataFilesFolderPath = [[node getChildFromNode:@"datafolder"] getStringFromNode:@"path"];
         _imagesRootPath = [[node getChildFromNode:@"joomla"] getStringFromNode:@"path"];
+		_css = [[node getChildFromNode:@"joomla"] getStringFromNode:@"css"];
     }
 
     return self;

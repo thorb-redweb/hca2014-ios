@@ -11,6 +11,7 @@
 @class RWXmlNode;
 @class RWMainViewController;
 @class RWSwipeViewController;
+@class RWNavController;
 
 @interface RWNavigationController : NSObject
 
@@ -25,6 +26,8 @@
 - (void)popPage;
 
 - (void)popTwoPages;
+
+- (bool)hasPreviousPage;
 
 - (RWSwipeViewController *)getSwipeView;
 

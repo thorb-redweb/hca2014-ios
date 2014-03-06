@@ -8,17 +8,24 @@
 
 #import <Foundation/Foundation.h>
 
+@class RWAppDelegate;
 @class Venue;
 @class RWVenueVM;
 @class RWDbHelper;
 @class RWXMLStore;
 
 @interface RWDbVenues : NSObject
-- (id)initWithHelper:(RWDbHelper *)context xml:(RWXMLStore *)xml;
+- (id)initWithHelper:(RWDbHelper *)helper app:(RWAppDelegate *)app;
 
 - (Venue *)getFromId:(int)venueid;
 
 -(RWVenueVM *)getVMFromId:(int)venueid;
 
+-(int)getIdFromName:(NSString *)venuename;
+
+-(RWSessionVM *)getNextSession:(int)venueid;
+
 - (NSArray *)getVMList;
+
+- (NSArray *)getNamesAndInsertAtFirstPosition:(NSString *)head;
 @end

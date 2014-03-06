@@ -30,8 +30,9 @@
 	
 	_sessions = [_db.Sessions getNextThreeVMs:[[NSDate alloc] init]];
 	
+	NSString *childname2 = [_page getStringFromNode:[RWPAGE CHILD2]];
 	NSMutableArray *newsCells = [[NSMutableArray alloc] initWithObjects:_nwsCell1, _nwsCell2, _nwsCell3, nil];
-	[_nwsTicker initializeWithDatasource:[[NSMutableArray alloc] initWithArray:[_db.Articles getVMListOfLastThree:12]] newsCells:newsCells];
+	[_nwsTicker initializeWithDatasource:[[NSMutableArray alloc] initWithArray:[_db.Articles getVMListOfLastThree:9]] newsCells:newsCells app:_app childname:childname2];
 	
     [self setAppearance];
 	[self setText];
@@ -85,6 +86,8 @@
 	[childPage addNodeWithName:[RWPAGE SESSIONID] value:model.sessionid];
 	
     [_app.navController pushViewWithPage:childPage];
+	
+	[tableView deselectRowAtIndexPath:indexPath animated:NO];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {

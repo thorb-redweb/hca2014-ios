@@ -10,6 +10,7 @@
 
 #import "RWAppDelegate.h"
 #import "RWVenueVM.h"
+#import "RWSessionVM.h"
 
 @interface RWOverviewMapViewController ()
 
@@ -63,12 +64,35 @@
     ((GMSMapView *) super.mapView).myLocationEnabled = YES;
 	
     for (RWVenueVM *venue in venueList) {
-        GMSMarker *venueMarker = [[GMSMarker alloc] init];
-        venueMarker.position = CLLocationCoordinate2DMake(venue.latitude, venue.longitude);
-		venueMarker.infoWindowAnchor = CGPointMake(0.44f, 0.45f);
-        venueMarker.title = venue.title;
-        venueMarker.snippet = @"Next event at 5:00";
-        venueMarker.map = (GMSMapView *) super.mapView;
+		RWSessionVM *session = [_db.Venues getNextSession:venue.venueid];
+
+		//check if the venue has a next session
+		//only if it has should it get a marker
+		if(session){        
+			GMSMarker *venueMarker = [[GMSMarker alloc] init];
+			venueMarker.position = CLLocationCoordinate2DMake(venue.latitude, venue.longitude);
+			venueMarker.infoWindowAnchor = CGPointMake(0.44f, 0.45f);
+			venueMarker.title = venue.title;
+			
+			NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+			NSUInteger sessionDay = [calendar ordinalityOfUnit:NSDayCalendarUnit inUnit:NSYearCalendarUnit forDate:session.startDatetime];
+			NSUInteger currentDay = [calendar ordinalityOfUnit:NSDayCalendarUnit inUnit:NSYearCalendarUnit forDate:[[NSDate alloc] init]];
+			NSString *datetime;
+			if (sessionDay == currentDay){
+                datetime = [NSString stringWithFormat:@"kl. %@", session.startTime];
+            }
+            else
+            {
+                datetime = [NSString stringWithFormat: @"%@ kl. %@", session.startDateDay, session.startTime];
+            }
+			NSString *snippet = [NSString stringWithFormat:@"Næste event: %@", datetime];
+			snippet = [NSString stringWithFormat:@"%@\n%@", snippet, [session title]];
+			snippet = [NSString stringWithFormat:@"%@//%@", snippet, session.sessionid];
+			venueMarker.snippet = snippet;
+			venueMarker.map = (GMSMapView *) super.mapView;
+			
+			venueMarker.icon = session.typeIcon;
+		}
     }
 }
 

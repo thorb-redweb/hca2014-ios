@@ -17,4 +17,6 @@
 @interface RWPushMessageSubscriptionHandler : NSObject <RWPushMessageSubscriptionDelegate>
 -(void)subscribeToPushMessages;
 -(void)receiveRegistrationId:(NSData *)deviceToken;
+
+-(void)notificationReceived:(NSDictionary *)notification;
 @end

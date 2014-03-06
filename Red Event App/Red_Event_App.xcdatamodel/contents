@@ -35,12 +35,6 @@
         <attribute name="subscribing" optional="YES" attributeType="Boolean" syncable="YES"/>
         <relationship name="pushmessages" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="PushMessage" inverseName="group" inverseEntity="PushMessage" syncable="YES"/>
     </entity>
-    <entity name="RedUploadImage" representedClassName="RedUploadImage" syncable="YES">
-        <attribute name="approved" optional="YES" attributeType="Boolean" syncable="YES"/>
-        <attribute name="localimagepath" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="serverfolder" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="text" optional="YES" attributeType="String" syncable="YES"/>
-    </entity>
     <entity name="Session" representedClassName="Session" syncable="YES">
         <attribute name="details" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="enddatetime" optional="YES" attributeType="Date" syncable="YES"/>
@@ -48,6 +42,7 @@
         <attribute name="sessionid" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="startdatetime" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="venueid" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <relationship name="event" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Event" inverseName="sessions" inverseEntity="Event" syncable="YES"/>
         <relationship name="venue" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Venue" inverseName="sessions" inverseEntity="Venue" syncable="YES"/>
@@ -68,7 +63,6 @@
         <element name="Event" positionX="0" positionY="0" width="0" height="0"/>
         <element name="PushMessage" positionX="0" positionY="0" width="0" height="0"/>
         <element name="PushMessageGroup" positionX="0" positionY="0" width="0" height="0"/>
-        <element name="RedUploadImage" positionX="0" positionY="0" width="0" height="0"/>
         <element name="Session" positionX="0" positionY="0" width="0" height="0"/>
         <element name="Venue" positionX="0" positionY="0" width="0" height="0"/>
     </elements>

@@ -138,6 +138,7 @@
     else if([title isEqualToString:@"Afslut app"])
     {
         [self alertOnClickCloseMessage];
+		exit(0);
     }
 }
 

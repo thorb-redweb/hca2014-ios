@@ -45,8 +45,12 @@
     GMSMarker *sessionMarker = [[GMSMarker alloc] init];
     sessionMarker.position = CLLocationCoordinate2DMake(_model.latitude, _model.longitude);
     sessionMarker.title = _model.title;
-	sessionMarker.snippet = [NSString stringWithFormat:@"Event at %@",_model.startTime];
+	NSString *snippet = [NSString stringWithFormat:@"%@",_model.startTime];
+	snippet = [NSString stringWithFormat:@"%@//%@",snippet, _model.sessionid];
+	sessionMarker.snippet = snippet;
     sessionMarker.map = (GMSMapView *) super.mapView;
+	
+	sessionMarker.icon = _model.typeIcon;
 }
 
 - (void)didReceiveMemoryWarning {

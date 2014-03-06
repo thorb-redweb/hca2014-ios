@@ -74,6 +74,27 @@
     return vmList;
 }
 
+- (NSArray *)getVMListFromCatIds:(NSArray *)catids{
+	NSString *stringPredicate = [NSString stringWithFormat:@"%@ == '%d'", [RWDbSchemas ART_CATID], [catids[0] intValue]];
+	for (int i = 1; i < catids.count; i++) {
+		stringPredicate = [stringPredicate stringByAppendingFormat:@" OR %@ == '%d'", [RWDbSchemas ART_CATID], [catids[i] intValue]];
+	}
+	NSPredicate *predicate = [NSPredicate predicateWithFormat:stringPredicate];
+	
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:[RWDbSchemas ART_PUBLISHDATE] ascending:NO];
+    NSArray *sortDescriptors = [[NSArray alloc] initWithObjects:sortDescriptor, nil];
+	
+    NSMutableArray *fetchResults = [_dbHelper getFromDatabase:[RWDbSchemas ART_TABLENAME] predicate:predicate sort:sortDescriptors];
+	
+    NSMutableArray *vmList = [[NSMutableArray alloc] initWithCapacity:0];
+    for (Article *article in fetchResults) {
+        RWArticleVM *vm = [[RWArticleVM alloc] initWithArticle:article xml:_xml];
+        [vmList addObject:vm];
+    }
+	
+    return vmList;
+}
+
 - (NSArray *)getVMListOfLastThree:(int)catid{
 	NSPredicate *predicate = [NSPredicate predicateWithFormat:@"%K == %d", [RWDbSchemas ART_CATID], catid];
 	

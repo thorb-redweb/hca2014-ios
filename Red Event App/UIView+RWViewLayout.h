@@ -30,6 +30,8 @@
 
 - (void)RWpinChildToSides:(UIView *)childView;
 
+- (void)RWpinChildToEdges:(UIView *)childView padding:(int)padding;
+
 - (void)RWpinChildToTop:(UIView *)childView;
 
 - (void)RWpinChildToTop:(UIView *)childView constant:(int)constant;

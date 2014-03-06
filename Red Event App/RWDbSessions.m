@@ -104,16 +104,26 @@
     return vmList;
 }
 
-- (NSArray *)getVMListFilteredByDate:(NSDate *)date venueid:(int)venueid {
+- (NSArray *)getVMListFilteredByDate:(NSDate *)date venueid:(int)venueid type:(NSString *)type {
     NSDate *startOfDay = [date roundToDate];
     NSDate *endOfDay = [date endOfDay];
 
     NSPredicate *predicate;
-    if (venueid >= 0) {
-        predicate = [NSPredicate predicateWithFormat:@"%K >= %@ AND %K <= %@ AND %K = %d AND %K != nil AND %K != nil",
+    if (venueid >= 0  && ![type isEqualToString:@"Alle"]) {
+        predicate = [NSPredicate predicateWithFormat:@"%K >= %@ AND %K <= %@ AND %K = %d AND %K = %@ AND %K != nil AND %K != nil",
                                                      [RWDbSchemas SES_STARTDATETIME], startOfDay, [RWDbSchemas SES_STARTDATETIME], endOfDay,
-                                                     [RWDbSchemas SES_VENUEID], venueid, [RWDbSchemas SES_EVENT], [RWDbSchemas SES_VENUE]];
+                                                     [RWDbSchemas SES_VENUEID], venueid, [RWDbSchemas SES_TYPE], type, [RWDbSchemas SES_EVENT], [RWDbSchemas SES_VENUE]];
     }
+    else if (venueid >= 0) {
+        predicate = [NSPredicate predicateWithFormat:@"%K >= %@ AND %K <= %@ AND %K = %d AND %K != nil AND %K != nil",
+					 [RWDbSchemas SES_STARTDATETIME], startOfDay, [RWDbSchemas SES_STARTDATETIME], endOfDay,
+					 [RWDbSchemas SES_VENUEID], venueid, [RWDbSchemas SES_EVENT], [RWDbSchemas SES_VENUE]];
+    }
+    else if (![type isEqualToString:@"Alle"]) {
+			predicate = [NSPredicate predicateWithFormat:@"%K >= %@ AND %K <= %@ AND %K = %@ AND %K != nil AND %K != nil",
+						 [RWDbSchemas SES_STARTDATETIME], startOfDay, [RWDbSchemas SES_STARTDATETIME], endOfDay,
+						 [RWDbSchemas SES_TYPE], type, [RWDbSchemas SES_EVENT], [RWDbSchemas SES_VENUE]];
+	}
     else {
         predicate = [NSPredicate predicateWithFormat:@"%K >= %@ AND %K <= %@ AND %K != nil AND %K != nil",
                                                      [RWDbSchemas SES_STARTDATETIME], startOfDay, [RWDbSchemas SES_STARTDATETIME], endOfDay,
@@ -136,12 +146,16 @@
 
 #pragma Information Functions
 
-- (NSDate *)getStartDateTimeWithSessionByDateTime:(NSDate *)datetime venueid:(int)venueid {
+- (NSDate *)getStartDateTimeWithSessionByDateTime:(NSDate *)datetime venueid:(int)venueid type:(NSString *)type {
 	NSString *stringPredicate = [NSString stringWithFormat:@"%@ => CAST(%f, \"NSDate\") AND %@ != nil AND %@ != nil",
 								 [RWDbSchemas SES_STARTDATETIME], datetime.timeIntervalSinceReferenceDate, [RWDbSchemas SES_EVENT], [RWDbSchemas SES_VENUE]];
     if (venueid >= 0) {
 		stringPredicate = [NSString stringWithFormat:@"%@ == %d AND %@",
 						   [RWDbSchemas SES_VENUEID], venueid, stringPredicate];
+    }
+    if (![type isEqualToString:@"Alle"]) {
+		stringPredicate = [NSString stringWithFormat:@"%@ == '%@' AND %@",
+						   [RWDbSchemas SES_TYPE], type, stringPredicate];
     }
 	NSPredicate *predicate = [NSPredicate predicateWithFormat:stringPredicate];
 	NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:[RWDbSchemas SES_STARTDATETIME] ascending:YES];
@@ -152,16 +166,20 @@
         Session *session = [result objectAtIndex:0];
         return session.startdatetime;
     } else {
-		return [self getPreviousDateTimeByDateTime:datetime venueid:venueid];
+		return [self getPreviousDateTimeByDateTime:datetime venueid:venueid type:type];
 	}
 }
 
-- (NSDate *)getNextDateTimeByDateTime:(NSDate *)datetime venueid:(int)venueid {
+- (NSDate *)getNextDateTimeByDateTime:(NSDate *)datetime venueid:(int)venueid type:(NSString *)type {
 	NSString *stringPredicate = [NSString stringWithFormat:@"%@ > CAST(%f, \"NSDate\") AND %@ != nil AND %@ != nil",
 	[RWDbSchemas SES_STARTDATETIME], datetime.timeIntervalSinceReferenceDate, [RWDbSchemas SES_EVENT], [RWDbSchemas SES_VENUE]];
     if (venueid >= 0) {
 		stringPredicate = [NSString stringWithFormat:@"%@ == %d AND %@",
 						   [RWDbSchemas SES_VENUEID], venueid, stringPredicate];
+    }
+    if (![type isEqualToString:@"Alle"]) {
+		stringPredicate = [NSString stringWithFormat:@"%@ == '%@' AND %@",
+						   [RWDbSchemas SES_TYPE], type, stringPredicate];
     }
 	NSPredicate *predicate = [NSPredicate predicateWithFormat:stringPredicate];
 	NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:[RWDbSchemas SES_STARTDATETIME] ascending:YES];
@@ -175,12 +193,16 @@
     return NULL;
 }
 
-- (NSDate *)getPreviousDateTimeByDateTime:(NSDate *)datetime venueid:(int)venueid {
+- (NSDate *)getPreviousDateTimeByDateTime:(NSDate *)datetime venueid:(int)venueid type:(NSString *)type {
 	NSString *stringPredicate = [NSString stringWithFormat:@"%@ < CAST(%f, \"NSDate\") AND %@ != nil AND %@ != nil",
 								 [RWDbSchemas SES_STARTDATETIME], datetime.timeIntervalSinceReferenceDate, [RWDbSchemas SES_EVENT], [RWDbSchemas SES_VENUE]];
     if (venueid >= 0) {
 		stringPredicate = [NSString stringWithFormat:@"%@ == %d AND %@",
 						   [RWDbSchemas SES_VENUEID], venueid, stringPredicate];
+    }
+    if (![type isEqualToString:@"Alle"]) {
+		stringPredicate = [NSString stringWithFormat:@"%@ == '%@' AND %@",
+						   [RWDbSchemas SES_TYPE], type, stringPredicate];
     }
 	NSPredicate *predicate = [NSPredicate predicateWithFormat:stringPredicate];
 	NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:[RWDbSchemas SES_STARTDATETIME] ascending:NO];
@@ -194,24 +216,18 @@
     return NULL;
 }
 
-- (NSDate *)getLastDateTimeByVenue:(int)venueid {
+- (NSDate *)getLastDateTimeByVenue:(int)venueid type:(NSString *)type {
 	NSString *stringPredicate = [NSString stringWithFormat:@"%@ != nil AND %@ != nil",
 								 [RWDbSchemas SES_EVENT], [RWDbSchemas SES_VENUE]];
     if (venueid >= 0) {
 		stringPredicate = [NSString stringWithFormat:@"%@ == %d AND %@",
 						   [RWDbSchemas SES_VENUEID], venueid, stringPredicate];
     }
+    if (![type isEqualToString:@"Alle"]) {
+		stringPredicate = [NSString stringWithFormat:@"%@ == '%@' AND %@",
+						   [RWDbSchemas SES_TYPE], type, stringPredicate];
+    }
 	NSPredicate *predicate = [NSPredicate predicateWithFormat:stringPredicate];
-    
-//	NSPredicate *predicate = nil;
-//    if (venueid >= 0) {
-//        predicate = [NSPredicate predicateWithFormat:@"%K == %d AND %K != nil AND %K != nil",
-//                                                     [RWDbSchemas SES_VENUEID], venueid, [RWDbSchemas SES_EVENT], [RWDbSchemas SES_VENUE]];
-//    }
-//    else {
-//        predicate = [NSPredicate predicateWithFormat:@"%K != nil AND %K != nil",
-//                                                     [RWDbSchemas SES_EVENT], [RWDbSchemas SES_VENUE]];
-//    }
 
     NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:[RWDbSchemas SES_STARTDATETIME] ascending:NO];
     NSArray *sortDescriptors = [[NSArray alloc] initWithObjects:sortDescriptor, nil];
@@ -224,12 +240,16 @@
     return NULL;
 }
 
-- (NSDate *)getFirstDateTimeByVenue:(int)venueid {
+- (NSDate *)getFirstDateTimeByVenue:(int)venueid type:(NSString *)type {
 	NSString *stringPredicate = [NSString stringWithFormat:@"%@ != nil AND %@ != nil",
 								   [RWDbSchemas SES_EVENT], [RWDbSchemas SES_VENUE]];
     if (venueid >= 0) {
 		stringPredicate = [NSString stringWithFormat:@"%@ == %d AND %@",
 					 [RWDbSchemas SES_VENUEID], venueid, stringPredicate];
+    }
+    if (![type isEqualToString:@"Alle"]) {
+		stringPredicate = [NSString stringWithFormat:@"%@ == '%@' AND %@",
+						   [RWDbSchemas SES_TYPE], type, stringPredicate];
     }
 	NSPredicate *predicate = [NSPredicate predicateWithFormat:stringPredicate];
     NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:[RWDbSchemas SES_STARTDATETIME] ascending:YES];

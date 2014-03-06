@@ -29,16 +29,16 @@
 
 - (NSArray *)getNextThreeVMs:(NSDate *)datetime;
 
-- (NSArray *)getVMListFilteredByDate:(NSDate *)date venueid:(int)venueid;
+- (NSArray *)getVMListFilteredByDate:(NSDate *)date venueid:(int)venueid type:(NSString *)type;
 
-- (NSDate *)getStartDateTimeWithSessionByDateTime:(NSDate *)datetime venueid:(int)venueid;
+- (NSDate *)getStartDateTimeWithSessionByDateTime:(NSDate *)datetime venueid:(int)venueid type:(NSString *)type;
 
-- (NSDate *)getNextDateTimeByDateTime:(NSDate *)datetime venueid:(int)venueid;
+- (NSDate *)getNextDateTimeByDateTime:(NSDate *)datetime venueid:(int)venueid type:(NSString *)type;
 
-- (NSDate *)getPreviousDateTimeByDateTime:(NSDate *)datetime venueid:(int)venueid;
+- (NSDate *)getPreviousDateTimeByDateTime:(NSDate *)datetime venueid:(int)venueid type:(NSString *)type;
 
-- (NSDate *)getLastDateTimeByVenue:(int)venueid;
+- (NSDate *)getLastDateTimeByVenue:(int)venueid type:(NSString *)type;
 
-- (NSDate *)getFirstDateTimeByVenue:(int)venueid;
+- (NSDate *)getFirstDateTimeByVenue:(int)venueid type:(NSString *)type;
 
 @end

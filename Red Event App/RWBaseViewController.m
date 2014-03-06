@@ -25,6 +25,7 @@
         _sv = _app.sv;
         _xml = _app.xml;
         _page = [page deepClone];
+		_controllerPage = _page;
         _name = [_page getStringFromNode:[RWPAGE NAME]];
         if ([_page hasChild:[RWPAGE CHILD]])
             _childname = [_page getStringFromNode:[RWPAGE CHILD]];
@@ -44,8 +45,6 @@
 
 -(void)viewWillAppear:(BOOL)animated{
 	[super viewWillAppear:animated];
-	
-	self.navigationController.navigationBar.hidden = YES;
 }
 
 - (NSString *)description {

@@ -14,6 +14,9 @@
 #import "RWArticleVM.h"
 
 @implementation RWNewsticker {
+	RWAppDelegate *_app;
+	
+	NSString *_childname;
 	NSMutableArray *_datasource;
 	NSArray *_cells;
 	float _pageWidth;
@@ -21,12 +24,17 @@
 	NSTimer *_pageTimer;
 }
 
--(void)initializeWithDatasource:(NSMutableArray *)datasource newsCells:(NSArray *)cells{
+-(void)initializeWithDatasource:(NSMutableArray *)datasource newsCells:(NSArray *)cells app:(RWAppDelegate *)app childname:(NSString *)childname{
 	_datasource = datasource;
 	_cells = cells;
 	_pageWidth = self.bounds.size.width;
 	
-	for (int i = 0; i < cells.count; i++) {
+	_app = app;
+	_childname = childname;
+	
+	int numberNews = _datasource.count > 3 ? 3 : _datasource.count;
+	
+	for (int i = 0; i < numberNews; i++) {
 		RWNewstickerCell *cell = _cells[i];
 		
 		RWArticleVM *article = _datasource[i];
@@ -35,6 +43,20 @@
 		NSURL *imagePath = article.introImageUrl;
 		[cell.imgImage setImageWithURL:imagePath placeholderImage:[UIImage imageNamed:@"default_icon.jpg"]];
 	}
+	
+	UITapGestureRecognizer *recognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTapFrom:)];
+	[recognizer setNumberOfTouchesRequired:1];
+	[self addGestureRecognizer:recognizer];
+	recognizer.delegate = self;
+}
+
+-(void)handleTapFrom:(UITapGestureRecognizer *)recognizer{
+	
+	NSNumber *articleid = [_datasource[[self currentPage]] articleid];
+	
+	RWXmlNode *childNode = [[_app.xml getPage:_childname] deepClone];
+	[childNode addNodeWithName:[RWPAGE ARTICLEID] value:articleid];
+	[_app.navController pushViewWithPage:childNode];
 }
 
 -(void)startPaging{

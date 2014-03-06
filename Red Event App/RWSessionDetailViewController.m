@@ -49,6 +49,8 @@
     _model = [_db.Sessions getVMFromId:sessionId];
 	
 	_lblTitle.text = _model.title;
+    _lblTypeText.text = _model.type;
+	_lblTypeText.textColor = _model.typeColor;
     _lblDateText.text = [NSString stringWithFormat:@"%@", _model.startDateLong];
     _lblPlaceText.text = [NSString stringWithFormat:@"%@", _model.venue];
     _lblTimeText.text = [NSString stringWithFormat:@"%@ - %@", _model.startTime, _model.endTime];
@@ -59,7 +61,8 @@
         [_webBody loadHTMLString:_model.detailsWithHtml baseURL:nil];
     } else {
         [_webBody setHidden:YES];
-        _lblBody.text = _model.details;
+		NSString *details = _model.details;
+        _lblBody.text = details;
     }
 
     if ([_model.imagePath length] != 0) {
@@ -88,16 +91,6 @@
     [helper setBackgroundColor:self.view localName:[RWLOOK BACKGROUNDCOLOR] globalName:[RWLOOK DEFAULT_BACKCOLOR]];
 
     [helper.label setTitleStyle:_lblTitle];
-
-    NSArray *labels = [[NSArray alloc] initWithObjects:_lblDate,_lblPlace,_lblTime, nil];
-    [helper.label setColorsForList:labels localName:[RWLOOK SESSIONDETAIL_LABELCOLOR] globalName:[RWLOOK DEFAULT_BACKTEXTCOLOR]];
-    [helper.label setFontsForLastList:[RWLOOK SESSIONDETAIL_LABELSIZE] globalSizeName:[RWLOOK DEFAULT_ITEMTITLESIZE]
-                   localStyleName:[RWLOOK SESSIONDETAIL_LABELSTYLE] globalStyleName:[RWLOOK DEFAULT_ITEMTITLESTYLE]];
-    [helper.label setShadowColorsForLastList:[RWLOOK SESSIONDETAIL_LABELSHADOWCOLOR] globalName:[RWLOOK DEFAULT_BACKTEXTSHADOWCOLOR]];
-    [helper.label setShadowOffsetsForLastList:[RWLOOK SESSIONDETAIL_LABELSHADOWOFFSET] globalName:[RWLOOK DEFAULT_ITEMTITLESHADOWOFFSET]];
-
-    NSArray *texts = [[NSArray alloc] initWithObjects:_lblDateText,_lblPlaceText,_lblTimeText, nil];
-    [helper.label setBackTextStyleForList:texts];
 
     [helper.button setButtonStyle:_btnMap];
 

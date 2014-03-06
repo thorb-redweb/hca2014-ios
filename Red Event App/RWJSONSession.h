@@ -26,6 +26,8 @@
 
 - (NSString *)ENDTIME;
 
+- (NSString *)SESSIONTYPE;
+
 - (NSString *)ITEMTYPE;
 
 - (NSString *)ACTIONTYPE;

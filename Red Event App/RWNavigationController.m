@@ -12,8 +12,6 @@
 #import "RWNavigationController.h"
 #import "RWAppDelegate.h"
 
-#import "RWAdventCalViewController.h"
-#import "RWAdventWindowViewController.h"
 #import "RWArticleDetailViewController.h"
 #import "RWButtonGalleryViewController.h"
 #import "RWDailySessionListViewController.h"
@@ -22,9 +20,6 @@
 #import "RWOverviewMapViewController.h"
 #import "RWPushMessageDetailViewController.h"
 #import "RWPushMessageListViewController.h"
-#import "RWRedUploadFolderViewController.h"
-#import "RWRedUploadFolderContentViewController.h"
-#import "RWRedUploadPictureViewController.h"
 #import "RWSessionDetailViewController.h"
 #import "RWSessionMapViewController.h"
 #import "RWStaticArticleController.h"
@@ -34,7 +29,6 @@
 #import "RWVenueMapViewController.h"
 #import "RWPushMessageAutoSubscriberViewController.h"
 #import "RWWebViewController.h"
-#import "RWBikeTrackingViewController.h"
 #import "RWCameraIntentViewController.h"
 #import "RWImageUploaderViewController.h"
 #import "RWImageUploadBrowserViewController.h"
@@ -47,7 +41,7 @@
 static const int ddLogLevel = LOG_LEVEL_INFO;
 
 @implementation RWNavigationController{
-	UINavigationBar *_navbar;
+	RWNavController *_navbar;
 	RWMainViewController *_mainViewController;
 	UIView *_mainView;
 	NSMutableArray *viewControllers;
@@ -105,9 +99,9 @@ static const int ddLogLevel = LOG_LEVEL_INFO;
 	}
 }
 
-- (void)pushViewController:(UIViewController *)newViewController addToBackStack:(bool)addToBackStack {
+- (void)pushViewController:(RWBaseViewController *)newViewController addToBackStack:(bool)addToBackStack {
 
-	UIViewController *currentViewController = viewControllers.lastObject;
+	RWBaseViewController *currentViewController = viewControllers.lastObject;
 	if(addToBackStack){
 	    [viewControllers addObject:newViewController];
     }
@@ -126,8 +120,10 @@ static const int ddLogLevel = LOG_LEVEL_INFO;
 	
 	[currentViewController.view removeFromSuperview];
 	[currentViewController removeFromParentViewController];
+	if([newViewController isKindOfClass:[RWBaseViewController class]] && newViewController.controllerPage){
+		[_navbar handleNewPage:newViewController.controllerPage];
+	}
 }
-
 
 - (void)popPage {
 	[self popPageNumberTimes:1];
@@ -138,7 +134,7 @@ static const int ddLogLevel = LOG_LEVEL_INFO;
 }
 
 - (void)popPageNumberTimes:(int)popTimes {
-	UIViewController *previousViewController = viewControllers[viewControllers.count-(popTimes+1)];
+	RWBaseViewController *previousViewController = viewControllers[viewControllers.count-(popTimes+1)];
 	NSMutableArray *viewControllersToDrop = [[NSMutableArray alloc] init];
 	for (int i = viewControllers.count - 1; i >= viewControllers.count - popTimes; i--) {
 		[viewControllersToDrop addObject:viewControllers[i]];
@@ -162,6 +158,16 @@ static const int ddLogLevel = LOG_LEVEL_INFO;
 	for (UIViewController *viewController in viewControllersToDrop) {
 		[viewControllers removeObject:viewController];
 	}
+	if([previousViewController isKindOfClass:[RWBaseViewController class]] && previousViewController.controllerPage){
+		[_navbar handleNewPage:previousViewController.controllerPage];
+	}
+}
+
+- (bool)hasPreviousPage{
+	if(viewControllers.count > 1){
+		return true;
+	}
+	return false;
 }
 
 - (RWSwipeViewController *)getSwipeView{
@@ -173,17 +179,8 @@ static const int ddLogLevel = LOG_LEVEL_INFO;
 	
 	DDLogDebug(@"View controller pagetype: %@", viewControllerType);
 
-	if ([viewControllerType isEqual:[RWTYPE ADVENTCAL]]) {
-        return [[RWAdventCalViewController alloc] initWithPage:page];
-    }
-    else if ([viewControllerType isEqual:[RWTYPE ADVENTWINDOW]]) {
-        return [[RWAdventWindowViewController alloc] initWithPage:page];
-    }
-    else if ([viewControllerType isEqual:[RWTYPE ARTICLEDETAIL]]) {
+	if ([viewControllerType isEqual:[RWTYPE ARTICLEDETAIL]]) {
         return [[RWArticleDetailViewController alloc] initWithPage:page];
-    }
-    else if ([viewControllerType isEqual:[RWTYPE BIKETRACKING]]) {
-        return [[RWBikeTrackingViewController alloc] initWithPage:page];
     }
     else if ([viewControllerType isEqual:[RWTYPE BUTTONGALLERY]]) {
         return [[RWButtonGalleryViewController alloc] initWithPage:page];
@@ -217,15 +214,6 @@ static const int ddLogLevel = LOG_LEVEL_INFO;
     }
     else if ([viewControllerType isEqual:[RWTYPE OVERVIEWMAP]]) {
         return [[RWOverviewMapViewController alloc] initWithPage:page];
-    }
-    else if ([viewControllerType isEqual:[RWTYPE REDUPLOADFOLDERVIEW]]) {
-        return [[RWRedUploadFolderViewController alloc] initWithPage:page];
-    }
-    else if ([viewControllerType isEqual:[RWTYPE REDUPLOADFOLDERCONTENTVIEW]]) {
-        return [[RWRedUploadFolderContentViewController alloc] initWithPage:page];
-    }
-    else if ([viewControllerType isEqual:[RWTYPE REDUPLOADPICTUREVIEW]]) {
-        return [[RWRedUploadPictureViewController alloc] initWithPage:page];
     }
     else if ([viewControllerType isEqual:[RWTYPE SESSIONDETAIL]]) {
         return [[RWSessionDetailViewController alloc] initWithPage:page];

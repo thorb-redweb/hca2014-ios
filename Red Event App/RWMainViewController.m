@@ -70,6 +70,9 @@
 		if ([navbarNode hasChild:[RWLOOK NAVBAR_VISIBLE]] && ![navbarNode getBoolFromNode:[RWLOOK NAVBAR_VISIBLE]]) {
 			[_navbar RWsetHeightAsConstraint:0.0];
 		}
+		else{
+//			UIImage *image = [UIImage imageNamed:@"logo_hca_top.png"];
+		}
 	}
 
 }

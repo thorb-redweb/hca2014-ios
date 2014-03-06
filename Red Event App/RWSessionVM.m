@@ -7,6 +7,7 @@
 //
 
 #import "NSString+RWString.h"
+#import "UIColor+RWColor.h"
 
 #import "RWSessionVM.h"
 #import "Event.h"
@@ -54,7 +55,9 @@
 }
 
 - (NSString *)details {
-    return [[NSString stringWithFormat:@"%@<br/>%@", _session.event.details, _session.details] stringByStrippingHTML];
+	NSString *rawDetails = [NSString stringWithFormat:@"%@<br/>%@", _session.event.details, _session.details];
+	NSString *stripedDetails = [rawDetails stringByStrippingHTML];
+    return stripedDetails;
 }
 
 - (NSString *)summaryWithHtml {
@@ -83,6 +86,12 @@
 - (NSString *)startDateShort {
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setDateFormat:@"d. MMMM"];
+    return [dateFormatter stringFromDate:_session.startdatetime];
+}
+
+- (NSString *)startDateDay {
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"EEEE dd."];
     return [dateFormatter stringFromDate:_session.startdatetime];
 }
 
@@ -127,6 +136,55 @@
 
 - (double)longitude {
     return _session.venue.longitude.doubleValue;
+}
+
+- (NSString *)type{
+	return _session.type;
+}
+
+- (UIColor *)typeColor{
+	if ([_session.type isEqualToString:@"Kulturformidling"]){
+		return [UIColor colorWithHexString:@"#205aa8"];
+	}
+	else if ([_session.type isEqualToString:@"Kunst og kultur"]){
+		return [UIColor colorWithHexString:@"#8e8e8e"];
+	}
+	else if ([_session.type isEqualToString:@"Leg og læring"]){
+		return [UIColor colorWithHexString:@"#498825"];
+	}
+	else if ([_session.type isEqualToString:@"Musik"]){
+		return [UIColor colorWithHexString:@"#e38224"];
+	}
+	else if ([_session.type isEqualToString:@"Spoken Word"]){
+		return [UIColor colorWithHexString:@"#3c3746"];
+	}
+	else if ([_session.type isEqualToString:@"Underholdning og teater"]){
+		return [UIColor colorWithHexString:@"#e10071"];
+	}
+	return [UIColor blackColor];
+}
+
+- (UIImage *)typeIcon{
+	
+	if ([_session.type isEqualToString:@"Kulturformidling"]){
+		return [UIImage imageNamed:@"culture"];
+	}
+	else if ([_session.type isEqualToString:@"Kunst og kultur"]){
+		return [UIImage imageNamed:@"art"];
+	}
+	else if ([_session.type isEqualToString:@"Leg og læring"]){
+		return [UIImage imageNamed:@"play"];
+	}
+	else if ([_session.type isEqualToString:@"Musik"]){
+		return [UIImage imageNamed:@"music"];
+	}
+	else if ([_session.type isEqualToString:@"Spoken Word"]){
+		return [UIImage imageNamed:@"spoken"];
+	}
+	else if ([_session.type isEqualToString:@"Underholdning og teater"]){
+		return [UIImage imageNamed:@"theater"];
+	}
+	return [UIImage imageNamed:@"default_icon"];
 }
 
 - (BOOL)hasTime {

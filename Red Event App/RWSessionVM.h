@@ -41,6 +41,8 @@
 
 - (NSString *)startDateShort;
 
+- (NSString *)startDateDay;
+
 - (NSString *)startTime;
 
 - (NSDate *)endDatetime;
@@ -58,6 +60,12 @@
 - (double)latitude;
 
 - (double)longitude;
+
+- (NSString *)type;
+
+- (UIColor *)typeColor;
+
+- (UIImage *)typeIcon;
 
 - (BOOL)hasTime;
 

@@ -22,6 +22,7 @@
 //Page Globals
 + (NSString *)ARTICLEID {return @"articleid";}
 + (NSString *)CATID {return @"catid";}
++ (NSString *)CATIDS {return @"catids";}
 + (NSString *)CHILD {return @"child";}
 + (NSString *)CHILD2 {return @"child2";}
 + (NSString *)FILEPATH {return @"filepath";}

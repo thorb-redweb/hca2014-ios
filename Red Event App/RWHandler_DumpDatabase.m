@@ -138,7 +138,7 @@
 
     [_events addObject:event];
     for (Session *session in _sessions) {
-        if (session.eventid == event.eventid) {
+        if ([session.eventid isEqual:event.eventid]) {
             session.event = event;
         }
     }
@@ -186,6 +186,7 @@
     [session setVenueid:[NSDecimalNumber decimalNumberWithString:[entry objectForKey:_json.Ses.VENUE_ID]]];
     [session setTitle:[self removeBackSlashes:[entry objectForKey:_json.Ses.TITLE]]];
     [session setDetails:[self removeBackSlashes:[entry objectForKey:_json.Ses.DETAILS]]];
+    [session setType:[self removeBackSlashes:[entry objectForKey:_json.Ses.SESSIONTYPE]]];
 
     NSString *startDateString = [entry objectForKey:_json.Ses.STARTDATE];
     NSString *startTimeString = [entry objectForKey:_json.Ses.STARTTIME];
@@ -201,12 +202,12 @@
 
     [_sessions addObject:session];
     for (Event *event in _events) {
-        if (session.eventid == event.eventid) {
+        if ([session.eventid isEqual:event.eventid]) {
             session.event = event;
         }
     }
     for (Venue *venue in _venues) {
-        if (session.venueid == venue.venueid) {
+        if ([session.venueid isEqual:venue.venueid]) {
             session.venue = venue;
         }
     }
@@ -225,7 +226,7 @@
 
     [_venues addObject:venue];
     for (Session *session in _sessions) {
-        if (session.venueid == venue.venueid) {
+        if ([session.venueid isEqual:venue.venueid]) {
             session.venue = venue;
         }
     }

@@ -16,8 +16,6 @@
 #import "RWTabBar.h"
 #import "RWHandler_UpdateDatabase.h"
 
-@class RWVolatileDataStores;
-
 @interface RWAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property(strong, nonatomic) UIWindow *window;
@@ -34,9 +32,8 @@
 
 @property(strong, nonatomic) UIViewController *pushMessageHandler;
 
-@property(strong, nonatomic) RWVolatileDataStores *volatileDataStores;
-
 - (bool) shouldSkipUpdate;
+- (NSDate *)getDebugDate;
 
 - (void)saveContext;
 

@@ -19,6 +19,7 @@
 -(NSString *)ENDDATE{return @"enddate";}
 -(NSString *)STARTTIME{return @"starttime";}
 -(NSString *)ENDTIME{return @"endtime";}
+-(NSString *)SESSIONTYPE{return @"eventtype";}
 -(NSString *)ITEMTYPE{return @"itemtype";}
 -(NSString *)ACTIONTYPE{return @"actiontype";}
 @end

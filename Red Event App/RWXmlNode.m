@@ -86,6 +86,13 @@
     return [[self getStringFromNode:name] boolValue];
 }
 
+- (bool)getBoolWithNoneAsFalse:(NSString *)name{
+	if ([self hasChild:name]) {
+		return [self getBoolFromNode:name];
+	}
+	return false;
+}
+
 - (double)getDoubleFromNode:(NSString *)name {
     return [[self getStringFromNode:name] doubleValue];
 }

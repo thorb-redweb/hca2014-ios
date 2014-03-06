@@ -19,6 +19,7 @@
 @dynamic sessionid;
 @dynamic startdatetime;
 @dynamic title;
+@dynamic type;
 @dynamic venueid;
 @dynamic event;
 @dynamic venue;

@@ -17,6 +17,7 @@
 
 @property(strong, nonatomic) NSString *dataFilesFolderPath;
 @property(strong, nonatomic) NSString *imagesRootPath;
+@property(strong, nonatomic) NSString *css;
 
 - (RWXmlNode *)getPage:(NSString *)name;
 - (RWXmlNode *)getFrontPage;

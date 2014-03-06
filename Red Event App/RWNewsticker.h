@@ -9,9 +9,9 @@
 #import <Foundation/Foundation.h>
 #import "RWBaseViewController.h"
 
-@interface RWNewsticker : UIScrollView
+@interface RWNewsticker : UIScrollView <UIGestureRecognizerDelegate>
 
--(void)initializeWithDatasource:(NSMutableArray *)datasource newsCells:(NSArray *)cells;
+-(void)initializeWithDatasource:(NSMutableArray *)datasource newsCells:(NSArray *)cells app:(RWAppDelegate *)app childname:(NSString *)childname;
 -(void)startPaging;
 -(void)stopPaging;
 

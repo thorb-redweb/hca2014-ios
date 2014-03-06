@@ -43,8 +43,14 @@
 		[self.view setTranslatesAutoresizingMaskIntoConstraints:NO];
 	}
 
-    int catid = [_page getIntegerFromNode:[RWPAGE CATID]];
-    dataSource = [_db.Articles getVMListFromCatId:catid];
+	if([_page hasChild:[RWPAGE CATID]]){
+		int catid = [_page getIntegerFromNode:[RWPAGE CATID]];
+		dataSource = [_db.Articles getVMListFromCatId:catid];
+	}
+	else{
+		NSArray *catids = [_page getNSNumberArrayFromNode:[RWPAGE CATIDS]];
+		dataSource = [_db.Articles getVMListFromCatIds:catids];
+	}
 
     [self setAppearance];
 }

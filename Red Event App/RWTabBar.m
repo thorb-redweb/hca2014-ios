@@ -35,8 +35,10 @@
 		
 		
         if (!([tabname isEqual:@""]) || tabimage != nil) {
-            UITabBarItem *btnPage = [[UITabBarItem alloc] initWithTitle:tabname image:tabimage tag:i];
-            [_tabpages addObject:page];
+			tabimage = [tabimage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+            UITabBarItem *btnPage = [[UITabBarItem alloc] initWithTitle:tabname image:tabimage selectedImage:tabimage];
+			[btnPage setTag:i];
+			[_tabpages addObject:page];
             [items addObject:btnPage];
             i++;
         }

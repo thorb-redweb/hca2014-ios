@@ -48,7 +48,7 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
-                <outlet property="imgArticle" destination="PuL-C9-6K3" id="Rua-Bj-bdn"/>
+                <outlet property="imgType" destination="PuL-C9-6K3" id="5Nr-u9-hF5"/>
                 <outlet property="lblTitle" destination="TQ5-VD-nZc" id="NDD-63-E3Y"/>
                 <outlet property="vwRightBorder" destination="0t5-bw-xU2" id="PL8-Da-EXH"/>
             </connections>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="4510" systemVersion="12F45" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RWNavController">
+            <connections>
+                <outlet property="btnBack" destination="Xr2-bX-V6C" id="o3m-Pm-tzE"/>
+                <outlet property="btnHome" destination="nBw-5t-jWk" id="JZs-Ub-g3c"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="1">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xr2-bX-V6C">
+                    <rect key="frame" x="223" y="0.0" width="97" height="44"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="97" id="nBG-3L-mTX"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <inset key="titleEdgeInsets" minX="-68" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <inset key="imageEdgeInsets" minX="61" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <state key="normal" title="Tilbage" image="arrow_back.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="btnBackPushed" destination="-1" eventType="touchUpInside" id="r7f-lI-M8g"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nBw-5t-jWk">
+                    <rect key="frame" x="0.0" y="0.0" width="104" height="44"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="104" id="wd8-g3-eel"/>
+                    </constraints>
+                    <state key="normal" title="Button" image="logo_hca_top.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="btnHomePushed" destination="-1" eventType="touchUpInside" id="mgO-9n-ubo"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="Xr2-bX-V6C" secondAttribute="trailing" id="GST-bb-A3r"/>
+                <constraint firstItem="nBw-5t-jWk" firstAttribute="top" secondItem="1" secondAttribute="top" id="XwU-oA-cUI"/>
+                <constraint firstItem="Xr2-bX-V6C" firstAttribute="top" secondItem="1" secondAttribute="top" id="dgb-h8-aLg"/>
+                <constraint firstAttribute="bottom" secondItem="Xr2-bX-V6C" secondAttribute="bottom" id="eGi-Om-ekr"/>
+                <constraint firstAttribute="bottom" secondItem="nBw-5t-jWk" secondAttribute="bottom" id="evX-Zq-Y7G"/>
+                <constraint firstItem="nBw-5t-jWk" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="xrG-Mf-Gqh"/>
+            </constraints>
+            <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="arrow_back.png" width="35" height="35"/>
+        <image name="logo_hca_top.png" width="215" height="95"/>
+    </resources>
+</document>

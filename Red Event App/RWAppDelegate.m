@@ -8,6 +8,7 @@
 
 #import "UIColor+RWColor.h"
 #import <GoogleMaps/GoogleMaps.h>
+#include <AudioToolbox/AudioToolbox.h>
 #import "DDTTYLogger.h"
 #import "DDFileLogger.h"
 #import "MyLog.h"
@@ -17,11 +18,8 @@
 #import "RWSplashViewController.h"
 #import "RWMainViewController.h"
 
-#import "RWRedUploadDataStore.h"
-
 #import "RWAppearanceHelper.h"
 #import "RWPAGE.h"
-#import "RWVolatileDataStores.h"
 
 @interface RWAppDelegate ()
 
@@ -39,13 +37,35 @@
 @synthesize managedObjectModel = _managedObjectModel;
 @synthesize persistentStoreCoordinator = _persistentStoreCoordinator;
 
+- (NSDate *)getDebugDate{
+	bool debugging = NO;
+	if (debugging) {
+		int year = 2013;
+		int month = 8;
+		int day = 24;
+		int hour = 13;
+		int minute = 54;
+		
+		NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+		NSDateComponents *components = [[NSDateComponents alloc] init];
+		[components setYear:year];
+		[components setMonth:month];
+		[components setDay:day];
+		[components setHour:hour];
+		[components setMinute:minute];
+		return [calendar dateFromComponents:components];		
+	}
+	return nil;
+}
+
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 	self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
 
 	 _debugSkipUpdates = NO;
 	
-    [GMSServices provideAPIKey:@"AIzaSyCpSOR5gXO1zDC3B5uRnpek-oRt4e9nF3Q"];
+    [GMSServices provideAPIKey:@"AIzaSyDU0vT2zWBngyt1OkT2HZsv_ZRPnP12gog"];
 
     self.window.backgroundColor = [UIColor whiteColor];
 
@@ -56,8 +76,14 @@
     [self setAppearance];
 
     [self startOnSplashScreen];
-
+	
     [self.window makeKeyAndVisible];
+	
+	NSDictionary *notification = [launchOptions objectForKey:UIApplicationLaunchOptionsRemoteNotificationKey];
+	if (notification) {
+		[_pmh notificationReceived:notification];
+		return YES;
+	}
     return YES;
 }
 
@@ -88,14 +114,7 @@
 }
 
 -(void)getInitializationData {
-	_volatileDataStores = [[RWVolatileDataStores alloc] init];
-	if([_xml.pages hasChild:[RWPAGE GLOBAL]]){
-		RWXmlNode *global = [_xml.pages getChildFromNode:[RWPAGE GLOBAL]];
-		if([global hasChild:[RWPAGE USEREDUPLOAD]] && [global getBoolFromNode:[RWPAGE USEREDUPLOAD]]){
-			[_volatileDataStores addObject:[[RWRedUploadDataStore alloc] initWithDb:_db]];
-		}
 	}
-}
 
 -(void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken{
 	[_pmh receiveRegistrationId:deviceToken];
@@ -106,54 +125,7 @@
 }
 
 - (void)setAppearance {
-
-    [self setNavigationBarAppearance];
     [self setTabBarAppearance];
-}
-
-- (void)setNavigationBarAppearance {
-    RWXmlNode *globalLook = [_xml.appearance getChildFromNode:[RWLOOK DEFAULT]];
-    RWXmlNode *localLook = [_xml.appearance getChildFromNode:[RWLOOK NAVIGATIONBAR]];
-    RWAppearanceHelper *helper = [[RWAppearanceHelper alloc] initWithLocalLook:localLook globalLook:globalLook];
-
-    if ([localLook hasChild:[RWLOOK NAVBAR_BACKGROUNDIMAGE]]) {
-        UIImage *navBarBackground = [UIImage imageNamed:[localLook getStringFromNode:[RWLOOK NAVBAR_BACKGROUNDIMAGE]]];
-        [[UINavigationBar appearance] setBackgroundImage:navBarBackground forBarMetrics:UIBarMetricsDefault];
-    } else {
-        UIColor *backgroundColor = [helper.getter getColorWithLocalName:[RWLOOK NAVBAR_BACKGROUNDCOLOR] globalName:[RWLOOK DEFAULT_BARCOLOR]];
-        [[UINavigationBar appearance] setBarTintColor:backgroundColor];
-    }
-
-    //Title
-    NSMutableDictionary *titleBarAttributes = [NSMutableDictionary dictionaryWithDictionary:[[UINavigationBar appearance] titleTextAttributes]];
-
-    UIColor *titleColor = [helper.getter getColorWithLocalName:[RWLOOK NAVBAR_TITLECOLOR] globalName:[RWLOOK DEFAULT_BARTEXTCOLOR]];
-    [titleBarAttributes setValue:titleColor forKey:NSForegroundColorAttributeName];
-
-    UIFont *titleFont = [helper.getter getTextFontWithLocalSizeName:[RWLOOK NAVBAR_TITLESIZE] globalSizeName:[RWLOOK DEFAULT_TITLESIZE]
-                                              localStyleName:[RWLOOK NAVBAR_TITLESTYLE] globalStyleName:[RWLOOK DEFAULT_TITLESTYLE]];
-    [titleBarAttributes setValue:titleFont forKey:NSFontAttributeName];
-
-    NSShadow *titleShadow = [[NSShadow alloc] init];
-    if([localLook hasChild:[RWLOOK NAVBAR_TITLESHADOWCOLOR]] || [globalLook hasChild:[RWLOOK DEFAULT_BARTEXTSHADOWCOLOR]])   {
-        UIColor *titleShadowColor = [helper.getter getColorWithLocalName:[RWLOOK NAVBAR_TITLESHADOWCOLOR] globalName:[RWLOOK DEFAULT_BARTEXTSHADOWCOLOR]];
-        [titleShadow setShadowColor:titleShadowColor];
-
-    }
-    if([localLook hasChild:[RWLOOK NAVBAR_TITLESHADOWOFFSET]] || [globalLook hasChild:[RWLOOK DEFAULT_TITLESHADOWOFFSET]])   {
-        CGSize titleShadowOffset = [helper.getter getCGSizeWithLocalName:[RWLOOK NAVBAR_TITLESHADOWOFFSET] globalName:[RWLOOK DEFAULT_TITLESHADOWOFFSET]];
-        [titleShadow setShadowOffset:titleShadowOffset];
-    }
-    [titleBarAttributes setValue:titleShadow forKey:NSShadowAttributeName];
-
-    [[UINavigationBar appearance] setTitleTextAttributes:titleBarAttributes];
-
-    //Backbutton
-    if([localLook hasChild:[RWLOOK NAVBAR_UPBUTTONBACKIMAGE]]){
-        NSString *imageName = [localLook getStringFromNode:[RWLOOK NAVBAR_UPBUTTONBACKIMAGE]];
-        UIImage *backButtonImage = [[UIImage imageNamed:imageName] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 15, 0, 15)];
-        [[UIBarButtonItem appearance] setBackButtonBackgroundImage:backButtonImage forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
-    }
 }
 
 - (void)setTabBarAppearance {
@@ -207,7 +179,7 @@
 	//Note that the navcontroller is not functional until it has connected to the mainView in the
 	//RWMainViewController's onViewLoaded method
 	
-    RWMainViewController *mainView = [[RWMainViewController alloc] initWithStartPage:[_xml getFrontPage]];
+    RWMainViewController *mainView = [[RWMainViewController alloc] initWithStartPage:[_xml getPage:@"Autosubscriber"]];
 	self.window.rootViewController = mainView;
 }
 
@@ -215,29 +187,7 @@
 // Notification Start
 
 -(void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)notification {
-    DDLogInfo(@"Push message received, start data update");
-	_localNotification = notification;
-    [self checkForUpdates];
-}
-
-- (void)checkForUpdates {
-    [_sv updateDatabase:self];
-}
-
-- (void)continueAfterUpdate {
-    DDLogVerbose(@"Continue after update");
-    //Start by adding the frontpage
-    _navController = [[RWNavigationController alloc] init];
-    RWMainViewController *mainView = [[RWMainViewController alloc] initWithStartPage:[_xml getFrontPage]];
-    self.window.rootViewController = mainView;
-
-    //And then push the push message page on to the stack
-    NSString *messageid = _localNotification[@"content"][@"messageid"];
-    RWXmlNode *nextPage = [_xml getPage:@"Nyhedsside"];
-    [nextPage addNodeWithName:[RWPAGE ARTICLEID] value:messageid];
-
-    [_navController pushViewWithPage:nextPage];
-    DDLogInfo(@"Show push message content");
+	[_pmh notificationReceived:notification];
 }
 
 - (void)errorOccured:(NSString *)errorMessage {

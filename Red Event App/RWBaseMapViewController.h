@@ -12,12 +12,11 @@
 
 #import "RWInfoWindow.h"
 
-@interface RWBaseMapViewController : RWBaseViewController <GMSMapViewDelegate>
+@interface RWBaseMapViewController : RWBaseViewController <GMSMapViewDelegate, UIGestureRecognizerDelegate>
 
 @property(weak, nonatomic) IBOutlet UIView *mainView;
 @property(weak, nonatomic) IBOutlet GMSMapView *mapView;
 @property(weak, nonatomic) IBOutlet UIButton *btnBack;
-
 
 - (id)initWithPage:(RWXmlNode *)page;
 

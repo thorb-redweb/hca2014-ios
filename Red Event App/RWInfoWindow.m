@@ -7,6 +7,7 @@
 //
 
 #import "RWInfoWindow.h"
+#import "RWBaseMapViewController.h"
 
 @implementation RWInfoWindow
 
@@ -14,7 +15,7 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        // Initialization code
+
     }
     return self;
 }

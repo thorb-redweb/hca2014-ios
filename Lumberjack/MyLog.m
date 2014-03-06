@@ -8,7 +8,7 @@
 
 #import "MyLog.h"
 
-int ddLogLevel = LOG_LEVEL_INFO;
+int ddLogLevel = LOG_LEVEL_DEBUG;
 
 @implementation MyLog
 
