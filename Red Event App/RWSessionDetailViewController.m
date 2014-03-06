@@ -6,6 +6,8 @@
 //  Copyright (c) 2013 redWEB. All rights reserved.
 //
 
+#import "MyLog.h"
+
 #import "NSString+RWString.h"
 #import "SDWebImage/UIImageView+WebCache.h"
 #import "UIScrollView+RWScrollView.h"
@@ -64,6 +66,12 @@
 		NSString *details = _model.details;
         _lblBody.text = details;
     }
+	
+	if ([_model.submissionPath isEqualToString:@""]) {
+		[_btnTicket setHidden: YES];
+		[_btnTicket setEnabled: YES];
+		[_btnTicket RWsetHeightAsConstraint:0.0];
+	}
 
     if ([_model.imagePath length] != 0) {
         if (_model.image != NULL) {
@@ -92,8 +100,6 @@
 
     [helper.label setTitleStyle:_lblTitle];
 
-    [helper.button setButtonStyle:_btnMap];
-
     [helper.label setBackTextStyle:_lblBody];
 
     [helper.button setBackButtonStyle:_btnBack];
@@ -107,7 +113,6 @@
 	[helper setText:_lblDate textName:[RWTEXT SESSIONDETAIL_DATE] defaultText:[RWDEFAULTTEXT SESSIONDETAIL_DATE]];
 	[helper setText:_lblPlace textName:[RWTEXT SESSIONDETAIL_PLACE] defaultText:[RWDEFAULTTEXT SESSIONDETAIL_PLACE]];
 	[helper setText:_lblTime textName:[RWTEXT SESSIONDETAIL_TIME] defaultText:[RWDEFAULTTEXT SESSIONDETAIL_TIME]];
-	[helper setButtonText:_btnMap textName:[RWTEXT SESSIONDETAIL_MAPBUTTON] defaultText:[RWDEFAULTTEXT SESSIONDETAIL_MAPBUTTON]];
 	
 	BOOL backButtonHasBackgroundImage = [_xml.appearance hasChild:_name] && [[_xml getAppearanceForPage:_name] hasChild:[RWLOOK BACKBUTTONBACKGROUNDIMAGE]];
 	if(!backButtonHasBackgroundImage){
@@ -127,6 +132,13 @@
     [nextPage addNodeWithName:[RWPAGE SESSIONID] value:_model.sessionid];
 
     [_app.navController pushViewWithPage:nextPage];
+}
+
+- (IBAction)btnTicketPressed:(id)sender{
+	NSURL *submissionUrl = [NSURL URLWithString:_model.submissionPath];
+	if (![[UIApplication sharedApplication] openURL:submissionUrl]) {
+		DDLogCWarn(@"Failed to open url: %@", [submissionUrl description]);
+	}
 }
 
 -(IBAction)btnBackClicked{

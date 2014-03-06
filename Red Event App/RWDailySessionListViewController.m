@@ -240,6 +240,8 @@
     [nextPage addNodeWithName:[RWPAGE SESSIONID] value:model.sessionid];
 
     [_app.navController pushViewWithPage:nextPage];
+	
+	[_lstTableView deselectRowAtIndexPath:indexPath animated:NO];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {

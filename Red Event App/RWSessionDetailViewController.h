@@ -23,6 +23,7 @@
 @property(weak, nonatomic) IBOutlet UILabel *lblPlaceText;
 @property(weak, nonatomic) IBOutlet UILabel *lblTimeText;
 @property(weak, nonatomic) IBOutlet UIButton *btnMap;
+@property(weak, nonatomic) IBOutlet UIButton *btnTicket;
 @property(weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property(weak, nonatomic) IBOutlet UILabel *lblBody;
 @property(weak, nonatomic) IBOutlet UIWebView *webBody;
@@ -31,5 +32,6 @@
 - (id)initWithPage:(RWXmlNode *)page;
 
 - (IBAction)btnMapPressed:(id)sender;
+- (IBAction)btnTicketPressed:(id)sender;
 
 @end
