@@ -10,12 +10,16 @@
 
 #import "RWAppDelegate.h"
 #import "RWDbInterface.h"
+#import "RWUpdateService.h"
+#import "RWPushMessageAutoSubscriberViewController.h"
 
 @interface RWBaseViewController ()
 
 @end
 
-@implementation RWBaseViewController
+@implementation RWBaseViewController{
+	RWUpdateService *_updateService;
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil page:(RWXmlNode *)page {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -45,6 +49,16 @@
 
 -(void)viewWillAppear:(BOOL)animated{
 	[super viewWillAppear:animated];
+	_updateService = [[RWUpdateService alloc] init];
+	if (![self.class isSubclassOfClass:RWPushMessageAutoSubscriberViewController.class]) {
+		[_updateService start];
+	}
+}
+
+-(void)viewWillDisappear:(BOOL)animated{
+	[_updateService stop];
+	
+	[super viewWillDisappear:animated];
 }
 
 - (NSString *)description {

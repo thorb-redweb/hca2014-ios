@@ -8,7 +8,7 @@
 
 #import "MyLog.h"
 
-int ddLogLevel = LOG_LEVEL_DEBUG;
+int ddLogLevel = LOG_LEVEL_VERBOSE;
 
 @implementation MyLog
 

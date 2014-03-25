@@ -114,7 +114,8 @@
 }
 
 -(void)getInitializationData {
-	}
+	_lastUpdated = [[NSDate alloc] init];
+}
 
 -(void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken{
 	[_pmh receiveRegistrationId:deviceToken];

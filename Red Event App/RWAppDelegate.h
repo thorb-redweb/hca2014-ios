@@ -31,6 +31,7 @@
 @property(strong, nonatomic) RWXMLStore *xml;
 
 @property(strong, nonatomic) UIViewController *pushMessageHandler;
+@property(strong, nonatomic) NSDate *lastUpdated;
 
 - (bool) shouldSkipUpdate;
 - (NSDate *)getDebugDate;

@@ -6,16 +6,21 @@
 //  Copyright (c) 2013 redWEB. All rights reserved.
 //
 
+#import "CRToast.h"
 #import "MyLog.h"
 
 #import "RWPushMessageSubscriptionHandler.h"
 #import "RWAppDelegate.h"
+#import "RWDbInterface.h"
+#import "RWDbArticles.h"
 #import "RWServer.h"
 #import "RWXMLStore.h"
 #import "RWMainViewController.h"
+#import "RWArticleVM.h"
 
 @implementation RWPushMessageSubscriptionHandler{
 	RWAppDelegate *_app;
+	RWDbInterface *_db;
 	RWServer *_sv;
 	RWXMLStore *_xml;
 	
@@ -25,6 +30,7 @@
 -(id)init{
 	if(self = [super init]){
 		_app = [[UIApplication sharedApplication] delegate];
+		_db = _app.db;
 		_sv = _app.sv;
 		_xml = _app.xml;
 	}
@@ -43,33 +49,55 @@
 }
 
 -(void)notificationReceived:(NSDictionary *)notification{
-	UIApplication *application = [UIApplication sharedApplication];
-	
-	//Check whether or not the application is already active, and proceed from there
-	if(application.applicationState == UIApplicationStateActive){
-		DDLogInfo(@"Push message received, no action");
-	}
-	else{
-		//if not active, get updates. The delegate will continue to continueAfterUpdate
-		DDLogInfo(@"Push message received, start data update");
-		_currentNotification = notification;
-		[_sv updateDatabase:self];
-	}
+	DDLogInfo(@"Push message received, start data update");
+	[_sv updateDatabase:self];
+	_currentNotification = notification;
 }
 
 - (void)continueAfterUpdate {
     DDLogVerbose(@"Continue after update");
-	_app.navController = [[RWNavigationController alloc] init];
-	//Note that the navcontroller is not functional until it has connected to the mainView in the
-	//RWMainViewController's onViewLoaded method
 	
-    NSString *messageid = _currentNotification[@"content"][@"messageid"];
-	RWXmlNode *nextPage = [[_xml getPage:@"Nyhedsside"] deepClone];
-	[nextPage addNodeWithName:[RWPAGE ARTICLEID] value:messageid];
-	
-	RWMainViewController *mainView = [[RWMainViewController alloc] initWithStartPage:nextPage];
-	_app.window.rootViewController = mainView;
-    DDLogInfo(@"Starting on page with push message content");
+	//Check whether or not the application is already active, and act accordingly
+	UIApplication *application = [UIApplication sharedApplication];
+	if(application.applicationState == UIApplicationStateActive){
+		//if the application is active, we'll simply show a toast
+		DDLogInfo(@"Push message received, show toast");
+		
+		RWArticleVM *article = [_db.Articles getVMFromId:[_currentNotification[@"content"][@"messageid"] intValue]];
+		
+		NSMutableDictionary *options;
+		options = [@{kCRToastNotificationTypeKey : @(CRToastTypeNavigationBar),
+					 kCRToastNotificationPresentationTypeKey : @(CRToastPresentationTypeCover),
+					 kCRToastUnderStatusBarKey : @(YES),
+					 kCRToastBackgroundColorKey : [UIColor blackColor],
+					 kCRToastTimeIntervalKey : @(3),
+					 kCRToastTextKey : @"Nyhed modtaget",
+					 kCRToastTextAlignmentKey : @(1),
+					 kCRToastTextColorKey : [UIColor whiteColor],
+					 kCRToastSubtitleTextKey : [article title],
+					 kCRToastSubtitleTextAlignmentKey : @(1),
+					 kCRToastSubtitleTextColorKey : [UIColor whiteColor],
+					 kCRToastAnimationInTypeKey : @(CRToastAnimationTypeGravity),
+					 kCRToastAnimationInDirectionKey : @(CRToastAnimationDirectionLeft),
+					 kCRToastAnimationOutTypeKey : @(CRToastAnimationTypeGravity),
+					 kCRToastAnimationOutDirectionKey : @(CRToastAnimationDirectionRight)
+					 } mutableCopy];
+		[CRToastManager showNotificationWithOptions:options completionBlock:^{}];
+	}
+	else{
+		//if the applocation was not active, we'll start up the nav controller and so on
+		_app.navController = [[RWNavigationController alloc] init];
+		//Note that the navcontroller is not functional until it has connected to the mainView in the
+		//RWMainViewController's onViewLoaded method
+		
+		NSString *messageid = _currentNotification[@"content"][@"messageid"];
+		RWXmlNode *nextPage = [[_xml getPage:@"Nyhedsside"] deepClone];
+		[nextPage addNodeWithName:[RWPAGE ARTICLEID] value:messageid];
+		
+		RWMainViewController *mainView = [[RWMainViewController alloc] initWithStartPage:nextPage];
+		_app.window.rootViewController = mainView;
+		DDLogInfo(@"Starting on page with push message content");
+	}
 }
 
 

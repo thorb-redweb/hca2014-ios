@@ -77,6 +77,10 @@
 
     _listDate = [_db.Sessions getStartDateTimeWithSessionByDateTime:[NSDate date] venueid:[self filterVenueId] type:_typeTableController.getSelectedName];
 	
+	if(_listDate == nil){
+		_listDate = [NSDate date];
+	}
+	
 	[self setAppearance];
 	[self setText];
 

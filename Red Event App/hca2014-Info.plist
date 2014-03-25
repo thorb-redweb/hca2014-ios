@@ -8,6 +8,18 @@
 	<string>H.C. Andersen Festivals</string>
 	<key>CFBundleExecutable</key>
 	<string>${EXECUTABLE_NAME}</string>
+	<key>CFBundleIcons</key>
+	<dict>
+		<key>CFBundlePrimaryIcon</key>
+		<dict>
+			<key>CFBundleIconFiles</key>
+			<array>
+				<string>58x58</string>
+				<string>80x80</string>
+				<string>120x120</string>
+			</array>
+		</dict>
+	</dict>
 	<key>CFBundleIdentifier</key>
 	<string>dk.redweb.hca2014</string>
 	<key>CFBundleInfoDictionaryVersion</key>

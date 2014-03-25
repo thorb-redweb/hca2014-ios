@@ -38,7 +38,7 @@
     int articleId = [_page getIntegerFromNode:[RWPAGE ARTICLEID]];
     _model = [_db.Articles getVMFromId:articleId];
 
-	[_webBody loadHTMLString:[NSString stringWithFormat:@"%@%@", _xml.css, _model.fulltextWithHtml] baseURL:[NSURL URLWithString:_xml.imagesRootPath]];
+	[_webBody loadHTMLString:[NSString stringWithFormat:@"%@%@", _xml.css, _model.introtextWithHtml] baseURL:[NSURL URLWithString:_xml.imagesRootPath]];
 
 	[self setAppearance];
 	
