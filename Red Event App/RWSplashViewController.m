@@ -52,9 +52,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
-    [_btnBackground setImage:[UIImage imageNamed:@"splash"] forState:UIControlStateNormal];
-    [_btnBackground setImage:[UIImage imageNamed:@"splash"] forState:UIControlStateHighlighted];
 }
 
 - (void)viewWillAppear:(BOOL)animated{
@@ -79,6 +76,7 @@
     else {
         DDLogInfo(@"No need for dump");
         _splashDelay = 5.0;
+		[self showActivityViews];
         [self checkForUpdates];
     }
 }

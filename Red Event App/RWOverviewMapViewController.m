@@ -68,7 +68,7 @@
 
 		//check if the venue has a next session
 		//only if it has should it get a marker
-		if(session){        
+		if(session && !(venue.latitude == 0 && venue.longitude == 0)){
 			GMSMarker *venueMarker = [[GMSMarker alloc] init];
 			venueMarker.position = CLLocationCoordinate2DMake(venue.latitude, venue.longitude);
 			venueMarker.infoWindowAnchor = CGPointMake(0.44f, 0.45f);

@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="4510" systemVersion="12F45" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5053" systemVersion="12F45" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RWSplashViewController">
@@ -19,7 +20,52 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Cfs-dJ-wrY">
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" image="splash_hca_logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="cu0-2a-Jlk">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="307"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nPv-BL-jYj" userLabel="TopContainer">
+                    <rect key="frame" x="0.0" y="307" width="320" height="53"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash_logo_justimagine_top.png" translatesAutoresizingMaskIntoConstraints="NO" id="l2U-YL-wg5">
+                            <rect key="frame" x="158" y="0.0" width="162" height="53"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <constraints>
+                        <constraint firstItem="l2U-YL-wg5" firstAttribute="top" secondItem="nPv-BL-jYj" secondAttribute="top" id="3Bz-in-Ok6"/>
+                        <constraint firstAttribute="trailing" secondItem="l2U-YL-wg5" secondAttribute="trailing" id="4dA-fM-ROT"/>
+                        <constraint firstAttribute="bottom" secondItem="l2U-YL-wg5" secondAttribute="bottom" id="lNj-88-ZTm"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1EU-4c-jOl" userLabel="BottomContainer">
+                    <rect key="frame" x="0.0" y="360" width="320" height="12"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash_logo_justimagine_bottom.png" translatesAutoresizingMaskIntoConstraints="NO" id="tsp-eA-3mY">
+                            <rect key="frame" x="164" y="0.0" width="156" height="12"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="12" id="1AK-To-1vk"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="tsp-eA-3mY" secondAttribute="bottom" id="7WG-hz-XM5"/>
+                        <constraint firstAttribute="trailing" secondItem="tsp-eA-3mY" secondAttribute="trailing" id="Vuq-HQ-maK"/>
+                        <constraint firstItem="tsp-eA-3mY" firstAttribute="top" secondItem="1EU-4c-jOl" secondAttribute="top" id="kDw-OT-LYv"/>
+                    </constraints>
+                </view>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="splash_redweb_logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="Y0S-ek-daa">
+                    <rect key="frame" x="0.0" y="372" width="320" height="180"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cfs-dJ-wrY">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -27,35 +73,73 @@
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                 </button>
-                <view hidden="YES" contentMode="scaleToFill" id="35">
-                    <rect key="frame" x="20" y="427" width="280" height="121"/>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="35">
+                    <rect key="frame" x="20" y="387" width="280" height="121"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
                     <subviews>
-                        <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" hidesWhenStopped="YES" style="gray" id="18">
-                            <rect key="frame" x="130" y="49" width="20" height="20"/>
+                        <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="18">
+                            <rect key="frame" x="122" y="42" width="37" height="37"/>
                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES"/>
                         </activityIndicatorView>
-                        <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Henter eventdata.." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="22">
-                            <rect key="frame" x="56" y="20" width="174" height="21"/>
+                        <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Henter eventdata.." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="22">
+                            <rect key="frame" x="69" y="13" width="142" height="21"/>
                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Dette kan tage et par minutter" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="26">
-                            <rect key="frame" x="27" y="77" width="233" height="24"/>
+                        <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Dette kan tage et par minutter" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="26">
+                            <rect key="frame" x="25" y="87" width="230" height="21"/>
                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" red="0.88627457618713379" green="0.078431375324726105" blue="0.4901961088180542" alpha="1" colorSpace="deviceRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="121" id="0z8-H2-w7E"/>
+                        <constraint firstItem="26" firstAttribute="top" secondItem="18" secondAttribute="bottom" constant="8" id="AI6-NB-nk6"/>
+                        <constraint firstAttribute="centerX" secondItem="26" secondAttribute="centerX" id="HNN-c6-kiJ"/>
+                        <constraint firstAttribute="centerY" secondItem="18" secondAttribute="centerY" id="OR4-DL-rvE"/>
+                        <constraint firstAttribute="centerX" secondItem="18" secondAttribute="centerX" id="Oh0-pY-i6F"/>
+                        <constraint firstAttribute="centerX" secondItem="22" secondAttribute="centerX" id="eB2-bH-wgf"/>
+                        <constraint firstItem="18" firstAttribute="top" secondItem="22" secondAttribute="bottom" constant="8" id="kiE-Bw-4Uy"/>
+                    </constraints>
                 </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="Y0S-ek-daa" firstAttribute="top" secondItem="1EU-4c-jOl" secondAttribute="bottom" id="4qq-Qo-dwG"/>
+                <constraint firstItem="35" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="20" id="5NZ-sC-hqO"/>
+                <constraint firstItem="nPv-BL-jYj" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="68c-dL-tDc"/>
+                <constraint firstItem="cu0-2a-Jlk" firstAttribute="top" secondItem="1" secondAttribute="top" id="6ZE-Vu-0SZ"/>
+                <constraint firstItem="nPv-BL-jYj" firstAttribute="bottom" secondItem="1EU-4c-jOl" secondAttribute="top" id="GWp-LX-UzN"/>
+                <constraint firstAttribute="bottom" secondItem="35" secondAttribute="bottom" constant="60" id="GdM-4u-HBA"/>
+                <constraint firstAttribute="trailing" secondItem="35" secondAttribute="trailing" constant="20" id="KXA-VT-Vki"/>
+                <constraint firstAttribute="trailing" secondItem="nPv-BL-jYj" secondAttribute="trailing" id="SSb-47-Fd2"/>
+                <constraint firstItem="Y0S-ek-daa" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="UR7-t4-xJ9"/>
+                <constraint firstAttribute="trailing" secondItem="Y0S-ek-daa" secondAttribute="trailing" id="UW8-Rp-dJn"/>
+                <constraint firstItem="nPv-BL-jYj" firstAttribute="height" secondItem="1EU-4c-jOl" secondAttribute="height" multiplier="4.375" id="VXY-KW-GoL"/>
+                <constraint firstAttribute="bottom" secondItem="Cfs-dJ-wrY" secondAttribute="bottom" id="a4Z-zf-CO1"/>
+                <constraint firstAttribute="bottom" secondItem="Y0S-ek-daa" secondAttribute="bottom" constant="16" id="ar5-ra-xD8"/>
+                <constraint firstItem="Cfs-dJ-wrY" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="ezi-uA-Yd3"/>
+                <constraint firstAttribute="trailing" secondItem="Cfs-dJ-wrY" secondAttribute="trailing" id="fG9-E7-c9l"/>
+                <constraint firstAttribute="trailing" secondItem="1EU-4c-jOl" secondAttribute="trailing" id="gMF-Xh-3S8"/>
+                <constraint firstItem="cu0-2a-Jlk" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="hgO-rX-LMa"/>
+                <constraint firstItem="1EU-4c-jOl" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="msh-FO-XJ4"/>
+                <constraint firstItem="nPv-BL-jYj" firstAttribute="top" secondItem="cu0-2a-Jlk" secondAttribute="bottom" id="mv1-dy-PKc"/>
+                <constraint firstItem="Cfs-dJ-wrY" firstAttribute="top" secondItem="1" secondAttribute="top" id="sVj-FY-Yxg"/>
+                <constraint firstAttribute="trailing" secondItem="cu0-2a-Jlk" secondAttribute="trailing" id="ser-Yc-D5U"/>
+            </constraints>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
         </view>
     </objects>
+    <resources>
+        <image name="splash_hca_logo.png" width="592" height="307"/>
+        <image name="splash_logo_justimagine_bottom.png" width="156" height="24"/>
+        <image name="splash_logo_justimagine_top.png" width="162" height="105"/>
+        <image name="splash_redweb_logo.png" width="485" height="189"/>
+    </resources>
 </document>

@@ -38,7 +38,7 @@
                     <constraints>
                         <constraint firstAttribute="width" constant="104" id="wd8-g3-eel"/>
                     </constraints>
-                    <state key="normal" title="Button" image="logo_hca_top.png">
+                    <state key="normal" title="Button" image="splash_hca_logo.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
@@ -61,6 +61,6 @@
     </objects>
     <resources>
         <image name="arrow_back.png" width="35" height="35"/>
-        <image name="logo_hca_top.png" width="215" height="95"/>
+        <image name="splash_hca_logo.png" width="592" height="307"/>
     </resources>
 </document>

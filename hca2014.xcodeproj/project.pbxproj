@@ -75,6 +75,10 @@
 		36214F89183F6E0E001B0B63 /* RWPushMessageListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36214F87183F6E0E001B0B63 /* RWPushMessageListViewController.xib */; };
 		36214F98183F8206001B0B63 /* PushMessageGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 36214F97183F8206001B0B63 /* PushMessageGroup.m */; };
 		36214F9B183F8207001B0B63 /* PushMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 36214F9A183F8207001B0B63 /* PushMessage.m */; };
+		363109CD18EC13420015370A /* splash_hca_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 363109C918EC13420015370A /* splash_hca_logo.png */; };
+		363109CE18EC13420015370A /* splash_logo_justimagine_bottom.png in Resources */ = {isa = PBXBuildFile; fileRef = 363109CA18EC13420015370A /* splash_logo_justimagine_bottom.png */; };
+		363109CF18EC13420015370A /* splash_logo_justimagine_top.png in Resources */ = {isa = PBXBuildFile; fileRef = 363109CB18EC13420015370A /* splash_logo_justimagine_top.png */; };
+		363109D018EC13420015370A /* splash_redweb_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 363109CC18EC13420015370A /* splash_redweb_logo.png */; };
 		36354B02181E6C520046066E /* RWSwipeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36354B00181E6C520046066E /* RWSwipeViewController.m */; };
 		36354B03181E6C520046066E /* RWSwipeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36354B01181E6C520046066E /* RWSwipeViewController.xib */; };
 		3645BF6217CC939C00047159 /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = 3645BF6117CC939C00047159 /* Event.m */; };
@@ -145,11 +149,9 @@
 		36A29C1E18C0D2CD00E64B7A /* icon_program_bottombar.png in Resources */ = {isa = PBXBuildFile; fileRef = 36A29C0918C0D2CC00E64B7A /* icon_program_bottombar.png */; };
 		36A29C1F18C0D2CD00E64B7A /* icon_ticket_pink.png in Resources */ = {isa = PBXBuildFile; fileRef = 36A29C0A18C0D2CC00E64B7A /* icon_ticket_pink.png */; };
 		36A29C2018C0D2CD00E64B7A /* icon_youarehere.png in Resources */ = {isa = PBXBuildFile; fileRef = 36A29C0B18C0D2CC00E64B7A /* icon_youarehere.png */; };
-		36A29C2118C0D2CD00E64B7A /* logo_hca_big.png in Resources */ = {isa = PBXBuildFile; fileRef = 36A29C0C18C0D2CC00E64B7A /* logo_hca_big.png */; };
 		36A29C2218C0D2CD00E64B7A /* logo_hca_top.png in Resources */ = {isa = PBXBuildFile; fileRef = 36A29C0D18C0D2CC00E64B7A /* logo_hca_top.png */; };
 		36A29C2318C0D2CD00E64B7A /* music.png in Resources */ = {isa = PBXBuildFile; fileRef = 36A29C0E18C0D2CD00E64B7A /* music.png */; };
 		36A29C2418C0D2CD00E64B7A /* play.png in Resources */ = {isa = PBXBuildFile; fileRef = 36A29C0F18C0D2CD00E64B7A /* play.png */; };
-		36A29C2518C0D2CD00E64B7A /* splash.png in Resources */ = {isa = PBXBuildFile; fileRef = 36A29C1018C0D2CD00E64B7A /* splash.png */; };
 		36A29C2618C0D2CD00E64B7A /* spoken.png in Resources */ = {isa = PBXBuildFile; fileRef = 36A29C1118C0D2CD00E64B7A /* spoken.png */; };
 		36A29C2718C0D2CD00E64B7A /* tabbar.png in Resources */ = {isa = PBXBuildFile; fileRef = 36A29C1218C0D2CD00E64B7A /* tabbar.png */; };
 		36A29C2818C0D2CD00E64B7A /* theater.png in Resources */ = {isa = PBXBuildFile; fileRef = 36A29C1318C0D2CD00E64B7A /* theater.png */; };
@@ -382,6 +384,10 @@
 		36214F97183F8206001B0B63 /* PushMessageGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PushMessageGroup.m; sourceTree = "<group>"; };
 		36214F99183F8207001B0B63 /* PushMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PushMessage.h; sourceTree = "<group>"; };
 		36214F9A183F8207001B0B63 /* PushMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PushMessage.m; sourceTree = "<group>"; };
+		363109C918EC13420015370A /* splash_hca_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = splash_hca_logo.png; path = "Red Event App/Resources/splash_hca_logo.png"; sourceTree = "<group>"; };
+		363109CA18EC13420015370A /* splash_logo_justimagine_bottom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = splash_logo_justimagine_bottom.png; path = "Red Event App/Resources/splash_logo_justimagine_bottom.png"; sourceTree = "<group>"; };
+		363109CB18EC13420015370A /* splash_logo_justimagine_top.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = splash_logo_justimagine_top.png; path = "Red Event App/Resources/splash_logo_justimagine_top.png"; sourceTree = "<group>"; };
+		363109CC18EC13420015370A /* splash_redweb_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = splash_redweb_logo.png; path = "Red Event App/Resources/splash_redweb_logo.png"; sourceTree = "<group>"; };
 		36354AFF181E6C520046066E /* RWSwipeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWSwipeViewController.h; sourceTree = "<group>"; };
 		36354B00181E6C520046066E /* RWSwipeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWSwipeViewController.m; sourceTree = "<group>"; };
 		36354B01181E6C520046066E /* RWSwipeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RWSwipeViewController.xib; sourceTree = "<group>"; };
@@ -493,11 +499,9 @@
 		36A29C0918C0D2CC00E64B7A /* icon_program_bottombar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_program_bottombar.png; path = "Red Event App/Resources/icon_program_bottombar.png"; sourceTree = "<group>"; };
 		36A29C0A18C0D2CC00E64B7A /* icon_ticket_pink.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_ticket_pink.png; path = "Red Event App/Resources/icon_ticket_pink.png"; sourceTree = "<group>"; };
 		36A29C0B18C0D2CC00E64B7A /* icon_youarehere.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_youarehere.png; path = "Red Event App/Resources/icon_youarehere.png"; sourceTree = "<group>"; };
-		36A29C0C18C0D2CC00E64B7A /* logo_hca_big.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo_hca_big.png; path = "Red Event App/Resources/logo_hca_big.png"; sourceTree = "<group>"; };
 		36A29C0D18C0D2CC00E64B7A /* logo_hca_top.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo_hca_top.png; path = "Red Event App/Resources/logo_hca_top.png"; sourceTree = "<group>"; };
 		36A29C0E18C0D2CD00E64B7A /* music.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = music.png; path = "Red Event App/Resources/music.png"; sourceTree = "<group>"; };
 		36A29C0F18C0D2CD00E64B7A /* play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = play.png; path = "Red Event App/Resources/play.png"; sourceTree = "<group>"; };
-		36A29C1018C0D2CD00E64B7A /* splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = splash.png; path = "Red Event App/Resources/splash.png"; sourceTree = "<group>"; };
 		36A29C1118C0D2CD00E64B7A /* spoken.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = spoken.png; path = "Red Event App/Resources/spoken.png"; sourceTree = "<group>"; };
 		36A29C1218C0D2CD00E64B7A /* tabbar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tabbar.png; path = "Red Event App/Resources/tabbar.png"; sourceTree = "<group>"; };
 		36A29C1318C0D2CD00E64B7A /* theater.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = theater.png; path = "Red Event App/Resources/theater.png"; sourceTree = "<group>"; };
@@ -1389,6 +1393,10 @@
 		36AB7C1E17BCD17200316921 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				363109C918EC13420015370A /* splash_hca_logo.png */,
+				363109CA18EC13420015370A /* splash_logo_justimagine_bottom.png */,
+				363109CB18EC13420015370A /* splash_logo_justimagine_top.png */,
+				363109CC18EC13420015370A /* splash_redweb_logo.png */,
 				36A29BFF18C0D2CC00E64B7A /* arrow_back.png */,
 				36A29C0018C0D2CC00E64B7A /* arrow_left.png */,
 				36A29C0118C0D2CC00E64B7A /* arrow_right.png */,
@@ -1406,12 +1414,10 @@
 				36A29C2C18C0DA6700E64B7A /* icon_program_bottombar@2x.png */,
 				36A29C0A18C0D2CC00E64B7A /* icon_ticket_pink.png */,
 				36A29C0B18C0D2CC00E64B7A /* icon_youarehere.png */,
-				36A29C0C18C0D2CC00E64B7A /* logo_hca_big.png */,
 				36A29C0D18C0D2CC00E64B7A /* logo_hca_top.png */,
 				36A29C3618C4C75C00E64B7A /* MapInfoWindow.png */,
 				36A29C0E18C0D2CD00E64B7A /* music.png */,
 				36A29C0F18C0D2CD00E64B7A /* play.png */,
-				36A29C1018C0D2CD00E64B7A /* splash.png */,
 				36A29C1118C0D2CD00E64B7A /* spoken.png */,
 				36A29C1218C0D2CD00E64B7A /* tabbar.png */,
 				36A29C1318C0D2CD00E64B7A /* theater.png */,
@@ -1636,6 +1642,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = RW;
+				LastTestingUpgradeCheck = 0510;
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = redWEB;
 				TargetAttributes = {
@@ -1669,11 +1676,11 @@
 			files = (
 				36AB7BDF17BB7D0E00316921 /* InfoPlist.strings in Resources */,
 				36A29C1C18C0D2CD00E64B7A /* icon_map_pink.png in Resources */,
+				363109D018EC13420015370A /* splash_redweb_logo.png in Resources */,
 				36AB7BE717BB7D0E00316921 /* Default.png in Resources */,
 				36214F67183CBB98001B0B63 /* RWTableNavigatorViewController.xib in Resources */,
 				36AB7BE917BB7D0E00316921 /* Default@2x.png in Resources */,
 				36A29C2318C0D2CD00E64B7A /* music.png in Resources */,
-				36A29C2518C0D2CD00E64B7A /* splash.png in Resources */,
 				36AB7BEB17BB7D0E00316921 /* Default-568h@2x.png in Resources */,
 				36AB7C6217BE59F300316921 /* RWImageArticleListViewController.xib in Resources */,
 				36AB7C6717BE5BB800316921 /* RWImageArticleListCell.xib in Resources */,
@@ -1683,7 +1690,6 @@
 				36A29C1618C0D2CD00E64B7A /* arrow_right.png in Resources */,
 				36A97AD518560F940050EC8D /* RWImageUploaderViewController.xib in Resources */,
 				36A29C1518C0D2CD00E64B7A /* arrow_left.png in Resources */,
-				36A29C2118C0D2CD00E64B7A /* logo_hca_big.png in Resources */,
 				36A29C3718C4C75C00E64B7A /* MapInfoWindow.png in Resources */,
 				36A0B40B18474F4B007A6C78 /* RWWebViewController.xib in Resources */,
 				36A29C1818C0D2CD00E64B7A /* culture.png in Resources */,
@@ -1697,6 +1703,8 @@
 				36214F6218351A46001B0B63 /* RWInfoWindow.xib in Resources */,
 				36A0B3FB1844DCEE007A6C78 /* RWPushMessageSubscriberViewController.xib in Resources */,
 				36A29C2018C0D2CD00E64B7A /* icon_youarehere.png in Resources */,
+				363109CF18EC13420015370A /* splash_logo_justimagine_top.png in Resources */,
+				363109CE18EC13420015370A /* splash_logo_justimagine_bottom.png in Resources */,
 				36A79EE317C4F15D00AB211B /* RWArticleDetailViewController.xib in Resources */,
 				36214F89183F6E0E001B0B63 /* RWPushMessageListViewController.xib in Resources */,
 				36A97ADF185708A40050EC8D /* RWImageUploadBrowserListItem.xib in Resources */,
@@ -1705,6 +1713,7 @@
 				36A29C1D18C0D2CD00E64B7A /* icon_news_bottombar.png in Resources */,
 				36A727AC17C7992100374063 /* appearance.xml in Resources */,
 				361EA892180C0DE700441271 /* RWVenueDetailViewController.xib in Resources */,
+				363109CD18EC13420015370A /* splash_hca_logo.png in Resources */,
 				3683F227182BB64D00C22E46 /* RWBaseMapView.xib in Resources */,
 				36A29C1B18C0D2CD00E64B7A /* icon_map_bottombar.png in Resources */,
 				36214F5B1834CAD0001B0B63 /* GoogleMaps.bundle in Resources */,
