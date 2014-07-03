@@ -2,7 +2,47 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3b12e239-311e-4611-93d9-549bde44ed4e" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/icon_120.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/icon_58.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/icon_80.png" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/120x120.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/144x144.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/36x36.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/58x58.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/72x72.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/80x80.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Red Event App/120x120.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Red Event App/58x58.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Red Event App/80x80.png" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hca2014.xcodeproj/project.xcworkspace/xcuserdata/redwebpraktik.xcuserdatad/UserInterfaceState.xcuserstate" afterPath="$PROJECT_DIR$/hca2014.xcodeproj/project.xcworkspace/xcuserdata/redwebpraktik.xcuserdatad/UserInterfaceState.xcuserstate" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.name" afterPath="$PROJECT_DIR$/.idea/.name" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hca2014.xcodeproj/xcuserdata/redwebpraktik.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlist" afterPath="$PROJECT_DIR$/hca2014.xcodeproj/xcuserdata/redwebpraktik.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlist" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/NSString+RWString.m" afterPath="$PROJECT_DIR$/Red Event App/NSString+RWString.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/RWArticleDetailViewController.m" afterPath="$PROJECT_DIR$/Red Event App/RWArticleDetailViewController.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/RWArticleDetailViewController.xib" afterPath="$PROJECT_DIR$/Red Event App/RWArticleDetailViewController.xib" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/RWArticleVM.m" afterPath="$PROJECT_DIR$/Red Event App/RWArticleVM.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/RWDailySessionListViewController.h" afterPath="$PROJECT_DIR$/Red Event App/RWDailySessionListViewController.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/RWDailySessionListViewController.m" afterPath="$PROJECT_DIR$/Red Event App/RWDailySessionListViewController.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/RWDailySessionListViewController.xib" afterPath="$PROJECT_DIR$/Red Event App/RWDailySessionListViewController.xib" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/RWDbArticles.h" afterPath="$PROJECT_DIR$/Red Event App/RWDbArticles.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/RWDbArticles.m" afterPath="$PROJECT_DIR$/Red Event App/RWDbArticles.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/RWDbSessions.h" afterPath="$PROJECT_DIR$/Red Event App/RWDbSessions.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/RWDbSessions.m" afterPath="$PROJECT_DIR$/Red Event App/RWDbSessions.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/RWDbVenues.h" afterPath="$PROJECT_DIR$/Red Event App/RWDbVenues.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/RWDbVenues.m" afterPath="$PROJECT_DIR$/Red Event App/RWDbVenues.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/RWHcaSplitView.m" afterPath="$PROJECT_DIR$/Red Event App/RWHcaSplitView.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/RWImageArticleListCell.xib" afterPath="$PROJECT_DIR$/Red Event App/RWImageArticleListCell.xib" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/RWNewsticker.m" afterPath="$PROJECT_DIR$/Red Event App/RWNewsticker.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/RWServer.m" afterPath="$PROJECT_DIR$/Red Event App/RWServer.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/RWSessionVM.m" afterPath="$PROJECT_DIR$/Red Event App/RWSessionVM.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/RWStaticArticleController.m" afterPath="$PROJECT_DIR$/Red Event App/RWStaticArticleController.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/RWTabBar.m" afterPath="$PROJECT_DIR$/Red Event App/RWTabBar.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/Red Event App.iml" afterPath="$PROJECT_DIR$/.idea/Red Event App.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Red Event App/hca2014-Info.plist" afterPath="$PROJECT_DIR$/Red Event App/hca2014-Info.plist" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hca2014.xcodeproj/project.xcworkspace/xcshareddata/hca2014.xccheckout" afterPath="$PROJECT_DIR$/hca2014.xcodeproj/project.xcworkspace/xcshareddata/hca2014.xccheckout" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hca2014.xcodeproj/project.pbxproj" afterPath="$PROJECT_DIR$/hca2014.xcodeproj/project.pbxproj" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/xcode.xml" afterPath="$PROJECT_DIR$/.idea/xcode.xml" />
     </list>
     <ignored path="Red Event App.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -19,43 +59,27 @@
   <component name="DaemonCodeAnalyzer">
     <disable_hints />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="iphoneos_7725f4e43b4693e88fd4d12e0c38848526eac662" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="iphoneos_664718713b4a72283dff0605546ac99e9be925b1" />
   <component name="FavoritesManager">
     <favorites_list name="Red Event App" />
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="RWRedUploadFolderViewController.h" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Red Event App/RWRedUploadFolderViewController.h">
+      <file leaf-file-name="RWBaseListItem.h" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Red Event App/RWBaseListItem.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="28" selection-start="241" selection-end="241" vertical-scroll-proportion="0.0" vertical-offset="165" max-vertical-offset="405">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="660">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RWRedUploadPictureViewController.m" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Red Event App/RWRedUploadPictureViewController.m">
+      <file leaf-file-name="RWDailySessionListViewController.m" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Red Event App/RWDailySessionListViewController.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="66" column="4" selection-start="1733" selection-end="1733" vertical-scroll-proportion="-0.41379312" vertical-offset="1350" max-vertical-offset="3180">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RWRedUploadSessionFolderListItem.m" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Red Event App/RWRedUploadSessionFolderListItem.m">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="92" column="8" selection-start="3024" selection-end="3024" vertical-scroll-proportion="0.0" vertical-offset="1380" max-vertical-offset="1560">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RWRedUploadFolderViewController.m" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Red Event App/RWRedUploadFolderViewController.m">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="1" selection-start="942" selection-end="942" vertical-scroll-proportion="0.0" vertical-offset="262" max-vertical-offset="2940">
+            <state vertical-scroll-proportion="0.3631579" vertical-offset="738" max-vertical-offset="4500">
+              <caret line="80" column="153" selection-start-line="80" selection-start-column="153" selection-end-line="80" selection-end-column="153" />
               <folding />
             </state>
           </provider>
@@ -95,13 +119,17 @@
         <option value="$PROJECT_DIR$/Red Event App/RWRedUploadDataStore.m" />
         <option value="$PROJECT_DIR$/Red Event App/RWRedUploadFolderViewController.m" />
         <option value="$PROJECT_DIR$/Red Event App/RWRedUploadPictureViewController.m" />
+        <option value="$PROJECT_DIR$/Red Event App/RWDailySessionListViewController.h" />
+        <option value="$PROJECT_DIR$/Red Event App/RWDbVenues.m" />
+        <option value="$PROJECT_DIR$/Red Event App/RWDbSessions.m" />
+        <option value="$PROJECT_DIR$/Red Event App/RWDailySessionListViewController.m" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="y" value="22" />
     <option name="width" value="1920" />
-    <option name="height" value="980" />
+    <option name="height" value="978" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -133,7 +161,7 @@
     <option name="STATE" value="0" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
+    <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -145,7 +173,16 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Cidr.FilesView" />
+      <pane id="Cidr.FilesView">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Red App" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.CidrFilesViewHelper$1$1" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -154,7 +191,7 @@
               <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Red App" />
+              <option name="myItemId" value="hca2014" />
               <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -164,11 +201,11 @@
               <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Red App" />
+              <option name="myItemId" value="hca2014" />
               <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Supporting Files" />
+              <option name="myItemId" value="Products" />
               <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -178,11 +215,11 @@
               <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Red App" />
+              <option name="myItemId" value="hca2014" />
               <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Red App" />
+              <option name="myItemId" value="hca2014" />
               <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -192,11 +229,11 @@
               <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Red App" />
+              <option name="myItemId" value="hca2014" />
               <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Red App" />
+              <option name="myItemId" value="hca2014" />
               <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -210,11 +247,11 @@
               <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Red App" />
+              <option name="myItemId" value="hca2014" />
               <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Red App" />
+              <option name="myItemId" value="hca2014" />
               <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -222,11 +259,7 @@
               <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="RedUpload" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RedUploadPictureView" />
+              <option name="myItemId" value="Session" />
               <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -236,11 +269,11 @@
               <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Red App" />
+              <option name="myItemId" value="hca2014" />
               <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Red App" />
+              <option name="myItemId" value="hca2014" />
               <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -248,7 +281,11 @@
               <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="RedUpload" />
+              <option name="myItemId" value="Session" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DailySessionList" />
               <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -258,15 +295,15 @@
               <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Red App" />
+              <option name="myItemId" value="hca2014" />
               <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Red App" />
+              <option name="myItemId" value="hca2014" />
               <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Model" />
+              <option name="myItemId" value="Database" />
               <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -276,15 +313,19 @@
               <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Red App" />
+              <option name="myItemId" value="hca2014" />
               <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Red App" />
+              <option name="myItemId" value="hca2014" />
               <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Customization Files" />
+              <option name="myItemId" value="Database" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DBClasses" />
               <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -297,35 +338,42 @@
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.lastSelected" value="Errors" />
     <property name="recentsLimit" value="5" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Documents/ABSI/FC Randers" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/hca2014.xcodeproj" />
     <property name="FullScreen" value="false" />
     <property name="OBJC.PRESERVED_TARGET_SELECTION" value="Red App" />
     <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="RunManager" selected="Application.Red App Development">
-    <configuration default="true" type="AppleRunConfiguration" factoryName="Application" PROJECT_NAME="Red Event App" TARGET_NAME="Red Event App" CONFIG_NAME="Debug" PASS_PARENT_ENVS="FALSE" RUN_TARGET_PROJECT_NAME="Red Event App" RUN_TARGET_NAME="Red Event App" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
+    <configuration default="true" type="AppleRunConfiguration" factoryName="Application" PASS_PARENT_ENVS="FALSE" PROJECT_NAME="Red Event App" TARGET_NAME="Red Event App" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Red Event App" RUN_TARGET_NAME="Red Event App" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
+      <envs />
+      <EXTENSION ID="org.jetbrains.appcode.reveal.RevealRunConfigurationExtension">
+        <REVEAL_SETTINGS autoInject="false" autoInstall="true" askToEnableAutoInstall="true" />
+      </EXTENSION>
+      <method />
+    </configuration>
+    <configuration default="true" type="OCUnitRunConfiguration" factoryName="XCTest/Kiwi" PASS_PARENT_ENVS="FALSE" PROJECT_NAME="Red App" TARGET_NAME="Red AppTests" CONFIG_NAME="Debug" TEST_MODE="SUITE_TEST">
       <envs />
       <method />
     </configuration>
-    <configuration default="true" type="OCUnitRunConfiguration" factoryName="XCTest/Kiwi" PROJECT_NAME="Red App" TARGET_NAME="Red AppTests" CONFIG_NAME="Debug" PASS_PARENT_ENVS="FALSE" TEST_MODE="SUITE_TEST">
+    <configuration default="true" type="OCGoogleTestRunConfigurationType" factoryName="Google Test" PASS_PARENT_ENVS="FALSE" PROJECT_NAME="Red App" TARGET_NAME="Red App" CONFIG_NAME="Debug" TEST_MODE="SUITE_TEST">
       <envs />
       <method />
     </configuration>
-    <configuration default="true" type="OCGoogleTestRunConfigurationType" factoryName="Google Test" PROJECT_NAME="Red App" TARGET_NAME="Red App" CONFIG_NAME="Debug" PASS_PARENT_ENVS="FALSE" TEST_MODE="SUITE_TEST">
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="false" name="Red App Development" type="AppleRunConfiguration" factoryName="Application" SCHEME_NAME="Red App Development" PROJECT_NAME="Red App" TARGET_NAME="Red App" CONFIG_NAME="Debug" WORKING_DIR="" PASS_PARENT_ENVS="FALSE" RUN_TARGET_PROJECT_NAME="Red App" RUN_TARGET_NAME="Red App" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
+    <configuration default="false" name="Red App Development" type="AppleRunConfiguration" factoryName="Application" WORKING_DIR="" PASS_PARENT_ENVS="FALSE" PROJECT_NAME="hca2014" TARGET_NAME="hca2014" CONFIG_NAME="Debug" SCHEME_NAME="Red App Development" RUN_TARGET_PROJECT_NAME="hca2014" RUN_TARGET_NAME="hca2014" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
       <envs>
         <env name="XCodeColors" value="YES" />
       </envs>
-      <RunnerSettings RunnerId="AppRunner" />
-      <ConfigurationWrapper RunnerId="AppRunner" />
+      <EXTENSION ID="org.jetbrains.appcode.reveal.RevealRunConfigurationExtension">
+        <REVEAL_SETTINGS autoInject="false" autoInstall="true" askToEnableAutoInstall="true" />
+      </EXTENSION>
       <method />
     </configuration>
-    <configuration default="false" name="Red App Release" type="AppleRunConfiguration" factoryName="Application" SCHEME_NAME="Red App Release" PROJECT_NAME="Red App" TARGET_NAME="Red App" CONFIG_NAME="Release" WORKING_DIR="" PASS_PARENT_ENVS="FALSE" RUN_TARGET_PROJECT_NAME="Red App" RUN_TARGET_NAME="Red App" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
+    <configuration default="false" name="Red App Release" type="AppleRunConfiguration" factoryName="Application" WORKING_DIR="" PASS_PARENT_ENVS="FALSE" PROJECT_NAME="hca2014" TARGET_NAME="hca2014" CONFIG_NAME="Release" SCHEME_NAME="Red App Release" RUN_TARGET_PROJECT_NAME="hca2014" RUN_TARGET_NAME="hca2014" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
       <envs />
+      <EXTENSION ID="org.jetbrains.appcode.reveal.RevealRunConfigurationExtension">
+        <REVEAL_SETTINGS autoInject="false" autoInstall="true" askToEnableAutoInstall="true" />
+      </EXTENSION>
       <method />
     </configuration>
     <list size="2">
@@ -334,53 +382,51 @@
     </list>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
-  <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="false" SSL_PROTOCOLS="sslv3">
-    <option name="USER" value="" />
-    <option name="PASSWORD" value="" />
-    <option name="mySSHConnectionTimeout" value="30000" />
-    <option name="mySSHReadTimeout" value="30000" />
-    <option name="LAST_MERGED_REVISION" />
-    <option name="MERGE_DRY_RUN" value="false" />
-    <option name="MERGE_DIFF_USE_ANCESTRY" value="true" />
-    <option name="UPDATE_LOCK_ON_DEMAND" value="false" />
-    <option name="IGNORE_SPACES_IN_MERGE" value="false" />
-    <option name="CHECK_NESTED_FOR_QUICK_MERGE" value="false" />
-    <option name="IGNORE_SPACES_IN_ANNOTATE" value="true" />
-    <option name="SHOW_MERGE_SOURCES_IN_ANNOTATE" value="true" />
-    <option name="FORCE_UPDATE" value="false" />
-    <option name="IGNORE_EXTERNALS" value="false" />
-    <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
+  <component name="SvnConfiguration" myUseAcceleration="nothing">
+    <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="3b12e239-311e-4611-93d9-549bde44ed4e" name="Default" comment="" />
       <created>1378380743414</created>
+      <option name="number" value="Default" />
       <updated>1378380743414</updated>
     </task>
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1920" height="980" extended-state="6" />
-    <editor active="false" />
+    <frame x="0" y="22" width="1920" height="978" extended-state="6" />
+    <editor active="true" />
     <layout>
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32990867" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32505643" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39955848" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3363431" sideWeight="0.5002633" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32392776" sideWeight="0.4997367" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1796875" sideWeight="0.6717892" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39955848" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3289183" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18167457" sideWeight="0.6717892" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32821077" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32563257" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32453245" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -398,88 +444,78 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Red Event App/RWNavigationController.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.8513053" vertical-offset="750" max-vertical-offset="3180" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Red Event App/RWVolatileDataStores.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="0" selection-start="258" selection-end="295" vertical-scroll-proportion="0.22133939" vertical-offset="0" max-vertical-offset="881" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Red Event App/RWVolatileDataStores.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="63" selection-start="428" selection-end="428" vertical-scroll-proportion="0.2724177" vertical-offset="0" max-vertical-offset="881" />
+        <state vertical-scroll-proportion="-0.8513053" vertical-offset="750" max-vertical-offset="3180">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Red Event App/RWAppDelegate.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="93" column="87" selection-start="2788" selection-end="2788" vertical-scroll-proportion="0.69124424" vertical-offset="540" max-vertical-offset="5205" />
+        <state vertical-scroll-proportion="0.69124424" vertical-offset="540" max-vertical-offset="5205">
+          <caret line="93" column="87" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Red Event App/RWRedUploadDataStore.h">
+    <entry file="file://$PROJECT_DIR$/Red Event App/RWDbSchemas.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="62" selection-start="473" selection-end="473" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="405" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Red Event App/RWRedUploadServerOtherFolder.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="881" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Red Event App/RWRedUploadServerSessionFolder.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="19" selection-start="528" selection-end="528" vertical-scroll-proportion="0.30646992" vertical-offset="0" max-vertical-offset="881" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Red Event App/RWRedUploadDataStore.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="155" selection-start="1097" selection-end="1097" vertical-scroll-proportion="0.323496" vertical-offset="0" max-vertical-offset="881" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Red Event App/RWRedUploadPictureViewController.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="4" selection-start="7" selection-end="7" vertical-scroll-proportion="0.017026106" vertical-offset="0" max-vertical-offset="881" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Red Event App/RWRedUploadSessionFolderListItem.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="57" selection-start="564" selection-end="564" vertical-scroll-proportion="0.2724177" vertical-offset="0" max-vertical-offset="881" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Red Event App/RWRedUploadServerOtherFolder.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="881" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Red Event App/RWRedUploadServerSessionFolder.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="0" selection-start="514" selection-end="532" vertical-scroll-proportion="0.35754824" vertical-offset="0" max-vertical-offset="881" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Red Event App/RWRedUploadFolderViewController.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="28" selection-start="241" selection-end="241" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="390">
+        <state vertical-scroll-proportion="0.33333334" vertical-offset="1205" max-vertical-offset="2445">
+          <caret line="93" column="14" selection-start-line="93" selection-start-column="14" selection-end-line="93" selection-end-column="14" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Red Event App/RWRedUploadPictureViewController.m">
+    <entry file="file://$PROJECT_DIR$/Red Event App/RWDbHelper.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="66" column="4" selection-start="1733" selection-end="1733" vertical-scroll-proportion="-0.41379312" vertical-offset="1350" max-vertical-offset="3180">
+        <state vertical-scroll-proportion="0.81578946" vertical-offset="90" max-vertical-offset="660">
+          <caret line="37" column="25" selection-start-line="37" selection-start-column="25" selection-end-line="37" selection-end-column="25" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Red Event App/RWRedUploadSessionFolderListItem.m">
+    <entry file="file://$PROJECT_DIR$/Red Event App/RWDbVenues.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="92" column="8" selection-start="3024" selection-end="3024" vertical-scroll-proportion="0.0" vertical-offset="1380" max-vertical-offset="1560">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1230" max-vertical-offset="1920">
+          <caret line="120" column="111" selection-start-line="120" selection-start-column="111" selection-end-line="120" selection-end-column="111" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Red Event App/RWRedUploadFolderViewController.m">
+    <entry file="file://$PROJECT_DIR$/Red Event App/RWDailySessionListViewController.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="1" selection-start="942" selection-end="942" vertical-scroll-proportion="0.0" vertical-offset="262" max-vertical-offset="2940">
+        <state vertical-scroll-proportion="0.47368422" vertical-offset="0" max-vertical-offset="570">
+          <caret line="21" column="57" selection-start-line="21" selection-start-column="57" selection-end-line="21" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Red Event App/RWDbSessions.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8947368" vertical-offset="2850" max-vertical-offset="3495">
+          <caret line="232" column="5" selection-start-line="232" selection-start-column="5" selection-end-line="232" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Red Event App/RWDbHelper.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.36842105" vertical-offset="735" max-vertical-offset="1305">
+          <caret line="66" column="20" selection-start-line="66" selection-start-column="20" selection-end-line="66" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Red Event App/RWBaseListItem.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="660">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Red Event App/RWDailySessionListViewController.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3631579" vertical-offset="738" max-vertical-offset="4500">
+          <caret line="80" column="153" selection-start-line="80" selection-start-column="153" selection-end-line="80" selection-end-column="153" />
           <folding />
         </state>
       </provider>

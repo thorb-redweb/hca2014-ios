@@ -38,6 +38,8 @@
 	
 	RWFilterTableController *_typeTableController;
 	RWFilterTableController *_venueTableController;
+    UITextField *_searchField;
+    NSString *_searchString;
 	
 	NSString *standardTypeFilterTitle;
 	NSString *standardVenueFilterTitle;
@@ -47,8 +49,9 @@
 - (id)initWithPage:(RWXmlNode *)page {
     self = [super initWithNibName:@"RWDailySessionListViewController" bundle:nil page:page];
     if (self) {
-		standardTypeFilterTitle = @"Sorter på type";
-		standardVenueFilterTitle = @"Sorter på sted";
+		standardTypeFilterTitle = @"Type";
+		standardVenueFilterTitle = @"Sted";
+        _searchString = @"";
     }
     return self;
 }
@@ -72,10 +75,10 @@
 	NSArray *typeSource = [[NSArray alloc] initWithObjects:@"Alle", @"Underholdning og teater", @"Leg og læring", @"Musik", @"Kulturformidling", @"Kunst og kultur", @"Spoken Word",nil];
 	_typeTableController = [[RWFilterTableController alloc] initWithDatasource:typeSource defaultName:@"Alle"];
 
-	NSArray *venueSource = [_db.Venues getNamesAndInsertAtFirstPosition:@"Alle"];
+	NSArray *venueSource = [_db.Venues getActiveNamesAndInsertStringAtFirstPosition:@"Alle"];
 	_venueTableController = [[RWFilterTableController alloc] initWithDatasource:venueSource defaultName:@"Alle"];
 
-    _listDate = [_db.Sessions getStartDateTimeWithSessionByDateTime:[NSDate date] venueid:[self filterVenueId] type:_typeTableController.getSelectedName];
+    _listDate = [_db.Sessions getStartDateTimeWithSessionByDateTime:[NSDate date] venueid:[self filterVenueId] type:_typeTableController.getSelectedName searchString:_searchString];
 	
 	if(_listDate == nil){
 		_listDate = [NSDate date];
@@ -104,6 +107,7 @@
 
     [helper.button setButtonStyle:_btnTypePicker];
     [helper.button setButtonStyle:_btnVenuePicker];
+    [helper.button setButtonStyle:_btnSearch];
 	
 	[helper setScrollBounces:_lstTableView localName:[RWLOOK SCROLLBOUNCES] globalName:[RWLOOK SCROLLBOUNCES]];
 }
@@ -115,12 +119,12 @@
 }
 
 - (void)upDateSessionList {	
-    dataSource = [_db.Sessions getVMListFilteredByDate:_listDate venueid:[self filterVenueId] type:_typeTableController.getSelectedName];
+    dataSource = [_db.Sessions getVMListFilteredByDate:_listDate venueid:[self filterVenueId] type:_typeTableController.getSelectedName searchString:_searchString];
 	if(dataSource.count == 0){
 		NSDate *dateWithSession;
-		dateWithSession = [_db.Sessions getNextDateTimeByDateTime:[_listDate endOfDay] venueid:[self filterVenueId] type:_typeTableController.getSelectedName];
+		dateWithSession = [_db.Sessions getNextDateTimeByDateTime:[_listDate endOfDay] venueid:[self filterVenueId] type:_typeTableController.getSelectedName searchString:_searchString];
 		if(dateWithSession == NULL){
-			dateWithSession = [_db.Sessions getPreviousDateTimeByDateTime:[_listDate endOfDay] venueid:[self filterVenueId] type:_typeTableController.getSelectedName];
+			dateWithSession = [_db.Sessions getPreviousDateTimeByDateTime:[_listDate endOfDay] venueid:[self filterVenueId] type:_typeTableController.getSelectedName searchString:_searchString];
 		}
 		if (dateWithSession != NULL) {
 			_listDate = dateWithSession;
@@ -156,13 +160,13 @@
 }
 
 - (BOOL)isYesterdayBeforeFirstSession {
-    NSDate *firstSessionDate = [[_db.Sessions getFirstDateTimeByVenue:[self filterVenueId] type:_typeTableController.getSelectedName] roundToDate];
+    NSDate *firstSessionDate = [[_db.Sessions getFirstDateTimeByVenue:[self filterVenueId] type:_typeTableController.getSelectedName searchString:_searchString] roundToDate];
     NSDate *yesterDay = [[_listDate dateByAddingTimeInterval:-86400] roundToDate];
     return [firstSessionDate compare:yesterDay] == NSOrderedDescending;
 }
 
 - (BOOL)isTomorrowAfterLastSession {
-    NSDate *lastSessionDate = [[_db.Sessions getLastDateTimeByVenue:[self filterVenueId] type:_typeTableController.getSelectedName] roundToDate];
+    NSDate *lastSessionDate = [[_db.Sessions getLastDateTimeByVenue:[self filterVenueId] type:_typeTableController.getSelectedName searchString:_searchString] roundToDate];
     NSDate *tomorrowDay = [[_listDate dateByAddingTimeInterval:86400] roundToDate];
     return [lastSessionDate compare:tomorrowDay] == NSOrderedAscending;
 }
@@ -177,17 +181,17 @@
 }
 
 - (IBAction)previousDay:(id)sender {
-    _listDate = [_db.Sessions getPreviousDateTimeByDateTime:[_listDate roundToDate] venueid:[self filterVenueId] type:_typeTableController.getSelectedName];
+    _listDate = [_db.Sessions getPreviousDateTimeByDateTime:[_listDate roundToDate] venueid:[self filterVenueId] type:_typeTableController.getSelectedName searchString:_searchString];
     [self upDateSessionList];
 }
 
 - (IBAction)nextDay:(id)sender {
-	_listDate = [_db.Sessions getNextDateTimeByDateTime:[_listDate endOfDay] venueid:[self filterVenueId] type:_typeTableController.getSelectedName];
+	_listDate = [_db.Sessions getNextDateTimeByDateTime:[_listDate endOfDay] venueid:[self filterVenueId] type:_typeTableController.getSelectedName searchString:_searchString];
     [self upDateSessionList];
 }
 
 - (IBAction)openTypePickingView:(id)sender {
-	UIAlertView *typePicker = [[UIAlertView alloc] initWithTitle:@"Sorter på type" message:@"" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"OK", nil];
+	UIAlertView *typePicker = [[UIAlertView alloc] initWithTitle:@"Sorter på type" message:@"" delegate:self cancelButtonTitle:@"Fortryd" otherButtonTitles:@"OK", nil];
 	typePicker.tag = 1;
 	
 	UITableView *tableview = [[UITableView alloc] initWithFrame:CGRectMake(15, 0, 280, 290) style:UITableViewStylePlain];
@@ -200,7 +204,7 @@
 }
 
 - (IBAction)openVenuePickingView:(id)sender {
-    UIAlertView *venuePicker = [[UIAlertView alloc] initWithTitle:@"Sorter på sted" message:@"" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"OK", nil];
+    UIAlertView *venuePicker = [[UIAlertView alloc] initWithTitle:@"Sorter på sted" message:@"" delegate:self cancelButtonTitle:@"Fortryd" otherButtonTitles:@"OK", nil];
 	venuePicker.tag = 2;
 	
 	UITableView *tableview = [[UITableView alloc] initWithFrame:CGRectMake(15, 0, 280, 290) style:UITableViewStylePlain];
@@ -210,6 +214,18 @@
 	
 	[venuePicker setValue:tableview forKey:@"accessoryView"];
 	[venuePicker show];
+}
+
+- (IBAction)openSearchView:(id)sender{
+	UIAlertView *searchView = [[UIAlertView alloc] initWithTitle:@"Sorter på event" message:@"" delegate:self cancelButtonTitle:@"Fortryd" otherButtonTitles:@"OK", nil];
+	searchView.tag = 3;
+
+	if(_searchField == nil){
+		_searchField = [[UITextField alloc] initWithFrame:CGRectMake(15, 0, 200, 40)];
+	}
+	
+    [searchView setValue:_searchField forKey:@"accessoryView"];
+    [searchView show];
 }
 
 -(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
@@ -227,6 +243,9 @@
 		}
 		[_btnVenuePicker setTitle:venue forState:UIControlStateNormal];
 	}
+    else if(alertView.tag == 3){
+        _searchString = _searchField.text;
+    }
 	[self upDateSessionList];
 }
 

@@ -34,9 +34,14 @@
 		}
 		
 		
+		UIFont *tabBarFont = [UIFont systemFontOfSize:8.0f];
+		NSDictionary *titleTextAttributes = [NSDictionary dictionaryWithObjectsAndKeys:
+											 tabBarFont, NSFontAttributeName, nil];
+
         if (!([tabname isEqual:@""]) || tabimage != nil) {
 			tabimage = [tabimage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
             UITabBarItem *btnPage = [[UITabBarItem alloc] initWithTitle:tabname image:tabimage selectedImage:tabimage];
+			[btnPage setTitleTextAttributes:titleTextAttributes forState:UIControlStateNormal];
 			[btnPage setTag:i];
 			[_tabpages addObject:page];
             [items addObject:btnPage];

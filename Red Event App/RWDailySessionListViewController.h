@@ -19,6 +19,7 @@
 @property(weak, nonatomic) IBOutlet UIButton *btnNext;
 @property(weak, nonatomic) IBOutlet UIButton *btnTypePicker;
 @property(weak, nonatomic) IBOutlet UIButton *btnVenuePicker;
+@property (weak, nonatomic) IBOutlet UIButton *btnSearch;
 @property(weak, nonatomic) IBOutlet UITableView *lstTableView;
 
 - (id)initWithPage:(RWXmlNode *)page;
@@ -29,5 +30,6 @@
 
 - (IBAction)openTypePickingView:(id)sender;
 - (IBAction)openVenuePickingView:(id)sender;
+- (IBAction)openSearchView:(id)sender;
 
 @end

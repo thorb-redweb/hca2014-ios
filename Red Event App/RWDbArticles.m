@@ -95,8 +95,15 @@
     return vmList;
 }
 
-- (NSArray *)getVMListOfLastThree:(int)catid{
-	NSPredicate *predicate = [NSPredicate predicateWithFormat:@"%K == %d", [RWDbSchemas ART_CATID], catid];
+- (NSArray *)getVMListOfLastThree:(NSArray *)catids{
+	NSString *stringPredicate = [NSString stringWithFormat:@"%@ == '%d'", [RWDbSchemas ART_CATID], [catids[0] intValue]];
+	for (int i = 1; i < catids.count; i++) {
+		stringPredicate = [stringPredicate stringByAppendingFormat:@" OR %@ == '%d'", [RWDbSchemas ART_CATID], [catids[i] intValue]];
+	}
+	NSPredicate *catpredicate = [NSPredicate predicateWithFormat:stringPredicate];
+	NSPredicate *datepredicate = [NSPredicate predicateWithFormat:@"%K <= %@", [RWDbSchemas ART_PUBLISHDATE], [NSDate date]];
+	NSArray *subPredicats = [[NSArray alloc] initWithObjects:catpredicate, datepredicate, nil];
+	NSPredicate *predicate = [NSCompoundPredicate andPredicateWithSubpredicates:subPredicats];
 	
     NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:[RWDbSchemas ART_PUBLISHDATE] ascending:NO];
     NSArray *sortDescriptors = [[NSArray alloc] initWithObjects:sortDescriptor, nil];

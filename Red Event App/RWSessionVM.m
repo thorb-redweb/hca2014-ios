@@ -122,7 +122,9 @@
 
 - (NSURL *)imageUrl{
 	NSMutableString *urlString = [[NSMutableString alloc] initWithString:imagesRootPath];
-    [urlString appendString:[self imagePath]];
+	NSString *imagePath = [[self imagePath] stringByReplacingOccurrencesOfString:@" " withString:@"%20"];
+	
+    [urlString appendString:imagePath];
 	return [NSURL URLWithString:urlString];
 }
 

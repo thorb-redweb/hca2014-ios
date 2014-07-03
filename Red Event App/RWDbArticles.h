@@ -24,5 +24,5 @@
 - (NSArray *)getVMListFromCatId:(int)catid;
 - (NSArray *)getVMListFromCatIds:(NSArray *)catids;
 
-- (NSArray *)getVMListOfLastThree:(int)catid;
+- (NSArray *)getVMListOfLastThree:(NSArray *)catid;
 @end

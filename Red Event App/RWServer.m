@@ -40,7 +40,7 @@
 
     RWHandler_DumpServer *handler = [[RWHandler_DumpServer alloc] init];
     handler.delegate = self;
-	NSURL *dumpFileUrl = [_dataFilesFolderUrl URLByAppendingPathComponent:@"getDump.php"];
+	NSURL *dumpFileUrl = [_dataFilesFolderUrl URLByAppendingPathComponent:@"coreData.txt"];
     [handler startDownloadWithFromUrl:dumpFileUrl];
 
     DDLogVerbose(@"dumpServerEnd");

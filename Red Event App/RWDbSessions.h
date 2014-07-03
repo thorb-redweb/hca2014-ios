@@ -29,16 +29,17 @@
 
 - (NSArray *)getNextThreeVMs:(NSDate *)datetime;
 
-- (NSArray *)getVMListFilteredByDate:(NSDate *)date venueid:(int)venueid type:(NSString *)type;
+- (NSArray *)getVMListFilteredByDate:(NSDate *)date venueid:(int)venueid type:(NSString *)type searchString:(NSString *)searchString;
 
-- (NSDate *)getStartDateTimeWithSessionByDateTime:(NSDate *)datetime venueid:(int)venueid type:(NSString *)type;
+- (NSDate *)getStartDateTimeWithSessionByDateTime:(NSDate *)datetime venueid:(int)venueid type:(NSString *)type searchString:(NSString *)searchString;
 
-- (NSDate *)getNextDateTimeByDateTime:(NSDate *)datetime venueid:(int)venueid type:(NSString *)type;
+- (NSDate *)getNextDateTimeByDateTime:(NSDate *)datetime venueid:(int)venueid type:(NSString *)type searchString:(UITextField *)searchString;
 
-- (NSDate *)getPreviousDateTimeByDateTime:(NSDate *)datetime venueid:(int)venueid type:(NSString *)type;
+- (NSDate *)getPreviousDateTimeByDateTime:(NSDate *)datetime venueid:(int)venueid type:(NSString *)type searchString:(NSString *)searchString;
 
-- (NSDate *)getLastDateTimeByVenue:(int)venueid type:(NSString *)type;
+- (NSDate *)getLastDateTimeByVenue:(int)venueid type:(NSString *)type searchString:(NSString *)searchString;
 
-- (NSDate *)getFirstDateTimeByVenue:(int)venueid type:(NSString *)type;
+- (NSDate *)getFirstDateTimeByVenue:(int)venueid type:(NSString *)type searchString:(NSString *)searchString;
 
+- (NSArray *)getActiveVenueIds;
 @end

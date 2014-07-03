@@ -27,5 +27,5 @@
 
 - (NSArray *)getVMList;
 
-- (NSArray *)getNamesAndInsertAtFirstPosition:(NSString *)head;
+- (NSArray *)getActiveNamesAndInsertStringAtFirstPosition:(NSString *)stringToInsert;
 @end

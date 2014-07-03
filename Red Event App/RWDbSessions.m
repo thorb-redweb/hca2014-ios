@@ -13,6 +13,7 @@
 #import "NSDate+RWDate.h"
 #import "RWSessionVM.h"
 #import "RWXMLStore.h"
+#import "RWAppDelegate.h"
 
 
 @implementation RWDbSessions {
@@ -104,31 +105,31 @@
     return vmList;
 }
 
-- (NSArray *)getVMListFilteredByDate:(NSDate *)date venueid:(int)venueid type:(NSString *)type {
+- (NSArray *)getVMListFilteredByDate:(NSDate *)date venueid:(int)venueid type:(NSString *)type searchString:(NSString *)searchString {
     NSDate *startOfDay = [date roundToDate];
     NSDate *endOfDay = [date endOfDay];
-
-    NSPredicate *predicate;
-    if (venueid >= 0  && ![type isEqualToString:@"Alle"]) {
-        predicate = [NSPredicate predicateWithFormat:@"%K >= %@ AND %K <= %@ AND %K = %d AND %K = %@ AND %K != nil AND %K != nil",
-                                                     [RWDbSchemas SES_STARTDATETIME], startOfDay, [RWDbSchemas SES_STARTDATETIME], endOfDay,
-                                                     [RWDbSchemas SES_VENUEID], venueid, [RWDbSchemas SES_TYPE], type, [RWDbSchemas SES_EVENT], [RWDbSchemas SES_VENUE]];
+    
+    NSMutableArray *subPredicates = [NSMutableArray new];
+    NSPredicate *datePredicate = [NSPredicate predicateWithFormat:@"%K >= %@ AND %K <= %@ AND %K != nil AND %K != nil",
+                                                                  [RWDbSchemas SES_STARTDATETIME], startOfDay, [RWDbSchemas SES_STARTDATETIME], endOfDay,
+                                                                  [RWDbSchemas SES_EVENT], [RWDbSchemas SES_VENUE]];
+    [subPredicates addObject:datePredicate];
+    if(venueid > 0){
+        NSPredicate *venuePredicate = [NSPredicate predicateWithFormat:@"%K = %d",
+                                                                       [RWDbSchemas SES_VENUEID], venueid];
+        [subPredicates addObject:venuePredicate];
     }
-    else if (venueid >= 0) {
-        predicate = [NSPredicate predicateWithFormat:@"%K >= %@ AND %K <= %@ AND %K = %d AND %K != nil AND %K != nil",
-					 [RWDbSchemas SES_STARTDATETIME], startOfDay, [RWDbSchemas SES_STARTDATETIME], endOfDay,
-					 [RWDbSchemas SES_VENUEID], venueid, [RWDbSchemas SES_EVENT], [RWDbSchemas SES_VENUE]];
+    if(![type isEqualToString:@"Alle"]){
+        NSPredicate *typePredicate = [NSPredicate predicateWithFormat:@"%K = %@",
+                                                                      [RWDbSchemas SES_TYPE], type];
+        [subPredicates addObject:typePredicate];
     }
-    else if (![type isEqualToString:@"Alle"]) {
-			predicate = [NSPredicate predicateWithFormat:@"%K >= %@ AND %K <= %@ AND %K = %@ AND %K != nil AND %K != nil",
-						 [RWDbSchemas SES_STARTDATETIME], startOfDay, [RWDbSchemas SES_STARTDATETIME], endOfDay,
-						 [RWDbSchemas SES_TYPE], type, [RWDbSchemas SES_EVENT], [RWDbSchemas SES_VENUE]];
-	}
-    else {
-        predicate = [NSPredicate predicateWithFormat:@"%K >= %@ AND %K <= %@ AND %K != nil AND %K != nil",
-                                                     [RWDbSchemas SES_STARTDATETIME], startOfDay, [RWDbSchemas SES_STARTDATETIME], endOfDay,
-                                                     [RWDbSchemas SES_EVENT], [RWDbSchemas SES_VENUE]];
+    if(![searchString isEqualToString:@""]){
+        NSPredicate *searchPredicate = [NSPredicate predicateWithFormat:@"%K contains %@",
+                                                                        [RWDbSchemas SES_TITLE], searchString];
+        [subPredicates addObject:searchPredicate];
     }
+	NSPredicate *predicate = [NSCompoundPredicate andPredicateWithSubpredicates:subPredicates];
 
     NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:[RWDbSchemas SES_STARTDATETIME] ascending:YES];
     NSArray *sortDescriptors = [[NSArray alloc] initWithObjects:sortDescriptor, nil];
@@ -146,113 +147,63 @@
 
 #pragma Information Functions
 
-- (NSDate *)getStartDateTimeWithSessionByDateTime:(NSDate *)datetime venueid:(int)venueid type:(NSString *)type {
-	NSString *stringPredicate = [NSString stringWithFormat:@"%@ => CAST(%f, \"NSDate\") AND %@ != nil AND %@ != nil",
-								 [RWDbSchemas SES_STARTDATETIME], datetime.timeIntervalSinceReferenceDate, [RWDbSchemas SES_EVENT], [RWDbSchemas SES_VENUE]];
-    if (venueid >= 0) {
-		stringPredicate = [NSString stringWithFormat:@"%@ == %d AND %@",
-						   [RWDbSchemas SES_VENUEID], venueid, stringPredicate];
-    }
-    if (![type isEqualToString:@"Alle"]) {
-		stringPredicate = [NSString stringWithFormat:@"%@ == '%@' AND %@",
-						   [RWDbSchemas SES_TYPE], type, stringPredicate];
-    }
-	NSPredicate *predicate = [NSPredicate predicateWithFormat:stringPredicate];
-	NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:[RWDbSchemas SES_STARTDATETIME] ascending:YES];
-    NSArray *sortDescriptors = [[NSArray alloc] initWithObjects:sortDescriptor, nil];
-	
-    NSArray *result = [_dbHelper getFromDatabase:[RWDbSchemas SES_TABLENAME] predicate:predicate sort:sortDescriptors fetchLimit:1];
-    if (result.count > 0) {
-        Session *session = [result objectAtIndex:0];
-        return session.startdatetime;
-    } else {
-		return [self getPreviousDateTimeByDateTime:datetime venueid:venueid type:type];
-	}
-}
-
-- (NSDate *)getNextDateTimeByDateTime:(NSDate *)datetime venueid:(int)venueid type:(NSString *)type {
-	NSString *stringPredicate = [NSString stringWithFormat:@"%@ > CAST(%f, \"NSDate\") AND %@ != nil AND %@ != nil",
-	[RWDbSchemas SES_STARTDATETIME], datetime.timeIntervalSinceReferenceDate, [RWDbSchemas SES_EVENT], [RWDbSchemas SES_VENUE]];
-    if (venueid >= 0) {
-		stringPredicate = [NSString stringWithFormat:@"%@ == %d AND %@",
-						   [RWDbSchemas SES_VENUEID], venueid, stringPredicate];
-    }
-    if (![type isEqualToString:@"Alle"]) {
-		stringPredicate = [NSString stringWithFormat:@"%@ == '%@' AND %@",
-						   [RWDbSchemas SES_TYPE], type, stringPredicate];
-    }
-	NSPredicate *predicate = [NSPredicate predicateWithFormat:stringPredicate];
-	NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:[RWDbSchemas SES_STARTDATETIME] ascending:YES];
-    NSArray *sortDescriptors = [[NSArray alloc] initWithObjects:sortDescriptor, nil];
-	
-    NSArray *result = [_dbHelper getFromDatabase:[RWDbSchemas SES_TABLENAME] predicate:predicate sort:sortDescriptors fetchLimit:1];
-    if (result.count > 0) {
-        Session *session = [result objectAtIndex:0];
-        return session.startdatetime;
-    }
-    return NULL;
-}
-
-- (NSDate *)getPreviousDateTimeByDateTime:(NSDate *)datetime venueid:(int)venueid type:(NSString *)type {
-	NSString *stringPredicate = [NSString stringWithFormat:@"%@ < CAST(%f, \"NSDate\") AND %@ != nil AND %@ != nil",
-								 [RWDbSchemas SES_STARTDATETIME], datetime.timeIntervalSinceReferenceDate, [RWDbSchemas SES_EVENT], [RWDbSchemas SES_VENUE]];
-    if (venueid >= 0) {
-		stringPredicate = [NSString stringWithFormat:@"%@ == %d AND %@",
-						   [RWDbSchemas SES_VENUEID], venueid, stringPredicate];
-    }
-    if (![type isEqualToString:@"Alle"]) {
-		stringPredicate = [NSString stringWithFormat:@"%@ == '%@' AND %@",
-						   [RWDbSchemas SES_TYPE], type, stringPredicate];
-    }
-	NSPredicate *predicate = [NSPredicate predicateWithFormat:stringPredicate];
-	NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:[RWDbSchemas SES_STARTDATETIME] ascending:NO];
-    NSArray *sortDescriptors = [[NSArray alloc] initWithObjects:sortDescriptor, nil];
-	
-    NSArray *result = [_dbHelper getFromDatabase:[RWDbSchemas SES_TABLENAME] predicate:predicate sort:sortDescriptors fetchLimit:1];
-    if (result.count > 0) {
-        Session *session = [result objectAtIndex:0];
-        return session.startdatetime;
-    }
-    return NULL;
-}
-
-- (NSDate *)getLastDateTimeByVenue:(int)venueid type:(NSString *)type {
-	NSString *stringPredicate = [NSString stringWithFormat:@"%@ != nil AND %@ != nil",
-								 [RWDbSchemas SES_EVENT], [RWDbSchemas SES_VENUE]];
-    if (venueid >= 0) {
-		stringPredicate = [NSString stringWithFormat:@"%@ == %d AND %@",
-						   [RWDbSchemas SES_VENUEID], venueid, stringPredicate];
-    }
-    if (![type isEqualToString:@"Alle"]) {
-		stringPredicate = [NSString stringWithFormat:@"%@ == '%@' AND %@",
-						   [RWDbSchemas SES_TYPE], type, stringPredicate];
-    }
-	NSPredicate *predicate = [NSPredicate predicateWithFormat:stringPredicate];
-
-    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:[RWDbSchemas SES_STARTDATETIME] ascending:NO];
-    NSArray *sortDescriptors = [[NSArray alloc] initWithObjects:sortDescriptor, nil];
-
-    NSArray *result = [_dbHelper getFromDatabase:[RWDbSchemas SES_TABLENAME] predicate:predicate sort:sortDescriptors fetchLimit:1];
-    if (result.count > 0) {
-        Session *session = [result objectAtIndex:0];
-        return session.startdatetime;
-    }
-    return NULL;
-}
-
-- (NSDate *)getFirstDateTimeByVenue:(int)venueid type:(NSString *)type {
-	NSString *stringPredicate = [NSString stringWithFormat:@"%@ != nil AND %@ != nil",
-								   [RWDbSchemas SES_EVENT], [RWDbSchemas SES_VENUE]];
-    if (venueid >= 0) {
-		stringPredicate = [NSString stringWithFormat:@"%@ == %d AND %@",
-					 [RWDbSchemas SES_VENUEID], venueid, stringPredicate];
-    }
-    if (![type isEqualToString:@"Alle"]) {
-		stringPredicate = [NSString stringWithFormat:@"%@ == '%@' AND %@",
-						   [RWDbSchemas SES_TYPE], type, stringPredicate];
-    }
-	NSPredicate *predicate = [NSPredicate predicateWithFormat:stringPredicate];
+- (NSDate *)getStartDateTimeWithSessionByDateTime:(NSDate *)datetime venueid:(int)venueid type:(NSString *)type searchString:(NSString *)searchString {
+    NSPredicate *datePredicate = [NSPredicate predicateWithFormat:@"%K >= %@",
+                                                                  [RWDbSchemas SES_STARTDATETIME], datetime];
     NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:[RWDbSchemas SES_STARTDATETIME] ascending:YES];
+    return [self getDateTimeOfFirstMatchingSessionWithDatePredicate:datePredicate sortDescriptor:sortDescriptor venueid:venueid type:type searchString:searchString];
+}
+
+- (NSDate *)getNextDateTimeByDateTime:(NSDate *)datetime venueid:(int)venueid type:(NSString *)type searchString:(NSString *)searchString {
+    NSPredicate *datePredicate = [NSPredicate predicateWithFormat:@"%K > %@",
+                                                                  [RWDbSchemas SES_STARTDATETIME], datetime];
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:[RWDbSchemas SES_STARTDATETIME] ascending:YES];
+    return [self getDateTimeOfFirstMatchingSessionWithDatePredicate:datePredicate sortDescriptor:sortDescriptor venueid:venueid type:type searchString:searchString];
+}
+
+- (NSDate *)getPreviousDateTimeByDateTime:(NSDate *)datetime venueid:(int)venueid type:(NSString *)type searchString:(NSString *)searchString {
+    NSPredicate *datePredicate = [NSPredicate predicateWithFormat:@"%K < %@",
+                                                                  [RWDbSchemas SES_STARTDATETIME], datetime];
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:[RWDbSchemas SES_STARTDATETIME] ascending:NO];
+    return [self getDateTimeOfFirstMatchingSessionWithDatePredicate:datePredicate sortDescriptor:sortDescriptor venueid:venueid type:type searchString:searchString];
+}
+
+- (NSDate *)getLastDateTimeByVenue:(int)venueid type:(NSString *)type searchString:(NSString *)searchString {
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:[RWDbSchemas SES_STARTDATETIME] ascending:NO];
+    return [self getDateTimeOfFirstMatchingSessionWithDatePredicate:nil sortDescriptor:sortDescriptor venueid:venueid type:type searchString:searchString];
+}
+
+- (NSDate *)getFirstDateTimeByVenue:(int)venueid type:(NSString *)type searchString:(NSString *)searchString {
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:[RWDbSchemas SES_STARTDATETIME] ascending:YES];
+    return [self getDateTimeOfFirstMatchingSessionWithDatePredicate:nil sortDescriptor:sortDescriptor venueid:venueid type:type searchString:searchString];
+}
+
+- (NSDate *)getDateTimeOfFirstMatchingSessionWithDatePredicate:(NSPredicate *)datePredicate sortDescriptor:(NSSortDescriptor *)sortDescriptor
+                                                       venueid:(int)venueid type:(NSString *)type searchString:(NSString *)searchString {
+    NSMutableArray *subPredicates = [NSMutableArray new];
+    if (datePredicate != nil) {
+        [subPredicates addObject:datePredicate];
+    }
+    NSPredicate *primePredicate = [NSPredicate predicateWithFormat:@"%K != nil AND %K != nil",
+                                                                  [RWDbSchemas SES_EVENT], [RWDbSchemas SES_VENUE]];
+    [subPredicates addObject:primePredicate];
+    if(venueid > 0){
+        NSPredicate *venuePredicate = [NSPredicate predicateWithFormat:@"%K = %d",
+                                                                       [RWDbSchemas SES_VENUEID], venueid];
+        [subPredicates addObject:venuePredicate];
+    }
+    if(![type isEqualToString:@"Alle"]){
+        NSPredicate *typePredicate = [NSPredicate predicateWithFormat:@"%K = %@",
+                                                                      [RWDbSchemas SES_TYPE], type];
+        [subPredicates addObject:typePredicate];
+    }
+    if(searchString != nil && ![searchString isEqualToString:@""]){
+        NSPredicate *searchPredicate = [NSPredicate predicateWithFormat:@"%K contains %@",
+                                                                        [RWDbSchemas SES_TITLE], searchString];
+        [subPredicates addObject:searchPredicate];
+    }
+    NSPredicate *predicate = [NSCompoundPredicate andPredicateWithSubpredicates:subPredicates];
+
     NSArray *sortDescriptors = [[NSArray alloc] initWithObjects:sortDescriptor, nil];
 
     NSArray *result = [_dbHelper getFromDatabase:[RWDbSchemas SES_TABLENAME] predicate:predicate sort:sortDescriptors fetchLimit:1];
@@ -261,5 +212,25 @@
         return session.startdatetime;
     }
     return NULL;
+}
+
+-(NSArray *)getActiveVenueIds{
+    RWAppDelegate *app = (RWAppDelegate *)[[UIApplication sharedApplication] delegate];
+    NSManagedObjectContext *objectContext = app.managedObjectContext;
+
+    NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:[RWDbSchemas SES_TABLENAME]];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:[RWDbSchemas SES_TABLENAME] inManagedObjectContext:objectContext];
+
+    fetchRequest.resultType = NSDictionaryResultType;
+    fetchRequest.propertiesToFetch = [NSArray arrayWithObject:[[entity propertiesByName] objectForKey:[RWDbSchemas SES_VENUEID]]];
+    fetchRequest.returnsDistinctResults = YES;
+
+// Now it should yield an NSArray of distinct values in dictionaries.
+    NSArray *dictionaries = [objectContext executeFetchRequest:fetchRequest error:nil];
+    NSMutableArray *activeVenueIds = [NSMutableArray new];
+    for(NSDictionary *dict in dictionaries){
+        [activeVenueIds addObject:dict[[RWDbSchemas SES_VENUEID]]];
+    }
+    return activeVenueIds;
 }
 @end

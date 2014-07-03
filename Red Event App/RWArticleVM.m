@@ -54,7 +54,8 @@
 }
 
 - (NSString *)introtextWithHtml {
-    return [_content.introtext htmlStringWithSystemFont];
+//    return [_content.introtext htmlStringWithSystemFont];
+	    return [_content.introtext stringByStrippingJoomlaTags];
 }
 
 - (NSString *)introtextWithoutHtml {
@@ -66,7 +67,8 @@
 }
 
 - (NSString *)fulltextWithHtml {
-    return [_content.fulltext htmlStringWithSystemFont];
+//    return [_content.fulltext htmlStringWithSystemFont];
+	    return [_content.fulltext stringByStrippingJoomlaTags];
 }
 
 - (NSString *)fulltextWithoutHtml {

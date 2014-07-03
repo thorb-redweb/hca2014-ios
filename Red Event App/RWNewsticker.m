@@ -60,7 +60,7 @@
 }
 
 -(void)startPaging{
-	_pageTimer = [NSTimer scheduledTimerWithTimeInterval:3 target:self selector:@selector(scrollPages) userInfo:Nil repeats:YES];
+	_pageTimer = [NSTimer scheduledTimerWithTimeInterval:12 target:self selector:@selector(scrollPages) userInfo:Nil repeats:YES];
 	[_pageTimer fire];
 }
 

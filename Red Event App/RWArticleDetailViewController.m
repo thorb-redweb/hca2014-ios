@@ -51,11 +51,11 @@
     {
         [_lblBody setHidden:YES];
 		[_imgView setHidden:YES];
-        [_webBody loadHTMLString:[NSString stringWithFormat:@"%@%@", _xml.css, _model.fulltextWithHtml] baseURL:[NSURL URLWithString:_xml.imagesRootPath]];
+		NSString *webString = [NSString stringWithFormat:@"%@%@", _xml.css, _model.fulltextWithHtml];
+        [_webBody loadHTMLString:webString  baseURL:[NSURL URLWithString:_xml.imagesRootPath]];
     } else {
         [_webBody setHidden:YES];
         _lblBody.text = _model.fulltextWithoutHtml;
-		
 		if (_model.mainImagePath && ![_model.mainImagePath isEqual:@""]) {
 			[_imgView setImageWithURL:_model.mainImageUrl placeholderImage:[UIImage imageNamed:@"default_icon.jpg"]
 							completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType) {
@@ -104,13 +104,12 @@
     [webView RWSizeThatFitsContent];
 }
 
-//- (BOOL)webView:(UIWebView *)inWeb shouldStartLoadWithRequest:(NSURLRequest *)inRequest navigationType:(UIWebViewNavigationType)inType {
-//    if (inType == UIWebViewNavigationTypeLinkClicked) {
-//		[[UIApplication sharedApplication] openURL:[inRequest URL]];
-//        return NO;
-//    }
-//
-//    return YES;
+//- (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType{
+//	if(navigationType == UIWebViewNavigationTypeLinkClicked){
+//		[[UIApplication sharedApplication] openURL:[request URL]];
+//		return NO;
+//	}
+//	return YES;
 //}
 
 -(IBAction)btnBackClicked{

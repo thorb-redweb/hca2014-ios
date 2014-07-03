@@ -13,6 +13,7 @@
 #import "RWDbSchemas.h"
 #import "RWVenueVM.h"
 #import "RWSessionVM.h"
+#import "RWDbSessions.h"
 
 
 @implementation RWDbVenues {
@@ -104,14 +105,23 @@
     return vmList;
 }
 
-- (NSArray *)getNamesAndInsertAtFirstPosition:(NSString *)head{
+- (NSArray *)getActiveNamesAndInsertStringAtFirstPosition:(NSString *)stringToInsert{
+    NSArray *activeIds = [_app.db.Sessions getActiveVenueIds];
+
+    NSMutableArray *subPredicates = [NSMutableArray new];
+    for(NSNumber *venueId in activeIds){
+        NSPredicate *subPredicate = [NSPredicate predicateWithFormat:@"%K = %@",[RWDbSchemas VENUE_VENUEID], venueId];
+        [subPredicates addObject:subPredicate];
+    }
+    NSPredicate *predicate = [NSCompoundPredicate orPredicateWithSubpredicates:subPredicates];
+
 	NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:[RWDbSchemas VENUE_TITLE] ascending:YES];
     NSArray *sortDescriptors = [[NSArray alloc] initWithObjects:sortDescriptor, nil];
 	
-    NSMutableArray *fetchResults = [_dbHelper getFromDatabase:[RWDbSchemas VENUE_TABLENAME] sort:sortDescriptors];
+    NSMutableArray *fetchResults = [_dbHelper getFromDatabase:[RWDbSchemas VENUE_TABLENAME] predicate:predicate sort:sortDescriptors];
 	
     NSMutableArray *nameList = [[NSMutableArray alloc] initWithCapacity:0];
-	[nameList addObject:head];
+    [nameList addObject:stringToInsert];
     for (Venue *venue in fetchResults) {
         [nameList addObject:venue.title];
     }

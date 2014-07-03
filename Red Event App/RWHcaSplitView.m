@@ -32,7 +32,8 @@
 	
 	NSString *childname2 = [_page getStringFromNode:[RWPAGE CHILD2]];
 	NSMutableArray *newsCells = [[NSMutableArray alloc] initWithObjects:_nwsCell1, _nwsCell2, _nwsCell3, nil];
-	[_nwsTicker initializeWithDatasource:[[NSMutableArray alloc] initWithArray:[_db.Articles getVMListOfLastThree:9]] newsCells:newsCells app:_app childname:childname2];
+	NSArray *catIds = [[NSArray alloc] initWithObjects:[NSNumber numberWithInt:9],[NSNumber numberWithInt:30],[NSNumber numberWithInt:31],[NSNumber numberWithInt:34], nil];
+	[_nwsTicker initializeWithDatasource:[[NSMutableArray alloc] initWithArray:[_db.Articles getVMListOfLastThree:catIds]] newsCells:newsCells app:_app childname:childname2];
 	
     [self setAppearance];
 	[self setText];

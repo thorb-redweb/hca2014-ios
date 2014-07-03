@@ -38,7 +38,9 @@
     int articleId = [_page getIntegerFromNode:[RWPAGE ARTICLEID]];
     _model = [_db.Articles getVMFromId:articleId];
 
-	[_webBody loadHTMLString:[NSString stringWithFormat:@"%@%@", _xml.css, _model.introtextWithHtml] baseURL:[NSURL URLWithString:_xml.imagesRootPath]];
+	NSString *title = @"<div class=“page-header”><h1><a href=“/om-festivalen/om-festivalen”>Om festivalen</a></h1></div>";
+	NSString *webtext = [NSString stringWithFormat:@"%@%@%@", _xml.css, title, _model.introtextWithHtml];
+	[_webBody loadHTMLString:webtext baseURL:[NSURL URLWithString:_xml.imagesRootPath]];
 
 	[self setAppearance];
 	
@@ -60,6 +62,14 @@
 	[helper.button setBackButtonStyle:_btnBack];
 	
 	[helper setScrollBounces:_webBody.scrollView localName:[RWLOOK SCROLLBOUNCES] globalName:[RWLOOK SCROLLBOUNCES]];
+}
+
+- (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType{
+	if(navigationType == UIWebViewNavigationTypeLinkClicked){
+		[[UIApplication sharedApplication] openURL:[request URL]];
+		return NO;
+	}
+	return YES;
 }
 
 - (void)didReceiveMemoryWarning {

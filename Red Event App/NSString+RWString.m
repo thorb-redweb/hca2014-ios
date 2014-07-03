@@ -28,8 +28,8 @@
         s = [s stringByReplacingCharactersInRange:r withString:@""];
     while ((r = [s rangeOfString:@"\\[.*?\\]" options:NSRegularExpressionSearch]).location != NSNotFound)
         s = [s stringByReplacingCharactersInRange:r withString:@""];
-    while ((r = [s rangeOfString:@"<a href[^>]+>" options:NSRegularExpressionSearch]).location != NSNotFound)
-        s = [s stringByReplacingCharactersInRange:r withString:@""];
+//    while ((r = [s rangeOfString:@"<a href[^>]+>" options:NSRegularExpressionSearch]).location != NSNotFound)
+//        s = [s stringByReplacingCharactersInRange:r withString:@""];
     return s;
 }
 
