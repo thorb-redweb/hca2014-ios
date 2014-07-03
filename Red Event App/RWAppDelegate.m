@@ -126,6 +126,7 @@
 }
 
 - (void)setAppearance {
+	[[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     [self setTabBarAppearance];
 }
 

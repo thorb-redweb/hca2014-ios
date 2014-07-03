@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5053" systemVersion="12F45" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RWSplashViewController">
@@ -21,48 +20,12 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" image="splash_hca_logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="cu0-2a-Jlk">
-                    <rect key="frame" x="0.0" y="0.0" width="320" height="307"/>
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="363"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                 </imageView>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nPv-BL-jYj" userLabel="TopContainer">
-                    <rect key="frame" x="0.0" y="307" width="320" height="53"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash_logo_justimagine_top.png" translatesAutoresizingMaskIntoConstraints="NO" id="l2U-YL-wg5">
-                            <rect key="frame" x="158" y="0.0" width="162" height="53"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                        </imageView>
-                    </subviews>
-                    <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
-                    <constraints>
-                        <constraint firstItem="l2U-YL-wg5" firstAttribute="top" secondItem="nPv-BL-jYj" secondAttribute="top" id="3Bz-in-Ok6"/>
-                        <constraint firstAttribute="trailing" secondItem="l2U-YL-wg5" secondAttribute="trailing" id="4dA-fM-ROT"/>
-                        <constraint firstAttribute="bottom" secondItem="l2U-YL-wg5" secondAttribute="bottom" id="lNj-88-ZTm"/>
-                    </constraints>
-                </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1EU-4c-jOl" userLabel="BottomContainer">
-                    <rect key="frame" x="0.0" y="360" width="320" height="12"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash_logo_justimagine_bottom.png" translatesAutoresizingMaskIntoConstraints="NO" id="tsp-eA-3mY">
-                            <rect key="frame" x="164" y="0.0" width="156" height="12"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="12" id="1AK-To-1vk"/>
-                            </constraints>
-                        </imageView>
-                    </subviews>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    <constraints>
-                        <constraint firstAttribute="bottom" secondItem="tsp-eA-3mY" secondAttribute="bottom" id="7WG-hz-XM5"/>
-                        <constraint firstAttribute="trailing" secondItem="tsp-eA-3mY" secondAttribute="trailing" id="Vuq-HQ-maK"/>
-                        <constraint firstItem="tsp-eA-3mY" firstAttribute="top" secondItem="1EU-4c-jOl" secondAttribute="top" id="kDw-OT-LYv"/>
-                    </constraints>
-                </view>
                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="splash_redweb_logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="Y0S-ek-daa">
-                    <rect key="frame" x="0.0" y="372" width="320" height="180"/>
+                    <rect key="frame" x="0.0" y="363" width="320" height="189"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cfs-dJ-wrY">
@@ -110,25 +73,18 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="Y0S-ek-daa" firstAttribute="top" secondItem="1EU-4c-jOl" secondAttribute="bottom" id="4qq-Qo-dwG"/>
                 <constraint firstItem="35" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="20" id="5NZ-sC-hqO"/>
-                <constraint firstItem="nPv-BL-jYj" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="68c-dL-tDc"/>
                 <constraint firstItem="cu0-2a-Jlk" firstAttribute="top" secondItem="1" secondAttribute="top" id="6ZE-Vu-0SZ"/>
-                <constraint firstItem="nPv-BL-jYj" firstAttribute="bottom" secondItem="1EU-4c-jOl" secondAttribute="top" id="GWp-LX-UzN"/>
                 <constraint firstAttribute="bottom" secondItem="35" secondAttribute="bottom" constant="60" id="GdM-4u-HBA"/>
+                <constraint firstItem="Y0S-ek-daa" firstAttribute="top" secondItem="cu0-2a-Jlk" secondAttribute="bottom" id="IhW-zz-OMz"/>
                 <constraint firstAttribute="trailing" secondItem="35" secondAttribute="trailing" constant="20" id="KXA-VT-Vki"/>
-                <constraint firstAttribute="trailing" secondItem="nPv-BL-jYj" secondAttribute="trailing" id="SSb-47-Fd2"/>
                 <constraint firstItem="Y0S-ek-daa" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="UR7-t4-xJ9"/>
                 <constraint firstAttribute="trailing" secondItem="Y0S-ek-daa" secondAttribute="trailing" id="UW8-Rp-dJn"/>
-                <constraint firstItem="nPv-BL-jYj" firstAttribute="height" secondItem="1EU-4c-jOl" secondAttribute="height" multiplier="4.375" id="VXY-KW-GoL"/>
                 <constraint firstAttribute="bottom" secondItem="Cfs-dJ-wrY" secondAttribute="bottom" id="a4Z-zf-CO1"/>
                 <constraint firstAttribute="bottom" secondItem="Y0S-ek-daa" secondAttribute="bottom" constant="16" id="ar5-ra-xD8"/>
                 <constraint firstItem="Cfs-dJ-wrY" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="ezi-uA-Yd3"/>
                 <constraint firstAttribute="trailing" secondItem="Cfs-dJ-wrY" secondAttribute="trailing" id="fG9-E7-c9l"/>
-                <constraint firstAttribute="trailing" secondItem="1EU-4c-jOl" secondAttribute="trailing" id="gMF-Xh-3S8"/>
                 <constraint firstItem="cu0-2a-Jlk" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="hgO-rX-LMa"/>
-                <constraint firstItem="1EU-4c-jOl" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="msh-FO-XJ4"/>
-                <constraint firstItem="nPv-BL-jYj" firstAttribute="top" secondItem="cu0-2a-Jlk" secondAttribute="bottom" id="mv1-dy-PKc"/>
                 <constraint firstItem="Cfs-dJ-wrY" firstAttribute="top" secondItem="1" secondAttribute="top" id="sVj-FY-Yxg"/>
                 <constraint firstAttribute="trailing" secondItem="cu0-2a-Jlk" secondAttribute="trailing" id="ser-Yc-D5U"/>
             </constraints>
@@ -138,8 +94,6 @@
     </objects>
     <resources>
         <image name="splash_hca_logo.png" width="592" height="307"/>
-        <image name="splash_logo_justimagine_bottom.png" width="156" height="24"/>
-        <image name="splash_logo_justimagine_top.png" width="162" height="105"/>
         <image name="splash_redweb_logo.png" width="485" height="189"/>
     </resources>
 </document>
