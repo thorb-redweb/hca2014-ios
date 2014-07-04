@@ -12,6 +12,7 @@
 #import "RWDbInterface.h"
 #import "RWUpdateService.h"
 #import "RWPushMessageAutoSubscriberViewController.h"
+#import	"RWActivityIndicator.h"
 
 @interface RWBaseViewController ()
 
@@ -19,6 +20,7 @@
 
 @implementation RWBaseViewController{
 	RWUpdateService *_updateService;
+	RWActivityIndicator *_activityIndicator;
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil page:(RWXmlNode *)page {
@@ -91,5 +93,26 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+#pragma mark Handling RWActivityIndicator
+/**
+ Display an activity indicator. There will only be one activity indicator active at a time,
+ @param title
+ The title of the activity indicator
+ @param message
+ The body text of the activity indicator
+ */
+- (void)startActivityIndicatorWithTitle:(NSString *)title message:(NSString *)message{
+	_activityIndicator = [[RWActivityIndicator alloc] initWithParentViewFrame:self.view.bounds title:title message:message];
+	[self.view addSubview:_activityIndicator];
+}
+
+/**
+ Hide the current activity indicator.
+ */
+- (void)hideActivityIndicator{
+	[_activityIndicator hide];
+}
+
 
 @end

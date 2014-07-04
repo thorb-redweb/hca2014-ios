@@ -245,6 +245,11 @@
 		36AB7CB217C25EA700316921 /* RWTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 36AB7CB117C25EA700316921 /* RWTabBar.m */; };
 		36AB7CC017C3609500316921 /* server.xml in Resources */ = {isa = PBXBuildFile; fileRef = 36AB7CBF17C3609500316921 /* server.xml */; };
 		36B0A72819657CF400DAD3EA /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 36B0A72719657CF400DAD3EA /* .gitignore */; };
+		36B0A72B19659EE500DAD3EA /* icon_calendar_pink.png in Resources */ = {isa = PBXBuildFile; fileRef = 36B0A72919659EE500DAD3EA /* icon_calendar_pink.png */; };
+		36B0A72C19659EE500DAD3EA /* icon_calendar_pink@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 36B0A72A19659EE500DAD3EA /* icon_calendar_pink@2x.png */; };
+		36B0A72E19659FCB00DAD3EA /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36B0A72D19659FCB00DAD3EA /* EventKit.framework */; };
+		36B0A73119669D5C00DAD3EA /* RWActivityIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 36B0A73019669D5C00DAD3EA /* RWActivityIndicator.m */; };
+		36B0A73319669D9F00DAD3EA /* RWActivityIndicator.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36B0A73219669D9F00DAD3EA /* RWActivityIndicator.xib */; };
 		36E2A0AE1876CE3E001AB669 /* MyLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 36E2A0AD1876CE3E001AB669 /* MyLog.m */; };
 		36E2A0B7187D4C3E001AB669 /* RWCameraHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 36E2A0B6187D4C3E001AB669 /* RWCameraHandler.m */; };
 /* End PBXBuildFile section */
@@ -647,6 +652,12 @@
 		36AB7CB117C25EA700316921 /* RWTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWTabBar.m; sourceTree = "<group>"; };
 		36AB7CBF17C3609500316921 /* server.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = server.xml; sourceTree = "<group>"; };
 		36B0A72719657CF400DAD3EA /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		36B0A72919659EE500DAD3EA /* icon_calendar_pink.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_calendar_pink.png; path = "Red Event App/Resources/icon_calendar_pink.png"; sourceTree = "<group>"; };
+		36B0A72A19659EE500DAD3EA /* icon_calendar_pink@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon_calendar_pink@2x.png"; path = "Red Event App/Resources/icon_calendar_pink@2x.png"; sourceTree = "<group>"; };
+		36B0A72D19659FCB00DAD3EA /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
+		36B0A72F19669D5C00DAD3EA /* RWActivityIndicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWActivityIndicator.h; sourceTree = "<group>"; };
+		36B0A73019669D5C00DAD3EA /* RWActivityIndicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWActivityIndicator.m; sourceTree = "<group>"; };
+		36B0A73219669D9F00DAD3EA /* RWActivityIndicator.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RWActivityIndicator.xib; sourceTree = "<group>"; };
 		36E2A0AC1876CE3E001AB669 /* MyLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyLog.h; path = ../Lumberjack/MyLog.h; sourceTree = "<group>"; };
 		36E2A0AD1876CE3E001AB669 /* MyLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyLog.m; path = ../Lumberjack/MyLog.m; sourceTree = "<group>"; };
 		36E2A0B5187D4C3E001AB669 /* RWCameraHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWCameraHandler.h; sourceTree = "<group>"; };
@@ -658,6 +669,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				36B0A72E19659FCB00DAD3EA /* EventKit.framework in Frameworks */,
 				36A7287F17CB469A00374063 /* CoreLocation.framework in Frameworks */,
 				36A7288B17CB46DB00374063 /* libz.dylib in Frameworks */,
 				36A7288F17CB46EC00374063 /* QuartzCore.framework in Frameworks */,
@@ -1263,6 +1275,7 @@
 		36AB7BD117BB7D0E00316921 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				36B0A72D19659FCB00DAD3EA /* EventKit.framework */,
 				36A97B3E1861E3DC0050EC8D /* CoreImage.framework */,
 				36A97B361861A85A0050EC8D /* AssetsLibrary.framework */,
 				36A7289017CB46F500374063 /* SystemConfiguration.framework */,
@@ -1386,6 +1399,9 @@
 				36A29C3418C4767200E64B7A /* RWNavController.xib */,
 				36AB7CB017C25EA700316921 /* RWTabBar.h */,
 				36AB7CB117C25EA700316921 /* RWTabBar.m */,
+				36B0A72F19669D5C00DAD3EA /* RWActivityIndicator.h */,
+				36B0A73019669D5C00DAD3EA /* RWActivityIndicator.m */,
+				36B0A73219669D9F00DAD3EA /* RWActivityIndicator.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -1409,6 +1425,8 @@
 				36A29C0518C0D2CC00E64B7A /* icon_about_bottombar.png */,
 				36A29C0618C0D2CC00E64B7A /* icon_map_bottombar.png */,
 				36A29C0718C0D2CC00E64B7A /* icon_map_pink.png */,
+				36B0A72919659EE500DAD3EA /* icon_calendar_pink.png */,
+				36B0A72A19659EE500DAD3EA /* icon_calendar_pink@2x.png */,
 				36A29C0818C0D2CC00E64B7A /* icon_news_bottombar.png */,
 				36A29C0918C0D2CC00E64B7A /* icon_program_bottombar.png */,
 				36A29C2918C0DA6700E64B7A /* icon_about_bottombar@2x.png */,
@@ -1702,6 +1720,7 @@
 				36A29C1418C0D2CD00E64B7A /* arrow_back.png in Resources */,
 				361EA889180BD63100441271 /* RWButtonGalleryViewController.xib in Resources */,
 				36A97ADA185708330050EC8D /* RWImageUploadBrowserViewController.xib in Resources */,
+				36B0A72B19659EE500DAD3EA /* icon_calendar_pink.png in Resources */,
 				36A29C2418C0D2CD00E64B7A /* play.png in Resources */,
 				36AB7CC017C3609500316921 /* server.xml in Resources */,
 				36214F6218351A46001B0B63 /* RWInfoWindow.xib in Resources */,
@@ -1735,6 +1754,7 @@
 				36A29C2F18C0DA6700E64B7A /* icon_news_bottombar@2x.png in Resources */,
 				36A29C1E18C0D2CD00E64B7A /* icon_program_bottombar.png in Resources */,
 				36A29C1718C0D2CD00E64B7A /* art.png in Resources */,
+				36B0A73319669D9F00DAD3EA /* RWActivityIndicator.xib in Resources */,
 				3645BF8117CE320500047159 /* Banegården.gpx in Resources */,
 				3645BF8217CE320500047159 /* Brandts.gpx in Resources */,
 				36A29C3018C0DA6700E64B7A /* icon_program_bottombar@2x.png in Resources */,
@@ -1743,6 +1763,7 @@
 				36A29C2E18C0DA6700E64B7A /* icon_map_bottombar@2x.png in Resources */,
 				3645BF8317CE320500047159 /* Kongens Have.gpx in Resources */,
 				26E73257952F9E9F8A78C456 /* RWDailySessionListViewController.xib in Resources */,
+				36B0A72C19659EE500DAD3EA /* icon_calendar_pink@2x.png in Resources */,
 				36A0B4001845E2D6007A6C78 /* RWPushMessageAutoSubscriberViewController.xib in Resources */,
 				3683F216182A4F5F00C22E46 /* RWMainViewController.xib in Resources */,
 				36B0A72819657CF400DAD3EA /* .gitignore in Resources */,
@@ -1852,6 +1873,7 @@
 				36A79EEC17C5F85900AB211B /* Venue.m in Sources */,
 				36A97B551876B0DD0050EC8D /* DDASLLogger.m in Sources */,
 				3604166317F5978100B9A391 /* RWDbArticles.m in Sources */,
+				36B0A73119669D5C00DAD3EA /* RWActivityIndicator.m in Sources */,
 				36214F6B183CBC34001B0B63 /* RWTableNavigatorCell.m in Sources */,
 				36672D6C18C8A87500E0D992 /* CRToast.m in Sources */,
 				361EA87F1806B0EC00441271 /* UIImage+MultiFormat.m in Sources */,

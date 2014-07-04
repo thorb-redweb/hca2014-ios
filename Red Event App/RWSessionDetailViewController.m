@@ -6,6 +6,8 @@
 //  Copyright (c) 2013 redWEB. All rights reserved.
 //
 
+#import <EventKit/EventKit.h>
+
 #import "MyLog.h"
 
 #import "NSString+RWString.h"
@@ -29,6 +31,7 @@
 
 @implementation RWSessionDetailViewController {
     RWSessionVM *_model;
+    EKEventStore *_store;
 }
 
 
@@ -43,14 +46,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 	[self.view setTranslatesAutoresizingMaskIntoConstraints:NO];
-
+	
+    int sessionId = [_page getIntegerFromNode:[RWPAGE SESSIONID]];
+    _model = [_db.Sessions getVMFromId:sessionId];
+    _store = [[EKEventStore alloc] init];
+	
 	[self setAppearance];
 	[self setText];
 
-    int sessionId = [_page getIntegerFromNode:[RWPAGE SESSIONID]];
-    _model = [_db.Sessions getVMFromId:sessionId];
-	
-	_lblTitle.text = _model.title;
+    _lblTitle.text = _model.title;
     _lblTypeText.text = _model.type;
 	_lblTypeText.textColor = _model.typeColor;
     _lblDateText.text = [NSString stringWithFormat:@"%@", _model.startDateLong];
@@ -105,6 +109,14 @@
     [helper.button setBackButtonStyle:_btnBack];
 	
 	[helper setScrollBounces:_scrollView localName:[RWLOOK SCROLLBOUNCES] globalName:[RWLOOK SCROLLBOUNCES]];
+
+    [_store requestAccessToEntityType:EKEntityTypeEvent completion:^(BOOL granted, NSError *error){
+        if (!granted) {
+            [_btnCalendar setEnabled:NO];
+            [_cnstBtnCalendarWidth setConstant:8];
+            [_vwBtnCalendar setHidden:YES];
+        }
+    }];
 }
 
 - (void)setText{
@@ -140,6 +152,28 @@
 		DDLogCWarn(@"Failed to open url: %@", [submissionUrl description]);
 	}
 }
+
+- (IBAction)btnCalendarPressed:(id)sender {
+	[self startActivityIndicatorWithTitle:@"Tilføjer event til kalender" message:@"Tilføjer..."];
+	[_store requestAccessToEntityType:EKEntityTypeEvent completion:^(BOOL granted, NSError *error){
+        if(!granted){
+			[self hideActivityIndicator];
+			return;
+		}
+        EKEvent *event = [EKEvent eventWithEventStore:_store];
+        event.title = _model.title;
+        event.startDate = _model.startDatetime;
+        event.endDate = _model.endDatetime;
+        [event setCalendar:[_store defaultCalendarForNewEvents]];
+        NSError *err = nil;
+        [_store saveEvent:event span:EKSpanThisEvent commit:YES error:&err];
+		NSString *alertMessage = [NSString stringWithFormat:@"\"%@\" er blevet tilføjet til din kalender", event.title];
+		UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Tilføjet til kalender" message:alertMessage delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+		[alertView show];
+		[self hideActivityIndicator];
+    }];
+}
+
 
 -(IBAction)btnBackClicked{
 	NSArray *constraints = self.view.constraints;

@@ -60,6 +60,10 @@
 
 - (NSString *)getName;
 
+- (void)startActivityIndicatorWithTitle:(NSString *)title message:(NSString *)message;
+
+- (void)hideActivityIndicator;
+
 - (IBAction)removeKeyboard;
 
 @end

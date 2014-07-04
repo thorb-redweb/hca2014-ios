@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="4510" systemVersion="12F45" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment defaultVersion="1792" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RWSessionDetailViewController">
             <connections>
                 <outlet property="btnBack" destination="S2N-2G-JkW" id="Hyp-e3-XnH"/>
+                <outlet property="btnCalendar" destination="rv0-9M-TZb" id="o57-nH-d8v"/>
                 <outlet property="btnMap" destination="GkI-oR-voe" id="ifQ-1U-Y4R"/>
                 <outlet property="btnTicket" destination="7a2-q8-dpY" id="KwI-o5-QMK"/>
+                <outlet property="cnstBtnCalendarWidth" destination="ifr-cv-GAT" id="9hk-TS-bkR"/>
                 <outlet property="imgView" destination="312" id="313"/>
                 <outlet property="lblBody" destination="F4y-K6-7jO" id="8WP-zV-BMw"/>
                 <outlet property="lblDate" destination="206" id="306"/>
@@ -23,16 +25,17 @@
                 <outlet property="lblTypeText" destination="bo3-H3-RoE" id="dea-iG-nsD"/>
                 <outlet property="scrollView" destination="11" id="73"/>
                 <outlet property="view" destination="1" id="3"/>
+                <outlet property="vwBtnCalendar" destination="ryQ-D0-fXW" id="Axi-Co-IlE"/>
                 <outlet property="webBody" destination="79" id="80"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="1">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <rect key="frame" x="0.0" y="0.0" width="320" height="716"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="519" translatesAutoresizingMaskIntoConstraints="NO" id="11">
-                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="716"/>
                     <autoresizingMask key="autoresizingMask"/>
                     <subviews>
                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Title" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="300" translatesAutoresizingMaskIntoConstraints="NO" id="16">
@@ -46,14 +49,14 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="300" translatesAutoresizingMaskIntoConstraints="NO" id="F4y-K6-7jO" userLabel="Label Body">
-                            <rect key="frame" x="10" y="482" width="300" height="123"/>
+                            <rect key="frame" x="10" y="533" width="300" height="123"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <webView contentMode="scaleToFill" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="123" translatesAutoresizingMaskIntoConstraints="NO" id="79" userLabel="Web Body">
-                            <rect key="frame" x="10" y="482" width="300" height="123"/>
+                            <rect key="frame" x="10" y="533" width="300" height="123"/>
                             <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
                             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
@@ -127,7 +130,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S2N-2G-JkW">
-                            <rect key="frame" x="127" y="613" width="66" height="38"/>
+                            <rect key="frame" x="127" y="664" width="66" height="38"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
                             <state key="normal" title="Button">
@@ -225,6 +228,53 @@
                                 <action selector="btnTicketPressed:" destination="-1" eventType="touchUpInside" id="vmi-Na-nAJ"/>
                             </connections>
                         </button>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ryQ-D0-fXW">
+                            <rect key="frame" x="10" y="482" width="300" height="43"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_calendar_pink.png" translatesAutoresizingMaskIntoConstraints="NO" id="Zse-eD-GhM">
+                                    <rect key="frame" x="251" y="4" width="45" height="35"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="45" id="JBU-T5-MBM"/>
+                                    </constraints>
+                                </imageView>
+                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tilføj til kalender" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VOR-Lr-gNN">
+                                    <rect key="frame" x="20" y="10" width="144" height="23"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" red="0.8980392157" green="0.0" blue="0.49019607840000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="centerY" secondItem="VOR-Lr-gNN" secondAttribute="centerY" id="6dq-od-YZ5"/>
+                                <constraint firstAttribute="bottom" secondItem="Zse-eD-GhM" secondAttribute="bottom" priority="999" constant="4" id="Fwk-08-lFX"/>
+                                <constraint firstItem="Zse-eD-GhM" firstAttribute="top" secondItem="ryQ-D0-fXW" secondAttribute="top" priority="999" constant="4" id="YYO-Sh-fI6"/>
+                                <constraint firstItem="VOR-Lr-gNN" firstAttribute="leading" secondItem="ryQ-D0-fXW" secondAttribute="leading" constant="20" symbolic="YES" id="Ylj-Jg-JVW"/>
+                                <constraint firstAttribute="trailing" secondItem="Zse-eD-GhM" secondAttribute="trailing" constant="4" id="vIi-3a-3bR"/>
+                            </constraints>
+                        </view>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rv0-9M-TZb">
+                            <rect key="frame" x="10" y="482" width="300" height="43"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" red="0.8980392157" green="0.0" blue="0.49019607840000001" alpha="0.0" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="43" id="ifr-cv-GAT"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                            <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                            <inset key="titleEdgeInsets" minX="-40" minY="0.0" maxX="150" maxY="0.0"/>
+                            <inset key="imageEdgeInsets" minX="230" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            <state key="normal">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="btnCalendarPressed:" destination="-1" eventType="touchUpInside" id="vum-w3-2Rx"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <constraints>
                         <constraint firstItem="O2h-ll-2lu" firstAttribute="top" secondItem="GkI-oR-voe" secondAttribute="top" id="0K5-ES-fa1"/>
@@ -243,7 +293,6 @@
                         <constraint firstAttribute="trailing" secondItem="F4y-K6-7jO" secondAttribute="trailing" constant="10" id="CJe-A5-7gB"/>
                         <constraint firstAttribute="trailing" secondItem="GkI-oR-voe" secondAttribute="trailing" constant="10" id="CO0-e5-MSg"/>
                         <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="39" secondAttribute="trailing" constant="20" symbolic="YES" id="DGf-Iu-9Qv"/>
-                        <constraint firstItem="79" firstAttribute="top" secondItem="7a2-q8-dpY" secondAttribute="bottom" constant="8" symbolic="YES" id="FJ1-V5-oIx"/>
                         <constraint firstItem="bo3-H3-RoE" firstAttribute="leading" secondItem="ak3-mx-Xg2" secondAttribute="trailing" constant="8" symbolic="YES" id="Hx4-er-2IF"/>
                         <constraint firstItem="GkI-oR-voe" firstAttribute="top" secondItem="49" secondAttribute="bottom" constant="8" id="IT4-Mu-UFs"/>
                         <constraint firstItem="39" firstAttribute="width" secondItem="bo3-H3-RoE" secondAttribute="width" id="JMP-OM-CWe"/>
@@ -252,7 +301,10 @@
                         <constraint firstItem="7a2-q8-dpY" firstAttribute="top" secondItem="sVm-GQ-naX" secondAttribute="top" id="Kjf-cr-2gA"/>
                         <constraint firstAttribute="centerX" secondItem="GkI-oR-voe" secondAttribute="centerX" id="RHE-Xq-C9H"/>
                         <constraint firstItem="O2h-ll-2lu" firstAttribute="leading" secondItem="GkI-oR-voe" secondAttribute="leading" id="Rwh-8r-Szb"/>
+                        <constraint firstAttribute="trailing" secondItem="rv0-9M-TZb" secondAttribute="trailing" constant="10" id="Sj2-Qa-bua"/>
                         <constraint firstItem="207" firstAttribute="width" secondItem="208" secondAttribute="width" id="Wsp-AT-EJb"/>
+                        <constraint firstItem="rv0-9M-TZb" firstAttribute="bottom" secondItem="ryQ-D0-fXW" secondAttribute="bottom" id="Xxv-5y-gkn"/>
+                        <constraint firstItem="rv0-9M-TZb" firstAttribute="top" secondItem="ryQ-D0-fXW" secondAttribute="top" id="YG1-lQ-nM1"/>
                         <constraint firstAttribute="centerX" secondItem="S2N-2G-JkW" secondAttribute="centerX" id="ZdX-HP-IGR"/>
                         <constraint firstItem="7a2-q8-dpY" firstAttribute="top" secondItem="GkI-oR-voe" secondAttribute="bottom" constant="8" symbolic="YES" id="bgZ-E8-IGO"/>
                         <constraint firstItem="206" firstAttribute="leading" secondItem="11" secondAttribute="leading" constant="20" symbolic="YES" id="cIF-cO-2E1"/>
@@ -267,9 +319,12 @@
                         <constraint firstItem="27" firstAttribute="leading" secondItem="207" secondAttribute="trailing" constant="8" symbolic="YES" id="hoL-Xf-grv"/>
                         <constraint firstItem="312" firstAttribute="top" secondItem="16" secondAttribute="bottom" constant="8" symbolic="YES" id="jJ4-Qp-TeG"/>
                         <constraint firstAttribute="bottom" secondItem="S2N-2G-JkW" secondAttribute="bottom" constant="20" symbolic="YES" id="jar-dn-Pxi"/>
+                        <constraint firstItem="rv0-9M-TZb" firstAttribute="leading" secondItem="ryQ-D0-fXW" secondAttribute="leading" id="kCy-WX-QoL"/>
                         <constraint firstItem="79" firstAttribute="leading" secondItem="11" secondAttribute="leading" constant="10" id="kTr-3t-48F"/>
+                        <constraint firstItem="79" firstAttribute="top" secondItem="rv0-9M-TZb" secondAttribute="bottom" constant="8" symbolic="YES" id="kaz-v4-vcL"/>
                         <constraint firstItem="49" firstAttribute="width" secondItem="27" secondAttribute="width" id="lQ6-md-lRU"/>
                         <constraint firstItem="7a2-q8-dpY" firstAttribute="bottom" secondItem="sVm-GQ-naX" secondAttribute="bottom" id="leI-aI-WcO"/>
+                        <constraint firstItem="rv0-9M-TZb" firstAttribute="leading" secondItem="11" secondAttribute="leading" constant="10" id="naO-AF-fbN"/>
                         <constraint firstAttribute="trailing" secondItem="312" secondAttribute="trailing" constant="20" symbolic="YES" id="oJn-uQ-xkD"/>
                         <constraint firstItem="16" firstAttribute="leading" secondItem="11" secondAttribute="leading" constant="10" id="oe8-4k-PlZ"/>
                         <constraint firstItem="GkI-oR-voe" firstAttribute="leading" secondItem="11" secondAttribute="leading" constant="10" id="q8W-Pl-bvn"/>
@@ -283,9 +338,14 @@
                         <constraint firstItem="ak3-mx-Xg2" firstAttribute="leading" secondItem="11" secondAttribute="leading" constant="20" symbolic="YES" id="v9U-9y-buV"/>
                         <constraint firstItem="7a2-q8-dpY" firstAttribute="trailing" secondItem="sVm-GQ-naX" secondAttribute="trailing" id="whc-5A-P1d"/>
                         <constraint firstItem="49" firstAttribute="width" secondItem="39" secondAttribute="width" id="xHB-A6-vNe"/>
+                        <constraint firstItem="rv0-9M-TZb" firstAttribute="top" secondItem="7a2-q8-dpY" secondAttribute="bottom" constant="8" id="yms-xy-ea1"/>
                         <constraint firstAttribute="centerX" secondItem="312" secondAttribute="centerX" id="zDX-0X-7tU"/>
                         <constraint firstItem="O2h-ll-2lu" firstAttribute="right" secondItem="GkI-oR-voe" secondAttribute="right" id="zFH-Hj-1Ol"/>
+                        <constraint firstItem="rv0-9M-TZb" firstAttribute="trailing" secondItem="ryQ-D0-fXW" secondAttribute="trailing" id="zfB-Cl-nC6"/>
                     </constraints>
+                    <connections>
+                        <outlet property="delegate" destination="16" id="VFu-3A-3to"/>
+                    </connections>
                 </scrollView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -296,10 +356,11 @@
                 <constraint firstItem="11" firstAttribute="top" secondItem="1" secondAttribute="top" id="bvs-k9-nMc"/>
             </constraints>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
-            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
         </view>
     </objects>
     <resources>
+        <image name="icon_calendar_pink.png" width="32" height="32"/>
         <image name="icon_map_pink.png" width="24" height="29"/>
         <image name="icon_ticket_pink.png" width="33" height="31"/>
     </resources>

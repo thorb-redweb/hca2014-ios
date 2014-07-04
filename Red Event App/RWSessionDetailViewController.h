@@ -24,6 +24,9 @@
 @property(weak, nonatomic) IBOutlet UILabel *lblTimeText;
 @property(weak, nonatomic) IBOutlet UIButton *btnMap;
 @property(weak, nonatomic) IBOutlet UIButton *btnTicket;
+@property(weak, nonatomic) IBOutlet UIButton *btnCalendar;
+@property(weak, nonatomic) IBOutlet UIView *vwBtnCalendar;
+@property(weak, nonatomic) IBOutlet NSLayoutConstraint *cnstBtnCalendarWidth;
 @property(weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property(weak, nonatomic) IBOutlet UILabel *lblBody;
 @property(weak, nonatomic) IBOutlet UIWebView *webBody;
@@ -33,5 +36,6 @@
 
 - (IBAction)btnMapPressed:(id)sender;
 - (IBAction)btnTicketPressed:(id)sender;
+- (IBAction)btnCalendarPressed:(id)sender;
 
 @end
