@@ -125,8 +125,8 @@
         [subPredicates addObject:typePredicate];
     }
     if(![searchString isEqualToString:@""]){
-        NSPredicate *searchPredicate = [NSPredicate predicateWithFormat:@"%K contains %@",
-                                                                        [RWDbSchemas SES_TITLE], searchString];
+        NSPredicate *searchPredicate = [NSPredicate predicateWithFormat:@"%K contains[cd] %@ OR %K contains[cd] %@",
+                                                                        [RWDbSchemas SES_TITLE], searchString, [RWDbSchemas SES_DETAILS], searchString];
         [subPredicates addObject:searchPredicate];
     }
 	NSPredicate *predicate = [NSCompoundPredicate andPredicateWithSubpredicates:subPredicates];
@@ -198,8 +198,8 @@
         [subPredicates addObject:typePredicate];
     }
     if(searchString != nil && ![searchString isEqualToString:@""]){
-        NSPredicate *searchPredicate = [NSPredicate predicateWithFormat:@"%K contains %@",
-                                                                        [RWDbSchemas SES_TITLE], searchString];
+        NSPredicate *searchPredicate = [NSPredicate predicateWithFormat:@"%K contains[cd] %@ OR %K contains[cd] %@",
+										[RWDbSchemas SES_TITLE], searchString, [RWDbSchemas SES_DETAILS], searchString];
         [subPredicates addObject:searchPredicate];
     }
     NSPredicate *predicate = [NSCompoundPredicate andPredicateWithSubpredicates:subPredicates];

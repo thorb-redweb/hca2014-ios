@@ -217,7 +217,7 @@
 }
 
 - (IBAction)openSearchView:(id)sender{
-	UIAlertView *searchView = [[UIAlertView alloc] initWithTitle:@"Sorter på event" message:@"" delegate:self cancelButtonTitle:@"Fortryd" otherButtonTitles:@"OK", nil];
+	UIAlertView *searchView = [[UIAlertView alloc] initWithTitle:@"Skriv søgetekst" message:@"" delegate:self cancelButtonTitle:@"Fortryd" otherButtonTitles:@"OK", nil];
 	searchView.tag = 3;
 
 	if(_searchField == nil){
@@ -226,6 +226,10 @@
 	
     [searchView setValue:_searchField forKey:@"accessoryView"];
     [searchView show];
+}
+
+-(void)didPresentAlertView:(UIAlertView *)alertView{
+	[_searchField becomeFirstResponder];
 }
 
 -(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
