@@ -49,9 +49,9 @@
 
     if([_page hasChild:[RWPAGE BODYUSESHTML]] && [_page getBoolFromNode:[RWPAGE BODYUSESHTML]])
     {
-        [_lblBody setHidden:YES];
-		[_imgView setHidden:YES];
-		NSString *webString = [NSString stringWithFormat:@"%@%@", _xml.css, _model.fulltextWithHtml];
+		[_scrollView setHidden:YES];
+		NSString *title = [NSString stringWithFormat:@"<div class=“page-header”><h1>%@</h1></div>",_model.title];
+		NSString *webString = [NSString stringWithFormat:@"%@%@%@", _xml.css, title, _model.fulltextWithHtml];
         [_webBody loadHTMLString:webString  baseURL:[NSURL URLWithString:_xml.imagesRootPath]];
     } else {
         [_webBody setHidden:YES];
@@ -73,21 +73,11 @@
 - (void)setAppearance{
     RWAppearanceHelper *helper = [[RWAppearanceHelper alloc] initWithLocalLook:_localLook globalLook:_globalLook];
 	
-//	UIMotionEffectGroup *topGroup = [helper getTopMotionEffectGroup];
-//	UIMotionEffectGroup *bottomGroup = [helper getBottomMotionEffectGroup];
-	
 	[helper setBackgroundTileImageOrColor:_imgBackground localImageName:[RWLOOK BACKGROUNDIMAGE] localColorName:[RWLOOK BACKGROUNDCOLOR] globalName:[RWLOOK DEFAULT_BACKCOLOR]];
 
-//	[_imgBackground addMotionEffect:bottomGroup];
-
     [helper.label setTitleStyle:_lblTitle];
-//	[_lblTitle addMotionEffect:topGroup];
-	
-//    [_imgView addMotionEffect:topGroup];
-
     [helper.label setBackTextStyle:_lblBody];
-//	[_lblBody addMotionEffect:topGroup];
-	
+
 	[helper setScrollBounces:_scrollView localName:[RWLOOK SCROLLBOUNCES] globalName:[RWLOOK SCROLLBOUNCES]];
 }
 
@@ -100,17 +90,17 @@
     _imgView.image = image;
 }
 
-- (void)webViewDidFinishLoad:(UIWebView *)webView {
-    [webView RWSizeThatFitsContent];
-}
-
-//- (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType{
-//	if(navigationType == UIWebViewNavigationTypeLinkClicked){
-//		[[UIApplication sharedApplication] openURL:[request URL]];
-//		return NO;
-//	}
-//	return YES;
+//- (void)webViewDidFinishLoad:(UIWebView *)webView {
+//    [webView RWSizeThatFitsContent];
 //}
+
+- (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType{
+	if(navigationType == UIWebViewNavigationTypeLinkClicked){
+		[[UIApplication sharedApplication] openURL:[request URL]];
+		return NO;
+	}
+	return YES;
+}
 
 -(IBAction)btnBackClicked{
     [_app.navController popPage];
