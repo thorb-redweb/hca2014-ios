@@ -250,6 +250,8 @@
 		36B0A72E19659FCB00DAD3EA /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36B0A72D19659FCB00DAD3EA /* EventKit.framework */; };
 		36B0A73119669D5C00DAD3EA /* RWActivityIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 36B0A73019669D5C00DAD3EA /* RWActivityIndicator.m */; };
 		36B0A73319669D9F00DAD3EA /* RWActivityIndicator.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36B0A73219669D9F00DAD3EA /* RWActivityIndicator.xib */; };
+		36B0A7361966CC1D00DAD3EA /* 3_5_splash.png in Resources */ = {isa = PBXBuildFile; fileRef = 36B0A7341966CC1D00DAD3EA /* 3_5_splash.png */; };
+		36B0A7371966CC1D00DAD3EA /* 4_0_splash.png in Resources */ = {isa = PBXBuildFile; fileRef = 36B0A7351966CC1D00DAD3EA /* 4_0_splash.png */; };
 		36E2A0AE1876CE3E001AB669 /* MyLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 36E2A0AD1876CE3E001AB669 /* MyLog.m */; };
 		36E2A0B7187D4C3E001AB669 /* RWCameraHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 36E2A0B6187D4C3E001AB669 /* RWCameraHandler.m */; };
 /* End PBXBuildFile section */
@@ -658,6 +660,8 @@
 		36B0A72F19669D5C00DAD3EA /* RWActivityIndicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWActivityIndicator.h; sourceTree = "<group>"; };
 		36B0A73019669D5C00DAD3EA /* RWActivityIndicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWActivityIndicator.m; sourceTree = "<group>"; };
 		36B0A73219669D9F00DAD3EA /* RWActivityIndicator.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RWActivityIndicator.xib; sourceTree = "<group>"; };
+		36B0A7341966CC1D00DAD3EA /* 3_5_splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3_5_splash.png; sourceTree = "<group>"; };
+		36B0A7351966CC1D00DAD3EA /* 4_0_splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 4_0_splash.png; sourceTree = "<group>"; };
 		36E2A0AC1876CE3E001AB669 /* MyLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyLog.h; path = ../Lumberjack/MyLog.h; sourceTree = "<group>"; };
 		36E2A0AD1876CE3E001AB669 /* MyLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyLog.m; path = ../Lumberjack/MyLog.m; sourceTree = "<group>"; };
 		36E2A0B5187D4C3E001AB669 /* RWCameraHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWCameraHandler.h; sourceTree = "<group>"; };
@@ -1422,6 +1426,8 @@
 				361B15201962ED390047530E /* icon_58.png */,
 				361B15211962ED390047530E /* icon_80.png */,
 				361B15221962ED390047530E /* icon_120.png */,
+				36B0A7341966CC1D00DAD3EA /* 3_5_splash.png */,
+				36B0A7351966CC1D00DAD3EA /* 4_0_splash.png */,
 				36A29C0518C0D2CC00E64B7A /* icon_about_bottombar.png */,
 				36A29C0618C0D2CC00E64B7A /* icon_map_bottombar.png */,
 				36A29C0718C0D2CC00E64B7A /* icon_map_pink.png */,
@@ -1729,6 +1735,7 @@
 				363109CF18EC13420015370A /* splash_logo_justimagine_top.png in Resources */,
 				363109CE18EC13420015370A /* splash_logo_justimagine_bottom.png in Resources */,
 				36A79EE317C4F15D00AB211B /* RWArticleDetailViewController.xib in Resources */,
+				36B0A7361966CC1D00DAD3EA /* 3_5_splash.png in Resources */,
 				36214F89183F6E0E001B0B63 /* RWPushMessageListViewController.xib in Resources */,
 				36A97ADF185708A40050EC8D /* RWImageUploadBrowserListItem.xib in Resources */,
 				36A29C1918C0D2CD00E64B7A /* default_icon.jpeg in Resources */,
@@ -1744,6 +1751,7 @@
 				367628F318040475002ED534 /* text.xml in Resources */,
 				36A728A117CB6D0000374063 /* Track.gpx in Resources */,
 				36A29C2718C0D2CD00E64B7A /* tabbar.png in Resources */,
+				36B0A7371966CC1D00DAD3EA /* 4_0_splash.png in Resources */,
 				36A29C2D18C0DA6700E64B7A /* icon_about_bottombar@2x.png in Resources */,
 				36A29BB318BCD60700E64B7A /* RWHcaListCell.xib in Resources */,
 				36A29C1F18C0D2CD00E64B7A /* icon_ticket_pink.png in Resources */,
