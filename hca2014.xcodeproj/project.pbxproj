@@ -244,7 +244,6 @@
 		36AB7CA917C2052100316921 /* RWXMLStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 36AB7CA817C2052100316921 /* RWXMLStore.m */; };
 		36AB7CB217C25EA700316921 /* RWTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 36AB7CB117C25EA700316921 /* RWTabBar.m */; };
 		36AB7CC017C3609500316921 /* server.xml in Resources */ = {isa = PBXBuildFile; fileRef = 36AB7CBF17C3609500316921 /* server.xml */; };
-		36B0A72819657CF400DAD3EA /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 36B0A72719657CF400DAD3EA /* .gitignore */; };
 		36B0A72B19659EE500DAD3EA /* icon_calendar_pink.png in Resources */ = {isa = PBXBuildFile; fileRef = 36B0A72919659EE500DAD3EA /* icon_calendar_pink.png */; };
 		36B0A72C19659EE500DAD3EA /* icon_calendar_pink@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 36B0A72A19659EE500DAD3EA /* icon_calendar_pink@2x.png */; };
 		36B0A72E19659FCB00DAD3EA /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36B0A72D19659FCB00DAD3EA /* EventKit.framework */; };
@@ -252,6 +251,7 @@
 		36B0A73319669D9F00DAD3EA /* RWActivityIndicator.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36B0A73219669D9F00DAD3EA /* RWActivityIndicator.xib */; };
 		36B0A7361966CC1D00DAD3EA /* 3_5_splash.png in Resources */ = {isa = PBXBuildFile; fileRef = 36B0A7341966CC1D00DAD3EA /* 3_5_splash.png */; };
 		36B0A7371966CC1D00DAD3EA /* 4_0_splash.png in Resources */ = {isa = PBXBuildFile; fileRef = 36B0A7351966CC1D00DAD3EA /* 4_0_splash.png */; };
+		36B0A7391966CDD100DAD3EA /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 36B0A7381966CDD100DAD3EA /* .gitignore */; };
 		36E2A0AE1876CE3E001AB669 /* MyLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 36E2A0AD1876CE3E001AB669 /* MyLog.m */; };
 		36E2A0B7187D4C3E001AB669 /* RWCameraHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 36E2A0B6187D4C3E001AB669 /* RWCameraHandler.m */; };
 /* End PBXBuildFile section */
@@ -653,7 +653,6 @@
 		36AB7CB017C25EA700316921 /* RWTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWTabBar.h; sourceTree = "<group>"; };
 		36AB7CB117C25EA700316921 /* RWTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWTabBar.m; sourceTree = "<group>"; };
 		36AB7CBF17C3609500316921 /* server.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = server.xml; sourceTree = "<group>"; };
-		36B0A72719657CF400DAD3EA /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		36B0A72919659EE500DAD3EA /* icon_calendar_pink.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_calendar_pink.png; path = "Red Event App/Resources/icon_calendar_pink.png"; sourceTree = "<group>"; };
 		36B0A72A19659EE500DAD3EA /* icon_calendar_pink@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon_calendar_pink@2x.png"; path = "Red Event App/Resources/icon_calendar_pink@2x.png"; sourceTree = "<group>"; };
 		36B0A72D19659FCB00DAD3EA /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
@@ -662,6 +661,7 @@
 		36B0A73219669D9F00DAD3EA /* RWActivityIndicator.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RWActivityIndicator.xib; sourceTree = "<group>"; };
 		36B0A7341966CC1D00DAD3EA /* 3_5_splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3_5_splash.png; sourceTree = "<group>"; };
 		36B0A7351966CC1D00DAD3EA /* 4_0_splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 4_0_splash.png; sourceTree = "<group>"; };
+		36B0A7381966CDD100DAD3EA /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		36E2A0AC1876CE3E001AB669 /* MyLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyLog.h; path = ../Lumberjack/MyLog.h; sourceTree = "<group>"; };
 		36E2A0AD1876CE3E001AB669 /* MyLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyLog.m; path = ../Lumberjack/MyLog.m; sourceTree = "<group>"; };
 		36E2A0B5187D4C3E001AB669 /* RWCameraHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWCameraHandler.h; sourceTree = "<group>"; };
@@ -1253,6 +1253,7 @@
 		36AB7BC617BB7D0E00316921 = {
 			isa = PBXGroup;
 			children = (
+				36B0A7381966CDD100DAD3EA /* .gitignore */,
 				3645BF7E17CE320100047159 /* Banegården.gpx */,
 				3645BF7F17CE320200047159 /* Brandts.gpx */,
 				3645BF8017CE320300047159 /* Kongens Have.gpx */,
@@ -1326,7 +1327,6 @@
 				36E2A0AD1876CE3E001AB669 /* MyLog.m */,
 				26E735B3346295998942E475 /* RWNavigationController.h */,
 				26E73CECBA81E777D3175471 /* RWNavigationController.m */,
-				36B0A72719657CF400DAD3EA /* .gitignore */,
 			);
 			name = hca2014;
 			path = "Red Event App";
@@ -1762,6 +1762,7 @@
 				36A29C2F18C0DA6700E64B7A /* icon_news_bottombar@2x.png in Resources */,
 				36A29C1E18C0D2CD00E64B7A /* icon_program_bottombar.png in Resources */,
 				36A29C1718C0D2CD00E64B7A /* art.png in Resources */,
+				36B0A7391966CDD100DAD3EA /* .gitignore in Resources */,
 				36B0A73319669D9F00DAD3EA /* RWActivityIndicator.xib in Resources */,
 				3645BF8117CE320500047159 /* Banegården.gpx in Resources */,
 				3645BF8217CE320500047159 /* Brandts.gpx in Resources */,
@@ -1774,7 +1775,6 @@
 				36B0A72C19659EE500DAD3EA /* icon_calendar_pink@2x.png in Resources */,
 				36A0B4001845E2D6007A6C78 /* RWPushMessageAutoSubscriberViewController.xib in Resources */,
 				3683F216182A4F5F00C22E46 /* RWMainViewController.xib in Resources */,
-				36B0A72819657CF400DAD3EA /* .gitignore in Resources */,
 				36214F84183F6DFE001B0B63 /* RWPushMessageDetailViewController.xib in Resources */,
 				36A97B5C1876B0DD0050EC8D /* README.txt in Resources */,
 				26E73BAC5180C9A138C7C0FD /* RWSessionDetailViewController.xib in Resources */,
