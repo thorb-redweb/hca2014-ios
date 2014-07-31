@@ -105,6 +105,12 @@
 }
 
 - (void)dumpContent:(NSDictionary *)entry {
+	NSDate *publishDate = [self convertStringToDate:[entry objectForKey:_json.Art.PUBLISHDATE]];
+	NSDate *startOf2014 = [self convertStringToDate:@"2014-01-01 00:00:00"];
+	if ([publishDate compare:startOf2014] == NSOrderedAscending) {
+		DDLogVerbose(@"Skip article %@: too early", [entry objectForKey:_json.Art.ARTICLE_ID]);
+		return;
+	}
     Article *content = (Article *) [NSEntityDescription insertNewObjectForEntityForName:[RWDbSchemas ART_TABLENAME] inManagedObjectContext:_managedObjectContext];
     [content setArticleid:[NSDecimalNumber decimalNumberWithString:[entry objectForKey:_json.Art.ARTICLE_ID]]];
     [content setCatid:[NSDecimalNumber decimalNumberWithString:[entry objectForKey:_json.Art.CATID]]];
@@ -135,7 +141,7 @@
     [event setDetails:[self removeBackSlashes:[entry objectForKey:_json.Event.DETAILS]]];
     [event setImagepath:[self removeBackSlashes:[entry objectForKey:_json.Event.IMAGEPATH]]];
     [event setSubmission:[self removeBackSlashes:[entry objectForKey:_json.Event.SUBMISSION]]];
-
+	
     [_events addObject:event];
     for (Session *session in _sessions) {
         if ([session.eventid isEqual:event.eventid]) {

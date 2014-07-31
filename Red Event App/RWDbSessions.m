@@ -19,11 +19,18 @@
 @implementation RWDbSessions {
     RWDbHelper *_dbHelper;
 	RWXMLStore *_xml;
+	NSArray *_sessionSortDescriptors;
 }
+
 - (id)initWithHelper:(RWDbHelper *)helper xml:(RWXMLStore *)xml{
     if (self = [super init]) {
         _dbHelper = helper;
 		_xml = xml;
+		
+		NSSortDescriptor *sortByStartTime = [[NSSortDescriptor alloc] initWithKey:[RWDbSchemas SES_STARTDATETIME] ascending:YES];
+		NSSortDescriptor *sortByTitle = [[NSSortDescriptor alloc] initWithKey:[RWDbSchemas SES_TITLE] ascending:YES];
+		NSSortDescriptor *sortEndTime = [[NSSortDescriptor alloc] initWithKey:[RWDbSchemas SES_ENDDATETIME] ascending:YES];
+		_sessionSortDescriptors = [[NSArray alloc] initWithObjects:sortByStartTime, sortByTitle, sortEndTime, nil];
     }
     else {DDLogWarn(@"RWDbSessions not initialized");}
     return self;
@@ -73,10 +80,7 @@
 - (NSArray *)getVMList {
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"%K != NULL AND %K != NULL", [RWDbSchemas SES_EVENT], [RWDbSchemas SES_VENUE]];
 
-    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:[RWDbSchemas SES_STARTDATETIME] ascending:YES];
-    NSArray *sortDescriptors = [[NSArray alloc] initWithObjects:sortDescriptor, nil];
-
-    NSMutableArray *fetchResults = [_dbHelper getFromDatabase:[RWDbSchemas SES_TABLENAME] predicate:predicate sort:sortDescriptors];
+    NSMutableArray *fetchResults = [_dbHelper getFromDatabase:[RWDbSchemas SES_TABLENAME] predicate:predicate sort:_sessionSortDescriptors];
 
     NSMutableArray *vmList = [[NSMutableArray alloc] initWithCapacity:0];
     for (Session *session in fetchResults) {
@@ -91,10 +95,7 @@
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"%K >= %@ AND %K != nil AND %K != nil",
                                                               [RWDbSchemas SES_STARTDATETIME], datetime, [RWDbSchemas SES_EVENT], [RWDbSchemas SES_VENUE]];
 
-    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:[RWDbSchemas SES_STARTDATETIME] ascending:YES];
-    NSArray *sortDescriptors = [[NSArray alloc] initWithObjects:sortDescriptor, nil];
-
-    NSArray *fetchResults = [_dbHelper getFromDatabase:[RWDbSchemas SES_TABLENAME] predicate:predicate sort:sortDescriptors fetchLimit:3];
+    NSArray *fetchResults = [_dbHelper getFromDatabase:[RWDbSchemas SES_TABLENAME] predicate:predicate sort:_sessionSortDescriptors fetchLimit:3];
 
     NSMutableArray *vmList = [[NSMutableArray alloc] initWithCapacity:0];
     for (Session *session in fetchResults) {
@@ -131,10 +132,7 @@
     }
 	NSPredicate *predicate = [NSCompoundPredicate andPredicateWithSubpredicates:subPredicates];
 
-    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:[RWDbSchemas SES_STARTDATETIME] ascending:YES];
-    NSArray *sortDescriptors = [[NSArray alloc] initWithObjects:sortDescriptor, nil];
-
-    NSMutableArray *fetchResults = [_dbHelper getFromDatabase:[RWDbSchemas SES_TABLENAME] predicate:predicate sort:sortDescriptors];
+    NSMutableArray *fetchResults = [_dbHelper getFromDatabase:[RWDbSchemas SES_TABLENAME] predicate:predicate sort:_sessionSortDescriptors];
 
     NSMutableArray *vmList = [[NSMutableArray alloc] initWithCapacity:0];
     for (Session *session in fetchResults) {
@@ -184,8 +182,8 @@
     if (datePredicate != nil) {
         [subPredicates addObject:datePredicate];
     }
-    NSPredicate *primePredicate = [NSPredicate predicateWithFormat:@"%K != nil AND %K != nil",
-                                                                  [RWDbSchemas SES_EVENT], [RWDbSchemas SES_VENUE]];
+    NSPredicate *primePredicate = [NSPredicate predicateWithFormat:@"%K != nil AND %K != nil AND %K != nil",
+                                                                  [RWDbSchemas SES_EVENT], [RWDbSchemas SES_VENUE], [RWDbSchemas SES_STARTDATETIME]];
     [subPredicates addObject:primePredicate];
     if(venueid > 0){
         NSPredicate *venuePredicate = [NSPredicate predicateWithFormat:@"%K = %d",

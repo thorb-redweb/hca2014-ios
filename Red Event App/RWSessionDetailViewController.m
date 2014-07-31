@@ -71,7 +71,10 @@
         _lblBody.text = details;
     }
 	
-	if ([_model.submissionPath isEqualToString:@""]) {
+	NSString *urlRegex = @"\\(?\\bhttp://[-A-Za-z0-9+&@#/%?=~_()|!:,.;]*[-A-Za-z0-9+&@#/%=~_()|]";
+	NSPredicate *isAnUrlTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", urlRegex];
+
+	if (![isAnUrlTest evaluateWithObject:_model.submissionPath]) {
 		[_btnTicket setHidden: YES];
 		[_btnTicket setEnabled: YES];
 		[_btnTicket RWsetHeightAsConstraint:0.0];
@@ -140,7 +143,7 @@
 }
 
 - (IBAction)btnMapPressed:(id)sender {
-    RWXmlNode *nextPage = [_xml getPage:_childname];
+    RWXmlNode *nextPage = [[_xml getPage:_childname] deepClone];
     [nextPage addNodeWithName:[RWPAGE SESSIONID] value:_model.sessionid];
 
     [_app.navController pushViewWithPage:nextPage];

@@ -138,7 +138,8 @@
 		}
 	}
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    [dateFormatter setDateFormat:@"EEEE d MMM"];
+    [dateFormatter setDateFormat:@"EEEE 'd.' d. MMM"];
+	[dateFormatter setLocale:[[NSLocale alloc] initWithLocaleIdentifier:@"da"]];
     _lblDate.text = [dateFormatter stringFromDate:_listDate];
     [self reloadView];
 }

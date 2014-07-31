@@ -134,7 +134,14 @@
 }
 
 - (void)updateArticle:(NSDictionary *)entry {
-    int contentid = [[entry objectForKey:_json.Art.ARTICLE_ID] intValue];
+	NSDate *publishDate = [self convertStringToDate:[entry objectForKey:_json.Art.PUBLISHDATE]];
+	NSDate *startOf2014 = [self convertStringToDate:@"2014-01-01 00:00:00"];
+	if ([publishDate compare:startOf2014] == NSOrderedAscending) {
+		NSLog(@"Skip article %@: too early", [entry objectForKey:_json.Art.ARTICLE_ID]);
+		return;
+	}
+
+	int contentid = [[entry objectForKey:_json.Art.ARTICLE_ID] intValue];
     Article *article = [_db.Articles getFromId:contentid];
     if (!article) {
         article = (Article *) [NSEntityDescription insertNewObjectForEntityForName:[RWDbSchemas ART_TABLENAME] inManagedObjectContext:_managedObjectContext];
@@ -367,12 +374,16 @@
 }
 
 - (NSDate *)convertStringToDate:(NSString *)dateString {
-    NSDataDetector *detector = [NSDataDetector dataDetectorWithTypes:NSTextCheckingAllTypes error:nil];
-    __block NSDate *myDate;
-    [detector enumerateMatchesInString:dateString options:kNilOptions range:NSMakeRange(0, dateString.length) usingBlock:^(NSTextCheckingResult *result, NSMatchingFlags flags, BOOL *stop) {
-        myDate = result.date;
-    }];
-    return myDate;
+//    NSDataDetector *detector = [NSDataDetector dataDetectorWithTypes:NSTextCheckingAllTypes error:nil];
+//    __block NSDate *myDate;
+//    [detector enumerateMatchesInString:dateString options:kNilOptions range:NSMakeRange(0, dateString.length) usingBlock:^(NSTextCheckingResult *result, NSMatchingFlags flags, BOOL *stop) {
+//        myDate = [[NSDate alloc] initWithTimeIntervalSince1970: result.date.timeIntervalSince1970];
+//    }];
+//    return myDate;
+	NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+	[dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+	NSDate *dateFromString = [dateFormatter dateFromString:dateString];
+	return dateFromString;
 }
 
 - (NSString *)removeBackSlashes:(NSString *)string{

@@ -79,7 +79,8 @@
 
 - (NSString *)startDateLong {
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    [dateFormatter setDateFormat:@"EEEE, dd.MM.yyyy"];
+    [dateFormatter setDateFormat:@"EEEE 'd.' d. MMM"];
+	[dateFormatter setLocale:[[NSLocale alloc] initWithLocaleIdentifier:@"da"]];
     return [dateFormatter stringFromDate:_session.startdatetime];
 }
 
