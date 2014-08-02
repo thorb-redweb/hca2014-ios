@@ -167,6 +167,7 @@
         event.title = _model.title;
         event.startDate = _model.startDatetime;
         event.endDate = _model.endDatetime;
+		event.location = _model.venue;
         [event setCalendar:[_store defaultCalendarForNewEvents]];
         NSError *err = nil;
         [_store saveEvent:event span:EKSpanThisEvent commit:YES error:&err];

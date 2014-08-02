@@ -44,12 +44,6 @@
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection {
     [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
-
-    //	int i = 0;
-    //	while (i < 20000000000) {
-    //		i++;
-    //	}
-
     [_delegate putUpdateDataInDatabase:_data];
 }
 

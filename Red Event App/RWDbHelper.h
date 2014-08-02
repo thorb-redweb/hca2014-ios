@@ -15,6 +15,8 @@
 
 - (id)initWithManagedObjectContext:(NSManagedObjectContext *)context;
 
+-(NSManagedObjectContext *)getManagedObjectContext;
+
 - (NSMutableArray *)getFromDatabase:(NSString *)itemType;
 
 - (NSMutableArray *)getFromDatabase:(NSString *)itemType predicate:(NSPredicate *)predicate;

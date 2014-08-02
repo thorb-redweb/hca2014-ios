@@ -24,6 +24,10 @@
     return self;
 }
 
+-(NSManagedObjectContext *)getManagedObjectContext{
+	return _managedObjectContext;
+}
+
 - (NSMutableArray *)getFromDatabase:(NSString *)itemType {
     return [self getFromDatabase:itemType predicate:nil sort:nil prefetching:nil fetchLimit:0];
 }

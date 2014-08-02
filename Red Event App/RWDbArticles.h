@@ -25,4 +25,6 @@
 - (NSArray *)getVMListFromCatIds:(NSArray *)catids;
 
 - (NSArray *)getVMListOfLastThree:(NSArray *)catid;
+
+- (void)delete2013Articles;
 @end

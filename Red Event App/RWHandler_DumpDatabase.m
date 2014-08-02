@@ -107,7 +107,7 @@
 - (void)dumpContent:(NSDictionary *)entry {
 	NSDate *publishDate = [self convertStringToDate:[entry objectForKey:_json.Art.PUBLISHDATE]];
 	NSDate *startOf2014 = [self convertStringToDate:@"2014-01-01 00:00:00"];
-	if ([publishDate compare:startOf2014] == NSOrderedAscending) {
+	if ([publishDate compare:startOf2014] == NSOrderedAscending && [[entry objectForKey:_json.Art.ARTICLE_ID] intValue] != 1) {
 		DDLogVerbose(@"Skip article %@: too early", [entry objectForKey:_json.Art.ARTICLE_ID]);
 		return;
 	}

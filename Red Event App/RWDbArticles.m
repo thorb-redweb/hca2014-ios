@@ -119,4 +119,24 @@
     return vmList;
 }
 
+#pragma mark Housekeeping Functions
+
+- (void)delete2013Articles{
+	//Create the data predicate
+	NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+	[dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+	NSDate *startOf2014 = [dateFormatter dateFromString:@"2014-01-01 00:00:00"];
+	NSPredicate *datePredicate = [NSPredicate predicateWithFormat:@"%K < %@",
+								  [RWDbSchemas ART_PUBLISHDATE], startOf2014];
+	
+	//Get the implicated articles
+	NSArray *result = [_dbHelper getFromDatabase:[RWDbSchemas ART_TABLENAME] predicate:datePredicate];
+	
+	//Delete the articles
+	for(Article *article in result){
+		[[_dbHelper getManagedObjectContext] deleteObject:article];
+	}
+}
+
+
 @end
