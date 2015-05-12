@@ -29,6 +29,7 @@
     return self;
 }
 
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -81,6 +82,11 @@
 	}
 }
 
+- (void)addMarkerToMapView:(GMSMarker *)marker {
+    [_markers addObject:marker];
+    marker.map = _mapView;
+}
+
 -(IBAction)btnBackClicked{
     [_app.navController popPage];
 }
@@ -102,7 +108,7 @@
             GMSCoordinateBounds *bounds = [[GMSCoordinateBounds alloc] initWithCoordinate:my2DLocation coordinate:my2DLocation];
 			
             bounds = [bounds includingCoordinate:my2DLocation];
-            for (GMSMarker *marker in ((GMSMapView *) _mapView).markers) {
+            for (GMSMarker *marker in _markers) {
                 bounds = [bounds includingCoordinate:marker.position];
             }
 			

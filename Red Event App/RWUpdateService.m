@@ -6,8 +6,6 @@
 //  Copyright (c) 2014 redWEB. All rights reserved.
 //
 
-#import "MyLog.h"
-
 #import "RWUpdateService.h"
 #import "RWAppDelegate.h"
 
@@ -28,7 +26,7 @@
 }
 
 -(void)start{
-	DDLogInfo(@"UpdateService starting");
+    NSLog(@"UpdateService starting");
 	_timer = [NSTimer scheduledTimerWithTimeInterval:5*60 target:self selector:@selector(startUpdate) userInfo:Nil repeats:YES];
 	_backgroundTask = [_application beginBackgroundTaskWithExpirationHandler:^{
 		[_application endBackgroundTask:_backgroundTask];
@@ -38,30 +36,30 @@
 }
 
 -(void)stop{
-	DDLogVerbose(@"UpdateService stopping");
+    NSLog(@"UpdateService stopping");
 	[_timer invalidate];
 	_timer = nil;
 	if(_backgroundTask != UIBackgroundTaskInvalid){
 		[_application endBackgroundTask:_backgroundTask];
 		_backgroundTask = UIBackgroundTaskInvalid;
 	}
-	DDLogInfo(@"UpdateService stopped");
+    NSLog(@"UpdateService stopped");
 }
 
 -(void)startUpdate{
-	DDLogVerbose(@"Check for updates");
+    NSLog(@"Check for updates");
 	NSDate *fiveMinuteBack = [[NSDate date] dateByAddingTimeInterval:-(5*60)];
 	if([_app.lastUpdated compare:fiveMinuteBack] == NSOrderedAscending){
 	   [_app.sv updateDatabase:self];
 	}
 	else{
-		DDLogVerbose(@"No update; last update too close to current time");
+        NSLog(@"No update; last update too close to current time");
 	}
 }
 
 - (void)continueAfterUpdate {
 	_app.lastUpdated = [NSDate date];
-	DDLogInfo(@"Update finished");
+    NSLog(@"Update finished");
 }
 
 

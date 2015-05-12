@@ -12,13 +12,6 @@
 #import "RWCameraHandler.h"
 #import "RWCameraIntentViewController.h"
 
-#import "AVCamPreviewView.h"
-
-#import "MyLog.h"
-
-#import "RWXmlNode.h"
-#import "RWPAGE.h"
-
 static void * SessionRunningAndDeviceAuthorizedContext = &SessionRunningAndDeviceAuthorizedContext;
 static void * CapturingStillImageContext = &CapturingStillImageContext;
 
@@ -76,7 +69,7 @@ static void * CapturingStillImageContext = &CapturingStillImageContext;
         
         if (error)
         {
-            DDLogError(@"%@", error);
+            NSLog(@"%@", error);
         }
         
         if ([_session canAddInput:videoDeviceInput])
@@ -160,14 +153,14 @@ static void * CapturingStillImageContext = &CapturingStillImageContext;
 				}
 				
 				if(error != nil){
-					DDLogError(@"Create directory error: %@", error);
+                    NSLog(@"Create directory error: %@", error);
 					imagesaved = false;
 				}
 				
 				[UIImagePNGRepresentation(image) writeToFile:_filePath options:NSDataWritingAtomic error:&error];
 				
 				if(error != nil){
-					DDLogError(@"Error in saving image to disk. Error : %@", error);
+                    NSLog(@"Error in saving image to disk. Error : %@", error);
 					imagesaved = false;
 				}
             }
@@ -230,7 +223,7 @@ static void * CapturingStillImageContext = &CapturingStillImageContext;
         }
         else
         {
-            DDLogError(@"%@", error);
+            NSLog(@"%@", error);
         }
     }
 }
@@ -265,7 +258,7 @@ static void * CapturingStillImageContext = &CapturingStillImageContext;
         }
         else
         {
-            DDLogError(@"%@", error);
+            NSLog(@"%@", error);
         }
     });
 }

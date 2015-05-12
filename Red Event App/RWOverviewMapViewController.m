@@ -61,7 +61,7 @@
 	
     super.mapView.camera = [GMSCameraPosition cameraWithLatitude:standardLatitude longitude:standardLongitude zoom:standardZoom];
 	
-    ((GMSMapView *) super.mapView).myLocationEnabled = YES;
+    super.mapView.myLocationEnabled = YES;
 	
     for (RWVenueVM *venue in venueList) {
 		RWSessionVM *session = [_db.Venues getNextSession:venue.venueid];
@@ -89,7 +89,7 @@
 			snippet = [NSString stringWithFormat:@"%@\n%@", snippet, [session title]];
 			snippet = [NSString stringWithFormat:@"%@//%@", snippet, session.sessionid];
 			venueMarker.snippet = snippet;
-			venueMarker.map = (GMSMapView *) super.mapView;
+            [self addMarkerToMapView:venueMarker];
 			
 			venueMarker.icon = session.typeIcon;
 		}

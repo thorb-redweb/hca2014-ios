@@ -6,8 +6,6 @@
 //  Copyright (c) 2013 redWEB. All rights reserved.
 //
 
-#import "MyLog.h"
-
 #import "RWDbArticles.h"
 #import "Article.h"
 #import "RWArticleVM.h"
@@ -26,7 +24,7 @@
         _dbHelper = helper;
 		_xml = xml;
     }
-    else {DDLogError(@"RWDbArticles not initialized");}
+    else {NSLog(@"RWDbArticles not initialized");}
     return self;
 }
 
@@ -125,12 +123,14 @@
 	//Create the data predicate
 	NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
 	[dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
-	NSDate *startOf2014 = [dateFormatter dateFromString:@"2014-01-01 00:00:00"];
+	NSDate *startOf2014 = [dateFormatter dateFromString:@"2015-01-01 00:00:00"];
 	NSPredicate *datePredicate = [NSPredicate predicateWithFormat:@"%K < %@",
 								  [RWDbSchemas ART_PUBLISHDATE], startOf2014];
+	NSPredicate *aboutPagePredicate = [NSPredicate predicateWithFormat:@"%K != 1", [RWDbSchemas ART_ARTICLEID]];
+	NSPredicate *fullPredicate = [NSCompoundPredicate andPredicateWithSubpredicates:[NSArray arrayWithObjects:datePredicate, aboutPagePredicate, nil]];
 	
 	//Get the implicated articles
-	NSArray *result = [_dbHelper getFromDatabase:[RWDbSchemas ART_TABLENAME] predicate:datePredicate];
+	NSArray *result = [_dbHelper getFromDatabase:[RWDbSchemas ART_TABLENAME] predicate:fullPredicate];
 	
 	//Delete the articles
 	for(Article *article in result){

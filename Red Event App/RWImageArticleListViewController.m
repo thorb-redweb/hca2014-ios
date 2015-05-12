@@ -115,7 +115,7 @@
     cell.lblIntro.text = [viewmodel.introtext stringByStrippingHTML];
 
     cell.imgThumb.image = [UIImage imageNamed:@"defaultIcon.jpeg"];
-    [cell.imgThumb setImageWithURL:viewmodel.introImageUrl placeholderImage:[UIImage imageNamed:@"default_icon.jpg"]];
+    [cell.imgThumb sd_setImageWithURL:viewmodel.introImageUrl placeholderImage:[UIImage imageNamed:@"default_icon.jpg"]];
 
     return cell;
 }

@@ -6,8 +6,6 @@
 //  Copyright (c) 2013 redWEB. All rights reserved.
 //
 
-#import "MyLog.h"
-
 #import "RWDbCommon.h"
 #import "RWDbHelper.h"
 
@@ -18,7 +16,7 @@
     if (self = [super init]) {
         _dbHelper = helper;
     }
-    else {DDLogError(@"RWDbCommon not initialized");}
+    else {NSLog(@"RWDbCommon not initialized");}
     return self;
 }
 @end

@@ -41,7 +41,7 @@
 		cell.lblTitle.text = article.title;
 		cell.lblBody.text = article.introtextWithoutHtml;
 		NSURL *imagePath = article.introImageUrl;
-		[cell.imgImage setImageWithURL:imagePath placeholderImage:[UIImage imageNamed:@"default_icon.jpg"]];
+		[cell.imgImage sd_setImageWithURL:imagePath placeholderImage:[UIImage imageNamed:@"default_icon.jpg"]];
 	}
 	
 	UITapGestureRecognizer *recognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTapFrom:)];

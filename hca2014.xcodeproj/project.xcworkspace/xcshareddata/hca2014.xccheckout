@@ -10,29 +10,29 @@
 	<string>hca2014</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>7D3D70BC-EC61-4741-BEB5-5664ACB99035</key>
-		<string>file:///Users/redwebpraktik/IphoneProjects/Red%20App/</string>
+		<key>8550ADDFA4A28D75EF914C5A602640737E38FB00</key>
+		<string>https://github.com/thorb-redweb/hca2014-ios.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>hca2014.xcodeproj/project.xcworkspace</string>
+	<string>hca2014.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>7D3D70BC-EC61-4741-BEB5-5664ACB99035</key>
+		<key>8550ADDFA4A28D75EF914C5A602640737E38FB00</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>file:///Users/redwebpraktik/IphoneProjects/Red%20App/</string>
+	<string>https://github.com/thorb-redweb/hca2014-ios.git</string>
 	<key>IDESourceControlProjectVersion</key>
-	<integer>110</integer>
+	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>7D3D70BC-EC61-4741-BEB5-5664ACB99035</string>
+	<string>8550ADDFA4A28D75EF914C5A602640737E38FB00</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>7D3D70BC-EC61-4741-BEB5-5664ACB99035</string>
+			<string>8550ADDFA4A28D75EF914C5A602640737E38FB00</string>
 			<key>IDESourceControlWCCName</key>
 			<string>hca2014</string>
 		</dict>

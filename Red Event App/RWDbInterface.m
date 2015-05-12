@@ -6,12 +6,7 @@
 //  Copyright (c) 2013 redWEB. All rights reserved.
 //
 
-#import "MyLog.h"
-
-#import "NSDate+RWDate.h"
-
 #import "RWAppDelegate.h"
-#import "RWDbInterface.h"
 #import "RWDbHelper.h"
 #import "RWDbArticles.h"
 #import "RWDbCommon.h"
@@ -19,8 +14,6 @@
 #import "RWDbSessions.h"
 #import "RWDbVenues.h"
 #import "RWHandler_DumpDatabase.h"
-#import "RWHandler_UpdateDatabase.h"
-#import "RWXMLStore.h"
 #import "RWDbPushMessages.h"
 #import "RWDbPushMessageGroups.h"
 
@@ -52,7 +45,7 @@
         _Sessions = [[RWDbSessions alloc] initWithHelper:_dbHelper xml:_xml];
         _Venues = [[RWDbVenues alloc] initWithHelper:_dbHelper app:app];
     }
-    else {DDLogError(@"Database not initialized");}
+    else {NSLog(@"Database not initialized");}
     return self;
 }
 

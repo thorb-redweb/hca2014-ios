@@ -57,8 +57,8 @@
         [_webBody setHidden:YES];
         _lblBody.text = _model.fulltextWithoutHtml;
 		if (_model.mainImagePath && ![_model.mainImagePath isEqual:@""]) {
-			[_imgView setImageWithURL:_model.mainImageUrl placeholderImage:[UIImage imageNamed:@"default_icon.jpg"]
-							completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType) {
+			[_imgView sd_setImageWithURL:_model.mainImageUrl placeholderImage:[UIImage imageNamed:@"default_icon.jpg"]
+							completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *url) {
 								float imageHeight = image.size.height;
                                 float aspectHeight = imageHeight * _imgView.frame.size.width / image.size.width;
                                 [_imgView RWsetHeightAsConstraint:aspectHeight];

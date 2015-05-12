@@ -7,7 +7,6 @@
 //
 
 #import "UIView+RWViewLayout.h"
-#import "DDLog.h"
 
 #import "RWNavigationController.h"
 #import "RWAppDelegate.h"
@@ -38,8 +37,6 @@
 
 @end
 
-static const int ddLogLevel = LOG_LEVEL_INFO;
-
 @implementation RWNavigationController{
 	RWNavController *_navbar;
 	RWMainViewController *_mainViewController;
@@ -67,7 +64,7 @@ static const int ddLogLevel = LOG_LEVEL_INFO;
 
 - (void)pushViewWithPage:(RWXmlNode *)page addToBackStack:(bool)addToBackStack{
 	if([page hasChild:[RWPAGE NAME]]){
-		DDLogDebug(@"Pushing view with page: %@",[page getStringFromNode:[RWPAGE NAME]]);
+        NSLog(@"Pushing view with page: %@",[page getStringFromNode:[RWPAGE NAME]]);
 	}
 	RWAppDelegate *app = (RWAppDelegate *)[[UIApplication sharedApplication] delegate];
     NSString *type =  [page getStringFromNode:[RWPAGE TYPE]];
@@ -176,8 +173,8 @@ static const int ddLogLevel = LOG_LEVEL_INFO;
 
 + (UIViewController *)getViewControllerFromPage:(RWXmlNode *)page {
     NSString *viewControllerType = [page getStringFromNode:[RWPAGE TYPE]];
-	
-	DDLogDebug(@"View controller pagetype: %@", viewControllerType);
+
+    NSLog(@"View controller pagetype: %@", viewControllerType);
 
 	if ([viewControllerType isEqual:[RWTYPE ARTICLEDETAIL]]) {
         return [[RWArticleDetailViewController alloc] initWithPage:page];

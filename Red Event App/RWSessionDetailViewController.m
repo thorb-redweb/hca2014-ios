@@ -8,22 +8,15 @@
 
 #import <EventKit/EventKit.h>
 
-#import "MyLog.h"
-
-#import "NSString+RWString.h"
-#import "SDWebImage/UIImageView+WebCache.h"
 #import "UIScrollView+RWScrollView.h"
 #import "UIView+RWViewLayout.h"
 #import "UIWebView+RWWebView.h"
 
 #import "RWSessionDetailViewController.h"
 
-#import "RWAppDelegate.h"
-#import "RWServer.h"
-#import "RWDbInterface.h"
-
 #import "RWSessionVM.h"
-
+#import "SDImageCache.h"
+#import "UIImageView+WebCache.h"
 
 @interface RWSessionDetailViewController ()
 
@@ -85,9 +78,9 @@
             _imgView.image = _model.image;
         }
         else {
-			[_imgView setImageWithURL:_model.imageUrl placeholderImage:[UIImage imageNamed:@"default_icon.jpg"]
-							completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType) {
-								float imageHeight = image.size.height;
+			[_imgView sd_setImageWithURL:_model.imageUrl placeholderImage:[UIImage imageNamed:@"default_icon.jpg"]
+							completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *url) {
+                                float imageHeight = image.size.height;
                                 float aspectHeight = imageHeight * _imgView.frame.size.width / image.size.width;
                                 [_imgView RWsetHeightAsConstraint:aspectHeight];
 								}];
@@ -152,7 +145,7 @@
 - (IBAction)btnTicketPressed:(id)sender{
 	NSURL *submissionUrl = [NSURL URLWithString:_model.submissionPath];
 	if (![[UIApplication sharedApplication] openURL:submissionUrl]) {
-		DDLogCWarn(@"Failed to open url: %@", [submissionUrl description]);
+		NSLog(@"Failed to open url: %@", [submissionUrl description]);
 	}
 }
 

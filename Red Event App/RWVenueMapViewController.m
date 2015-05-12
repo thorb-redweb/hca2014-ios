@@ -43,7 +43,7 @@
     GMSMarker *venueMarker = [[GMSMarker alloc] init];
     venueMarker.position = CLLocationCoordinate2DMake(_model.latitude, _model.longitude);
     venueMarker.title = _model.title;
-    venueMarker.map = (GMSMapView *) super.mapView;
+    [self addMarkerToMapView:venueMarker];
 }
 
 - (void)didReceiveMemoryWarning

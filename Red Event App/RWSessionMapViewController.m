@@ -48,7 +48,7 @@
 	NSString *snippet = [NSString stringWithFormat:@"%@",_model.startTime];
 	snippet = [NSString stringWithFormat:@"%@//%@",snippet, _model.sessionid];
 	sessionMarker.snippet = snippet;
-    sessionMarker.map = (GMSMapView *) super.mapView;
+    [self addMarkerToMapView:sessionMarker];
 	
 	sessionMarker.icon = _model.typeIcon;
 }

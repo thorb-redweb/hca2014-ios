@@ -6,8 +6,6 @@
 //  Copyright (c) 2013 redWEB. All rights reserved.
 //
 
-#import "MyLog.h"
-
 #import "RWHandler_UploadRegistrationAttributes.h"
 
 @interface RWHandler_UploadRegistrationAttributes ()
@@ -37,7 +35,7 @@
 
     _data = [[NSMutableData alloc] initWithLength:0];
     _openConnection = [[NSURLConnection alloc] initWithRequest:postRequest delegate:self];
-    DDLogVerbose(@"Start registration attributes upload in RWHandler_UploadRegistrationAttributes.m");
+    NSLog(@"Start registration attributes upload in RWHandler_UploadRegistrationAttributes.m");
 }
 
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {
@@ -51,8 +49,8 @@
 
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
     [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
-    DDLogError(@"did fail with error");
-    DDLogError(@"Connection failed: %@", error.description);
+    NSLog(@"did fail with error");
+    NSLog(@"Connection failed: %@", error.description);
 }
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection {

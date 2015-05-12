@@ -1,0 +1,18 @@
+PODS:
+  - CRToast (0.0.7)
+  - SDWebImage (3.7.2):
+    - SDWebImage/Core (= 3.7.2)
+  - SDWebImage/Core (3.7.2)
+  - TouchXML (0.1)
+
+DEPENDENCIES:
+  - CRToast
+  - SDWebImage
+  - TouchXML
+
+SPEC CHECKSUMS:
+  CRToast: 99a28f4387def43b439ad88f957ce31357ff7373
+  SDWebImage: 71b7cdc1d1721d6a82ed62889030225f2c249e29
+  TouchXML: 37089088da5e46f0f4a8797d320fbcfed395ab46
+
+COCOAPODS: 0.35.0.rc1

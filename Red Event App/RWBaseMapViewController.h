@@ -18,7 +18,11 @@
 @property(weak, nonatomic) IBOutlet GMSMapView *mapView;
 @property(weak, nonatomic) IBOutlet UIButton *btnBack;
 
+@property (strong, nonatomic) NSMutableArray *markers;
+
 - (id)initWithPage:(RWXmlNode *)page;
+
+- (void)addMarkerToMapView:(GMSMarker *)marker;
 
 -(IBAction)btnBackClicked;
 @end

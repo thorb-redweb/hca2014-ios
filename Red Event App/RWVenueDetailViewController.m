@@ -77,7 +77,7 @@
 	_venue = [_db.Venues getVMFromId:venueId];
 	
 	[_lblTitle setText:_venue.title];
-	[_imgMain setImageWithURL:_venue.imageUrl placeholderImage:[UIImage imageNamed:@"default_icon.jpg"]];
+	[_imgMain sd_setImageWithURL:_venue.imageUrl placeholderImage:[UIImage imageNamed:@"default_icon.jpg"]];
 	[_lblAddressValue setText:_venue.address];
 	[_lblAddressValue sizeToFit];
 	

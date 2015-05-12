@@ -6,20 +6,12 @@
 //  Copyright (c) 2013 redWEB. All rights reserved.
 //
 
-#import "UIColor+RWColor.h"
 #import <GoogleMaps/GoogleMaps.h>
-#include <AudioToolbox/AudioToolbox.h>
-#import "DDTTYLogger.h"
-#import "DDFileLogger.h"
-#import "MyLog.h"
 
 #import "RWAppDelegate.h"
 
 #import "RWSplashViewController.h"
 #import "RWMainViewController.h"
-
-#import "RWAppearanceHelper.h"
-#import "RWPAGE.h"
 
 @interface RWAppDelegate ()
 
@@ -70,7 +62,6 @@
     self.window.backgroundColor = [UIColor whiteColor];
 
     [self setup_CoreData_Xml_Database_And_Server];
-	[self setup_Lumberjack];
     [self getInitializationData];    
 
     [self setAppearance];
@@ -92,25 +83,12 @@
 
     NSManagedObjectContext *context = [self managedObjectContext];
     if (!context) {
-        DDLogWarn(@"setup_CoreData_Xml_Database_And_Server: NSManagedObjectContext is nil");
+        NSLog(@"setup_CoreData_Xml_Database_And_Server: NSManagedObjectContext is nil");
     }
 
     _db = [[RWDbInterface alloc] initWithManagedObjectContext:context xml:_xml];
     _sv = [[RWServer alloc] initWithDatabase:_db datafilesfolderpath:_xml.dataFilesFolderPath];
 	_pmh = [[RWPushMessageSubscriptionHandler alloc] init];
-}
-
--(void)setup_Lumberjack{
-	[DDLog addLogger:[DDTTYLogger sharedInstance]];
-	
-	DDFileLogger *fileLogger = [[DDFileLogger alloc] init];
-	fileLogger.rollingFrequency = 60 * 60 * 24;
-	fileLogger.logFileManager.maximumNumberOfLogFiles = 7;
-	fileLogger.maximumFileSize = 384 * 1024;
-	[fileLogger setLogFormatter:[[DDLogFileFormatterDefault alloc] init]];
-	[DDLog addLogger:fileLogger];
-	
-	[[DDTTYLogger sharedInstance] setColorsEnabled:YES];
 }
 
 -(void)getInitializationData {
@@ -122,7 +100,7 @@
 }
 
 -(void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error{
-    DDLogError(@"Error in registration. Error: %@", error);
+    NSLog(@"Error in registration. Error: %@", error);
 }
 
 - (void)setAppearance {
@@ -171,7 +149,7 @@
 // Splash Page Start
 
 - (void)startOnSplashScreen {
-	DDLogVerbose(@"Start on Splash Screen");
+    NSLog(@"Start on Splash Screen");
     RWSplashViewController *viewController = [[RWSplashViewController alloc] initWithNibName:@"RWSplashViewController" bundle:nil];
     self.window.rootViewController = viewController;
 }
@@ -226,7 +204,7 @@
         if ([managedObjectContext hasChanges] && ![managedObjectContext save:&error]) {
             // Replace this implementation with code to handle the error appropriately.
             // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-            DDLogError(@"Unresolved error %@, %@", error, [error userInfo]);
+            NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
             abort();
         }
     }
@@ -294,7 +272,7 @@
          Lightweight migration will only work for a limited set of schema changes; consult "Core Data Model Versioning and Data Migration Programming Guide" for details.
          
          */
-        DDLogError(@"Unresolved error %@, %@", error, [error userInfo]);
+        NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
         abort();
     }
 

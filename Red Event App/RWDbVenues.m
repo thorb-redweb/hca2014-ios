@@ -5,8 +5,6 @@
 // To change the template use AppCode | Preferences | File Templates.
 //
 
-#import "MyLog.h"
-
 #import "RWAppDelegate.h"
 #import "RWDbVenues.h"
 #import "RWDbHelper.h"
@@ -27,7 +25,7 @@
 		_app = app;
 		_xml = app.xml;
     }
-    else {DDLogWarn(@"RWDbVenues not initialized");}
+    else {NSLog(@"RWDbVenues not initialized");}
     return self;
 }
 

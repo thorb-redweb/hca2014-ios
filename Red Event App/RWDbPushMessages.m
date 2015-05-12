@@ -3,8 +3,6 @@
 // Copyright (c) 2013 redWEB. All rights reserved.
 //
 
-#import "MyLog.h"
-
 #import "RWDbPushMessages.h"
 #import "PushMessage.h"
 #import "RWDbSchemas.h"
@@ -25,7 +23,7 @@
         _dbHelper = helper;
         _db = dbInterface;
     }
-    else {DDLogError(@"RWDbPushMessages not initialized");}
+    else {NSLog(@"RWDbPushMessages not initialized");}
     return self;
 }
 

@@ -5,8 +5,6 @@
 // To change the template use AppCode | Preferences | File Templates.
 //
 
-#import "MyLog.h"
-
 #import "RWDbSessions.h"
 #import "RWDbHelper.h"
 #import "RWDbSchemas.h"
@@ -32,7 +30,7 @@
 		NSSortDescriptor *sortEndTime = [[NSSortDescriptor alloc] initWithKey:[RWDbSchemas SES_ENDDATETIME] ascending:YES];
 		_sessionSortDescriptors = [[NSArray alloc] initWithObjects:sortByStartTime, sortByTitle, sortEndTime, nil];
     }
-    else {DDLogWarn(@"RWDbSessions not initialized");}
+    else {NSLog(@"RWDbSessions not initialized");}
     return self;
 }
 

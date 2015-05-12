@@ -5,11 +5,7 @@
 // To change the template use AppCode | Preferences | File Templates.
 //
 
-#import "MyLog.h"
-
 #import "RWDbHelper.h"
-#import "RWJSONSchemas.h"
-
 
 @implementation RWDbHelper {
     NSManagedObjectContext *_managedObjectContext;
@@ -20,7 +16,7 @@
     if (self = [super init]) {
         _managedObjectContext = context;
     }
-    else {DDLogWarn(@"Database not initialized");}
+    else {NSLog(@"Database not initialized");}
     return self;
 }
 
@@ -80,8 +76,8 @@
     NSError *fetchError = nil;
     NSMutableArray *fetchResults = [[_managedObjectContext executeFetchRequest:request error:&fetchError] mutableCopy];
     if (fetchError != nil) {
-        DDLogError(@"did fail with error");
-        DDLogError(@"Fetch failed in RWDbHelper:getContentFromDatabase: %@", fetchError.description);
+        NSLog(@"did fail with error");
+        NSLog(@"Fetch failed in RWDbHelper:getContentFromDatabase: %@", fetchError.description);
     }
 
     return fetchResults;

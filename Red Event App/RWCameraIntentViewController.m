@@ -1,13 +1,7 @@
 
 #import <AVFoundation/AVFoundation.h>
 
-#import "UIImage+RWImage.h"
-#import "MyLog.h"
-
 #import "RWCameraIntentViewController.h"
-
-#import "RWCameraHandler.h"
-
 
 static void * SessionRunningAndDeviceAuthorizedContext = &SessionRunningAndDeviceAuthorizedContext;
 static void * CapturingStillImageContext = &CapturingStillImageContext;
@@ -132,7 +126,7 @@ static void * CapturingStillImageContext = &CapturingStillImageContext;
 
 - (IBAction)focusAndExposeTap:(UIGestureRecognizer *)gestureRecognizer
 {
-	DDLogDebug(@"Focus Tapped");
+    NSLog(@"Focus Tapped");
     CGPoint devicePoint = [(AVCaptureVideoPreviewLayer *)[[self previewView] layer] captureDevicePointOfInterestForPoint:[gestureRecognizer locationInView:[gestureRecognizer view]]];
 	[cameraHandler focusWithModeAutoFocus:devicePoint];
 }

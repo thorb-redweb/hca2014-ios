@@ -7,14 +7,10 @@
 //
 
 #import "CRToast.h"
-#import "MyLog.h"
 
 #import "RWPushMessageSubscriptionHandler.h"
 #import "RWAppDelegate.h"
-#import "RWDbInterface.h"
 #import "RWDbArticles.h"
-#import "RWServer.h"
-#import "RWXMLStore.h"
 #import "RWMainViewController.h"
 #import "RWArticleVM.h"
 
@@ -45,23 +41,23 @@
 
     RWAppDelegate *app = [[UIApplication sharedApplication] delegate];
 	[app.sv sendProviderDeviceToken:deviceToken];
-	DDLogDebug(@"My token is: %@", deviceToken);
+    NSLog(@"My token is: %@", deviceToken);
 }
 
 -(void)notificationReceived:(NSDictionary *)notification{
-	DDLogInfo(@"Push message received, start data update");
+    NSLog(@"Push message received, start data update");
 	[_sv updateDatabase:self];
 	_currentNotification = notification;
 }
 
 - (void)continueAfterUpdate {
-    DDLogVerbose(@"Continue after update");
+    NSLog(@"Continue after update");
 	
 	//Check whether or not the application is already active, and act accordingly
 	UIApplication *application = [UIApplication sharedApplication];
 	if(application.applicationState == UIApplicationStateActive){
 		//if the application is active, we'll simply show a toast
-		DDLogInfo(@"Push message received, show toast");
+        NSLog(@"Push message received, show toast");
 		
 		RWArticleVM *article = [_db.Articles getVMFromId:[_currentNotification[@"content"][@"messageid"] intValue]];
 		
@@ -96,7 +92,7 @@
 		
 		RWMainViewController *mainView = [[RWMainViewController alloc] initWithStartPage:nextPage];
 		_app.window.rootViewController = mainView;
-		DDLogInfo(@"Starting on page with push message content");
+        NSLog(@"Starting on page with push message content");
 	}
 }
 

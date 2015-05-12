@@ -3,8 +3,6 @@
 // Copyright (c) 2013 redWEB. All rights reserved.
 //
 
-#import "MyLog.h"
-
 #import "RWDbPushMessageGroups.h"
 #import "RWDbHelper.h"
 #import "RWDbSchemas.h"
@@ -21,7 +19,7 @@
     if (self = [super init]) {
         _dbHelper = helper;
     }
-    else {DDLogWarn(@"RWDbPushMessageGroups not initialized");}
+    else {NSLog(@"RWDbPushMessageGroups not initialized");}
     return self;
 }
 

@@ -6,17 +6,9 @@
 //  Copyright (c) 2013 redWEB. All rights reserved.
 //
 
-#import "MyLog.h"
-
 #import "RWSplashViewController.h"
 
 #import "RWAppDelegate.h"
-#import "RWXMLStore.h"
-#import "RWDbInterface.h"
-#import "RWServer.h"
-
-#import "RWArticleVM.h"
-#import "RWDbArticles.h"
 
 @interface RWSplashViewController ()
 
@@ -67,14 +59,14 @@
 -(void)getDataFromServer{
 	NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
     NSString *dataversion = [prefs objectForKey:@"dataversion"];
-    DDLogInfo(@"Current dataversion: %@", dataversion);
+    NSLog(@"Current dataversion: %@", dataversion);
     if (!dataversion) {
         _splashDelay = 2.0;
         [self showActivityViews];
         [_sv dumpServer:self];
     }
     else {
-        DDLogInfo(@"No need for dump");
+        NSLog(@"No need for dump");
         _splashDelay = 5.0;
 		[self showActivityViews];
         [self checkForUpdates];
@@ -82,7 +74,7 @@
 }
 
 - (void)continueAfterDump {
-	DDLogVerbose(@"After dump, check for updates");
+    NSLog(@"After dump, check for updates");
     [self checkForUpdates];
 }
 
@@ -91,14 +83,14 @@
 }
 
 - (void)continueAfterUpdate {
-	DDLogInfo(@"Ready to Continue to Front Page");
+    NSLog(@"Ready to Continue to Front Page");
     [self hideActivityViews];
 	[_btnBackground addTarget:self action:@selector(continueToApp) forControlEvents:UIControlEventTouchUpInside];
     _splashTimer = [NSTimer scheduledTimerWithTimeInterval:_splashDelay target:self selector:@selector(continueToApp:) userInfo:nil repeats:NO];
 }
 
 - (void)continueToApp{
-	DDLogVerbose(@"Continue to front page");
+    NSLog(@"Continue to front page");
 	[_splashTimer invalidate];
 	RWAppDelegate *app = [[UIApplication sharedApplication] delegate];
     [app startNavController];

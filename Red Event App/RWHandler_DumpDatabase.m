@@ -5,8 +5,6 @@
 //  Created by redWEB Praktik on 8/27/13.
 //  Copyright (c) 2013 redWEB. All rights reserved.
 //
-#import "MyLog.h"
-
 #import "RWHandler_DumpDatabase.h"
 #import "Article.h"
 #import "Event.h"
@@ -46,12 +44,12 @@
 }
 
 - (void)addDatabaseDump:(NSMutableData *)data {
-	DDLogVerbose(@"start dumping to database");
+    NSLog(@"start dumping to database");
     NSError *dictError = nil;
     NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableLeaves error:&dictError];
     if (dictError != nil) {
-        DDLogError(@"did fail with error");
-        DDLogError(@"Dictionary setup failed in RWDbInterface:addContentDump: %@", dictError.description);
+        NSLog(@"did fail with error");
+        NSLog(@"Dictionary setup failed in RWDbInterface:addContentDump: %@", dictError.description);
 		[_delegate errorOccured:[NSString stringWithFormat: @"Dictionary setup failed in RWDbInterface:addContentDump: %@", dictError.description]];
 		return;
     }
@@ -93,22 +91,22 @@
 
     NSError *cxtError = nil;
     if (![_managedObjectContext save:&cxtError]) {
-        DDLogError(@"did fail with error");
-        DDLogError(@"Context save failed in RWDbInterface:dumpEvent: %@", cxtError.description);
+        NSLog(@"did fail with error");
+        NSLog(@"Context save failed in RWDbInterface:dumpEvent: %@", cxtError.description);
 		[_delegate errorOccured:[NSString stringWithFormat: @"Context save failed in RWDbInterface:dumpEvent: %@", cxtError.description]];
 		return;
     }
 
-    DDLogVerbose(@"Dump Complete");
+    NSLog(@"Dump Complete");
 
     [_delegate continueAfterDump];
 }
 
 - (void)dumpContent:(NSDictionary *)entry {
 	NSDate *publishDate = [self convertStringToDate:[entry objectForKey:_json.Art.PUBLISHDATE]];
-	NSDate *startOf2014 = [self convertStringToDate:@"2014-01-01 00:00:00"];
+	NSDate *startOf2014 = [self convertStringToDate:@"2015-01-01 00:00:00"];
 	if ([publishDate compare:startOf2014] == NSOrderedAscending && [[entry objectForKey:_json.Art.ARTICLE_ID] intValue] != 1) {
-		DDLogVerbose(@"Skip article %@: too early", [entry objectForKey:_json.Art.ARTICLE_ID]);
+        NSLog(@"Skip article %@: too early", [entry objectForKey:_json.Art.ARTICLE_ID]);
 		return;
 	}
     Article *content = (Article *) [NSEntityDescription insertNewObjectForEntityForName:[RWDbSchemas ART_TABLENAME] inManagedObjectContext:_managedObjectContext];
@@ -248,6 +246,9 @@
 }
 
 - (NSString *)removeBackSlashes:(NSString *)string{
+	if(string == nil || [string isEqual: [NSNull null]]){
+		return @"";
+	}
 	return [string stringByReplacingOccurrencesOfString:@"\\\"" withString:@"\""];
 }
 
