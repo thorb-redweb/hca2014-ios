@@ -267,6 +267,9 @@
     [session setTitle:[self removeBackSlashes:[entry objectForKey:_json.Ses.TITLE]]];
     [session setDetails:[self removeBackSlashes:[entry objectForKey:_json.Ses.DETAILS]]];
     [session setType:[self removeBackSlashes:[entry objectForKey:_json.Ses.SESSIONTYPE]]];
+    if([session.type isEqual:@""]){
+        session.type = @"Kunst og kultur";
+    }
 
     NSString *startDateString = [entry objectForKey:_json.Ses.STARTDATE];
     NSString *startTimeString = [entry objectForKey:_json.Ses.STARTTIME];
