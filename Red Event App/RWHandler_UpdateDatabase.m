@@ -388,7 +388,12 @@
 }
 
 - (NSString *)removeBackSlashes:(NSString *)string{
-	return [string stringByReplacingOccurrencesOfString:@"\\\"" withString:@"\""];
+	if(string && ![string isEqual:[NSNull null]]){
+		return [string stringByReplacingOccurrencesOfString:@"\\\"" withString:@"\""];
+	}
+	else {
+		return @"";
+	}
 }
 
 @end
