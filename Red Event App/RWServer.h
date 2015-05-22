@@ -18,6 +18,8 @@
 
 - (void)dumpServer:(NSObject *)delegate;
 
+- (void)getDirections:(id)delegate travelMode:(NSString *)travelMode origin:(NSString *)origin destination:(NSString *)destination;
+
 - (void)updateDatabase:(NSObject *)delegate;
 
 - (void)sendProviderDeviceToken:(NSData *)devTokenBytes;

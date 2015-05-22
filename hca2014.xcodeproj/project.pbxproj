@@ -34,6 +34,7 @@
 		26E73B64E8DE4729BD70A1E1 /* RWDbHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E736F8BC3400ED70DC3994 /* RWDbHelper.m */; };
 		26E73BAC5180C9A138C7C0FD /* RWSessionDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26E73ED8D5A9F454A92CA2AF /* RWSessionDetailViewController.xib */; };
 		26E73BB4C214260E2B123AA8 /* RWDbEvents.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E7357085BD0C589D8EBCB6 /* RWDbEvents.m */; };
+		26E73C08194411143FC1DBBA /* RWHandler_GetDirections.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E7349CAD00FDDDC0B4482D /* RWHandler_GetDirections.m */; };
 		26E73C9AA3817CDE9AB356C0 /* RWJSONVenue.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E73007C7F063443A1D88DA /* RWJSONVenue.m */; };
 		26E73DBA4ADBF998256D88EF /* RWDailySessionListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E7311AA69FB2E51D64BF69 /* RWDailySessionListViewController.m */; };
 		26E73E6BFACAD78541169151 /* RWDbPushMessageGroups.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E736C4E82279860090FCAE /* RWDbPushMessageGroups.m */; };
@@ -89,6 +90,9 @@
 		364E9C6C1886A882008D0DCC /* RWTextFieldAppearanceHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 364E9C6B1886A882008D0DCC /* RWTextFieldAppearanceHelper.m */; };
 		364E9C9D188D7D24008D0DCC /* RWBaseCollectionItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 364E9C9C188D7D24008D0DCC /* RWBaseCollectionItem.m */; };
 		365305051B02045D00DCFA25 /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 365305041B02045D00DCFA25 /* GoogleMaps.bundle */; };
+		365F543E1B0F1F78004657B2 /* icon_bike.png in Resources */ = {isa = PBXBuildFile; fileRef = 365F543B1B0F1F78004657B2 /* icon_bike.png */; };
+		365F543F1B0F1F78004657B2 /* icon_car.png in Resources */ = {isa = PBXBuildFile; fileRef = 365F543C1B0F1F78004657B2 /* icon_car.png */; };
+		365F54401B0F1F78004657B2 /* icon_walking.png in Resources */ = {isa = PBXBuildFile; fileRef = 365F543D1B0F1F78004657B2 /* icon_walking.png */; };
 		36672D6F18C8C97A00E0D992 /* RWUpdateService.m in Sources */ = {isa = PBXBuildFile; fileRef = 36672D6E18C8C97A00E0D992 /* RWUpdateService.m */; };
 		367628EB1803F812002ED534 /* RWTEXT.m in Sources */ = {isa = PBXBuildFile; fileRef = 367628EA1803F812002ED534 /* RWTEXT.m */; };
 		367628EE1803F821002ED534 /* RWDEFAULTTEXT.m in Sources */ = {isa = PBXBuildFile; fileRef = 367628ED1803F821002ED534 /* RWDEFAULTTEXT.m */; };
@@ -245,10 +249,12 @@
 		26E732C8F6489FD1278505A6 /* RWAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWAppDelegate.h; sourceTree = "<group>"; };
 		26E7334659BD88F6FCBDA9B2 /* RWDbEvents.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWDbEvents.h; sourceTree = "<group>"; };
 		26E733A86AB79C4744EBB3F2 /* RWJSONPushMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWJSONPushMessage.h; sourceTree = "<group>"; };
+		26E734278C7478308CA860F4 /* RWHandler_GetDirections.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWHandler_GetDirections.h; sourceTree = "<group>"; };
 		26E73442CF2B28F56D529977 /* RWTableNavigatorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWTableNavigatorViewController.m; sourceTree = "<group>"; };
 		26E734490EC2460280324CE1 /* RWStaticArticleController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWStaticArticleController.h; sourceTree = "<group>"; };
 		26E7346B6D529D9F76284790 /* RWJSONSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWJSONSession.h; sourceTree = "<group>"; };
 		26E7347CEB33D30567713480 /* RWDailySessionListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWDailySessionListViewController.h; sourceTree = "<group>"; };
+		26E7349CAD00FDDDC0B4482D /* RWHandler_GetDirections.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWHandler_GetDirections.m; sourceTree = "<group>"; };
 		26E734F685B738DB294D1C5B /* RWDailySessionListItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWDailySessionListItem.m; sourceTree = "<group>"; };
 		26E73543A9172C6DAF867E6A /* RWDbPushMessages.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWDbPushMessages.h; sourceTree = "<group>"; };
 		26E7357085BD0C589D8EBCB6 /* RWDbEvents.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWDbEvents.m; sourceTree = "<group>"; };
@@ -374,6 +380,9 @@
 		364E9C9B188D7D24008D0DCC /* RWBaseCollectionItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWBaseCollectionItem.h; sourceTree = "<group>"; };
 		364E9C9C188D7D24008D0DCC /* RWBaseCollectionItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWBaseCollectionItem.m; sourceTree = "<group>"; };
 		365305041B02045D00DCFA25 /* GoogleMaps.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = GoogleMaps.bundle; sourceTree = "<group>"; };
+		365F543B1B0F1F78004657B2 /* icon_bike.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_bike.png; sourceTree = "<group>"; };
+		365F543C1B0F1F78004657B2 /* icon_car.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_car.png; sourceTree = "<group>"; };
+		365F543D1B0F1F78004657B2 /* icon_walking.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_walking.png; sourceTree = "<group>"; };
 		36672D6D18C8C97A00E0D992 /* RWUpdateService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWUpdateService.h; sourceTree = "<group>"; };
 		36672D6E18C8C97A00E0D992 /* RWUpdateService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWUpdateService.m; sourceTree = "<group>"; };
 		367628E91803F812002ED534 /* RWTEXT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWTEXT.h; sourceTree = "<group>"; };
@@ -1251,6 +1260,9 @@
 				36A29C2C18C0DA6700E64B7A /* icon_program_bottombar@2x.png */,
 				36A29C0A18C0D2CC00E64B7A /* icon_ticket_pink.png */,
 				36A29C0B18C0D2CC00E64B7A /* icon_youarehere.png */,
+				365F543B1B0F1F78004657B2 /* icon_bike.png */,
+				365F543C1B0F1F78004657B2 /* icon_car.png */,
+				365F543D1B0F1F78004657B2 /* icon_walking.png */,
 				36A29C0D18C0D2CC00E64B7A /* logo_hca_top.png */,
 				36A29C3618C4C75C00E64B7A /* MapInfoWindow.png */,
 				36A29C0E18C0D2CD00E64B7A /* music.png */,
@@ -1312,6 +1324,8 @@
 				26E7310552D87B4F5BE8558B /* RWHandler_UploadRegistrationAttributes.h */,
 				36672D6D18C8C97A00E0D992 /* RWUpdateService.h */,
 				36672D6E18C8C97A00E0D992 /* RWUpdateService.m */,
+				26E7349CAD00FDDDC0B4482D /* RWHandler_GetDirections.m */,
+				26E734278C7478308CA860F4 /* RWHandler_GetDirections.h */,
 			);
 			name = Network;
 			sourceTree = "<group>";
@@ -1488,8 +1502,10 @@
 				36A97AD518560F940050EC8D /* RWImageUploaderViewController.xib in Resources */,
 				36A29C1518C0D2CD00E64B7A /* arrow_left.png in Resources */,
 				36A29C3718C4C75C00E64B7A /* MapInfoWindow.png in Resources */,
+				365F543E1B0F1F78004657B2 /* icon_bike.png in Resources */,
 				36A0B40B18474F4B007A6C78 /* RWWebViewController.xib in Resources */,
 				36A29C1818C0D2CD00E64B7A /* culture.png in Resources */,
+				365F543F1B0F1F78004657B2 /* icon_car.png in Resources */,
 				36AB7CA617C2050600316921 /* pages.xml in Resources */,
 				36A29C1418C0D2CD00E64B7A /* arrow_back.png in Resources */,
 				361EA889180BD63100441271 /* RWButtonGalleryViewController.xib in Resources */,
@@ -1531,6 +1547,7 @@
 				36A29C1E18C0D2CD00E64B7A /* icon_program_bottombar.png in Resources */,
 				36A29C1718C0D2CD00E64B7A /* art.png in Resources */,
 				36B0A73F19670D7700DAD3EA /* 3_5_splash.png in Resources */,
+				365F54401B0F1F78004657B2 /* icon_walking.png in Resources */,
 				36B0A7391966CDD100DAD3EA /* .gitignore in Resources */,
 				36B0A73319669D9F00DAD3EA /* RWActivityIndicator.xib in Resources */,
 				3645BF8117CE320500047159 /* Banegården.gpx in Resources */,
@@ -1721,6 +1738,7 @@
 				26E7349D494E443BB8600B71 /* RWAppDelegate.m in Sources */,
 				26E730EABFC9FE09C156379D /* RWTextHelper.m in Sources */,
 				364E9C9D188D7D24008D0DCC /* RWBaseCollectionItem.m in Sources */,
+				26E73C08194411143FC1DBBA /* RWHandler_GetDirections.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1828,7 +1846,7 @@
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: redWEB ApS (7HL7H7SNFP)";
+				CODE_SIGN_IDENTITY = "iOS Development: Thorbjørn Steen (2GD43Z7L4G)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/redwebpraktik/IphoneProjects/hca2014,
@@ -1845,7 +1863,7 @@
 					"$(inherited)",
 				);
 				PRODUCT_NAME = hca2014;
-				PROVISIONING_PROFILE = "0b531df1-1f72-47fb-ad30-d25d32054bbf";
+				PROVISIONING_PROFILE = "dea98367-5aaa-468d-af35-4f4f005f1e91";
 				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/Pods\"/**";
 				WRAPPER_EXTENSION = app;
 			};
@@ -1858,7 +1876,7 @@
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: redWEB ApS (7HL7H7SNFP)";
+				CODE_SIGN_IDENTITY = "iOS Development: Thorbjørn Steen (2GD43Z7L4G)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/redwebpraktik/IphoneProjects/hca2014,
@@ -1875,7 +1893,7 @@
 					"$(inherited)",
 				);
 				PRODUCT_NAME = hca2014;
-				PROVISIONING_PROFILE = "0b531df1-1f72-47fb-ad30-d25d32054bbf";
+				PROVISIONING_PROFILE = "dea98367-5aaa-468d-af35-4f4f005f1e91";
 				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/Pods\"/**";
 				WRAPPER_EXTENSION = app;
 			};

@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="4510" systemVersion="12F45" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RWBaseMapViewController">
             <connections>
                 <outlet property="btnBack" destination="a2R-XQ-ofd" id="3aB-eJ-iW3"/>
+                <outlet property="btnBiking" destination="Lyb-YD-Pdc" id="iId-iy-RxM"/>
+                <outlet property="btnDriving" destination="StY-uf-DKG" id="OSb-R9-dnt"/>
+                <outlet property="btnWalking" destination="kmF-wW-wCU" id="d0J-4i-NqC"/>
                 <outlet property="mainView" destination="uaT-wm-Lg2" id="rVG-OC-420"/>
                 <outlet property="mapView" destination="JT1-KN-tSD" id="qeM-sg-XXb"/>
                 <outlet property="view" destination="uaT-wm-Lg2" id="lqY-rR-gx8"/>
@@ -18,15 +22,47 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JT1-KN-tSD" customClass="GMSMapView">
-                    <rect key="frame" x="0.0" y="0.0" width="320" height="538"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                 </view>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="StY-uf-DKG" userLabel="btnDriving">
+                    <rect key="frame" x="81" y="512" width="48" height="48"/>
+                    <color key="backgroundColor" red="0.91764712329999998" green="0.20000001789999999" blue="0.56078433989999998" alpha="1" colorSpace="deviceRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="48" id="GPC-z3-dXV"/>
+                        <constraint firstAttribute="height" constant="48" id="HdP-R8-TBq"/>
+                    </constraints>
+                    <state key="normal" image="icon_car.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lyb-YD-Pdc" userLabel="btnBiking">
+                    <rect key="frame" x="137" y="512" width="48" height="48"/>
+                    <color key="backgroundColor" red="0.91764712329999998" green="0.20000001789999999" blue="0.56078433989999998" alpha="1" colorSpace="deviceRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="48" id="SHX-fc-bWp"/>
+                        <constraint firstAttribute="width" constant="48" id="eeO-lo-kcz"/>
+                    </constraints>
+                    <state key="normal" image="icon_bike.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kmF-wW-wCU" userLabel="btnWalking">
+                    <rect key="frame" x="193" y="512" width="48" height="48"/>
+                    <color key="backgroundColor" red="0.91764712329999998" green="0.20000001789999999" blue="0.56078433989999998" alpha="1" colorSpace="deviceRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="48" id="2kH-d1-gbU"/>
+                        <constraint firstAttribute="height" constant="48" id="B9l-fG-3qk"/>
+                    </constraints>
+                    <state key="normal" image="icon_walking.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a2R-XQ-ofd">
                     <rect key="frame" x="96" y="538" width="128" height="30"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="30" placeholder="YES" id="8Do-sK-oE2"/>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="128" id="Dsa-Iu-zxn"/>
                         <constraint firstAttribute="width" constant="128" placeholder="YES" id="L07-iy-ZfA"/>
                     </constraints>
                     <state key="normal">
@@ -39,14 +75,30 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstItem="StY-uf-DKG" firstAttribute="bottom" secondItem="kmF-wW-wCU" secondAttribute="bottom" id="2cg-Fx-4yC"/>
+                <constraint firstItem="kmF-wW-wCU" firstAttribute="leading" secondItem="Lyb-YD-Pdc" secondAttribute="trailing" constant="8" id="I8A-Ly-c5A"/>
                 <constraint firstItem="JT1-KN-tSD" firstAttribute="top" secondItem="uaT-wm-Lg2" secondAttribute="top" id="RYr-pv-KJh"/>
-                <constraint firstItem="a2R-XQ-ofd" firstAttribute="top" secondItem="JT1-KN-tSD" secondAttribute="bottom" id="c60-GT-cRQ"/>
                 <constraint firstItem="JT1-KN-tSD" firstAttribute="leading" secondItem="uaT-wm-Lg2" secondAttribute="leading" id="dT4-3d-2UO"/>
                 <constraint firstAttribute="bottom" secondItem="a2R-XQ-ofd" secondAttribute="bottom" id="gaC-6O-qO7"/>
                 <constraint firstAttribute="centerX" secondItem="a2R-XQ-ofd" secondAttribute="centerX" id="ggT-a2-cZ2"/>
                 <constraint firstAttribute="trailing" secondItem="JT1-KN-tSD" secondAttribute="trailing" id="nTL-v8-hxv"/>
+                <constraint firstItem="Lyb-YD-Pdc" firstAttribute="bottom" secondItem="StY-uf-DKG" secondAttribute="bottom" id="t46-zV-XfJ"/>
+                <constraint firstAttribute="centerX" secondItem="Lyb-YD-Pdc" secondAttribute="centerX" id="tOM-wC-Qpy"/>
+                <constraint firstAttribute="bottom" secondItem="JT1-KN-tSD" secondAttribute="bottom" id="vfp-qU-dqV"/>
+                <constraint firstItem="JT1-KN-tSD" firstAttribute="bottom" secondItem="Lyb-YD-Pdc" secondAttribute="bottom" constant="8" id="xxw-P9-i7j"/>
+                <constraint firstItem="Lyb-YD-Pdc" firstAttribute="leading" secondItem="StY-uf-DKG" secondAttribute="trailing" constant="8" id="zLf-dS-6bG"/>
             </constraints>
-            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+            <nil key="simulatedStatusBarMetrics"/>
         </view>
     </objects>
+    <resources>
+        <image name="icon_bike.png" width="205" height="149"/>
+        <image name="icon_car.png" width="181" height="148"/>
+        <image name="icon_walking.png" width="152" height="216"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
 </document>

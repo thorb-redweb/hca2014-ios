@@ -11,11 +11,15 @@
 #import "RWBaseViewController.h"
 
 #import "RWInfoWindow.h"
+#import "RWHandler_GetDirections.h"
 
-@interface RWBaseMapViewController : RWBaseViewController <GMSMapViewDelegate, UIGestureRecognizerDelegate>
+@interface RWBaseMapViewController : RWBaseViewController <GMSMapViewDelegate, UIGestureRecognizerDelegate, RWDelegate_GetDirections>
 
 @property(weak, nonatomic) IBOutlet UIView *mainView;
 @property(weak, nonatomic) IBOutlet GMSMapView *mapView;
+@property(weak, nonatomic) IBOutlet UIButton *btnDriving;
+@property(weak, nonatomic) IBOutlet UIButton *btnBiking;
+@property(weak, nonatomic) IBOutlet UIButton *btnWalking;
 @property(weak, nonatomic) IBOutlet UIButton *btnBack;
 
 @property (strong, nonatomic) NSMutableArray *markers;
@@ -25,4 +29,8 @@
 - (void)addMarkerToMapView:(GMSMarker *)marker;
 
 -(IBAction)btnBackClicked;
+
+- (void)setMapCameraForJsonCoordinatesNortheast:(NSDictionary *)northEast southWest:(NSDictionary *)southWest;
+
+- (void)alignCameraBoundsWithMarkers;
 @end

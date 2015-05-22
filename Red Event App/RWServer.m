@@ -10,6 +10,7 @@
 
 #import "RWAppDelegate.h"
 #import "RWHandler_UploadRegistrationAttributes.h"
+#import "RWHandler_GetDirections.h"
 
 @interface RWServer ()
 
@@ -45,8 +46,14 @@
 }
 
 - (void)putBuildDataInDatabase:(NSMutableData *)data {
-
     [_db addDatabaseDump:data delegate:dumpServerDelegate];
+}
+
+- (void)getDirections:(id)delegate travelMode:(NSString *)travelMode origin:(NSString *)origin destination:(NSString *)destination {
+    RWHandler_GetDirections *handler = [[RWHandler_GetDirections alloc] init];
+    handler.delegate = delegate;
+    NSURL *url = [[NSURL alloc] initWithString: [NSString stringWithFormat:@"https://maps.googleapis.com/maps/api/directions/json?mode=%@&origin=%@&destination=%@", travelMode, origin, destination]];
+    [handler startDownloadWithFromUrl:url];
 }
 
 - (void)updateDatabase:(id)delegate {
