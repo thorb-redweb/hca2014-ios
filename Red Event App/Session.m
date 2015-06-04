@@ -17,6 +17,7 @@
 @dynamic enddatetime;
 @dynamic eventid;
 @dynamic sessionid;
+@dynamic submission;
 @dynamic startdatetime;
 @dynamic title;
 @dynamic type;

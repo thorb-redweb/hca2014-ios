@@ -7,6 +7,8 @@
 //
 
 #import <EventKit/EventKit.h>
+#import <Social/Social.h>
+#import <MessageUI/MessageUI.h>
 
 #import "UIScrollView+RWScrollView.h"
 #import "UIView+RWViewLayout.h"
@@ -63,8 +65,14 @@
 		NSString *details = _model.details;
         _lblBody.text = details;
     }
-	
-	NSString *urlRegex = @"\\(?\\bhttp://[-A-Za-z0-9+&@#/%?=~_()|!:,.;]*[-A-Za-z0-9+&@#/%=~_()|]";
+
+    if(!([SLComposeViewController isAvailableForServiceType:SLServiceTypeFacebook] ||
+            [SLComposeViewController isAvailableForServiceType:SLServiceTypeTwitter] ||
+            [MFMessageComposeViewController canSendText])) {
+        _btnShare.hidden = YES;
+    }
+
+    NSString *urlRegex = @"\\(?\\bhttp://[-A-Za-z0-9+&@#/%?=~_()|!:,.;]*[-A-Za-z0-9+&@#/%=~_()|]";
 	NSPredicate *isAnUrlTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", urlRegex];
 
 	if (![isAnUrlTest evaluateWithObject:_model.submissionPath]) {
@@ -100,6 +108,13 @@
 
     [helper.label setTitleStyle:_lblTitle];
 
+    [self.btnShare addTarget:self action:@selector(shareToSocialMedia:) forControlEvents:UIControlEventTouchUpInside];
+    self.btnShare.imageView.contentMode = UIViewContentModeScaleAspectFit;
+    [self.btnShare setImageEdgeInsets:UIEdgeInsetsMake(4, 4, 4, 4)];
+    UIImage *image = [self.btnShare.imageView.image imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+    [self.btnShare setImage:image forState:UIControlStateNormal];
+    self.btnShare.tintColor = [UIColor whiteColor];
+
     [helper.label setBackTextStyle:_lblBody];
 
     [helper.button setBackButtonStyle:_btnBack];
@@ -133,6 +148,55 @@
 
     [webView RWSizeThatFitsContent];
     [_scrollView RWContentSizeToFit];
+}
+
+- (IBAction)shareToSocialMedia:(id)sender {
+    NSMutableArray *availableServices = [[NSMutableArray alloc] init];
+    [availableServices addObject:@"Facebook"];
+    [availableServices addObject:@"Twitter"];
+//    if([MFMessageComposeViewController canSendText]){
+//        [availableServices addObject:@"SMS"];
+//    }
+    UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:nil delegate:self cancelButtonTitle:nil destructiveButtonTitle:nil otherButtonTitles:nil];
+    for(NSString *buttonTitle in availableServices){
+        [actionSheet addButtonWithTitle:buttonTitle];
+    }
+    [actionSheet showInView:self.view.window];
+}
+
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
+    MFMessageComposeViewController *controller = [[MFMessageComposeViewController alloc] init];
+    NSString *buttonTitle = [actionSheet buttonTitleAtIndex:buttonIndex];
+    if ([buttonTitle isEqual:@"Facebook"]) {
+            SLComposeViewController *tweetSheet = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
+            [tweetSheet setInitialText:_model.websitelink];
+            [self presentViewController:tweetSheet animated:YES completion:nil];
+    }
+    else if ([buttonTitle isEqual:@"Twitter"]) {
+            SLComposeViewController *tweetSheet = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
+            [tweetSheet setInitialText:_model.websitelink];
+            [self presentViewController:tweetSheet animated:YES completion:nil];
+    }
+    else if([buttonTitle isEqual:@"SMS"]) {
+        if([MFMessageComposeViewController canSendText]) {
+            controller.messageComposeDelegate = self;
+            controller.body = _model.websitelink;
+
+            [self presentViewController:controller animated:YES completion:nil];
+        }
+    }
+}
+
+-(void)messageComposeViewController:(MFMessageComposeViewController *)controller didFinishWithResult:(MessageComposeResult)result
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+
+    if (result == MessageComposeResultCancelled)
+        NSLog(@"Message cancelled");
+    else if (result == MessageComposeResultSent)
+        NSLog(@"Message sent");
+    else
+        NSLog(@"Message failed");
 }
 
 - (IBAction)btnMapPressed:(id)sender {

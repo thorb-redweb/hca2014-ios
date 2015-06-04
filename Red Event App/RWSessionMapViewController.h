@@ -10,7 +10,7 @@
 #import <GoogleMaps/GoogleMaps.h>
 #import "RWBaseMapViewController.h"
 
-@interface RWSessionMapViewController : RWBaseMapViewController
+@interface RWSessionMapViewController : RWBaseMapViewController <UIActionSheetDelegate>
 
 - (id)initWithPage:(RWXmlNode *)page;
 

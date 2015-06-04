@@ -18,6 +18,8 @@
 
 - (NSString *)DETAILS;
 
+- (NSString *)SUBMISSION;
+
 - (NSString *)STARTDATE;
 
 - (NSString *)ENDDATE;

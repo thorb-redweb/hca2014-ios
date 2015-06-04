@@ -13,6 +13,7 @@
 
 @property(weak, nonatomic) IBOutlet UIView *viewLabelsMargin;
 @property(weak, nonatomic) IBOutlet UILabel *lblTitle;
+@property(weak, nonatomic) IBOutlet UIButton *btnShare;
 @property(weak, nonatomic) IBOutlet UIImageView *imgView;
 @property(weak, nonatomic) IBOutlet UILabel *lblType;
 @property(weak, nonatomic) IBOutlet UILabel *lblDate;
@@ -33,6 +34,8 @@
 @property(weak, nonatomic) IBOutlet UIButton *btnBack;
 
 - (id)initWithPage:(RWXmlNode *)page;
+
+- (IBAction)shareToSocialMedia:(id)sender;
 
 - (IBAction)btnMapPressed:(id)sender;
 - (IBAction)btnTicketPressed:(id)sender;

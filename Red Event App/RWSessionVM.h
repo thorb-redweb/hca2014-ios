@@ -69,4 +69,5 @@
 
 - (BOOL)hasTime;
 
+- (NSString *)websitelink;
 @end

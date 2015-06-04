@@ -25,8 +25,8 @@
                     <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                 </view>
-                <button hidden="YES" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="StY-uf-DKG" userLabel="btnDriving">
-                    <rect key="frame" x="81" y="512" width="48" height="48"/>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="StY-uf-DKG" userLabel="btnDriving">
+                    <rect key="frame" x="80" y="512" width="48" height="48"/>
                     <color key="backgroundColor" red="0.91764712329999998" green="0.20000001789999999" blue="0.56078433989999998" alpha="1" colorSpace="deviceRGB"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="48" id="GPC-z3-dXV"/>
@@ -36,8 +36,8 @@
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                 </button>
-                <button hidden="YES" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lyb-YD-Pdc" userLabel="btnBiking">
-                    <rect key="frame" x="137" y="512" width="48" height="48"/>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lyb-YD-Pdc" userLabel="btnBiking">
+                    <rect key="frame" x="136" y="512" width="48" height="48"/>
                     <color key="backgroundColor" red="0.91764712329999998" green="0.20000001789999999" blue="0.56078433989999998" alpha="1" colorSpace="deviceRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="48" id="SHX-fc-bWp"/>
@@ -47,8 +47,8 @@
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                 </button>
-                <button hidden="YES" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kmF-wW-wCU" userLabel="btnWalking">
-                    <rect key="frame" x="193" y="512" width="48" height="48"/>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kmF-wW-wCU" userLabel="btnWalking">
+                    <rect key="frame" x="192" y="512" width="48" height="48"/>
                     <color key="backgroundColor" red="0.91764712329999998" green="0.20000001789999999" blue="0.56078433989999998" alpha="1" colorSpace="deviceRGB"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="48" id="2kH-d1-gbU"/>

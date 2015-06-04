@@ -127,6 +127,10 @@
     return @"details";
 }
 
++ (NSString *)SES_SUBMISSION {
+    return @"submission";
+}
+
 + (NSString *)SES_STARTDATETIME {
     return @"startdatetime";
 }

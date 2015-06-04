@@ -233,7 +233,10 @@
     if (_managedObjectModel != nil) {
         return _managedObjectModel;
     }
-    _managedObjectModel = [NSManagedObjectModel mergedModelFromBundles:nil];
+	NSString *path = [[NSBundle mainBundle] pathForResource:@"Red_Event_App" ofType:@"momd"];
+	NSURL *momURL = [NSURL fileURLWithPath:path];
+	_managedObjectModel = [[NSManagedObjectModel alloc] initWithContentsOfURL:momURL];
+//    _managedObjectModel = [NSManagedObjectModel mergedModelFromBundles:nil];
     return _managedObjectModel;
 }
 
@@ -248,7 +251,9 @@
 
     NSError *error = nil;
     _persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[self managedObjectModel]];
-    if (![_persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeURL options:nil error:&error]) {
+    NSDictionary *options = @{NSMigratePersistentStoresAutomaticallyOption:@YES,
+                                NSInferMappingModelAutomaticallyOption:@YES};
+    if (![_persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeURL options:options error:&error]) {
         /*
          Replace this implementation with code to handle the error appropriately.
          

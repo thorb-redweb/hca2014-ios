@@ -271,6 +271,8 @@
         session.type = @"Kunst og kultur";
     }
 
+    [session setSubmission:[entry objectForKey:_json.Ses.SUBMISSION]];
+
     NSString *startDateString = [entry objectForKey:_json.Ses.STARTDATE];
     NSString *startTimeString = [entry objectForKey:_json.Ses.STARTTIME];
     NSString *startDateTimeString = [NSString stringWithFormat:@"%@ %@", startDateString, startTimeString];

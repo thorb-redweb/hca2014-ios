@@ -33,7 +33,7 @@
 
 - (NSDate *)getStartDateTimeWithSessionByDateTime:(NSDate *)datetime venueid:(int)venueid type:(NSString *)type searchString:(NSString *)searchString;
 
-- (NSDate *)getNextDateTimeByDateTime:(NSDate *)datetime venueid:(int)venueid type:(NSString *)type searchString:(UITextField *)searchString;
+- (NSDate *)getNextDateTimeByDateTime:(NSDate *)datetime venueid:(int)venueid type:(NSString *)type searchString:(NSString *)searchString;
 
 - (NSDate *)getPreviousDateTimeByDateTime:(NSDate *)datetime venueid:(int)venueid type:(NSString *)type searchString:(NSString *)searchString;
 

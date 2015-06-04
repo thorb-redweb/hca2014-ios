@@ -39,7 +39,6 @@
 		26E73DBA4ADBF998256D88EF /* RWDailySessionListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E7311AA69FB2E51D64BF69 /* RWDailySessionListViewController.m */; };
 		26E73E6BFACAD78541169151 /* RWDbPushMessageGroups.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E736C4E82279860090FCAE /* RWDbPushMessageGroups.m */; };
 		26E73F1A5EA4CC6DE8A17E06 /* RWDbSessions.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E736D3806D4E23C6F45A93 /* RWDbSessions.m */; };
-		26E73F9B73057802C8C4ED73 /* Red_Event_App.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 26E73A2CBD587EAB5648BA2B /* Red_Event_App.xcdatamodel */; };
 		3604165917F5792D00B9A391 /* RWLOOK.m in Sources */ = {isa = PBXBuildFile; fileRef = 3604165817F5792D00B9A391 /* RWLOOK.m */; };
 		3604165C17F58A5800B9A391 /* RWPAGE.m in Sources */ = {isa = PBXBuildFile; fileRef = 3604165B17F58A5800B9A391 /* RWPAGE.m */; };
 		3604165F17F5917100B9A391 /* Article.m in Sources */ = {isa = PBXBuildFile; fileRef = 3604165E17F5917100B9A391 /* Article.m */; };
@@ -93,6 +92,9 @@
 		365F543E1B0F1F78004657B2 /* icon_bike.png in Resources */ = {isa = PBXBuildFile; fileRef = 365F543B1B0F1F78004657B2 /* icon_bike.png */; };
 		365F543F1B0F1F78004657B2 /* icon_car.png in Resources */ = {isa = PBXBuildFile; fileRef = 365F543C1B0F1F78004657B2 /* icon_car.png */; };
 		365F54401B0F1F78004657B2 /* icon_walking.png in Resources */ = {isa = PBXBuildFile; fileRef = 365F543D1B0F1F78004657B2 /* icon_walking.png */; };
+		365F54421B0F6563004657B2 /* icon_share.png in Resources */ = {isa = PBXBuildFile; fileRef = 365F54411B0F6563004657B2 /* icon_share.png */; };
+		365F54461B14985C004657B2 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 365F54451B14985C004657B2 /* Social.framework */; };
+		365F54481B149879004657B2 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 365F54471B149879004657B2 /* MessageUI.framework */; };
 		36672D6F18C8C97A00E0D992 /* RWUpdateService.m in Sources */ = {isa = PBXBuildFile; fileRef = 36672D6E18C8C97A00E0D992 /* RWUpdateService.m */; };
 		367628EB1803F812002ED534 /* RWTEXT.m in Sources */ = {isa = PBXBuildFile; fileRef = 367628EA1803F812002ED534 /* RWTEXT.m */; };
 		367628EE1803F821002ED534 /* RWDEFAULTTEXT.m in Sources */ = {isa = PBXBuildFile; fileRef = 367628ED1803F821002ED534 /* RWDEFAULTTEXT.m */; };
@@ -222,6 +224,7 @@
 		36B0A74219670D7700DAD3EA /* icon_80.png in Resources */ = {isa = PBXBuildFile; fileRef = 36B0A73D19670D7700DAD3EA /* icon_80.png */; };
 		36B0A74319670D7700DAD3EA /* icon_120.png in Resources */ = {isa = PBXBuildFile; fileRef = 36B0A73E19670D7700DAD3EA /* icon_120.png */; };
 		36B0A74519670E0400DAD3EA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36B0A74419670E0400DAD3EA /* Images.xcassets */; };
+		36B1EB851B203E350051C5D4 /* Red_Event_App.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 36B1EB831B203E350051C5D4 /* Red_Event_App.xcdatamodeld */; };
 		36E2A0B7187D4C3E001AB669 /* RWCameraHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 36E2A0B6187D4C3E001AB669 /* RWCameraHandler.m */; };
 /* End PBXBuildFile section */
 
@@ -277,7 +280,6 @@
 		26E739D9DE81119FD2BA5E40 /* RWJSONPushMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWJSONPushMessage.m; sourceTree = "<group>"; };
 		26E739DB32089B8F2580147B /* RWTextHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWTextHelper.h; sourceTree = "<group>"; };
 		26E739F46AB88CD8DCA12408 /* RWJSONPushMessageGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWJSONPushMessageGroup.h; sourceTree = "<group>"; };
-		26E73A2CBD587EAB5648BA2B /* Red_Event_App.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Red_Event_App.xcdatamodel; sourceTree = "<group>"; };
 		26E73B05E15C0E62CFA02A71 /* RWTableNavigatorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWTableNavigatorViewController.h; sourceTree = "<group>"; };
 		26E73B79C4CEEF5D27BC15AB /* RWDbPushMessageGroups.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWDbPushMessageGroups.h; sourceTree = "<group>"; };
 		26E73BC4F5B5D8AFA136F02F /* RWDailySessionListItem.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RWDailySessionListItem.xib; sourceTree = "<group>"; };
@@ -383,6 +385,9 @@
 		365F543B1B0F1F78004657B2 /* icon_bike.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_bike.png; sourceTree = "<group>"; };
 		365F543C1B0F1F78004657B2 /* icon_car.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_car.png; sourceTree = "<group>"; };
 		365F543D1B0F1F78004657B2 /* icon_walking.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_walking.png; sourceTree = "<group>"; };
+		365F54411B0F6563004657B2 /* icon_share.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_share.png; sourceTree = "<group>"; };
+		365F54451B14985C004657B2 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		365F54471B149879004657B2 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		36672D6D18C8C97A00E0D992 /* RWUpdateService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWUpdateService.h; sourceTree = "<group>"; };
 		36672D6E18C8C97A00E0D992 /* RWUpdateService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWUpdateService.m; sourceTree = "<group>"; };
 		367628E91803F812002ED534 /* RWTEXT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWTEXT.h; sourceTree = "<group>"; };
@@ -562,6 +567,8 @@
 		36B0A73D19670D7700DAD3EA /* icon_80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_80.png; path = "Red Event App/Resources/icon_80.png"; sourceTree = "<group>"; };
 		36B0A73E19670D7700DAD3EA /* icon_120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_120.png; path = "Red Event App/Resources/icon_120.png"; sourceTree = "<group>"; };
 		36B0A74419670E0400DAD3EA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = hca2014/Images.xcassets; sourceTree = SOURCE_ROOT; };
+		36B1EB841B203E350051C5D4 /* Red_Event_App.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Red_Event_App.xcdatamodel; sourceTree = "<group>"; };
+		36B1EB861B2051D40051C5D4 /* Red_Event_App_1_40.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Red_Event_App_1_40.xcdatamodel; sourceTree = "<group>"; };
 		36E2A0B5187D4C3E001AB669 /* RWCameraHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWCameraHandler.h; sourceTree = "<group>"; };
 		36E2A0B6187D4C3E001AB669 /* RWCameraHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWCameraHandler.m; sourceTree = "<group>"; };
 		D5E390C4B0D3D972B3128F51 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -573,6 +580,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				365F54481B149879004657B2 /* MessageUI.framework in Frameworks */,
+				365F54461B14985C004657B2 /* Social.framework in Frameworks */,
 				36B0A72E19659FCB00DAD3EA /* EventKit.framework in Frameworks */,
 				36A7287F17CB469A00374063 /* CoreLocation.framework in Frameworks */,
 				36A7288B17CB46DB00374063 /* libz.dylib in Frameworks */,
@@ -1099,6 +1108,8 @@
 		36AB7BD117BB7D0E00316921 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				365F54471B149879004657B2 /* MessageUI.framework */,
+				365F54451B14985C004657B2 /* Social.framework */,
 				36B0A72D19659FCB00DAD3EA /* EventKit.framework */,
 				36A97B3E1861E3DC0050EC8D /* CoreImage.framework */,
 				36A97B361861A85A0050EC8D /* AssetsLibrary.framework */,
@@ -1140,12 +1151,12 @@
 				36AB7C2C17BCF11300316921 /* ViewModelObjects */,
 				36AB7C1817BBCCFC00316921 /* Views */,
 				3695C47917C4CE87004DFA40 /* XML */,
-				26E73A2CBD587EAB5648BA2B /* Red_Event_App.xcdatamodel */,
 				26E732C8F6489FD1278505A6 /* RWAppDelegate.h */,
 				26E73D381CB60F3282780BBE /* RWAppDelegate.m */,
 				26E735B3346295998942E475 /* RWNavigationController.h */,
 				26E73CECBA81E777D3175471 /* RWNavigationController.m */,
 				36B0A74419670E0400DAD3EA /* Images.xcassets */,
+				36B1EB831B203E350051C5D4 /* Red_Event_App.xcdatamodeld */,
 			);
 			name = hca2014;
 			path = "Red Event App";
@@ -1260,6 +1271,7 @@
 				36A29C2C18C0DA6700E64B7A /* icon_program_bottombar@2x.png */,
 				36A29C0A18C0D2CC00E64B7A /* icon_ticket_pink.png */,
 				36A29C0B18C0D2CC00E64B7A /* icon_youarehere.png */,
+				365F54411B0F6563004657B2 /* icon_share.png */,
 				365F543B1B0F1F78004657B2 /* icon_bike.png */,
 				365F543C1B0F1F78004657B2 /* icon_car.png */,
 				365F543D1B0F1F78004657B2 /* icon_walking.png */,
@@ -1525,6 +1537,7 @@
 				36A29C1918C0D2CD00E64B7A /* default_icon.jpeg in Resources */,
 				36B0A74319670D7700DAD3EA /* icon_120.png in Resources */,
 				36A97AD01855FF620050EC8D /* RWCameraIntentViewController.xib in Resources */,
+				365F54421B0F6563004657B2 /* icon_share.png in Resources */,
 				36A29C1D18C0D2CD00E64B7A /* icon_news_bottombar.png in Resources */,
 				36A727AC17C7992100374063 /* appearance.xml in Resources */,
 				361EA892180C0DE700441271 /* RWVenueDetailViewController.xib in Resources */,
@@ -1725,13 +1738,13 @@
 				26E735A83CD4B9562C4CF691 /* RWJSONSchemas.m in Sources */,
 				26E7358C57205B061BD03C68 /* RWTableNavigatorViewController.m in Sources */,
 				36214F88183F6E0E001B0B63 /* RWPushMessageListViewController.m in Sources */,
+				36B1EB851B203E350051C5D4 /* Red_Event_App.xcdatamodeld in Sources */,
 				26E735A51E0632B5D94F4F7E /* RWPushMessageVM.m in Sources */,
 				26E7310DA927A709CB10946A /* RWPushMessageGroupVM.m in Sources */,
 				26E737417E9A7D53ACC6F777 /* RWDbPushMessages.m in Sources */,
 				26E73E6BFACAD78541169151 /* RWDbPushMessageGroups.m in Sources */,
 				36A0B40A18474F4B007A6C78 /* RWWebViewController.m in Sources */,
 				26E734A2B5323E2D6BAE0D92 /* RWHandler_UploadRegistrationAttributes.m in Sources */,
-				26E73F9B73057802C8C4ED73 /* Red_Event_App.xcdatamodel in Sources */,
 				26E735F06E488F1E88044871 /* RWAppearanceHelper.m in Sources */,
 				364E9C3F187FF026008D0DCC /* RWButtonAppearanceHelper.m in Sources */,
 				26E73A21F50C294AD5F2C98C /* RWNavigationController.m in Sources */,
@@ -1964,6 +1977,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		36B1EB831B203E350051C5D4 /* Red_Event_App.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				36B1EB861B2051D40051C5D4 /* Red_Event_App_1_40.xcdatamodel */,
+				36B1EB841B203E350051C5D4 /* Red_Event_App.xcdatamodel */,
+			);
+			currentVersion = 36B1EB861B2051D40051C5D4 /* Red_Event_App_1_40.xcdatamodel */;
+			path = Red_Event_App.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 36AB7BC717BB7D0E00316921 /* Project object */;
 }
