@@ -38,9 +38,10 @@
     int articleId = [_page getIntegerFromNode:[RWPAGE ARTICLEID]];
     _model = [_db.Articles getVMFromId:articleId];
 
-	NSString *title = @"<div class=“page-header”><h1><a href=“/om-festivalen/om-festivalen”>Om festivalen</a></h1></div>";
+	NSString *title = @"<div class=“page-header”><h1><a href=/om-festivalen/om-festivalen>Om festivalen</a></h1></div>";
 	NSString *webtext = [NSString stringWithFormat:@"%@%@%@", _xml.css, title, _model.introtextWithHtml];
-	[_webBody loadHTMLString:webtext baseURL:[NSURL URLWithString:_xml.imagesRootPath]];
+    webtext = [webtext stringByReplacingOccurrencesOfString:@"<img src" withString:@"<img style='max-width:260px;' src" options:nil range:NSMakeRange(0, [webtext length])];//Limit the width of all images in webview
+    [_webBody loadHTMLString:webtext baseURL:[NSURL URLWithString:_xml.imagesRootPath]];
 
 	[self setAppearance];
 	

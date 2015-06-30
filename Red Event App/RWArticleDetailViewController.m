@@ -51,7 +51,9 @@
     {
 		[_scrollView setHidden:YES];
 		NSString *title = [NSString stringWithFormat:@"<div class=“page-header”><h1>%@</h1></div>",_model.title];
-		NSString *webString = [NSString stringWithFormat:@"%@%@%@", _xml.css, title, _model.fulltextWithHtml];
+        NSString *mainImage = [NSString stringWithFormat:@"<div><img src='%@'></div>", _model.mainImageUrl];
+		NSString *webString = [NSString stringWithFormat:@"%@%@%@%@", _xml.css, title, mainImage, _model.fulltextWithHtml];
+        webString = [webString stringByReplacingOccurrencesOfString:@"<img src" withString:@"<img style='max-width:260px;' src" options:nil range:NSMakeRange(0, [webString length])];//Limit the width of all images in webview
         [_webBody loadHTMLString:webString  baseURL:[NSURL URLWithString:_xml.imagesRootPath]];
     } else {
         [_webBody setHidden:YES];
@@ -65,7 +67,11 @@
                             }];
 		}
 		else if (![_model.introImagePath isEqual:@""]) {
-			_imgView.image = _model.image;
+            UIImage *image = _model.image;
+			_imgView.image = image;
+            float imageHeight = image.size.height;
+            float aspectHeight = imageHeight * _imgView.frame.size.width / image.size.width;
+            [_imgView RWsetHeightAsConstraint:aspectHeight];
 		}
     }
 }
