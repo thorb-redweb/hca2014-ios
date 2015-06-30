@@ -41,6 +41,8 @@
 
 - (NSString *)startDateShort;
 
+- (NSString *)startDay;
+
 - (NSString *)startDateDay;
 
 - (NSString *)startTime;
