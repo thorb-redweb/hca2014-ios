@@ -71,7 +71,7 @@
 		currentDate = [_app getDebugDate];
 	}
 
-	NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:[RWDbSchemas SES_STARTDATETIME] ascending:NO];
+	NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:[RWDbSchemas SES_STARTDATETIME] ascending:YES];
     NSArray *sortDescriptors = [[NSArray alloc] initWithObjects:sortDescriptor, nil];
 	NSPredicate *predicate = [NSPredicate predicateWithFormat:@"%K == %d AND %K => %@", [RWDbSchemas SES_VENUEID], venueid, [RWDbSchemas SES_STARTDATETIME], currentDate];
 
