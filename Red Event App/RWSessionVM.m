@@ -87,13 +87,16 @@
 - (NSString *)startDateShort {
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setDateFormat:@"d. MMMM"];
+    [dateFormatter setLocale:[[NSLocale alloc] initWithLocaleIdentifier:@"da"]];
     return [dateFormatter stringFromDate:_session.startdatetime];
 }
 
 - (NSString *)startDateDay {
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setDateFormat:@"EEEE dd."];
-    return [dateFormatter stringFromDate:_session.startdatetime];
+    [dateFormatter setLocale:[[NSLocale alloc] initWithLocaleIdentifier:@"da"]];
+    NSString *startDateDay = [dateFormatter stringFromDate:_session.startdatetime];
+    return startDateDay;
 }
 
 - (NSString *)startTime {
