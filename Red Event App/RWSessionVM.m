@@ -167,6 +167,9 @@
     else if ([_session.type isEqualToString:@"Spoken Word"]){
         return [UIColor colorWithHexString:@"#3c3746"];
     }
+    else if ([_session.type isEqualToString:@"Spoken Word Festival"]){
+        return [UIColor colorWithHexString:@"#3c3746"];
+    }
     else if ([_session.type isEqualToString:@"Underholdning og teater"]){
         return [UIColor colorWithHexString:@"#e10071"];
     }
@@ -188,6 +191,9 @@
         return [UIImage imageNamed:@"music"];
     }
     else if ([_session.type isEqualToString:@"Spoken Word"]){
+        return [UIImage imageNamed:@"spoken"];
+    }
+    else if ([_session.type isEqualToString:@"Spoken Word Festival"]){
         return [UIImage imageNamed:@"spoken"];
     }
     else if ([_session.type isEqualToString:@"Underholdning og teater"]){
