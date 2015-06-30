@@ -77,14 +77,7 @@
 			NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
 			NSUInteger sessionDay = [calendar ordinalityOfUnit:NSDayCalendarUnit inUnit:NSYearCalendarUnit forDate:session.startDatetime];
 			NSUInteger currentDay = [calendar ordinalityOfUnit:NSDayCalendarUnit inUnit:NSYearCalendarUnit forDate:[[NSDate alloc] init]];
-			NSString *datetime;
-			if (sessionDay == currentDay){
-                datetime = [NSString stringWithFormat:@"kl. %@", session.startTime];
-            }
-            else
-            {
-                datetime = [NSString stringWithFormat: @"%@ kl. %@", session.startDateDay, session.startTime];
-            }
+			NSString *datetime = [NSString stringWithFormat: @"%@ kl. %@", session.startDateDay, session.startTime];
 			NSString *snippet = [NSString stringWithFormat:@"Næste event: %@", datetime];
 			snippet = [NSString stringWithFormat:@"%@\n%@", snippet, [session title]];
 			snippet = [NSString stringWithFormat:@"%@//%@", snippet, session.sessionid];
