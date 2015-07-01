@@ -16,6 +16,7 @@
 #import "RWHandler_DumpDatabase.h"
 #import "RWDbPushMessages.h"
 #import "RWDbPushMessageGroups.h"
+#import "Article.h"
 
 
 @interface RWDbInterface ()
@@ -54,6 +55,13 @@
 - (void)addDatabaseDump:(NSMutableData *)data delegate:(id)delegate {
     RWHandler_DumpDatabase *dumper = [[RWHandler_DumpDatabase alloc] initWithManagedObjectContext:_managedObjectContext delegate:delegate];
     [dumper addDatabaseDump:data];
+}
+
+- (void)clearDatabase {
+    [self.Articles clear];
+    [self.Events clear];
+    [self.Sessions clear];
+    [self.Venues clear];
 }
 
 - (void)updateDatabase:(NSMutableData *)data delegate:(id)delegate {

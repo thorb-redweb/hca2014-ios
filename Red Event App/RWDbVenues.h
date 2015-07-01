@@ -28,4 +28,6 @@
 - (NSArray *)getVMList;
 
 - (NSArray *)getActiveNamesAndInsertStringAtFirstPosition:(NSString *)stringToInsert;
+
+- (void)clear;
 @end

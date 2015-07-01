@@ -38,4 +38,15 @@
     return NULL;
 }
 
+#pragma mark Housekeeping Functions
+
+- (void)clear {
+    NSArray *result = [_dbHelper getFromDatabase:[RWDbSchemas EVENT_TABLENAME]];
+
+    //Delete the articles
+    for(Event *event in result){
+        [[_dbHelper getManagedObjectContext] deleteObject:event];
+    }
+}
+
 @end

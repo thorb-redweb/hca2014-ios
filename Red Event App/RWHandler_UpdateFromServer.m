@@ -7,6 +7,7 @@
 //
 
 #import "RWHandler_UpdateFromServer.h"
+#import "RWAppDelegate.h"
 
 @interface RWHandler_UpdateFromServer ()
 
@@ -42,6 +43,14 @@
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection {
     [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+    NSString *result = [[NSString alloc] initWithData:_data encoding:NSASCIIStringEncoding];
+
+    //If update file does not exist on server
+    if(result && [result isKindOfClass:[NSString class]] && [result rangeOfString:@"404 Not Found"].location != NSNotFound){ //
+        [_delegate noUpdateRetrieved];
+        return;
+    }
+
     [_delegate putUpdateDataInDatabase:_data];
 }
 

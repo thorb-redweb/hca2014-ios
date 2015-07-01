@@ -42,4 +42,6 @@
 - (NSDate *)getFirstDateTimeByVenue:(int)venueid type:(NSString *)type searchString:(NSString *)searchString;
 
 - (NSArray *)getActiveVenueIds;
+
+- (void)clear;
 @end

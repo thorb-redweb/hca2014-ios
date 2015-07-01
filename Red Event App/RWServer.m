@@ -49,6 +49,11 @@
     [_db addDatabaseDump:data delegate:dumpServerDelegate];
 }
 
+- (void)noUpdateRetrieved {
+    [_db clearDatabase];
+    [self dumpServer:updateDatabaseDelegate];
+}
+
 - (void)getDirections:(id)delegate travelMode:(NSString *)travelMode origin:(NSString *)origin destination:(NSString *)destination {
     RWHandler_GetDirections *handler = [[RWHandler_GetDirections alloc] init];
     handler.delegate = delegate;

@@ -15,4 +15,6 @@
 - (id)initWithHelper:(RWDbHelper *)helper;
 
 - (Event *)getFromId:(int)eventid;
+
+- (void)clear;
 @end

@@ -37,6 +37,8 @@
 
 - (void)addDatabaseDump:(NSMutableData *)data delegate:(id)delegate;
 
+- (void)clearDatabase;
+
 - (void)updateDatabase:(NSMutableData *)data delegate:(id)delegate;
 
 @end

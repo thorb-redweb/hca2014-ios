@@ -12,6 +12,7 @@
 @required
 - (void)errorOccured:(NSString *)errorMessage;
 - (void)putUpdateDataInDatabase:(NSMutableData *)data;
+- (void)noUpdateRetrieved;
 @end
 
 @interface RWHandler_UpdateFromServer : NSObject {

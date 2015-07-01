@@ -126,4 +126,16 @@
 	
     return nameList;
 }
+
+#pragma mark Housekeeping Functions
+
+- (void)clear {
+    NSArray *result = [_dbHelper getFromDatabase:[RWDbSchemas VENUE_TABLENAME]];
+
+    //Delete the articles
+    for(Venue *venue in result){
+        [[_dbHelper getManagedObjectContext] deleteObject:venue];
+    }
+}
+
 @end

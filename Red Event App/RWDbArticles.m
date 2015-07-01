@@ -119,6 +119,15 @@
 
 #pragma mark Housekeeping Functions
 
+- (void)clear {
+    NSArray *result = [_dbHelper getFromDatabase:[RWDbSchemas ART_TABLENAME]];
+
+    //Delete the articles
+    for(Article *article in result){
+        [[_dbHelper getManagedObjectContext] deleteObject:article];
+    }
+}
+
 - (void)delete2013Articles{
 	//Create the data predicate
 	NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];

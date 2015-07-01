@@ -229,4 +229,16 @@
     }
     return activeVenueIds;
 }
+
+#pragma mark Housekeeping Functions
+
+- (void)clear {
+    NSArray *result = [_dbHelper getFromDatabase:[RWDbSchemas SES_TABLENAME]];
+
+    //Delete the articles
+    for(Session *session in result){
+        [[_dbHelper getManagedObjectContext] deleteObject:session];
+    }
+}
+
 @end
