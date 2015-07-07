@@ -17,7 +17,7 @@
 @implementation RWHandler_DumpServer
 
 - (void)startDownloadWithFromUrl:(NSURL *)dumpFileUrl {
-    NSURLRequest *myRequest = [NSURLRequest requestWithURL:dumpFileUrl];
+    NSURLRequest *myRequest = [NSURLRequest requestWithURL:dumpFileUrl cachePolicy:NSURLRequestReloadIgnoringCacheData timeoutInterval:60.0];
     _data = [[NSMutableData alloc] initWithLength:0];
     _openConnection = [[NSURLConnection alloc] initWithRequest:myRequest delegate:self];
     NSLog(@"Start Dump Download in RWHandler_DumpServer.m");

@@ -18,7 +18,7 @@
 @implementation RWHandler_UpdateFromServer
 
 - (void)startDownloadWithFromUrl:(NSURL *)updateFileUrl {
-    NSURLRequest *myRequest = [NSURLRequest requestWithURL:updateFileUrl];
+    NSURLRequest *myRequest = [NSURLRequest requestWithURL:updateFileUrl cachePolicy:NSURLRequestReloadIgnoringCacheData timeoutInterval:60.0];
     _data = [[NSMutableData alloc] initWithLength:0];
     _openConnection = [[NSURLConnection alloc] initWithRequest:myRequest delegate:self];
     NSLog(@"Start Update Download in RWHandler_UpdateDatabase.m");
