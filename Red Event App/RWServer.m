@@ -49,7 +49,7 @@
     [_db addDatabaseDump:data delegate:dumpServerDelegate];
 }
 
-- (void)noUpdateRetrieved {
+- (void)updateFromServerWithCoreData {
     [_db clearDatabase];
     [self dumpServer:updateDatabaseDelegate];
 }

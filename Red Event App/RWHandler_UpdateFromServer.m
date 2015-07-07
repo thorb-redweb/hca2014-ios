@@ -47,7 +47,7 @@
 
     //If update file does not exist on server
     if(result && [result isKindOfClass:[NSString class]] && [result rangeOfString:@"404 Not Found"].location != NSNotFound){ //
-        [_delegate noUpdateRetrieved];
+        [_delegate updateFromServerWithCoreData];
         return;
     }
 
