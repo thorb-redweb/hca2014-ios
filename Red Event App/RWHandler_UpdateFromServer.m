@@ -51,6 +51,19 @@
         return;
     }
 
+    NSError *jsonError = nil;
+    NSArray *jsonArray = [NSJSONSerialization JSONObjectWithData:_data options:NSJSONReadingMutableLeaves error:&jsonError];
+    if (jsonError == nil && jsonArray.count > 0) {
+        NSDictionary *sysObject = jsonArray[jsonArray.count - 1];
+        NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+        int coredataUpdateVersion = [sysObject[@"coredataupdateversion"] intValue];
+        int databaseDataVersion = [prefs integerForKey:@"dataversion"];
+        if(coredataUpdateVersion > databaseDataVersion){
+            [_delegate updateFromServerWithCoreData];
+            return;
+        }
+    }
+
     [_delegate putUpdateDataInDatabase:_data];
 }
 
