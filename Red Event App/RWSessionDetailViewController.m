@@ -88,10 +88,12 @@
         else {
 			[_imgView sd_setImageWithURL:_model.imageUrl placeholderImage:[UIImage imageNamed:@"default_icon.jpg"]
 							completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *url) {
-                                float imageHeight = image.size.height;
-                                float aspectHeight = imageHeight * _imgView.frame.size.width / image.size.width;
-                                [_imgView RWsetHeightAsConstraint:aspectHeight];
-								}];
+                                if(image != nil) {
+                                    float imageHeight = image.size.height;
+                                    float aspectHeight = imageHeight * _imgView.frame.size.width / image.size.width;
+                                    [_imgView RWsetHeightAsConstraint:aspectHeight];
+                                }
+                            }];
         }
     }
 	

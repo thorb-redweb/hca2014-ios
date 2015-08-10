@@ -119,8 +119,14 @@
 }
 
 - (void)errorOccured:(NSString *)errorMessage{
-	_alertview = [[UIAlertView alloc] initWithTitle:@"An Error Occured" message:@"Der er sket en fejl under hentning af data" delegate:self cancelButtonTitle:@"Prøv igen" otherButtonTitles:@"Afslut app", nil];
-	[_alertview show];
+    if([errorMessage rangeOfString:@"Connection failed"].location != NSNotFound){ //Internet connection failed
+        _alertview = [[UIAlertView alloc] initWithTitle:@"Manglende Internet" message:@"H.C. Andersen Festivals 2015 kunne ikke forbinde til internettet. Du vil ikke få opdateringer hvis forestillinger, events, m.m. bliver opdateret." delegate:self cancelButtonTitle:@"Prøv igen" otherButtonTitles:@"Ok", nil];
+        [_alertview show];
+    }
+    else {
+        _alertview = [[UIAlertView alloc] initWithTitle:@"An Error Occured" message:@"Der er sket en fejl under hentning af data" delegate:self cancelButtonTitle:@"Prøv igen" otherButtonTitles:@"Afslut app", nil];
+        [_alertview show];
+    }
 }
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
@@ -128,6 +134,9 @@
     if([title isEqualToString:@"Prøv igen"])
     {
 		[self alertOnClickTryAgain];
+    }
+    else if([title isEqualToString:@"Ok"]){
+        [self continueAfterUpdate];
     }
     else if([title isEqualToString:@"Afslut app"])
     {
