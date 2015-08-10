@@ -16,6 +16,7 @@
 @dynamic details;
 @dynamic enddatetime;
 @dynamic eventid;
+@dynamic prices;
 @dynamic sessionid;
 @dynamic submission;
 @dynamic startdatetime;

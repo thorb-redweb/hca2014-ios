@@ -16,6 +16,7 @@
 @property (nonatomic, retain) NSString * details;
 @property (nonatomic, retain) NSDate * enddatetime;
 @property (nonatomic, retain) NSNumber * eventid;
+@property (nonatomic, retain) NSString * prices;
 @property (nonatomic, retain) NSNumber * sessionid;
 @property (nonatomic, retain) NSDate * startdatetime;
 @property (nonatomic, retain) NSString * submission;

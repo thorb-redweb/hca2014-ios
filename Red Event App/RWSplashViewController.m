@@ -59,6 +59,10 @@
 -(void)getDataFromServer{
 	NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
     NSString *dataversion = [prefs objectForKey:@"dataversion"];
+
+//    [prefs setObject:@"6" forKey:@"dataversion"];
+//    [prefs synchronize];
+
     NSLog(@"Current dataversion: %@", dataversion);
     if (!dataversion) {
         _splashDelay = 2.0;

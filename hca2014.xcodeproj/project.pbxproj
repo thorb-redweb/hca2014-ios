@@ -396,6 +396,7 @@
 		367628ED1803F821002ED534 /* RWDEFAULTTEXT.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWDEFAULTTEXT.m; sourceTree = "<group>"; };
 		367628F218040475002ED534 /* text.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = text.xml; sourceTree = "<group>"; };
 		367C3DB71B01F4A5002AAA29 /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMaps.framework; sourceTree = "<group>"; };
+		367E62EC1B78A19600684785 /* Red_Event_App_1_ 46.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Red_Event_App_1_ 46.xcdatamodel"; sourceTree = "<group>"; };
 		3683F20F182A445A00C22E46 /* SparkInspector.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SparkInspector.framework; sourceTree = "<group>"; };
 		3683F212182A4F5F00C22E46 /* RWMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWMainViewController.h; sourceTree = "<group>"; };
 		3683F213182A4F5F00C22E46 /* RWMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWMainViewController.m; sourceTree = "<group>"; };
@@ -1982,10 +1983,11 @@
 		36B1EB831B203E350051C5D4 /* Red_Event_App.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				367E62EC1B78A19600684785 /* Red_Event_App_1_ 46.xcdatamodel */,
 				36B1EB861B2051D40051C5D4 /* Red_Event_App_1_40.xcdatamodel */,
 				36B1EB841B203E350051C5D4 /* Red_Event_App.xcdatamodel */,
 			);
-			currentVersion = 36B1EB861B2051D40051C5D4 /* Red_Event_App_1_40.xcdatamodel */;
+			currentVersion = 367E62EC1B78A19600684785 /* Red_Event_App_1_ 46.xcdatamodel */;
 			path = Red_Event_App.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
