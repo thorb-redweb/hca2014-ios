@@ -24,6 +24,9 @@
 @property(weak, nonatomic) IBOutlet UILabel *lblPlaceText;
 @property(weak, nonatomic) IBOutlet UILabel *lblTimeText;
 @property(weak, nonatomic) IBOutlet UIButton *btnMap;
+@property(weak, nonatomic) IBOutlet UIView *vwPricesContainer;
+@property(weak, nonatomic) IBOutlet NSLayoutConstraint *cnstVwPricesContainerHeight;
+@property(weak, nonatomic) IBOutlet NSLayoutConstraint *cnstVwPricesContainerDivider;
 @property(weak, nonatomic) IBOutlet UIButton *btnTicket;
 @property(weak, nonatomic) IBOutlet UIButton *btnCalendar;
 @property(weak, nonatomic) IBOutlet UIView *vwBtnCalendar;

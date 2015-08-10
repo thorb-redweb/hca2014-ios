@@ -196,6 +196,7 @@
     }
 
     [session setSubmission:[entry objectForKey:_json.Ses.SUBMISSION]];
+    [session setPrices:[self removeBackSlashes:[entry objectForKey:_json.Ses.PRICES]]];
 
     NSString *startDateString = [entry objectForKey:_json.Ses.STARTDATE];
     NSString *startTimeString = [entry objectForKey:_json.Ses.STARTTIME];

@@ -101,6 +101,50 @@
 	   ([_page hasChild:[RWPAGE RETURNBUTTON]] && ![_page getBoolFromNode:[RWPAGE RETURNBUTTON]])){
 		[_btnBack RWsetHeightAsConstraint:0.0];
 	}
+
+    NSArray *prices = [_model prices];
+    if(prices){
+        UILabel *lastCell;
+        for(NSDictionary *priceObject in prices){
+            NSString *type = priceObject[@"pricetype"];
+            NSString *price = priceObject[@"price"];
+
+            UILabel *lblPrice = [UILabel new];
+            [lblPrice setTranslatesAutoresizingMaskIntoConstraints:NO];
+            [lblPrice setText:[NSString stringWithFormat:@"%@ %@", type, price]];
+            [lblPrice setFont:[UIFont boldSystemFontOfSize:14.0f]];
+            [lblPrice setTextColor:[UIColor blackColor]];
+            [lblPrice setContentHuggingPriority:500.0f forAxis:UILayoutConstraintAxisVertical];
+            [_vwPricesContainer addSubview:lblPrice];
+
+            if(!lastCell){
+                [_vwPricesContainer RWpinChildToTop:lblPrice];
+            }
+            else {
+                //Attach lblPrice to bottom of last cell
+                [_vwPricesContainer RWpinChildrenTogetherWithTopChild:lastCell BottomChild:lblPrice constant:4.0f];
+            }
+            [_vwPricesContainer.superview RWalignChildrenLeadingSideWithView:_lblDateText view:lblPrice];
+            [_vwPricesContainer RWpinChildToTrailing:lblPrice];
+            lastCell = lblPrice;
+        }
+        //Attach lastCell to bottom of vwPricesContainer (actual last cell)
+        [_vwPricesContainer RWpinChildToBottom:lastCell];
+    }
+    else {
+        UILabel *lblPrice = [UILabel new];
+        [lblPrice setTranslatesAutoresizingMaskIntoConstraints:NO];
+        [lblPrice setText:@"Gratis"];
+        [lblPrice setFont:[UIFont boldSystemFontOfSize:14.0f]];
+        [lblPrice setTextColor:[UIColor blackColor]];
+        [lblPrice setContentHuggingPriority:500.0f forAxis:UILayoutConstraintAxisVertical];
+        [_vwPricesContainer addSubview:lblPrice];
+
+        [_vwPricesContainer RWpinChildToTop:lblPrice];
+        [_vwPricesContainer.superview RWalignChildrenLeadingSideWithView:_lblDateText view:lblPrice];
+        [_vwPricesContainer RWpinChildToTrailing:lblPrice];
+        [_vwPricesContainer RWpinChildToBottom:lblPrice];
+    }
 }
 
 - (void)setAppearance{

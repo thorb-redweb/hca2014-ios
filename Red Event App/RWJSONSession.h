@@ -20,6 +20,8 @@
 
 - (NSString *)SUBMISSION;
 
+- (NSString *)PRICES;
+
 - (NSString *)STARTDATE;
 
 - (NSString *)ENDDATE;

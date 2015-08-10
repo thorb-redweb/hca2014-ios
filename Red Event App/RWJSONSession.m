@@ -15,8 +15,8 @@
 -(NSString *)VENUE_ID{return @"venueid";}
 -(NSString *)TITLE{return @"title";}
 -(NSString *)DETAILS{return @"details";}
--(NSString *)SUBMISSION{
-    return @"submission";}
+-(NSString *)SUBMISSION{return @"submission";}
+-(NSString *)PRICES{return @"prices";}
 -(NSString *)STARTDATE{return @"startdate";}
 -(NSString *)ENDDATE{return @"enddate";}
 -(NSString *)STARTTIME{return @"starttime";}

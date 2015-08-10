@@ -72,4 +72,6 @@
 - (BOOL)hasTime;
 
 - (NSString *)websitelink;
+
+- (NSArray *)prices;
 @end

@@ -97,6 +97,12 @@
     [parentView addConstraints:[NSArray arrayWithObject:pinConstraint]];
 }
 
+- (void)RWpinChildrenTogetherWithTopChild:(UIView *)topView BottomChild:(UIView *)bottomView constant:(float)constant {
+    UIView *parentView = self;
+    NSLayoutConstraint *pinConstraint = [NSLayoutConstraint constraintWithItem:topView attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:bottomView attribute:NSLayoutAttributeTop multiplier:1.0f constant:constant];
+    [parentView addConstraints:[NSArray arrayWithObject:pinConstraint]];
+}
+
 - (void)RWpinChildrenTogetherWithLeftChild:(UIView *)leftView RightChild:(UIView *)rightView {
     UIView *parentView = self;
     NSLayoutConstraint *pinConstraint = [NSLayoutConstraint constraintWithItem:leftView attribute:NSLayoutAttributeRight relatedBy:NSLayoutRelationEqual toItem:rightView attribute:NSLayoutAttributeLeft multiplier:1.0f constant:0];
@@ -109,4 +115,9 @@
     [parentView addConstraints:[NSArray arrayWithObject:heightConstraint]];
 }
 
+- (void)RWalignChildrenLeadingSideWithView:(UIView *)firstView view:(UIView *)secondView {
+    UIView *parentView = self;
+    NSLayoutConstraint *heightConstraint = [NSLayoutConstraint constraintWithItem:firstView attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:secondView attribute:NSLayoutAttributeLeading multiplier:1.0f constant:0.0f];
+    [parentView addConstraints:[NSArray arrayWithObject:heightConstraint]];
+}
 @end

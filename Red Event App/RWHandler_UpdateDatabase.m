@@ -271,6 +271,17 @@
         session.type = @"Kunst og kultur";
     }
 
+    NSError *error;
+    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:[entry objectForKey:_json.Ses.PRICES]
+                                                       options:0
+                                                         error:&error];
+    NSString *jsonString = @"[]";
+    if (! jsonData) {
+        NSLog(@"Got an error: %@", error);
+    } else {
+        jsonString = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+    }
+    [session setPrices:jsonString];
     [session setSubmission:[entry objectForKey:_json.Ses.SUBMISSION]];
 
     NSString *startDateString = [entry objectForKey:_json.Ses.STARTDATE];

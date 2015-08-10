@@ -42,4 +42,7 @@
 
 - (void)RWpinChildrenHeightsWithTopChild:(UIView *)topView BottomChild:(UIView *)bottomView multiplier:(float)multiplier constant:(float)constant;
 
+- (void)RWpinChildrenTogetherWithTopChild:(UIView *)topView BottomChild:(UIView *)bottomView constant:(float)constant;
+
+- (void)RWalignChildrenLeadingSideWithView:(UIView *)firstView view:(UIView *)secondView;
 @end

@@ -226,4 +226,18 @@
                                       [dateFormatter stringFromDate:_session.startdatetime],
                                       [timeFormatter stringFromDate:_session.startdatetime]];
 }
+
+- (NSArray *)prices {
+    NSError *dictError = nil;
+    if(![_session isEqual:@""]) {
+        NSArray *prices = [NSJSONSerialization JSONObjectWithData:[_session.prices dataUsingEncoding:NSUTF8StringEncoding] options:NSJSONReadingMutableLeaves error:&dictError];
+        if (dictError != nil) {
+            NSLog(@"Error when converting prices string to array: %@", dictError);
+            return nil;
+        }
+        return prices;
+    }
+    return nil;
+}
+
 @end
