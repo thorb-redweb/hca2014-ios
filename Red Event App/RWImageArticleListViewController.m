@@ -88,7 +88,7 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 80;
+    return 98;
 }
 
 #pragma mark - Table view data source
@@ -113,6 +113,7 @@
     RWArticleVM *viewmodel = [dataSource objectAtIndex:indexPath.row];
     cell.lblTitle.text = viewmodel.title;
     cell.lblIntro.text = [viewmodel.introtext stringByStrippingHTML];
+	cell.lblDate.text = viewmodel.datePublished;
 
     cell.imgThumb.image = [UIImage imageNamed:@"defaultIcon.jpeg"];
     [cell.imgThumb sd_setImageWithURL:viewmodel.introImageUrl placeholderImage:[UIImage imageNamed:@"default_icon.jpg"]];

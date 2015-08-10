@@ -1,60 +1,74 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5056" systemVersion="13C1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <deployment defaultVersion="1792" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" id="4" customClass="RWImageArticleListCell">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" rowHeight="99" id="4" customClass="RWImageArticleListCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="99"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4" id="NPP-Pg-xcG">
                 <rect key="frame" x="0.0" y="0.0" width="320" height="79"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" verticalCompressionResistancePriority="751" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5" userLabel="lblTitle">
-                        <rect key="frame" x="85" y="3" width="215" height="51"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
+                        <rect key="frame" x="85" y="3" width="215" height="46"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </label>
                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="215" translatesAutoresizingMaskIntoConstraints="NO" id="6" userLabel="lblIntro">
-                        <rect key="frame" x="85" y="56" width="215" height="21"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
+                        <rect key="frame" x="85" y="51" width="215" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" placeholderIntrinsicWidth="74" placeholderIntrinsicHeight="74" translatesAutoresizingMaskIntoConstraints="NO" id="7" userLabel="imgThumb">
-                        <rect key="frame" x="3" y="3" width="74" height="74"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES"/>
+                        <rect key="frame" x="3" y="3" width="74" height="93"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="74" placeholder="YES" id="M5H-Hl-6ZE"/>
                         </constraints>
                     </imageView>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="215" translatesAutoresizingMaskIntoConstraints="NO" id="xlz-hs-f1T" userLabel="lblDate">
+                        <rect key="frame" x="85" y="74" width="215" height="16"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </label>
                 </subviews>
                 <constraints>
                     <constraint firstItem="6" firstAttribute="top" secondItem="5" secondAttribute="bottom" constant="2" id="0WW-te-2I0"/>
-                    <constraint firstAttribute="bottom" secondItem="6" secondAttribute="bottom" constant="2" id="0WX-2e-G5F"/>
+                    <constraint firstItem="xlz-hs-f1T" firstAttribute="leading" secondItem="7" secondAttribute="trailing" constant="8" symbolic="YES" id="1iQ-7N-eoK"/>
                     <constraint firstItem="7" firstAttribute="top" secondItem="NPP-Pg-xcG" secondAttribute="top" constant="3" id="6Cj-uW-n4S"/>
                     <constraint firstItem="6" firstAttribute="leading" secondItem="7" secondAttribute="trailing" constant="8" id="By7-eo-hK4"/>
                     <constraint firstAttribute="trailing" secondItem="5" secondAttribute="trailing" constant="20" id="PLo-my-HT7"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="xlz-hs-f1T" secondAttribute="trailing" constant="12" id="XqG-dH-Qi3"/>
                     <constraint firstItem="7" firstAttribute="leading" secondItem="NPP-Pg-xcG" secondAttribute="leading" constant="3" id="f83-bX-TQu"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="xlz-hs-f1T" secondAttribute="bottom" id="fSr-LB-B4k"/>
                     <constraint firstAttribute="bottom" secondItem="7" secondAttribute="bottom" constant="2" id="gEp-rG-GIu"/>
                     <constraint firstItem="5" firstAttribute="top" secondItem="NPP-Pg-xcG" secondAttribute="top" constant="3" id="m54-Wz-O3U"/>
                     <constraint firstItem="5" firstAttribute="leading" secondItem="7" secondAttribute="trailing" constant="8" id="tpX-qY-El8"/>
                     <constraint firstAttribute="trailing" secondItem="6" secondAttribute="trailing" constant="20" id="vgh-ug-s8g"/>
+                    <constraint firstItem="xlz-hs-f1T" firstAttribute="top" secondItem="6" secondAttribute="bottom" constant="2" id="zzF-l2-qH5"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="imgThumb" destination="7" id="13"/>
+                <outlet property="lblDate" destination="xlz-hs-f1T" id="Rpb-fc-V9P"/>
                 <outlet property="lblIntro" destination="6" id="11"/>
                 <outlet property="lblTitle" destination="5" id="12"/>
                 <outlet property="vwContentView" destination="NPP-Pg-xcG" id="aQ5-I6-mRM"/>
             </connections>
+            <point key="canvasLocation" x="500" y="319.5"/>
         </tableViewCell>
     </objects>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
 </document>

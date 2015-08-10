@@ -101,4 +101,11 @@
 	return [NSURL URLWithString:urlString];
 }
 
+- (NSString *)datePublished {
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"dd. MMMM yyyy"];
+    [dateFormatter setLocale:[[NSLocale alloc] initWithLocaleIdentifier:@"da"]];
+    return [dateFormatter stringFromDate:_content.publishdate];
+}
+
 @end

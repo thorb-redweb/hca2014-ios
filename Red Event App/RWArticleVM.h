@@ -49,4 +49,6 @@
 - (NSURL *)mainImageUrl;
 
 - (NSURL *)imageUrl;
+
+- (NSString *)datePublished;
 @end
